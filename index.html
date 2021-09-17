@@ -1,14 +1,207 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project WT</title>
-</head>
-<body>
-    <p class="hello_world">
-        Best is yet to come...
-    </p>
-</body>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Stephen King" />
+        <meta name="description" content="Horror" />
+
+        <title>Default Code Layout</title>
+
+        <link rel="shortcut icon" type="image/x-icon" href="./images/icons/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="./css/modern-normalize.css" />
+        <link rel="stylesheet" type="text/css" href="./css/default.css" />
+        <link rel="stylesheet" type="text/css" href="./css/interface.css" />
+        <!-- Global CSS -->
+
+        <link rel="stylesheet" type="text/css" href="./css/layout_index.css" />
+        <!-- Page-Specific CSS -->
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+        <script type="text/javascript" src="./js/default.js"></script> <!-- Global jQuery -->
+        <script type="text/javascript" src="./js/js_index.js"></script> <!-- Page-Specific jQuery -->
+        <!-- JavaScript / jQuery -->
+
+        <!--[if lt IE 9]>
+                <script src="./js/html5shiv.min.js"></script>
+            <![endif]-->
+    </head>
+
+    <body>
+
+        <aside id="popModal">
+            <div class="modal_message">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 20h-4v2H8v-2H5a1 1 0 0 1-1-1v-3H2v-2h2v-4H2V8h2V5a1 1 0 0 1 1-1h3V2h2v2h4V2h2v2h3a1 1 0 0 1 1 1v3h2v2h-2v4h2v2h-2v3a1 1 0 0 1-1 1h-3v2h-2v-2zM7 7v4h4V7H7z"/></svg>
+                <p class="modal_text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ex dolorum rerum nisi quod minus deleniti dolor, ea, neque fuga modi explicabo eum praesentium dolore eaque! Sed rem fugiat architecto.
+                    Dolores, commodi eius. Quod consequuntur adipisci odit quidem esse aspernatur et cum, quisquam modi est sit accusantium in eaque excepturi doloribus nostrum fugit itaque architecto eum perferendis accusamus labore. Dolorem.
+                    Nemo, magnam esse culpa hic error ea reprehenderit sit nesciunt fugit, ex similique laudantium distinctio! Vero, minus. Veritatis, enim maiores tempora iure eum omnis dolorem harum eius corporis, ipsam rem?
+                    Dicta, veniam. Consectetur assumenda cum minus porro perspiciatis, soluta tempora tempore iure vel repellendus provident voluptatibus sit atque nobis autem quod rem enim omnis incidunt! Voluptates ipsa dolorum a rerum?
+                    Enim cumque quos delectus perferendis possimus pariatur quis eveniet corrupti vitae tempore praesentium, a modi quibusdam velit earum, fuga temporibus assumenda minima voluptatem nisi. Amet iure cumque libero inventore obcaecati.
+                    Esse voluptatibus quisquam, pariatur praesentium deserunt nesciunt laudantium beatae quos nemo in iure recusandae earum corrupti ducimus vero temporibus facere. Neque ipsam tempora aperiam repellendus quia pariatur consectetur quo esse.
+                    Vero cumque sed quia nihil nesciunt ipsa aperiam placeat dolore quisquam expedita, non soluta tempore deleniti voluptatum maxime. Nobis sunt iure ut illo consequatur quos nostrum optio quis eos officia.
+                </p>
+                <p class="modal_button_container">
+                    <button class="modal_close">
+                        닫기
+                    </button>
+                </p>
+            </div>
+        </aside> <!-- Modal, Pop-up, Whatever -->
+
+        <div class="message normal">
+            <h6>This is message</h6>
+            <p>Why do i have to care of it?</p>
+        </div>
+
+        <div id="wrap">
+
+            <header id="headBase">
+                <nav id="navBase" class="nav_index int_wrap" role="navigation">
+                    <h1 id="mainLogo">
+                        Die Logo
+                    </h1>
+
+                    <ul id="navbarMain">
+                        <li class="mnu_main">
+                            About
+                        </li>
+                        <li class="mnu_main">
+                            Something
+                        </li>
+                        <li class="mnu_main">
+                            Awesome
+                        </li>
+                        <li class="mnu_main">
+                            Whatever
+                        </li>
+                        <li class="mnu_main">
+                            <button class="btn_account">
+                                ID
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </header> <!-- Header -->
+
+        <!-- Page Main Contents Start / 헤더 영역 종료 -->
+
+            <div id="wrapMain" class="int_wrap" role="main">
+
+                <article id="artLanding">
+                    <h1>H1 title</h1>
+                    <h2>H2 title</h2>
+                    <h3>H3 title</h3>
+                    <h4>H4 title</h4>
+                    <h5>H5 title</h5>
+                    <h6>H6 title</h6> normal text
+                </article> <!-- artLanding -->
+
+                <article id="artInterface">
+                    <fieldset>
+                        <legend>선택 요소</legend>
+                        <input type="datetime-local" id="inputDateLocal" />
+                        <input type="date" id="inputDate" />
+                        <input type="month" id="inputMonth" />
+                        <input type="week" id="inputWeek" />
+                        <input type="time" id="inputTime" />
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>텍스트 박스 요소</legend>
+                        <input type="text" placeholder="textbox sample" />
+                        <input type="password" placeholder="password" />
+                        <input type="email" placeholder="example@email.com" />
+                        <input type="url" placeholder="https://" />
+                        <input type="tel" placeholder="000-0000-0000" />
+                        <input type="search" placeholder="검색" />
+                        <input type="number" placeholder="number" />
+                        <input list="dtList" id="dtOptions" placeholder="점심 메뉴 리스트">
+                        <datalist id="dtList">
+                            <optgroup label="밥">
+                                <option value="1"></option>
+                                <option value="2"></option>
+                                <option value="3"></option>
+                            </optgroup>
+                        </datalist>
+                        <select id="selExam" title="Select">
+                            <option value="All" selected>전체</option>
+                            <optgroup label="Fish">
+                                <option value="Godeunguh">Go</option>
+                                <option value="Chamchi">Cham</option>
+                                <option value="Daegu">Dae</option>
+                            </optgroup>
+                            <optgroup Label="Meat">
+                                <option value="Fork">Pig</option>
+                                <option value="Beef">Cow</option>
+                                <option value="Chicken">Bird</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>긴 텍스트</legend>
+                        <textarea cols="40" rows="3"></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>기타 버튼 등</legend>
+                        <input type="range" id="inputRange" min="0" max="100" value="50" step="5" />
+                        <input type="checkbox" id="inputCheck" />
+                        <label for="inputCheck">귀금속</label>
+                        <input type="radio" id="inputRadio" name="radioFruit" />
+                        <label for="inputRadio">보석</label>
+                        <input type="button" value="input button" />
+                        <input type="reset" />
+                        <input type="submit" />
+                        <input type="image" alt="아이콘 버튼" />
+                        <input type="color" id="inputColor" />
+                        <button type="button">just button</button>
+                        <button type="button">button reset</button>
+                        <button type="button">button submit</button>
+                        <label for="mtMoney">돈</label>
+                        <meter id="mtMoney" min="0" max="100" low="30" high="90" optimum="75" value="75"></meter>
+                        <progress id="prgsHonor" max="100" value="5"></progress>
+                        <input type="file" id="inputFile" accept=".jpg" />
+                    </fieldset>
+                </article> <!-- artLanding -->
+
+                <article id="artCard">
+                    <ul class="card_vertical">
+                        <li class="card_indiv"></li>
+                        <li class="card_indiv"></li>
+                        <li class="card_indiv"></li>
+                        <li class="card_indiv"></li>
+                        <li class="card_indiv"></li>
+                        <li class="card_indiv"></li>
+                        <li class="card_indiv"></li>
+                        <li class="card_indiv"></li>
+                        <li class="card_indiv"></li>
+                        <li class="card_indiv"></li>
+                    </ul>
+                </article>
+
+                <aside id="popFollow">
+                    <a href="#wrap" class="goto_top">
+                        ^
+                    </a>
+                </aside> <!-- Sticky Tag -->
+
+            </div>
+
+        <!-- Page Main Contents End / 푸터 영역 시작 -->
+
+            <footer id="footBase" role="contentinfo">
+                <div class="int_wrap">
+                    <p>Blah Blah Whatever &copy; 2021</p>
+                </div>
+            </footer> <!-- Footer -->
+
+        </div> <!-- #wrap -->
+
+    </body>
+
 </html>

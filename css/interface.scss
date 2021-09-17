@@ -1,0 +1,239 @@
+/* ---------- Interface CSS ---------- */
+
+::selection { /* 선택 영역 색상 */
+    background: tomato;
+    color: currentColor;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+/* ---------- Scrollbar Start ---------- */
+
+::-webkit-scrollbar {
+    width: .6rem;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border: .05rem solid transparent;
+    border-radius: .2rem;
+    background: rgb(80, 80, 80);
+    background-clip: padding-box;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+/* ---------- Scrollbar End ---------- */
+/* ---------- Form Elements Start ---------- */
+
+%interface_box_elmt {
+    position: relative;
+    padding: .25rem;
+    border: .05rem solid rgba(0, 0, 0, .2);
+    border-radius: .15rem;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 .2rem .35rem -.25rem rgba(0, 0, 0, .2);
+    outline: none;
+    font-size: .6rem;
+    line-height: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+input[list],
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="image"],
+textarea,
+select,
+output,
+button {
+    @extend %interface_box_elmt;
+}
+
+select {
+    padding: .3rem .25rem;
+}
+
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"] {
+    @extend %interface_box_elmt;
+    padding: .2rem .25rem;
+}
+
+input[type="file"] {
+    @extend %interface_box_elmt;
+    display: block;
+    padding: .1rem;
+}
+
+input[type="color"] {
+    @extend %interface_box_elmt;
+    padding: .1rem .2rem;
+    width: 2.4rem;
+    height: 1.6rem;
+}
+
+label {
+    vertical-align: middle;
+}
+
+fieldset {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: .25rem;
+    border: .05rem solid rgba(0, 0, 0, .2);
+}
+
+fieldset > legend {
+    position: absolute;
+    top: calc(100% - .15rem);
+    right: .25rem;
+    padding: .25rem;
+    border-radius: .15rem;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+/* 추가 스타일링 필요한 요소들
+
+    input-range, input-checkbox, input-radio, input-number,
+    input-select, input-file, input-search, meter, progress
+
+*/
+
+/* ---------- Form Elements End ---------- */
+/* ---------- Modal, Pop-Up, Message Start ---------- */
+
+%message__shared {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    padding: .8rem 1.4rem .8rem 1rem;
+    width: fit-content;
+    border: .05rem solid currentColor;
+    border-left: .25rem solid currentColor;
+    border-radius: .15rem;
+    background: rgb(255, 255, 255);
+    color: rgb(45, 45, 45);
+    transform: translateX(-50%);
+    z-index: 50000;
+}
+
+aside#popModal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .9);
+    z-index: 150000;
+}
+
+aside#popModal.poped_up {
+    display: flex;
+}
+
+.modal_message {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    position: relative;
+    width: calc(100% - 4rem);
+    max-width: 30rem;
+    min-height: 10rem;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .5);
+}
+
+.modal_text {
+    padding: 1rem;
+    width: calc(100% - 3rem);
+    height: auto;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.modal_button_container {
+    margin-top: auto;
+    width: 100%;
+}
+
+.modal_close {
+    padding: .5rem 0;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background: rgb(210, 20, 0);
+    box-shadow: none;
+    color: rgb(255, 255, 255);
+    font-size: .8rem;
+    font-weight: bolder;
+}
+
+.message > h6 {
+    margin-bottom: .4rem;
+    font-size: .8rem;
+}
+
+.normal {
+    @extend %message__shared;
+    border-color: rgb(75, 75, 190);
+}
+
+.error {
+    @extend %message__shared;
+    border-color: rgb(220, 75, 75);
+}
+
+.warning {
+    @extend %message__shared;
+    border-color: rgb(230, 190, 30);
+}
+
+.success {
+    @extend %message__shared;
+    border-color: rgb(30, 210, 0);
+}
+
+aside#popFollow {
+    position: fixed;
+    right: .5rem;
+    bottom: .5rem;
+    transition: .2s ease-out;
+}
+
+a.goto_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: .15rem;
+    background: rgba(0, 0, 0, .75);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+/* ---------- Modal, Pop-Up, Message End ---------- */

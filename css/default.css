@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/* ---------- Default CSS ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap");
+@font-face {
+	font-family: "AppleSDGothic";
+	src: local("Apple SD Gothic Neo Regular"), url("./fonts/applesd.ttf"), local("Malgun Gothic");
+	font-weight: bolder;
+	font-style: normal;
+}
+@font-face {
+	font-family: "KoPubPro";
+	src: local("KoPubPro"), url("./fonts/kopub_light.otf"), local("Malgun Gothic");
+	font-weight: lighter;
+	font-style: normal;
+}
+@font-face {
+	font-family: "KoPubPro";
+	src: local("KoPubPro"), url("./fonts/kopub_normal.otf"), local("Malgun Gothic");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "KoPubPro";
+	src: local("KoPubPro"), url("./fonts/kopub_bold.otf"), local("Malgun Gothic");
+	font-weight: bold;
+	font-style: normal;
+}
+/* ---------- 폰트 불러오기 ---------- */
+/* ---------- 기본 형태 선언 시작 ---------- */
+:root {
+	font-size: 20px;
+	/* 사이즈 기본 단위 : 20px */
+	line-height: 1;
+	/* line-height: 1.8 (가독성이 필요한 본문 영역) */
+	--px_1: .05rem;
+	--px_3: .15rem;
+	--px_5: .25rem;
+	--px_10: .5rem;
+	--px_15: .75rem;
+	--px_20: 1rem;
+	--px_24: 1.2rem;
+	--px_30: 1.5rem;
+	--px_36: 1.8rem;
+	--px_40: 2rem;
+	--px_48: 2.4rem;
+	--px_60: 3rem;
+	/* 주요 픽셀값 정의 */
+	--ff_serif: "KoPubPro";
+	--ff_sans_n: "Noto Sans KR";
+	--ff_sans_p: "AppleSDGothic";
+	--ff_eng: "Miriam Libre";
+	/* font-family 정의 */
+	--fnt_big: 1.8rem;
+	--fnt_sectitle: 1.5rem;
+	--fnt_major: 1.2rem;
+	--fnt_title: 1rem;
+	--fnt_text: .8rem;
+	--fnt_minor: .7rem;
+	--fnt_small: .6rem;
+	/* 폰트 사이즈 정의 */
+	--color_title: rgb(48, 42, 39);
+	--color_text: rgb(102, 69, 69);
+	--color_acc1: rgb(251, 153, 51);
+	--color_acc2: rgb(0, 168, 80);
+	--color_tone1: rgb(255, 208, 159);
+	--color_tone2: rgb(196, 236, 224);
+	--color_bdr: rgb(212, 206, 198);
+	--color_bg: rgb(246, 244, 241);
+	/* 컬러 팔렛트 정의 */
+	--color_point1: rgb(216, 0, 0);
+	--color_dark: rgb(0, 0, 0);
+	--color_light: rgb(255, 255, 255);
+	/* 컬러 컨셉 정의 (다크 모드 변경시 필요) */
+	--color_tag1: rgb(242, 92, 102);
+	--color_tag2: rgb(248, 245, 203);
+	--color_tag3: rgb(167, 119, 230);
+	--color_tag4: rgb(190, 235, 179);
+	--color_tag5: rgb(170, 227, 239);
+	--color_tag_x: rgb(65, 65, 65);
+	/* 아이템 태그 배경색 정의 */
+	--shd_major: (0 .25rem .75rem rgba(var(--color_dark), .15));
+	--shd_minor: (0 0 .25rem rgba(var(--color_dark), .3));
+	/* box-shadow 값 정의 */
+	--bdr_outer: .15rem;
+	--bdr_inner: .05rem;
+	/* border-radius 값 정의 */
+}
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--ff_sans_n), sans-serif;
+	color: var(--color_text);
+	font-size: 0.8rem;
+	/* 기본 글자 크기 : 16px */
+	font-weight: normal;
+	scroll-behavior: smooth;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+img {
+	display: block;
+	border: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+form,
+fieldset {
+	border: none;
+}
+
+button,
+input,
+textarea,
+select,
+optgroup {
+	border: none;
+	background: none;
+	vertical-align: middle;
+}
+
+hr {
+	clear: both;
+	border: none;
+}
+
+address {
+	font-style: normal;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+header,
+footer,
+hgroup,
+main,
+nav,
+section,
+summary {
+	/* html5shiv */
+	display: block;
+}
+
+/* ---------- 기본 형태 선언 종료 ---------- */
+/* ---------- 공통 선언 시작 ---------- */
+body.prevent_scroll {
+	overflow: hidden;
+}
+
+#wrap {
+	/* 전체 랩핑 */
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#wrapMain {
+	min-height: 100vh;
+}
+
+.int_wrap {
+	/* 내부 박스 사이징 */
+	margin: 0 auto;
+	padding: 0 0.5rem;
+	max-width: 60rem;
+}
+
+.scr_alt {
+	/* 스크린 리더용 얼터닛 텍스트 */
+	text-indent: -500000rem;
+	overflow: hidden;
+}
+
+.clr_fix::after {
+	/* 클리어픽스 */
+	display: block;
+	clear: both;
+	content: "";
+}
+
+/* ---------- 공통 선언 종료 ---------- */
+/* ---------- 우선 / 예외 선언 시작 ---------- */
+h1#mainLogo {
+	border: none;
+}
+
+h1#mainLogo > a {
+	display: block;
+}
+
+hr.hf {
+	/* 가로줄 */
+	width: 100%;
+	height: 0.05rem;
+}
+
+hr.vf {
+	/* 세로줄 */
+	width: 0.05rem;
+	height: 100%;
+}
+
+h2 {
+	font-size: var(--fnt_big);
+}
+
+h3 {
+	font-size: var(--fnt_sectitle);
+}
+
+h4 {
+	font-size: var(--fnt_major);
+}
+
+h5 {
+	font-size: var(--fnt_title);
+}
+
+h6 {
+	font-size: var(--fnt_text);
+}
+
+/* ---------- 우선 / 예외 선언 종료 ---------- */

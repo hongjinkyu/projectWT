@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/* ---------- Interface CSS ---------- */
+::-moz-selection {
+	/* 선택 영역 색상 */
+	background: tomato;
+	color: currentColor;
+}
+::selection {
+	/* 선택 영역 색상 */
+	background: tomato;
+	color: currentColor;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+/* ---------- Scrollbar Start ---------- */
+::-webkit-scrollbar {
+	width: 0.6rem;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border: 0.05rem solid transparent;
+	border-radius: 0.2rem;
+	background: #505050;
+	background-clip: padding-box;
+	box-shadow: none;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: none;
+}
+
+/* ---------- Scrollbar End ---------- */
+/* ---------- Form Elements Start ---------- */
+input[type=color], input[type=file], input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=time], input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=tel],
+input[type=search],
+input[type=number],
+input[list],
+input[type=button],
+input[type=reset],
+input[type=submit],
+input[type=image],
+textarea,
+select,
+output,
+button {
+	position: relative;
+	padding: 0.25rem;
+	border: 0.05rem solid rgba(0, 0, 0, 0.2);
+	border-radius: 0.15rem;
+	background: white;
+	box-shadow: 0 0.2rem 0.35rem -0.25rem rgba(0, 0, 0, 0.2);
+	outline: none;
+	font-size: 0.6rem;
+	line-height: 1rem;
+}
+
+select {
+	padding: 0.3rem 0.25rem;
+}
+
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=time] {
+	padding: 0.2rem 0.25rem;
+}
+
+input[type=file] {
+	display: block;
+	padding: 0.1rem;
+}
+
+input[type=color] {
+	padding: 0.1rem 0.2rem;
+	width: 2.4rem;
+	height: 1.6rem;
+}
+
+label {
+	vertical-align: middle;
+}
+
+fieldset {
+	position: relative;
+	margin-bottom: 2rem;
+	padding: 0.25rem;
+	border: 0.05rem solid rgba(0, 0, 0, 0.2);
+}
+
+fieldset > legend {
+	position: absolute;
+	top: calc(100% - .15rem);
+	right: 0.25rem;
+	padding: 0.25rem;
+	border-radius: 0.15rem;
+	background: black;
+	color: white;
+}
+
+/* 추가 스타일링 필요한 요소들
+
+    input-range, input-checkbox, input-radio, input-number,
+    input-select, input-file, input-search, meter, progress
+
+*/
+/* ---------- Form Elements End ---------- */
+/* ---------- Modal, Pop-Up, Message Start ---------- */
+.success, .warning, .error, .normal {
+	position: fixed;
+	bottom: 1rem;
+	left: 50%;
+	padding: 0.8rem 1.4rem 0.8rem 1rem;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	border: 0.05rem solid currentColor;
+	border-left: 0.25rem solid currentColor;
+	border-radius: 0.15rem;
+	background: white;
+	color: #2d2d2d;
+	transform: translateX(-50%);
+	z-index: 50000;
+}
+
+aside#popModal {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 150000;
+}
+
+aside#popModal.poped_up {
+	display: flex;
+}
+
+.modal_message {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: space-between;
+	position: relative;
+	width: calc(100% - 4rem);
+	max-width: 30rem;
+	min-height: 10rem;
+	background: white;
+	box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.modal_text {
+	padding: 1rem;
+	width: calc(100% - 3rem);
+	height: auto;
+	font-weight: normal;
+	line-height: 1.4;
+}
+
+.modal_button_container {
+	margin-top: auto;
+	width: 100%;
+}
+
+.modal_close {
+	padding: 0.5rem 0;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	background: #d21400;
+	box-shadow: none;
+	color: white;
+	font-size: 0.8rem;
+	font-weight: bolder;
+}
+
+.message > h6 {
+	margin-bottom: 0.4rem;
+	font-size: 0.8rem;
+}
+
+.normal {
+	border-color: #4b4bbe;
+}
+
+.error {
+	border-color: #dc4b4b;
+}
+
+.warning {
+	border-color: #e6be1e;
+}
+
+.success {
+	border-color: #1ed200;
+}
+
+aside#popFollow {
+	position: fixed;
+	right: 0.5rem;
+	bottom: 0.5rem;
+	transition: 0.2s ease-out;
+}
+
+a.goto_top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 0.15rem;
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
+	font-size: 1rem;
+}
+
+/* ---------- Modal, Pop-Up, Message End ---------- */
