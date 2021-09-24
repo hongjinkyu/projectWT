@@ -20,8 +20,9 @@ header#headBase {
 nav#navBase {
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-content: center;
+	gap: 1.5rem;
 	height: 100%;
 }
 nav#navBase > * {
@@ -35,14 +36,8 @@ ul#navbarMain {
 	gap: 1rem;
 }
 
-input.nav_search {
-	padding: 0.25rem 0.75rem;
-	background: rgba(255, 255, 255, 0.65);
-	border-radius: 0.8rem;
-}
-input.nav_search:focus {
-	background: white;
-	box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.25);
+div#layerAccount {
+	margin-left: auto;
 }
 
 button.btn_account {
