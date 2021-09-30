@@ -13,13 +13,12 @@
 /* ---------- 하부 요소 시작 ---------- */
 
 header#headBase {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 4rem;
     background: transparent;
-    backdrop-filter: blur(2.5rem);
-    outline: .05rem solid rgba(0, 0, 0, .1);
     z-index: 10000;
 }
 
@@ -30,9 +29,23 @@ nav#navBase {
     align-content: center;
     gap: 1.5rem;
     height: 100%;
+    font-family: var(--ff_sans_p);
+    font-size: .7rem;
 
     > * {
         margin: auto 0;
+    }
+
+    &.nav_index {
+        color: var(--color_light);
+
+        h1#mainLogo {
+            color: var(--color_light);
+        }
+
+        p.user_name span {
+            color: var(--color_light);
+        }
     }
 }
 
@@ -41,24 +54,66 @@ ul#navbarMain {
     flex-flow: row nowrap;
     align-items: center;
     gap: 1rem;
+
+    a {
+        position: relative;
+
+        &::before {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: .4rem;
+            border-radius: .1rem;
+            background: var(--color_acc1);
+            transition: .3s;
+            z-index: -1;
+            content: '';
+        }
+
+        &:hover::before {
+            left: -.15rem;
+            width: calc(100% + .3rem);
+        }
+    }
 }
 
 div#layerAccount {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
     margin-left: auto;
+
+    > p.user_name {
+        padding-left: 1.5rem;
+
+        span {
+            color: var(--color_title);
+        }
+    }
 }
 
 button.btn_account {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1.8rem;
-    height: 1.8rem;
-    border: none;
+    padding: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    box-sizing: padding-box;
+    border: .1rem solid #fff;
     border-radius: 50%;
     background: rgb(70, 74, 99);
     color: rgb(255, 255, 255);
     cursor: pointer;
     overflow: hidden;
+
+    img.profile_pict {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     &:hover {
         background: rgb(109, 114, 143);
@@ -71,12 +126,71 @@ footer#footBase {
     left: 0;
     right: 0;
     height: 5rem;
-    background: rgba(0, 0, 0, 1);
 
     p {
         margin: 1rem auto;
     }
 }
 
+a.banner_partner {
+    display: block;
+    padding: 1rem 0;
+    width: 100%;
+    font-size: var(--fnt_title);
+    text-align: center;
+}
+
 /* ---------- 하부 요소 종료 ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
+
+div#mainSlider {
+    position: relative;
+    width: 100vw;
+    height: 45vh;
+    background: var(--color_bdr);
+    box-shadow: 0 .25rem .75rem var(--color_bdr);
+    overflow: hidden;
+
+    &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: radial-gradient(farthest-corner at right, transparent 0%, rgba(0 0 0 / .5) 100%);
+        pointer-events: none;
+        z-index: 1;
+        content: '';
+    }
+
+    .slick-arrow {
+        position: absolute;
+        bottom: 2rem;
+        left: calc(50% - 24rem);
+        z-index: 3;
+    }
+
+    .slick-dots {
+        display: flex;
+        flex-flow: row nowrap;
+        align-content: center;
+        gap: .25rem;
+        position: absolute;
+        bottom: 2rem;
+        left: calc(50% - 24rem);
+        z-index: 3;
+    }
+}
+
+.slider_item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 45vh;
+        object-fit: cover;
+    }
+}

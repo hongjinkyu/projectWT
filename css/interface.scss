@@ -1,7 +1,7 @@
 /* ---------- Interface CSS ---------- */
 
 ::selection { /* 선택 영역 색상 */
-    background: tomato;
+    background: var(--color_tone1);
     color: currentColor;
 }
 
@@ -36,14 +36,18 @@ a:visited {
 
 %interface_box_elmt {
     position: relative;
-    padding: .25rem;
-    border: .05rem solid rgba(0, 0, 0, .2);
+    padding: .45rem .5rem .4rem .5rem;
     border-radius: .15rem;
     background: rgba(255, 255, 255, 1);
-    box-shadow: 0 .2rem .35rem -.25rem rgba(0, 0, 0, .2);
+    box-shadow: 0 .25rem .75rem rgba(212, 206, 198, .3);
     outline: none;
+    color: var(--color_text);
+    font-family: var(--ff_sans_p);
     font-size: .6rem;
-    line-height: 1rem;
+
+    &::placeholder {
+        color: var(--color_bdr);
+    }
 }
 
 input[type="text"],
@@ -66,7 +70,7 @@ button {
 }
 
 select {
-    padding: .3rem .25rem;
+    padding: .35rem .25rem .3rem .25rem;
 }
 
 input[type="datetime-local"],
@@ -146,7 +150,7 @@ aside#popModal {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, .75);
     z-index: 150000;
 }
 

@@ -2,12 +2,12 @@
 /* ---------- Interface CSS ---------- */
 ::-moz-selection {
 	/* 선택 영역 색상 */
-	background: tomato;
+	background: var(--color_tone1);
 	color: currentColor;
 }
 ::selection {
 	/* 선택 영역 색상 */
-	background: tomato;
+	background: var(--color_tone1);
 	color: currentColor;
 }
 
@@ -57,18 +57,46 @@ select,
 output,
 button {
 	position: relative;
-	padding: 0.25rem;
-	border: 0.05rem solid rgba(0, 0, 0, 0.2);
+	padding: 0.45rem 0.5rem 0.4rem 0.5rem;
 	border-radius: 0.15rem;
 	background: white;
-	box-shadow: 0 0.2rem 0.35rem -0.25rem rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0.25rem 0.75rem rgba(212, 206, 198, 0.3);
 	outline: none;
+	color: var(--color_text);
+	font-family: var(--ff_sans_p);
 	font-size: 0.6rem;
-	line-height: 1rem;
+}
+input[type=color]::-moz-placeholder, input[type=file]::-moz-placeholder, input[type=datetime-local]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=month]::-moz-placeholder, input[type=week]::-moz-placeholder, input[type=time]::-moz-placeholder, input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=url]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=number]::-moz-placeholder, input[list]::-moz-placeholder, input[type=button]::-moz-placeholder, input[type=reset]::-moz-placeholder, input[type=submit]::-moz-placeholder, input[type=image]::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder, output::-moz-placeholder, button::-moz-placeholder {
+	color: var(--color_bdr);
+}
+input[type=color]:-ms-input-placeholder, input[type=file]:-ms-input-placeholder, input[type=datetime-local]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder, input[type=month]:-ms-input-placeholder, input[type=week]:-ms-input-placeholder, input[type=time]:-ms-input-placeholder, input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=url]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, input[type=search]:-ms-input-placeholder, input[type=number]:-ms-input-placeholder, input[list]:-ms-input-placeholder, input[type=button]:-ms-input-placeholder, input[type=reset]:-ms-input-placeholder, input[type=submit]:-ms-input-placeholder, input[type=image]:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder, output:-ms-input-placeholder, button:-ms-input-placeholder {
+	color: var(--color_bdr);
+}
+input[type=color]::placeholder, input[type=file]::placeholder, input[type=datetime-local]::placeholder,
+input[type=date]::placeholder,
+input[type=month]::placeholder,
+input[type=week]::placeholder,
+input[type=time]::placeholder, input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=email]::placeholder,
+input[type=url]::placeholder,
+input[type=tel]::placeholder,
+input[type=search]::placeholder,
+input[type=number]::placeholder,
+input[list]::placeholder,
+input[type=button]::placeholder,
+input[type=reset]::placeholder,
+input[type=submit]::placeholder,
+input[type=image]::placeholder,
+textarea::placeholder,
+select::placeholder,
+output::placeholder,
+button::placeholder {
+	color: var(--color_bdr);
 }
 
 select {
-	padding: 0.3rem 0.25rem;
+	padding: 0.35rem 0.25rem 0.3rem 0.25rem;
 }
 
 input[type=datetime-local],
@@ -145,7 +173,7 @@ aside#popModal {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.75);
 	z-index: 150000;
 }
 
