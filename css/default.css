@@ -60,29 +60,29 @@
 	--fnt_minor: .7rem;
 	--fnt_small: .6rem;
 	/* 폰트 사이즈 정의 */
-	--color_title: rgb(48, 42, 39);
-	--color_text: rgb(102, 69, 69);
-	--color_footer: rgb(136, 120, 99);
-	--color_acc1: rgb(251, 153, 51);
-	--color_acc2: rgb(0, 168, 80);
-	--color_tone1: rgb(255, 208, 159);
-	--color_tone2: rgb(196, 236, 224);
-	--color_bdr: rgb(212, 206, 198);
-	--color_bg: rgb(246, 244, 241);
+	--color_title: 48, 42, 39;
+	--color_text: 102, 69, 69;
+	--color_footer: 136, 120, 99;
+	--color_acc1: 251, 153, 51;
+	--color_acc2: 0, 168, 80;
+	--color_tone1: 255, 208, 159;
+	--color_tone2: 196, 236, 224;
+	--color_bdr: 212, 206, 198;
+	--color_bg: 246, 244, 241;
 	/* 컬러 팔렛트 정의 */
-	--color_point1: rgb(216, 0, 0);
-	--color_dark: rgb(0, 0, 0);
-	--color_light: rgb(255, 255, 255);
+	--color_point1: 216, 0, 0;
+	--color_dark: 0, 0, 0;
+	--color_light: 255, 255, 255;
 	/* 컬러 컨셉 정의 (다크 모드 변경시 필요) */
-	--color_tag1: rgb(242, 92, 102);
-	--color_tag2: rgb(248, 245, 203);
-	--color_tag3: rgb(167, 119, 230);
-	--color_tag4: rgb(190, 235, 179);
-	--color_tag5: rgb(170, 227, 239);
-	--color_tag_x: rgb(65, 65, 65);
+	--color_tag1: 242, 92, 102;
+	--color_tag2: 248, 245, 203;
+	--color_tag3: 167, 119, 230;
+	--color_tag4: 190, 235, 179;
+	--color_tag5: 170, 227, 239;
+	--color_tag_x: 65, 65, 65;
 	/* 아이템 태그 배경색 정의 */
-	--shd_major: (0 .25rem .75rem rgba(var(--color_dark), .15));
-	--shd_minor: (0 0 .25rem rgba(var(--color_dark), .3));
+	--shd_major: 0 .25rem .75rem rgba(var(--color_bdr), .3);
+	--shd_minor: 0 0 1rem rgba(var(--color_bdr), .5);
 	/* box-shadow 값 정의 */
 	--bdr_outer: .15rem;
 	--bdr_inner: .05rem;
@@ -178,11 +178,10 @@ body.prevent_scroll {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	overflow-x: hidden;
 }
 
 #wrapMain {
-	margin: 2.5rem auto 5rem auto;
+	margin: 2.5rem auto;
 	min-height: 100vh;
 }
 

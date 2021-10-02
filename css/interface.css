@@ -2,12 +2,12 @@
 /* ---------- Interface CSS ---------- */
 ::-moz-selection {
 	/* 선택 영역 색상 */
-	background: var(--color_tone1);
+	background: rgba(var(--color_tone1), 1);
 	color: currentColor;
 }
 ::selection {
 	/* 선택 영역 색상 */
-	background: var(--color_tone1);
+	background: rgba(var(--color_tone1), 1);
 	color: currentColor;
 }
 
@@ -58,19 +58,19 @@ output,
 button {
 	position: relative;
 	padding: 0.45rem 0.5rem 0.4rem 0.5rem;
-	border-radius: 0.15rem;
+	border-radius: var(--bdr_outer);
 	background: white;
-	box-shadow: 0 0.25rem 0.75rem rgba(212, 206, 198, 0.3);
+	box-shadow: var(--shd_major);
 	outline: none;
-	color: var(--color_text);
+	color: rgb(var(--color_text));
 	font-family: var(--ff_sans_p);
 	font-size: 0.6rem;
 }
 input[type=color]::-moz-placeholder, input[type=file]::-moz-placeholder, input[type=datetime-local]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=month]::-moz-placeholder, input[type=week]::-moz-placeholder, input[type=time]::-moz-placeholder, input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=url]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=number]::-moz-placeholder, input[list]::-moz-placeholder, input[type=button]::-moz-placeholder, input[type=reset]::-moz-placeholder, input[type=submit]::-moz-placeholder, input[type=image]::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder, output::-moz-placeholder, button::-moz-placeholder {
-	color: var(--color_bdr);
+	color: rgb(var(--color_bdr));
 }
 input[type=color]:-ms-input-placeholder, input[type=file]:-ms-input-placeholder, input[type=datetime-local]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder, input[type=month]:-ms-input-placeholder, input[type=week]:-ms-input-placeholder, input[type=time]:-ms-input-placeholder, input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=url]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, input[type=search]:-ms-input-placeholder, input[type=number]:-ms-input-placeholder, input[list]:-ms-input-placeholder, input[type=button]:-ms-input-placeholder, input[type=reset]:-ms-input-placeholder, input[type=submit]:-ms-input-placeholder, input[type=image]:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder, output:-ms-input-placeholder, button:-ms-input-placeholder {
-	color: var(--color_bdr);
+	color: rgb(var(--color_bdr));
 }
 input[type=color]::placeholder, input[type=file]::placeholder, input[type=datetime-local]::placeholder,
 input[type=date]::placeholder,
@@ -92,7 +92,26 @@ textarea::placeholder,
 select::placeholder,
 output::placeholder,
 button::placeholder {
-	color: var(--color_bdr);
+	color: rgb(var(--color_bdr));
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=tel]:focus,
+input[type=search]:focus,
+input[type=number]:focus,
+input[list]:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus,
+input[type=image]:focus,
+textarea:focus,
+select:focus,
+output:focus,
+button:focus {
+	box-shadow: var(--shd_major), 0 0 0 0.1rem rgba(var(--color_acc1), 0.5);
 }
 
 select {
@@ -126,7 +145,7 @@ fieldset {
 	position: relative;
 	margin-bottom: 2rem;
 	padding: 0.25rem;
-	border: 0.05rem solid rgba(0, 0, 0, 0.2);
+	border: 0.05rem solid rgb(var(--color_bdr));
 }
 
 fieldset > legend {
@@ -134,9 +153,9 @@ fieldset > legend {
 	top: calc(100% - .15rem);
 	right: 0.25rem;
 	padding: 0.25rem;
-	border-radius: 0.15rem;
-	background: black;
-	color: white;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_dark));
+	color: rgb(var(--color_light));
 }
 
 /* 추가 스타일링 필요한 요소들
@@ -160,25 +179,7 @@ fieldset > legend {
 	border-radius: 0.15rem;
 	background: white;
 	color: #2d2d2d;
-	transform: translateX(-50%);
 	z-index: 50000;
-}
-
-aside#popModal {
-	display: none;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0, 0, 0, 0.75);
-	z-index: 150000;
-}
-
-aside#popModal.poped_up {
-	display: flex;
 }
 
 .modal_message {

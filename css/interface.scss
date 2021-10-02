@@ -1,7 +1,7 @@
 /* ---------- Interface CSS ---------- */
 
 ::selection { /* 선택 영역 색상 */
-    background: var(--color_tone1);
+    background: rgba(var(--color_tone1), 1);
     color: currentColor;
 }
 
@@ -37,16 +37,16 @@ a:visited {
 %interface_box_elmt {
     position: relative;
     padding: .45rem .5rem .4rem .5rem;
-    border-radius: .15rem;
+    border-radius: var(--bdr_outer);
     background: rgba(255, 255, 255, 1);
-    box-shadow: 0 .25rem .75rem rgba(212, 206, 198, .3);
+    box-shadow: var(--shd_major);
     outline: none;
-    color: var(--color_text);
+    color: rgb(var(--color_text));
     font-family: var(--ff_sans_p);
     font-size: .6rem;
 
     &::placeholder {
-        color: var(--color_bdr);
+        color: rgb(var(--color_bdr));
     }
 }
 
@@ -67,6 +67,12 @@ select,
 output,
 button {
     @extend %interface_box_elmt;
+
+    &:focus {
+        box-shadow:
+            var(--shd_major),
+            0 0 0 .1rem rgba(var(--color_acc1), .5);
+    }
 }
 
 select {
@@ -103,7 +109,7 @@ fieldset {
     position: relative;
     margin-bottom: 2rem;
     padding: .25rem;
-    border: .05rem solid rgba(0, 0, 0, .2);
+    border: .05rem solid rgb(var(--color_bdr));
 }
 
 fieldset > legend {
@@ -111,9 +117,9 @@ fieldset > legend {
     top: calc(100% - .15rem);
     right: .25rem;
     padding: .25rem;
-    border-radius: .15rem;
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_dark));
+    color: rgb(var(--color_light));
 }
 
 /* 추가 스타일링 필요한 요소들
@@ -137,25 +143,7 @@ fieldset > legend {
     border-radius: .15rem;
     background: rgb(255, 255, 255);
     color: rgb(45, 45, 45);
-    transform: translateX(-50%);
     z-index: 50000;
-}
-
-aside#popModal {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, .75);
-    z-index: 150000;
-}
-
-aside#popModal.poped_up {
-    display: flex;
 }
 
 .modal_message {

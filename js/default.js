@@ -1,12 +1,10 @@
 // ---------- Global jQuery  ----------
 
-var dateClass='.datechk';
-
 $(document).ready(function() { // jQuery Load
 
     $(window).scroll(function() {
         let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-        let sticky_height = $('footer#footBase').height();
+        let sticky_height = $('footer#footBase').height() + 50;
 
         if (scrollBottom < sticky_height) {
             $('aside#popFollow').css('bottom', sticky_height + 10);

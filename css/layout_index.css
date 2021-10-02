@@ -29,13 +29,13 @@ nav#navBase > * {
 	margin: auto 0;
 }
 nav#navBase.nav_index {
-	color: var(--color_light);
+	color: rgb(var(--color_light));
 }
 nav#navBase.nav_index h1#mainLogo {
-	color: var(--color_light);
+	color: rgb(var(--color_light));
 }
 nav#navBase.nav_index p.user_name span {
-	color: var(--color_light);
+	color: rgb(var(--color_light));
 }
 
 ul#navbarMain {
@@ -55,7 +55,7 @@ ul#navbarMain a::before {
 	width: 0;
 	height: 0.4rem;
 	border-radius: 0.1rem;
-	background: var(--color_acc1);
+	background: rgb(var(--color_acc1));
 	transition: 0.3s;
 	z-index: -1;
 	content: "";
@@ -75,7 +75,7 @@ div#layerAccount > p.user_name {
 	padding-left: 1.5rem;
 }
 div#layerAccount > p.user_name span {
-	color: var(--color_title);
+	color: rgb(var(--color_title));
 }
 
 button.btn_account {
@@ -88,8 +88,7 @@ button.btn_account {
 	box-sizing: padding-box;
 	border: 0.1rem solid #fff;
 	border-radius: 50%;
-	background: #464a63;
-	color: white;
+	color: rgb(var(--color_light));
 	cursor: pointer;
 	overflow: hidden;
 }
@@ -100,7 +99,7 @@ button.btn_account img.profile_pict {
 	   object-fit: cover;
 }
 button.btn_account:hover {
-	background: #6d728f;
+	filter: brightness(1.1);
 }
 
 footer#footBase {
@@ -108,28 +107,29 @@ footer#footBase {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 5rem;
-}
-footer#footBase p {
-	margin: 1rem auto;
+	margin-top: 2.5rem;
 }
 
 a.banner_partner {
 	display: block;
 	padding: 1rem 0;
 	width: 100%;
+	background: linear-gradient(to right, rgb(var(--color_tone1)) 0%, rgb(var(--color_tone2)) 100%);
+	color: rgb(var(--color_text));
+	font-family: var(--ff_sans_p);
 	font-size: var(--fnt_title);
 	text-align: center;
+	text-shadow: 0 0.1rem 0 rgba(var(--color_text), 0.25);
 }
 
 /* ---------- 하부 요소 종료 ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
 div#mainSlider {
 	position: relative;
-	width: 100vw;
+	width: 100%;
 	height: 45vh;
 	background: var(--color_bdr);
-	box-shadow: 0 0.25rem 0.75rem var(--color_bdr);
+	box-shadow: var(--shd_minor);
 	overflow: hidden;
 }
 div#mainSlider::before {

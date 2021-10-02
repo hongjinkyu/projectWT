@@ -34,26 +34,6 @@
 
     <body>
 
-        <aside id="popModal">
-            <div class="modal_message">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 20h-4v2H8v-2H5a1 1 0 0 1-1-1v-3H2v-2h2v-4H2V8h2V5a1 1 0 0 1 1-1h3V2h2v2h4V2h2v2h3a1 1 0 0 1 1 1v3h2v2h-2v4h2v2h-2v3a1 1 0 0 1-1 1h-3v2h-2v-2zM7 7v4h4V7H7z"/></svg>
-                <p class="modal_text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ex dolorum rerum nisi quod minus deleniti dolor, ea, neque fuga modi explicabo eum praesentium dolore eaque! Sed rem fugiat architecto.
-                    Dolores, commodi eius. Quod consequuntur adipisci odit quidem esse aspernatur et cum, quisquam modi est sit accusantium in eaque excepturi doloribus nostrum fugit itaque architecto eum perferendis accusamus labore. Dolorem.
-                    Nemo, magnam esse culpa hic error ea reprehenderit sit nesciunt fugit, ex similique laudantium distinctio! Vero, minus. Veritatis, enim maiores tempora iure eum omnis dolorem harum eius corporis, ipsam rem?
-                    Dicta, veniam. Consectetur assumenda cum minus porro perspiciatis, soluta tempora tempore iure vel repellendus provident voluptatibus sit atque nobis autem quod rem enim omnis incidunt! Voluptates ipsa dolorum a rerum?
-                    Enim cumque quos delectus perferendis possimus pariatur quis eveniet corrupti vitae tempore praesentium, a modi quibusdam velit earum, fuga temporibus assumenda minima voluptatem nisi. Amet iure cumque libero inventore obcaecati.
-                    Esse voluptatibus quisquam, pariatur praesentium deserunt nesciunt laudantium beatae quos nemo in iure recusandae earum corrupti ducimus vero temporibus facere. Neque ipsam tempora aperiam repellendus quia pariatur consectetur quo esse.
-                    Vero cumque sed quia nihil nesciunt ipsa aperiam placeat dolore quisquam expedita, non soluta tempore deleniti voluptatum maxime. Nobis sunt iure ut illo consequatur quos nostrum optio quis eos officia.
-                </p>
-                <p class="modal_button_container">
-                    <button class="modal_close">
-                        닫기
-                    </button>
-                </p>
-            </div>
-        </aside> <!-- Modal, Pop-up, Whatever -->
-
         <div class="message normal">
             <h6>This is message</h6>
             <p>Why do i have to care of it?</p>
@@ -80,14 +60,11 @@
                         <li class="mnu_main">
                             <a href="#">와투 맛집</a>
                         </li>
-                        <li class="mnu_main">
-                            <input type="search" />
-                        </li>
                     </ul>
 
                     <div id="layerAccount">
                         <p class="user_name">
-                            <span>김누구</span> 님
+                            <span data-grade="grade_regular">김누구</span> 님
                         </p>
                         <button class="btn_account">
                             <img class="profile_pict" src="./images/temp_profile_1.jpg" alt="프로필 사진" />
@@ -221,7 +198,12 @@
                     와인투게더와 함께하실 파트너를 모십니다.
                 </a>
                 <div class="int_wrap">
-                    <p>Blah Blah Whatever &copy; 2021</p>
+                    <ul id="footLinks">
+                        <li class="mnu_flinks">고객센터</li>
+                        <li class="mnu_flinks">이용약관</li>
+                        <li class="mnu_flinks">개인정보보호방침</li>
+                        <li class="mnu_flinks">이메일주소수집거부</li>
+                    </ul>
                 </div>
             </footer> <!-- Footer -->
 
