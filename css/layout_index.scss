@@ -31,6 +31,7 @@ nav#navBase {
     height: 100%;
     font-family: var(--ff_sans_p);
     font-size: .7rem;
+    transition: .3s;
 
     > * {
         margin: auto 0;
@@ -161,24 +162,6 @@ div#mainSlider {
         pointer-events: none;
         z-index: 1;
         content: '';
-    }
-
-    .slick-arrow {
-        position: absolute;
-        bottom: 2rem;
-        left: calc(50% - 24rem);
-        z-index: 3;
-    }
-
-    .slick-dots {
-        display: flex;
-        flex-flow: row nowrap;
-        align-content: center;
-        gap: .25rem;
-        position: absolute;
-        bottom: 2rem;
-        left: calc(50% - 24rem);
-        z-index: 3;
     }
 }
 

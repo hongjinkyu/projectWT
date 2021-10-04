@@ -24,6 +24,7 @@ nav#navBase {
 	height: 100%;
 	font-family: var(--ff_sans_p);
 	font-size: 0.7rem;
+	transition: 0.3s;
 }
 nav#navBase > * {
 	margin: auto 0;
@@ -143,22 +144,6 @@ div#mainSlider::before {
 	pointer-events: none;
 	z-index: 1;
 	content: "";
-}
-div#mainSlider .slick-arrow {
-	position: absolute;
-	bottom: 2rem;
-	left: calc(50% - 24rem);
-	z-index: 3;
-}
-div#mainSlider .slick-dots {
-	display: flex;
-	flex-flow: row nowrap;
-	align-content: center;
-	gap: 0.25rem;
-	position: absolute;
-	bottom: 2rem;
-	left: calc(50% - 24rem);
-	z-index: 3;
 }
 
 .slider_item {

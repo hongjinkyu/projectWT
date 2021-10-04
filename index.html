@@ -34,11 +34,6 @@
 
     <body>
 
-        <div class="message normal">
-            <h6>This is message</h6>
-            <p>Why do i have to care of it?</p>
-        </div>
-
         <div id="wrap">
 
             <header id="headBase">
@@ -89,98 +84,32 @@
 
             <div id="wrapMain" class="int_wrap" role="main">
 
-                <article id="artLanding">
-                    <h1>H1 title</h1>
-                    <h2>H2 title</h2>
-                    <h3>H3 title</h3>
-                    <h4>H4 title</h4>
-                    <h5>H5 title</h5>
-                    <h6>H6 title</h6>
-                    normal text
-                </article> <!-- artLanding -->
-
-                <article id="artInterface">
-                    <fieldset>
-                        <legend>선택 요소</legend>
-                        <input type="datetime-local" id="inputDateLocal" />
-                        <input type="date" id="inputDate" />
-                        <input type="month" id="inputMonth" />
-                        <input type="week" id="inputWeek" />
-                        <input type="time" id="inputTime" />
-                    </fieldset>
-                    
-                    <fieldset>
-                        <legend>텍스트 박스 요소</legend>
-                        <input type="text" placeholder="textbox sample" />
-                        <input type="password" placeholder="password" />
-                        <input type="email" placeholder="example@email.com" />
-                        <input type="url" placeholder="https://" />
-                        <input type="tel" placeholder="000-0000-0000" />
-                        <input type="search" placeholder="검색" />
-                        <input type="number" placeholder="number" />
-                        <input list="dtList" id="dtOptions" placeholder="점심 메뉴 리스트">
-                        <datalist id="dtList">
-                            <optgroup label="밥">
-                                <option value="1"></option>
-                                <option value="2"></option>
-                                <option value="3"></option>
-                            </optgroup>
-                        </datalist>
-                        <select id="selExam" title="Select">
-                            <option value="All" selected>전체</option>
-                            <optgroup label="Fish">
-                                <option value="Godeunguh">Go</option>
-                                <option value="Chamchi">Cham</option>
-                                <option value="Daegu">Dae</option>
-                            </optgroup>
-                            <optgroup Label="Meat">
-                                <option value="Fork">Pig</option>
-                                <option value="Beef">Cow</option>
-                                <option value="Chicken">Bird</option>
-                            </optgroup>
-                        </select>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>긴 텍스트</legend>
-                        <textarea cols="40" rows="3"></textarea>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>기타 버튼 등</legend>
-                        <input type="range" id="inputRange" min="0" max="100" value="50" step="5" />
-                        <input type="checkbox" id="inputCheck" />
-                        <label for="inputCheck">귀금속</label>
-                        <input type="radio" id="inputRadio" name="radioFruit" />
-                        <label for="inputRadio">보석</label>
-                        <input type="button" value="input button" />
-                        <input type="reset" />
-                        <input type="submit" />
-                        <input type="image" alt="아이콘 버튼" />
-                        <input type="color" id="inputColor" />
-                        <button type="button">just button</button>
-                        <button type="button">button reset</button>
-                        <button type="button">button submit</button>
-                        <label for="mtMoney">돈</label>
-                        <meter id="mtMoney" min="0" max="100" low="30" high="90" optimum="75" value="75"></meter>
-                        <progress id="prgsHonor" max="100" value="5"></progress>
-                        <input type="file" id="inputFile" accept=".jpg" />
-                    </fieldset>
-                </article> <!-- artLanding -->
-
                 <article id="artCard">
-                    <ul class="card_vertical">
-                        <li class="card_indiv"></li>
-                        <li class="card_indiv"></li>
-                        <li class="card_indiv"></li>
-                        <li class="card_indiv"></li>
-                        <li class="card_indiv"></li>
-                        <li class="card_indiv"></li>
-                        <li class="card_indiv"></li>
-                        <li class="card_indiv"></li>
-                        <li class="card_indiv"></li>
-                        <li class="card_indiv"></li>
-                    </ul>
+                    <div class="card_item" data-category="byob">
+                        <img src="./images/img06.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_content">
+                            <dl class="card_desc">
+                                <dt class="card_title">
+                                    가나다라
+                                </dt>
+                                <dd class="card_subtitle">
+                                    마바사<br />
+                                    아자차카타
+                                </dd>
+                            </dl>
+
+                            <div class="card_spec">
+                                <p class="card_position_101">
+                                    <img src="./images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                    부산광역시 부산진구 > 어디
+                                </p>
+                                <p class="card_host">
+                                    <img src="./images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                    최말자 님
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
                 <aside id="popFollow">

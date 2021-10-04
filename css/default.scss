@@ -113,9 +113,9 @@
 }
 
 body {
-    background: var(--color_bg);
+    background: rgb(var(--color_bg));
     font-family: var(--ff_sans_n), sans-serif;
-    color: var(--color_text);
+    color: rgb(var(--color_text));
     font-size: .7rem; /* 기본 글자 크기 : 14px */
     font-weight: normal;
 	scroll-behavior: smooth;
@@ -235,7 +235,7 @@ h1#mainLogo {
     border: none;
     font-family: 'Berkshire Swash', cursive;
     font-size: 1rem;
-    color: var(--color_acc1);
+    color: rgb(var(--color_acc1));
 }
 
 h1#mainLogo > a {

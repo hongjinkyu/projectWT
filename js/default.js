@@ -11,6 +11,12 @@ $(document).ready(function() { // jQuery Load
         } else {
             $('aside#popFollow').css('bottom', 10);
         }
+
+        if ($(window).scrollTop() >= 150) {
+            $('nav#navBase').removeClass('nav_index');
+        } else {
+            $('nav#navBase').addClass('nav_index');
+        }
     }); // Window Scrolling Actions
 
     $(window).resize(function() {
