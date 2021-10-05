@@ -4,18 +4,12 @@ $(document).ready(function() { // jQuery Load
 
     $(window).scroll(function() {
         let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-        let sticky_height = $('footer#footBase').height() + 50;
+        let sticky_height = $('footer#footBase').height() + 10;
 
         if (scrollBottom < sticky_height) {
             $('aside#popFollow').css('bottom', sticky_height + 10);
         } else {
             $('aside#popFollow').css('bottom', 10);
-        }
-
-        if ($(window).scrollTop() >= 150) {
-            $('nav#navBase').removeClass('nav_index');
-        } else {
-            $('nav#navBase').addClass('nav_index');
         }
     }); // Window Scrolling Actions
 

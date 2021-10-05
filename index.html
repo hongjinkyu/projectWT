@@ -50,6 +50,9 @@
                             <a href="#">모임 둘러보기</a>
                         </li>
                         <li class="mnu_main">
+                            <a href="#">모임 개설하기</a>
+                        </li>
+                        <li class="mnu_main">
                             <a href="#">모임 후기</a>
                         </li>
                         <li class="mnu_main">
@@ -80,41 +83,146 @@
                 <div class="slider_item">
                     <img src="./images/img13.jpg" alt="" />
                 </div>
-            </div>
+            </div> <!-- Main Slider -->
 
             <div id="wrapMain" class="int_wrap" role="main">
 
-                <article id="artCard">
-                    <div class="card_item" data-category="byob">
-                        <img src="./images/img06.jpg" alt="모임 대표 사진" class="card_img" />
-                        <div class="card_content">
-                            <dl class="card_desc">
-                                <dt class="card_title">
-                                    가나다라
-                                </dt>
-                                <dd class="card_subtitle">
-                                    마바사<br />
-                                    아자차카타
-                                </dd>
-                            </dl>
+                <section class="main_section">
 
-                            <div class="card_spec">
-                                <p class="card_position_101">
-                                    <img src="./images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                    부산광역시 부산진구 > 어디
-                                </p>
-                                <p class="card_host">
-                                    <img src="./images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                    최말자 님
-                                </p>
+                    <div class="sec_title">
+                        <h3>이슈 모임</h3>
+                        <a href="#" class="sec_more">전체 보기</a>
+                        <p class="sec_subtitle">최근 가장 많은 조회수를 기록한 모임이에요.</p>
+                    </div>
+
+                    <article id="artCard">
+                        <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
+                            <img src="./images/img06.jpg" alt="모임 대표 사진" class="card_img" />
+                            <div class="card_content">
+                                <dl class="card_desc">
+                                    <dt class="card_title">
+                                        <h5>용호동 초빼이 모임</h5>
+                                    </dt>
+                                    <dd class="card_subtitle">
+                                        어 취한다<br />
+                                        양변에 로그를 취한다
+                                    </dd>
+                                    <dd class="card_like">
+                                        <span>35</span>
+                                        <img src="./images/icons/icon_heart.png" alt="좋아요" class="icon_heart" />
+                                    </dd>
+                                </dl> <!-- Card Item - Description -->
+
+                                <div class="card_spec">
+                                    <p class="card_location_small">
+                                        <img src="./images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                        부산광역시 수영구 > 수영국밥
+                                    </p>
+                                    <p class="card_host">
+                                        <img src="./images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                        박진감 님
+                                    </p>
+                                </div> <!-- Card Item - Location (Simple) -->
+
+                                <div class="card_location">
+                                    <img src="./images/img03.jpg" alt="모임 장소" class="location_pict" />
+                                    <dl class="location_desc">
+                                        <dt>수영국밥</dt>
+                                        <dd>#돼지국밥 #해장국</dd>
+                                    </dl>
+                                    <p class="item_price">최소 30,000원</p>
+                                </div> <!-- Card Item - Location (Hover Detail) -->
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article> <!-- Card Item - Gathering (BYOB) -->
+
+                    <article id="artCard">
+                        <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
+                            <img src="./images/img07.jpg" alt="모임 대표 사진" class="card_img" />
+                            <div class="card_content">
+                                <dl class="card_desc">
+                                    <dt class="card_title">
+                                        <h5>대낮에 와인 마시고 난동... 2명 멀쩡</h5>
+                                    </dt>
+                                    <dd class="card_subtitle">
+                                        목격자 A씨 "점마들 저거 저랄줄 알았다" 증언<br />
+                                        공복에 음주가 참변의 원인으로 밝혀져
+                                    </dd>
+                                    <dd class="card_like">
+                                        <span>-5</span>
+                                        <img src="./images/icons/icon_heart.png" alt="좋아요" class="icon_heart" />
+                                    </dd>
+                                </dl> <!-- Card Item - Description -->
+
+                                <div class="card_spec">
+                                    <p class="card_location_small">
+                                        <img src="./images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                        부산광역시 부산진구 > 시민공원
+                                    </p>
+                                    <p class="card_host">
+                                        <img src="./images/temp_profile_4.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                        고구마 님
+                                    </p>
+                                </div> <!-- Card Item - Location (Simple) -->
+
+                                <div class="card_location">
+                                    <img src="./images/img14.jpg" alt="모임 장소" class="location_pict" />
+                                    <dl class="location_desc">
+                                        <dt>시민공원</dt>
+                                        <dd>#야외 #피크닉 #공공장소</dd>
+                                    </dl>
+                                    <p class="item_price">최소 70,000원</p>
+                                </div> <!-- Card Item - Location (Hover Detail) -->
+                            </div>
+                        </div>
+                    </article> <!-- Card Item - Gathering (BYOB) -->
+
+                    <article id="artCard">
+                        <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                            <img src="./images/img10.jpg" alt="모임 대표 사진" class="card_img" />
+                            <div class="card_content">
+                                <dl class="card_desc">
+                                    <dt class="card_title">
+                                        <h5>너는 술이 쓰냐?</h5>
+                                    </dt>
+                                    <dd class="card_subtitle">
+                                        나는 힘든 일을 많이 겪어서 그런지 달게 느껴진다<br />
+                                        우에엥 집에 갈래
+                                    </dd>
+                                    <dd class="card_like">
+                                        <span>156</span>
+                                        <img src="./images/icons/icon_heart.png" alt="좋아요" class="icon_heart" />
+                                    </dd>
+                                </dl> <!-- Card Item - Description -->
+
+                                <div class="card_spec">
+                                    <p class="card_location_small">
+                                        <img src="./images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                        서울특별시 용산구 > 드래곤스파
+                                    </p>
+                                    <p class="card_host">
+                                        <img src="./images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                        박복례 님
+                                    </p>
+                                </div> <!-- Card Item - Location (Simple) -->
+
+                                <div class="card_location">
+                                    <img src="./images/img15.jpg" alt="모임 장소" class="location_pict" />
+                                    <dl class="location_desc">
+                                        <dt>드래곤스파</dt>
+                                        <dd>#찜질방 </dd>
+                                    </dl>
+                                    <p class="item_price">참여비 50,000원</p>
+                                </div> <!-- Card Item - Location (Hover Detail) -->
+                            </div>
+                        </div>
+                    </article> <!-- Card Item - Gathering (LIST) -->
+
+                </section> <!-- secIssue -->
 
                 <aside id="popFollow">
                     <a href="#wrap" class="goto_top">
-                        ^
+                        <img src="./images/icons/icon_gototop.png" alt="맨 위로" />
                     </a>
                 </aside> <!-- Sticky Tag -->
 
@@ -128,11 +236,63 @@
                 </a>
                 <div class="int_wrap">
                     <ul id="footLinks">
-                        <li class="mnu_flinks">고객센터</li>
-                        <li class="mnu_flinks">이용약관</li>
-                        <li class="mnu_flinks">개인정보보호방침</li>
-                        <li class="mnu_flinks">이메일주소수집거부</li>
+                        <li class="mnu_flinks"><a href="#">고객센터</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">이용약관</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">개인정보보호방침</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">이메일주소수집거부</a></li>
+                        <li class="mnu_flinks">제휴문의 <a href="mailto:justin@winetogether.kr">justin@winetogether.kr</a></li>
                     </ul>
+
+                    <div id="footContent">
+                        <div class="footer_company">
+                            <h6>(주) 비노앤제이</h6>
+                            <ul class="footer_company_info">
+                                <li>
+                                    <img src="./images/logo_footer.png" alt="VINO & J" />
+                                </li>
+                                <li>
+                                    대표이사
+                                    <p>최용준</p>
+                                </li>
+                                <li>
+                                    사업자등록번호
+                                    <p>617-86-10479</p>
+                                </li>
+                                <li>
+                                    통신판매업신고번호
+                                    <p>제2016-부산해운대-0485호</p>
+                                </li>
+                                <li>
+                                    주소
+                                    <address>부산광역시 해운대구 해운대로 570번길 46, B1</address>
+                                </li>
+                                <li class="disclaimer">
+                                    전자상거래상 중개업이 어쩌고 저쩌고 책임은 구매자 본인에게 있고 어쩌고 저쩌고<br />
+                                    두줄로 들어가면 이런 느낌이고 뭔가 내용이 많아야 할거같고
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer_callcenter">
+                            <h6>CALL CENTER</h6>
+                            <div class="footer_callcenter_text">
+                                <img src="./images/icons/icon_cs.png" alt="고객센터" class="icon_cs" /><!--
+                                --><span>1811-0612</span>
+                                <p>
+                                    월~금 :
+                                    오전 10:00 ~ 오후 06:00
+                                </p>
+                                <p>
+                                    점심시간 :
+                                    오후 12:00 ~ 오후 01:00
+                                </p>
+                                <p>※ 토 / 일 / 공휴일은 휴무입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="copyRights">Copyright &copy; 2021 와인투게더</p>
                 </div>
             </footer> <!-- Footer -->
 
