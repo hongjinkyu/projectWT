@@ -164,8 +164,8 @@ header#headBase {
     z-index: 10000;
 
     &.scrolled {
-        background: rgba(var(--color_light), .3);
-        backdrop-filter: blur(.25rem);
+        background: rgb(var(--color_light));
+        outline: .05rem solid rgb(var(--color_bdr));
     }
 }
 
@@ -423,6 +423,7 @@ div#footContent {
     flex-flow: row wrap;
     justify-content: flex-start;
     gap: 1.5rem .5rem;
+    margin-top: 2.5rem;
 
     > .sec_title {
         display: flex;
@@ -485,7 +486,7 @@ div#footContent {
     &::before {
         display: block;
         position: absolute;
-        top: .25rem;
+        bottom: 8.75rem;
         right: .25rem;
         padding: .15rem .5rem;
         border: .05rem solid currentColor;
@@ -494,6 +495,7 @@ div#footContent {
         color: rgba(var(--color_light), .75);
         font-weight: bold;
         text-shadow: .05rem .05rem 0 rgba(var(--color_dark), .3);
+        transition: .3s;
         z-index: 2;
         content: '';
     }
@@ -514,6 +516,21 @@ div#footContent {
         }
     }
 
+    > p.card_timeleft {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        padding: .25rem .4rem .15rem 1.2rem;
+        height: 1rem;
+        border-radius: .5rem;
+        background: rgb(var(--color_point1)) url('../images/icons/icon_clock.png') no-repeat .1rem;
+        box-shadow: 0 0 .75rem rgba(var(--color_dark), 1);
+        font-family: var(--ff_sans_p);
+        color: rgb(var(--color_light));
+        font-size: var(--fnt_small);
+        z-index: 2;
+    }
+
     > .card_img {
         width: 100%;
         height: 12rem;
@@ -531,15 +548,25 @@ div#footContent {
         padding: 1rem .5rem 0 .5rem;
 
         > .card_title {
-            max-width: 16rem;
-            overflow: hidden;
+            max-width: 15.5rem;
+
+            h5 {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
         }
     
         > .card_subtitle {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
             margin-top: .75rem;
-            max-width: 16rem;
+            max-width: 15.5rem;
             font-size: var(--fnt_minor);
             line-height: 1.4;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
     
         > .card_like {
@@ -619,6 +646,10 @@ div#footContent {
     }
 
     &:hover {
+        &::before {
+            bottom: 11.75rem;
+        }
+
         .card_img {
             height: 9rem;
             filter: brightness(.5);

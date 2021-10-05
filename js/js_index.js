@@ -1,6 +1,13 @@
 // ---------- Page-Specific jQuery (Index) ----------
 
 $(document).ready(function() { // jQuery Load
+    if ($(window).scrollTop() >= 200) {
+        $('header#headBase').addClass('scrolled')
+        $('nav#navBase').removeClass('nav_index');
+    } else {
+        $('header#headBase').removeClass('scrolled')
+        $('nav#navBase').addClass('nav_index');
+    }
 
     $(window).scroll(function() {
         if ($(window).scrollTop() >= 200) {

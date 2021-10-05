@@ -197,9 +197,8 @@ header#headBase {
 	z-index: 10000;
 }
 header#headBase.scrolled {
-	background: rgba(var(--color_light), 0.3);
-	-webkit-backdrop-filter: blur(0.25rem);
-	        backdrop-filter: blur(0.25rem);
+	background: rgb(var(--color_light));
+	outline: 0.05rem solid rgb(var(--color_bdr));
 }
 
 nav#navBase {
@@ -426,6 +425,7 @@ div#footContent h6 {
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	gap: 1.5rem 0.5rem;
+	margin-top: 2.5rem;
 }
 .main_section > .sec_title {
 	display: flex;
@@ -484,7 +484,7 @@ div#footContent h6 {
 .card_item::before {
 	display: block;
 	position: absolute;
-	top: 0.25rem;
+	bottom: 8.75rem;
 	right: 0.25rem;
 	padding: 0.15rem 0.5rem;
 	border: 0.05rem solid currentColor;
@@ -493,6 +493,7 @@ div#footContent h6 {
 	color: rgba(var(--color_light), 0.75);
 	font-weight: bold;
 	text-shadow: 0.05rem 0.05rem 0 rgba(var(--color_dark), 0.3);
+	transition: 0.3s;
 	z-index: 2;
 	content: "";
 }
@@ -505,6 +506,20 @@ div#footContent h6 {
 	border-color: #dc801f;
 	background: rgb(var(--color_acc1));
 	content: "LIST";
+}
+.card_item > p.card_timeleft {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	padding: 0.25rem 0.4rem 0.15rem 1.2rem;
+	height: 1rem;
+	border-radius: 0.5rem;
+	background: rgb(var(--color_point1)) url("../images/icons/icon_clock.png") no-repeat 0.1rem;
+	box-shadow: 0 0 0.75rem rgba(var(--color_dark), 1);
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_small);
+	z-index: 2;
 }
 .card_item > .card_img {
 	width: 100%;
@@ -522,14 +537,23 @@ div#footContent h6 {
 	padding: 1rem 0.5rem 0 0.5rem;
 }
 .card_item .card_desc > .card_title {
-	max-width: 16rem;
+	max-width: 15.5rem;
+}
+.card_item .card_desc > .card_title h5 {
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	overflow: hidden;
 }
 .card_item .card_desc > .card_subtitle {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
 	margin-top: 0.75rem;
-	max-width: 16rem;
+	max-width: 15.5rem;
 	font-size: var(--fnt_minor);
 	line-height: 1.4;
+	-webkit-line-clamp: 2;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 .card_item .card_desc > .card_like {
 	position: absolute;
@@ -594,6 +618,9 @@ div#footContent h6 {
 	margin-left: auto;
 	font-size: var(--fnt_title);
 	font-weight: bold;
+}
+.card_item:hover::before {
+	bottom: 11.75rem;
 }
 .card_item:hover .card_img {
 	height: 9rem;
