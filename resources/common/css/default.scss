@@ -60,13 +60,13 @@
     --ff_eng: 'Miriam Libre';
     /* font-family 정의 */
 
-    --fnt_big: 1.8rem;
-    --fnt_sectitle: 1.5rem;
-    --fnt_major: 1.2rem;
-    --fnt_title: 1rem;
-    --fnt_text: .8rem;
-    --fnt_minor: .7rem;
-    --fnt_small: .6rem;
+    --fnt_36: 1.8rem;
+    --fnt_30: 1.5rem;
+    --fnt_24: 1.2rem;
+    --fnt_20: 1rem;
+    --fnt_16: .8rem;
+    --fnt_14: .7rem;
+    --fnt_12: .6rem;
     /* 폰트 사이즈 정의 */
 
     --color_title: 48, 42, 39;
@@ -257,29 +257,29 @@ hr.vf { /* 세로줄 */
 }
 
 h2 {
-    font-size: var(--fnt_big);
+    font-size: var(--fnt_36);
 }
 
 h3 {
     font-family: var(--ff_serif);
     color: rgb(var(--color_title));
-    font-size: var(--fnt_sectitle);
+    font-size: var(--fnt_30);
 }
 
 h4 {
-    font-size: var(--fnt_major);
+    font-size: var(--fnt_24);
 }
 
 h5 {
     font-family: var(--ff_serif);
     color: rgb(var(--color_title));
-    font-size: var(--fnt_title);
+    font-size: var(--fnt_20);
     font-weight: bold;
 }
 
 h6 {
     color: rgb(var(--color_title));
-    font-size: var(--fnt_text);
+    font-size: var(--fnt_16);
 }
 
 /* ---------- 우선 / 예외 선언 종료 ---------- */

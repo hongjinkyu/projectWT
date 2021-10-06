@@ -51,12 +51,11 @@ div#mainSlider {
     }
 }
 
-#secBanner_01 {
+.long_banner {
     position: relative;
     margin: 4rem 0;
     height: 8rem;
     border-radius: var(--bdr_outer);
-    background: linear-gradient(to right, rgb(var(--color_tone2)) 50%, rgb(92, 139, 180) 100%);
 
     > * {
         position: absolute;
@@ -65,7 +64,7 @@ div#mainSlider {
     > p {
         top: 1.5rem;
         left: 1.5rem;
-        font-size: var(--fnt_text);
+        font-size: var(--fnt_16);
         font-weight: bold;
     }
 
@@ -81,6 +80,14 @@ div#mainSlider {
         right: 2.5rem;
         height: 11rem;
     }
+}
+
+#secBanner_01 {
+    background: linear-gradient(to right, rgb(var(--color_tone2)) 50%, rgb(92, 139, 180) 100%);
+}
+
+#secBanner_02 {
+    background: linear-gradient(to right, rgb(var(--color_tone1)) 50%, rgb(var(--color_acc1)) 100%);
 }
 
 .card_partner {
@@ -138,7 +145,7 @@ div#mainSlider {
             border-radius: var(--bdr_outer);
             background: rgb(var(--color_tone2));
             color: rgb(var(--color_acc2));
-            font-size: var(--fnt_small);
+            font-size: var(--fnt_12);
             transition: .3s;
             opacity: 0;
         }
@@ -156,5 +163,25 @@ div#mainSlider {
         .card_partner_tag > span {
             opacity: 1;
         }
+    }
+}
+
+.item_review {
+    display: flex;
+    width: calc(58.5rem / 2);
+    height: 17.5rem;
+    border: .05rem solid rgb(var(--color_bdr));
+    background: rgb(var(--color_light));
+
+    > .review_image {
+        width: 17.5rem;
+        height: 100%;
+        border-right: .05rem solid rgb(var(--color_bdr));
+        object-fit: cover;
+    }
+
+    > .review_desc {
+        width: 100%;
+        height: 100%;
     }
 }

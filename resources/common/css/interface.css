@@ -303,7 +303,7 @@ a.banner_partner {
 	background: linear-gradient(to right, rgb(var(--color_tone1)) 0%, rgb(var(--color_tone2)) 100%);
 	color: rgb(var(--color_text));
 	font-family: var(--ff_sans_p);
-	font-size: var(--fnt_title);
+	font-size: var(--fnt_20);
 	text-align: center;
 	text-shadow: 0 0.1rem 0 rgba(var(--color_text), 0.25);
 }
@@ -315,7 +315,7 @@ ul#footLinks {
 	gap: 1.25rem;
 	padding: 0.75rem;
 	border-bottom: 0.05rem solid rgb(var(--color_subtle));
-	font-size: var(--fnt_small);
+	font-size: var(--fnt_12);
 	font-weight: bold;
 }
 ul#footLinks a:link,
@@ -365,7 +365,7 @@ div#footContent h6 {
 	max-width: 40rem;
 }
 .footer_company_info {
-	font-size: var(--fnt_small);
+	font-size: var(--fnt_12);
 }
 .footer_company_info::after {
 	display: block;
@@ -383,13 +383,13 @@ div#footContent h6 {
 .footer_company_info li p,
 .footer_company_info li address {
 	color: rgb(var(--color_text));
-	font-size: var(--fnt_minor);
+	font-size: var(--fnt_14);
 	font-weight: bold;
 }
 
 .footer_callcenter {
 	max-width: 10rem;
-	font-size: var(--fnt_small);
+	font-size: var(--fnt_12);
 	font-weight: bold;
 }
 .footer_callcenter_text {
@@ -402,7 +402,7 @@ div#footContent h6 {
 .footer_callcenter_text .icon_cs + span {
 	margin-left: 0.25rem;
 	color: rgb(var(--color_acc1));
-	font-size: var(--fnt_major);
+	font-size: var(--fnt_24);
 	font-weight: bold;
 }
 .footer_callcenter_text p {
@@ -414,7 +414,7 @@ div#footContent h6 {
 
 #copyRights {
 	padding: 0.5rem 0;
-	font-size: var(--fnt_small);
+	font-size: var(--fnt_12);
 	text-align: center;
 }
 
@@ -518,7 +518,7 @@ div#footContent h6 {
 	box-shadow: 0 0 0.75rem rgba(var(--color_dark), 1);
 	font-family: var(--ff_sans_p);
 	color: rgb(var(--color_light));
-	font-size: var(--fnt_small);
+	font-size: var(--fnt_12);
 	z-index: 2;
 }
 .card_item > .card_img {
@@ -549,7 +549,7 @@ div#footContent h6 {
 	-webkit-box-orient: vertical;
 	margin-top: 0.75rem;
 	max-width: 15.5rem;
-	font-size: var(--fnt_minor);
+	font-size: var(--fnt_14);
 	line-height: 1.4;
 	-webkit-line-clamp: 2;
 	text-overflow: ellipsis;
@@ -559,7 +559,7 @@ div#footContent h6 {
 	position: absolute;
 	top: 1.2rem;
 	right: 0.5rem;
-	font-size: var(--fnt_small);
+	font-size: var(--fnt_12);
 	font-weight: bold;
 }
 .card_item .card_spec {
@@ -607,16 +607,16 @@ div#footContent h6 {
 	padding-left: 0.25rem;
 }
 .card_item .card_location > .location_desc > dt {
-	font-size: var(--fnt_text);
+	font-size: var(--fnt_16);
 	font-weight: bold;
 }
 .card_item .card_location > .location_desc > dd {
 	margin-top: 0.25rem;
-	font-size: var(--fnt_small);
+	font-size: var(--fnt_12);
 }
 .card_item .card_location > .item_price {
 	margin-left: auto;
-	font-size: var(--fnt_title);
+	font-size: var(--fnt_20);
 	font-weight: bold;
 }
 .card_item:hover::before {

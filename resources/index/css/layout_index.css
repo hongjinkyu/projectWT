@@ -40,32 +40,39 @@ div#mainSlider::before {
 	   object-fit: cover;
 }
 
-#secBanner_01 {
+.long_banner {
 	position: relative;
 	margin: 4rem 0;
 	height: 8rem;
 	border-radius: var(--bdr_outer);
-	background: linear-gradient(to right, rgb(var(--color_tone2)) 50%, #5c8bb4 100%);
 }
-#secBanner_01 > * {
+.long_banner > * {
 	position: absolute;
 }
-#secBanner_01 > p {
+.long_banner > p {
 	top: 1.5rem;
 	left: 1.5rem;
-	font-size: var(--fnt_text);
+	font-size: var(--fnt_16);
 	font-weight: bold;
 }
-#secBanner_01 > h2 {
+.long_banner > h2 {
 	top: 3.5rem;
 	left: 1.5rem;
 	font-family: var(--ff_serif);
 	color: rgb(var(--color_title));
 }
-#secBanner_01 > .banner_image {
+.long_banner > .banner_image {
 	top: -1.5rem;
 	right: 2.5rem;
 	height: 11rem;
+}
+
+#secBanner_01 {
+	background: linear-gradient(to right, rgb(var(--color_tone2)) 50%, #5c8bb4 100%);
+}
+
+#secBanner_02 {
+	background: linear-gradient(to right, rgb(var(--color_tone1)) 50%, rgb(var(--color_acc1)) 100%);
 }
 
 .card_partner {
@@ -120,7 +127,7 @@ div#mainSlider::before {
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_tone2));
 	color: rgb(var(--color_acc2));
-	font-size: var(--fnt_small);
+	font-size: var(--fnt_12);
 	transition: 0.3s;
 	opacity: 0;
 }
@@ -132,4 +139,23 @@ div#mainSlider::before {
 }
 .card_partner:hover .card_partner_tag > span {
 	opacity: 1;
+}
+
+.item_review {
+	display: flex;
+	width: calc(58.5rem / 2);
+	height: 17.5rem;
+	border: 0.05rem solid rgb(var(--color_bdr));
+	background: rgb(var(--color_light));
+}
+.item_review > .review_image {
+	width: 17.5rem;
+	height: 100%;
+	border-right: 0.05rem solid rgb(var(--color_bdr));
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.item_review > .review_desc {
+	width: 100%;
+	height: 100%;
 }
