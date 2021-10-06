@@ -6,28 +6,28 @@
 
 @font-face {
     font-family: 'AppleSDGothic';
-    src: local('Apple SD Gothic Neo Regular'), url('./fonts/applesd.ttf'), local('Malgun Gothic');
+    src: local('Apple SD Gothic Neo Regular'), url('../fonts/applesd.ttf'), local('Malgun Gothic');
     font-weight: bolder;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'KoPubPro';
-    src: local('KoPubPro'), url('./fonts/kopub_light.otf'), local('Malgun Gothic');
+    src: local('KoPubPro'), url('../fonts/kopub_light.otf'), local('Malgun Gothic');
     font-weight: lighter;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'KoPubPro';
-    src: local('KoPubPro'), url('./fonts/kopub_normal.otf'), local('Malgun Gothic');
+    src: local('KoPubPro'), url('../fonts/kopub_normal.otf'), local('Malgun Gothic');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'KoPubPro';
-    src: local('KoPubPro'), url('./fonts/kopub_bold.otf'), local('Malgun Gothic');
+    src: local('KoPubPro'), url('../fonts/kopub_bold.otf'), local('Malgun Gothic');
     font-weight: bold;
     font-style: normal;
 }
