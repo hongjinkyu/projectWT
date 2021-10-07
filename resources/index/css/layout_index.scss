@@ -229,15 +229,24 @@ div#mainSlider {
         position: absolute;
     }
 
-    p {
-        top: 1.5rem;
+    p:first-of-type {
+        top: 1rem;
         left: 1.5rem;
         font-size: var(--fnt_16);
         font-weight: bold;
     }
 
+    p:nth-of-type(2) {
+        top: 5.5rem;
+        left: 1.5rem;
+        max-width: calc(100% - 3rem);
+        font-size: var(--fnt_16);
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
     h2 {
-        top: 3.5rem;
+        top: 3rem;
         left: 1.5rem;
         font-family: var(--ff_serif);
         color: rgb(var(--color_title));
