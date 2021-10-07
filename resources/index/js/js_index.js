@@ -35,4 +35,9 @@ $(document).ready(function() { // jQuery Load
         zIndex: 1
     });
 
+    $('.star_point').each(function() {
+        let starPointLength = $(this).attr('data-point-total');
+        $(this).find('.star_point_blacker').css('width', 'calc(100% - ' + starPointLength * 10 + '%)');
+    })
+
 }) // jQuery Closed

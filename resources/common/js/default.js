@@ -19,6 +19,10 @@ $(document).ready(function() { // jQuery Load
 
 // ---------- Actual Codes ----------
 
-
+    $('.chk_like').each(function() {
+        $(this).click(function() {
+            $(this).toggleClass('checked');
+        });
+    });
 
 }) // jQuery Closed

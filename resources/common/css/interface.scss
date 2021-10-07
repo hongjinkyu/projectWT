@@ -109,7 +109,7 @@ fieldset {
     position: relative;
     margin-bottom: 2rem;
     padding: .25rem;
-    border: .05rem solid rgb(var(--color_bdr));
+    border: var(--border);
 }
 
 fieldset > legend {
@@ -165,7 +165,7 @@ header#headBase {
 
     &.scrolled {
         background: rgb(var(--color_light));
-        outline: .05rem solid rgb(var(--color_bdr));
+        outline: var(--border);
     }
 }
 
@@ -480,7 +480,7 @@ div#footContent {
     position: relative;
     width: calc(58rem / 3);
     height: 20.5rem;
-    border: .05rem solid rgb(var(--color_bdr));
+    border: var(--border);
     background: rgb(var(--color_light));
 
     &::before {
@@ -534,7 +534,7 @@ div#footContent {
     > .card_img {
         width: 100%;
         height: 12rem;
-        border-bottom: .05rem solid rgb(var(--color_bdr));
+        border-bottom: var(--border);
         object-fit: cover;
         transition: .3s;
     }
@@ -571,7 +571,7 @@ div#footContent {
     
         > .card_like {
             position: absolute;
-            top: 1.2rem;
+            top: 1rem;
             right: .5rem;
             font-size: var(--fnt_12);
             font-weight: bold;
@@ -589,7 +589,7 @@ div#footContent {
         left: .5rem;
         right: .5rem;
         height: 2.5rem;
-        border-top: .05rem solid rgb(var(--color_bdr));
+        border-top: var(--border);
         transition: .3s;
 
         > p {
@@ -597,10 +597,6 @@ div#footContent {
 
             &.card_location_small {
                 font-size: .6rem;
-            }
-
-            &.card_host {
-                font-weight: bold;
             }
         }
     }
@@ -619,7 +615,7 @@ div#footContent {
         > .location_pict {
             width: 2.5rem;
             height: 2.5rem;
-            border: .05rem solid rgb(var(--color_bdr));
+            border: var(--border);
             border-radius: var(--bdr_outer);
             object-fit: cover;
         }
@@ -679,9 +675,76 @@ div#footContent {
     display: inline-block;
     width: 1rem;
     height: 1rem;
-    border: .05rem solid rgb(var(--color_bdr));
+    border: var(--border);
     border-radius: 50%;
     vertical-align: middle;
+
+    & + span {
+        font-size: var(--fnt_14);
+        font-weight: bold;
+        vertical-align: middle;
+    }
+}
+
+.star_point {
+    position: relative;
+    width: calc(.75rem * 5);
+
+    > .star_point_blacker {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: rgb(var(--color_dark));
+        mix-blend-mode: color;
+    }
+
+    &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        padding: .1rem .25rem;
+        width: fit-content;
+        font-family: var(--ff_eng);
+        color: rgb(var(--color_acc2));
+        font-size: var(--fnt_12);
+        font-weight: bold;
+        content: attr(data-point-total)'';
+    }
+
+    &::after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+
+    > span {
+        display: block;
+        float: left;
+        width: .75rem;
+        height: .75rem;
+        background: url('../images/icons/review_star.png') no-repeat;
+    }
+}
+
+.chk_like {
+    font-size: var(--fnt_12);
+    font-weight: bold;
+    cursor: pointer;
+
+    > .like_num {
+        display: block;
+        padding-right: .9rem;
+        background: url('../images/icons/icon_heart.png') no-repeat top .25rem right;
+        line-height: 1rem;
+        transition: .2s;
+    }
+
+    &.checked > .like_num {
+        background: url('../images/icons/icon_heart_f.png') no-repeat top .25rem right;
+    }
 }
 
 /* ---------- Repeating Items end ---------- */

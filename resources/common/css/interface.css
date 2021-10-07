@@ -145,7 +145,7 @@ fieldset {
 	position: relative;
 	margin-bottom: 2rem;
 	padding: 0.25rem;
-	border: 0.05rem solid rgb(var(--color_bdr));
+	border: var(--border);
 }
 
 fieldset > legend {
@@ -198,7 +198,7 @@ header#headBase {
 }
 header#headBase.scrolled {
 	background: rgb(var(--color_light));
-	outline: 0.05rem solid rgb(var(--color_bdr));
+	outline: var(--border);
 }
 
 nav#navBase {
@@ -478,7 +478,7 @@ div#footContent h6 {
 	position: relative;
 	width: calc(58rem / 3);
 	height: 20.5rem;
-	border: 0.05rem solid rgb(var(--color_bdr));
+	border: var(--border);
 	background: rgb(var(--color_light));
 }
 .card_item::before {
@@ -524,7 +524,7 @@ div#footContent h6 {
 .card_item > .card_img {
 	width: 100%;
 	height: 12rem;
-	border-bottom: 0.05rem solid rgb(var(--color_bdr));
+	border-bottom: var(--border);
 	-o-object-fit: cover;
 	   object-fit: cover;
 	transition: 0.3s;
@@ -557,7 +557,7 @@ div#footContent h6 {
 }
 .card_item .card_desc > .card_like {
 	position: absolute;
-	top: 1.2rem;
+	top: 1rem;
 	right: 0.5rem;
 	font-size: var(--fnt_12);
 	font-weight: bold;
@@ -572,7 +572,7 @@ div#footContent h6 {
 	left: 0.5rem;
 	right: 0.5rem;
 	height: 2.5rem;
-	border-top: 0.05rem solid rgb(var(--color_bdr));
+	border-top: var(--border);
 	transition: 0.3s;
 }
 .card_item .card_spec > p {
@@ -580,9 +580,6 @@ div#footContent h6 {
 }
 .card_item .card_spec > p.card_location_small {
 	font-size: 0.6rem;
-}
-.card_item .card_spec > p.card_host {
-	font-weight: bold;
 }
 .card_item .card_location {
 	display: flex;
@@ -598,7 +595,7 @@ div#footContent h6 {
 .card_item .card_location > .location_pict {
 	width: 2.5rem;
 	height: 2.5rem;
-	border: 0.05rem solid rgb(var(--color_bdr));
+	border: var(--border);
 	border-radius: var(--bdr_outer);
 	-o-object-fit: cover;
 	   object-fit: cover;
@@ -647,9 +644,71 @@ div#footContent h6 {
 	display: inline-block;
 	width: 1rem;
 	height: 1rem;
-	border: 0.05rem solid rgb(var(--color_bdr));
+	border: var(--border);
 	border-radius: 50%;
 	vertical-align: middle;
+}
+.profile_pict_small + span {
+	font-size: var(--fnt_14);
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.star_point {
+	position: relative;
+	width: calc(.75rem * 5);
+}
+.star_point > .star_point_blacker {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: rgb(var(--color_dark));
+	mix-blend-mode: color;
+}
+.star_point::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 100%;
+	padding: 0.1rem 0.25rem;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	font-family: var(--ff_eng);
+	color: rgb(var(--color_acc2));
+	font-size: var(--fnt_12);
+	font-weight: bold;
+	content: attr(data-point-total) "";
+}
+.star_point::after {
+	display: block;
+	clear: both;
+	content: "";
+}
+.star_point > span {
+	display: block;
+	float: left;
+	width: 0.75rem;
+	height: 0.75rem;
+	background: url("../images/icons/review_star.png") no-repeat;
+}
+
+.chk_like {
+	font-size: var(--fnt_12);
+	font-weight: bold;
+	cursor: pointer;
+}
+.chk_like > .like_num {
+	display: block;
+	padding-right: 0.9rem;
+	background: url("../images/icons/icon_heart.png") no-repeat top 0.25rem right;
+	line-height: 1rem;
+	transition: 0.2s;
+}
+.chk_like.checked > .like_num {
+	background: url("../images/icons/icon_heart_f.png") no-repeat top 0.25rem right;
 }
 
 /* ---------- Repeating Items end ---------- */

@@ -48,32 +48,58 @@
 	--px_60: 3rem;
 	/* 주요 픽셀값 정의 */
 	--ff_serif: "KoPubPro";
+	/* 바탕체 같은거 */
 	--ff_sans_n: "Noto Sans KR";
+	/* 노토 */
 	--ff_sans_p: "AppleSDGothic";
+	/* 애플산돌 (메뉴 같은데) */
 	--ff_eng: "Miriam Libre";
+	/* 영어 폰트 */
 	/* font-family 정의 */
+	--fnt_40: 2rem;
+	/* 카리스마 대빵큰글자 */
 	--fnt_36: 1.8rem;
+	/* 배너에 들어가는 큰 글자 */
 	--fnt_30: 1.5rem;
+	/* 섹션 타이틀 */
 	--fnt_24: 1.2rem;
+	/* 리뷰 제목 같은데 들어가는 타이틀 */
 	--fnt_20: 1rem;
+	/* 카드 등에 들어가는 타이틀 */
 	--fnt_16: .8rem;
+	/* 가독성이 필요한 본문글 */
 	--fnt_14: .7rem;
+	/* 일반적인 텍스트 */
 	--fnt_12: .6rem;
+	/* 제일 작은 설명글 */
 	/* 폰트 사이즈 정의 */
 	--color_title: 48, 42, 39;
+	/* 시커먼 색 */
 	--color_text: 102, 69, 69;
+	/* 짙은 갈색 (본문 글자) */
 	--color_footer: 136, 120, 99;
+	/* 푸터 글자 색 */
 	--color_acc1: 251, 153, 51;
+	/* 메인 컬러 (주황색) */
 	--color_acc2: 0, 168, 80;
+	/* 메인 컬러 (초록색) */
 	--color_tone1: 255, 208, 159;
+	/* 주황색 톤다운 */
 	--color_tone2: 196, 236, 224;
+	/* 초록색 톤다운 */
 	--color_bdr: 212, 206, 198;
+	/* 보더 색깔 */
 	--color_subtle: 217, 214, 186;
+	/* 애매하게 연한 배경색 */
 	--color_bg: 246, 244, 241;
+	/* 바디 배경색 */
 	/* 컬러 팔렛트 정의 */
 	--color_point1: 216, 0, 0;
+	/* 뻘건색 */
 	--color_dark: 0, 0, 0;
+	/* 어두운 색 */
 	--color_light: 255, 255, 255;
+	/* 밝은색 */
 	/* 컬러 컨셉 정의 (다크 모드 변경시 필요) */
 	--color_tag1: 242, 92, 102;
 	--color_tag2: 248, 245, 203;
@@ -81,10 +107,12 @@
 	--color_tag4: 190, 235, 179;
 	--color_tag5: 170, 227, 239;
 	--color_tag_x: 65, 65, 65;
-	/* 아이템 태그 배경색 정의 */
+	/* 아이템 태그 배경색 정의 (아직 안씀) */
 	--shd_major: 0 .25rem .75rem rgba(var(--color_bdr), .3);
 	--shd_minor: 0 0 1rem rgba(var(--color_bdr), .5);
 	/* box-shadow 값 정의 */
+	--border: .05rem solid rgb(var(--color_bdr));
+	/* 자주 쓰는 박스 보더 */
 	--bdr_outer: .15rem;
 	--bdr_inner: .05rem;
 	/* border-radius 값 정의 */
