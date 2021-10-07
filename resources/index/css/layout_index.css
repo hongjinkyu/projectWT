@@ -40,46 +40,11 @@ div#mainSlider::before {
 	   object-fit: cover;
 }
 
-.long_banner {
-	position: relative;
-	margin: 4rem 0;
-	height: 8rem;
-	border-radius: var(--bdr_outer);
-}
-.long_banner > * {
-	position: absolute;
-}
-.long_banner > p {
-	top: 1.5rem;
-	left: 1.5rem;
-	font-size: var(--fnt_16);
-	font-weight: bold;
-}
-.long_banner > h2 {
-	top: 3.5rem;
-	left: 1.5rem;
-	font-family: var(--ff_serif);
-	color: rgb(var(--color_title));
-}
-.long_banner > .banner_image {
-	top: -1.5rem;
-	right: 2.5rem;
-	height: 11rem;
-}
-
-#secBanner_01 {
-	background: linear-gradient(to right, rgb(var(--color_tone2)) 50%, #5c8bb4 100%);
-}
-
-#secBanner_02 {
-	background: linear-gradient(to right, rgb(var(--color_tone1)) 50%, rgb(var(--color_acc1)) 100%);
-}
-
 .card_partner {
 	position: relative;
 	width: calc((100% - 1.5rem) / 4);
 	height: 10rem;
-	border: 0.05rem solid rgb(var(--color_bdr));
+	border: var(--border);
 	background: rgb(var(--color_light));
 }
 .card_partner > img {
@@ -143,19 +108,150 @@ div#mainSlider::before {
 
 .item_review {
 	display: flex;
+	position: relative;
 	width: calc(58.5rem / 2);
 	height: 17.5rem;
-	border: 0.05rem solid rgb(var(--color_bdr));
+	border: var(--border);
 	background: rgb(var(--color_light));
+}
+.item_review::before {
+	display: block;
+	position: absolute;
+	top: 0.25rem;
+	right: calc(100% - 17.2rem);
+	padding: 0.15rem 0.5rem;
+	border: 0.05rem solid currentColor;
+	border-radius: var(--bdr_outer);
+	font-family: var(--ff_eng);
+	color: rgba(var(--color_light), 0.75);
+	font-weight: bold;
+	text-shadow: 0.05rem 0.05rem 0 rgba(var(--color_dark), 0.3);
+	transition: 0.3s;
+	z-index: 2;
+	content: "";
+}
+.item_review:is([data-category=byob])::before {
+	border-color: #008841;
+	background: rgb(var(--color_acc2));
+	content: "BYOB";
+}
+.item_review:is([data-category=list])::before {
+	border-color: #dc801f;
+	background: rgb(var(--color_acc1));
+	content: "LIST";
 }
 .item_review > .review_image {
 	width: 17.5rem;
 	height: 100%;
-	border-right: 0.05rem solid rgb(var(--color_bdr));
+	border-right: var(--border);
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
 .item_review > .review_desc {
 	width: 100%;
 	height: 100%;
+	padding: 1rem 0.5rem;
+}
+.item_review > .review_desc h4 {
+	font-family: var(--ff_serif);
+}
+.item_review .review_text {
+	width: 100%;
+	height: 11rem;
+	color: rgba(var(--color_text), 0.5);
+	font-size: var(--fnt_14);
+	line-height: 1.4;
+	overflow-y: auto;
+}
+.item_review .review_text::-webkit-scrollbar {
+	background: transparent;
+}
+.item_review .review_info {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.25rem 0 0.5rem;
+}
+.item_review .review_star {
+	margin-top: 0.5rem;
+	padding: 0.5rem 0;
+	border-top: var(--border);
+}
+
+.short_banner {
+	position: relative;
+	width: calc(58.5rem / 2);
+	height: 11rem;
+	border-radius: var(--bdr_outer);
+}
+.short_banner > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.short_banner * {
+	position: absolute;
+}
+.short_banner p {
+	top: 1.5rem;
+	left: 1.5rem;
+	font-size: var(--fnt_16);
+	font-weight: bold;
+}
+.short_banner h2 {
+	top: 3.5rem;
+	left: 1.5rem;
+	font-family: var(--ff_serif);
+	color: rgb(var(--color_title));
+}
+.short_banner.banner_first {
+	background: #ffd2d5 url("../images/main_banner03.png") no-repeat;
+	background-position: bottom -1rem right -1rem;
+	background-size: contain;
+}
+.short_banner.banner_second {
+	background: #c3d9f1 url("../images/main_banner04.png") no-repeat;
+	background-position: bottom -0.5rem right -1rem;
+	background-size: contain;
+}
+
+.long_banner {
+	position: relative;
+	margin: 4rem 0;
+	height: 8rem;
+	border-radius: var(--bdr_outer);
+}
+.long_banner > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.long_banner * {
+	position: absolute;
+}
+.long_banner p {
+	top: 1.5rem;
+	left: 1.5rem;
+	font-size: var(--fnt_16);
+	font-weight: bold;
+}
+.long_banner h2 {
+	top: 3.5rem;
+	left: 1.5rem;
+	font-family: var(--ff_serif);
+	color: rgb(var(--color_title));
+}
+.long_banner .banner_image {
+	top: -1.5rem;
+	right: 2.5rem;
+	height: 11rem;
+}
+
+#secBanner_01 {
+	background: linear-gradient(to right, rgb(var(--color_tone2)) 50%, #5c8bb4 100%);
+}
+
+#secBanner_02 {
+	background: linear-gradient(to right, rgb(var(--color_tone1)) 50%, rgb(var(--color_acc1)) 100%);
 }
