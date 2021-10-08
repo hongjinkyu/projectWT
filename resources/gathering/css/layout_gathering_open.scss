@@ -30,3 +30,79 @@
 #txtWinePrice {
     width: 100%;
 }
+
+.range_spot {
+    display: block;
+    position: absolute;
+    top: 1.15rem;
+    width: .05rem;
+    height: .5rem;
+    background: rgb(var(--color_text));
+    font-size: var(--fnt_12);
+
+    &::after {
+        display: block;
+        position: absolute;
+        top: calc(100% + .15rem);
+        left: 50%;
+        width: max-content;
+        text-align: center;
+        transform: translateX(-50%);
+    }
+
+    &:nth-child(2) {
+        left: .35rem;
+
+        &::after {
+            content: '4명';
+        }
+    }
+
+    &:nth-child(3) {
+        left: calc((50% - (100% / 6 * 2)) + .25rem);
+
+        &::after {
+            content: '5';
+        }
+    }
+
+    &:nth-child(4) {
+        left: calc((50% - (100% / 6)) + .1rem);
+
+        &::after {
+            content: '6';
+        }
+    }
+
+    &:nth-child(5) {
+        left: calc(50% - .025rem);
+
+        &::after {
+            content: '7';
+        }
+    }
+
+    &:nth-child(6) {
+        right: calc((50% - (100% / 6)) + .1rem);
+
+        &::after {
+            content: '8';
+        }
+    }
+
+    &:nth-child(7) {
+        right: calc((50% - (100% / 6 * 2)) + .25rem);
+
+        &::after {
+            content: '9';
+        }
+    }
+
+    &:nth-child(8) {
+        right: .35rem;
+
+        &::after {
+            content: '10';
+        }
+    }
+}

@@ -87,21 +87,21 @@
                             <p>개설하려는 모임의 성격, 지역 등을 나타내면 좋아요.</p>
                         </div>
                         <div class="frm_items">
-                            <input type="text" name="" id="txtTitle" placeholder="모임 이름 입력..." required />
+                            <input type="text" name="txtTitle" id="txtTitle" placeholder="모임 이름 (* 필수 입력 사항입니다.)" required />
                         </div>
                         <div class="text_title clr_fix">
                             <h6>모임 특징</h6>
                             <p>모임을 눈에 띄게 만드는 재치있는 소개를 두 줄 이내로 표현해 주세요.</p>
                         </div>
                         <div class="frm_items">
-                            <textarea name="" id="txtDesc_s" cols="30" rows="2" required></textarea>
+                            <textarea name="txtDesc_s" id="txtDesc_s" cols="30" rows="2" placeholder="모임 특징 (* 필수 입력 사항입니다.)" required></textarea>
                         </div>
                         <div class="text_title clr_fix">
                             <h6>모임 인원</h6>
                             <p>4인 이상의 모임 주최는 경험이 있으신 분들께만 추천드려요.</p>
                         </div>
                         <div class="frm_items">
-                            <input type="range" name="" id="slideGroupSize" min="4" max="10" step="1" value="4" />
+                            <input type="range" name="slideGroupSize" id="slideGroupSize" min="4" max="10" step="1" value="4" />
                             <span class="range_spot"></span>
                             <span class="range_spot"></span>
                             <span class="range_spot"></span>
@@ -115,51 +115,51 @@
                             <p>최대 n개월 이내의 날짜까지만 설정이 가능해요.</p>
                         </div>
                         <div class="frm_items">
-                            <input type="date" name="" id="dateGroup" />
-                            <select name="" id="timeGroup">
+                            <input type="date" name="dateGroup" id="dateGroup" />
+                            <select name="timeGroup" id="timeGroup">
                                 <optgroup label="오전">
-                                    <option value="">01</option>
-                                    <option value="">02</option>
-                                    <option value="">03</option>
-                                    <option value="">04</option>
-                                    <option value="">05</option>
-                                    <option value="">06</option>
-                                    <option value="">07</option>
-                                    <option value="">08</option>
-                                    <option value="">09</option>
-                                    <option value="">10</option>
-                                    <option value="">11</option>
-                                    <option value="">12</option>
+                                    <option value="time_01">01</option>
+                                    <option value="time_02">02</option>
+                                    <option value="time_03">03</option>
+                                    <option value="time_04">04</option>
+                                    <option value="time_05">05</option>
+                                    <option value="time_06">06</option>
+                                    <option value="time_07">07</option>
+                                    <option value="time_08">08</option>
+                                    <option value="time_09">09</option>
+                                    <option value="time_10">10</option>
+                                    <option value="time_11">11</option>
+                                    <option value="time_12">12</option>
                                 </optgroup>
                                 <optgroup label="오후">
-                                    <option value="">13</option>
-                                    <option value="">14</option>
-                                    <option value="">15</option>
-                                    <option value="">16</option>
-                                    <option value="">17</option>
-                                    <option value="">18</option>
-                                    <option value="">19</option>
-                                    <option value="">20</option>
-                                    <option value="">21</option>
-                                    <option value="">22</option>
-                                    <option value="">23</option>
-                                    <option value="">24</option>
+                                    <option value="time_13">13</option>
+                                    <option value="time_14">14</option>
+                                    <option value="time_15">15</option>
+                                    <option value="time_16">16</option>
+                                    <option value="time_17">17</option>
+                                    <option value="time_18">18</option>
+                                    <option value="time_19">19</option>
+                                    <option value="time_20">20</option>
+                                    <option value="time_21">21</option>
+                                    <option value="time_22">22</option>
+                                    <option value="time_23">23</option>
+                                    <option value="time_24">24</option>
                                 </optgroup>
                             </select>
                             시
-                            <select name="" id="minuteGroup">
-                                <option value="">정각</option>
-                                <option value="">5</option>
-                                <option value="">10</option>
-                                <option value="">15</option>
-                                <option value="">20</option>
-                                <option value="">25</option>
-                                <option value="">30</option>
-                                <option value="">35</option>
-                                <option value="">40</option>
-                                <option value="">45</option>
-                                <option value="">50</option>
-                                <option value="">55</option>
+                            <select name="minuteGroup" id="minuteGroup">
+                                <option value="min_00">정각</option>
+                                <option value="min_05">5</option>
+                                <option value="min_10">10</option>
+                                <option value="min_15">15</option>
+                                <option value="min_20">20</option>
+                                <option value="min_25">25</option>
+                                <option value="min_30">30</option>
+                                <option value="min_35">35</option>
+                                <option value="min_40">40</option>
+                                <option value="min_45">45</option>
+                                <option value="min_50">50</option>
+                                <option value="min_55">55</option>
                             </select>
                             분
                         </div>
@@ -168,18 +168,18 @@
                             <p>연령대의 폭이 넓을수록 모임 신청이 빠르게 완료될 가능성이 높아져요.</p>
                         </div>
                         <div class="frm_items">
-                            <input type="checkbox" name="" id="chkAge_all" value="age_all" />
+                            <input type="checkbox" name="chkAge" id="chkAge_all" value="age_all" />
                             <label for="chkAge_all">상관없음</label>
-                            <input type="checkbox" name="" id="chkAge_20" value="age_20" />
-                            <label for="chkAge_all">20대</label>
-                            <input type="checkbox" name="" id="chkAge_30" value="age_30" />
-                            <label for="chkAge_all">30대</label>
-                            <input type="checkbox" name="" id="chkAge_40" value="age_40" />
-                            <label for="chkAge_all">40대</label>
-                            <input type="checkbox" name="" id="chkAge_50" value="age_50" />
-                            <label for="chkAge_all">50대</label>
-                            <input type="checkbox" name="" id="chkAge_60" value="age_60" />
-                            <label for="chkAge_all">60대 이상</label>
+                            <input type="checkbox" name="chkAge" id="chkAge_20" value="age_20" />
+                            <label for="chkAge_20">20대</label>
+                            <input type="checkbox" name="chkAge" id="chkAge_30" value="age_30" />
+                            <label for="chkAge_30">30대</label>
+                            <input type="checkbox" name="chkAge" id="chkAge_40" value="age_40" />
+                            <label for="chkAge_40">40대</label>
+                            <input type="checkbox" name="chkAge" id="chkAge_50" value="age_50" />
+                            <label for="chkAge_50">50대</label>
+                            <input type="checkbox" name="chkAge" id="chkAge_60" value="age_60" />
+                            <label for="chkAge_60">60대 이상</label>
                         </div>
                         <div class="text_title clr_fix">
                             <h6>모임 성비 설정</h6>
@@ -189,11 +189,11 @@
                             <input type="radio" name="rdo_gen" id="rdoGen_none" />
                             <label for="rdoGen_none">지정 없음</label>
                             <input type="radio" name="rdo_gen" id="rdoGen_min" />
-                            <label for="rdoGen_none">최소 성비 기준</label>
+                            <label for="rdoGen_min">최소 성비 기준</label>
                             <input type="radio" name="rdo_gen" id="rdoGen_grl" />
-                            <label for="rdoGen_none">여성 모임</label>
+                            <label for="rdoGen_grl">여성 모임</label>
                             <input type="radio" name="rdo_gen" id="rdoGen_half" />
-                            <label for="rdoGen_none">5:5</label>
+                            <label for="rdoGen_half">5:5</label>
                         </div>
                     </div>
 
@@ -204,6 +204,8 @@
                         </div>
                         <div class="frm_items">
                             <input type="text" name="" id="txtWinePrice" placeholder="참석자가 지참할 와인의 가격대를 설정해 주세요." />
+                        </div>
+                        <div class="frm_items">
                             <div class="wine_icon redwine">
                                 <span class="wave_front"></span>
                                 <span class="wave_back"></span>

@@ -22,3 +22,66 @@
 #txtWinePrice {
 	width: 100%;
 }
+
+.range_spot {
+	display: block;
+	position: absolute;
+	top: 1.15rem;
+	width: 0.05rem;
+	height: 0.5rem;
+	background: rgb(var(--color_text));
+	font-size: var(--fnt_12);
+}
+.range_spot::after {
+	display: block;
+	position: absolute;
+	top: calc(100% + .15rem);
+	left: 50%;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	text-align: center;
+	transform: translateX(-50%);
+}
+.range_spot:nth-child(2) {
+	left: 0.35rem;
+}
+.range_spot:nth-child(2)::after {
+	content: "4명";
+}
+.range_spot:nth-child(3) {
+	left: calc((50% - (100% / 6 * 2)) + .25rem);
+}
+.range_spot:nth-child(3)::after {
+	content: "5";
+}
+.range_spot:nth-child(4) {
+	left: calc((50% - (100% / 6)) + .1rem);
+}
+.range_spot:nth-child(4)::after {
+	content: "6";
+}
+.range_spot:nth-child(5) {
+	left: calc(50% - .025rem);
+}
+.range_spot:nth-child(5)::after {
+	content: "7";
+}
+.range_spot:nth-child(6) {
+	right: calc((50% - (100% / 6)) + .1rem);
+}
+.range_spot:nth-child(6)::after {
+	content: "8";
+}
+.range_spot:nth-child(7) {
+	right: calc((50% - (100% / 6 * 2)) + .25rem);
+}
+.range_spot:nth-child(7)::after {
+	content: "9";
+}
+.range_spot:nth-child(8) {
+	right: 0.35rem;
+}
+.range_spot:nth-child(8)::after {
+	content: "10";
+}
