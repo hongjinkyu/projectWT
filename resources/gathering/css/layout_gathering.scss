@@ -1,19 +1,29 @@
 /* ---------- Page-Specific Layout CSS (Gathering (List)) ---------- */
-
 /* ---------- SCSS 공통 선언 시작 ---------- */
-
-
-
 /* ---------- SCSS 공통 선언 종료 ---------- */
 /* ---------- 영역 공통 선언 시작 ---------- */
-
-
-
+#wrapMain{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:flex-start;
+}
 /* ---------- 영역 공통 선언 종료 ---------- */
 /* ---------- 하부 요소 시작 ---------- */
-
-
-
+#wrapMain #middleBar{
+    display:flex;
+    flex-direction:column;
+    width:38rem;
+    
+}
 /* ---------- 하부 요소 종료 ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
 
+
+/**/
+.text_title h3{
+    font-size:30px;
+}
+#contentBar .text_title > p{
+    font-size:15px;
+    color:#664545;
+}

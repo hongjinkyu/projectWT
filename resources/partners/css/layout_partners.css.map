@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AAAA,sEAAsE;AAEtE,+CAA+C;AAI/C,+CAA+C;AAC/C,+CAA+C;AAI/C,+CAA+C;AAC/C,0CAA0C;AAI1C,0CAA0C;AAC1C,iDAAiD",
+    "sources": [
+        "layout_partners.scss"
+    ],
+    "names": [],
+    "file": "layout_partners.css"
+}

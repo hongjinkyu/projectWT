@@ -4,12 +4,20 @@
 /* ---------- SCSS 공통 선언 종료 ---------- */
 /* ---------- 영역 공통 선언 시작 ---------- */
 #wrapMain {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 /* ---------- 영역 공통 선언 종료 ---------- */
 /* ---------- 하부 요소 시작 ---------- */
 /* ---------- 하부 요소 종료 ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
+/*# sourceMappingURL=layout_gathering_open.css.map */
