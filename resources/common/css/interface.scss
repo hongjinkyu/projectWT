@@ -75,6 +75,11 @@ button {
     }
 }
 
+textarea {
+    resize: none;
+    line-height: 1.8;
+}
+
 select {
     padding: .35rem .25rem .3rem .25rem;
 }
@@ -85,7 +90,7 @@ input[type="month"],
 input[type="week"],
 input[type="time"] {
     @extend %interface_box_elmt;
-    padding: .2rem .25rem;
+    padding: .35rem .25rem .25rem;
 }
 
 input[type="file"] {
@@ -99,6 +104,138 @@ input[type="color"] {
     padding: .1rem .2rem;
     width: 2.4rem;
     height: 1.6rem;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2rem;
+
+    &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: .3rem;
+        border-radius: .15rem;
+        background: rgb(var(--color_light));
+        box-shadow: var(--shd_major);
+    }
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        margin-top: -.2rem;
+        width: .7rem;
+        height: .7rem;
+        border-radius: .35rem;
+        background: rgb(var(--color_text));
+        box-shadow: var(--shd_major);
+    }
+}
+
+input[type="checkbox"] {
+    display: none;
+
+    &+ label {
+        margin-right: 1rem;
+        padding-left: 1.1rem;
+        background: url('../images/icons/chkbox_un.png') no-repeat center left;
+        font-weight: bold;
+        transition: .2s;
+    }
+
+    &:checked + label {
+        background: url('../images/icons/chkbox_chk.png') no-repeat center left;
+    }
+}
+
+input[type="radio"] {
+    display: none;
+
+    &+ label {
+        margin-right: 1rem;
+        padding-left: 1.1rem;
+        background: url('../images/icons/radio_un.png') no-repeat center left;
+        font-weight: bold;
+        transition: .2s;
+
+        &:checked + label {
+            background: url('../images/icons/radio_chk.png') no-repeat center left;
+        }
+    }
+}
+
+.range_spot {
+    display: block;
+    position: absolute;
+    top: 1.15rem;
+    width: .05rem;
+    height: .5rem;
+    background: rgb(var(--color_text));
+    font-size: var(--fnt_12);
+
+    &::after {
+        display: block;
+        position: absolute;
+        top: calc(100% + .15rem);
+        left: 50%;
+        width: max-content;
+        text-align: center;
+        transform: translateX(-50%);
+    }
+
+    &:nth-child(2) {
+        left: .35rem;
+
+        &::after {
+            content: '4명';
+        }
+    }
+
+    &:nth-child(3) {
+        left: calc((50% - (100% / 6 * 2)) + .25rem);
+
+        &::after {
+            content: '5';
+        }
+    }
+
+    &:nth-child(4) {
+        left: calc((50% - (100% / 6)) + .1rem);
+
+        &::after {
+            content: '6';
+        }
+    }
+
+    &:nth-child(5) {
+        left: calc(50% - .025rem);
+
+        &::after {
+            content: '7';
+        }
+    }
+
+    &:nth-child(6) {
+        right: calc((50% - (100% / 6)) + .1rem);
+
+        &::after {
+            content: '8';
+        }
+    }
+
+    &:nth-child(7) {
+        right: calc((50% - (100% / 6 * 2)) + .25rem);
+
+        &::after {
+            content: '9';
+        }
+    }
+
+    &:nth-child(8) {
+        right: .35rem;
+
+        &::after {
+            content: '10';
+        }
+    }
 }
 
 label {
@@ -124,7 +261,7 @@ fieldset > legend {
 
 /* 추가 스타일링 필요한 요소들
 
-    input-range, input-checkbox, input-radio, input-number,
+    input-radio, input-number,
     input-select, input-file, input-search, meter, progress
 
 */
@@ -275,7 +412,6 @@ section#sideBar {
     &_left,
     &_right {
         width: calc((100% - 38rem) / 2);
-        height: 100vh;
     }
 }
 
@@ -285,7 +421,6 @@ section#contentBar {
     gap: .5rem;
     padding: .5rem;
     width: 38rem;
-    height: 100vh;
     border: var(--border);
     border-radius: var(--bdr_outer);
     background: rgb(var(--color_light));
@@ -466,7 +601,6 @@ div#footContent {
 /* ---------- Basic Page Elements End ---------- */
 /* ---------- Repeating Items Start ---------- */
 
-
 /* 메인 섹션 (인덱스) 시작 */
 
 .main_section {
@@ -512,7 +646,7 @@ div#footContent {
                     left: -.4rem;
                     width: calc(100% + 1.5rem);
                     height: calc(100% + .6rem);
-                    background: rgb(var(--color_text)) url('../images/icons/icon_doublearrow.png') no-repeat 93%;
+                    background: rgb(var(--color_text)) url('../images/icons/icon_doublearrow.png') no-repeat center right .25rem;
                 }
             }
         }
@@ -724,6 +858,13 @@ div#footContent {
 }
 
 /* 작은 위치 정보 끝 */
+/* 물음표 시작 */
+
+.icon_help {
+
+}
+
+/* 물음표 끝 */
 /* 유저 네임태그 시작 */
 
 .profile_pict_small {
@@ -922,5 +1063,180 @@ div#footContent {
     }
 }
 
+.frm_items {
+    position: relative;
+    margin: .5rem 0 1rem;
+}
+
 /* 내부 폼 끝 */
+/* 와인 아이콘 */
+
+.wine_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border: .15rem solid rgb(var(--color_bdr));
+    border-radius: 50%;
+    background: rgba(var(--color_dark), .1);
+    font-family: var(--ff_sans_p);
+    font-size: var(--fnt_12);
+    transition: background .5s;
+    overflow: hidden;
+
+    &::before {
+        display: block;
+        padding-top: .25rem;
+        text-align: center;
+        z-index: 2;
+    }
+
+    &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: radial-gradient(circle at center, transparent 0%, rgba(var(--color_dark), 1) 100%);
+        mix-blend-mode: overlay;
+        z-index: 3;
+        content: '';
+    }
+
+    > p {
+        z-index: 2;
+    }
+
+    > .wave_front,
+    .wave_back {
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 2rem;
+        transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    > .wave_front {
+        transform: translateY(2.5rem) rotate(-70deg);
+        z-index: 1;
+    }
+
+    > .wave_back {
+        transform: translateY(2.5rem) rotate(60deg);
+        z-index: 0;
+    }
+
+    &:hover {
+        background: rgba(var(--color_dark), .3);
+
+        > .wave_front {
+            transform: translateY(2.5rem) rotate(60deg);
+        }
+
+        > .wave_back {
+            transform: translateY(2.5rem) rotate(-70deg);
+        }
+    }
+
+    &.redwine {
+        &::before {
+            color: rgb(240, 206, 206);
+            content: '레드';
+        }
+
+        > .wave_front {
+            background: rgba(175, 44, 69, 1);
+        }
+
+        > .wave_back {
+            background: rgba(117, 34, 54, 1);
+        }
+    }
+
+    &.whitewine {
+        &::before {
+            color: rgb(var(--color_acc2));
+            content: '화이트';
+        }
+
+        > .wave_front {
+            background: rgb(250, 242, 215);
+        }
+
+        > .wave_back {
+            background: rgb(233, 213, 159);
+        }
+    }
+
+    &.sparkling {
+        &::before {
+            color: rgb(var(--color_acc1));
+            content: '스파클링';
+        }
+
+        > .wave_front {
+            background: rgba(255, 241, 168, 1);
+        }
+
+        > .wave_back {
+            background: rgba(255, 207, 74, 1);
+        }
+    }
+
+    &.others {
+        &::before {
+            color: rgb(246, 115, 137);
+            content: '기타';
+        }
+
+        > .wave_front {
+            background: rgba(255, 190, 201, 1);
+        }
+
+        > .wave_back {
+            background: rgba(246, 115, 137, 1);
+        }
+    }
+
+    &.choose_item {
+        &::before {
+            color: rgb(var(--color_light));
+            content: '종류 선택';
+        }
+
+        > .wave_front {
+            background: rgb(193, 169, 214);
+        }
+
+        > .wave_back {
+            background: rgb(182, 145, 194);
+        }
+    }
+
+    &.add_item {
+        > span:first-child,
+        span:last-child {
+            display: block;
+            position: absolute;
+            border-radius: var(--bdr_inner);
+            background: rgb(var(--color_light));
+        }
+
+        > span:first-child {
+            width: .3rem;
+            height: 1.2rem;
+        }
+
+        > span:last-child {
+            width: 1.2rem;
+            height: .3rem;
+        }
+    }
+}
+
+/* 와인 아이콘 끝 */
+
 /* ---------- Repeating Items end ---------- */

@@ -73,30 +73,207 @@
 
                 <section id="sideBar_left">
                     <ul class="side_mnu_left">
-                        <li class="checked">BYOB 모임</li>
-                        <li>LIST 모임</li>
-                        <li>개설하기</li>
+                        <li class="checked">BYOB 모임 개설하기</li>
+                        <li>LIST 모임 개설하기</li>
+                        <li>기존 모임 이어가기</li>
                     </ul>
                 </section>
 
                 <section id="contentBar">
+                    <h3>BYOB 모임 개설하기</h3>
                     <div class="frm_common frm_open">
                         <div class="text_title clr_fix">
                             <h6>모임 이름</h6>
                             <p>개설하려는 모임의 성격, 지역 등을 나타내면 좋아요.</p>
                         </div>
-                        <input type="text" name="" id="" placeholder="모임 이름 입력..." required />
+                        <div class="frm_items">
+                            <input type="text" name="" id="txtTitle" placeholder="모임 이름 입력..." required />
+                        </div>
                         <div class="text_title clr_fix">
                             <h6>모임 특징</h6>
-                            <p>모임을 특별하게 만드는 간단한 문장을 두 줄 이내로 표현해 주세요.</p>
+                            <p>모임을 눈에 띄게 만드는 재치있는 소개를 두 줄 이내로 표현해 주세요.</p>
                         </div>
-                        <textarea name="" id="" cols="30" rows="2"></textarea>
+                        <div class="frm_items">
+                            <textarea name="" id="txtDesc_s" cols="30" rows="2" required></textarea>
+                        </div>
+                        <div class="text_title clr_fix">
+                            <h6>모임 인원</h6>
+                            <p>4인 이상의 모임 주최는 경험이 있으신 분들께만 추천드려요.</p>
+                        </div>
+                        <div class="frm_items">
+                            <input type="range" name="" id="slideGroupSize" min="4" max="10" step="1" value="4" />
+                            <span class="range_spot"></span>
+                            <span class="range_spot"></span>
+                            <span class="range_spot"></span>
+                            <span class="range_spot"></span>
+                            <span class="range_spot"></span>
+                            <span class="range_spot"></span>
+                            <span class="range_spot"></span>
+                        </div>
+                        <div class="text_title clr_fix">
+                            <h6>모임 날짜</h6>
+                            <p>최대 n개월 이내의 날짜까지만 설정이 가능해요.</p>
+                        </div>
+                        <div class="frm_items">
+                            <input type="date" name="" id="dateGroup" />
+                            <select name="" id="timeGroup">
+                                <optgroup label="오전">
+                                    <option value="">01</option>
+                                    <option value="">02</option>
+                                    <option value="">03</option>
+                                    <option value="">04</option>
+                                    <option value="">05</option>
+                                    <option value="">06</option>
+                                    <option value="">07</option>
+                                    <option value="">08</option>
+                                    <option value="">09</option>
+                                    <option value="">10</option>
+                                    <option value="">11</option>
+                                    <option value="">12</option>
+                                </optgroup>
+                                <optgroup label="오후">
+                                    <option value="">13</option>
+                                    <option value="">14</option>
+                                    <option value="">15</option>
+                                    <option value="">16</option>
+                                    <option value="">17</option>
+                                    <option value="">18</option>
+                                    <option value="">19</option>
+                                    <option value="">20</option>
+                                    <option value="">21</option>
+                                    <option value="">22</option>
+                                    <option value="">23</option>
+                                    <option value="">24</option>
+                                </optgroup>
+                            </select>
+                            시
+                            <select name="" id="minuteGroup">
+                                <option value="">정각</option>
+                                <option value="">5</option>
+                                <option value="">10</option>
+                                <option value="">15</option>
+                                <option value="">20</option>
+                                <option value="">25</option>
+                                <option value="">30</option>
+                                <option value="">35</option>
+                                <option value="">40</option>
+                                <option value="">45</option>
+                                <option value="">50</option>
+                                <option value="">55</option>
+                            </select>
+                            분
+                        </div>
+                        <div class="text_title clr_fix">
+                            <h6>모임 연령대 설정</h6>
+                            <p>연령대의 폭이 넓을수록 모임 신청이 빠르게 완료될 가능성이 높아져요.</p>
+                        </div>
+                        <div class="frm_items">
+                            <input type="checkbox" name="" id="chkAge_all" value="age_all" />
+                            <label for="chkAge_all">상관없음</label>
+                            <input type="checkbox" name="" id="chkAge_20" value="age_20" />
+                            <label for="chkAge_all">20대</label>
+                            <input type="checkbox" name="" id="chkAge_30" value="age_30" />
+                            <label for="chkAge_all">30대</label>
+                            <input type="checkbox" name="" id="chkAge_40" value="age_40" />
+                            <label for="chkAge_all">40대</label>
+                            <input type="checkbox" name="" id="chkAge_50" value="age_50" />
+                            <label for="chkAge_all">50대</label>
+                            <input type="checkbox" name="" id="chkAge_60" value="age_60" />
+                            <label for="chkAge_all">60대 이상</label>
+                        </div>
+                        <div class="text_title clr_fix">
+                            <h6>모임 성비 설정</h6>
+                            <p>Lvl.4 이상부터 사용 가능한 기능이에요.</p>
+                        </div>
+                        <div class="frm_items">
+                            <input type="radio" name="rdo_gen" id="rdoGen_none" />
+                            <label for="rdoGen_none">지정 없음</label>
+                            <input type="radio" name="rdo_gen" id="rdoGen_min" />
+                            <label for="rdoGen_none">최소 성비 기준</label>
+                            <input type="radio" name="rdo_gen" id="rdoGen_grl" />
+                            <label for="rdoGen_none">여성 모임</label>
+                            <input type="radio" name="rdo_gen" id="rdoGen_half" />
+                            <label for="rdoGen_none">5:5</label>
+                        </div>
                     </div>
 
                     <div class="frm_common frm_byob">
                         <div class="text_title clr_fix">
                             <h6>지참할 와인 설정</h6>
                             <p>구매처에 따라 가격이 차이날 수 있어요. 보편적인 마트나 할인 / 행사 가격 기준이면 더 좋아요.</p>
+                        </div>
+                        <div class="frm_items">
+                            <input type="text" name="" id="txtWinePrice" placeholder="참석자가 지참할 와인의 가격대를 설정해 주세요." />
+                            <div class="wine_icon redwine">
+                                <span class="wave_front"></span>
+                                <span class="wave_back"></span>
+                            </div>
+                            <div class="wine_icon whitewine">
+                                <span class="wave_front"></span>
+                                <span class="wave_back"></span>
+                            </div>
+                            <div class="wine_icon sparkling">
+                                <span class="wave_front"></span>
+                                <span class="wave_back"></span>
+                            </div>
+                            <div class="wine_icon others">
+                                <span class="wave_front"></span>
+                                <span class="wave_back"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="frm_common frm_list">
+                        <div class="text_title clr_fix">
+                            <h6>제공할 와인 설정</h6>
+                            <p>자신이 제공할 와인의 종류와 가격대, 빈티지 등의 정보를 기입해 주세요.</p>
+                        </div>
+                        <div class="frm_items">
+                            <div class="wine_icon redwine">
+                                <span class="wave_front"></span>
+                                <span class="wave_back"></span>
+                            </div>
+                            <div class="wine_icon whitewine">
+                                <span class="wave_front"></span>
+                                <span class="wave_back"></span>
+                            </div>
+                            <div class="wine_icon sparkling">
+                                <span class="wave_front"></span>
+                                <span class="wave_back"></span>
+                            </div>
+                            <div class="wine_icon others">
+                                <span class="wave_front"></span>
+                                <span class="wave_back"></span>
+                            </div>
+                            <div class="wine_icon choose_item">
+                                <span class="wave_front"></span>
+                                <span class="wave_back"></span>
+                            </div>
+                            <div class="wine_icon add_item">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="frm_common frm_partner">
+                        <div class="text_title clr_fix">
+                            <h6>모임 장소 설정</h6>
+                        </div>
+                        <div class="frm_items">
+                            jwepogjawg
+                        </div>
+                        <div class="text_title clr_fix">
+                            <h6>코스 선택</h6>
+                        </div>
+                        <div class="frm_items">
+                            fjwgjp
+                        </div>
+                        <div class="text_title clr_fix">
+                            <h6>모임 소개</h6>
+                        </div>
+                        <div class="frm_items">
+                            fwaioegjp
                         </div>
                     </div>
                 </section>
