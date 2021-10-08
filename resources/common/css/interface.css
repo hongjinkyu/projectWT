@@ -196,6 +196,9 @@ header#headBase {
 	background: transparent;
 	z-index: 10000;
 }
+header#headBase.head_sub {
+	position: sticky;
+}
 header#headBase.scrolled {
 	background: rgb(var(--color_light));
 	outline: var(--border);
@@ -287,6 +290,45 @@ button.btn_account img.profile_pict {
 }
 button.btn_account:hover {
 	filter: brightness(1.1);
+}
+
+section#sideBar_left, section#sideBar_right {
+	width: calc((100% - 38rem) / 2);
+	height: 100vh;
+}
+
+section#contentBar {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0.5rem;
+	padding: 0.5rem;
+	width: 38rem;
+	height: 100vh;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_light));
+}
+
+ul.side_mnu_left {
+	position: sticky;
+	top: 5rem;
+	right: 0;
+	left: 0;
+	margin-top: 2.5rem;
+}
+ul.side_mnu_left > li {
+	margin-bottom: 0.25rem;
+	padding: 0.5rem 0.75rem 0.25rem;
+	border-top-left-radius: var(--bdr_outer);
+	border-bottom-left-radius: var(--bdr_outer);
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_text));
+	font-size: 0.9rem;
+	text-align: end;
+}
+ul.side_mnu_left > li.checked {
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
 }
 
 footer#footBase {
@@ -810,4 +852,26 @@ div#footContent h6 {
 	}
 }
 /* 좋아요 끝 */
+/* 내부 폼 시작 */
+.frm_common {
+	padding: 0.5rem;
+	width: 100%;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_bg));
+}
+
+.text_title * {
+	float: left;
+}
+.text_title > h6 {
+	font-weight: bold;
+}
+.text_title > p {
+	margin-top: 0.25rem;
+	font-size: var(--fnt_12);
+	text-indent: 0.5rem;
+}
+
+/* 내부 폼 끝 */
 /* ---------- Repeating Items end ---------- */

@@ -163,6 +163,10 @@ header#headBase {
     background: transparent;
     z-index: 10000;
 
+    &.head_sub {
+        position: sticky;
+    }
+
     &.scrolled {
         background: rgb(var(--color_light));
         outline: var(--border);
@@ -264,6 +268,50 @@ button.btn_account {
 
     &:hover {
         filter: brightness(1.1);
+    }
+}
+
+section#sideBar {
+    &_left,
+    &_right {
+        width: calc((100% - 38rem) / 2);
+        height: 100vh;
+    }
+}
+
+section#contentBar {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem;
+    padding: .5rem;
+    width: 38rem;
+    height: 100vh;
+    border: var(--border);
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_light));
+}
+
+ul.side_mnu_left {
+    position: sticky;
+    top: 5rem;
+    right: 0;
+    left: 0;
+    margin-top: 2.5rem;
+
+    > li {
+        margin-bottom: .25rem;
+        padding: .5rem .75rem .25rem;
+        border-top-left-radius: var(--bdr_outer);
+        border-bottom-left-radius: var(--bdr_outer);
+        font-family: var(--ff_sans_p);
+        color: rgb(var(--color_text));
+        font-size: .9rem;
+        text-align: end;
+
+        &.checked {
+            background: rgb(var(--color_text));
+            color: rgb(var(--color_light));
+        }
     }
 }
 
@@ -848,5 +896,31 @@ div#footContent {
 }
 
 /* 좋아요 끝 */
+/* 내부 폼 시작 */
 
+.frm_common {
+    padding: .5rem;
+    width: 100%;
+    border: var(--border);
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_bg));
+}
+
+.text_title {
+    * {
+        float: left;
+    }
+
+    > h6 {
+        font-weight: bold;
+    }
+
+    > p {
+        margin-top: .25rem;
+        font-size: var(--fnt_12);
+        text-indent: .5rem;
+    }
+}
+
+/* 내부 폼 끝 */
 /* ---------- Repeating Items end ---------- */
