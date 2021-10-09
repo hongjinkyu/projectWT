@@ -34,6 +34,7 @@
 	/* 사이즈 기본 단위 : 20px */
 	line-height: 1;
 	/* line-height: 1.8 (가독성이 필요한 본문 영역) */
+	scroll-behavior: smooth;
 	--px_1: .05rem;
 	--px_3: .15rem;
 	--px_5: .25rem;
@@ -133,7 +134,6 @@ body {
 	font-size: 0.7rem;
 	/* 기본 글자 크기 : 14px */
 	font-weight: normal;
-	scroll-behavior: smooth;
 }
 
 table {

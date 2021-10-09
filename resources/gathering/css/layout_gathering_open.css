@@ -85,3 +85,33 @@
 .range_spot:nth-child(8)::after {
 	content: "10";
 }
+
+.frm_aligner {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.bring_wine {
+	width: 5rem;
+}
+.bring_wine > .wine_icon {
+	margin: 0 auto 0.25rem;
+}
+.bring_wine > input,
+.bring_wine button {
+	display: block;
+	float: left;
+	text-align: center;
+}
+.bring_wine > input {
+	margin: 0 0.25rem;
+	width: 2rem;
+}
+.bring_wine > button {
+	width: 1.2rem;
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+}

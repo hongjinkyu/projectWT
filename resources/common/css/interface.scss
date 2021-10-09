@@ -145,6 +145,7 @@ input[type="checkbox"] {
         background: url('../images/icons/chkbox_un.png') no-repeat center left;
         font-weight: bold;
         transition: .2s;
+        cursor: pointer;
     }
 
     &:checked + label {
@@ -161,10 +162,11 @@ input[type="radio"] {
         background: url('../images/icons/radio_un.png') no-repeat center left;
         font-weight: bold;
         transition: .2s;
+        cursor: pointer;
+    }
 
-        &:checked + label {
-            background: url('../images/icons/radio_chk.png') no-repeat center left;
-        }
+    &:checked + label {
+        background: url('../images/icons/radio_chk.png') no-repeat center left;
     }
 }
 
@@ -729,8 +731,8 @@ div#footContent {
         bottom: .5rem;
         left: .5rem;
         right: .5rem;
-        transition: .3s;
         opacity: 0;
+        transition: .3s;
 
         > .location_pict {
             width: 2.5rem;
@@ -1016,6 +1018,7 @@ div#footContent {
     font-family: var(--ff_sans_p);
     font-size: var(--fnt_12);
     transition: background .5s;
+    cursor: pointer;
     overflow: hidden;
 
     &::before {
@@ -1173,6 +1176,13 @@ div#footContent {
             height: .3rem;
         }
     }
+}
+
+.wine_selector {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .5rem;
+    position: relative;
 }
 
 /* 와인 아이콘 끝 */

@@ -180,6 +180,7 @@ input[type=checkbox] + label {
 	background: url("../images/icons/chkbox_un.png") no-repeat center left;
 	font-weight: bold;
 	transition: 0.2s;
+	cursor: pointer;
 }
 input[type=checkbox]:checked + label {
 	background: url("../images/icons/chkbox_chk.png") no-repeat center left;
@@ -194,8 +195,9 @@ input[type=radio] + label {
 	background: url("../images/icons/radio_un.png") no-repeat center left;
 	font-weight: bold;
 	transition: 0.2s;
+	cursor: pointer;
 }
-input[type=radio] + label:checked + label {
+input[type=radio]:checked + label {
 	background: url("../images/icons/radio_chk.png") no-repeat center left;
 }
 
@@ -694,8 +696,8 @@ div#footContent h6 {
 	bottom: 0.5rem;
 	left: 0.5rem;
 	right: 0.5rem;
-	transition: 0.3s;
 	opacity: 0;
+	transition: 0.3s;
 }
 .card_item .card_location > .location_pict {
 	width: 2.5rem;
@@ -959,6 +961,7 @@ div#footContent h6 {
 	font-family: var(--ff_sans_p);
 	font-size: var(--fnt_12);
 	transition: background 0.5s;
+	cursor: pointer;
 	overflow: hidden;
 }
 .wine_icon::before {
@@ -1076,6 +1079,13 @@ div#footContent h6 {
 .wine_icon.add_item > span:last-child {
 	width: 1.2rem;
 	height: 0.3rem;
+}
+
+.wine_selector {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 0.5rem;
+	position: relative;
 }
 
 /* 와인 아이콘 끝 */

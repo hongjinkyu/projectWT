@@ -7,7 +7,7 @@ $(document).ready(function() { // jQuery Load
         let sticky_height = $('footer#footBase').height() + 10;
 
         if (scrollBottom < sticky_height) {
-            $('aside#popFollow').css('bottom', sticky_height + 10);
+            $('aside#popFollow').css('bottom', sticky_height);
         } else {
             $('aside#popFollow').css('bottom', 10);
         }
