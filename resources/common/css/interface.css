@@ -57,7 +57,7 @@ select,
 output,
 button {
 	position: relative;
-	padding: 0.45rem 0.5rem 0.4rem 0.5rem;
+	padding: 0.45rem 0.5rem 0.4rem;
 	border-radius: var(--bdr_outer);
 	background: rgba(var(--color_light), 1);
 	box-shadow: var(--shd_major);
@@ -747,7 +747,11 @@ div#footContent h6 {
 /* 작은 위치 정보 끝 */
 /* 물음표 시작 */
 .icon_help {
+	width: 0.7rem;
+	height: 0.7rem;
 	background: url("../images/icons/icon_help.png") no-repeat center;
+	vertical-align: middle;
+	cursor: help;
 }
 
 /* 물음표 끝 */
@@ -943,7 +947,7 @@ div#footContent h6 {
 
 .frm_items {
 	position: relative;
-	margin: 0.5rem 0 1rem;
+	margin: 0.5rem 0 2rem;
 }
 
 /* 내부 폼 끝 */

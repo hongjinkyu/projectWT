@@ -111,7 +111,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
     gap: 1.5rem;
 }
 
@@ -132,6 +131,8 @@
     > input {
         margin: 0 .25rem;
         width: 2rem;
+        border: var(--border);
+        padding: .4rem .5rem .35rem;
     }
 
     > button {
@@ -139,4 +140,12 @@
         background: rgb(var(--color_text));
         color: rgb(var(--color_light));
     }
+}
+
+.btnGroupOpen {
+    padding: .8rem;
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_acc1));
+    color: rgb(var(--color_light));
+    font-size: var(--fnt_16);
 }
