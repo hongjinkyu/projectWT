@@ -1,7 +1,6 @@
 // ---------- Global jQuery  ----------
 
 $(document).ready(function() { // jQuery Load
-
     $(window).scroll(function() {
         let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
         let sticky_height = $('footer#footBase').height() + 10;
@@ -24,5 +23,10 @@ $(document).ready(function() { // jQuery Load
             $(this).toggleClass('checked');
         });
     });
+
+    $('.star_point').each(function() {
+        let starPointLength = $(this).attr('data-point-total');
+        $(this).find('.star_point_blacker').css('width', 'calc(100% - ' + starPointLength * 10 + '%)');
+    })
 
 }) // jQuery Closed

@@ -140,7 +140,11 @@ input[type=time]:focus {
 
 input[type=file] {
 	display: block;
-	padding: 0.1rem;
+	padding: 0.25rem;
+}
+input[type=file] + label {
+	color: rgb(var(--color_acc2), 0.75);
+	font-size: var(--fnt_12);
 }
 
 input[type=color] {
@@ -261,6 +265,7 @@ header#headBase {
 	z-index: 10000;
 }
 header#headBase.head_sub {
+	position: -webkit-sticky;
 	position: sticky;
 }
 header#headBase.scrolled {
@@ -372,6 +377,7 @@ section#contentBar {
 }
 
 ul.side_mnu_left {
+	position: -webkit-sticky;
 	position: sticky;
 	top: 5rem;
 	right: 0;

@@ -211,6 +211,7 @@ body.prevent_scroll {
 
 #wrapMain {
 	margin: 1rem auto 5rem;
+	min-height: 100vh;
 }
 
 .int_wrap {

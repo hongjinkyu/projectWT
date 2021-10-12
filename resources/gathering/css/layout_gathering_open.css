@@ -124,3 +124,6 @@
 	color: rgb(var(--color_light));
 	font-size: var(--fnt_16);
 }
+.btnGroupOpen :hover {
+	background: rgb(var(--color_acc2));
+}

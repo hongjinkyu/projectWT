@@ -102,7 +102,12 @@ input[type="time"] {
 input[type="file"] {
     @extend %interface_box_elmt;
     display: block;
-    padding: .1rem;
+    padding: .25rem;
+
+    & + label {
+        color: rgb(var(--color_acc2), .75);
+        font-size: var(--fnt_12);
+    }
 }
 
 input[type="color"] {

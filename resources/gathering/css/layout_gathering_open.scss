@@ -148,4 +148,8 @@
     background: rgb(var(--color_acc1));
     color: rgb(var(--color_light));
     font-size: var(--fnt_16);
+
+    :hover {
+        background: rgb(var(--color_acc2));
+    }
 }
