@@ -1,6 +1,13 @@
 // ---------- Global jQuery  ----------
 
 $(document).ready(function() { // jQuery Load
+
+    if ($(window).scrollTop() >= 60) {
+        $('header#headBase').addClass('scrolled')
+    } else {
+        $('header#headBase').removeClass('scrolled')
+    }
+
     $(window).scroll(function() {
         let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
         let sticky_height = $('footer#footBase').height() + 10;
@@ -9,6 +16,12 @@ $(document).ready(function() { // jQuery Load
             $('aside#popFollow').css('bottom', sticky_height);
         } else {
             $('aside#popFollow').css('bottom', 10);
+        }
+
+        if ($(window).scrollTop() >= 60) {
+            $('header#headBase').addClass('scrolled')
+        } else {
+            $('header#headBase').removeClass('scrolled')
         }
     }); // Window Scrolling Actions
 
@@ -22,11 +35,26 @@ $(document).ready(function() { // jQuery Load
         $(this).click(function() {
             $(this).toggleClass('checked');
         });
-    });
+    }); // Checkbox
 
     $('.star_point').each(function() {
         let starPointLength = $(this).attr('data-point-total');
         $(this).find('.star_point_blacker').css('width', 'calc(100% - ' + starPointLength * 10 + '%)');
-    })
+    }) // Star Point
+
+    $('.wine_selector').each(function() {
+        $(this).children('.wine_selector_btn').click(function() {
+            $(this).siblings('.wine_selector_list').toggleClass('open');
+        });
+
+        $(this).children('.wine_selector_list').find('.wine_icon').each(function() {
+            $(this).click(function() {
+                $(this).parents('.wine_selector_list').siblings('.wine_selector_btn').find('.wine_icon').appendTo($(this).parents('.wine_selector_list'));
+                $(this).siblings('.choose_item').remove();
+                $(this).appendTo($(this).parents('.wine_selector_list').siblings('.wine_selector_btn'));
+                $(this).parents('.wine_selector_btn').siblings('.wine_selector_list').removeClass('open');
+            });
+        });
+    }); // Wine Selector
 
 }) // jQuery Closed

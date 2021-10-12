@@ -43,7 +43,7 @@
                             <a href="service.html">와인투게더란?</a>
                         </li>
                         <li class="mnu_main">
-                            <a href="gathering.html">모임 둘러보기</a>
+                            <a href="gathering_list.html">모임 둘러보기</a>
                         </li>
                         <li class="mnu_main">
                             <a href="gathering_open.html">모임 개설하기</a>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="frm_items">
                             <input type="file" name="groupMainPict" id="groupMainPict" />
-                            <label for="groupMainPict">※ 가로 400px, 세로 300px, 최대용량 2MB 이하의 이미지가 가장 잘 보여요.</label>
+                            <label for="groupMainPict">※ 가로 800px, 세로 450px, 최대용량 3MB 이하의 이미지가 가장 예쁘게 보여요.</label>
                         </div>
 
                         <div class="text_title clr_fix">
@@ -218,54 +218,89 @@
                         </div>
 
                         <div class="frm_items">
-                            <input type="text" name="" id="txtWinePrice" placeholder="참석자가 지참할 와인의 평균 가격대를 설정해 주세요." />
+                            <input type="text" name="txtWinePrice_BYOB" id="txtWinePrice_BYOB" placeholder="참석자가 지참할 와인의 평균 가격대를 설정해 주세요." />
                         </div>
                         <div class="frm_items frm_aligner">
-                            <div class="bring_wine clr_fix">
-                                <div class="wine_icon choose_item">
-                                    <span class="wave_front"></span>
-                                    <span class="wave_back"></span>
+                            <div class="bring_wine group_leader">
+                                <ul class="wine_selector">
+                                    <li class="wine_selector_btn">
+                                        <div class="wine_icon choose_item">
+                                            <span class="wave_front"></span>
+                                            <span class="wave_back"></span>
+                                        </div>
+                                    </li>
+                                    <li class="wine_selector_list">
+                                        <div class="wine_icon redwine">
+                                            <span class="wave_front"></span>
+                                            <span class="wave_back"></span>
+                                        </div>
+                                        <div class="wine_icon whitewine">
+                                            <span class="wave_front"></span>
+                                            <span class="wave_back"></span>
+                                        </div>
+                                        <div class="wine_icon sparkling">
+                                            <span class="wave_front"></span>
+                                            <span class="wave_back"></span>
+                                        </div>
+                                        <div class="wine_icon others">
+                                            <span class="wave_front"></span>
+                                            <span class="wave_back"></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="qty_container">
+                                    <button class="wine_less">-</button>
+                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
+                                    <button class="wine_more">+</button>
                                 </div>
-                                <button class="wine_less">-</button>
-                                <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
-                                <button class="wine_more">+</button>
-                                * 주최자가 가지고 갈 와인
                             </div>
-                            <div class="bring_wine clr_fix">
+
+                            <div class="bring_wine">
                                 <div class="wine_icon redwine">
                                     <span class="wave_front"></span>
                                     <span class="wave_back"></span>
                                 </div>
-                                <button class="wine_less">-</button>
-                                <input type="text" name="red_qty" id="redQty" class="wine_qty" value="99" disabled />
-                                <button class="wine_more">+</button>
+                                <div class="qty_container">
+                                    <button class="wine_less">-</button>
+                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
+                                    <button class="wine_more">+</button>
+                                </div>
                             </div>
-                            <div class="bring_wine clr_fix">
+
+                            <div class="bring_wine">
                                 <div class="wine_icon whitewine">
                                     <span class="wave_front"></span>
                                     <span class="wave_back"></span>
                                 </div>
-                                <button class="wine_less">-</button>
-                                <input type="text" name="white_qty" id="whiteQty" class="wine_qty" value="256" disabled />
-                                <button class="wine_more">+</button>
+                                <div class="qty_container">
+                                    <button class="wine_less">-</button>
+                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
+                                    <button class="wine_more">+</button>
+                                </div>
                             </div>
-                            <div class="bring_wine clr_fix">
+
+                            <div class="bring_wine">
                                 <div class="wine_icon sparkling">
                                     <span class="wave_front"></span>
                                     <span class="wave_back"></span>
                                 </div>
-                                <button class="wine_less">-</button>
-                                <input type="text" name="spark_qty" id="sparkQty" class="wine_qty" value="65535" disabled />
-                                <button class="wine_more">+</button>
+                                <div class="qty_container">
+                                    <button class="wine_less">-</button>
+                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
+                                    <button class="wine_more">+</button>
+                                </div>
                             </div>
-                            <div class="bring_wine clr_fix">
+
+                            <div class="bring_wine">
                                 <div class="wine_icon others">
                                     <span class="wave_front"></span>
                                     <span class="wave_back"></span>
                                 </div>
-                                <button class="wine_less">-</button>
-                                <input type="text" name="other_qty" id="otherQty" class="wine_qty" value="0" disabled />
-                                <button class="wine_more">+</button>
+                                <div class="qty_container">
+                                    <button class="wine_less">-</button>
+                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
+                                    <button class="wine_more">+</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -277,46 +312,75 @@
                         </div>
 
                         <div class="frm_items">
-                            <ul class="wine_selector">
-                                <li>
-                                    <div class="wine_icon choose_item">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
-                                    </div>
-                                </li>
+                            <ul class="group_wine_list">
                                 <li>
                                     <div class="wine_icon redwine">
                                         <span class="wave_front"></span>
                                         <span class="wave_back"></span>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="wine_icon whitewine">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
+                                    <div class="wine_name_list">
+                                        <input type="text" name="txtWineName" id="txtWineName" placeholder="와인 이름" />
+                                    </div>
+                                    <div class="wine_vintage_list">
+                                        <input type="text" name="txtWineVintage" id="txtWineVintage" placeholder="빈티지" maxlength="4" />
+                                    </div>
+                                    <div class="wine_price_list">
+                                        <input type="text" name="txtWinePrice_LIST" id="txtWinePrice_LIST" placeholder="가격대" />
+                                    </div>
+                                    <div class="wine_btn_list">
+                                        <button class="wine_delete" disabled>-</button>
                                     </div>
                                 </li>
+
                                 <li>
-                                    <div class="wine_icon sparkling">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
+                                    <ul class="wine_selector">
+                                        <li class="wine_selector_btn">
+                                            <div class="wine_icon choose_item">
+                                                <span class="wave_front"></span>
+                                                <span class="wave_back"></span>
+                                            </div>
+                                        </li>
+                                        <li class="wine_selector_list">
+                                            <div class="wine_icon redwine">
+                                                <span class="wave_front"></span>
+                                                <span class="wave_back"></span>
+                                            </div>
+                                            <div class="wine_icon whitewine">
+                                                <span class="wave_front"></span>
+                                                <span class="wave_back"></span>
+                                            </div>
+                                            <div class="wine_icon sparkling">
+                                                <span class="wave_front"></span>
+                                                <span class="wave_back"></span>
+                                            </div>
+                                            <div class="wine_icon others">
+                                                <span class="wave_front"></span>
+                                                <span class="wave_back"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="wine_name_list">
+                                        <input type="text" name="txtWineName" id="txtWineName" placeholder="와인 이름" />
+                                    </div>
+                                    <div class="wine_vintage_list">
+                                        <input type="text" name="txtWineVintage" id="txtWineVintage" placeholder="빈티지" maxlength="4" />
+                                    </div>
+                                    <div class="wine_price_list">
+                                        <input type="text" name="txtWinePrice_LIST" id="txtWinePrice_LIST" placeholder="가격대" />
+                                    </div>
+                                    <div class="wine_btn_list">
+                                        <button class="wine_delete">X</button>
                                     </div>
                                 </li>
+
                                 <li>
-                                    <div class="wine_icon others">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
+                                    <div class="wine_icon add_item">
+                                        <span></span>
+                                        <span></span>
                                     </div>
                                 </li>
                             </ul>
-
-                            <div class="wine_icon add_item">
-                                <span></span>
-                                <span></span>
-                            </div>
                         </div>
-
-                        LIST 모임 개설에서 나올 부분
                     </div>
 
                     <div class="frm_common frm_partner">
@@ -324,35 +388,19 @@
                             <h6>모임 장소 설정</h6>
                         </div>
                         <div class="frm_items">
-                            <ul class="slct_partner">
-                                <li class="slct_partner_item">
-                                    1
-                                </li>
-                                <li class="slct_partner_item">
-                                    2
-                                </li>
-                                <li class="slct_partner_item">
-                                    3
-                                </li>
-                                <li class="slct_partner_item">
-                                    4
-                                </li>
-                                <li class="slct_partner_item">
-                                    5
-                                </li>
-                            </ul>
+                            123123123
                         </div>
                         <div class="text_title clr_fix">
                             <h6>코스 선택</h6>
                         </div>
                         <div class="frm_items">
-                            fjwgjp
+                            125652345
                         </div>
                         <div class="text_title clr_fix">
                             <h6>모임 소개</h6>
                         </div>
                         <div class="frm_items">
-                            fwaioegjp
+                            에디터
                         </div>
                     </div>
                     <button type="submit" class="btnGroupOpen">모임 개설</button>

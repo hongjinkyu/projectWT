@@ -1152,11 +1152,11 @@ div#footContent {
         }
 
         > .wave_front {
-            background: rgb(193, 169, 214);
+            background: rgb(161, 231, 196);
         }
 
         > .wave_back {
-            background: rgb(182, 145, 194);
+            background: rgb(126, 185, 149);
         }
     }
 
@@ -1188,10 +1188,37 @@ div#footContent {
 }
 
 .wine_selector {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: .5rem;
     position: relative;
+}
+
+.wine_selector_list {
+    display: none;
+    position: absolute;
+    top: -.5rem;
+    left: -.5rem;
+    padding: .5rem;
+    border-radius: 2rem;
+    background: rgba(var(--color_dark), .75);
+    box-shadow: 0 .25rem .5rem rgba(var(--color_dark), .5);
+    transition: .5s;
+    opacity: 0;
+    z-index: 500;
+
+    > .wine_icon {
+        position: absolute;
+        left: 0;
+    }
+
+    &.open {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        opacity: 1;
+
+        > .wine_icon {
+            position: relative;
+        }
+    }
 }
 
 /* 와인 아이콘 끝 */

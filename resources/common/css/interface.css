@@ -1065,10 +1065,10 @@ div#footContent h6 {
 	content: "종류 선택";
 }
 .wine_icon.choose_item > .wave_front {
-	background: #c1a9d6;
+	background: #a1e7c4;
 }
 .wine_icon.choose_item > .wave_back {
-	background: #b691c2;
+	background: #7eb995;
 }
 .wine_icon.add_item::before {
 	color: rgb(var(--color_light));
@@ -1092,9 +1092,33 @@ div#footContent h6 {
 }
 
 .wine_selector {
+	position: relative;
+}
+
+.wine_selector_list {
+	display: none;
+	position: absolute;
+	top: -0.5rem;
+	left: -0.5rem;
+	padding: 0.5rem;
+	border-radius: 2rem;
+	background: rgba(var(--color_dark), 0.75);
+	box-shadow: 0 0.25rem 0.5rem rgba(var(--color_dark), 0.5);
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 500;
+}
+.wine_selector_list > .wine_icon {
+	position: absolute;
+	left: 0;
+}
+.wine_selector_list.open {
 	display: flex;
-	flex-flow: row nowrap;
+	align-items: center;
 	gap: 0.5rem;
+	opacity: 1;
+}
+.wine_selector_list.open > .wine_icon {
 	position: relative;
 }
 

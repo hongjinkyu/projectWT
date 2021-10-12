@@ -2,7 +2,7 @@
 
 $(document).ready(function() { // jQuery Load
 
-    if ($(window).scrollTop() >= 200) {
+    if ($(window).scrollTop() >= 60) {
         $('header#headBase').addClass('scrolled')
         $('nav#navBase').removeClass('nav_index');
     } else {
@@ -11,7 +11,7 @@ $(document).ready(function() { // jQuery Load
     }
 
     $(window).scroll(function() {
-        if ($(window).scrollTop() >= 200) {
+        if ($(window).scrollTop() >= 60) {
             $('header#headBase').addClass('scrolled')
             $('nav#navBase').removeClass('nav_index');
         } else {
