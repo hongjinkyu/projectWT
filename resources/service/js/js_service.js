@@ -1,4 +1,4 @@
-// ---------- Page-Specific jQuery (Index) ----------
+// ---------- Page-Specific jQuery (Service) ----------
 
 $(document).ready(function() { // jQuery Load
 

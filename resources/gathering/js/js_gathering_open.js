@@ -1,4 +1,4 @@
-// ---------- Global jQuery  ----------
+// ---------- Page-Specific jQuery (Gathering - Open) ----------
 
 $(document).ready(function() {
 
