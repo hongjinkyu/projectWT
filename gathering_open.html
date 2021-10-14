@@ -18,7 +18,12 @@
         <link rel="stylesheet" type="text/css" href="./resources/gathering/css/layout_gathering_open.css" />
         <!-- Page-Specific CSS -->
 
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet" />
+        <!-- SummerNote -->
+
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script> <!-- SummerNote -->
+        <script type="text/javascript" src="./resources/common/js/summernote-ko-KR.min.js"></script>
         <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
         <script type="text/javascript" src="./resources/gathering/js/js_gathering_open.js"></script> <!-- Page-Specific jQuery -->
         <!-- JavaScript / jQuery -->
@@ -60,7 +65,7 @@
                         <p class="user_name">
                             <span data-grade="grade_regular">김누구</span> 님
                         </p>
-                        <button class="btn_account">
+                        <button class="btn_account" onClick="accountPop(toggle)">
                             <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
                         </button>
                     </div>
@@ -388,19 +393,31 @@
                             <h6>모임 장소 설정</h6>
                         </div>
                         <div class="frm_items">
-                            123123123
+                            <ul class="custom_selector">
+                                <li class="custom_selector_selected">123132</li>
+                                <li class="custom_selector_search">sesese</li>
+                                <li class="custom_selector_items">1233</li>
+                                <li class="custom_selector_items">1233</li>
+                                <li class="custom_selector_items">1233</li>
+                                <li class="custom_selector_items">1233</li>
+                            </ul>
                         </div>
                         <div class="text_title clr_fix">
                             <h6>코스 선택</h6>
                         </div>
                         <div class="frm_items">
-                            125652345
+                            <ul class="custom_selector">
+                                <li class="custom_selector_selected">123132</li>
+                                <li class="custom_selector_items">1233</li>
+                                <li class="custom_selector_items">1233</li>
+                                <li class="custom_selector_items">1233</li>
+                            </ul>
                         </div>
                         <div class="text_title clr_fix">
                             <h6>모임 소개</h6>
                         </div>
                         <div class="frm_items">
-                            에디터
+                            <div id="summernote"></div>
                         </div>
                     </div>
                     <button type="submit" class="btnGroupOpen">모임 개설</button>
