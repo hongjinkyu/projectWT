@@ -807,11 +807,20 @@ div#footContent {
 /* 물음표 시작 */
 
 .icon_help {
+    display: inline-block;
     width: .7rem;
     height: .7rem;
     background: url('../images/icons/icon_help.png') no-repeat center;
-    vertical-align: middle;
+    vertical-align: bottom;
     cursor: help;
+
+    & + span {
+        font-family: var(--ff_sans_p);
+        color: rgba(var(--color_text), .75);
+        font-size: var(--fnt_12);
+        text-shadow: 0 .1rem 0 rgb(var(--color_subtle));
+        cursor: help;
+    }
 }
 
 /* 물음표 끝 */
@@ -1292,10 +1301,14 @@ div#footContent {
         &::-webkit-scrollbar {
             background: rgb(var(--color_light));
         }
-    }
 
-    &_list > li {
-        background: rgb(var(--color_light));
+        > li {
+            background: rgb(var(--color_light));
+
+            & + li {
+                border-top: var(--border);
+            }
+        }
     }
 
     &_form {
