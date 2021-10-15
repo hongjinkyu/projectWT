@@ -59,8 +59,9 @@ $(document).ready(function() { // jQuery Load
 
     $('.custom_selector_selected').each(function() {
         $(this).click(function() {
+            $('.custom_selector_form').not($(this).siblings()).hide();
             $(this).siblings('.custom_selector_form').slideToggle(200);
         });
-    });
+    }); // Custom Selector (Gathering - Open)
 
 }) // jQuery Closed

@@ -18,12 +18,12 @@
         <link rel="stylesheet" type="text/css" href="./resources/gathering/css/layout_gathering_open.css" />
         <!-- Page-Specific CSS -->
 
-        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/js/summernote-lite.min.css" />
         <!-- SummerNote -->
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script> <!-- SummerNote -->
-        <script type="text/javascript" src="./resources/common/js/summernote-ko-KR.min.js"></script>
+        <script type="text/javascript" src="./resources/common/js/summernote-lite.min.js"></script> <!-- SummerNote -->
+        <script type="text/javascript" src="./resources/common/js/summernote-ko-KR.min.js"></script> <!-- SummerNote - Korean -->
         <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
         <script type="text/javascript" src="./resources/gathering/js/js_gathering_open.js"></script> <!-- Page-Specific jQuery -->
         <!-- JavaScript / jQuery -->
@@ -231,6 +231,11 @@
 
                         <div class="frm_items">
                             <input type="text" name="txtWinePrice_BYOB" id="txtWinePrice_BYOB" placeholder="참석자가 지참할 와인의 평균 가격대를 설정해 주세요." />
+                            <select name="slctPricePoint" id="slctPricePoint">
+                                <option value="opt_overthen">원 이상</option>
+                                <option value="opt_mostlike" selected="selected">원 근처</option>
+                                <option value="opt_lessthen">원 이하</option>
+                            </select>
                         </div>
                         <div class="frm_items frm_aligner">
                             <div class="bring_wine group_leader">
@@ -315,6 +320,11 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        <p>
+                            <img src="./resources/common/images/icons/icon_help.png" alt="도움말" />
+                            "지참할 와인"이란 무슨 의미인가요?
+                        </p>
                     </div> <!-- frm_byob : BYOB 모임 개설시 띄울 폼 -->
 
                     <div class="frm_common frm_list">
@@ -393,6 +403,11 @@
                                 </li>
                             </ul>
                         </div>
+                        
+                        <p>
+                            <img src="./resources/common/images/icons/icon_help.png" alt="도움말" />
+                            "제공할 와인"이란 무슨 의미인가요?
+                        </p>
                     </div> <!-- frm_list : LIST 모임 개설시 띄울 폼 -->
 
                     <div class="frm_common frm_partner">
@@ -418,40 +433,40 @@
 
                                 <div class="custom_selector_form">
                                     <p class="custom_selector_search">
-                                        <select name="" id="">
-                                            <option value="" selected="selected" disabled>지역 선택</option>
-                                            <option value="">서울</option>
-                                            <option value="">대전</option>
-                                            <option value="">대구</option>
-                                            <option value="">부산</option>
-                                            <option value="">찍고</option>
-                                            <option value="">터닝</option>
-                                            <option value="">마무리</option>
+                                        <select name="slctOpenLocation" id="slctOpenLocation">
+                                            <option value="dummy_option" selected="selected" disabled>지역별 검색...</option>
+                                            <option value="loc_su">서울</option>
+                                            <option value="loc_dj">대전</option>
+                                            <option value="loc_dg">대구</option>
+                                            <option value="loc_bs">부산</option>
+                                            <option value="loc_jg">찍고</option>
+                                            <option value="loc_tn">터닝</option>
+                                            <option value="loc_mm">마무리</option>
                                         </select>
-                                        <select name="" id="">
-                                            <option value="" selected="selected" disabled>주 메뉴 선택</option>
-                                            <option value="">스테이크</option>
-                                            <option value="">해산물</option>
-                                            <option value="">비건</option>
-                                            <option value="">해장국</option>
+                                        <select name="slctOpenCourse" id="slctOpenCourse">
+                                            <option value="dummy_option" selected="selected" disabled>주 메뉴별 검색...</option>
+                                            <option value="cs_stk">스테이크</option>
+                                            <option value="cs_hsm">해산물</option>
+                                            <option value="cs_vgn">비건</option>
+                                            <option value="cs_hjg">해장국</option>
                                         </select>
-                                        <input type="search" name="" id="" placeholder="검색어 입력..." />
-                                        <button type="submit">검색</button>
+                                        <input type="search" name="txtOpenSearch" id="txtOpenSearch" placeholder="검색어 입력..." />
+                                        <button type="submit" class="btn_search">검색</button>
                                     </p>
 
                                     <ul class="custom_selector_list">
                                         <li>
                                             <dl class="custom_selector_items">
-                                                <img src="./resources/index/images/img22.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                                <img src="./resources/index/images/img27.jpg" alt="현재 선택된 장소" class="location_pict" />
                                                 <dt>
-                                                    <p class="location_name">한국관나이트클럽</p>
+                                                    <p class="location_name">더뉴</p>
                                                     <p class="location_info">
                                                         <img src="./resources/common/images/icons/icon_gps.png" alt="" class="icon_gps">
-                                                        경기도 화성시
+                                                        부산광역시 수영구
                                                     </p>
                                                 </dt>
                                                 <dd class="location_course">
-                                                    주 메뉴 : 시바스 리갈
+                                                    주 메뉴 : 리조또, 스테이크, 피자, 파스타 등
                                                 </dd>
                                             </dl>
                                         </li>
@@ -467,7 +482,7 @@
                                                     </p>
                                                 </dt>
                                                 <dd class="location_course">
-                                                    주 메뉴 : 치즈, 샐러드, 레드와인
+                                                    주 메뉴 : 치즈, 샐러드 등
                                                 </dd>
                                             </dl>
                                         </li>
@@ -483,7 +498,23 @@
                                                     </p>
                                                 </dt>
                                                 <dd class="location_course">
-                                                    주 메뉴 : 스테이크
+                                                    주 메뉴 : 스테이크, 파스타 등
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/img22.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                                <dt>
+                                                    <p class="location_name">한국관나이트클럽</p>
+                                                    <p class="location_info">
+                                                        <img src="./resources/common/images/icons/icon_gps.png" alt="" class="icon_gps">
+                                                        경기도 화성시
+                                                    </p>
+                                                </dt>
+                                                <dd class="location_course">
+                                                    주 메뉴 : 시바스 리갈 등
                                                 </dd>
                                             </dl>
                                         </li>

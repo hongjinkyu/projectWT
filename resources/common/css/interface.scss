@@ -75,6 +75,11 @@ button {
     }
 }
 
+button.btn_search {
+    background: rgb(var(--color_acc1));
+    color: rgb(var(--color_light));
+}
+
 textarea {
     resize: none;
     line-height: 1.8;
@@ -1252,6 +1257,8 @@ div#footContent {
     .location_course,
     .course_price {
         margin-left: auto;
+        font-family: var(--ff_sans_p);
+        font-size: var(--fnt_12);
     }
     
     &_selected,
@@ -1260,6 +1267,7 @@ div#footContent {
         flex-flow: row nowrap;
         align-items: center;
         gap: .5rem;
+        cursor: pointer;
     }
 
     &_selected {
@@ -1274,6 +1282,15 @@ div#footContent {
 
         &:hover {
             background: rgb(var(--color_tone1));
+        }
+    }
+
+    &_list {
+        max-height: 12rem;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            background: rgb(var(--color_light));
         }
     }
 
@@ -1305,12 +1322,7 @@ div#footContent {
 
 /* ---------- Repeating Items end ---------- */
 
-.note-editable {
-    background: rgb(var(--color_light));
-}
-
 .note-modal.open {
-    display: flex !important;
     justify-content: center;
     align-items: center;
 }

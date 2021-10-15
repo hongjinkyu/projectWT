@@ -18,8 +18,7 @@
 }
 
 #txtTitle,
-#txtDesc_s,
-#txtWinePrice_BYOB {
+#txtDesc_s {
 	width: 100%;
 }
 
@@ -172,6 +171,21 @@
 }
 .group_wine_list .wine_delete:disabled {
 	background: rgba(var(--color_dark), 0.25);
+}
+
+#txtWinePrice_BYOB {
+	width: 100%;
+}
+
+#slctPricePoint {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20%;
+	box-shadow: none;
+}
+#slctPricePoint:focus {
+	box-shadow: 0 0 0 0.1rem rgba(var(--color_acc1), 0.5);
 }
 
 .btnGroupOpen {

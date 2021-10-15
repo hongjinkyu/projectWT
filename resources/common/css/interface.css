@@ -114,6 +114,11 @@ button:focus {
 	box-shadow: var(--shd_major), 0 0 0 0.1rem rgba(var(--color_acc1), 0.5);
 }
 
+button.btn_search {
+	background: rgb(var(--color_acc1));
+	color: rgb(var(--color_light));
+}
+
 textarea {
 	resize: none;
 	line-height: 1.8;
@@ -1153,12 +1158,15 @@ div#footContent h6 {
 .custom_selector .location_course,
 .custom_selector .course_price {
 	margin-left: auto;
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_12);
 }
 .custom_selector_selected, .custom_selector_items {
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
 	gap: 0.5rem;
+	cursor: pointer;
 }
 .custom_selector_selected {
 	padding: 0.5rem;
@@ -1171,6 +1179,13 @@ div#footContent h6 {
 }
 .custom_selector_items:hover {
 	background: rgb(var(--color_tone1));
+}
+.custom_selector_list {
+	max-height: 12rem;
+	overflow-y: auto;
+}
+.custom_selector_list::-webkit-scrollbar {
+	background: rgb(var(--color_light));
 }
 .custom_selector_list > li {
 	background: rgb(var(--color_light));
@@ -1195,12 +1210,7 @@ div#footContent h6 {
 
 /* 커스텀 셀렉터 끝 */
 /* ---------- Repeating Items end ---------- */
-.note-editable {
-	background: rgb(var(--color_light));
-}
-
 .note-modal.open {
-	display: flex !important;
 	justify-content: center;
 	align-items: center;
 }
