@@ -145,6 +145,7 @@ input[type="checkbox"] {
     display: none;
 
     & + label {
+        margin-right: .25rem;
         padding-top: .1rem;
         padding-left: 1.1rem;
         background: url('../images/icons/chkbox_un.png') no-repeat center left;
@@ -163,6 +164,7 @@ input[type="radio"] {
     display: none;
 
     & + label {
+        margin-right: .25rem;
         padding-top: .1rem;
         padding-left: 1.1rem;
         background: url('../images/icons/radio_un.png') no-repeat center left;

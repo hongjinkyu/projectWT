@@ -72,33 +72,50 @@
             <div id="wrapMain" class="int_wrap" role="main">
 
                 <section id="secFilter">
-                    <button>모임 전체</button>
-                    <select name="slctLocation" id="slctLocation">
-                        <option value="dummy_option" selected="selected" disabled>지역별 보기</option>
-                        <option value="loc_su">서울</option>
-                        <option value="loc_kk">경기도</option>
-                        <option value="lok_jr">전라도</option>
-                        <option value="lok_ks">경상도</option>
-                        <option value="lok_bs">부산</option>
-                        <option value="lok_jj">제주도</option>
-                    </select>
-                    <select name="slctGroupType" id="slctGroupType">
-                        <option value="dummy_option" selected="selected" disabled>모임 종류별 보기</option>
-                        <option value="">BYOB</option>
-                        <option value="">LIST</option>
-                    </select>
-                    <input type="checkbox" name="fltChk" id="chkRemain" />
-                    <label for="chkRemain">남은 기간순</label>
-                    <input type="checkbox" name="fltChk" id="chkLiked" />
-                    <label for="chkLiked">관심도순</label>
-                    <input type="checkbox" name="fltChk" id="chkLoops" />
-                    <label for="chkLoops">회차순</label>
-                    <input type="search" name="fltSearch" id="fltSearch" placeholder="검색어 입력..." />
+                    <div class="flt_category">
+                        <button class="btn_flt_all">모임 전체</button>
+                        <select name="slctLocation" id="slctLocation">
+                            <option value="dummy_option" selected="selected" disabled>지역별 보기</option>
+                            <option value="loc_su">서울</option>
+                            <option value="loc_kk">경기도</option>
+                            <option value="lok_jr">전라도</option>
+                            <option value="lok_ks">경상도</option>
+                            <option value="lok_bs">부산</option>
+                            <option value="lok_jj">제주도</option>
+                        </select>
+                        <select name="slctGroupType" id="slctGroupType">
+                            <option value="dummy_option" selected="selected" disabled>모임 종류별 보기</option>
+                            <option value="">BYOB</option>
+                            <option value="">LIST</option>
+                        </select>
+                    </div>
+
+                    <div class="flt_checkbox">
+                        <input type="checkbox" name="fltChk" id="chkRemain" />
+                        <label for="chkRemain">남은 기간순</label>
+                        <input type="checkbox" name="fltChk" id="chkLiked" />
+                        <label for="chkLiked">관심도순</label>
+                        <input type="checkbox" name="fltChk" id="chkLoops" />
+                        <label for="chkLoops">회차순</label>
+                    </div>
+
+                    <div class="flt_searchbox">
+                        <input type="search" name="fltSearch" id="fltSearch" placeholder="검색어 입력..." />
+                        <button type="submit" class="btn_flt_search">검색</button>
+                    </div>
+
+                    <div class="flt_selected_flt">
+                        <span>이거</span>
+                        <span>저거</span>
+                        <span>요거</span>
+                        <span>조거</span>
+                        <span>믹 재거</span>
+                    </div>
                 </section>
 
                 <div class="sec_title">
                     <h3>모임 전체 보기</h3>
-                    <p class="sec_subtitle">현재 선택된 필터 : <span>없음</span></p>
+                    <p class="sec_subtitle">현재 참석할 수 있는 모든 모임이에요.</p>
                 </div>
                 
                 <section id="secList_gathering">

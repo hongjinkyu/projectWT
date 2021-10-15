@@ -179,6 +179,7 @@ input[type=checkbox] {
 	display: none;
 }
 input[type=checkbox] + label {
+	margin-right: 0.25rem;
 	padding-top: 0.1rem;
 	padding-left: 1.1rem;
 	background: url("../images/icons/chkbox_un.png") no-repeat center left;
@@ -195,6 +196,7 @@ input[type=radio] {
 	display: none;
 }
 input[type=radio] + label {
+	margin-right: 0.25rem;
 	padding-top: 0.1rem;
 	padding-left: 1.1rem;
 	background: url("../images/icons/radio_un.png") no-repeat center left;
