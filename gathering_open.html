@@ -82,7 +82,7 @@
                         <li>LIST 모임 개설하기</li>
                         <li>기존 모임 이어가기</li>
                     </ul>
-                </section>
+                </section> <!-- #sideBar_left -->
 
                 <section id="contentBar">
                     <h3>BYOB 모임 개설하기</h3>
@@ -91,6 +91,7 @@
                             <h6>모임 이름</h6>
                             <p>개설하려는 모임의 성격, 지역 등을 나타내면 좋아요.</p>
                         </div>
+
                         <div class="frm_items">
                             <input type="text" name="txtTitle" id="txtTitle" placeholder="모임 이름 (* 필수 입력 사항입니다.)" required />
                         </div>
@@ -99,6 +100,7 @@
                             <h6>모임 특징</h6>
                             <p>모임을 눈에 띄게 만드는 재치있는 소개를 두 줄 이내로 표현해 주세요.</p>
                         </div>
+
                         <div class="frm_items">
                             <textarea name="txtDesc_s" id="txtDesc_s" cols="30" rows="2" placeholder="모임 특징 (* 필수 입력 사항입니다.)" required></textarea>
                         </div>
@@ -107,6 +109,7 @@
                             <h6>모임 대표 이미지</h6>
                             <p>모임의 성격을 드러낼 수 있는 특별한 사진을 첨부해 주세요.</p>
                         </div>
+
                         <div class="frm_items">
                             <input type="file" name="groupMainPict" id="groupMainPict" />
                             <label for="groupMainPict">※ 가로 800px, 세로 450px, 최대용량 3MB 이하의 이미지가 가장 예쁘게 보여요.</label>
@@ -116,6 +119,7 @@
                             <h6>모임 인원</h6>
                             <p>4인 이상의 모임 주최는 경험이 있으신 분들께만 추천드려요.</p>
                         </div>
+
                         <div class="frm_items">
                             <input type="range" name="slideGroupSize" id="slideGroupSize" min="4" max="10" step="1" value="4" />
                             <span class="range_spot"></span>
@@ -131,6 +135,7 @@
                             <h6>모임 날짜</h6>
                             <p>최대 n개월 이내의 날짜까지만 설정이 가능해요.</p>
                         </div>
+
                         <div class="frm_items">
                             <input type="date" name="dateGroup" id="dateGroup" />
                             <select name="timeGroup" id="timeGroup">
@@ -185,6 +190,7 @@
                             <h6>모임 연령대 설정</h6>
                             <p>연령대의 폭이 넓을수록 모임 신청이 빠르게 완료될 가능성이 높아져요.</p>
                         </div>
+
                         <div class="frm_items">
                             <input type="checkbox" name="chkAge" id="chkAge_all" value="age_all" />
                             <label for="chkAge_all">상관없음</label>
@@ -204,6 +210,7 @@
                             <h6>모임 성비 설정</h6>
                             <p>Lvl.4 이상부터 사용 가능한 기능이에요.</p>
                         </div>
+
                         <div class="frm_items">
                             <input type="radio" name="rdo_gen" id="rdoGen_none" value="gen_none" checked="checked" />
                             <label for="rdoGen_none">지정 없음</label>
@@ -218,7 +225,7 @@
 
                     <div class="frm_common frm_byob">
                         <div class="text_title clr_fix">
-                            <h6>지참할 와인 설정</h6>
+                            <h6>참석자가 지참할 와인 설정</h6>
                             <p>구매처에 따라 가격이 차이날 수 있어요. 보편적인 마트나 할인 / 행사 가격 기준이면 더 좋아요.</p>
                         </div>
 
@@ -308,7 +315,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- frm_byob : BYOB 모임 개설시 띄울 폼 -->
 
                     <div class="frm_common frm_list">
                         <div class="text_title clr_fix">
@@ -386,46 +393,175 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> <!-- frm_list : LIST 모임 개설시 띄울 폼 -->
 
                     <div class="frm_common frm_partner">
                         <div class="text_title clr_fix">
                             <h6>모임 장소 설정</h6>
                         </div>
+
                         <div class="frm_items">
-                            <ul class="custom_selector">
-                                <li class="custom_selector_selected">123132</li>
-                                <li class="custom_selector_search">sesese</li>
-                                <li class="custom_selector_items">1233</li>
-                                <li class="custom_selector_items">1233</li>
-                                <li class="custom_selector_items">1233</li>
-                                <li class="custom_selector_items">1233</li>
-                            </ul>
+                            <div class="custom_selector">
+                                <dl class="custom_selector_selected">
+                                    <img src="./resources/index/images/img17.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                    <dt>
+                                        <p class="location_name">슈퍼 겁쟁이 쉼터</p>
+                                        <p class="location_info">
+                                            <img src="./resources/common/images/icons/icon_gps_w.png" alt="" class="icon_gps">
+                                            저 깊은 바닷속 비키니 시티
+                                        </p>
+                                    </dt>
+                                    <dd class="location_course">
+                                        주 메뉴 : 버거
+                                    </dd>
+                                </dl>
+
+                                <div class="custom_selector_form">
+                                    <p class="custom_selector_search">
+                                        <select name="" id="">
+                                            <option value="" selected="selected" disabled>지역 선택</option>
+                                            <option value="">서울</option>
+                                            <option value="">대전</option>
+                                            <option value="">대구</option>
+                                            <option value="">부산</option>
+                                            <option value="">찍고</option>
+                                            <option value="">터닝</option>
+                                            <option value="">마무리</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="" selected="selected" disabled>주 메뉴 선택</option>
+                                            <option value="">스테이크</option>
+                                            <option value="">해산물</option>
+                                            <option value="">비건</option>
+                                            <option value="">해장국</option>
+                                        </select>
+                                        <input type="search" name="" id="" placeholder="검색어 입력..." />
+                                        <button type="submit">검색</button>
+                                    </p>
+
+                                    <ul class="custom_selector_list">
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/img22.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                                <dt>
+                                                    <p class="location_name">한국관나이트클럽</p>
+                                                    <p class="location_info">
+                                                        <img src="./resources/common/images/icons/icon_gps.png" alt="" class="icon_gps">
+                                                        경기도 화성시
+                                                    </p>
+                                                </dt>
+                                                <dd class="location_course">
+                                                    주 메뉴 : 시바스 리갈
+                                                </dd>
+                                            </dl>
+                                        </li>
+
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/img20.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                                <dt>
+                                                    <p class="location_name">산막 와이너리</p>
+                                                    <p class="location_info">
+                                                        <img src="./resources/common/images/icons/icon_gps.png" alt="" class="icon_gps">
+                                                        충청북도 영동군
+                                                    </p>
+                                                </dt>
+                                                <dd class="location_course">
+                                                    주 메뉴 : 치즈, 샐러드, 레드와인
+                                                </dd>
+                                            </dl>
+                                        </li>
+
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/img24.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                                <dt>
+                                                    <p class="location_name">스테이크잡스</p>
+                                                    <p class="location_info">
+                                                        <img src="./resources/common/images/icons/icon_gps.png" alt="" class="icon_gps">
+                                                        부산광역시 부산진구
+                                                    </p>
+                                                </dt>
+                                                <dd class="location_course">
+                                                    주 메뉴 : 스테이크
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="text_title clr_fix">
                             <h6>코스 선택</h6>
                         </div>
+
                         <div class="frm_items">
-                            <ul class="custom_selector">
-                                <li class="custom_selector_selected">123132</li>
-                                <li class="custom_selector_items">1233</li>
-                                <li class="custom_selector_items">1233</li>
-                                <li class="custom_selector_items">1233</li>
-                            </ul>
-                        </div>
+                            <div class="custom_selector">
+                                <dl class="custom_selector_selected">
+                                    <img src="./resources/index/images/1.jpg" alt="현재 선택된 코스" class="location_pict" />
+                                    <dt>
+                                        <p class="course_name">게살버거 코스</p>
+                                        <p class="course_info">
+                                            게살버거, 해초튀김, 탄산 바닷물
+                                        </p>
+                                    </dt>
+                                    <dd class="course_price">
+                                        8,900원
+                                    </dd>
+                                </dl>
+
+                                <div class="custom_selector_form">
+                                    <ul class="custom_selector_list">
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/2.jpg" alt="코스요리" class="location_pict" />
+                                                <dt>
+                                                    <p class="course_name">슈퍼 디럭스 게살버거 코스</p>
+                                                    <p class="course_info">
+                                                        게살버거 디럭스, 웨지미역, 버팔로 고등어
+                                                    </p>
+                                                </dt>
+                                                <dd class="course_price">
+                                                    12,000원
+                                                </dd>
+                                            </dl>
+                                        </li>
+
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/3.jpg" alt="코스요리" class="location_pict" />
+                                                <dt>
+                                                    <p class="location_name">게살버거 얼티밋</p>
+                                                    <p class="location_info">
+                                                        게살버거 얼티밋, 사이드 메뉴 4종 (선택)
+                                                    </p>
+                                                </dt>
+                                                <dd class="location_course">
+                                                    19,600원
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!-- frm_partner -->
+
                         <div class="text_title clr_fix">
-                            <h6>모임 소개</h6>
+                            <h6>모임 상세 설명</h6>
                         </div>
+
                         <div class="frm_items">
                             <div id="summernote"></div>
-                        </div>
+                        </div> <!-- 모임 상세 설명 -->
+
                     </div>
                     <button type="submit" class="btnGroupOpen">모임 개설</button>
-                </section>
+                </section> <!-- #contentBar -->
 
                 <section id="sideBar_right">
 
-                </section>
+                </section> <!-- #sideBar_right -->
 
             </div>
 

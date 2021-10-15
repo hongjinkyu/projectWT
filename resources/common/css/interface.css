@@ -1126,26 +1126,72 @@ div#footContent h6 {
 }
 
 /* 와인 아이콘 끝 */
-/* 커스텀 셀렉터 (모임 장소) */
+/* 커스텀 셀렉터 */
 .custom_selector {
 	position: relative;
 }
-.custom_selector > li {
-	padding: 0.5rem;
+.custom_selector .location_pict,
+.custom_selector .course_pict {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: var(--border);
 	border-radius: var(--bdr_outer);
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.custom_selector .location_name,
+.custom_selector .course_name {
+	font-family: var(--ff_sans_p);
+}
+.custom_selector .location_info,
+.custom_selector .course_info {
+	margin-top: 0.25rem;
+	font-size: var(--fnt_12);
+}
+.custom_selector .location_course,
+.custom_selector .course_price {
+	margin-left: auto;
+}
+.custom_selector_selected, .custom_selector_items {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 0.5rem;
 }
 .custom_selector_selected {
+	padding: 0.5rem;
+	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_text));
 	color: rgb(var(--color_light));
 }
-.custom_selector_search {
+.custom_selector_items {
+	padding: 0.5rem;
+}
+.custom_selector_items:hover {
+	background: rgb(var(--color_tone1));
+}
+.custom_selector_list > li {
 	background: rgb(var(--color_light));
 }
-.custom_selector_items {
-	background: rgb(var(--color_light));
+.custom_selector_form {
+	display: none;
+	position: absolute;
+	top: calc(100% + .25rem);
+	left: 0;
+	right: 0;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	box-shadow: var(--shd_major);
+	overflow: hidden;
+	z-index: 500;
+}
+.custom_selector_search {
+	padding: 0.25rem;
+	border-bottom: var(--border);
+	background: rgb(var(--color_bg));
 }
 
-/* 커스텀 셀렉터 (모임 장소) 끝 */
+/* 커스텀 셀렉터 끝 */
 /* ---------- Repeating Items end ---------- */
 .note-editable {
 	background: rgb(var(--color_light));

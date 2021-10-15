@@ -1222,31 +1222,84 @@ div#footContent {
 }
 
 /* 와인 아이콘 끝 */
-/* 커스텀 셀렉터 (모임 장소) */
+/* 커스텀 셀렉터 */
 
 .custom_selector {
     position: relative;
-    
-    > li {
-        padding: .5rem;
+
+    .location_pict,
+    .course_pict {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: var(--border);
         border-radius: var(--bdr_outer);
+        object-fit: cover;
+    }
+
+    .location_name,
+    .course_name {
+        font-family: var(--ff_sans_p);
+    }
+
+    .location_info,
+    .course_info {
+        margin-top: .25rem;
+        font-size: var(--fnt_12);
+    }
+
+    .location_course,
+    .course_price {
+        margin-left: auto;
+    }
+    
+    &_selected,
+    &_items {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: .5rem;
     }
 
     &_selected {
+        padding: .5rem;
+        border-radius: var(--bdr_outer);
         background: rgb(var(--color_text));
         color: rgb(var(--color_light));
     }
 
-    &_search {
+    &_items {
+        padding: .5rem;
+
+        &:hover {
+            background: rgb(var(--color_tone1));
+        }
+    }
+
+    &_list > li {
         background: rgb(var(--color_light));
     }
 
-    &_items {
-        background: rgb(var(--color_light));
+    &_form {
+        display: none;
+        position: absolute;
+        top: calc(100% + .25rem);
+        left: 0;
+        right: 0;
+        border: var(--border);
+        border-radius: var(--bdr_outer);
+        box-shadow: var(--shd_major);
+        overflow: hidden;
+        z-index: 500;
+    }
+
+    &_search {
+        padding: .25rem;
+        border-bottom: var(--border);
+        background: rgb(var(--color_bg));
     }
 }
 
-/* 커스텀 셀렉터 (모임 장소) 끝 */
+/* 커스텀 셀렉터 끝 */
 
 /* ---------- Repeating Items end ---------- */
 

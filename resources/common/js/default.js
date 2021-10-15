@@ -40,7 +40,7 @@ $(document).ready(function() { // jQuery Load
     $('.star_point').each(function() {
         let starPointLength = $(this).attr('data-point-total');
         $(this).find('.star_point_blacker').css('width', 'calc(100% - ' + starPointLength * 10 + '%)');
-    }) // Star Point
+    }); // Star Point
 
     $('.wine_selector').each(function() {
         $(this).children('.wine_selector_btn').click(function() {
@@ -56,5 +56,11 @@ $(document).ready(function() { // jQuery Load
             });
         });
     }); // Wine Selector
+
+    $('.custom_selector_selected').each(function() {
+        $(this).click(function() {
+            $(this).siblings('.custom_selector_form').slideToggle(200);
+        });
+    });
 
 }) // jQuery Closed
