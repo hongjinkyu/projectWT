@@ -38,6 +38,7 @@
 	height: 0.6rem;
 	background: url("../../common/images/icons/icon_delete.png") no-repeat center;
 	vertical-align: bottom;
+	cursor: pointer;
 	content: "";
 }
 

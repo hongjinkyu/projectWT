@@ -10,6 +10,10 @@
 	width: 100%;
 }
 
+.range_container {
+	position: relative;
+}
+
 .range_spot {
 	display: block;
 	position: absolute;
@@ -18,6 +22,7 @@
 	height: 0.5rem;
 	background: rgb(var(--color_text));
 	font-size: var(--fnt_12);
+	pointer-events: none;
 }
 .range_spot::after {
 	display: block;
@@ -29,48 +34,28 @@
 	width: max-content;
 	text-align: center;
 	transform: translateX(-50%);
+	content: attr(rangeval) "인";
 }
 .range_spot:nth-child(2) {
 	left: 0.35rem;
 }
-.range_spot:nth-child(2)::after {
-	content: "4명";
-}
 .range_spot:nth-child(3) {
 	left: calc((50% - (100% / 6 * 2)) + .25rem);
-}
-.range_spot:nth-child(3)::after {
-	content: "5";
 }
 .range_spot:nth-child(4) {
 	left: calc((50% - (100% / 6)) + .1rem);
 }
-.range_spot:nth-child(4)::after {
-	content: "6";
-}
 .range_spot:nth-child(5) {
 	left: calc(50% - .025rem);
-}
-.range_spot:nth-child(5)::after {
-	content: "7";
 }
 .range_spot:nth-child(6) {
 	right: calc((50% - (100% / 6)) + .1rem);
 }
-.range_spot:nth-child(6)::after {
-	content: "8";
-}
 .range_spot:nth-child(7) {
 	right: calc((50% - (100% / 6 * 2)) + .25rem);
 }
-.range_spot:nth-child(7)::after {
-	content: "9";
-}
 .range_spot:nth-child(8) {
 	right: 0.35rem;
-}
-.range_spot:nth-child(8)::after {
-	content: "10";
 }
 
 .frm_aligner {
@@ -186,4 +171,86 @@
 }
 .btnGroupOpen:hover {
 	background: rgb(var(--color_acc1));
+}
+
+aside#popGroupEncore {
+	display: none;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 1000;
+}
+aside#popGroupEncore.open {
+	display: flex;
+}
+aside#popGroupEncore > #frmEncore {
+	padding: 0.5rem;
+	width: 30rem;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_bdr));
+}
+aside#popGroupEncore > #frmEncore > h4 {
+	margin-bottom: 0.5rem;
+	padding: 0.5rem;
+}
+aside#popGroupEncore > #frmEncore > .btn_container {
+	display: flex;
+	align-items: center;
+	padding-top: 0.5rem;
+	height: 2rem;
+}
+aside#popGroupEncore > #frmEncore > .btn_container button {
+	display: block;
+	padding: 0.5rem 1rem;
+}
+aside#popGroupEncore > #frmEncore > .btn_container .pop_trans {
+	background: rgb(var(--color_acc2));
+	color: rgb(var(--color_light));
+}
+aside#popGroupEncore > #frmEncore > .btn_container .pop_close {
+	background: rgb(var(--color_point1));
+	color: rgb(var(--color_light));
+}
+aside#popGroupEncore > #frmEncore > .btn_container p {
+	margin-left: auto;
+}
+aside#popGroupEncore > #frmEncore > .encore_list {
+	max-height: 50vh;
+	overflow-y: auto;
+}
+aside#popGroupEncore > #frmEncore > .encore_list::-webkit-scrollbar {
+	background: transparent;
+}
+aside#popGroupEncore > #frmEncore > .encore_list > li {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.75rem 0.5rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_bg));
+}
+aside#popGroupEncore > #frmEncore > .encore_list > li:hover {
+	border-color: rgb(var(--color_acc1));
+	background: rgb(var(--color_tone1));
+}
+aside#popGroupEncore > #frmEncore > .encore_list > li + li {
+	margin-top: 0.25rem;
+}
+aside#popGroupEncore > #frmEncore > .encore_list > li > label {
+	width: 5rem;
+}
+aside#popGroupEncore > #frmEncore > .encore_list p {
+	font-family: var(--ff_serif);
+	font-size: var(--fnt_12);
+}
+aside#popGroupEncore > #frmEncore > .encore_list p:last-of-type {
+	margin-left: auto;
 }

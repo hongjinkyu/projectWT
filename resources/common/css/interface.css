@@ -172,7 +172,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 input[type=range]::-webkit-slider-thumb {
 	-webkit-appearance: none;
-	margin-top: -0.2rem;
+	margin-top: -0.15rem;
 	width: 0.7rem;
 	height: 0.7rem;
 	border-radius: 0.35rem;
@@ -336,15 +336,54 @@ ul#navbarMain a:hover::before {
 
 div#layerAccount {
 	display: flex;
+	position: relative;
 	align-items: center;
 	gap: 0.5rem;
 	margin-left: auto;
+	cursor: pointer;
 }
 div#layerAccount > p.user_name {
 	padding-left: 1.5rem;
 }
 div#layerAccount > p.user_name span {
 	color: rgb(var(--color_title));
+}
+div#layerAccount ul#accountPop {
+	display: none;
+	position: absolute;
+	top: calc(100% - .25rem);
+	right: 0;
+	width: 8rem;
+	padding: 0.1rem;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_light));
+	box-shadow: 0 0.25rem 0.5rem rgba(var(--color_dark), 0.3);
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_text));
+	font-size: var(--fnt_12);
+}
+div#layerAccount ul#accountPop::before {
+	display: block;
+	position: absolute;
+	bottom: 100%;
+	left: calc(50% - .25rem);
+	width: 0.5rem;
+	height: 0.5rem;
+	border: 0.25rem solid transparent;
+	border-bottom: 0.25rem solid rgb(var(--color_light));
+	content: "";
+}
+div#layerAccount ul#accountPop.on {
+	display: block;
+}
+div#layerAccount ul#accountPop > li:hover {
+	border-radius: var(--bdr_inner);
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+}
+div#layerAccount ul#accountPop > li > a {
+	display: block;
+	padding: 0.35rem 1.5rem 0.2rem;
 }
 
 button.btn_account {

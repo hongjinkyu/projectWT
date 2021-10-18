@@ -31,6 +31,10 @@ $(document).ready(function() { // jQuery Load
 
 // ---------- Actual Codes ----------
 
+    $('#layerAccount').click(function() {
+        $('#accountPop').toggleClass('on');
+    }); // Account Menu
+
     $('.chk_like').each(function() {
         $(this).click(function() {
             $(this).toggleClass('checked');

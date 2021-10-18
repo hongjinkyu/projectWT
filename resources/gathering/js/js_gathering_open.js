@@ -38,4 +38,14 @@ $(document).ready(function() {
         });
     });
 
+    $('.pop_open').click(function() {
+        $('body').addClass('prevent_scroll');
+        $('#popGroupEncore').addClass('open');
+    });
+
+    $('.pop_close').click(function() {
+        $('body').removeClass('prevent_scroll');
+        $('#popGroupEncore').removeClass('open');
+    });
+
 }) // jQuery Closed

@@ -68,6 +68,12 @@
                         <button class="btn_account" onClick="accountPop(toggle)">
                             <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
                         </button>
+                        <ul id="accountPop">
+                            <li><a href="./mypage.html">나의 정보</a></li>
+                            <li><a href="">즐겨찾는 맛집</a></li>
+                            <li><a href="">프리미엄 멤버쉽</a></li>
+                            <li><a href="">로그아웃</a></li>
+                        </ul>
                     </div>
                 </nav>
             </header> <!-- Header -->
@@ -80,7 +86,7 @@
                     <ul class="side_mnu_left">
                         <li class="checked"><a href="#" data-tab-target="BYOB">BYOB 모임 개설하기</a></li>
                         <li><a href="#" data-tab-target="LIST">LIST 모임 개설하기</a></li>
-                        <li><a href="#">기존 모임 이어가기</a></li>
+                        <li class="pop_open"><a>기존 모임 이어가기</a></li>
                     </ul>
                 </section> <!-- #sideBar_left -->
 
@@ -121,14 +127,16 @@
                         </div>
 
                         <div class="frm_items">
-                            <input type="range" name="slideGroupSize" id="slideGroupSize" min="4" max="10" step="1" value="4" />
-                            <span class="range_spot"></span>
-                            <span class="range_spot"></span>
-                            <span class="range_spot"></span>
-                            <span class="range_spot"></span>
-                            <span class="range_spot"></span>
-                            <span class="range_spot"></span>
-                            <span class="range_spot"></span>
+                            <div class="range_container">
+                                <input type="range" name="slideGroupSize" id="slideGroupSize" min="4" max="10" step="1" value="4" />
+                                <span class="range_spot" rangeval="4"></span>
+                                <span class="range_spot" rangeval="5"></span>
+                                <span class="range_spot" rangeval="6"></span>
+                                <span class="range_spot" rangeval="7"></span>
+                                <span class="range_spot" rangeval="8"></span>
+                                <span class="range_spot" rangeval="9"></span>
+                                <span class="range_spot" rangeval="10"></span>
+                            </div>
                         </div>
 
                         <div class="text_title clr_fix">
@@ -593,6 +601,58 @@
                 <section id="sideBar_right">
 
                 </section> <!-- #sideBar_right -->
+
+                <aside id="popGroupEncore">
+                    <div id="frmEncore">
+                        <h4>기존 모임 이어가기</h4>
+                        <ul class="encore_list">
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_01" />
+                                <label for="rdoEncore_01">2021. 01. 01</label>
+                                <p>어쩌고 저쩌고</p>
+                                <p>#255회차</p>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_02" />
+                                <label for="rdoEncore_02">2021. 04. 01</label>
+                                <p>거짓말처럼</p>
+                                <p>#-1회차</p>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_03" />
+                                <label for="rdoEncore_03">4444. 44. 44</label>
+                                <p>불길한 날</p>
+                                <p>#444회차</p>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_04" />
+                                <label for="rdoEncore_04">2077. 05. 18</label>
+                                <p>사이버펑크 어버이날</p>
+                                <p>#2회차</p>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_05" />
+                                <label for="rdoEncore_05">2021. 10. 14</label>
+                                <p>세상이 대충 망한 뒤</p>
+                                <p>#1회차</p>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_06" />
+                                <label for="rdoEncore_06">1986. 03. 20</label>
+                                <p>기쁘다 생일 오셨네</p>
+                                <p>#35회차</p>
+                            </li>
+                        </ul>
+                        <div class="btn_container">
+                            <button type="submit" class="pop_trans">확인</button>
+                            <button class="pop_close">닫기</button>
+                            <p>
+                                <img src="./resources/common/images/icons/icon_help.png" alt="도움말" class="icon_help" />
+                                <span>기존의 모임이 목록에 보이지 않으면 어떻게 하나요?</span>
+                            </p>
+                        </div>
+                    </div>
+                </aside>
 
             </div>
 
