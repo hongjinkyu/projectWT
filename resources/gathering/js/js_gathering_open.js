@@ -24,4 +24,18 @@ $(document).ready(function() {
 
 // ---------- Actual Codes ----------
 
+    $('.side_mnu_left > li > a').each(function() {
+        $(this).click(function() {
+            let group_category = $('#group' + $(this).attr('data-tab-target') + '');
+            let hiding_category = $('#group' + $('.side_mnu_left > li > a').not($(this)).attr('data-tab-target'));
+
+            $(this).parents('li').addClass('checked');
+            $(this).parents('li').siblings().removeClass('checked');
+            group_category.show();
+            hiding_category.hide();
+
+            $('.group_type').html($(this).attr('data-tab-target'));
+        });
+    });
+
 }) // jQuery Closed

@@ -201,6 +201,12 @@ body.prevent_scroll {
 #wrapMain {
     margin: 1rem auto 5rem;
     min-height: 100vh;
+
+    &.sub {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
 }
 
 .int_wrap { /* 내부 박스 사이징 */

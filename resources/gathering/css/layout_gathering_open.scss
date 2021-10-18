@@ -1,28 +1,8 @@
 /* ---------- Page-Specific Layout CSS (Gathering (Open)) ---------- */
-
-/* ---------- SCSS 공통 선언 시작 ---------- */
-
-
-
-/* ---------- SCSS 공통 선언 종료 ---------- */
-/* ---------- 영역 공통 선언 시작 ---------- */
-
-#wrapMain {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-}
-
-/* ---------- 영역 공통 선언 종료 ---------- */
-/* ---------- 하부 요소 시작 ---------- */
-
-
-
-/* ---------- 하부 요소 종료 ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
 
-#contentBar > h3 {
-    margin-top: .5rem;
+#groupLIST {
+    display: none;
 }
 
 #txtTitle,

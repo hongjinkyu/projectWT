@@ -3,9 +3,9 @@
 $(document).ready(function() { // jQuery Load
 
     if ($(window).scrollTop() >= 60) {
-        $('header#headBase').addClass('scrolled')
+        $('header#headBase.head_index').addClass('scrolled')
     } else {
-        $('header#headBase').removeClass('scrolled')
+        $('header#headBase.head_index').removeClass('scrolled')
     }
 
     $(window).scroll(function() {
@@ -19,9 +19,9 @@ $(document).ready(function() { // jQuery Load
         }
 
         if ($(window).scrollTop() >= 60) {
-            $('header#headBase').addClass('scrolled')
+            $('header#headBase.head_index').addClass('scrolled')
         } else {
-            $('header#headBase').removeClass('scrolled')
+            $('header#headBase.head_index').removeClass('scrolled')
         }
     }); // Window Scrolling Actions
 

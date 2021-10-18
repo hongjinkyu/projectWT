@@ -1,12 +1,12 @@
+@charset "UTF-8";
 /* ---------- Page-Specific Layout CSS (Review (List)) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
-
 .sec_title {
-    margin-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 #secList_review {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1.5rem .5rem;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 1.5rem 0.5rem;
 }

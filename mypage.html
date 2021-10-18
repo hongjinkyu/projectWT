@@ -15,12 +15,12 @@
         <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
         <!-- Global CSS -->
 
-        <link rel="stylesheet" type="text/css" href="./resources/partners/css/layout_partners.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/mypage.css" />
         <!-- Page-Specific CSS -->
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
         <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
-        <script type="text/javascript" src="./resources/partners/js/js_partners.js"></script> <!-- Page-Specific jQuery -->
+        <script type="text/javascript" src="./resources/common/js/js_mypage.js"></script> <!-- Page-Specific jQuery -->
         <!-- JavaScript / jQuery -->
 
         <!--[if lt IE 9]>
@@ -69,9 +69,131 @@
 
         <!-- Page Main Contents Start / 헤더 영역 종료 -->
 
-            <div id="wrapMain" class="int_wrap" role="main">
+            <div id="wrapMain" class="int_wrap sub" role="main">
 
-                
+                <section id="sideBar_left">
+                    <ul class="side_mnu_left">
+                        <li class="checked"><a href="#myInfo">나의 정보</a></li>
+                        <li><a href="#cardInfo">결제카드 관리</a></li>
+                        <li><a href="#subscriptInfo">구독 관리</a></li>
+                        <li><a href="#gatherInfo">내 모임 관리</a></li>
+                        <li><a href="#profileInfo">나의 공개 프로필</a></li>
+                    </ul>
+                </section> <!-- #sideBar_left -->
+
+                <section id="contentBar">
+                    <h3 id="myInfo">나의 정보</h3>
+                    <article class="my_info">
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                사용자 이름
+                            </p>
+                            <p class="info_fieldtext">
+                                김누구 님
+                            </p>
+                        </div>
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                ID
+                            </p>
+                            <p class="info_fieldtext">
+                                whosthiskimguy@whois.com
+                            </p>
+                        </div>
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                프로필 사진
+                            </p>
+                            <p class="info_fieldtext">
+                                <img class="info_profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
+                            </p>
+                        </div>
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                비밀번호
+                            </p>
+                            <p class="info_fieldtext">
+                                ***********
+                            </p>
+                        </div>
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                주소
+                            </p>
+                            <p class="info_fieldtext">
+                                부산광역시 부산진구 성지곡로12번길 29, 1층
+                            </p>
+                        </div>
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                회원등급
+                            </p>
+                            <p class="info_fieldtext">
+                                Regular / 회원등급에 따른 혜택 자세히 보기
+                            </p>
+                        </div>
+                    </article>
+
+                    <h3 id="cardInfo">결제카드 관리</h3>
+                    <article class="card_info">
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                카드명
+                            </p>
+                            <p class="info_fieldtext">
+                                신한카드
+                            </p>
+                        </div>
+                    </article>
+
+                    <h3 id="subscriptInfo">구독 관리</h3>
+                    <article class="subcript_info">
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                구독 시작일
+                            </p>
+                            <p class="info_fieldtext">
+                                2021. 09. 14
+                            </p>
+                        </div>
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                다음 결제일
+                            </p>
+                            <p class="info_fieldtext">
+                                2021. 10. 15
+                            </p>
+                        </div>
+                    </article>
+
+                    <h3 id="gatherInfo">내 모임 관리</h3>
+                    <article class="gather_info">
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                모임 어쩌고
+                            </p>
+                            <p class="info_fieldtext">
+                                저쩌고
+                            </p>
+                        </div>
+                    </article>
+
+                    <h3 id="profileInfo">나의 공개 프로필</h3>
+                    <article class="profile_info">
+                        <div class="info_singleline">
+                            <p class="info_fieldname">
+                                프로필
+                            </p>
+                            <p class="info_fieldtext">
+                                자세히 보기
+                            </p>
+                        </div>
+                    </article>
+                </section> <!-- #contentBar -->
+
+                <section id="sideBar_right">
+
+                </section> <!-- #sideBar_right -->
 
             </div>
 

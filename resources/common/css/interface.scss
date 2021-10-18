@@ -238,7 +238,6 @@ a.goto_top {
 /* ---------- Basic Page Elements Start ---------- */
 
 header#headBase {
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -246,8 +245,12 @@ header#headBase {
     background: transparent;
     z-index: 10000;
 
+    &.head_index {
+        position: fixed;
+    }
+
     &.head_sub {
-        position: sticky;
+        position: static;
     }
 
     &.scrolled {
@@ -370,6 +373,11 @@ section#contentBar {
     border: var(--border);
     border-radius: var(--bdr_outer);
     background: rgb(var(--color_light));
+
+    > h3 {
+        margin: .5rem;
+        font-weight: normal;
+    }
 }
 
 ul.side_mnu_left {
@@ -380,8 +388,6 @@ ul.side_mnu_left {
     margin-top: 2.5rem;
 
     > li {
-        margin-bottom: .25rem;
-        padding: .5rem .75rem .25rem;
         border-top-left-radius: var(--bdr_outer);
         border-bottom-left-radius: var(--bdr_outer);
         font-family: var(--ff_sans_p);
@@ -389,9 +395,22 @@ ul.side_mnu_left {
         font-size: .9rem;
         text-align: end;
 
+        & + li {
+            margin-top: .5rem;
+        }
+
         &.checked {
             background: rgb(var(--color_text));
             color: rgb(var(--color_light));
+
+            > a {
+                pointer-events: none;
+            }
+        }
+
+        > a {
+            display: block;
+            padding: .5rem .75rem .25rem;
         }
     }
 }
