@@ -32,155 +32,31 @@
 
         <div id="wrap">
 
-            <header id="headBase" class="head_sub">
-                <nav id="navBase" class="nav_sub int_wrap" role="navigation">
-                    <h1 id="mainLogo">
-                        <a href="index.html">Wine Together</a>
-                    </h1>
-
-                    <ul id="navbarMain">
-                        <li class="mnu_main">
-                            <a href="service.html">와인투게더란?</a>
-                        </li>
-                        <li class="mnu_main">
-                            <a href="gathering_list.html">모임 둘러보기</a>
-                        </li>
-                        <li class="mnu_main">
-                            <a href="gathering_open.html">모임 개설하기</a>
-                        </li>
-                        <li class="mnu_main">
-                            <a href="review_list.html">모임 후기</a>
-                        </li>
-                        <li class="mnu_main">
-                            <a href="partners_list.html">와투 맛집</a>
-                        </li>
-                    </ul>
-
-                    <div id="layerAccount">
-                        <p class="user_name">
-                            <span data-grade="grade_regular">김누구</span> 님
-                        </p>
-                        <button class="btn_account">
-                            <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
-                        </button>
-                        <ul id="accountPop">
-                            <li><a href="./mypage.html">나의 정보</a></li>
-                            <li><a href="">즐겨찾는 맛집</a></li>
-                            <li><a href="">프리미엄 멤버쉽</a></li>
-                            <li><a href="./login.html">로그아웃</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header> <!-- Header -->
-
-        <!-- Page Main Contents Start / 헤더 영역 종료 -->
-
-            <div id="wrapMain" class="int_wrap" role="main">
-
-                <div id="frmLogin">
-                    <div class="field_login">
-                        <h3>로그인 / 회원가입</h3>
-                        <hr />
-
-                        <label for="txtID">아이디 (e-mail)</label>
-                        <input type="email" name="txtID" id="txtID" placeholder="example@winetogether.kr" />
-
-                        <label for="txtPW">비밀번호</label>
-                        <input type="password" name="txtPW" id="txtPW" placeholder="Password" />
-                        <p class="forgot_pw">
-                            <img src="./resources/common/images/icons/icon_help.png" alt="도움말" class="icon_help" />
-                            <span>비밀번호 까먹음?</span>
-                        </p>
-
-                        <button class="btn_login">로그인</button>
-                        <button class="btn_join">회원가입</button>
-                    </div>
-                    <div class="other_auth">
-                        <h5>다른 방법으로 로그인</h5>
-                        <hr />
-
-                        <button class="btn_kakao">카카오 계정으로 로그인</button>
-                        <button class="btn_naver">네이버 계정으로 로그인</button>
-                        <button class="btn_google">구글 계정으로 로그인</button>
-                        <button class="btn_facebook">페이스북 계정으로 로그인</button>
-                    </div>
+            <div id="frmLogin">
+                <div class="btn_container">
+                    <input type="radio" name="rdoAccType" id="rdoNorm">
+                    <label for="rdoNorm">일반회원</label>
+                    <input type="radio" name="rdoAccType" id="rdoPart">
+                    <label for="rdoPart">파트너 회원</label>
+                    <button class="backtomain" onclick="history.back()">뒤로</button>
                 </div>
 
+                <div class="field_login">
+                    <input type="email" name="txtID" id="txtID" placeholder="example@winetogether.kr" required />
+                    <input type="password" name="txtPW" id="txtPW" placeholder="vimyl-burnho" required />
+                    <button type="submit" class="btn_login">로그인</button>
+                    <p><a href="#">아이디</a> / <a href="#">비밀번호 찾기</a> | <a href="#">회원가입</a></p>
+                </div>
+
+                <div class="other_methods">
+                    <button class="btn_google">구글</button>
+                    <button class="btn_kakao">카카오</button>
+                    <button class="btn_naver">네이버</button>
+                    <button class="btn_facebook">페북</button>
+                </div>
+
+                <p id="copyRights">Copyright © 2021 와인투게더</p>
             </div>
-
-        <!-- Page Main Contents End / 푸터 영역 시작 -->
-
-            <footer id="footBase" role="contentinfo">
-                <a href="#" class="banner_partner">
-                    와인투게더와 함께하실 파트너를 모십니다.
-                </a>
-                <div class="int_wrap">
-                    <ul id="footLinks">
-                        <li class="mnu_flinks"><a href="#">고객센터</a></li>
-                        <li class="flinks_sep"></li>
-                        <li class="mnu_flinks"><a href="#">이용약관</a></li>
-                        <li class="flinks_sep"></li>
-                        <li class="mnu_flinks"><a href="#">개인정보보호방침</a></li>
-                        <li class="flinks_sep"></li>
-                        <li class="mnu_flinks"><a href="#">이메일주소수집거부</a></li>
-                        <li class="mnu_flinks">제휴문의 <a href="mailto:justin@winetogether.kr">justin@winetogether.kr</a></li>
-                    </ul>
-
-                    <div id="footContent">
-                        <div class="footer_company">
-                            <h6>(주) 비노앤제이</h6>
-                            <ul class="footer_company_info">
-                                <li>
-                                    <img src="./resources/common/images/logo_footer.png" alt="VINO & J" />
-                                </li>
-                                <li>
-                                    대표이사
-                                    <p>최용준</p>
-                                </li>
-                                <li>
-                                    사업자등록번호
-                                    <p>617-86-10479</p>
-                                </li>
-                                <li>
-                                    통신판매업신고번호
-                                    <p>제2016-부산해운대-0485호</p>
-                                </li>
-                                <li>
-                                    주소
-                                    <address>부산광역시 해운대구 해운대로 570번길 46, B1</address>
-                                </li>
-                                <li class="disclaimer">
-                                    전자상거래상 중개업이 어쩌고 저쩌고 책임은 구매자 본인에게 있고 어쩌고 저쩌고<br />
-                                    두줄로 들어가면 이런 느낌이고 뭔가 내용이 많아야 할거같고
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer_callcenter">
-                            <h6>CALL CENTER</h6>
-                            <div class="footer_callcenter_text">
-                                <img src="./resources/common/images/icons/icon_cs.png" alt="고객센터" class="icon_cs" /><!--
-                                --><span>1811-0612</span>
-                                <p>
-                                    월~금 :
-                                    오전 10:00 ~ 오후 06:00
-                                </p>
-                                <p>
-                                    점심시간 :
-                                    오후 12:00 ~ 오후 01:00
-                                </p>
-                                <p>※ 토 / 일 / 공휴일은 휴무입니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p id="copyRights">Copyright &copy; 2021 와인투게더</p>
-                </div>
-
-                <aside id="popFollow">
-                    <a href="#wrap" class="goto_top">
-                        <img src="./resources/common/images/icons/icon_gototop.png" alt="맨 위로" />
-                    </a>
-                </aside> <!-- Sticky Tag -->
-            </footer> <!-- Footer -->
 
         </div> <!-- #wrap -->
 

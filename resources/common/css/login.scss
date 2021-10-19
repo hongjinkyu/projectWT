@@ -1,88 +1,105 @@
 /* ---------- Page-Specific Layout CSS (Login) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
 
+#wrap {
+    width: 100vw;
+    height: 100vh;
+}
+
 #frmLogin {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     margin: auto;
-    max-width: 32rem;
-    height: 15rem;
+    padding: .5rem;
+    width: 20rem;
+    max-height: 30rem;
+    background: #fff;
+    box-shadow: var(--shd_minor);
 
-    > * {
-        padding: .5rem;
-        width: 16rem;
-    }
-
-    hr {
-        margin: .5rem 0 .75rem;
-        height: .05rem;
-        background: rgb(var(--color_bdr));
-    }
-
-    button {
-        padding: .75rem 3rem;
-        width: 100%;
-        text-align: start;
-
-        
-        & + button {
-            margin-top: .25rem;
-        }
-    }
-
-    input + label {
-        margin-top: 1rem;
-    }
-
-    label {
-        display: block;
-        margin-bottom: .25rem;
-        font-family: var(--ff_sans_p);
-    }
-
-    input {
-        width: 100%;
-        font-size: var(--fnt_14);
-    }
-
-    .forgot_pw {
-        margin: .5rem 0;
-        font-family: var(--ff_sans_p);
-        font-size: var(--fnt_12);
-        text-align: end;
-        cursor: pointer;
-    }
-
-    .btn_login,
-    .btn_join {
-        text-align: center;
-    }
-
-    .btn_login {
-        background: rgb(var(--color_acc2));
-        color: rgb(var(--color_light));
-        font-size: var(--fnt_16);
-    }
-
-    .btn_join {
-        background: rgb(var(--color_subtle));
+    &::before {
+        position: absolute;
+        bottom: calc(100% + .5rem);
+        left: 0;
+        right: 0;
+        content: '와인투게더 로그인'
     }
 }
 
-.other_auth {
-    margin-top: .5rem;
+.btn_container {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
 
+    .backtomain {
+        margin-left: auto;
+        background: rgb(var(--color_text));
+    }
+}
+
+.field_login {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem;
+
+    input {
+        padding: .75rem;
+        box-shadow: 0 0 0 .05rem rgb(var(--color_tone2));
+        font-size: var(--fnt_14);
+    }
+
+    button {
+        padding: .75rem;
+        background: rgb(var(--color_tone2));
+    }
+}
+
+.other_methods {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem;
+    margin: auto 0;
+
+    .btn_google {
+        background: rgba(217, 48, 37, .5);
+        color: rgb(var(--color_light));
+    
+        &:hover {
+            background: rgba(217, 48, 37, 1);
+        }
+    }
+    
     .btn_kakao {
-        background: rgb(243, 220, 0);
+        background: rgba(243, 220, 0, .5);
+    
+        &:hover {
+            background: rgba(243, 220, 0, 1);
+        }
     }
     
     .btn_naver {
-        background: rgb(25, 206, 96);
+        background: rgba(25, 206, 96, .5);
         color: rgb(var(--color_light));
+    
+        &:hover {
+            background: rgba(25, 206, 96, 1);
+        }
     }
     
     .btn_facebook {
-        background: rgb(24, 119, 242);
+        background: rgba(24, 119, 242, .5);
         color: rgb(var(--color_light));
+    
+        &:hover {
+            background: rgba(24, 119, 242, 1);
+        }
     }
+}
+
+#copyRights {
+    
 }

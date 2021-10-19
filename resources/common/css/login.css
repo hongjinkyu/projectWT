@@ -1,73 +1,89 @@
 @charset "UTF-8";
 /* ---------- Page-Specific Layout CSS (Login) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
-#frmLogin {
-	display: flex;
-	flex-flow: row wrap;
-	margin: auto;
-	max-width: 32rem;
-	height: 15rem;
-}
-#frmLogin > * {
-	padding: 0.5rem;
-	width: 16rem;
-}
-#frmLogin hr {
-	margin: 0.5rem 0 0.75rem;
-	height: 0.05rem;
-	background: rgb(var(--color_bdr));
-}
-#frmLogin button {
-	padding: 0.75rem 3rem;
-	width: 100%;
-	text-align: start;
-}
-#frmLogin button + button {
-	margin-top: 0.25rem;
-}
-#frmLogin input + label {
-	margin-top: 1rem;
-}
-#frmLogin label {
-	display: block;
-	margin-bottom: 0.25rem;
-	font-family: var(--ff_sans_p);
-}
-#frmLogin input {
-	width: 100%;
-	font-size: var(--fnt_14);
-}
-#frmLogin .forgot_pw {
-	margin: 0.5rem 0;
-	font-family: var(--ff_sans_p);
-	font-size: var(--fnt_12);
-	text-align: end;
-	cursor: pointer;
-}
-#frmLogin .btn_login,
-#frmLogin .btn_join {
-	text-align: center;
-}
-#frmLogin .btn_login {
-	background: rgb(var(--color_acc2));
-	color: rgb(var(--color_light));
-	font-size: var(--fnt_16);
-}
-#frmLogin .btn_join {
-	background: rgb(var(--color_subtle));
+#wrap {
+	width: 100vw;
+	height: 100vh;
 }
 
-.other_auth {
-	margin-top: 0.5rem;
+#frmLogin {
+	display: flex;
+	flex-flow: column nowrap;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 0.5rem;
+	width: 20rem;
+	max-height: 30rem;
+	background: #fff;
+	box-shadow: var(--shd_minor);
 }
-.other_auth .btn_kakao {
+#frmLogin::before {
+	position: absolute;
+	bottom: calc(100% + .5rem);
+	left: 0;
+	right: 0;
+	content: "와인투게더 로그인";
+}
+
+.btn_container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+.btn_container .backtomain {
+	margin-left: auto;
+	background: rgb(var(--color_text));
+}
+
+.field_login {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0.5rem;
+}
+.field_login input {
+	padding: 0.75rem;
+	box-shadow: 0 0 0 0.05rem rgb(var(--color_tone2));
+	font-size: var(--fnt_14);
+}
+.field_login button {
+	padding: 0.75rem;
+	background: rgb(var(--color_tone2));
+}
+
+.other_methods {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0.5rem;
+	margin: auto 0;
+}
+.other_methods .btn_google {
+	background: rgba(217, 48, 37, 0.5);
+	color: rgb(var(--color_light));
+}
+.other_methods .btn_google:hover {
+	background: #d93025;
+}
+.other_methods .btn_kakao {
+	background: rgba(243, 220, 0, 0.5);
+}
+.other_methods .btn_kakao:hover {
 	background: #f3dc00;
 }
-.other_auth .btn_naver {
-	background: #19ce60;
+.other_methods .btn_naver {
+	background: rgba(25, 206, 96, 0.5);
 	color: rgb(var(--color_light));
 }
-.other_auth .btn_facebook {
-	background: #1877f2;
+.other_methods .btn_naver:hover {
+	background: #19ce60;
+}
+.other_methods .btn_facebook {
+	background: rgba(24, 119, 242, 0.5);
 	color: rgb(var(--color_light));
+}
+.other_methods .btn_facebook:hover {
+	background: #1877f2;
 }
