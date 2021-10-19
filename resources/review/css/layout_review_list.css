@@ -10,3 +10,7 @@
 	flex-flow: row wrap;
 	gap: 1.5rem 0.5rem;
 }
+
+.review_star {
+	padding-left: 0.5rem;
+}
