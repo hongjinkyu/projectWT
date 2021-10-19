@@ -194,6 +194,10 @@
     }
 }
 
+.pop_open {
+    cursor: pointer;
+}
+
 aside#popGroupEncore {
     display: none;
     flex-flow: row nowrap;

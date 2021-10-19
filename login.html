@@ -15,12 +15,12 @@
         <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
         <!-- Global CSS -->
 
-        <link rel="stylesheet" type="text/css" href="./resources/review/css/layout_review_list.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/login.css" />
         <!-- Page-Specific CSS -->
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
         <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
-        <script type="text/javascript" src="./resources/review/js/js_review_list.js"></script> <!-- Page-Specific jQuery -->
+        <script type="text/javascript" src="./resources/common/js/js_login.js"></script> <!-- Page-Specific jQuery -->
         <!-- JavaScript / jQuery -->
 
         <!--[if lt IE 9]>
@@ -77,14 +77,34 @@
 
             <div id="wrapMain" class="int_wrap" role="main">
 
-                <div class="sec_title">
-                    <h3>모임 후기</h3>
-                    <p class="sec_subtitle">와인투게더와 함께 만든 추억을 공유하는 공간이에요.</p>
-                </div>
+                <div id="frmLogin">
+                    <div class="field_login">
+                        <h3>로그인 / 회원가입</h3>
+                        <hr />
 
-                <section id="secList_review">
-                    asdafwqe
-                </section>
+                        <label for="txtID">아이디 (e-mail)</label>
+                        <input type="email" name="txtID" id="txtID" placeholder="example@winetogether.kr" />
+
+                        <label for="txtPW">비밀번호</label>
+                        <input type="password" name="txtPW" id="txtPW" placeholder="Password" />
+                        <p class="forgot_pw">
+                            <img src="./resources/common/images/icons/icon_help.png" alt="도움말" class="icon_help" />
+                            <span>비밀번호 까먹음?</span>
+                        </p>
+
+                        <button class="btn_login">로그인</button>
+                        <button class="btn_join">회원가입</button>
+                    </div>
+                    <div class="other_auth">
+                        <h5>다른 방법으로 로그인</h5>
+                        <hr />
+
+                        <button class="btn_kakao">카카오 계정으로 로그인</button>
+                        <button class="btn_naver">네이버 계정으로 로그인</button>
+                        <button class="btn_google">구글 계정으로 로그인</button>
+                        <button class="btn_facebook">페이스북 계정으로 로그인</button>
+                    </div>
+                </div>
 
             </div>
 

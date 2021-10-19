@@ -173,6 +173,10 @@
 	background: rgb(var(--color_acc1));
 }
 
+.pop_open {
+	cursor: pointer;
+}
+
 aside#popGroupEncore {
 	display: none;
 	flex-flow: row nowrap;

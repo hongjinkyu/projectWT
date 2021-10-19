@@ -1,0 +1,90 @@
+/* ---------- Page-Specific Layout CSS (Customer Service Center - Board List) ---------- */
+/* ---------- 페이지 특정 요소 시작 ---------- */
+
+table {
+    width: 100%;
+    font-size: var(--fnt_12);
+    text-align: center;
+}
+
+thead tr {
+    background: rgb(var(--color_text));
+    color: rgb(var(--color_light));
+}
+
+tbody tr {
+    border-bottom: .05rem solid rgb(var(--color_bdr));
+
+    &:nth-child(2n) {
+        background: rgb(var(--color_bg));
+    }
+
+    &:hover {
+        background: rgb(var(--color_tone1));
+        font-weight: bold;
+    }
+}
+
+tr td:nth-child(3) {
+    text-align: start;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    a {
+        display: block;
+    }
+}
+
+th, td {
+    padding: .5rem;
+}
+
+th {
+    font-weight: normal;
+}
+
+.article_num {
+    width: 5%;
+}
+
+.article_cate {
+    width: 12%;
+}
+
+.article_title {
+    width: 58%;
+}
+
+.article_author {
+    width: 10%;
+}
+
+.article_date {
+    width: 15%;
+}
+
+.board_paging {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+
+    > li {
+        float: left;
+        padding: .25rem;
+        border-radius: var(--bdr_outer);
+
+        & + li {
+            margin-left: .5rem;
+        }
+
+        &:not(.paging_prev, .paging_next) {
+            width: 1.5rem;
+        }
+
+        &:is(.paging_now) {
+            background: rgb(var(--color_text));
+            color: rgb(var(--color_light));
+        }
+    }
+}
