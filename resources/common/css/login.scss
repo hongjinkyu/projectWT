@@ -38,6 +38,7 @@
     .backtomain {
         margin-left: auto;
         background: rgb(var(--color_text));
+        color: rgb(var(--color_light));
     }
 }
 
@@ -47,14 +48,18 @@
     gap: .5rem;
 
     input {
-        padding: .75rem;
-        box-shadow: 0 0 0 .05rem rgb(var(--color_tone2));
+        padding: .5rem;
+        border-bottom: .05rem solid rgb(var(--color_text));
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
         font-size: var(--fnt_14);
     }
 
     button {
         padding: .75rem;
         background: rgb(var(--color_tone2));
+        font-size: var(--fnt_16);
     }
 }
 
@@ -63,6 +68,10 @@
     flex-flow: column nowrap;
     gap: .5rem;
     margin: auto 0;
+
+    button {
+        padding: .75rem;
+    }
 
     .btn_google {
         background: rgba(217, 48, 37, .5);

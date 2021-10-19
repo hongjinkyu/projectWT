@@ -37,6 +37,7 @@
 .btn_container .backtomain {
 	margin-left: auto;
 	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
 }
 
 .field_login {
@@ -45,13 +46,17 @@
 	gap: 0.5rem;
 }
 .field_login input {
-	padding: 0.75rem;
-	box-shadow: 0 0 0 0.05rem rgb(var(--color_tone2));
+	padding: 0.5rem;
+	border-bottom: 0.05rem solid rgb(var(--color_text));
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
 	font-size: var(--fnt_14);
 }
 .field_login button {
 	padding: 0.75rem;
 	background: rgb(var(--color_tone2));
+	font-size: var(--fnt_16);
 }
 
 .other_methods {
@@ -59,6 +64,9 @@
 	flex-flow: column nowrap;
 	gap: 0.5rem;
 	margin: auto 0;
+}
+.other_methods button {
+	padding: 0.75rem;
 }
 .other_methods .btn_google {
 	background: rgba(217, 48, 37, 0.5);
