@@ -2,28 +2,34 @@
 
 <html lang="ko">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Wine Together</title>
+    <title>Wine Together</title>
 
-        <link rel="shortcut icon" type="image/x-icon" href="./resources/common/images/icons/favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="./resources/common/css/modern-normalize.css" />
-        <link rel="stylesheet" type="text/css" href="./resources/common/css/default.css" />
-        <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
-        <!-- Global CSS -->
+    <link rel="shortcut icon" type="image/x-icon" href="./resources/common/images/icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./resources/common/css/modern-normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/common/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
+    <!-- Global CSS -->
 
-        <link rel="stylesheet" type="text/css" href="./resources/partners/css/layout_partners.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/gathering/css/layout_gathering_open.css" />
         <!-- Page-Specific CSS -->
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
         <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
-        <script type="text/javascript" src="./resources/partners/js/js_partners.js"></script> <!-- Page-Specific jQuery -->
+        <script type="text/javascript" src="./resources/gathering/js/js_gathering_open.js"></script> <!-- Page-Specific jQuery -->
         <!-- JavaScript / jQuery -->
 
-        <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+    <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
+    <script type="text/javascript" src="./resources/gathering/js/js_gathering.js"></script>
+    <!-- Page-Specific jQuery -->
+    <!-- JavaScript / jQuery -->
+
+    <!--[if lt IE 9]>
                 <script src="./js/html5shiv.min.js"></script>
             <![endif]-->
     </head>
@@ -32,7 +38,7 @@
 
         <div id="wrap">
 
-            <header id="headBase">
+            <header id="headBase" class="head_sub">
                 <nav id="navBase" class="nav_sub int_wrap" role="navigation">
                     <h1 id="mainLogo">
                         <a href="index.html">Wine Together</a>
@@ -43,16 +49,16 @@
                             <a href="service.html">와인투게더란?</a>
                         </li>
                         <li class="mnu_main">
-                            <a href="gathering.html">모임 둘러보기</a>
+                            <a href="gathering_list.html">모임 둘러보기</a>
                         </li>
                         <li class="mnu_main">
                             <a href="gathering_open.html">모임 개설하기</a>
                         </li>
                         <li class="mnu_main">
-                            <a href="review.html">모임 후기</a>
+                            <a href="review_list.html">모임 후기</a>
                         </li>
                         <li class="mnu_main">
-                            <a href="partners.html">와투 맛집</a>
+                            <a href="partners_list.html">와투 맛집</a>
                         </li>
                     </ul>
 
@@ -63,17 +69,33 @@
                         <button class="btn_account">
                             <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
                         </button>
+                        <ul id="accountPop">
+                            <li><a href="./mypage.html">나의 정보</a></li>
+                            <li><a href="">즐겨찾는 맛집</a></li>
+                            <li><a href="">프리미엄 멤버쉽</a></li>
+                            <li><a href="./login.html">로그아웃</a></li>
+                        </ul>
                     </div>
                 </nav>
             </header> <!-- Header -->
 
         <!-- Page Main Contents Start / 헤더 영역 종료 -->
 
-            <div id="wrapMain" class="int_wrap" role="main">
+            <div id="wrapMain" class="int_wrap sub" role="main">
 
+                <section id="sideBar_left">
 
+                </section>
 
-            </div>
+                <section id="contentBar">
+                    
+                </section>
+
+                <section id="sideBar_right">
+
+                </section>
+
+        </div>
 
         <!-- Page Main Contents End / 푸터 영역 시작 -->
 
@@ -83,7 +105,7 @@
                 </a>
                 <div class="int_wrap">
                     <ul id="footLinks">
-                        <li class="mnu_flinks"><a href="#">고객센터</a></li>
+                        <li class="mnu_flinks"><a href="./cs_board_list.html">고객센터</a></li>
                         <li class="flinks_sep"></li>
                         <li class="mnu_flinks"><a href="#">이용약관</a></li>
                         <li class="flinks_sep"></li>
@@ -127,30 +149,56 @@
                             <div class="footer_callcenter_text">
                                 <img src="./resources/common/images/icons/icon_cs.png" alt="고객센터" class="icon_cs" /><!--
                                 --><span>1811-0612</span>
-                                <p>
-                                    월~금 :
-                                    오전 10:00 ~ 오후 06:00
-                                </p>
-                                <p>
-                                    점심시간 :
-                                    오후 12:00 ~ 오후 01:00
-                                </p>
-                                <p>※ 토 / 일 / 공휴일은 휴무입니다.</p>
-                            </div>
+                            <p>
+                                월~금 :
+                                오전 10:00 ~ 오후 06:00
+                            </p>
+                            <p>
+                                점심시간 :
+                                오후 12:00 ~ 오후 01:00
+                            </p>
+                            <p>※ 토 / 일 / 공휴일은 휴무입니다.</p>
                         </div>
                     </div>
-                    <p id="copyRights">Copyright &copy; 2021 와인투게더</p>
                 </div>
+                <p id="copyRights">Copyright &copy; 2021 와인투게더</p>
+            </div>
 
-                <aside id="popFollow">
-                    <a href="#wrap" class="goto_top">
-                        <img src="./resources/common/images/icons/icon_gototop.png" alt="맨 위로" />
-                    </a>
-                </aside> <!-- Sticky Tag -->
-            </footer> <!-- Footer -->
+            <aside id="popFollow">
+                <a href="#wrap" class="goto_top">
+                    <img src="./resources/common/images/icons/icon_gototop.png" alt="맨 위로" />
+                </a>
+            </aside> <!-- Sticky Tag -->
+        </footer> <!-- Footer -->
 
-        </div> <!-- #wrap -->
+    </div> <!-- #wrap -->
+    <!-- Swiper JS -->
+    <script src="./resources/gathering/js/swiper.min.js"></script>
 
-    </body>
+    <!-- Initialize Swiper -->
+    <script>
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs,
+            },
+        });
+    </script>
+</body>
 
 </html>

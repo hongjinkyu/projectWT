@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* ---------- Page-Specific Layout CSS (My Page) ---------- */
+/* ---------- 페이지 특정 요소 시작 ---------- */
+.info_singleline {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	gap: 1rem;
+}
+.info_singleline > .info_fieldname {
+	width: 5rem;
+	text-align: end;
+}
+.info_singleline > .info_fieldtext {
+	width: calc(100% - 6rem);
+}
+
+.info_profile_pict {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}

@@ -39,6 +39,7 @@
     font-size: 20px; /* 사이즈 기본 단위 : 20px */
     line-height: 1;
     /* line-height: 1.8 (가독성이 필요한 본문 영역) */
+    scroll-behavior: smooth;
 
     --px_1: .05rem;
     --px_3: .15rem;
@@ -123,7 +124,6 @@ body {
     color: rgb(var(--color_text));
     font-size: .7rem; /* 기본 글자 크기 : 14px */
     font-weight: normal;
-	scroll-behavior: smooth;
 }
 
 table {
@@ -201,6 +201,12 @@ body.prevent_scroll {
 #wrapMain {
     margin: 1rem auto 5rem;
     min-height: 100vh;
+
+    &.sub {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
 }
 
 .int_wrap { /* 내부 박스 사이징 */
@@ -239,8 +245,9 @@ h1#mainLogo {
     height: 3rem;
     border: none;
     font-family: 'Berkshire Swash', cursive;
-    font-size: 1rem;
     color: rgb(var(--color_acc1));
+    font-size: var(--fnt_24);
+    font-weight: normal;
 }
 
 h1#mainLogo > a {

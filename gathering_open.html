@@ -18,7 +18,12 @@
         <link rel="stylesheet" type="text/css" href="./resources/gathering/css/layout_gathering_open.css" />
         <!-- Page-Specific CSS -->
 
+        <link rel="stylesheet" type="text/css" href="./resources/common/js/summernote-lite.min.css" />
+        <!-- SummerNote -->
+
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+        <script type="text/javascript" src="./resources/common/js/summernote-lite.min.js"></script> <!-- SummerNote -->
+        <script type="text/javascript" src="./resources/common/js/summernote-ko-KR.min.js"></script> <!-- SummerNote - Korean -->
         <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
         <script type="text/javascript" src="./resources/gathering/js/js_gathering_open.js"></script> <!-- Page-Specific jQuery -->
         <!-- JavaScript / jQuery -->
@@ -43,16 +48,16 @@
                             <a href="service.html">와인투게더란?</a>
                         </li>
                         <li class="mnu_main">
-                            <a href="gathering.html">모임 둘러보기</a>
+                            <a href="gathering_list.html">모임 둘러보기</a>
                         </li>
                         <li class="mnu_main">
                             <a href="gathering_open.html">모임 개설하기</a>
                         </li>
                         <li class="mnu_main">
-                            <a href="review.html">모임 후기</a>
+                            <a href="review_list.html">모임 후기</a>
                         </li>
                         <li class="mnu_main">
-                            <a href="partners.html">와투 맛집</a>
+                            <a href="partners_list.html">와투 맛집</a>
                         </li>
                     </ul>
 
@@ -60,50 +65,594 @@
                         <p class="user_name">
                             <span data-grade="grade_regular">김누구</span> 님
                         </p>
-                        <button class="btn_account">
+                        <button class="btn_account" onClick="accountPop(toggle)">
                             <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
                         </button>
+                        <ul id="accountPop">
+                            <li><a href="./mypage.html">나의 정보</a></li>
+                            <li><a href="">즐겨찾는 맛집</a></li>
+                            <li><a href="">프리미엄 멤버쉽</a></li>
+                            <li><a href="./login.html">로그아웃</a></li>
+                        </ul>
                     </div>
                 </nav>
             </header> <!-- Header -->
 
         <!-- Page Main Contents Start / 헤더 영역 종료 -->
 
-            <div id="wrapMain" class="int_wrap" role="main">
+            <div id="wrapMain" class="int_wrap sub" role="main">
 
                 <section id="sideBar_left">
                     <ul class="side_mnu_left">
-                        <li class="checked">BYOB 모임</li>
-                        <li>LIST 모임</li>
-                        <li>개설하기</li>
+                        <li class="checked"><a href="#" data-tab-target="BYOB">BYOB 모임 개설하기</a></li>
+                        <li><a href="#" data-tab-target="LIST">LIST 모임 개설하기</a></li>
+                        <li class="pop_open"><a>기존 모임 이어가기</a></li>
                     </ul>
-                </section>
+                </section> <!-- #sideBar_left -->
 
                 <section id="contentBar">
+                    <h3><span class="group_type">BYOB</span> 모임 개설하기</h3>
                     <div class="frm_common frm_open">
                         <div class="text_title clr_fix">
                             <h6>모임 이름</h6>
                             <p>개설하려는 모임의 성격, 지역 등을 나타내면 좋아요.</p>
                         </div>
-                        <input type="text" name="" id="" placeholder="모임 이름 입력..." required />
+
+                        <div class="frm_items">
+                            <input type="text" name="txtTitle" id="txtTitle" placeholder="모임 이름 (* 필수 입력 사항입니다.)" required />
+                        </div>
+
                         <div class="text_title clr_fix">
                             <h6>모임 특징</h6>
-                            <p>모임을 특별하게 만드는 간단한 문장을 두 줄 이내로 표현해 주세요.</p>
+                            <p>모임을 눈에 띄게 만드는 재치있는 소개를 두 줄 이내로 표현해 주세요.</p>
                         </div>
-                        <textarea name="" id="" cols="30" rows="2"></textarea>
+
+                        <div class="frm_items">
+                            <textarea name="txtDesc_s" id="txtDesc_s" cols="30" rows="2" placeholder="모임 특징 (* 필수 입력 사항입니다.)" required></textarea>
+                        </div>
+
+                        <div class="text_title clr_fix">
+                            <h6>모임 대표 이미지</h6>
+                            <p>모임의 성격을 드러낼 수 있는 특별한 사진을 첨부해 주세요.</p>
+                        </div>
+
+                        <div class="frm_items">
+                            <input type="file" name="groupMainPict" id="groupMainPict" />
+                            <label for="groupMainPict">※ 가로 800px, 세로 450px, 최대용량 3MB 이하의 이미지가 가장 예쁘게 보여요.</label>
+                        </div>
+
+                        <div class="text_title clr_fix">
+                            <h6>모임 인원</h6>
+                            <p>4인 이상의 모임 주최는 경험이 있으신 분들께만 추천드려요.</p>
+                        </div>
+
+                        <div class="frm_items">
+                            <div class="range_container">
+                                <input type="range" name="slideGroupSize" id="slideGroupSize" min="4" max="10" step="1" value="4" />
+                                <span class="range_spot" rangeval="4"></span>
+                                <span class="range_spot" rangeval="5"></span>
+                                <span class="range_spot" rangeval="6"></span>
+                                <span class="range_spot" rangeval="7"></span>
+                                <span class="range_spot" rangeval="8"></span>
+                                <span class="range_spot" rangeval="9"></span>
+                                <span class="range_spot" rangeval="10"></span>
+                            </div>
+                        </div>
+
+                        <div class="text_title clr_fix">
+                            <h6>모임 날짜</h6>
+                            <p>최대 n개월 이내의 날짜까지만 설정이 가능해요.</p>
+                        </div>
+
+                        <div class="frm_items">
+                            <input type="date" name="dateGroup" id="dateGroup" />
+                            <select name="timeGroup" id="timeGroup">
+                                <optgroup label="오전">
+                                    <option value="time_01">01</option>
+                                    <option value="time_02">02</option>
+                                    <option value="time_03">03</option>
+                                    <option value="time_04">04</option>
+                                    <option value="time_05">05</option>
+                                    <option value="time_06">06</option>
+                                    <option value="time_07">07</option>
+                                    <option value="time_08">08</option>
+                                    <option value="time_09">09</option>
+                                    <option value="time_10">10</option>
+                                    <option value="time_11">11</option>
+                                    <option value="time_12">12</option>
+                                </optgroup>
+                                <optgroup label="오후">
+                                    <option value="time_13">13</option>
+                                    <option value="time_14">14</option>
+                                    <option value="time_15">15</option>
+                                    <option value="time_16">16</option>
+                                    <option value="time_17">17</option>
+                                    <option value="time_18">18</option>
+                                    <option value="time_19">19</option>
+                                    <option value="time_20">20</option>
+                                    <option value="time_21">21</option>
+                                    <option value="time_22">22</option>
+                                    <option value="time_23">23</option>
+                                    <option value="time_24">24</option>
+                                </optgroup>
+                            </select>
+                            시
+                            <select name="minuteGroup" id="minuteGroup">
+                                <option value="min_00">정각</option>
+                                <option value="min_05">5</option>
+                                <option value="min_10">10</option>
+                                <option value="min_15">15</option>
+                                <option value="min_20">20</option>
+                                <option value="min_25">25</option>
+                                <option value="min_30">30</option>
+                                <option value="min_35">35</option>
+                                <option value="min_40">40</option>
+                                <option value="min_45">45</option>
+                                <option value="min_50">50</option>
+                                <option value="min_55">55</option>
+                            </select>
+                            분
+                        </div>
+
+                        <div class="text_title clr_fix">
+                            <h6>모임 연령대 설정</h6>
+                            <p>연령대의 폭이 넓을수록 모임 신청이 빠르게 완료될 가능성이 높아져요.</p>
+                        </div>
+
+                        <div class="frm_items">
+                            <input type="checkbox" name="chkAge" id="chkAge_all" value="age_all" />
+                            <label for="chkAge_all">상관없음</label>
+                            <input type="checkbox" name="chkAge" id="chkAge_20" value="age_20" />
+                            <label for="chkAge_20">20대</label>
+                            <input type="checkbox" name="chkAge" id="chkAge_30" value="age_30" />
+                            <label for="chkAge_30">30대</label>
+                            <input type="checkbox" name="chkAge" id="chkAge_40" value="age_40" />
+                            <label for="chkAge_40">40대</label>
+                            <input type="checkbox" name="chkAge" id="chkAge_50" value="age_50" />
+                            <label for="chkAge_50">50대</label>
+                            <input type="checkbox" name="chkAge" id="chkAge_60" value="age_60" />
+                            <label for="chkAge_60">60대 이상</label>
+                        </div>
+
+                        <div class="text_title clr_fix">
+                            <h6>모임 성비 설정</h6>
+                            <p>Lvl.4 이상부터 사용 가능한 기능이에요.</p>
+                        </div>
+
+                        <div class="frm_items">
+                            <input type="radio" name="rdo_gen" id="rdoGen_none" value="gen_none" checked="checked" />
+                            <label for="rdoGen_none">지정 없음</label>
+                            <input type="radio" name="rdo_gen" id="rdoGen_min" value="gen_min" />
+                            <label for="rdoGen_min">최소 성비 기준</label>
+                            <input type="radio" name="rdo_gen" id="rdoGen_grl" value="gen_grl" />
+                            <label for="rdoGen_grl">여성 모임</label>
+                            <input type="radio" name="rdo_gen" id="rdoGen_half" value="gen_half" />
+                            <label for="rdoGen_half">5:5</label>
+                        </div>
                     </div>
 
-                    <div class="frm_common frm_byob">
+                    <div id="groupBYOB" class="frm_common">
                         <div class="text_title clr_fix">
-                            <h6>지참할 와인 설정</h6>
+                            <h6>참석자가 지참할 와인 설정</h6>
                             <p>구매처에 따라 가격이 차이날 수 있어요. 보편적인 마트나 할인 / 행사 가격 기준이면 더 좋아요.</p>
                         </div>
+
+                        <div class="frm_items">
+                            <input type="text" name="txtWinePrice_BYOB" id="txtWinePrice_BYOB" placeholder="참석자가 지참할 와인의 평균 가격대를 설정해 주세요." />
+                            <select name="slctPricePoint" id="slctPricePoint">
+                                <option value="opt_overthen">원 이상</option>
+                                <option value="opt_mostlike" selected="selected">원 근처</option>
+                                <option value="opt_lessthen">원 이하</option>
+                            </select>
+                        </div>
+                        <div class="frm_items frm_aligner">
+                            <div class="bring_wine group_leader">
+                                <ul class="wine_selector">
+                                    <li class="wine_selector_btn">
+                                        <div class="wine_icon choose_item">
+                                            <span class="wave_front"></span>
+                                            <span class="wave_back"></span>
+                                        </div>
+                                    </li>
+                                    <li class="wine_selector_list">
+                                        <div class="wine_icon redwine">
+                                            <span class="wave_front"></span>
+                                            <span class="wave_back"></span>
+                                        </div>
+                                        <div class="wine_icon whitewine">
+                                            <span class="wave_front"></span>
+                                            <span class="wave_back"></span>
+                                        </div>
+                                        <div class="wine_icon sparkling">
+                                            <span class="wave_front"></span>
+                                            <span class="wave_back"></span>
+                                        </div>
+                                        <div class="wine_icon others">
+                                            <span class="wave_front"></span>
+                                            <span class="wave_back"></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="qty_container">
+                                    <button class="wine_less">-</button>
+                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
+                                    <button class="wine_more">+</button>
+                                </div>
+                            </div>
+
+                            <div class="bring_wine">
+                                <div class="wine_icon redwine">
+                                    <span class="wave_front"></span>
+                                    <span class="wave_back"></span>
+                                </div>
+                                <div class="qty_container">
+                                    <button class="wine_less">-</button>
+                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
+                                    <button class="wine_more">+</button>
+                                </div>
+                            </div>
+
+                            <div class="bring_wine">
+                                <div class="wine_icon whitewine">
+                                    <span class="wave_front"></span>
+                                    <span class="wave_back"></span>
+                                </div>
+                                <div class="qty_container">
+                                    <button class="wine_less">-</button>
+                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
+                                    <button class="wine_more">+</button>
+                                </div>
+                            </div>
+
+                            <div class="bring_wine">
+                                <div class="wine_icon sparkling">
+                                    <span class="wave_front"></span>
+                                    <span class="wave_back"></span>
+                                </div>
+                                <div class="qty_container">
+                                    <button class="wine_less">-</button>
+                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
+                                    <button class="wine_more">+</button>
+                                </div>
+                            </div>
+
+                            <div class="bring_wine">
+                                <div class="wine_icon others">
+                                    <span class="wave_front"></span>
+                                    <span class="wave_back"></span>
+                                </div>
+                                <div class="qty_container">
+                                    <button class="wine_less">-</button>
+                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
+                                    <button class="wine_more">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p>
+                            <img src="./resources/common/images/icons/icon_help.png" alt="도움말" class="icon_help" />
+                            <span>"지참할 와인"이란 무슨 의미인가요?</span>
+                        </p>
+                    </div> <!-- #groupBYOB : BYOB 모임 개설시 띄울 폼 -->
+
+                    <div id="groupLIST" class="frm_common">
+                        <div class="text_title clr_fix">
+                            <h6>제공할 와인 설정</h6>
+                            <p>자신이 제공할 와인의 종류와 가격대, 빈티지 등의 정보를 기입해 주세요.</p>
+                        </div>
+
+                        <div class="frm_items">
+                            <ul class="group_wine_list">
+                                <li>
+                                    <div class="wine_icon redwine">
+                                        <span class="wave_front"></span>
+                                        <span class="wave_back"></span>
+                                    </div>
+                                    <div class="wine_name_list">
+                                        <input type="text" name="txtWineName" id="txtWineName" placeholder="와인 이름" />
+                                    </div>
+                                    <div class="wine_vintage_list">
+                                        <input type="text" name="txtWineVintage" id="txtWineVintage" placeholder="빈티지" maxlength="4" />
+                                    </div>
+                                    <div class="wine_price_list">
+                                        <input type="text" name="txtWinePrice_LIST" id="txtWinePrice_LIST" placeholder="가격대" />
+                                    </div>
+                                    <div class="wine_btn_list">
+                                        <button class="wine_delete" disabled>-</button>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <ul class="wine_selector">
+                                        <li class="wine_selector_btn">
+                                            <div class="wine_icon choose_item">
+                                                <span class="wave_front"></span>
+                                                <span class="wave_back"></span>
+                                            </div>
+                                        </li>
+                                        <li class="wine_selector_list">
+                                            <div class="wine_icon redwine">
+                                                <span class="wave_front"></span>
+                                                <span class="wave_back"></span>
+                                            </div>
+                                            <div class="wine_icon whitewine">
+                                                <span class="wave_front"></span>
+                                                <span class="wave_back"></span>
+                                            </div>
+                                            <div class="wine_icon sparkling">
+                                                <span class="wave_front"></span>
+                                                <span class="wave_back"></span>
+                                            </div>
+                                            <div class="wine_icon others">
+                                                <span class="wave_front"></span>
+                                                <span class="wave_back"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="wine_name_list">
+                                        <input type="text" name="txtWineName" id="txtWineName" placeholder="와인 이름" />
+                                    </div>
+                                    <div class="wine_vintage_list">
+                                        <input type="text" name="txtWineVintage" id="txtWineVintage" placeholder="빈티지" maxlength="4" />
+                                    </div>
+                                    <div class="wine_price_list">
+                                        <input type="text" name="txtWinePrice_LIST" id="txtWinePrice_LIST" placeholder="가격대" />
+                                    </div>
+                                    <div class="wine_btn_list">
+                                        <button class="wine_delete">X</button>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="wine_icon add_item">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <p>
+                            <img src="./resources/common/images/icons/icon_help.png" alt="도움말" class="icon_help" />
+                            <span>"제공할 와인"이란 무슨 의미인가요?</span>
+                        </p>
+                    </div> <!-- #groupLIST : LIST 모임 개설시 띄울 폼 -->
+
+                    <div class="frm_common frm_partner">
+                        <div class="text_title clr_fix">
+                            <h6>모임 장소 설정</h6>
+                        </div>
+
+                        <div class="frm_items">
+                            <div class="custom_selector">
+                                <dl class="custom_selector_selected">
+                                    <img src="./resources/index/images/img17.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                    <dt>
+                                        <p class="location_name">슈퍼 겁쟁이 쉼터</p>
+                                        <p class="location_info">
+                                            <img src="./resources/common/images/icons/icon_gps_w.png" alt="" class="icon_gps">
+                                            저 깊은 바닷속 비키니 시티
+                                        </p>
+                                    </dt>
+                                    <dd class="location_course">
+                                        주 메뉴 : 버거
+                                    </dd>
+                                </dl>
+
+                                <div class="custom_selector_form">
+                                    <p class="custom_selector_search">
+                                        <select name="slctOpenLocation" id="slctOpenLocation">
+                                            <option value="dummy_option" selected="selected" disabled>지역별 검색...</option>
+                                            <option value="loc_su">서울</option>
+                                            <option value="loc_dj">대전</option>
+                                            <option value="loc_dg">대구</option>
+                                            <option value="loc_bs">부산</option>
+                                            <option value="loc_jg">찍고</option>
+                                            <option value="loc_tn">터닝</option>
+                                            <option value="loc_mm">마무리</option>
+                                        </select>
+                                        <select name="slctOpenCourse" id="slctOpenCourse">
+                                            <option value="dummy_option" selected="selected" disabled>주 메뉴별 검색...</option>
+                                            <option value="cs_stk">스테이크</option>
+                                            <option value="cs_hsm">해산물</option>
+                                            <option value="cs_vgn">비건</option>
+                                            <option value="cs_hjg">해장국</option>
+                                        </select>
+                                        <input type="search" name="txtOpenSearch" id="txtOpenSearch" placeholder="검색어 입력..." />
+                                        <button type="submit" class="btn_search">검색</button>
+                                    </p>
+
+                                    <ul class="custom_selector_list">
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/img27.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                                <dt>
+                                                    <p class="location_name">더뉴</p>
+                                                    <p class="location_info">
+                                                        <img src="./resources/common/images/icons/icon_gps.png" alt="" class="icon_gps">
+                                                        부산광역시 수영구
+                                                    </p>
+                                                </dt>
+                                                <dd class="location_course">
+                                                    주 메뉴 : 리조또, 스테이크, 피자, 파스타 등
+                                                </dd>
+                                            </dl>
+                                        </li>
+
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/img20.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                                <dt>
+                                                    <p class="location_name">산막 와이너리</p>
+                                                    <p class="location_info">
+                                                        <img src="./resources/common/images/icons/icon_gps.png" alt="" class="icon_gps">
+                                                        충청북도 영동군
+                                                    </p>
+                                                </dt>
+                                                <dd class="location_course">
+                                                    주 메뉴 : 치즈, 샐러드 등
+                                                </dd>
+                                            </dl>
+                                        </li>
+
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/img24.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                                <dt>
+                                                    <p class="location_name">스테이크잡스</p>
+                                                    <p class="location_info">
+                                                        <img src="./resources/common/images/icons/icon_gps.png" alt="" class="icon_gps">
+                                                        부산광역시 부산진구
+                                                    </p>
+                                                </dt>
+                                                <dd class="location_course">
+                                                    주 메뉴 : 스테이크, 파스타 등
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/img22.jpg" alt="현재 선택된 장소" class="location_pict" />
+                                                <dt>
+                                                    <p class="location_name">한국관나이트클럽</p>
+                                                    <p class="location_info">
+                                                        <img src="./resources/common/images/icons/icon_gps.png" alt="" class="icon_gps">
+                                                        경기도 화성시
+                                                    </p>
+                                                </dt>
+                                                <dd class="location_course">
+                                                    주 메뉴 : 시바스 리갈 등
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text_title clr_fix">
+                            <h6>코스 선택</h6>
+                        </div>
+
+                        <div class="frm_items">
+                            <div class="custom_selector">
+                                <dl class="custom_selector_selected">
+                                    <img src="./resources/index/images/1.jpg" alt="현재 선택된 코스" class="location_pict" />
+                                    <dt>
+                                        <p class="course_name">게살버거 코스</p>
+                                        <p class="course_info">
+                                            게살버거, 해초튀김, 탄산 바닷물
+                                        </p>
+                                    </dt>
+                                    <dd class="course_price">
+                                        8,900원
+                                    </dd>
+                                </dl>
+
+                                <div class="custom_selector_form">
+                                    <ul class="custom_selector_list">
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/2.jpg" alt="코스요리" class="location_pict" />
+                                                <dt>
+                                                    <p class="course_name">슈퍼 디럭스 게살버거 코스</p>
+                                                    <p class="course_info">
+                                                        게살버거 디럭스, 웨지미역, 버팔로 고등어
+                                                    </p>
+                                                </dt>
+                                                <dd class="course_price">
+                                                    12,000원
+                                                </dd>
+                                            </dl>
+                                        </li>
+
+                                        <li>
+                                            <dl class="custom_selector_items">
+                                                <img src="./resources/index/images/3.jpg" alt="코스요리" class="location_pict" />
+                                                <dt>
+                                                    <p class="location_name">게살버거 얼티밋</p>
+                                                    <p class="location_info">
+                                                        게살버거 얼티밋, 사이드 메뉴 4종 (선택)
+                                                    </p>
+                                                </dt>
+                                                <dd class="location_course">
+                                                    19,600원
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!-- frm_partner -->
+
+                        <div class="text_title clr_fix">
+                            <h6>모임 상세 설명</h6>
+                        </div>
+
+                        <div class="frm_items">
+                            <div id="summernote"></div>
+                        </div> <!-- 모임 상세 설명 -->
+
                     </div>
-                </section>
+                    <button type="submit" class="btnGroupOpen">모임 개설</button>
+                </section> <!-- #contentBar -->
 
                 <section id="sideBar_right">
 
-                </section>
+                </section> <!-- #sideBar_right -->
+
+                <aside id="popGroupEncore">
+                    <div id="frmEncore">
+                        <h4>기존 모임 이어가기</h4>
+                        <ul class="encore_list">
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_01" />
+                                <label for="rdoEncore_01">2021. 01. 01</label>
+                                <p>어쩌고 저쩌고</p>
+                                <p>#255회차</p>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_02" />
+                                <label for="rdoEncore_02">2021. 04. 01</label>
+                                <p>거짓말처럼</p>
+                                <p>#-1회차</p>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_03" />
+                                <label for="rdoEncore_03">4444. 44. 44</label>
+                                <p>불길한 날</p>
+                                <p>#444회차</p>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_04" />
+                                <label for="rdoEncore_04">2077. 05. 18</label>
+                                <p>사이버펑크 어버이날</p>
+                                <p>#2회차</p>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_05" />
+                                <label for="rdoEncore_05">2021. 10. 14</label>
+                                <p>세상이 대충 망한 뒤</p>
+                                <p>#1회차</p>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdoEncore" id="rdoEncore_06" />
+                                <label for="rdoEncore_06">1986. 03. 20</label>
+                                <p>기쁘다 생일 오셨네</p>
+                                <p>#35회차</p>
+                            </li>
+                        </ul>
+                        <div class="btn_container">
+                            <button type="submit" class="pop_trans">확인</button>
+                            <button class="pop_close">닫기</button>
+                            <p>
+                                <img src="./resources/common/images/icons/icon_help.png" alt="도움말" class="icon_help" />
+                                <span>기존의 모임이 목록에 보이지 않으면 어떻게 하나요?</span>
+                            </p>
+                        </div>
+                    </div>
+                </aside> <!-- #popGroupEncore -->
 
             </div>
 
@@ -115,7 +664,7 @@
                 </a>
                 <div class="int_wrap">
                     <ul id="footLinks">
-                        <li class="mnu_flinks"><a href="#">고객센터</a></li>
+                        <li class="mnu_flinks"><a href="./cs_board_list.html">고객센터</a></li>
                         <li class="flinks_sep"></li>
                         <li class="mnu_flinks"><a href="#">이용약관</a></li>
                         <li class="flinks_sep"></li>

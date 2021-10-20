@@ -57,7 +57,7 @@ select,
 output,
 button {
 	position: relative;
-	padding: 0.45rem 0.5rem 0.4rem 0.5rem;
+	padding: 0.45rem 0.5rem 0.4rem;
 	border-radius: var(--bdr_outer);
 	background: rgba(var(--color_light), 1);
 	box-shadow: var(--shd_major);
@@ -114,6 +114,16 @@ button:focus {
 	box-shadow: var(--shd_major), 0 0 0 0.1rem rgba(var(--color_acc1), 0.5);
 }
 
+button.btn_search {
+	background: rgb(var(--color_acc1));
+	color: rgb(var(--color_light));
+}
+
+textarea {
+	resize: none;
+	line-height: 1.8;
+}
+
 select {
 	padding: 0.35rem 0.25rem 0.3rem 0.25rem;
 }
@@ -123,18 +133,85 @@ input[type=date],
 input[type=month],
 input[type=week],
 input[type=time] {
-	padding: 0.2rem 0.25rem;
+	padding: 0.35rem 0.25rem 0.25rem;
+}
+input[type=datetime-local]:focus,
+input[type=date]:focus,
+input[type=month]:focus,
+input[type=week]:focus,
+input[type=time]:focus {
+	box-shadow: var(--shd_major), 0 0 0 0.1rem rgba(var(--color_acc1), 0.5);
 }
 
 input[type=file] {
 	display: block;
-	padding: 0.1rem;
+	padding: 0.25rem;
+}
+input[type=file] + label {
+	color: rgb(var(--color_acc2), 0.75);
+	font-size: var(--fnt_12);
 }
 
 input[type=color] {
 	padding: 0.1rem 0.2rem;
 	width: 2.4rem;
 	height: 1.6rem;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 2rem;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 0.3rem;
+	border-radius: 0.15rem;
+	background: rgb(var(--color_light));
+	box-shadow: var(--shd_major);
+}
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	margin-top: -0.15rem;
+	width: 0.7rem;
+	height: 0.7rem;
+	border-radius: 0.35rem;
+	background: rgb(var(--color_text));
+	box-shadow: var(--shd_major);
+}
+
+input[type=checkbox] {
+	display: none;
+}
+input[type=checkbox] + label {
+	margin-right: 0.25rem;
+	padding-top: 0.1rem;
+	padding-left: 1.1rem;
+	background: url("../images/icons/chkbox_un.png") no-repeat center left;
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_12);
+	transition: 0.2s;
+	cursor: pointer;
+}
+input[type=checkbox]:checked + label {
+	background: url("../images/icons/chkbox_chk.png") no-repeat center left;
+}
+
+input[type=radio] {
+	display: none;
+}
+input[type=radio] + label {
+	margin-right: 0.25rem;
+	padding-top: 0.1rem;
+	padding-left: 1.1rem;
+	background: url("../images/icons/radio_un.png") no-repeat center left;
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_12);
+	transition: 0.2s;
+	cursor: pointer;
+}
+input[type=radio]:checked + label {
+	background: url("../images/icons/radio_chk.png") no-repeat center left;
 }
 
 label {
@@ -160,7 +237,7 @@ fieldset > legend {
 
 /* 추가 스타일링 필요한 요소들
 
-    input-range, input-checkbox, input-radio, input-number,
+    input-radio, input-number,
     input-select, input-file, input-search, meter, progress
 
 */
@@ -188,7 +265,6 @@ a.goto_top {
 /* ---------- Modal, Pop-Up, Message End ---------- */
 /* ---------- Basic Page Elements Start ---------- */
 header#headBase {
-	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -196,8 +272,11 @@ header#headBase {
 	background: transparent;
 	z-index: 10000;
 }
+header#headBase.head_index {
+	position: fixed;
+}
 header#headBase.head_sub {
-	position: sticky;
+	position: static;
 }
 header#headBase.scrolled {
 	background: rgb(var(--color_light));
@@ -257,15 +336,54 @@ ul#navbarMain a:hover::before {
 
 div#layerAccount {
 	display: flex;
+	position: relative;
 	align-items: center;
 	gap: 0.5rem;
 	margin-left: auto;
+	cursor: pointer;
 }
 div#layerAccount > p.user_name {
 	padding-left: 1.5rem;
 }
 div#layerAccount > p.user_name span {
 	color: rgb(var(--color_title));
+}
+div#layerAccount ul#accountPop {
+	display: none;
+	position: absolute;
+	top: calc(100% - .25rem);
+	right: 0;
+	width: 8rem;
+	padding: 0.1rem;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_light));
+	box-shadow: 0 0.25rem 0.5rem rgba(var(--color_dark), 0.3);
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_text));
+	font-size: var(--fnt_12);
+}
+div#layerAccount ul#accountPop::before {
+	display: block;
+	position: absolute;
+	bottom: 100%;
+	left: calc(50% - .25rem);
+	width: 0.5rem;
+	height: 0.5rem;
+	border: 0.25rem solid transparent;
+	border-bottom: 0.25rem solid rgb(var(--color_light));
+	content: "";
+}
+div#layerAccount ul#accountPop.on {
+	display: block;
+}
+div#layerAccount ul#accountPop > li:hover {
+	border-radius: var(--bdr_inner);
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+}
+div#layerAccount ul#accountPop > li > a {
+	display: block;
+	padding: 0.35rem 1.5rem 0.2rem;
 }
 
 button.btn_account {
@@ -294,7 +412,6 @@ button.btn_account:hover {
 
 section#sideBar_left, section#sideBar_right {
 	width: calc((100% - 38rem) / 2);
-	height: 100vh;
 }
 
 section#contentBar {
@@ -303,13 +420,17 @@ section#contentBar {
 	gap: 0.5rem;
 	padding: 0.5rem;
 	width: 38rem;
-	height: 100vh;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_light));
 }
+section#contentBar > h3 {
+	margin: 0.5rem;
+	font-weight: normal;
+}
 
 ul.side_mnu_left {
+	position: -webkit-sticky;
 	position: sticky;
 	top: 5rem;
 	right: 0;
@@ -317,8 +438,6 @@ ul.side_mnu_left {
 	margin-top: 2.5rem;
 }
 ul.side_mnu_left > li {
-	margin-bottom: 0.25rem;
-	padding: 0.5rem 0.75rem 0.25rem;
 	border-top-left-radius: var(--bdr_outer);
 	border-bottom-left-radius: var(--bdr_outer);
 	font-family: var(--ff_sans_p);
@@ -326,9 +445,19 @@ ul.side_mnu_left > li {
 	font-size: 0.9rem;
 	text-align: end;
 }
+ul.side_mnu_left > li + li {
+	margin-top: 0.5rem;
+}
 ul.side_mnu_left > li.checked {
 	background: rgb(var(--color_text));
 	color: rgb(var(--color_light));
+}
+ul.side_mnu_left > li.checked > a {
+	pointer-events: none;
+}
+ul.side_mnu_left > li > a {
+	display: block;
+	padding: 0.5rem 0.75rem 0.25rem;
 }
 
 footer#footBase {
@@ -470,14 +599,15 @@ div#footContent h6 {
 	gap: 1.5rem 0.5rem;
 	margin-top: 2.5rem;
 }
-.main_section > .sec_title {
+
+.sec_title {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
 	gap: 0 0.75rem;
 	width: 100%;
 }
-.main_section > .sec_title > .sec_more {
+.sec_title > .sec_more {
 	display: block;
 	position: relative;
 	width: -webkit-fit-content;
@@ -486,7 +616,7 @@ div#footContent h6 {
 	font-family: var(--ff_sans_p);
 	color: rgb(var(--color_title));
 }
-.main_section > .sec_title > .sec_more::before {
+.sec_title > .sec_more::before {
 	display: block;
 	position: absolute;
 	bottom: -0.1rem;
@@ -499,19 +629,19 @@ div#footContent h6 {
 	z-index: -1;
 	content: "";
 }
-.main_section > .sec_title > .sec_more:hover {
+.sec_title > .sec_more:hover {
 	color: rgb(var(--color_light));
 }
-.main_section > .sec_title > .sec_more:hover::before {
+.sec_title > .sec_more:hover::before {
 	bottom: -0.25rem;
 	left: -0.4rem;
 	width: calc(100% + 1.5rem);
 	height: calc(100% + .6rem);
-	background: rgb(var(--color_text)) url("../images/icons/icon_doublearrow.png") no-repeat 93%;
+	background: rgb(var(--color_text)) url("../images/icons/icon_doublearrow.png") no-repeat center right 0.25rem;
 }
-.main_section > .sec_title > .sec_subtitle {
-	padding-left: 0.25rem;
+.sec_title > .sec_subtitle {
 	width: 100%;
+	text-indent: 0.25rem;
 }
 
 /* 메인 섹션 (인덱스) 끝 */
@@ -634,8 +764,8 @@ div#footContent h6 {
 	bottom: 0.5rem;
 	left: 0.5rem;
 	right: 0.5rem;
-	transition: 0.3s;
 	opacity: 0;
+	transition: 0.3s;
 }
 .card_item .card_location > .location_pict {
 	width: 2.5rem;
@@ -683,6 +813,24 @@ div#footContent h6 {
 }
 
 /* 작은 위치 정보 끝 */
+/* 물음표 시작 */
+.icon_help {
+	display: inline-block;
+	width: 0.7rem;
+	height: 0.7rem;
+	background: url("../images/icons/icon_help.png") no-repeat center;
+	vertical-align: bottom;
+	cursor: help;
+}
+.icon_help + span {
+	font-family: var(--ff_sans_p);
+	color: rgba(var(--color_text), 0.75);
+	font-size: var(--fnt_12);
+	text-shadow: 0 0.1rem 0 rgb(var(--color_subtle));
+	cursor: help;
+}
+
+/* 물음표 끝 */
 /* 유저 네임태그 시작 */
 .profile_pict_small {
 	display: inline-block;
@@ -873,5 +1021,259 @@ div#footContent h6 {
 	text-indent: 0.5rem;
 }
 
+.frm_items {
+	position: relative;
+	margin: 0.5rem 0 2rem;
+}
+
 /* 내부 폼 끝 */
+/* 와인 아이콘 */
+.wine_icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 3rem;
+	height: 3rem;
+	border: 0.15rem solid rgb(var(--color_bdr));
+	border-radius: 50%;
+	background: rgba(var(--color_dark), 0.1);
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_12);
+	transition: background 0.5s;
+	cursor: pointer;
+	overflow: hidden;
+}
+.wine_icon::before {
+	display: block;
+	padding-top: 0.25rem;
+	text-align: center;
+	z-index: 2;
+}
+.wine_icon::after {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: radial-gradient(circle at center, transparent 0%, rgba(var(--color_dark), 1) 100%);
+	mix-blend-mode: overlay;
+	z-index: 3;
+	content: "";
+}
+.wine_icon > p {
+	z-index: 2;
+}
+.wine_icon > .wave_front,
+.wine_icon .wave_back {
+	position: absolute;
+	width: 6rem;
+	height: 6rem;
+	border-radius: 2rem;
+	transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.wine_icon > .wave_front {
+	transform: translateY(2.5rem) rotate(-70deg);
+	z-index: 1;
+}
+.wine_icon > .wave_back {
+	transform: translateY(2.5rem) rotate(60deg);
+	z-index: 0;
+}
+.wine_icon:hover {
+	background: rgba(var(--color_dark), 0.3);
+}
+.wine_icon:hover > .wave_front {
+	transform: translateY(2.5rem) rotate(60deg);
+}
+.wine_icon:hover > .wave_back {
+	transform: translateY(2.5rem) rotate(-70deg);
+}
+.wine_icon.redwine::before {
+	color: #f0cece;
+	content: "레드";
+}
+.wine_icon.redwine > .wave_front {
+	background: #af2c45;
+}
+.wine_icon.redwine > .wave_back {
+	background: #752236;
+}
+.wine_icon.whitewine::before {
+	color: rgb(var(--color_acc2));
+	content: "화이트";
+}
+.wine_icon.whitewine > .wave_front {
+	background: #faf2d7;
+}
+.wine_icon.whitewine > .wave_back {
+	background: #e9d59f;
+}
+.wine_icon.sparkling::before {
+	color: rgb(var(--color_acc1));
+	content: "스파클링";
+}
+.wine_icon.sparkling > .wave_front {
+	background: #fff1a8;
+}
+.wine_icon.sparkling > .wave_back {
+	background: #ffcf4a;
+}
+.wine_icon.others::before {
+	color: #f67389;
+	content: "기타";
+}
+.wine_icon.others > .wave_front {
+	background: #ffbec9;
+}
+.wine_icon.others > .wave_back {
+	background: #f67389;
+}
+.wine_icon.choose_item::before {
+	color: #471966;
+	content: "종류 선택";
+}
+.wine_icon.choose_item > .wave_front {
+	background: #a1e7c4;
+}
+.wine_icon.choose_item > .wave_back {
+	background: #7eb995;
+}
+.wine_icon.add_item::before {
+	color: rgb(var(--color_light));
+	text-shadow: 0 0 0.25rem rgba(var(--color_dark), 0.75);
+	content: "와인 추가";
+}
+.wine_icon.add_item > span:first-child,
+.wine_icon.add_item span:last-child {
+	display: block;
+	position: absolute;
+	border-radius: var(--bdr_inner);
+	background: #bebebe;
+}
+.wine_icon.add_item > span:first-child {
+	width: 0.3rem;
+	height: 1.2rem;
+}
+.wine_icon.add_item > span:last-child {
+	width: 1.2rem;
+	height: 0.3rem;
+}
+
+.wine_selector {
+	position: relative;
+}
+
+.wine_selector_list {
+	display: none;
+	position: absolute;
+	top: -0.5rem;
+	left: -0.5rem;
+	padding: 0.5rem;
+	border-radius: 2rem;
+	background: rgba(var(--color_dark), 0.75);
+	box-shadow: 0 0.25rem 0.5rem rgba(var(--color_dark), 0.5);
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 500;
+}
+.wine_selector_list > .wine_icon {
+	position: absolute;
+	left: 0;
+}
+.wine_selector_list.open {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	opacity: 1;
+}
+.wine_selector_list.open > .wine_icon {
+	position: relative;
+}
+
+/* 와인 아이콘 끝 */
+/* 커스텀 셀렉터 */
+.custom_selector {
+	position: relative;
+}
+.custom_selector .location_pict,
+.custom_selector .course_pict {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.custom_selector .location_name,
+.custom_selector .course_name {
+	font-family: var(--ff_sans_p);
+}
+.custom_selector .location_info,
+.custom_selector .course_info {
+	margin-top: 0.25rem;
+	font-size: var(--fnt_12);
+}
+.custom_selector .location_course,
+.custom_selector .course_price {
+	margin-left: auto;
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_12);
+}
+.custom_selector_selected, .custom_selector_items {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 0.5rem;
+	cursor: pointer;
+}
+.custom_selector_selected {
+	padding: 0.5rem;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+}
+.custom_selector_items {
+	padding: 0.5rem;
+}
+.custom_selector_items:hover {
+	background: rgb(var(--color_tone1));
+}
+.custom_selector_list {
+	max-height: 12rem;
+	overflow-y: auto;
+}
+.custom_selector_list::-webkit-scrollbar {
+	background: rgb(var(--color_light));
+}
+.custom_selector_list > li {
+	background: rgb(var(--color_light));
+}
+.custom_selector_list > li + li {
+	border-top: var(--border);
+}
+.custom_selector_form {
+	display: none;
+	position: absolute;
+	top: calc(100% + .25rem);
+	left: 0;
+	right: 0;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	box-shadow: var(--shd_major);
+	overflow: hidden;
+	z-index: 500;
+}
+.custom_selector_search {
+	padding: 0.25rem;
+	border-bottom: var(--border);
+	background: rgb(var(--color_bg));
+}
+
+/* 커스텀 셀렉터 끝 */
 /* ---------- Repeating Items end ---------- */
+.note-modal.open {
+	justify-content: center;
+	align-items: center;
+}

@@ -1,23 +1,260 @@
 @charset "UTF-8";
 /* ---------- Page-Specific Layout CSS (Gathering (Open)) ---------- */
-/* ---------- SCSS 공통 선언 시작 ---------- */
-/* ---------- SCSS 공통 선언 종료 ---------- */
-/* ---------- 영역 공통 선언 시작 ---------- */
-#wrapMain {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+/* ---------- 페이지 특정 요소 시작 ---------- */
+#groupLIST {
+	display: none;
 }
 
-/* ---------- 영역 공통 선언 종료 ---------- */
-/* ---------- 하부 요소 시작 ---------- */
-/* ---------- 하부 요소 종료 ---------- */
-/* ---------- 페이지 특정 요소 시작 ---------- */
-/*# sourceMappingURL=layout_gathering_open.css.map */
+#txtTitle,
+#txtDesc_s {
+	width: 100%;
+}
+
+.range_container {
+	position: relative;
+}
+
+.range_spot {
+	display: block;
+	position: absolute;
+	top: 1.15rem;
+	width: 0.05rem;
+	height: 0.5rem;
+	background: rgb(var(--color_text));
+	font-size: var(--fnt_12);
+	pointer-events: none;
+}
+.range_spot::after {
+	display: block;
+	position: absolute;
+	top: calc(100% + .15rem);
+	left: 50%;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	text-align: center;
+	transform: translateX(-50%);
+	content: attr(rangeval) "인";
+}
+.range_spot:nth-child(2) {
+	left: 0.35rem;
+}
+.range_spot:nth-child(3) {
+	left: calc((50% - (100% / 6 * 2)) + .25rem);
+}
+.range_spot:nth-child(4) {
+	left: calc((50% - (100% / 6)) + .1rem);
+}
+.range_spot:nth-child(5) {
+	left: calc(50% - .025rem);
+}
+.range_spot:nth-child(6) {
+	right: calc((50% - (100% / 6)) + .1rem);
+}
+.range_spot:nth-child(7) {
+	right: calc((50% - (100% / 6 * 2)) + .25rem);
+}
+.range_spot:nth-child(8) {
+	right: 0.35rem;
+}
+
+.frm_aligner {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 1.5rem;
+}
+
+.bring_wine {
+	position: relative;
+	padding: 0.75rem 0.5rem;
+	border-radius: var(--bdr_outer);
+}
+.bring_wine > .wine_icon {
+	margin: 0 auto 0.25rem;
+}
+.bring_wine > .qty_container {
+	display: flex;
+	gap: 0.25rem;
+}
+.bring_wine > .qty_container > input,
+.bring_wine > .qty_container button {
+	display: block;
+	text-align: center;
+}
+.bring_wine > .qty_container > input {
+	width: 2rem;
+	border: var(--border);
+	padding: 0.4rem 0.5rem 0.35rem;
+}
+.bring_wine > .qty_container > button {
+	width: 1.2rem;
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+}
+.bring_wine.group_leader {
+	background: rgb(var(--color_tone2));
+	box-shadow: var(--shd_major);
+}
+.bring_wine.group_leader:before {
+	position: absolute;
+	top: calc(100% + .25rem);
+	left: 0;
+	right: 0;
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_acc2));
+	font-size: var(--fnt_12);
+	text-align: center;
+	content: "주최자가 지참할 와인";
+}
+.bring_wine.group_leader > .wine_selector {
+	margin: 0 auto 0.25rem;
+	width: 3rem;
+	height: 3rem;
+}
+
+.group_wine_list {
+	margin: 1rem auto 0;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+}
+.group_wine_list > li {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
+.group_wine_list > li:last-child {
+	margin-bottom: 0;
+}
+.group_wine_list #txtWineName {
+	width: 10rem;
+}
+.group_wine_list #txtWineVintage {
+	width: 4rem;
+}
+.group_wine_list #txtWinePrice_LIST {
+	width: 6rem;
+}
+.group_wine_list .wine_delete {
+	width: 1.5rem;
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+}
+.group_wine_list .wine_delete:disabled {
+	background: rgba(var(--color_dark), 0.25);
+}
+
+#txtWinePrice_BYOB {
+	width: 100%;
+}
+
+#slctPricePoint {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20%;
+	box-shadow: none;
+}
+#slctPricePoint:focus {
+	box-shadow: 0 0 0 0.1rem rgba(var(--color_acc1), 0.5);
+}
+
+.btnGroupOpen {
+	padding: 0.8rem;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_16);
+	transition: 0.2s;
+}
+.btnGroupOpen:hover {
+	background: rgb(var(--color_acc1));
+}
+
+.pop_open {
+	cursor: pointer;
+}
+
+aside#popGroupEncore {
+	display: none;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 1000;
+}
+aside#popGroupEncore.open {
+	display: flex;
+}
+aside#popGroupEncore > #frmEncore {
+	padding: 0.5rem;
+	width: 30rem;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_bdr));
+}
+aside#popGroupEncore > #frmEncore > h4 {
+	margin-bottom: 0.5rem;
+	padding: 0.5rem;
+}
+aside#popGroupEncore > #frmEncore > .btn_container {
+	display: flex;
+	align-items: center;
+	padding-top: 0.5rem;
+	height: 2rem;
+}
+aside#popGroupEncore > #frmEncore > .btn_container button {
+	display: block;
+	padding: 0.5rem 1rem;
+}
+aside#popGroupEncore > #frmEncore > .btn_container .pop_trans {
+	background: rgb(var(--color_acc2));
+	color: rgb(var(--color_light));
+}
+aside#popGroupEncore > #frmEncore > .btn_container .pop_close {
+	background: rgb(var(--color_point1));
+	color: rgb(var(--color_light));
+}
+aside#popGroupEncore > #frmEncore > .btn_container p {
+	margin-left: auto;
+}
+aside#popGroupEncore > #frmEncore > .encore_list {
+	max-height: 50vh;
+	overflow-y: auto;
+}
+aside#popGroupEncore > #frmEncore > .encore_list::-webkit-scrollbar {
+	background: transparent;
+}
+aside#popGroupEncore > #frmEncore > .encore_list > li {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.75rem 0.5rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_bg));
+}
+aside#popGroupEncore > #frmEncore > .encore_list > li:hover {
+	border-color: rgb(var(--color_acc1));
+	background: rgb(var(--color_tone1));
+}
+aside#popGroupEncore > #frmEncore > .encore_list > li + li {
+	margin-top: 0.25rem;
+}
+aside#popGroupEncore > #frmEncore > .encore_list > li > label {
+	width: 5rem;
+}
+aside#popGroupEncore > #frmEncore > .encore_list p {
+	font-family: var(--ff_serif);
+	font-size: var(--fnt_12);
+}
+aside#popGroupEncore > #frmEncore > .encore_list p:last-of-type {
+	margin-left: auto;
+}

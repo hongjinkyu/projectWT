@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Wine Together</title>
+
+        <link rel="shortcut icon" type="image/x-icon" href="./resources/common/images/icons/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/modern-normalize.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/default.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
+        <!-- Global CSS -->
+
+        <link rel="stylesheet" type="text/css" href="./resources/partners/css/layout_partners_list.css" />
+        <!-- Page-Specific CSS -->
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+        <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
+        <script type="text/javascript" src="./resources/partners/js/js_partners_list.js"></script> <!-- Page-Specific jQuery -->
+        <!-- JavaScript / jQuery -->
+
+        <!--[if lt IE 9]>
+                <script src="./js/html5shiv.min.js"></script>
+            <![endif]-->
+    </head>
+
+    <body>
+
+        <div id="wrap">
+
+            <header id="headBase" class="head_sub">
+                <nav id="navBase" class="nav_sub int_wrap" role="navigation">
+                    <h1 id="mainLogo">
+                        <a href="index.html">Wine Together</a>
+                    </h1>
+
+                    <ul id="navbarMain">
+                        <li class="mnu_main">
+                            <a href="service.html">와인투게더란?</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="gathering_list.html">모임 둘러보기</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="gathering_open.html">모임 개설하기</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="review_list.html">모임 후기</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="partners_list.html">와투 맛집</a>
+                        </li>
+                    </ul>
+
+                    <div id="layerAccount">
+                        <p class="user_name">
+                            <span data-grade="grade_regular">김누구</span> 님
+                        </p>
+                        <button class="btn_account">
+                            <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
+                        </button>
+                        <ul id="accountPop">
+                            <li><a href="./mypage.html">나의 정보</a></li>
+                            <li><a href="">즐겨찾는 맛집</a></li>
+                            <li><a href="">프리미엄 멤버쉽</a></li>
+                            <li><a href="./login.html">로그아웃</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header> <!-- Header -->
+
+        <!-- Page Main Contents Start / 헤더 영역 종료 -->
+
+            <div id="wrapMain" class="int_wrap" role="main">
+
+                <section id="secFilter">
+                    <!-- 필터 넣어야 함 -->
+                </section>
+
+                <div class="sec_title">
+                    <h3>와투 맛집</h3>
+                    <p class="sec_subtitle">와인과 가장 잘 어울리는 요리를 만날 수 있는 곳이에요.</p>
+                </div>
+
+                <section id="secList_Partners">
+
+                    <div class="card_item"> <!-- Card Item - Partner -->
+                        <img src="./resources/index/images/img16.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_content">
+                            <dl class="card_desc">
+                                <dt class="card_title">
+                                    <h5>리버풀 꼼장어 아나고 산낙지</h5>
+                                </dt>
+                                <dd class="card_subtitle">
+                                    14회의 모임이 있었던 장소
+                                </dd>
+                                <dd class="review_star">
+                                    <div class="star_point" data-point-total="8.9">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </dd>
+                            </dl> <!-- Card Item - Description -->
+
+                            <div class="card_spec">
+                                <p class="card_location_small">
+                                    <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                    런던광역시 축구 > 리버풀 꼼장어
+                                </p>
+                            </div> <!-- Card Item - Location (Simple) -->
+
+                            <div class="card_location">
+                                <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                <dl class="location_desc">
+                                    <dt>관련 태그</dt>
+                                    <dd>#꼼장어 #아나고 #산낙지</dd>
+                                </dl>
+                            </div> <!-- Card Item - Location (Hover Detail) -->
+                        </div>
+                    </div> <!-- Single Card -->
+
+                    <div class="card_item"> <!-- Card Item - Partners -->
+                        <img src="./resources/index/images/img20.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_content">
+                            <dl class="card_desc">
+                                <dt class="card_title">
+                                    <h5>산막 와이너리</h5>
+                                </dt>
+                                <dd class="card_subtitle">
+                                    255회의 모임이 있었던 장소
+                                </dd>
+                                <dd class="review_star">
+                                    <div class="star_point" data-point-total="8.0">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </dd>
+                            </dl> <!-- Card Item - Description -->
+
+                            <div class="card_spec">
+                                <p class="card_location_small">
+                                    <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                    충청북도 영동군 > 산막 와이너리
+                                </p>
+                            </div> <!-- Card Item - Location (Simple) -->
+
+                            <div class="card_location">
+                                <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                <dl class="location_desc">
+                                    <dt>관련 태그</dt>
+                                    <dd>#와인 #와이너리</dd>
+                                </dl>
+                            </div> <!-- Card Item - Location (Hover Detail) -->
+                        </div>
+                    </div> <!-- Single Card -->
+
+                    <div class="card_item"> <!-- Card Item - Partners -->
+                        <img src="./resources/index/images/img15.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_content">
+                            <dl class="card_desc">
+                                <dt class="card_title">
+                                    <h5>드래곤스파</h5>
+                                </dt>
+                                <dd class="card_subtitle">
+                                    1회의 모임이 있었던 장소
+                                </dd>
+                                <dd class="review_star">
+                                    <div class="star_point" data-point-total="2.1">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </dd>
+                            </dl> <!-- Card Item - Description -->
+
+                            <div class="card_spec">
+                                <p class="card_location_small">
+                                    <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                    서울특별시 용산구 > 드래곤스파
+                                </p>
+                            </div> <!-- Card Item - Location (Simple) -->
+
+                            <div class="card_location">
+                                <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                <dl class="location_desc">
+                                    <dt>관련 태그</dt>
+                                    <dd>#식혜 #맥반석달걀 #버터오징어</dd>
+                                </dl>
+                            </div> <!-- Card Item - Location (Hover Detail) -->
+                        </div>
+                    </div> <!-- Single Card -->
+
+                    <div class="card_item"> <!-- Card Item - Partners -->
+                        <img src="./resources/index/images/img27.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_content">
+                            <dl class="card_desc">
+                                <dt class="card_title">
+                                    <h5>더뉴</h5>
+                                </dt>
+                                <dd class="card_subtitle">
+                                    98회의 모임이 있었던 장소
+                                </dd>
+                                <dd class="review_star">
+                                    <div class="star_point" data-point-total="8.7">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </dd>
+                            </dl> <!-- Card Item - Description -->
+
+                            <div class="card_spec">
+                                <p class="card_location_small">
+                                    <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                    부산광역시 수영구 > 더뉴
+                                </p>
+                            </div> <!-- Card Item - Location (Simple) -->
+
+                            <div class="card_location">
+                                <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                <dl class="location_desc">
+                                    <dt>관련 태그</dt>
+                                    <dd>#맛있는거</dd>
+                                </dl>
+                            </div> <!-- Card Item - Location (Hover Detail) -->
+                        </div>
+                    </div> <!-- Single Card -->
+
+                    <div class="card_item"> <!-- Card Item - Partners -->
+                        <img src="./resources/index/images/img14.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_content">
+                            <dl class="card_desc">
+                                <dt class="card_title">
+                                    <h5>시민공원</h5>
+                                </dt>
+                                <dd class="card_subtitle">
+                                    8회의 모임이 있었던 장소
+                                </dd>
+                                <dd class="review_star">
+                                    <div class="star_point" data-point-total="8.0">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </dd>
+                            </dl> <!-- Card Item - Description -->
+
+                            <div class="card_spec">
+                                <p class="card_location_small">
+                                    <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                    부산광역시 부산진구 > 시민공원
+                                </p>
+                            </div> <!-- Card Item - Location (Simple) -->
+
+                            <div class="card_location">
+                                <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                <dl class="location_desc">
+                                    <dt>관련 태그</dt>
+                                    <dd>#야외 #피크닉 #공공장소</dd>
+                                </dl>
+                            </div> <!-- Card Item - Location (Hover Detail) -->
+                        </div>
+                    </div> <!-- Single Card -->
+
+                    <div class="card_item"> <!-- Card Item - Partners -->
+                        <img src="./resources/index/images/img24.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_content">
+                            <dl class="card_desc">
+                                <dt class="card_title">
+                                    <h5>스테이크잡스</h5>
+                                </dt>
+                                <dd class="card_subtitle">
+                                    33회의 모임이 있었던 장소
+                                </dd>
+                                <dd class="review_star">
+                                    <div class="star_point" data-point-total="4.4">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </dd>
+                            </dl> <!-- Card Item - Description -->
+
+                            <div class="card_spec">
+                                <p class="card_location_small">
+                                    <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                    부산광역시 부산진구 > 스테이크잡스
+                                </p>
+                            </div> <!-- Card Item - Location (Simple) -->
+
+                            <div class="card_location">
+                                <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                <dl class="location_desc">
+                                    <dt>관련 태그</dt>
+                                    <dd>#스테이크 #서면</dd>
+                                </dl>
+                            </div> <!-- Card Item - Location (Hover Detail) -->
+                        </div>
+                    </div> <!-- Single Card -->
+
+                    <div class="card_item"> <!-- Card Item - Partners -->
+                        <img src="./resources/index/images/img36.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_content">
+                            <dl class="card_desc">
+                                <dt class="card_title">
+                                    <h5>인도 가는 길</h5>
+                                </dt>
+                                <dd class="card_subtitle">
+                                    1,551회의 모임이 있었던 장소
+                                </dd>
+                                <dd class="review_star">
+                                    <div class="star_point" data-point-total="6.2">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </dd>
+                            </dl> <!-- Card Item - Description -->
+
+                            <div class="card_spec">
+                                <p class="card_location_small">
+                                    <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                    부산광역시 중구 > 인도 가는 길
+                                </p>
+                            </div> <!-- Card Item - Location (Simple) -->
+
+                            <div class="card_location">
+                                <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                <dl class="location_desc">
+                                    <dt>관련 태그</dt>
+                                    <dd>#인도 #커리 #난</dd>
+                                </dl>
+                            </div> <!-- Card Item - Location (Hover Detail) -->
+                        </div>
+                    </div> <!-- Single Card -->
+
+                    <div class="card_item"> <!-- Card Item - Partners -->
+                        <img src="./resources/index/images/img37.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_content">
+                            <dl class="card_desc">
+                                <dt class="card_title">
+                                    <h5>프린체</h5>
+                                </dt>
+                                <dd class="card_subtitle">
+                                    137회의 모임이 있었던 장소
+                                </dd>
+                                <dd class="review_star">
+                                    <div class="star_point" data-point-total="9.4">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </dd>
+                            </dl> <!-- Card Item - Description -->
+
+                            <div class="card_spec">
+                                <p class="card_location_small">
+                                    <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                    부산광역시 부산진구 > 프린체
+                                </p>
+                            </div> <!-- Card Item - Location (Simple) -->
+
+                            <div class="card_location">
+                                <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                <dl class="location_desc">
+                                    <dt>관련 태그</dt>
+                                    <dd>#스페인 #소모임 #파티</dd>
+                                </dl>
+                            </div> <!-- Card Item - Location (Hover Detail) -->
+                        </div>
+                    </div> <!-- Single Card -->
+
+                    <div class="card_item"> <!-- Card Item - Partners -->
+                        <img src="./resources/index/images/img17.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_content">
+                            <dl class="card_desc">
+                                <dt class="card_title">
+                                    <h5>슈퍼 겁쟁이 쉼터</h5>
+                                </dt>
+                                <dd class="card_subtitle">
+                                    65,535회의 모임이 있었던 장소
+                                </dd>
+                                <dd class="review_star">
+                                    <div class="star_point" data-point-total="10.0">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </dd>
+                            </dl> <!-- Card Item - Description -->
+
+                            <div class="card_spec">
+                                <p class="card_location_small">
+                                    <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                    저 깊은 바닷속 비키니 시티 > 슈퍼 겁쟁이 쉼터
+                                </p>
+                            </div> <!-- Card Item - Location (Simple) -->
+
+                            <div class="card_location">
+                                <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                <dl class="location_desc">
+                                    <dt>관련 태그</dt>
+                                    <dd>#슈퍼 #겁쟁이 #쉼터</dd>
+                                </dl>
+                            </div> <!-- Card Item - Location (Hover Detail) -->
+                        </div>
+                    </div> <!-- Single Card -->
+
+                </section>
+
+            </div>
+
+        <!-- Page Main Contents End / 푸터 영역 시작 -->
+
+            <footer id="footBase" role="contentinfo">
+                <a href="#" class="banner_partner">
+                    와인투게더와 함께하실 파트너를 모십니다.
+                </a>
+                <div class="int_wrap">
+                    <ul id="footLinks">
+                        <li class="mnu_flinks"><a href="./cs_board_list.html">고객센터</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">이용약관</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">개인정보보호방침</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">이메일주소수집거부</a></li>
+                        <li class="mnu_flinks">제휴문의 <a href="mailto:justin@winetogether.kr">justin@winetogether.kr</a></li>
+                    </ul>
+
+                    <div id="footContent">
+                        <div class="footer_company">
+                            <h6>(주) 비노앤제이</h6>
+                            <ul class="footer_company_info">
+                                <li>
+                                    <img src="./resources/common/images/logo_footer.png" alt="VINO & J" />
+                                </li>
+                                <li>
+                                    대표이사
+                                    <p>최용준</p>
+                                </li>
+                                <li>
+                                    사업자등록번호
+                                    <p>617-86-10479</p>
+                                </li>
+                                <li>
+                                    통신판매업신고번호
+                                    <p>제2016-부산해운대-0485호</p>
+                                </li>
+                                <li>
+                                    주소
+                                    <address>부산광역시 해운대구 해운대로 570번길 46, B1</address>
+                                </li>
+                                <li class="disclaimer">
+                                    전자상거래상 중개업이 어쩌고 저쩌고 책임은 구매자 본인에게 있고 어쩌고 저쩌고<br />
+                                    두줄로 들어가면 이런 느낌이고 뭔가 내용이 많아야 할거같고
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer_callcenter">
+                            <h6>CALL CENTER</h6>
+                            <div class="footer_callcenter_text">
+                                <img src="./resources/common/images/icons/icon_cs.png" alt="고객센터" class="icon_cs" /><!--
+                                --><span>1811-0612</span>
+                                <p>
+                                    월~금 :
+                                    오전 10:00 ~ 오후 06:00
+                                </p>
+                                <p>
+                                    점심시간 :
+                                    오후 12:00 ~ 오후 01:00
+                                </p>
+                                <p>※ 토 / 일 / 공휴일은 휴무입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="copyRights">Copyright &copy; 2021 와인투게더</p>
+                </div>
+
+                <aside id="popFollow">
+                    <a href="#wrap" class="goto_top">
+                        <img src="./resources/common/images/icons/icon_gototop.png" alt="맨 위로" />
+                    </a>
+                </aside> <!-- Sticky Tag -->
+            </footer> <!-- Footer -->
+
+        </div> <!-- #wrap -->
+
+    </body>
+
+</html>
