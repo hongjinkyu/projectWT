@@ -2,6 +2,8 @@
 /* ---------- 페이지 특정 요소 시작 ---------- */
 
 #wrap {
+    display: flex;
+    align-items: center;
     width: 100vw;
     height: 100vh;
 }
@@ -9,37 +11,85 @@
 #frmLogin {
     display: flex;
     flex-flow: column nowrap;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     margin: auto;
     padding: .5rem;
     width: 20rem;
-    max-height: 30rem;
     background: #fff;
     box-shadow: var(--shd_minor);
+    font-family: var(--ff_sans_p);
+}
 
-    &::before {
+.backtomain {
+    position: absolute;
+    top: .25rem;
+    left: .25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: rgb(var(--color_text));
+    color: rgb(var(--color_light));
+    cursor: pointer;
+
+    > span {
+        display: block;
         position: absolute;
-        bottom: calc(100% + .5rem);
-        left: 0;
-        right: 0;
-        content: '와인투게더 로그인'
+        top: calc(50% - .05rem);
+        left: 32%;
+        width: 40%;
+        height: .1rem;
+        border-radius: .05rem;
+        background: rgb(var(--color_light));
+        content: '';
+
+        &:first-child {
+            transform-origin: .05rem 50%;
+            transform: rotate(45deg);
+        }
+
+        &:last-child {
+            transform-origin: .05rem 50%;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &:hover {
+        background: rgb(var(--color_point1));
+        transition: .3s;
+
+        > span {
+            left: 25%;
+            transition: .3s;
+        }
+
+        &::before {
+            display: block;
+            position: absolute;
+            top: calc(50% - .625rem);
+            left: calc(100% + .25rem);
+            padding: .25rem;
+            width: max-content;
+            border-radius: var(--bdr_outer);
+            background: rgb(var(--color_text));
+            content: '이전 페이지로';
+        }
+    }
+}
+
+h5 {
+    margin: 2rem 0 1rem;
+    font-weight: normal;
+}
+
+.frm_title {
+    h1#mainLogo {
+        margin: 0 auto;
+        height: auto;
     }
 }
 
 .btn_container {
-    display: flex;
-    align-items: center;
-    margin-bottom: .5rem;
-
-    .backtomain {
-        margin-left: auto;
-        background: rgb(var(--color_text));
-        color: rgb(var(--color_light));
-    }
+    margin: 1rem 0;
+    text-align: end;
 }
 
 .field_login {
@@ -47,30 +97,59 @@
     flex-flow: column nowrap;
     gap: .5rem;
 
-    input {
+    label[for="txtID"],
+    label[for="txtPW"] {
+        margin-bottom: .5rem;
+        color: rgb(var(--color_footer));
+        font-size: var(--fnt_12);
+        text-align: end;
+    }
+
+    input[type="email"],
+    input[type="password"] {
         padding: .5rem;
         border-bottom: .05rem solid rgb(var(--color_text));
         border-radius: 0;
         background: transparent;
-        box-shadow: none;
         font-size: var(--fnt_14);
     }
 
-    button {
+    .btn_login {
         padding: .75rem;
-        background: rgb(var(--color_tone2));
+        border: var(--border);
         font-size: var(--fnt_16);
+
+        &:hover {
+            border-color: rgb(var(--color_acc1));
+            background: rgb(var(--color_acc1));
+            color: rgb(var(--color_light));
+            transition: .3s;
+        }
+    }
+
+    p {
+        color: rgba(var(--color_text), .5);
+        font-size: var(--fnt_12);
+        text-align: end;
+
+        a:hover,
+        a:active {
+            color: rgb(var(--color_acc1));
+        }
     }
 }
 
 .other_methods {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: .5rem;
     margin: auto 0;
 
     button {
+        display: block;
         padding: .75rem;
+        width: 100%;
+
+        & + button {
+            margin-top: .25rem;
+        }
     }
 
     .btn_google {
@@ -110,5 +189,5 @@
 }
 
 #copyRights {
-    
+    margin-top: 1rem;
 }
