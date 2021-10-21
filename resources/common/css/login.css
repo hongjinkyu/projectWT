@@ -106,14 +106,20 @@ h5 {
 	background: transparent;
 	font-size: var(--fnt_14);
 }
+.field_login input[type=email]:focus,
+.field_login input[type=password]:focus {
+	padding-bottom: 0.4rem;
+	border-bottom: 0.15rem solid rgb(var(--color_acc1));
+	transition: 0.1s;
+}
 .field_login .btn_login {
 	padding: 0.75rem;
 	border: var(--border);
 	font-size: var(--fnt_16);
 }
 .field_login .btn_login:hover {
-	border-color: rgb(var(--color_acc1));
-	background: rgb(var(--color_acc1));
+	border-color: rgb(var(--color_acc2));
+	background: rgb(var(--color_acc2));
 	color: rgb(var(--color_light));
 	transition: 0.3s;
 }

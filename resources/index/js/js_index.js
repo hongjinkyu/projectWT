@@ -20,20 +20,36 @@ $(document).ready(function() { // jQuery Load
         }
     }); // Window Scrolling Actions
 
-    $('.slider_main').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        autoplay: false,
-        autoplaySpeed: 5000,
+    $('.slider_main').lightSlider({
+        item: 1,
+        slideMargin: 0,
+        mode: 'fade',
+        loop: true,
+        auto: true,
+        speed: 300,
+        pause: 5000,
         pauseOnHover: true,
-        arrows: false,
-        dots: false,
-        draggable: true,
-        swipe: true,
-        swipeToSlide: true,
-        touchMove: true,
-        zIndex: 1
+    });
+
+    $('.card_slide_container').lightSlider({
+        item: 3,
+        slideMargin: 10,
+        autoWidth: false,
+        controls: false,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    autoWidth: true,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    item: 1,
+                }
+            },
+        ],
     });
 
 }) // jQuery Closed

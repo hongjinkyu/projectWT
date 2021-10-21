@@ -15,7 +15,13 @@ div#mainSlider {
 	box-shadow: var(--shd_minor);
 	overflow: hidden;
 }
-div#mainSlider::before {
+
+.slider_item {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.slider_item::before {
 	display: block;
 	position: absolute;
 	top: 0;
@@ -26,12 +32,6 @@ div#mainSlider::before {
 	pointer-events: none;
 	z-index: 1;
 	content: "";
-}
-
-.slider_item {
-	position: relative;
-	width: 100%;
-	height: 100%;
 }
 .slider_item img {
 	width: 100%;

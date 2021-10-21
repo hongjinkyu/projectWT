@@ -1,2 +1,13 @@
+<<<<<<< Updated upstream
 /* ---------- Media Query CSS ---------- */
 /*# sourceMappingURL=mq.css.map */
+=======
+@charset "UTF-8";
+/* ---------- Media Query CSS ---------- */
+@media screen and (max-width: 60rem) {
+	/* 공통 요소 */
+	/* 공통 요소 끝 */
+	/* 개별 페이지 요소 */
+	/* 개별 페이지 요소 끝*/
+}
+>>>>>>> Stashed changes
