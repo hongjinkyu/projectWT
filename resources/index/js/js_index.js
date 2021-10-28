@@ -51,6 +51,7 @@ $(document).ready(function() { // jQuery Load
                 breakpoint: 400,
                 settings: {
                     slidesToShow: 1,
+                    variableWidth: false,
                 }
             },
         ],

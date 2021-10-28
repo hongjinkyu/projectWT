@@ -13,15 +13,53 @@
 		width: 100%;
 	}
 
+	.long_banner .banner_image {
+		opacity: 0.5;
+		transition: 0.3s;
+	}
+
 	.short_banner {
 		width: 100%;
 	}
 
 	/* 개별 페이지 요소 끝*/
 }
+/* 1200px */
 @media screen and (max-width: 800px) {
+	/* 공통 요소 */
+	ul#footLinks {
+		flex-flow: column nowrap;
+		align-items: flex-start;
+		row-gap: 1rem;
+	}
+	ul#footLinks > .flinks_sep {
+		display: none;
+	}
+
+	div#footContent {
+		flex-flow: column nowrap;
+		row-gap: 2rem;
+	}
+
+	/* 공통 요소 끝 */
+	/* 개별 페이지 요소 */
 	.card_partner {
 		width: calc((100% - .5rem) / 2);
+	}
+
+	.item_review {
+		flex-flow: column nowrap;
+		height: auto;
+	}
+	.item_review::before {
+		right: 0.25rem;
+	}
+	.item_review .review_image {
+		width: 100%;
+		height: 10rem;
+	}
+	.item_review .review_desc {
+		padding-bottom: 0;
 	}
 
 	.long_banner h2 {
@@ -31,7 +69,54 @@
 	.long_banner .banner_image {
 		height: 80%;
 		top: auto;
-		bottom: -1.5rem;
+		bottom: 0.5rem;
 		right: 1rem;
 	}
+
+	.short_banner {
+		padding: 1rem;
+		height: auto;
+	}
+	.short_banner * {
+		position: static;
+		margin-bottom: 1rem;
+	}
+
+	/* 개별 페이지 요소 끝*/
 }
+/* 800px */
+@media screen and (max-width: 400px) {
+	/* 공통 요소 */
+	/* 공통 요소 끝 */
+	/* 개별 페이지 요소 */
+	.card_guard + .card_guard {
+		margin-left: 0;
+	}
+
+	.card_item {
+		width: 100%;
+	}
+
+	.long_banner p {
+		top: 1rem;
+		left: 1rem;
+	}
+	.long_banner h2 {
+		top: 3rem;
+		left: 1rem;
+		font-size: var(--fnt_20);
+	}
+	.long_banner .banner_image {
+		height: 80%;
+		top: auto;
+		bottom: 0.5rem;
+		right: 1rem;
+	}
+
+	div#footContent {
+		display: none;
+	}
+
+	/* 개별 페이지 요소 끝*/
+}
+/* 400px */
