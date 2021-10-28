@@ -410,6 +410,17 @@ button.btn_account:hover {
 	filter: brightness(1.1);
 }
 
+header#headMobile {
+	position: fixed;
+	top: -5rem;
+	left: 0;
+	right: 0;
+	height: 4rem;
+	background: rgb(var(--color_light));
+	outline: var(--border);
+	z-index: 10000;
+}
+
 section#sideBar_left, section#sideBar_right {
 	width: calc((100% - 38rem) / 2);
 }
@@ -808,7 +819,7 @@ div#footContent h6 {
 /* 모임 카드 끝 */
 /* 작은 위치 정보 시작 */
 .icon_gps {
-	display: inline-block;
+	display: inline-block !important;
 	vertical-align: top;
 }
 
@@ -833,7 +844,7 @@ div#footContent h6 {
 /* 물음표 끝 */
 /* 유저 네임태그 시작 */
 .profile_pict_small {
-	display: inline-block;
+	display: inline-block !important;
 	width: 1rem;
 	height: 1rem;
 	border: var(--border);

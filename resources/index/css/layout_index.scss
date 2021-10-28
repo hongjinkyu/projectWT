@@ -3,7 +3,6 @@
 /* ---------- SCSS 공통 선언 시작 ---------- */
 
 
-
 /* ---------- SCSS 공통 선언 종료 ---------- */
 /* ---------- 영역 공통 선언 시작 ---------- */
 
@@ -22,16 +21,14 @@ div#mainSlider {
     width: 100%;
     height: 45vh;
     background: var(--color_bdr);
-    box-shadow: var(--shd_minor);
-    overflow: hidden;
 }
 
-.slider_item {
+.main-slide {
     position: relative;
     width: 100%;
     height: 100%;
 
-    &::before {
+    &::after {
         display: block;
         position: absolute;
         top: 0;
@@ -40,15 +37,69 @@ div#mainSlider {
         right: 0;
         background: radial-gradient(farthest-corner at right, transparent 0%, rgba(var(--color_dark), .5) 100%);
         pointer-events: none;
-        z-index: 1;
+        z-index: -1;
         content: '';
     }
 
-    img {
-        width: 100%;
+    > div.int_wrap {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        row-gap: 1rem;
+        padding: 0 5vw;
         height: 45vh;
-        object-fit: cover;
+        color: rgb(var(--color_light));
     }
+
+    > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        z-index: -1;
+    }
+}
+
+.main-dots {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    z-index: 2;
+    
+    > li {
+        float: left;
+
+        & + li {
+            margin-left: .25rem;
+        }
+
+        > button {
+            padding: .3rem .5rem .2rem;
+            background: transparent;
+            box-shadow: none;
+            font-family: var(--ff_eng);
+            color: rgb(var(--color_light));
+            font-size: var(--fnt_12);
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 0 .5rem rgba(var(--color_dark), .75);
+        }
+
+        &.slick-active > button {
+            background: rgba(var(--color_dark), .5);
+        }
+    }
+}
+
+.card_slide_container {
+    width: 100%;
+}
+
+.card_guard + .card_guard {
+    margin-left: .5rem;
 }
 
 .card_partner {
@@ -286,6 +337,7 @@ div#mainSlider {
         left: 1.5rem;
         font-size: var(--fnt_16);
         font-weight: bold;
+        z-index: 1;
     }
 
     h2 {
@@ -293,12 +345,15 @@ div#mainSlider {
         left: 1.5rem;
         font-family: var(--ff_serif);
         color: rgb(var(--color_title));
+        text-shadow: 0 0 .5rem rgb(var(--color_light));
+        z-index: 1;
     }
 
     .banner_image {
         top: -1.5rem;
         right: 2.5rem;
         height: 11rem;
+        z-index: 0;
     }
 }
 
@@ -309,3 +364,6 @@ div#mainSlider {
 #secBanner_02 {
     background: linear-gradient(to right, rgb(var(--color_tone1)) 50%, rgb(var(--color_acc1)) 100%);
 }
+
+/* ---------- 페이지 특정 요소 종료 ---------- */
+/* ---------- 미디어 쿼리 시작 ---------- */

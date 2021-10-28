@@ -18,11 +18,14 @@
         <link rel="stylesheet" type="text/css" href="./resources/index/css/layout_index.css" />
         <!-- Page-Specific CSS -->
 
-        <link rel="stylesheet" type="text/css" href="./resources/common/css/lightslider.css" />
-        <!-- Light Slider -->
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/mq.css" />
+        <!-- Media Query -->
+
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/slick-theme.css" />
+        <!-- Slick CSS -->
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
-        <script type="text/javascript" src="./resources/common/js/lightslider.js"></script> <!-- Light Slider -->
         <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
         <script type="text/javascript" src="./resources/index/js/js_index.js"></script> <!-- Page-Specific jQuery -->
         <!-- JavaScript / jQuery -->
@@ -77,19 +80,45 @@
                 </nav>
             </header> <!-- Header -->
 
+            <header id="headMobile">
+                <div class="int_wrap">
+
+                </div>
+            </header>
+
         <!-- Page Main Contents Start / 헤더 영역 종료 -->
 
-            <div id="mainSlider" class="slider_main">
-                <div class="slider_item">
+            <div id="mainSlider">
+                <div class="main-slide">
+                    <div class="int_wrap">
+                        <h2 class="slide_title">와인, 이제는 알고 마시자</h2>
+                        <p class="slide_subtitle">
+                            요러쿵 조러쿵
+                        </p>
+                    </div>
                     <img src="./resources/index/images/img11.jpg" alt="" />
                 </div>
-                <div class="slider_item">
+                <div class="main-slide">
+                    <div class="int_wrap">
+                        <h2 class="slide_title">와인, 이제는 몰라도 마시자</h2>
+                        <p class="slide_subtitle">
+                            요러쿵 조러쿵
+                        </p>
+                    </div>
                     <img src="./resources/index/images/img12.jpg" alt="" />
                 </div>
-                <div class="slider_item">
+                <div class="main-slide">
+                    <div class="int_wrap">
+                        <h2 class="slide_title">와인, 마시자</h2>
+                        <p class="slide_subtitle">
+                            요러쿵 조러쿵
+                        </p>
+                    </div>
                     <img src="./resources/index/images/img13.jpg" alt="" />
                 </div>
-            </div> <!-- Main Slider -->
+            </div>
+
+            <!-- Main Slider -->
 
             <div id="wrapMain" class="int_wrap" role="main">
 
@@ -103,140 +132,284 @@
 
                     <div class="card_slide_container"> <!-- Card Slider -->
 
-                        <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
-                            <img src="./resources/index/images/img06.jpg" alt="모임 대표 사진" class="card_img" />
-                            <div class="card_content">
-                                <dl class="card_desc">
-                                    <dt class="card_title">
-                                        <h5>용호동 초빼이 모임</h5>
-                                    </dt>
-                                    <dd class="card_subtitle">
-                                        어 취한다<br />
-                                        양변에 로그를 취한다
-                                    </dd>
-                                    <dd class="card_like">
-                                        <p class="chk_like">
-                                            <span class="like_num">35</span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
+                        <div class="card_guard">
+                            <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
+                                <img src="./resources/index/images/img06.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>용호동 초빼이 모임</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            어 취한다<br />
+                                            양변에 로그를 취한다
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">35</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            부산광역시 수영구 > 수영국밥
                                         </p>
-                                    </dd>
-                                </dl> <!-- Card Item - Description -->
-    
-                                <div class="card_spec">
-                                    <p class="card_location_small">
-                                        <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                        부산광역시 수영구 > 수영국밥
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>박진감 님</span>
-                                    </p>
-                                </div> <!-- Card Item - Location (Simple) -->
-    
-                                <div class="card_location">
-                                    <img src="./resources/index/images/img03.jpg" alt="모임 장소" class="location_pict" />
-                                    <dl class="location_desc">
-                                        <dt>수영국밥</dt>
-                                        <dd>#돼지국밥 #해장국</dd>
-                                    </dl>
-                                    <p class="item_price">최소 30,000원</p>
-                                </div> <!-- Card Item - Location (Hover Detail) -->
-                            </div>
-                        </div> <!-- Single Card -->
-    
-                        <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
-                            <img src="./resources/index/images/img07.jpg" alt="모임 대표 사진" class="card_img" />
-                            <div class="card_content">
-                                <dl class="card_desc">
-                                    <dt class="card_title">
-                                        <h5>대낮에 와인 마시고 난동... 2명 멀쩡</h5>
-                                    </dt>
-                                    <dd class="card_subtitle">
-                                        목격자 A씨 "점마들 저거 저랄줄 알았다" 증언<br />
-                                        공복에 음주가 참변의 원인으로 밝혀져
-                                    </dd>
-                                    <dd class="card_like">
-                                        <p class="chk_like">
-                                            <span class="like_num">-5</span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>박진감 님</span>
                                         </p>
-                                    </dd>
-                                </dl> <!-- Card Item - Description -->
-    
-                                <div class="card_spec">
-                                    <p class="card_location_small">
-                                        <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                        부산광역시 부산진구 > 시민공원
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_4.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>고구마 님</span>
-                                    </p>
-                                </div> <!-- Card Item - Location (Simple) -->
-    
-                                <div class="card_location">
-                                    <img src="./resources/index/images/img14.jpg" alt="모임 장소" class="location_pict" />
-                                    <dl class="location_desc">
-                                        <dt>시민공원</dt>
-                                        <dd>#야외 #피크닉 #공공장소</dd>
-                                    </dl>
-                                    <p class="item_price">최소 70,000원</p>
-                                </div> <!-- Card Item - Location (Hover Detail) -->
-                            </div>
-                        </div> <!-- Single Card -->
-    
-                        <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
-                            <img src="./resources/index/images/img10.jpg" alt="모임 대표 사진" class="card_img" />
-                            <div class="card_content">
-                                <dl class="card_desc">
-                                    <dt class="card_title">
-                                        <h5>너는 술이 쓰냐?</h5>
-                                    </dt>
-                                    <dd class="card_subtitle">
-                                        나는 힘든 일을 많이 겪어서 그런지 달게 느껴진다<br />
-                                        우에엥 집에 갈래
-                                    </dd>
-                                    <dd class="card_like">
-                                        <p class="chk_like">
-                                            <span class="like_num">156</span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/index/images/img03.jpg" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>수영국밥</dt>
+                                            <dd>#돼지국밥 #해장국</dd>
+                                        </dl>
+                                        <p class="item_price">최소 30,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div>
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
+                                <img src="./resources/index/images/img07.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>대낮에 와인 마시고 난동... 2명 멀쩡</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            목격자 A씨 "점마들 저거 저랄줄 알았다" 증언<br />
+                                            공복에 음주가 참변의 원인으로 밝혀져
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">-5</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            부산광역시 부산진구 > 시민공원
                                         </p>
-                                    </dd>
-                                </dl> <!-- Card Item - Description -->
-    
-                                <div class="card_spec">
-                                    <p class="card_location_small">
-                                        <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                        서울특별시 용산구 > 드래곤스파
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>박복례 님</span>
-                                    </p>
-                                </div> <!-- Card Item - Location (Simple) -->
-    
-                                <div class="card_location">
-                                    <img src="./resources/index/images/img15.jpg" alt="모임 장소" class="location_pict" />
-                                    <dl class="location_desc">
-                                        <dt>드래곤스파</dt>
-                                        <dd>#찜질방 </dd>
-                                    </dl>
-                                    <p class="item_price">참여비 50,000원</p>
-                                </div> <!-- Card Item - Location (Hover Detail) -->
-                            </div>
-                        </div> <!-- Single Card -->
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_4.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>고구마 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/index/images/img14.jpg" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>시민공원</dt>
+                                            <dd>#야외 #피크닉 #공공장소</dd>
+                                        </dl>
+                                        <p class="item_price">최소 70,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div>
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img10.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>너는 술이 쓰냐?</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            나는 힘든 일을 많이 겪어서 그런지 달게 느껴진다<br />
+                                            우에엥 집에 갈래
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">156</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            서울특별시 용산구 > 드래곤스파
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>박복례 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/index/images/img15.jpg" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>드래곤스파</dt>
+                                            <dd>#찜질방 </dd>
+                                        </dl>
+                                        <p class="item_price">참여비 50,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div>
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img29.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>슬라이더 더미</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            덤덤
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">156</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            열한시 오십구
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>조첨식 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>공사중</dt>
+                                            <dd>#공사중</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 50,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div> <!-- 슬라이더 더미 -->
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img29.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>슬라이더 더미</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            덤덤
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">156</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            열한시 오십구
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>조첨식 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>공사중</dt>
+                                            <dd>#공사중</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 50,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div> <!-- 슬라이더 더미 -->
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img29.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>슬라이더 더미</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            덤덤
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">156</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            열한시 오십구
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>조첨식 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>공사중</dt>
+                                            <dd>#공사중</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 50,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div> <!-- 슬라이더 더미 -->
 
                     </div> <!-- Card Slider -->
 
@@ -260,150 +433,294 @@
 
                     <div class="card_slide_container"> <!-- Card Slider -->
 
-                        <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
-                            <p class="card_timeleft"> <!-- Time Left (남은 시간이 1주일 미만일 때만 표시) -->
-                                3일 22:40:50
-                            </p>
-                            <img src="./resources/index/images/img09.jpg" alt="모임 대표 사진" class="card_img" />
-                            <div class="card_content">
-                                <dl class="card_desc">
-                                    <dt class="card_title">
-                                        <h5>혼저옵서예</h5>
-                                    </dt>
-                                    <dd class="card_subtitle">
-                                        바람부는 제주에는 돌도 많지만<br />
-                                        인정많고 마음씨 고운 아가씨도 많지요
-                                    </dd>
-                                    <dd class="card_like">
-                                        <p class="chk_like">
-                                            <span class="like_num">4</span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <p class="card_timeleft"> <!-- Time Left (남은 시간이 1주일 미만일 때만 표시) -->
+                                    3일 22:40:50
+                                </p>
+                                <img src="./resources/index/images/img09.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>혼저옵서예</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            바람부는 제주에는 돌도 많지만<br />
+                                            인정많고 마음씨 고운 아가씨도 많지요
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">4</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            제주특별자치도 > 서귀포아구찜
                                         </p>
-                                    </dd>
-                                </dl> <!-- Card Item - Description -->
-    
-                                <div class="card_spec">
-                                    <p class="card_location_small">
-                                        <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                        제주특별자치도 > 서귀포아구찜
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_5.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>최말자 님</span>
-                                    </p>
-                                </div> <!-- Card Item - Location (Simple) -->
-    
-                                <div class="card_location">
-                                    <img src="./resources/index/images/img03.jpg" alt="모임 장소" class="location_pict" />
-                                    <dl class="location_desc">
-                                        <dt>서귀포아구찜</dt>
-                                        <dd>#감귤와인</dd>
-                                    </dl>
-                                    <p class="item_price">참여비 45,000원</p>
-                                </div> <!-- Card Item - Location (Hover Detail) -->
-                            </div>
-                        </div> <!-- Single Card -->
-    
-                        <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
-                            <p class="card_timeleft"> <!-- Time Left (남은 시간이 1주일 미만일 때만 표시) -->
-                                4일 11:15:26
-                            </p>
-                            <img src="./resources/index/images/img02.jpg" alt="모임 대표 사진" class="card_img" />
-                            <div class="card_content">
-                                <dl class="card_desc">
-                                    <dt class="card_title">
-                                        <h5>멜기세덱 원샷 가능하신 분들만</h5>
-                                    </dt>
-                                    <dd class="card_subtitle">
-                                        술고래 환영<br />
-                                        돌고래 참여불가
-                                    </dd>
-                                    <dd class="card_like">
-                                        <p class="chk_like">
-                                            <span class="like_num">15</span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_5.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>최말자 님</span>
                                         </p>
-                                    </dd>
-                                </dl> <!-- Card Item - Description -->
-    
-                                <div class="card_spec">
-                                    <p class="card_location_small">
-                                        <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                        런던광역시 축구 > 리버풀 꼼장어
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_8.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>마징가 님</span>
-                                    </p>
-                                </div> <!-- Card Item - Location (Simple) -->
-    
-                                <div class="card_location">
-                                    <img src="./resources/index/images/img16.jpg" alt="모임 장소" class="location_pict" />
-                                    <dl class="location_desc">
-                                        <dt>리버풀 꼼장어</dt>
-                                        <dd>#꼼장어 #아나고 #산낙지</dd>
-                                    </dl>
-                                    <p class="item_price">최소 35,000원</p>
-                                </div> <!-- Card Item - Location (Hover Detail) -->
-                            </div>
-                        </div> <!-- Single Card -->
-    
-                        <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
-                            <p class="card_timeleft"> <!-- Time Left (남은 시간이 1주일 미만일 때만 표시) -->
-                                5일 16:15:09
-                            </p>
-                            <img src="./resources/index/images/img18.jpg" alt="모임 대표 사진" class="card_img" />
-                            <div class="card_content">
-                                <dl class="card_desc">
-                                    <dt class="card_title">
-                                        <h5>슈퍼-겁쟁이 쉼터</h5>
-                                    </dt>
-                                    <dd class="card_subtitle">
-                                        겁쟁이 쉼터조차 두려운 분들을 위한<br />
-                                        꿈과 희망의 장소
-                                    </dd>
-                                    <dd class="card_like">
-                                        <p class="chk_like">
-                                            <span class="like_num">9</span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
+                                    </div> <!-- Card Item - Location (Simple) -->
+
+                                    <div class="card_location">
+                                        <img src="./resources/index/images/img03.jpg" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>서귀포아구찜</dt>
+                                            <dd>#감귤와인</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 45,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div>
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
+                                <p class="card_timeleft"> <!-- Time Left (남은 시간이 1주일 미만일 때만 표시) -->
+                                    4일 11:15:26
+                                </p>
+                                <img src="./resources/index/images/img02.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>멜기세덱 원샷 가능하신 분들만</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            술고래 환영<br />
+                                            돌고래 참여불가
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">15</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            런던광역시 축구 > 리버풀 꼼장어
                                         </p>
-                                    </dd>
-                                </dl> <!-- Card Item - Description -->
-    
-                                <div class="card_spec">
-                                    <p class="card_location_small">
-                                        <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                        비키니 시티 > 슈퍼 겁쟁이 쉼터
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_9.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>김쫄보 님</span>
-                                    </p>
-                                </div> <!-- Card Item - Location (Simple) -->
-    
-                                <div class="card_location">
-                                    <img src="./resources/index/images/img17.jpg" alt="모임 장소" class="location_pict" />
-                                    <dl class="location_desc">
-                                        <dt>슈퍼 겁쟁이 쉼터</dt>
-                                        <dd>#스펀지밥 #저깊은바닷속</dd>
-                                    </dl>
-                                    <p class="item_price">참여비 15,000원</p>
-                                </div> <!-- Card Item - Location (Hover Detail) -->
-                            </div>
-                        </div> <!-- Single Card -->
-    
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_8.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>마징가 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/index/images/img16.jpg" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>리버풀 꼼장어</dt>
+                                            <dd>#꼼장어 #아나고 #산낙지</dd>
+                                        </dl>
+                                        <p class="item_price">최소 35,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div>
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <p class="card_timeleft"> <!-- Time Left (남은 시간이 1주일 미만일 때만 표시) -->
+                                    5일 16:15:09
+                                </p>
+                                <img src="./resources/index/images/img18.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>슈퍼-겁쟁이 쉼터</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            겁쟁이 쉼터조차 두려운 분들을 위한<br />
+                                            꿈과 희망의 장소
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">9</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            비키니 시티 > 슈퍼 겁쟁이 쉼터
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_9.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>김쫄보 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/index/images/img17.jpg" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>슈퍼 겁쟁이 쉼터</dt>
+                                            <dd>#스펀지밥 #저깊은바닷속</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 15,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div>
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img29.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>슬라이더 더미</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            덤덤
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">156</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            열한시 오십구
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>조첨식 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>공사중</dt>
+                                            <dd>#공사중</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 50,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div> <!-- 슬라이더 더미 -->
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img29.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>슬라이더 더미</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            덤덤
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">156</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            열한시 오십구
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>조첨식 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>공사중</dt>
+                                            <dd>#공사중</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 50,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div> <!-- 슬라이더 더미 -->
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img29.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>슬라이더 더미</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            덤덤
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">156</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            열한시 오십구
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>조첨식 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>공사중</dt>
+                                            <dd>#공사중</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 50,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div> <!-- 슬라이더 더미 -->
+
                     </div> <!-- Card Slider -->
 
                 </section> <!-- #secImminent -->
@@ -418,141 +735,285 @@
 
                     <div class="card_slide_container"> <!-- Card Slider -->
 
-                        <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
-                            <img src="./resources/index/images/img08.jpg" alt="모임 대표 사진" class="card_img" />
-                            <div class="card_content">
-                                <dl class="card_desc">
-                                    <dt class="card_title">
-                                        <h5>자작하면 지상렬 <span>#65535</span></h5>
-                                    </dt>
-                                    <dd class="card_subtitle">
-                                        전국 지상렬 협회<br />
-                                        우리는 군단이다
-                                    </dd>
-                                    <dd class="card_like">
-                                        <p class="chk_like">
-                                            <span class="like_num">65,535</span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
+                        <div class="card_guard">
+                            <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
+                                <img src="./resources/index/images/img08.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>자작하면 지상렬 <span>#65535</span></h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            전국 지상렬 협회<br />
+                                            우리는 군단이다
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">65,535</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            강원도 양구군 > 롯데리아
                                         </p>
-                                    </dd>
-                                </dl> <!-- Card Item - Description -->
-    
-                                <div class="card_spec">
-                                    <p class="card_location_small">
-                                        <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                        강원도 양구군 > 롯데리아
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_11.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>지상렬 님</span>
-                                    </p>
-                                </div> <!-- Card Item - Location (Simple) -->
-    
-                                <div class="card_location">
-                                    <img src="./resources/index/images/img19.jpg" alt="모임 장소" class="location_pict" />
-                                    <dl class="location_desc">
-                                        <dt>롯데리아</dt>
-                                        <dd>#클래식치즈버거 #군인착취</dd>
-                                    </dl>
-                                    <p class="item_price">최소 8,900원</p>
-                                </div> <!-- Card Item - Location (Hover Detail) -->
-                            </div>
-                        </div> <!-- Single Card -->
-    
-                        <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
-                            <img src="./resources/index/images/img11.jpg" alt="모임 대표 사진" class="card_img" />
-                            <div class="card_content">
-                                <dl class="card_desc">
-                                    <dt class="card_title">
-                                        <h5>우리손으로맨든와인 <span>#255</span></h5>
-                                    </dt>
-                                    <dd class="card_subtitle">
-                                        와이너리에서 함께 배우는 와인 제조 & 숙성법<br />
-                                        실온에 방치하지 마세요
-                                    </dd>
-                                    <dd class="card_like">
-                                        <p class="chk_like">
-                                            <span class="like_num">255</span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_11.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>지상렬 님</span>
                                         </p>
-                                    </dd>
-                                </dl> <!-- Card Item - Description -->
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/index/images/img19.jpg" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>롯데리아</dt>
+                                            <dd>#클래식치즈버거 #군인착취</dd>
+                                        </dl>
+                                        <p class="item_price">최소 8,900원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div>
     
-                                <div class="card_spec">
-                                    <p class="card_location_small">
-                                        <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                        충청북도 영동군 > 산막 와이너리
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>최점숙 님</span>
-                                    </p>
-                                </div> <!-- Card Item - Location (Simple) -->
-    
-                                <div class="card_location">
-                                    <img src="./resources/index/images/img20.jpg" alt="모임 장소" class="location_pict" />
-                                    <dl class="location_desc">
-                                        <dt>산막 와이너리</dt>
-                                        <dd>#와이너리 #국산와인</dd>
-                                    </dl>
-                                    <p class="item_price">참여비 76,000원</p>
-                                </div> <!-- Card Item - Location (Hover Detail) -->
-                            </div>
-                        </div> <!-- Single Card -->
-    
-                        <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
-                            <img src="./resources/index/images/img21.jpg" alt="모임 대표 사진" class="card_img" />
-                            <div class="card_content">
-                                <dl class="card_desc">
-                                    <dt class="card_title">
-                                        <h5>와인 VS 좀비 <span>#99</span></h5>
-                                    </dt>
-                                    <dd class="card_subtitle">
-                                        술이 죽느냐, 내가 죽느냐<br />
-                                        손에 땀을 쥐는 숙명의 대결
-                                    </dd>
-                                    <dd class="card_like">
-                                        <p class="chk_like">
-                                            <span class="like_num">99</span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
-                                            <span class="like_confetti"></span>
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img11.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>우리손으로맨든와인 <span>#255</span></h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            와이너리에서 함께 배우는 와인 제조 & 숙성법<br />
+                                            실온에 방치하지 마세요
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">255</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            충청북도 영동군 > 산막 와이너리
                                         </p>
-                                    </dd>
-                                </dl> <!-- Card Item - Description -->
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>최점숙 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/index/images/img20.jpg" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>산막 와이너리</dt>
+                                            <dd>#와이너리 #국산와인</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 76,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div>
     
-                                <div class="card_spec">
-                                    <p class="card_location_small">
-                                        <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                        경기도 화성시 > 한국관나이트클럽
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_10.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>존레논 님</span>
-                                    </p>
-                                </div> <!-- Card Item - Location (Simple) -->
-    
-                                <div class="card_location">
-                                    <img src="./resources/index/images/img22.jpg" alt="모임 장소" class="location_pict" />
-                                    <dl class="location_desc">
-                                        <dt>한국관나이트클럽</dt>
-                                        <dd>#비틀즈내한공연</dd>
-                                    </dl>
-                                    <p class="item_price">최소 30,000원</p>
-                                </div> <!-- Card Item - Location (Hover Detail) -->
-                            </div>
-                        </div> <!-- Single Card -->    
-                        
+                        <div class="card_guard">
+                            <div class="card_item" data-category="byob"> <!-- Card Item - Type (BYOB) -->
+                                <img src="./resources/index/images/img21.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>와인 VS 좀비 <span>#99</span></h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            술이 죽느냐, 내가 죽느냐<br />
+                                            손에 땀을 쥐는 숙명의 대결
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">99</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            경기도 화성시 > 한국관나이트클럽
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_10.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>존레논 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/index/images/img22.jpg" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>한국관나이트클럽</dt>
+                                            <dd>#비틀즈내한공연</dd>
+                                        </dl>
+                                        <p class="item_price">최소 30,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div>
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img29.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>슬라이더 더미</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            덤덤
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">156</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            열한시 오십구
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>조첨식 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>공사중</dt>
+                                            <dd>#공사중</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 50,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div> <!-- 슬라이더 더미 -->
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img29.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>슬라이더 더미</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            덤덤
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">156</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            열한시 오십구
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>조첨식 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>공사중</dt>
+                                            <dd>#공사중</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 50,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div> <!-- 슬라이더 더미 -->
+
+                        <div class="card_guard">
+                            <div class="card_item" data-category="list"> <!-- Card Item - Type (LIST) -->
+                                <img src="./resources/index/images/img29.jpg" alt="모임 대표 사진" class="card_img" />
+                                <div class="card_content">
+                                    <dl class="card_desc">
+                                        <dt class="card_title">
+                                            <h5>슬라이더 더미</h5>
+                                        </dt>
+                                        <dd class="card_subtitle">
+                                            덤덤
+                                        </dd>
+                                        <dd class="card_like">
+                                            <p class="chk_like">
+                                                <span class="like_num">156</span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                                <span class="like_confetti"></span>
+                                            </p>
+                                        </dd>
+                                    </dl> <!-- Card Item - Description -->
+        
+                                    <div class="card_spec">
+                                        <p class="card_location_small">
+                                            <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                            열한시 오십구
+                                        </p>
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>조첨식 님</span>
+                                        </p>
+                                    </div> <!-- Card Item - Location (Simple) -->
+        
+                                    <div class="card_location">
+                                        <img src="./resources/common/images/uc.png" alt="모임 장소" class="location_pict" />
+                                        <dl class="location_desc">
+                                            <dt>공사중</dt>
+                                            <dd>#공사중</dd>
+                                        </dl>
+                                        <p class="item_price">참여비 50,000원</p>
+                                    </div> <!-- Card Item - Location (Hover Detail) -->
+                                </div>
+                            </div> <!-- Single Card -->
+                        </div> <!-- 슬라이더 더미 -->
+
                     </div> <!-- Card Slider -->
 
                 </section> <!-- #secNewbie -->
@@ -825,6 +1286,8 @@
             </footer> <!-- Footer -->
 
         </div> <!-- #wrap -->
+
+        <script type="text/javascript" src="./resources/common/js/slick.min.js"></script> <!-- Slick JS -->
 
     </body>
 

@@ -1,20 +1,51 @@
 /* ---------- Media Query CSS ---------- */
 
-@media screen and (max-width: 60rem) {
+@media screen and (max-width: 1200px) {
     /* 공통 요소 */
 
+    header#headMobile {
+        top: 0;
+        transition: .3s ease-out;
+    }
 
     /* 공통 요소 끝 */
     /* 개별 페이지 요소 */
 
+    .item_review {
+        width: 100%;
+    }
+
+    .short_banner {
+        width: 100%;
+    }
 
     /* 개별 페이지 요소 끝*/
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 800px) {
+    .item_review > .review_image {
+    }
 
+    .card_partner {
+        width: calc((100% - .5rem) / 2);
+    }
+
+    .long_banner {
+
+        h2 {
+            top: 4rem;
+            font-size: var(--fnt_24);
+        }
+
+        .banner_image {
+            height: 80%;
+            top: auto;
+            bottom: -1.5rem;
+            right: 1rem;
+        }
+    }
 }
 
-@media screen and (max-width: 20rem) {
+@media screen and (max-width: 400px) {
 
 }

@@ -2,13 +2,8 @@
 
 $(document).ready(function() { // jQuery Load
 
-    if ($(window).scrollTop() >= 60) {
-        $('header#headBase').addClass('scrolled')
-        $('nav#navBase').removeClass('nav_index');
-    } else {
-        $('header#headBase').removeClass('scrolled')
-        $('nav#navBase').addClass('nav_index');
-    }
+    $(window).trigger('resize');
+    $(window).trigger('scroll');
 
     $(window).scroll(function() {
         if ($(window).scrollTop() >= 60) {
@@ -20,36 +15,45 @@ $(document).ready(function() { // jQuery Load
         }
     }); // Window Scrolling Actions
 
-    $('.slider_main').lightSlider({
-        item: 1,
-        slideMargin: 0,
-        mode: 'fade',
-        loop: true,
-        auto: true,
-        speed: 300,
-        pause: 5000,
+    // Actual Codes
+
+    $('#mainSlider').slick({
+        slide: '.main-slide',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
         pauseOnHover: true,
+        infinite: true,
+        fade: true,
+        arrows: false,
+        dots: true,
+        appendDots: $('#mainSlider'),
+        dotsClass: 'main-dots'
     });
 
-    $('.card_slide_container').lightSlider({
-        item: 3,
-        slideMargin: 10,
-        autoWidth: false,
-        controls: false,
+    $('.card_slide_container').slick({
+        slide: '.card_guard',
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        arrows: false,
+        dots: false,
+        variableWidth: true,
         responsive: [
             {
-                breakpoint: 1199,
+                breakpoint: 800,
                 settings: {
-                    autoWidth: true,
-                }
+                    slidesToShow: 2,
+                },
             },
             {
                 breakpoint: 400,
                 settings: {
-                    item: 1,
+                    slidesToShow: 1,
                 }
             },
         ],
     });
 
-}) // jQuery Closed
+}); // jQuery Closed
