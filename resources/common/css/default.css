@@ -252,7 +252,8 @@ a:active {
 
 /* ---------- 공통 선언 종료 ---------- */
 /* ---------- 우선 / 예외 선언 시작 ---------- */
-h1#mainLogo {
+h1#mainLogo,
+h1#mobileLogo {
 	width: 10rem;
 	height: 3rem;
 	border: none;
@@ -262,7 +263,8 @@ h1#mainLogo {
 	font-weight: normal;
 }
 
-h1#mainLogo > a {
+h1#mainLogo > a,
+h1#mobileLogo > a {
 	display: flex;
 	justify-content: center;
 	align-items: center;

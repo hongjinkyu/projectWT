@@ -403,7 +403,7 @@ button.btn_account {
     }
 }
 
-header#headMobile {
+header#headMobile {    
     position: fixed;
     top: -5rem;
     left: 0;
@@ -412,6 +412,110 @@ header#headMobile {
     background: rgb(var(--color_light));
     outline: var(--border);
     z-index: 10000;
+
+    > div.int_wrap {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        height: 100%;
+
+        > h1#mobileLogo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+nav#navBurger {
+    > .btn_burger {
+        position: relative;
+        width: 1.5rem;
+        height: 1.5rem;
+
+        > span {
+            display: block;
+            position: absolute;
+            left: 10%;
+            width: 80%;
+            height: .1rem;
+            border-radius: .05rem;
+            background: rgb(var(--color_text));
+            transition: .3s;
+
+            &:nth-child(1) {
+                top: 20%;
+            }
+
+            &:nth-child(2) {
+                top: calc(50% - .05rem);
+                transform-origin: .05rem 50%;
+            }
+
+            &:nth-child(3) {
+                bottom: 20%;
+            }
+        }
+
+        &.on {
+            background: rgb(var(--color_tone1));
+
+            > span {
+                &:nth-child(1) {
+                    top: calc(50% - .05rem);
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    width: 0;
+                }
+
+                &:nth-child(3) {
+                    top: calc(50% - .05rem);
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+div.mnav_background {
+    display: none;
+    position: fixed;
+    top: 4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(var(--color_dark), .5);
+    backdrop-filter: blur(.5rem);
+    z-index: -1;
+
+    div#mobileNav {
+        padding: 1rem;
+        width: 16rem;
+        height: 100%;
+        background: rgb(var(--color_light));
+
+        ul.mnav_list {
+            li {
+                > a {
+                    display: block;
+                    padding: 1rem;
+
+                    &:hover,
+                    &:focus {
+                        background: rgb(var(--color_tone1));
+                    }
+                }
+
+                & + li {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
 }
 
 section#sideBar {

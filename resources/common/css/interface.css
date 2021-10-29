@@ -420,6 +420,88 @@ header#headMobile {
 	outline: var(--border);
 	z-index: 10000;
 }
+header#headMobile > div.int_wrap {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1rem;
+	height: 100%;
+}
+header#headMobile > div.int_wrap > h1#mobileLogo {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+nav#navBurger > .btn_burger {
+	position: relative;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+nav#navBurger > .btn_burger > span {
+	display: block;
+	position: absolute;
+	left: 10%;
+	width: 80%;
+	height: 0.1rem;
+	border-radius: 0.05rem;
+	background: rgb(var(--color_text));
+	transition: 0.3s;
+}
+nav#navBurger > .btn_burger > span:nth-child(1) {
+	top: 20%;
+}
+nav#navBurger > .btn_burger > span:nth-child(2) {
+	top: calc(50% - .05rem);
+	transform-origin: 0.05rem 50%;
+}
+nav#navBurger > .btn_burger > span:nth-child(3) {
+	bottom: 20%;
+}
+nav#navBurger > .btn_burger.on {
+	background: rgb(var(--color_tone1));
+}
+nav#navBurger > .btn_burger.on > span:nth-child(1) {
+	top: calc(50% - .05rem);
+	transform: rotate(45deg);
+}
+nav#navBurger > .btn_burger.on > span:nth-child(2) {
+	width: 0;
+}
+nav#navBurger > .btn_burger.on > span:nth-child(3) {
+	top: calc(50% - .05rem);
+	transform: rotate(-45deg);
+}
+
+div.mnav_background {
+	display: none;
+	position: fixed;
+	top: 4rem;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(var(--color_dark), 0.5);
+	-webkit-backdrop-filter: blur(0.5rem);
+	        backdrop-filter: blur(0.5rem);
+	z-index: -1;
+}
+div.mnav_background div#mobileNav {
+	padding: 1rem;
+	width: 16rem;
+	height: 100%;
+	background: rgb(var(--color_light));
+}
+div.mnav_background div#mobileNav ul.mnav_list li > a {
+	display: block;
+	padding: 1rem;
+}
+div.mnav_background div#mobileNav ul.mnav_list li > a:hover, div.mnav_background div#mobileNav ul.mnav_list li > a:focus {
+	background: rgb(var(--color_tone1));
+}
+div.mnav_background div#mobileNav ul.mnav_list li + li {
+	margin-top: 1rem;
+}
 
 section#sideBar_left, section#sideBar_right {
 	width: calc((100% - 38rem) / 2);

@@ -2,6 +2,9 @@
 
 $(document).ready(function() { // jQuery Load
 
+    $(window).trigger('resize');
+    $(window).trigger('scroll');
+
     if ($(window).scrollTop() >= 60) {
         $('header#headBase.head_index').addClass('scrolled')
     } else {
@@ -26,7 +29,12 @@ $(document).ready(function() { // jQuery Load
     }); // Window Scrolling Actions
 
     $(window).resize(function() {
-
+        if ($(this).width() >= 1200) {
+            $('.btn_burger').removeClass('on');
+            $('body').removeClass('prevent_scroll');
+            $('.mnav_background').fadeOut();
+            $('#mobileNav').slideUp();
+        } else {};
     }); // Window Resizing Actions
 
 // ---------- Actual Codes ----------
@@ -67,5 +75,19 @@ $(document).ready(function() { // jQuery Load
             $(this).siblings('.custom_selector_form').slideToggle(200);
         });
     }); // Custom Selector (Gathering - Open)
+
+    $('.btn_burger').click(function() {
+        if ($(this).hasClass('on')) {
+            $(this).removeClass('on');
+            $('body').removeClass('prevent_scroll');
+            $('.mnav_background').fadeOut();
+            $('#mobileNav').slideUp();
+        } else {
+            $(this).addClass('on');
+            $('body').addClass('prevent_scroll');
+            $('.mnav_background').fadeIn();
+            $('#mobileNav').slideDown();
+        };
+    }); // Mobile Navigation
 
 }) // jQuery Closed

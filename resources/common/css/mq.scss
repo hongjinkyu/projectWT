@@ -8,6 +8,10 @@
         transition: .3s ease-out;
     }
 
+    header#headBase {
+        display: none;
+    }
+
     /* 공통 요소 끝 */
     /* 개별 페이지 요소 */
 
@@ -16,7 +20,6 @@
     }
 
     .long_banner {
-
         .banner_image {
             opacity: .5;
             transition: .3s;
@@ -33,6 +36,10 @@
 
 @media screen and (max-width: 800px) {
     /* 공통 요소 */
+
+    h2 {
+        font-size: var(--fnt_24);
+    }
 
     ul#footLinks {
         flex-flow: column nowrap;
@@ -75,14 +82,23 @@
     }
 
     .long_banner {
+        overflow: hidden;
+
+        > a {
+            padding: 1.5rem;
+        }
+        
+        p {
+            position: static;
+        }
 
         h2 {
-            top: 4rem;
-            font-size: var(--fnt_24);
+            margin-top: 1rem;
+            position: static;
         }
 
         .banner_image {
-            height: 80%;
+            height: 75%;
             top: auto;
             bottom: .5rem;
             right: 1rem;
@@ -106,7 +122,19 @@
 @media screen and (max-width: 400px) {
     /* 공통 요소 */
 
+    h1#mobileLogo {
+        width: 6.5rem;
+        height: 2rem;
+        font-size: var(--fnt_20);
+    }
 
+    h2 {
+        font-size: var(--fnt_20);
+    }
+
+    h3 {
+        font-size: var(--fnt_20);
+    }
 
     /* 공통 요소 끝 */
     /* 개별 페이지 요소 */
@@ -122,16 +150,15 @@
     }
 
     .long_banner {
-
         p {
             top: 1rem;
             left: 1rem;
+            font-size: var(--fnt_12);
         }
 
         h2 {
             top: 3rem;
             left: 1rem;
-            font-size: var(--fnt_20);
         }
 
         .banner_image {
@@ -139,6 +166,17 @@
             top: auto;
             bottom: .5rem;
             right: 1rem;
+        }
+    }
+
+    .card_partner {
+        width: 100%;
+    }
+
+    .short_banner {
+        p:first-of-type,
+        p:last-of-type {
+            font-size: var(--fnt_12);
         }
     }
 

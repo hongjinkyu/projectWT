@@ -7,6 +7,10 @@
 		transition: 0.3s ease-out;
 	}
 
+	header#headBase {
+		display: none;
+	}
+
 	/* 공통 요소 끝 */
 	/* 개별 페이지 요소 */
 	.item_review {
@@ -27,6 +31,10 @@
 /* 1200px */
 @media screen and (max-width: 800px) {
 	/* 공통 요소 */
+	h2 {
+		font-size: var(--fnt_24);
+	}
+
 	ul#footLinks {
 		flex-flow: column nowrap;
 		align-items: flex-start;
@@ -62,12 +70,21 @@
 		padding-bottom: 0;
 	}
 
+	.long_banner {
+		overflow: hidden;
+	}
+	.long_banner > a {
+		padding: 1.5rem;
+	}
+	.long_banner p {
+		position: static;
+	}
 	.long_banner h2 {
-		top: 4rem;
-		font-size: var(--fnt_24);
+		margin-top: 1rem;
+		position: static;
 	}
 	.long_banner .banner_image {
-		height: 80%;
+		height: 75%;
 		top: auto;
 		bottom: 0.5rem;
 		right: 1rem;
@@ -87,6 +104,20 @@
 /* 800px */
 @media screen and (max-width: 400px) {
 	/* 공통 요소 */
+	h1#mobileLogo {
+		width: 6.5rem;
+		height: 2rem;
+		font-size: var(--fnt_20);
+	}
+
+	h2 {
+		font-size: var(--fnt_20);
+	}
+
+	h3 {
+		font-size: var(--fnt_20);
+	}
+
 	/* 공통 요소 끝 */
 	/* 개별 페이지 요소 */
 	.card_guard + .card_guard {
@@ -100,17 +131,26 @@
 	.long_banner p {
 		top: 1rem;
 		left: 1rem;
+		font-size: var(--fnt_12);
 	}
 	.long_banner h2 {
 		top: 3rem;
 		left: 1rem;
-		font-size: var(--fnt_20);
 	}
 	.long_banner .banner_image {
 		height: 80%;
 		top: auto;
 		bottom: 0.5rem;
 		right: 1rem;
+	}
+
+	.card_partner {
+		width: 100%;
+	}
+
+	.short_banner p:first-of-type,
+.short_banner p:last-of-type {
+		font-size: var(--fnt_12);
 	}
 
 	div#footContent {
