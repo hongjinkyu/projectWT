@@ -18,8 +18,6 @@
     <link rel="stylesheet" type="text/css" href="./resources/gathering/css/layout_gathering_detail.css" />
     <!-- Page-Specific CSS -->
 
-    <link rel="stylesheet" type="text/css" href="./resources/common/css/swiper.min.css" /> <!-- Swiper Slider -->
-
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
     <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
     <script type="text/javascript" src="./resources/gathering/js/js_gathering_detail.js"></script> <!-- Page-Specific jQuery -->
@@ -103,18 +101,36 @@
 
                     <article id="detailInfo">
                         <div class="gathering_info">
-                            <h3>우리 모임 정상영업 합니다</h3>
-                            <p>건물 같은 건 장식입니다</p>
-                            <p class="group_type">이 모임은 리스트 어쩌고</p>
+                            <h3>슈퍼-겁쟁이 쉼터</h3>
+                            <p>겁쟁이 쉼터조차 두려운 분들을 꿈과 희망의 장소</p>
+                            <p class="group_type">※ 이 모임은 주최자가 와인을 준비하는 LIST 모임입니다.</p>
                         </div>
 
                         <div class="spec_info">
-                            <p>모</p>
-                            <p>초</p>
-                            <p>참</p>
-                            <p>콜</p>
-                            <p>장</p>
-                            <p>준</p>
+                            <p>
+                                모임 날짜
+                                <span>2028e102350215t8</span>
+                            </p>
+                            <p>
+                                초대인원
+                                <span>서른마흔다섯명</span>
+                            </p>
+                            <p>
+                                참여비용
+                                <span>2억원</span>
+                            </p>
+                            <p>
+                                콜키지
+                                <span>돈내셈</span>
+                            </p>
+                            <p>
+                                모임 장소
+                                <span>슈퍼 겁쟁이 쉼터</span>
+                            </p>
+                            <p>
+                                준비물
+                                <span>스노클링, 오리발, 폐활량</span>
+                            </p>
                         </div>
 
                         <div class="host_info">
@@ -123,33 +139,62 @@
                             <p>
                                 14회의 모임 주최
                                 45개의 후기
-                                버튼
+                                <button class="user_profile">
+                                    상세 프로필 보기
+                                </button>
                             </p>
                         </div>
+
+                        <button id="btnJoin">
+                            참여 신청하기
+                        </button>
                     </article>
 
                     <article id="detailOffer">
-                        제공하는거나 뭐 그런거
-                        <div class="wine_icon redwine">
-                            <span class="wave_front"></span>
-                            <span class="wave_back"></span>
+                        <h4>상세정보</h4>
+                        <div class="offer_wine">
+                            제공되는 와인
+                            <ol>
+                                <li>
+                                    <div class="wine_icon redwine">
+                                        <span class="wave_front"></span>
+                                        <span class="wave_back"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wine_icon whitewine">
+                                        <span class="wave_front"></span>
+                                        <span class="wave_back"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wine_icon sparkling">
+                                        <span class="wave_front"></span>
+                                        <span class="wave_back"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wine_icon others">
+                                        <span class="wave_front"></span>
+                                        <span class="wave_back"></span>
+                                    </div>
+                                </li>
+                            </ol>
                         </div>
-                        <div class="wine_icon whitewine">
-                            <span class="wave_front"></span>
-                            <span class="wave_back"></span>
-                        </div>
-                        <div class="wine_icon sparkling">
-                            <span class="wave_front"></span>
-                            <span class="wave_back"></span>
-                        </div>
-                        <div class="wine_icon others">
-                            <span class="wave_front"></span>
-                            <span class="wave_back"></span>
+
+                        <div class="offer_food">
+                            제공되는 코스 요리
+                            <ol>
+                                <li>깐풍기</li>
+                                <li>라조기</li>
+                                <li>오향장육</li>
+                                <li>고추잡채</li>
+                            </ol>
                         </div>
                     </article>
 
                     <article id="detailDesc">
-                        어쩌구 저쩌구 설명
+                        <h4>모임 설명</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis doloribus iste, placeat eum quas repudiandae expedita! Id magnam corporis quis temporibus eius necessitatibus fugiat fuga nobis, sint molestias doloremque.
                             Numquam ex earum consequuntur necessitatibus in id similique repudiandae quia eos quisquam sapiente iste voluptate recusandae, neque ad sint mollitia enim aperiam itaque nam aspernatur inventore. Perferendis ipsum nobis voluptatum.
@@ -160,7 +205,7 @@
                     </article>
 
                     <article id="detailLocation">
-                        어디서 모일껀데
+                        <h4>모임 장소</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis doloribus iste, placeat eum quas repudiandae expedita! Id magnam corporis quis temporibus eius necessitatibus fugiat fuga nobis, sint molestias doloremque.
                             Numquam ex earum consequuntur necessitatibus in id similique repudiandae quia eos quisquam sapiente iste voluptate recusandae, neque ad sint mollitia enim aperiam itaque nam aspernatur inventore. Perferendis ipsum nobis voluptatum.
@@ -168,19 +213,143 @@
                             Placeat, assumenda perspiciatis quasi itaque ducimus eum, corporis distinctio aperiam laudantium delectus sed sit quam doloremque facilis. Deleniti distinctio magnam at praesentium, fugiat nisi nulla perferendis, culpa temporibus laborum assumenda.
                             Quos dolor sed unde impedit saepe quisquam quis molestias amet autem laboriosam, eveniet numquam tempore sint nihil quidem rerum aut deserunt delectus distinctio nulla minima, nemo placeat repellendus asperiores? Cum!
                         </p>
+
+                        <p>
+                            여기에 뭐 공통으로 들어가는 경고문 넣어놓는게 좋을듯
+                        </p>
                     </article>
 
                     <article id="detailReview">
-                        후기
-                        <p class="bubble">
-                            <span class="bubble_point">
-                                <span class="bubble_point_back"></span>
-                            </span>
-                            <span class="bubble_text">
-                                할아버지의 이름을 걸고 게살버거의 진실을 반드시 파헤치고 말겠어
-                            </span>
-                        </p>
+                        <h4>모임 후기</h4>
+
+                        <div class="review_comment">
+                            <ul class="comment_container">
+                                <li class="comment_bubble">
+                                    <div class="comment_user">
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>김쫄보 님</span>
+                                        </p>
+                                        <p class="comment_data">
+                                            <span>2021. 13. 32</span>
+                                            <span>"슈퍼-겁쟁이 쉼터 #5" 참석</span>
+                                        </p>
+                                    </div>
+        
+                                    <div class="bubble">
+                                        <span class="bubble_point">
+                                            <span class="bubble_point_back"></span>
+                                        </span>
+            
+                                        <span class="bubble_text">
+                                            도배 ㄴㄴ
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="comment_bubble">
+                                    <div class="comment_user">
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>최점숙 님</span>
+                                        </p>
+                                        <p class="comment_data">
+                                            <span>2021. 13. 32</span>
+                                            <span>"슈퍼-겁쟁이 쉼터 #5" 참석</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="bubble">
+                                        <span class="bubble_point">
+                                            <span class="bubble_point_back"></span>
+                                        </span>
+
+                                        <span class="bubble_text">
+                                            Tempora dolorum aliquid est expedita, eligendi, magni quis distinctio facere esse ipsam accusantium ea tenetur odio illum corporis perferendis alias a autem voluptatum reiciendis modi!
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="comment_bubble">
+                                    <div class="comment_user">
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>최점숙 님</span>
+                                        </p>
+                                        <p class="comment_data">
+                                            <span>2021. 12. 31</span>
+                                            <span>"슈퍼-겁쟁이 쉼터 #4" 참석</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="bubble">
+                                        <span class="bubble_point">
+                                            <span class="bubble_point_back"></span>
+                                        </span>
+
+                                        <span class="bubble_text">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius id voluptate assumenda amet repellat quis ipsa doloribus mollitia deleniti, voluptates dolores molestiae praesentium cum adipisci, cupiditate laboriosam accusantium sit qui!
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="comment_bubble">
+                                    <div class="comment_user">
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>최점숙 님</span>
+                                        </p>
+                                        <p class="comment_data">
+                                            <span>2021. 11. 30</span>
+                                            <span>"슈퍼-겁쟁이 쉼터 #3" 참석</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="bubble">
+                                        <span class="bubble_point">
+                                            <span class="bubble_point_back"></span>
+                                        </span>
+
+                                        <span class="bubble_text">
+                                            언더더씨 언더시티
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="comment_bubble">
+                                    <div class="comment_user">
+                                        <p class="user_profile">
+                                            <img src="./resources/index/images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                            <span>최점숙 님</span>
+                                        </p>
+                                        <p class="comment_data">
+                                            <span>2021. 10. 29</span>
+                                            <span>"슈퍼-겁쟁이 쉼터 #2" 참석</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="bubble">
+                                        <span class="bubble_point">
+                                            <span class="bubble_point_back"></span>
+                                        </span>
+
+                                        <span class="bubble_text">
+                                            아뇨 전 뚱인데요
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>페이징 12354516246</li>
+                            </ul>
+
+                            <input type="text" name="text_comment" id="txtComment" placeholder="머 댓글 머라 달낀데 악플 달지마리" />
+
+                        </div>
+
                     </article>
+
                 </section>
 
                 <section id="sideBar_right">
