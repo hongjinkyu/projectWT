@@ -6,4 +6,6 @@ $(document).ready(function() { // jQuery Load
 
     }); // Window Scrolling Actions
 
+    // ---------- Actual Codes ----------
+
 }) // jQuery Closed

@@ -2,9 +2,6 @@
 
 $(document).ready(function() { // jQuery Load
 
-    $(window).trigger('resize');
-    $(window).trigger('scroll');
-
     $(window).scroll(function() {
         if ($(window).scrollTop() >= 60) {
             $('header#headBase').addClass('scrolled')
@@ -30,7 +27,7 @@ $(document).ready(function() { // jQuery Load
         dots: true,
         appendDots: $('#mainSlider'),
         dotsClass: 'main-dots'
-    });
+    }); // 메인 슬라이더
 
     $('.card_slide_container').slick({
         slide: '.card_guard',
@@ -55,6 +52,6 @@ $(document).ready(function() { // jQuery Load
                 }
             },
         ],
-    });
+    }); // 아이템 슬라이더
 
 }); // jQuery Closed

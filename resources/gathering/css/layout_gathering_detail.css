@@ -1,3 +1,40 @@
 @charset "UTF-8";
 /* ---------- Page-Specific Layout CSS (Gathering (Detail)) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
+section#contentBar {
+	padding: 0;
+}
+section#contentBar > article {
+	padding: 1rem 0.5rem;
+}
+
+div#detailSlide {
+	position: relative;
+	border-bottom: var(--border);
+	height: 17rem;
+	overflow: hidden;
+}
+div#detailSlide::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to top, rgba(var(--color_dark), 0.75) 0%, transparent 50%);
+	content: "";
+}
+div#detailSlide > * {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+.host_info {
+	padding: 0.5rem;
+	width: 100%;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_bg));
+}

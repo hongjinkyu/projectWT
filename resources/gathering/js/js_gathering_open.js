@@ -2,12 +2,8 @@
 
 $(document).ready(function() {
 
-    $(window).scroll(function() {
-
-    }); // Window Scrolling Actions
-
     $('#summernote').summernote({
-        placeholder: '어쩌고 저쩌고 에디터',
+        placeholder: '모임에 대한 자세한 정보를 적어주세요.',
         lang: 'ko-KR',
         tabsize: 2,
         minHeight: 300,
@@ -22,7 +18,7 @@ $(document).ready(function() {
         ]
     });
 
-// ---------- Actual Codes ----------
+    // ---------- Actual Codes ----------
 
     $('.side_mnu_left > li > a').each(function() {
         $(this).click(function() {
@@ -36,16 +32,16 @@ $(document).ready(function() {
 
             $('.group_type').html($(this).attr('data-tab-target'));
         });
-    });
+    }); // 모임 카테고리에 맞는 화면 띄우기
 
     $('.pop_open').click(function() {
         $('body').addClass('prevent_scroll');
         $('#popGroupEncore').addClass('open');
-    });
+    }); // 기존 모임 이어가기 창 열기
 
     $('.pop_close').click(function() {
         $('body').removeClass('prevent_scroll');
         $('#popGroupEncore').removeClass('open');
-    });
+    }); // 기존 모임 이어가기 창 닫기
 
 }) // jQuery Closed
