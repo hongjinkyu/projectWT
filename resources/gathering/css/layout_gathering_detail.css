@@ -10,7 +10,6 @@ section#contentBar > article {
 
 div#detailSlide {
 	position: relative;
-	border-bottom: var(--border);
 	height: 17rem;
 	overflow: hidden;
 }
@@ -24,17 +23,90 @@ div#detailSlide::before {
 	background: linear-gradient(to top, rgba(var(--color_dark), 0.75) 0%, transparent 50%);
 	content: "";
 }
-div#detailSlide > * {
+div#detailSlide > .slide_body {
+	width: inherit;
+	height: inherit;
+}
+div#detailSlide > .slide_body > img {
 	width: 100%;
 	height: 100%;
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
+div#detailSlide > .slide_thumbs {
+	position: absolute;
+	bottom: 0.25rem;
+	left: 0.25rem;
+	z-index: 2;
+}
+div#detailSlide > .slide_thumbs > button {
+	display: block;
+	float: left;
+	padding: 0;
+	width: 3rem;
+	height: 2.25rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	box-shadow: none;
+	opacity: 0.5;
+}
+div#detailSlide > .slide_thumbs > button.active {
+	border: 0.1rem solid rgb(var(--color_acc1));
+	border-radius: 0.1rem;
+	opacity: 1;
+}
+div#detailSlide > .slide_thumbs > button + button {
+	margin-left: 0.25rem;
+}
 
-.host_info {
+#detailInfo .gathering_info {
+	text-align: center;
+}
+#detailInfo .host_info {
 	padding: 0.5rem;
 	width: 100%;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_bg));
+}
+#detailInfo .host_info .host_pict {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+}
+
+.bubble {
+	position: relative;
+	margin-left: 0.5rem;
+	padding: 0.3rem 0.5rem;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_light));
+	box-shadow: 0 0 75rem rgba(var(--color_subtle), 0.3);
+	color: rgb(var(--color_title));
+	font-size: var(--fnt_14);
+}
+.bubble .bubble_point {
+	display: block;
+	position: absolute;
+	top: 0.4rem;
+	right: 100%;
+	width: 0.6rem;
+	height: 0.6rem;
+	background: rgb(var(--color_bdr));
+	-webkit-clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+	        clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+}
+.bubble .bubble_point_back {
+	display: block;
+	position: absolute;
+	left: 0.1rem;
+	width: 100%;
+	height: 100%;
+	background: rgb(var(--color_light));
+	-webkit-clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+	        clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 }

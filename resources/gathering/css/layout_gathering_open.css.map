@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": ";AAAA,uEAAuE;AAEvE,+CAA+C;AAI/C,+CAA+C;AAC/C,+CAA+C;AAE/C,AAAA,SAAS,CAAC;EACN,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,UAAU;EACrB,eAAe,EAAE,UAAU;CAC9B;;AAED,+CAA+C;AAC/C,0CAA0C;AAI1C,0CAA0C;AAC1C,iDAAiD",
-    "sources": [
-        "layout_gathering_open.scss"
-    ],
-    "names": [],
-    "file": "layout_gathering_open.css"
-}

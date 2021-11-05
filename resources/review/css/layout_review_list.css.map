@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": ";AAAA,oEAAoE;AACpE,iDAAiD;AAEjD,AAAA,UAAU,CAAC;EACP,aAAa,EAAE,MAAM;CACxB;;AAED,AAAA,eAAe,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,QAAQ;EACnB,GAAG,EAAE,YAAY;CACpB;;AAED,AAAA,YAAY,CAAC;EACT,YAAY,EAAE,KAAK;CACtB",
-    "sources": [
-        "layout_review_list.scss"
-    ],
-    "names": [],
-    "file": "layout_review_list.css"
-}

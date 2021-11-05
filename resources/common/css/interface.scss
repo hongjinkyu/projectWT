@@ -534,6 +534,7 @@ section#contentBar {
     border: var(--border);
     border-radius: var(--bdr_outer);
     background: rgb(var(--color_light));
+    box-shadow: 0 0 .75rem rgba(var(--color_subtle), .3);
 
     > h3 {
         margin: .5rem;

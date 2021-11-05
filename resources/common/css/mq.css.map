@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,2CAA2C",
-    "sources": [
-        "mq.scss"
-    ],
-    "names": [],
-    "file": "mq.css"
-}
