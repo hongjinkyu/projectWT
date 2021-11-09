@@ -1,8 +1,8 @@
 /* ---------- Interface CSS ---------- */
 
 ::selection { /* 선택 영역 색상 */
-    background: rgba(var(--color_tone1), 1);
-    color: currentColor;
+    background: rgb(var(--color_tone1));
+    color: rgb(var(--color_point1));
 }
 
 a:link,
@@ -1600,7 +1600,7 @@ div#footContent {
             padding: .5rem .5rem 0;
             
             .location_mini {
-                margin: .25rem 0 1rem;
+                margin: .5rem 0 1rem;
                 font-size: var(--fnt_12);
             }
         }
@@ -1623,6 +1623,10 @@ div#footContent {
                 height: 2.5rem;
                 border: var(--border);
                 border-radius: var(--bdr_outer);
+            }
+
+            .course_name span {
+                font-family: var(--ff_sans_p);
             }
         }
     }

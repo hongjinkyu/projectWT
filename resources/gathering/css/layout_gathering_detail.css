@@ -204,8 +204,20 @@ div#detailSlide > .slide_thumbs > button + button {
 	flex-flow: row nowrap;
 	align-items: center;
 	gap: 0.5rem;
-	padding: 0.5rem;
+	padding: 0.25rem;
 	width: 50%;
+	border-radius: var(--bdr_outer);
+}
+.offer_wine .list_wine > li:hover,
+.offer_wine .byob_wine > li:hover {
+	background: rgb(var(--color_tone2));
+	transition: 0.3s;
+}
+.offer_wine .list_wine > li:hover .off_name,
+.offer_wine .byob_wine > li:hover .off_name {
+	color: rgb(var(--color_acc2));
+	font-size: var(--fnt_14);
+	transition: 0.3s;
 }
 .offer_wine .list_wine > li > .wine_icon,
 .offer_wine .byob_wine > li > .wine_icon {
@@ -227,6 +239,32 @@ div#detailSlide > .slide_thumbs > button + button {
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_bg));
 }
+.offer_food > .list_food {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding: 0.25rem;
+	border-radius: var(--bdr_outer);
+}
+.offer_food > .list_food:hover {
+	background: rgb(var(--color_tone2));
+	transition: 0.3s;
+}
+.offer_food > .list_food:hover h6 {
+	color: rgb(var(--color_acc2));
+}
+.offer_food > .list_food img {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+}
+.offer_food > .list_food > dt {
+	margin: 0 0.5rem;
+}
+.offer_food > .list_food > dd {
+	font-size: var(--fnt_12);
+}
 
 .join_container {
 	margin: 1rem auto 0;
@@ -245,11 +283,29 @@ button#btnJoin {
 }
 #detailReview input#txtComment {
 	margin-top: 0.5rem;
+	padding: 0.75rem 0.5rem;
 	width: 100%;
 	border-top: var(--border);
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	box-shadow: none;
+}
+#detailReview button#btnReturn {
+	position: absolute;
+	bottom: 0.25rem;
+	right: 0.25rem;
+	padding: 0.55rem 1.5rem 0.45rem 0.5rem;
+	background: rgb(var(--color_acc2)) url("../../common/images/icons/icon_return.png") no-repeat center right 0.5rem;
+	background-size: 0.6rem;
+	box-shadow: none;
+	color: rgb(var(--color_light));
+}
+#detailReview button#btnReturn:hover {
+	filter: brightness(1.2);
+}
+#detailReview button#btnReturn:focus {
+	outline: 0.05rem solid rgb(var(--color_tone2));
+	outline-offset: -0.1rem;
 }
 
 #detailDesc hr.hf {
@@ -262,6 +318,7 @@ button#btnJoin {
 }
 
 #reviewComment {
+	position: relative;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_bg));
@@ -290,4 +347,11 @@ button#btnJoin {
 	font-family: var(--ff_eng);
 	font-weight: bold;
 	cursor: pointer;
+}
+
+.gathering_disclaimer {
+	padding: 1rem;
+	color: rgb(var(--color_bdr));
+	font-size: var(--fnt_12);
+	line-height: 1.4;
 }

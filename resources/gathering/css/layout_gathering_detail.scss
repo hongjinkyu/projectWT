@@ -229,8 +229,20 @@ div#detailSlide {
             flex-flow: row nowrap;
             align-items: center;
             gap: .5rem;
-            padding: .5rem;
+            padding: .25rem;
             width: 50%;
+            border-radius: var(--bdr_outer);
+
+            &:hover {
+                background: rgb(var(--color_tone2));
+                transition: .3s;
+
+                .off_name {
+                    color: rgb(var(--color_acc2));
+                    font-size: var(--fnt_14);
+                    transition: .3s;
+                }
+            }
 
             > .wine_icon {
                 width: 2.5rem;
@@ -253,6 +265,38 @@ div#detailSlide {
     border: var(--border);
     border-radius: var(--bdr_outer);
     background: rgb(var(--color_bg));
+
+    > .list_food {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: .25rem;
+        border-radius: var(--bdr_outer);
+
+        &:hover {
+            background: rgb(var(--color_tone2));
+            transition: .3s;
+
+            h6 {
+                color: rgb(var(--color_acc2));
+            }
+        }
+
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+            border: var(--border);
+            border-radius: var(--bdr_outer);
+        }
+
+        > dt {
+            margin: 0 .5rem;
+        }
+
+        > dd {
+            font-size: var(--fnt_12);
+        }
+    }
 }
 
 .join_container {
@@ -272,11 +316,32 @@ button#btnJoin {
 
     input#txtComment {
         margin-top: .5rem;
+        padding: .75rem .5rem;
         width: 100%;
         border-top: var(--border);
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         box-shadow: none;
+    }
+
+    button#btnReturn {
+        position: absolute;
+        bottom: .25rem;
+        right: .25rem;
+        padding: .55rem 1.5rem .45rem .5rem;
+        background: rgb(var(--color_acc2)) url('../../common/images/icons/icon_return.png') no-repeat center right .5rem;
+        background-size: .6rem;
+        box-shadow: none;
+        color: rgb(var(--color_light));
+
+        &:hover {
+            filter: brightness(1.2);
+        }
+
+        &:focus {
+            outline: .05rem solid rgb(var(--color_tone2));
+            outline-offset: -.1rem;
+        }
     }
 }
 
@@ -293,6 +358,7 @@ button#btnJoin {
 }
 
 #reviewComment {
+    position: relative;
     border: var(--border);
     border-radius: var(--bdr_outer);
     background: rgb(var(--color_bg));
@@ -325,4 +391,11 @@ button#btnJoin {
             cursor: pointer;
         }
     }
+}
+
+.gathering_disclaimer {
+    padding: 1rem;
+    color: rgb(var(--color_bdr));
+    font-size: var(--fnt_12);
+    line-height: 1.4;
 }

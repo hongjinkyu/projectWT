@@ -145,6 +145,10 @@
                         </div>
 
                         <div class="join_container">
+                            <span>
+                                뭐 참여할때 뭐가 필요하고 (참여비, 뭐 요리나 와인 선택) 이런거 좀 들어가야 할듯
+                            </span>
+
                             <button id="btnJoin">
                                 참여 신청하기
                             </button>
@@ -167,7 +171,7 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <div class="wine_icon whitewine">
+                                    <div class="wine_icon redwine">
                                         <span class="wave_front"></span>
                                         <span class="wave_back"></span>
                                     </div>
@@ -177,7 +181,7 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <div class="wine_icon sparkling">
+                                    <div class="wine_icon whitewine">
                                         <span class="wave_front"></span>
                                         <span class="wave_back"></span>
                                     </div>
@@ -187,12 +191,12 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <div class="wine_icon others">
+                                    <div class="wine_icon sparkling">
                                         <span class="wave_front"></span>
                                         <span class="wave_back"></span>
                                     </div>
                                     <p class="offering_wine_info">
-                                        <span class="off_name">야단버프 서크</span><br />
+                                        <span class="off_name">야단버프 서크스키</span><br />
                                         <span class="off_vintage">2021년</span>
                                     </p>
                                 </li>
@@ -201,25 +205,28 @@
 
                         <div class="offer_food">
                             <p class="detail_title">제공되는 코스 요리</p>
-                            <ol class="list_food">
-                                <li>깐풍기</li>
-                                <li>라조기</li>
-                                <li>오향장육</li>
-                                <li>고추잡채</li>
-                            </ol>
+                            <dl class="list_food">
+                                <img src="./resources/index/images/1.jpg" alt="코스요리 대표사진" />
+                                <dt>
+                                    <h6>중화요리 코스</h6>
+                                </dt>
+                                <dd>
+                                    깐풍기, 라조기, 난자완스, 고추잡채
+                                </dd>
+                            </dl>
                         </div>
                     </article>
 
                     <article id="detailDesc">
                         <h4 class="info_title">모임 설명</h4>
                         <hr class="hf" />
-                        <p class="desc_intro">
+                        <div class="desc_intro">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis doloribus iste, placeat eum quas repudiandae expedita! Id magnam corporis quis temporibus eius necessitatibus fugiat fuga nobis, sint molestias doloremque.
                             Numquam ex earum consequuntur necessitatibus in id similique repudiandae quia eos quisquam sapiente iste voluptate recusandae, neque ad sint mollitia enim aperiam itaque nam aspernatur inventore. Perferendis ipsum nobis voluptatum.
                             Inventore quis cupiditate facilis ratione soluta. Fuga, consequuntur, voluptates tempore rerum odio perferendis saepe quisquam eos laudantium dicta vitae libero molestiae aliquam, fugit cupiditate numquam soluta consectetur exercitationem. Vitae, nemo.
                             Placeat, assumenda perspiciatis quasi itaque ducimus eum, corporis distinctio aperiam laudantium delectus sed sit quam doloremque facilis. Deleniti distinctio magnam at praesentium, fugiat nisi nulla perferendis, culpa temporibus laborum assumenda.
                             Quos dolor sed unde impedit saepe quisquam quis molestias amet autem laboriosam, eveniet numquam tempore sint nihil quidem rerum aut deserunt delectus distinctio nulla minima, nemo placeat repellendus asperiores? Cum!
-                        </p>
+                        </div>
                     </article>
 
                     <article id="detailLocation">
@@ -238,22 +245,22 @@
                                 <ul class="course_info">
                                     <li>
                                         <img src="./resources/index/images/1.jpg" alt="" />
-                                        <p>
-                                            게살버거 코스<br />
+                                        <p class="course_name">
+                                            <span>게살버거 코스</span><br />
                                             게살버거, 해초튀김, 탄산 바닷물
                                         </p>
                                     </li>
                                     <li>
                                         <img src="./resources/index/images/2.jpg" alt="" />
-                                        <p>
-                                            슈퍼 디럭스 게살버거 코스<br />
+                                        <p class="course_name">
+                                            <span>슈퍼 디럭스 게살버거 코스</span><br />
                                             게살버거 디럭스, 웨지미역, 버팔로 고등어
                                         </p>
                                     </li>
                                     <li>
                                         <img src="./resources/index/images/3.jpg" alt="" />
-                                        <p>
-                                            게살버거 얼티밋<br />
+                                        <p class="course_name">
+                                            <span>게살버거 얼티밋</span><br />
                                             게살버거 얼티밋, 사이드 메뉴 4종 (선택)
                                         </p>
                                     </li>
@@ -264,6 +271,11 @@
 
                     <article id="detailReview">
                         <h4 class="info_title">모임 후기</h4>
+
+                        <div class="tab_container">
+                            <a href="#reviewComment">한줄후기</a>
+                            <a href="#reviewArticle">포토후기</a>
+                        </div>
 
                         <div id="reviewComment">
                             <ul class="comment_container">
@@ -376,17 +388,42 @@
                                 <li class="paging_arrow next">다음</li>
                             </ul>
 
-                            <input type="text" name="text_comment" id="txtComment" placeholder="머 댓글 머라 달낀데 악플 달지마리" />
+                            <input type="text" name="text_comment" id="txtComment" placeholder="댓글은 마음을 비추는 거울입니다. 따뜻하고 다정한 댓글을 작성해 주세요." />
+                            <button id="btnReturn">한줄 리뷰 입력</button>
                         </div> <!-- #reviewComment -->
 
                         <div id="reviewArticle">
-                            ㅈㄷ레ㅓ맥허ㅔ
+                            포토후기 들어갈 칸
                         </div> <!-- #reviewArticle -->
 
                     </article>
 
                     <p class="gathering_disclaimer">
-                        여기에 뭐 공통으로 들어가는 경고문 넣어놓는게 좋을듯 (면책사항 어쩌고)
+                        와인투게더 모임 이용시 주의사항 (임시)<br/>
+                        <br/>
+                        제 4 조(용어의 정의)<br/>
+                        이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br/>
+                        ① 회원.회원사 : 회사와 서비스 이용계약을 체결한 개인이나 법인 또는 법인에 준하는 단체.<br/>
+                        ⑦ 빅장 회원 : 회원(이하 "회원사"라 칭함)이 한달에 일정 금액을 내고 서비스를 이용하는 개인이나 단체.<br/>
+                        ⑧ 설싸맨 회원 : 상한 음식을 섭취하였거나 장염에 심하게 걸린 개인이나 단체.<br/>
+                        ⑨ 전사독 회원 : 무료 서비스를 이용하는 개인이나 단체.<br/>
+                        <br/>
+                        제 7 조( 이용 신청 및 승낙)<br/>
+                        ① 이용신청은 서비스의 이용자 등록에서 다음 사항을 가입 신청 양식에 기록하여 신청합니다.<br/>
+                        ⓐ 이름<br/>
+                        ⓑ e-mail<br/>
+                        ⓒ 아이디, 비밀번호<br/>
+                        ⓓ 주민등록번호<br/>
+                        ⓔ 주소<br/>
+                        ⓕ 전화번호<br/>
+                        ⓖ 회원등급<br/>
+                        ⓗ 개인.회원사<br/>
+                        ⓘ 빅장 구사 여부(또는 4. 이야오랷걁긝)<br/>
+                        <br/>
+                        제 9 조( 이용계약의 종료 )<br/>
+                        ① 이용계약은 회원 또는 회사의 해지에 의하여 즉시 뼈와 살이 분리됩니다.<br/>
+                        ② 회원은 해지의사 발생 시 즉시 회사에 e-mail을 통한 해지 신청을 합니다.<br/>
+                        ③ 회사는 다음과 같은 사유 발생시 이용신청에 대한 빅장을 구사 할 수 있습니다.
                     </p>
 
                 </section>
