@@ -70,11 +70,30 @@ div#detailSlide {
     }
 }
 
-button#btnJoin {
-    padding: .5rem 2rem;
-    background: rgb(var(--color_acc1));
-    color: rgb(var(--color_light));
-    font-size: var(--fnt_16);
+.info_title {
+    margin: 0 0 .5rem .5rem;
+}
+
+.detail_title {
+    position: relative;
+    margin-bottom: .5rem;
+    width: fit-content;
+    font-family: var(--ff_sans_p);
+    color: rgb(var(--color_title));
+    z-index: 1;
+
+    &::before {
+        display: block;
+        position: absolute;
+        bottom: -.1rem;
+        left: -.15rem;
+        width: calc(100% + .3rem);
+        height: .4rem;
+        border-radius: .1rem;
+        background: rgb(var(--color_bdr));
+        z-index: -1;
+        content: '';
+    }
 }
 
 #detailInfo {
@@ -86,7 +105,7 @@ button#btnJoin {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        gap: 1.5rem;
+        gap: 1rem 1.5rem;
         margin: 1rem 0;
         padding: 1rem 0;
         border-top: var(--border);
@@ -95,34 +114,157 @@ button#btnJoin {
 
         > p {
             width: calc((100% - 5rem) / 2);
+            text-align: end;
 
             span {
+                display: inline-block;
+                margin-left: .5rem;
                 padding: .25rem;
+                width: 80%;
                 border-radius: .15rem;
                 background: rgb(var(--color_bg));
+                text-align: start;
             }
         }
     }
 
     .host_info {
+        position: relative;
         padding: .5rem;
         width: 100%;
         border: var(--border);
         border-radius: var(--bdr_outer);
         background: rgb(var(--color_bg));
+        font-size: var(--fnt_12);
 
         .host_pict {
+            float: left;
+            margin-right: 1rem;
             width: 5rem;
             height: 5rem;
             border-radius: 50%;
         }
 
+        .host_name {
+            margin: .25rem 0 .5rem;
+            color: rgb(var(--color_title));
+            font-size: var(--fnt_20);
+            font-weight: bold;
+
+            &::before {
+                display: block;
+                font-size: var(--fnt_12);
+                font-weight: normal;
+                content: '모임 주최자';
+            }
+        }
+
+        .host_intro {
+            max-width: calc(100% - 10rem);
+            line-height: 1.4;
+        }
+
+        .host_spec {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 10rem;
+            margin: .5rem 0;
+            padding: .5rem 1rem;
+            width: 10rem;
+            border-left: var(--border);
+
+            > span {
+                &::before {
+                    display: inline-block;
+                    margin-right: .25rem;
+                    width: 1rem;
+                    height: 1rem;
+                    vertical-align: middle;
+                    content: '';
+                }
+
+                &:nth-child(1)::before {
+                    background: url('../../common/images/icons/icon_gathering.png') no-repeat center;
+                }
+
+                &:nth-child(2)::before {
+                    background: url('../../common/images/icons/icon_comment.png') no-repeat center;
+                }
+            }
+        }
+
         button.user_profile {
-            padding: .25rem 2rem;
+            padding: .25rem;
+            width: 100%;
             background: rgb(var(--color_acc2));
             color: rgb(var(--color_light));
         }
     }
+}
+
+#detailOffer {
+    > div + div {
+        margin-top: .5rem;
+    }
+}
+
+.offer_wine {
+    padding: .5rem;
+    border: var(--border);
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_bg));
+
+    .list_wine,
+    .byob_wine {
+        display: flex;
+        flex-flow: row wrap;
+
+        > li {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: .5rem;
+            padding: .5rem;
+            width: 50%;
+
+            > .wine_icon {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            > .offering_wine_info {
+                font-size: var(--fnt_12);
+            }
+
+            .off_name {
+                font-family: var(--ff_sans_p);
+            }
+        }
+    }
+}
+
+.offer_food {
+    padding: .5rem;
+    border: var(--border);
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_bg));
+}
+
+.join_container {
+    margin: 1rem auto 0;
+    text-align: center;
+}
+
+button#btnJoin {
+    padding: .5rem 2rem;
+    background: rgb(var(--color_acc1));
+    color: rgb(var(--color_light));
+    font-size: var(--fnt_16);
 }
 
 #detailReview {
@@ -138,8 +280,49 @@ button#btnJoin {
     }
 }
 
-.review_comment {
+#detailDesc {
+    hr.hf {
+        margin-bottom: .5rem;
+        background: rgb(var(--color_bdr));
+    }
+
+    .desc_intro {
+        padding: .5rem;
+        line-height: 1.6;
+    }
+}
+
+#reviewComment {
     border: var(--border);
     border-radius: var(--bdr_outer);
     background: rgb(var(--color_bg));
+}
+
+.review_paging {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    > li {
+        padding: .25rem .5rem;
+        border-radius: var(--bdr_outer);
+
+        &.this_page {
+            background: rgb(var(--color_text));
+            color: rgb(var(--color_light));
+            pointer-events: none;
+        }
+
+        &:is(.paging_arrow).disabled {
+            color: rgb(var(--color_subtle));
+            pointer-events: none;
+        }
+
+        &:not(.paging_arrow) {
+            font-family: var(--ff_eng);
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
 }

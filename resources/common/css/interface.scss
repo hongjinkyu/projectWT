@@ -1560,7 +1560,7 @@ div#footContent {
                 background: rgb(var(--color_bdr));
                 clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
         
-                &_back {
+                &::before {
                     display: block;
                     position: absolute;
                     left: .1rem;
@@ -1568,6 +1568,7 @@ div#footContent {
                     height: 100%;
                     background: rgb(var(--color_light));
                     clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+                    content: '';
                 }
             }
         }
@@ -1575,6 +1576,59 @@ div#footContent {
 }
 
 /* 말풍선과 컨테이너 끝 */
+/* 모임 장소 */
+
+.gathering_location {
+    display: flex;
+    flex-flow: row nowrap;
+    border: var(--border);
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_bg));
+
+    > img {
+        width: 50%;
+        height: auto;
+    }
+
+    > .info_container {
+        padding: .5rem;
+        width: 50%;
+        height: 100%;
+        border-left: var(--border);
+
+        > .location_info {
+            padding: .5rem .5rem 0;
+            
+            .location_mini {
+                margin: .25rem 0 1rem;
+                font-size: var(--fnt_12);
+            }
+        }
+
+        > .course_info {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: .5rem;
+            font-size: var(--fnt_12);
+
+            > li {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                gap: .25rem;
+            }
+
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+                border: var(--border);
+                border-radius: var(--bdr_outer);
+            }
+        }
+    }
+}
+
+/* 모임 장소 끝 */
 
 /* ---------- Repeating Items end ---------- */
 

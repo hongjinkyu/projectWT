@@ -101,90 +101,107 @@
 
                     <article id="detailInfo">
                         <div class="gathering_info">
-                            <h3>슈퍼-겁쟁이 쉼터</h3>
-                            <p>겁쟁이 쉼터조차 두려운 분들을 위한 꿈과 희망의 장소</p>
+                            <h3 class="group_title">슈퍼-겁쟁이 쉼터</h3>
+                            <p class="group_desc">겁쟁이 쉼터조차 두려운 분들을 위한 꿈과 희망의 장소</p>
                             <p class="group_type">※ 이 모임은 주최자가 와인을 준비하는 LIST 모임입니다.</p>
                         </div>
 
                         <div class="spec_info">
-                            <p>
+                            <p class="spec_date">
                                 모임 날짜
                                 <span>2028e102350215t8</span>
                             </p>
-                            <p>
+                            <p class="spec_member">
                                 초대인원
                                 <span>서른마흔다섯명</span>
                             </p>
-                            <p>
+                            <p class="spec_price">
                                 참여비용
                                 <span>2억원</span>
                             </p>
-                            <p>
+                            <p class="spec_glass">
                                 콜키지
                                 <span>돈내셈</span>
                             </p>
-                            <p>
+                            <p class="spec_location">
                                 모임 장소
                                 <span>슈퍼 겁쟁이 쉼터</span>
                             </p>
-                            <p>
+                            <p class="spec_pack">
                                 준비물
                                 <span>스노클링, 오리발, 폐활량</span>
                             </p>
                         </div>
 
-                        <div class="host_info">
+                        <div class="host_info clr_fix">
                             <img class="host_pict" src="./resources/index/images/temp_profile_9.jpg" alt="모임 주최자" />
-                            <p>김쫄보 님</p>
-                            <p>
-                                14회의 모임 주최
-                                45개의 후기
-                                <button class="user_profile">
-                                    상세 프로필 보기
-                                </button>
+                            <p class="host_name">김쫄보 님</p>
+                            <p class="host_intro">옛날옛날 한옛날에 다섯아이가 우주멀리 아주멀리 사라졌다네 지금은 용사되어 오 돌아왔네 후레시맨 후레시맨 지구방위대</p>
+                            <p class="host_spec">
+                                <span data-host="times">14회의 모임 주최</span>
+                                <span data-host="reviews">45개의 후기</span>
+                                <button class="user_profile">상세 프로필 보기</button>
                             </p>
                         </div>
 
-                        <button id="btnJoin">
-                            참여 신청하기
-                        </button>
+                        <div class="join_container">
+                            <button id="btnJoin">
+                                참여 신청하기
+                            </button>
+                        </div>
                     </article>
 
                     <article id="detailOffer">
-                        <h4>상세정보</h4>
+                        <h4 class="info_title">상세정보</h4>
                         <div class="offer_wine">
-                            제공되는 와인
-                            <ol>
+                            <p class="detail_title">제공되는 와인</p>
+                            <ol class="list_wine">
                                 <li>
                                     <div class="wine_icon redwine">
                                         <span class="wave_front"></span>
                                         <span class="wave_back"></span>
                                     </div>
+                                    <p class="offering_wine_info">
+                                        <span class="off_name">어쩌구네 저쩐티</span><br />
+                                        <span class="off_vintage">2015년</span>
+                                    </p>
                                 </li>
                                 <li>
                                     <div class="wine_icon whitewine">
                                         <span class="wave_front"></span>
                                         <span class="wave_back"></span>
                                     </div>
+                                    <p class="offering_wine_info">
+                                        <span class="off_name">이러쿵 저러쿠아르</span><br />
+                                        <span class="off_vintage">2007년</span>
+                                    </p>
                                 </li>
                                 <li>
                                     <div class="wine_icon sparkling">
                                         <span class="wave_front"></span>
                                         <span class="wave_back"></span>
                                     </div>
+                                    <p class="offering_wine_info">
+                                        <span class="off_name">왁자르 지꺼르</span><br />
+                                        <span class="off_vintage">2009년</span>
+                                    </p>
                                 </li>
                                 <li>
                                     <div class="wine_icon others">
                                         <span class="wave_front"></span>
                                         <span class="wave_back"></span>
                                     </div>
+                                    <p class="offering_wine_info">
+                                        <span class="off_name">야단버프 서크</span><br />
+                                        <span class="off_vintage">2021년</span>
+                                    </p>
                                 </li>
                             </ol>
                         </div>
 
                         <div class="offer_food">
-                            제공되는 코스 요리
-                            <ol>
+                            <p class="detail_title">제공되는 코스 요리</p>
+                            <ol class="list_food">
                                 <li>깐풍기</li>
                                 <li>라조기</li>
                                 <li>오향장육</li>
@@ -194,8 +211,9 @@
                     </article>
 
                     <article id="detailDesc">
-                        <h4>모임 설명</h4>
-                        <p>
+                        <h4 class="info_title">모임 설명</h4>
+                        <hr class="hf" />
+                        <p class="desc_intro">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis doloribus iste, placeat eum quas repudiandae expedita! Id magnam corporis quis temporibus eius necessitatibus fugiat fuga nobis, sint molestias doloremque.
                             Numquam ex earum consequuntur necessitatibus in id similique repudiandae quia eos quisquam sapiente iste voluptate recusandae, neque ad sint mollitia enim aperiam itaque nam aspernatur inventore. Perferendis ipsum nobis voluptatum.
                             Inventore quis cupiditate facilis ratione soluta. Fuga, consequuntur, voluptates tempore rerum odio perferendis saepe quisquam eos laudantium dicta vitae libero molestiae aliquam, fugit cupiditate numquam soluta consectetur exercitationem. Vitae, nemo.
@@ -205,20 +223,49 @@
                     </article>
 
                     <article id="detailLocation">
-                        <h4>모임 장소</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis doloribus iste, placeat eum quas repudiandae expedita! Id magnam corporis quis temporibus eius necessitatibus fugiat fuga nobis, sint molestias doloremque.
-                            Numquam ex earum consequuntur necessitatibus in id similique repudiandae quia eos quisquam sapiente iste voluptate recusandae, neque ad sint mollitia enim aperiam itaque nam aspernatur inventore. Perferendis ipsum nobis voluptatum.
-                            Inventore quis cupiditate facilis ratione soluta. Fuga, consequuntur, voluptates tempore rerum odio perferendis saepe quisquam eos laudantium dicta vitae libero molestiae aliquam, fugit cupiditate numquam soluta consectetur exercitationem. Vitae, nemo.
-                            Placeat, assumenda perspiciatis quasi itaque ducimus eum, corporis distinctio aperiam laudantium delectus sed sit quam doloremque facilis. Deleniti distinctio magnam at praesentium, fugiat nisi nulla perferendis, culpa temporibus laborum assumenda.
-                            Quos dolor sed unde impedit saepe quisquam quis molestias amet autem laboriosam, eveniet numquam tempore sint nihil quidem rerum aut deserunt delectus distinctio nulla minima, nemo placeat repellendus asperiores? Cum!
-                        </p>
+                        <h4 class="info_title">모임 장소</h4>
+                        <div class="gathering_location">
+                            <img src="./resources/index/images/img17.jpg" alt="모임 장소 대표사진" />
+                            <div class="info_container">
+                                <div class="location_info">
+                                    <h4>슈퍼 겁쟁이 쉼터</h4>
+                                    <p class="location_mini">
+                                        <img src="../resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
+                                        저 깊은 바닷속 비키니 시티
+                                    </p>
+                                    <p class="detail_title">이 맛집의 주요 메뉴</p>
+                                </div>
+                                <ul class="course_info">
+                                    <li>
+                                        <img src="./resources/index/images/1.jpg" alt="" />
+                                        <p>
+                                            게살버거 코스<br />
+                                            게살버거, 해초튀김, 탄산 바닷물
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <img src="./resources/index/images/2.jpg" alt="" />
+                                        <p>
+                                            슈퍼 디럭스 게살버거 코스<br />
+                                            게살버거 디럭스, 웨지미역, 버팔로 고등어
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <img src="./resources/index/images/3.jpg" alt="" />
+                                        <p>
+                                            게살버거 얼티밋<br />
+                                            게살버거 얼티밋, 사이드 메뉴 4종 (선택)
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </article>
 
                     <article id="detailReview">
-                        <h4>모임 후기</h4>
+                        <h4 class="info_title">모임 후기</h4>
 
-                        <div class="review_comment">
+                        <div id="reviewComment">
                             <ul class="comment_container">
                                 <li class="comment_bubble">
                                     <div class="comment_user">
@@ -233,10 +280,7 @@
                                     </div>
         
                                     <div class="bubble">
-                                        <span class="bubble_point">
-                                            <span class="bubble_point_back"></span>
-                                        </span>
-            
+                                        <span class="bubble_point"></span>
                                         <span class="bubble_text">
                                             도배 ㄴㄴ 🤬
                                         </span>
@@ -256,12 +300,9 @@
                                     </div>
 
                                     <div class="bubble">
-                                        <span class="bubble_point">
-                                            <span class="bubble_point_back"></span>
-                                        </span>
-
+                                        <span class="bubble_point"></span>
                                         <span class="bubble_text">
-                                            Tempora dolorum aliquid est expedita, eligendi, magni quis distinctio facere esse ipsam accusantium ea tenetur odio illum corporis perferendis alias a autem voluptatum reiciendis modi!
+                                            아 침 공하려 해!
                                         </span>
                                     </div>
                                 </li>
@@ -279,12 +320,9 @@
                                     </div>
 
                                     <div class="bubble">
-                                        <span class="bubble_point">
-                                            <span class="bubble_point_back"></span>
-                                        </span>
-
+                                        <span class="bubble_point"></span>
                                         <span class="bubble_text">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius id voluptate assumenda amet repellat quis ipsa doloribus mollitia deleniti, voluptates dolores molestiae praesentium cum adipisci, cupiditate laboriosam accusantium sit qui!
+                                            무언가 심상찮은 일이 생긴거야 어둠속에 숨어있는 악의 무리 아름다운 녹색의 별 지구를 침공하려 해
                                         </span>
                                     </div>
                                 </li>
@@ -302,10 +340,7 @@
                                     </div>
 
                                     <div class="bubble">
-                                        <span class="bubble_point">
-                                            <span class="bubble_point_back"></span>
-                                        </span>
-
+                                        <span class="bubble_point"></span>
                                         <span class="bubble_text">
                                             언더더씨 언더시티
                                         </span>
@@ -325,10 +360,7 @@
                                     </div>
 
                                     <div class="bubble">
-                                        <span class="bubble_point">
-                                            <span class="bubble_point_back"></span>
-                                        </span>
-
+                                        <span class="bubble_point"></span>
                                         <span class="bubble_text">
                                             아뇨 전 뚱인데요
                                         </span>
@@ -336,17 +368,24 @@
                                 </li>
                             </ul>
 
-                            <ul>
-                                <li>페이징 12354516246</li>
+                            <ul class="review_paging">
+                                <li class="paging_arrow prev disabled">이전</li>
+                                <li class="this_page">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li class="paging_arrow next">다음</li>
                             </ul>
 
                             <input type="text" name="text_comment" id="txtComment" placeholder="머 댓글 머라 달낀데 악플 달지마리" />
+                        </div> <!-- #reviewComment -->
 
-                        </div>
+                        <div id="reviewArticle">
+                            ㅈㄷ레ㅓ맥허ㅔ
+                        </div> <!-- #reviewArticle -->
 
                     </article>
 
-                    <p>
+                    <p class="gathering_disclaimer">
                         여기에 뭐 공통으로 들어가는 경고문 넣어놓는게 좋을듯 (면책사항 어쩌고)
                     </p>
 

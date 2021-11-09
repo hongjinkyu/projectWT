@@ -1412,7 +1412,7 @@ div#footContent h6 {
 	-webkit-clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 	        clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 }
-.comment_container .comment_bubble .bubble_point_back {
+.comment_container .comment_bubble .bubble_point::before {
 	display: block;
 	position: absolute;
 	left: 0.1rem;
@@ -1421,9 +1421,55 @@ div#footContent h6 {
 	background: rgb(var(--color_light));
 	-webkit-clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 	        clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+	content: "";
 }
 
 /* 말풍선과 컨테이너 끝 */
+/* 모임 장소 */
+.gathering_location {
+	display: flex;
+	flex-flow: row nowrap;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_bg));
+}
+.gathering_location > img {
+	width: 50%;
+	height: auto;
+}
+.gathering_location > .info_container {
+	padding: 0.5rem;
+	width: 50%;
+	height: 100%;
+	border-left: var(--border);
+}
+.gathering_location > .info_container > .location_info {
+	padding: 0.5rem 0.5rem 0;
+}
+.gathering_location > .info_container > .location_info .location_mini {
+	margin: 0.25rem 0 1rem;
+	font-size: var(--fnt_12);
+}
+.gathering_location > .info_container > .course_info {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0.5rem;
+	font-size: var(--fnt_12);
+}
+.gathering_location > .info_container > .course_info > li {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 0.25rem;
+}
+.gathering_location > .info_container > .course_info img {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+}
+
+/* 모임 장소 끝 */
 /* ---------- Repeating Items end ---------- */
 .note-modal.open {
 	justify-content: center;
