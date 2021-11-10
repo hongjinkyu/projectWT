@@ -95,4 +95,12 @@ $(document).ready(function() { // jQuery Load
         };
     }); // Mobile Navigation
 
+    // 여기부터 테스트용 임시 코드
+
+    $('.card_img').click(function() {
+        location.href = './gathering_detail.html';
+    });
+
+    // 테스트용 임시 코드 끝
+
 }) // jQuery Closed

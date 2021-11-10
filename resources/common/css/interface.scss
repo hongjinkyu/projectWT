@@ -852,6 +852,7 @@ div#footContent {
         border-bottom: var(--border);
         object-fit: cover;
         transition: .3s;
+        cursor: pointer;
     }
 
     > .card_content {
