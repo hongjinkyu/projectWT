@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
     <!-- Global CSS -->
 
-    <link rel="stylesheet" type="text/css" href="./resources/gathering/css/layout_gathering_detail.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/review/css/layout_review_detail.css" />
     <!-- Page-Specific CSS -->
 
     <link rel="stylesheet" type="text/css" href="./resources/common/css/mq.css" />
@@ -27,7 +27,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
     <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
-    <script type="text/javascript" src="./resources/gathering/js/js_gathering_detail.js"></script> <!-- Page-Specific jQuery -->
+    <script type="text/javascript" src="./resources/review/js/js_review_detail.js"></script> <!-- Page-Specific jQuery -->
     <!-- JavaScript / jQuery -->
 
     <!--[if lt IE 9]>
@@ -128,10 +128,9 @@
 
                 <section id="sideBar_left">
                     <ul class="side_mnu_left">
-                        <li class="side_mnu_item1 checked"><a href="#detailInfo">모임 개요</a></li>
-                        <li class="side_mnu_item2"><a href="#detailOffer">상세정보</a></li>
-                        <li class="side_mnu_item3"><a href="#detailLocation">모임 장소</a></li>
-                        <li class="side_mnu_item4"><a href="#detailReview">모임 후기</a></li>
+                        <li class="side_mnu_item1 checked"><a href="#detailDesc">모임 후기</a></li>
+                        <li class="side_mnu_item2"><a href="#detailLocation">모임 장소 정보</a></li>
+                        <li class="side_mnu_item3"><a href="#detailReview">댓글</a></li>
                     </ul>
                 </section>
 
@@ -157,180 +156,76 @@
                     </div>
 
                     <article id="detailInfo">
-                        <div class="gathering_info">
-                            <h3 class="group_title">슈퍼-겁쟁이 쉼터</h3>
-                            <p class="group_desc">겁쟁이 쉼터조차 두려운 분들을 위한 꿈과 희망의 장소</p>
-                            <p class="group_type" data-category="list">※ 이 모임은 주최자가 와인을 준비하는 LIST 모임입니다.</p>
-                            <p class="group_type" data-category="byob">※ 이 모임은 참여자가 와인을 지참하는 BYOB 모임입니다.</p>
+                        <div class="review_info">
+                            <h3 class="review_title">너무나 즐거웠던 슈겁모</h3>
+                            <div class="review_starpoint">
+                                <div class="starpoint_kind">
+                                    <p>요리</p>
+                                    <div class="star_point" data-point-total="8.1">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="starpoint_kind">
+                                    <p>와인</p>
+                                    <div class="star_point" data-point-total="3.3">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="starpoint_kind">
+                                    <p>분위기</p>
+                                    <div class="star_point" data-point-total="10.0">
+                                        <div class="star_point_blacker"></div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="spec_info">
-                            <p class="spec_date">
-                                모임 날짜
-                                <span>2028e102350215t8</span>
-                            </p>
-                            <p class="spec_member">
-                                초대인원
-                                <span>서른마흔다섯명</span>
-                            </p>
-                            <p class="spec_price">
-                                참여비용
-                                <span>2억원 (와인 + 요리 + 콜키지)</span>
-                            </p>
-                            <p class="spec_glass">
-                                콜키지
-                                <span>돈내셈</span>
-                            </p>
-                            <p class="spec_location">
-                                모임 장소
-                                <span>슈퍼 겁쟁이 쉼터</span>
-                            </p>
-                            <p class="spec_pack">
-                                준비물
-                                <span>스노클링, 오리발, 폐활량</span>
-                            </p>
-                        </div>
-
-                        <div class="host_info clr_fix">
-                            <img class="host_pict" src="./resources/index/images/temp_profile_9.jpg" alt="모임 주최자" />
-                            <p class="host_name">김쫄보 님</p>
-                            <p class="host_intro">옛날옛날 한옛날에 다섯아이가 우주멀리 아주멀리 사라졌다네 지금은 용사되어 오 돌아왔네 후레시맨 후레시맨 지구방위대</p>
-                            <p class="host_spec">
-                                <span data-host="times">14회의 모임 주최</span>
-                                <span data-host="reviews">45개의 후기</span>
+                        <div class="reviewer_info clr_fix">
+                            <img class="reviewer_pict" src="./resources/index/images/temp_profile_12.jpg" alt="모임 주최자" />
+                            <p class="reviewer_name">최점숙 님</p>
+                            <p class="reviewer_intro">와인을 시작한지 6년, 이젠 내 혈관에 포도즙이 흐른다</p>
+                            <p class="reviewer_spec">
+                                <span data-host="times">8회의 모임 주최</span>
+                                <span data-host="reviews">73개의 후기</span>
                                 <button class="user_profile">상세 프로필 보기</button>
                             </p>
                         </div>
-
-                        <div class="join_container">
-                            몬가... 몬가 들어가야됨 (BYOB 와인 선택, 참여 옵션 같은거)
-                            <button id="btnJoin">
-                                참여 신청하기
-                            </button>
-                        </div>
-                    </article>
-
-                    <article id="detailOffer">
-                        <h4 class="info_title">상세정보</h4>
-                        <div class="offer_wine">
-                            <p class="detail_title">제공되는 와인</p>
-                            <ol class="list_wine">
-                                <li>
-                                    <div class="wine_icon redwine">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
-                                    </div>
-                                    <p class="offering_wine_info">
-                                        <span class="off_name">어쩌구네 저쩐티</span><br />
-                                        <span class="off_vintage">2015년</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <div class="wine_icon redwine">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
-                                    </div>
-                                    <p class="offering_wine_info">
-                                        <span class="off_name">이러쿵 저러쿠아르</span><br />
-                                        <span class="off_vintage">2007년</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <div class="wine_icon whitewine">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
-                                    </div>
-                                    <p class="offering_wine_info">
-                                        <span class="off_name">왁자르 지꺼르</span><br />
-                                        <span class="off_vintage">2009년</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <div class="wine_icon sparkling">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
-                                    </div>
-                                    <p class="offering_wine_info">
-                                        <span class="off_name">야단버프 서크스키</span><br />
-                                        <span class="off_vintage">2021년</span>
-                                    </p>
-                                </li>
-                            </ol> <!-- 제공와인 -->
-
-                            <p class="detail_title">참여자가 지참할 와인</p>
-                            <ul class="byob_wine">
-                                <li>
-                                    <div class="wine_icon redwine">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
-                                    </div>
-                                    <p class="offering_wine_info">
-                                        <span class="off_name">레드와인 한병</span><br />
-                                        <span class="off_price">10,000원 이상</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <div class="wine_icon whitewine">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
-                                    </div>
-                                    <p class="offering_wine_info">
-                                        <span class="off_name">화이트와인 두병</span><br />
-                                        <span class="off_price">10,000원 이상</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <div class="wine_icon sparkling">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
-                                    </div>
-                                    <p class="offering_wine_info">
-                                        <span class="off_name">스파클링 와인 삼병</span><br />
-                                        <span class="off_price">10,000원 이상</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <div class="wine_icon others">
-                                        <span class="wave_front"></span>
-                                        <span class="wave_back"></span>
-                                    </div>
-                                    <p class="offering_wine_info">
-                                        <span class="off_name">기타 넷병</span><br />
-                                        <span class="off_price">10,000원 이상</span>
-                                    </p>
-                                </li>
-                            </ul> <!-- 갖고와인 -->
-                        </div> <!-- 와인 -->
-
-                        <div class="offer_food">
-                            <p class="detail_title">제공되는 코스 요리</p>
-                            <dl class="list_food">
-                                <dt>
-                                    <img src="./resources/index/images/1.jpg" alt="코스요리 대표사진" />
-                                </dt>
-                                <dd class="course_list">
-                                    <p>게살버거 코스</p>
-                                    <p>게살버거, 해초튀김, 탄산 바닷물</p>
-                                </dd>
-                                <dd class="food_pict">
-                                    <img src="./resources/index/images/img21.jpg" alt="" />
-                                    <img src="./resources/index/images/img21.jpg" alt="" />
-                                    <img src="./resources/index/images/img21.jpg" alt="" />
-                                    <img src="./resources/index/images/img21.jpg" alt="" />
-                                </dd>
-                            </dl>
-                        </div> <!-- 코스요리 -->
                     </article>
 
                     <article id="detailDesc">
-                        <h4 class="info_title">모임 설명</h4>
-                        <hr class="hf" />
                         <div class="desc_intro">
+                            <img src="./resources/index/images/img32.jpg" style="width: 10rem; height: 7.5rem; float: left;" alt="끼요오옷" />
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis doloribus iste, placeat eum quas repudiandae expedita! Id magnam corporis quis temporibus eius necessitatibus fugiat fuga nobis, sint molestias doloremque.
                             Numquam ex earum consequuntur necessitatibus in id similique repudiandae quia eos quisquam sapiente iste voluptate recusandae, neque ad sint mollitia enim aperiam itaque nam aspernatur inventore. Perferendis ipsum nobis voluptatum.
                             Inventore quis cupiditate facilis ratione soluta. Fuga, consequuntur, voluptates tempore rerum odio perferendis saepe quisquam eos laudantium dicta vitae libero molestiae aliquam, fugit cupiditate numquam soluta consectetur exercitationem. Vitae, nemo.
                             Placeat, assumenda perspiciatis quasi itaque ducimus eum, corporis distinctio aperiam laudantium delectus sed sit quam doloremque facilis. Deleniti distinctio magnam at praesentium, fugiat nisi nulla perferendis, culpa temporibus laborum assumenda.
                             Quos dolor sed unde impedit saepe quisquam quis molestias amet autem laboriosam, eveniet numquam tempore sint nihil quidem rerum aut deserunt delectus distinctio nulla minima, nemo placeat repellendus asperiores? Cum!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloremque eligendi aut libero ipsum illo, sint, a perferendis, officia labore soluta amet sequi voluptatem modi! Earum at expedita asperiores possimus.
+                            Officia, maxime optio. Error porro laboriosam quod, sint voluptatum eos! Quae, numquam commodi cumque explicabo quia deserunt earum animi nostrum doloremque et excepturi nam quam tempore aperiam quas dolorem quisquam?
+                            Nobis, corrupti perferendis earum in vero magnam accusantium amet a eaque dolorum. Aliquid, ipsum quibusdam assumenda modi exercitationem optio at, doloribus vero facere dolor ratione, ipsam unde voluptatibus praesentium illo.
+                            Minus maxime ab impedit error? Quas assumenda ipsa expedita corrupti repellendus animi voluptas modi eum fuga, quaerat maxime consectetur omnis velit! Inventore dolores minima esse. Maxime provident doloribus harum ab!
+                            <img src="./resources/index/images/img32.jpg" style="width: 10rem; height: 7.5rem; float: right;" alt="끼요오옷" />
+                            Nemo, amet. Quam, et! Quo provident illum nobis repellendus esse hic accusamus. Impedit dicta labore corrupti! Veritatis ratione dolorem ipsam sunt soluta adipisci rem eos dolor sapiente! Modi, pariatur quod.
+                            Quisquam illum earum laboriosam alias, exercitationem deserunt debitis optio repudiandae ipsam eligendi, quod consequatur velit esse ullam minima sapiente accusantium facere maxime id! Fugiat, ipsam laudantium quasi ipsum accusamus perferendis!
+                            Quae ipsam voluptate porro incidunt quia ea esse earum accusantium laboriosam quo exercitationem velit mollitia vel provident nemo quaerat, necessitatibus dolore architecto unde illo odio. Quasi tenetur et vero? Tempora.
+                            Rem cumque, quasi doloribus labore autem soluta nulla porro culpa sunt corrupti delectus deserunt maiores, fugiat repudiandae dignissimos laudantium. Expedita vitae blanditiis dicta facilis vel asperiores consectetur provident omnis saepe.
+                            Perferendis aperiam cumque omnis iste, nihil sapiente placeat at alias vero officia temporibus nobis. Quo magni culpa architecto pariatur corporis, et nemo alias aperiam voluptatum, repellendus inventore eum amet commodi?
+                            Dolor consectetur esse veniam sit. Obcaecati neque quasi, eligendi quibusdam natus dolorum, voluptate ab reiciendis nesciunt dolore, quis magnam eum aut ipsam facilis cupiditate delectus eaque commodi quisquam? Incidunt, tempore.
                         </div>
                     </article>
 
@@ -375,12 +270,7 @@
                     </article>
 
                     <article id="detailReview">
-                        <h4 class="info_title">모임 후기</h4>
-
-                        <div class="tab_container">
-                            <a class="on" href="#reviewComment">한줄후기</a>
-                            <a href="#reviewArticle">포토후기</a>
-                        </div>
+                        <h4 class="info_title">댓글 (65,535)</h4>
 
                         <div id="reviewComment">
                             <ul class="comment_container">
@@ -496,112 +386,7 @@
                             <input type="text" name="text_comment" id="txtComment" placeholder="댓글은 마음을 비추는 거울입니다. 따뜻하고 다정한 댓글을 작성해 주세요." />
                             <button type="submit" id="btnReturn">한줄 리뷰 입력</button> <!-- 참여 이력이 없으면 텍스트박스와 버튼이 비활성화되고 플레이스홀더 메시지 변경 -->
                         </div> <!-- #reviewComment -->
-
-                        <div id="reviewArticle">
-                            <ul class="article_container">
-                                <li class="article_single">
-                                    <img src="./resources/index/images/img18.jpg" alt="후기 대표사진" />
-                                    <p class="article_name">
-                                        <span class="article_title">너무나 즐거웠던 슈겁모</span><br />
-                                        <span class="article_date">2021. 04. 01</span>
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>최점숙 님</span>
-                                    </p>
-                                </li>
-
-                                <li class="article_single">
-                                    <img src="./resources/index/images/img18.jpg" alt="후기 대표사진" />
-                                    <p class="article_name">
-                                        <span class="article_title">너무나 즐거웠던 슈겁모</span><br />
-                                        <span class="article_date">2021. 04. 01</span>
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>최점숙 님</span>
-                                    </p>
-                                </li>
-
-                                <li class="article_single">
-                                    <img src="./resources/index/images/img18.jpg" alt="후기 대표사진" />
-                                    <p class="article_name">
-                                        <span class="article_title">너무나 즐거웠던 슈겁모</span><br />
-                                        <span class="article_date">2021. 04. 01</span>
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>최점숙 님</span>
-                                    </p>
-                                </li>
-
-                                <li class="article_single">
-                                    <img src="./resources/index/images/img18.jpg" alt="후기 대표사진" />
-                                    <p class="article_name">
-                                        <span class="article_title">너무나 즐거웠던 슈겁모</span><br />
-                                        <span class="article_date">2021. 04. 01</span>
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>최점숙 님</span>
-                                    </p>
-                                </li>
-
-                                <li class="article_single">
-                                    <img src="./resources/index/images/img18.jpg" alt="후기 대표사진" />
-                                    <p class="article_name">
-                                        <span class="article_title">너무나 즐거웠던 슈겁모</span><br />
-                                        <span class="article_date">2021. 04. 01</span>
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>최점숙 님</span>
-                                    </p>
-                                </li>
-                            </ul>
-
-                            <ul class="review_paging">
-                                <li class="paging_arrow prev disabled">이전</li>
-                                <li class="this_page">1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li class="paging_arrow next">다음</li>
-                            </ul>
-
-                            <div class="article_more">
-                                <button>포토후기 작성하기</button> <!-- 참여 이력이 없으면 클릭시 작성할 수 없다는 메시지 보이기 -->
-                            </div>
-                        </div> <!-- #reviewArticle -->
-
                     </article>
-
-                    <p class="gathering_disclaimer">
-                        와인투게더 모임 이용시 주의사항 (임시)<br/>
-                        <br/>
-                        제 4 조(용어의 정의)<br/>
-                        이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br/>
-                        ① 회원.회원사 : 회사와 서비스 이용계약을 체결한 개인이나 법인 또는 법인에 준하는 단체.<br/>
-                        ⑦ 빅장 회원 : 회원(이하 "회원사"라 칭함)이 한달에 일정 금액을 내고 서비스를 이용하는 개인이나 단체.<br/>
-                        ⑧ 설싸맨 회원 : 상한 음식을 섭취하였거나 장염에 심하게 걸린 개인이나 단체.<br/>
-                        ⑨ 전사독 회원 : 무료 서비스를 이용하는 개인이나 단체.<br/>
-                        <br/>
-                        제 7 조( 이용 신청 및 승낙)<br/>
-                        ① 이용신청은 서비스의 이용자 등록에서 다음 사항을 가입 신청 양식에 기록하여 신청합니다.<br/>
-                        ⓐ 이름<br/>
-                        ⓑ e-mail<br/>
-                        ⓒ 아이디, 비밀번호<br/>
-                        ⓓ 주민등록번호<br/>
-                        ⓔ 주소<br/>
-                        ⓕ 전화번호<br/>
-                        ⓖ 회원등급<br/>
-                        ⓗ 개인.회원사<br/>
-                        ⓘ 빅장 구사 여부(또는 4. 이야오랷걁긝)<br/>
-                        <br/>
-                        제 9 조( 이용계약의 종료 )<br/>
-                        ① 이용계약은 회원 또는 회사의 해지에 의하여 즉시 뼈와 살이 분리됩니다.<br/>
-                        ② 회원은 해지의사 발생 시 즉시 회사에 e-mail을 통한 해지 신청을 합니다.<br/>
-                        ③ 회사는 다음과 같은 사유 발생시 이용신청에 대한 빅장을 구사 할 수 있습니다.
-                    </p>
 
                 </section>
 

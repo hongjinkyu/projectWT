@@ -1,0 +1,257 @@
+@charset "UTF-8";
+/* ---------- Page-Specific Layout CSS (Gathering (Detail)) ---------- */
+/* ---------- 페이지 특정 요소 시작 ---------- */
+section#contentBar {
+	padding: 0;
+}
+section#contentBar > article {
+	padding: 1rem 0.5rem;
+}
+section#contentBar h4 {
+	font-family: var(--ff_serif);
+}
+
+div#detailSlide {
+	position: relative;
+	height: 17rem;
+	overflow: hidden;
+}
+div#detailSlide::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to top, rgba(var(--color_dark), 0.75) 0%, transparent 50%);
+	z-index: 1;
+	content: "";
+}
+div#detailSlide > .slide_body {
+	width: inherit;
+	height: inherit;
+}
+div#detailSlide > .slide_body > img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+div#detailSlide > .slide_thumbs {
+	position: absolute;
+	bottom: 0.25rem;
+	left: 0.25rem;
+	right: 0.25rem;
+	z-index: 2;
+}
+div#detailSlide > .slide_thumbs .btn_thumb {
+	display: block;
+	padding: 0;
+	width: 3rem;
+	height: 2.25rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	box-shadow: none;
+	opacity: 0.5;
+	overflow: hidden;
+}
+div#detailSlide > .slide_thumbs .btn_thumb + .btn_thumb {
+	margin-left: 0.25rem;
+}
+div#detailSlide > .slide_thumbs .btn_thumb img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
+	border: 0.1rem solid rgb(var(--color_acc1));
+	opacity: 1;
+}
+
+.info_title {
+	margin: 0 0 0.5rem 0.5rem;
+}
+
+.detail_title {
+	position: relative;
+	margin-bottom: 0.5rem;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_title));
+	z-index: 1;
+}
+.detail_title::before {
+	display: block;
+	position: absolute;
+	bottom: -0.1rem;
+	left: -0.15rem;
+	width: calc(100% + .3rem);
+	height: 0.4rem;
+	border-radius: 0.1rem;
+	background: rgb(var(--color_bdr));
+	z-index: -1;
+	content: "";
+}
+
+#detailInfo .review_info {
+	text-align: center;
+}
+#detailInfo .reviewer_info {
+	position: relative;
+	padding: 0.5rem;
+	width: 100%;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_bg));
+	font-size: var(--fnt_12);
+}
+#detailInfo .reviewer_info .reviewer_pict {
+	float: left;
+	margin-right: 1rem;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+}
+#detailInfo .reviewer_info .reviewer_name {
+	margin: 0.25rem 0 0.5rem;
+	color: rgb(var(--color_title));
+	font-size: var(--fnt_20);
+	font-weight: bold;
+}
+#detailInfo .reviewer_info .reviewer_name::before {
+	display: block;
+	font-size: var(--fnt_12);
+	font-weight: normal;
+	content: "후기 작성자";
+}
+#detailInfo .reviewer_info .reviewer_intro {
+	max-width: calc(100% - 10rem);
+	line-height: 1.4;
+}
+#detailInfo .reviewer_info .reviewer_spec {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 10rem;
+	margin: 0.5rem 0;
+	padding: 0.5rem 1rem;
+	width: 10rem;
+	border-left: var(--border);
+}
+#detailInfo .reviewer_info .reviewer_spec > span::before {
+	display: inline-block;
+	margin-right: 0.25rem;
+	width: 1rem;
+	height: 1rem;
+	vertical-align: middle;
+	content: "";
+}
+#detailInfo .reviewer_info .reviewer_spec > span:nth-child(1)::before {
+	background: url("../../common/images/icons/icon_gathering.png") no-repeat center;
+}
+#detailInfo .reviewer_info .reviewer_spec > span:nth-child(2)::before {
+	background: url("../../common/images/icons/icon_comment.png") no-repeat center;
+}
+#detailInfo .reviewer_info button.user_profile {
+	padding: 0.25rem;
+	width: 100%;
+	background: rgb(var(--color_acc2));
+	color: rgb(var(--color_light));
+}
+
+#detailReview {
+	position: relative;
+	padding: 0 0.5rem;
+}
+#detailReview input#txtComment {
+	margin-top: 0.5rem;
+	padding: 0.75rem 0.5rem;
+	width: 100%;
+	border-top: var(--border);
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	box-shadow: none;
+}
+#detailReview button#btnReturn {
+	position: absolute;
+	bottom: 0.25rem;
+	right: 0.25rem;
+	padding: 0.55rem 1.5rem 0.45rem 0.5rem;
+	background: rgb(var(--color_acc2)) url("../../common/images/icons/icon_return.png") no-repeat center right 0.5rem;
+	background-size: 0.6rem;
+	box-shadow: none;
+	color: rgb(var(--color_light));
+}
+#detailReview button#btnReturn:focus {
+	outline: 0.05rem solid rgb(var(--color_tone2));
+	outline-offset: -0.1rem;
+}
+
+.offer_food {
+	padding: 0.5rem;
+}
+.offer_food > .list_food {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	row-gap: 0.5rem;
+	padding: 0.25rem;
+	border-radius: var(--bdr_outer);
+	font-size: var(--fnt_12);
+}
+.offer_food > .list_food + .list_food {
+	margin-top: 0.5rem;
+}
+.offer_food > .list_food > dt > img {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.offer_food > .list_food > dd.course_list {
+	margin-left: 0.25rem;
+}
+.offer_food > .list_food > dd.course_list > p:nth-child(1) {
+	font-family: var(--ff_sans_p);
+}
+.offer_food > .list_food > dd.food_pict {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 0.5rem;
+	width: 100%;
+}
+.offer_food > .list_food > dd.food_pict img {
+	width: calc((100% - 1.5rem) / 4);
+	height: 6rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+#reviewComment {
+	border: none;
+	background: none;
+}
+
+#reviewArticle {
+	display: block;
+}
+
+#detailDesc hr.hf {
+	margin-bottom: 0.5rem;
+	background: rgb(var(--color_bdr));
+}
+#detailDesc .desc_intro {
+	padding: 0.5rem;
+	line-height: 1.6;
+}

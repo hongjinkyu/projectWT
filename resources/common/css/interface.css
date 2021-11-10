@@ -1436,6 +1436,9 @@ div#footContent h6 {
 	        clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 	content: "";
 }
+.comment_container .comment_bubble .bubble_text {
+	line-height: 1.6;
+}
 
 .article_container {
 	padding: 0.25rem;

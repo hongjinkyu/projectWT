@@ -69,14 +69,14 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	opacity: 1;
 }
 
-.gathering_info > .group_desc {
+.review_info > .group_desc {
 	margin: 1rem 0;
 }
-.gathering_info > .group_type {
+.review_info > .group_type {
 	position: relative;
 	font-size: var(--fnt_12);
 }
-.gathering_info > .group_type::before {
+.review_info > .group_type::before {
 	display: inline-block;
 	margin-right: 0.25rem;
 	padding: 0.15rem 0.5rem;
@@ -90,18 +90,18 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	z-index: 2;
 	content: "";
 }
-.gathering_info > .group_type:is([data-category=byob]) {
+.review_info > .group_type:is([data-category=byob]) {
 	color: rgb(var(--color_acc2));
 }
-.gathering_info > .group_type:is([data-category=byob])::before {
+.review_info > .group_type:is([data-category=byob])::before {
 	border-color: #008841;
 	background: rgb(var(--color_acc2));
 	content: "BYOB";
 }
-.gathering_info > .group_type:is([data-category=list]) {
+.review_info > .group_type:is([data-category=list]) {
 	color: rgb(var(--color_acc1));
 }
-.gathering_info > .group_type:is([data-category=list])::before {
+.review_info > .group_type:is([data-category=list])::before {
 	border-color: #dc801f;
 	background: rgb(var(--color_acc1));
 	content: "LIST";
@@ -134,34 +134,10 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	content: "";
 }
 
-#detailInfo .gathering_info {
+#detailInfo .review_info {
 	text-align: center;
 }
-#detailInfo .spec_info {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	gap: 1rem 1.5rem;
-	margin: 1rem 0;
-	padding: 1rem 0;
-	border-top: var(--border);
-	border-bottom: var(--border);
-	font-size: var(--fnt_12);
-}
-#detailInfo .spec_info > p {
-	width: calc((100% - 5rem) / 2);
-	text-align: end;
-}
-#detailInfo .spec_info > p span {
-	display: inline-block;
-	margin-left: 0.5rem;
-	padding: 0.25rem;
-	width: 80%;
-	border-radius: 0.15rem;
-	background: rgb(var(--color_bg));
-	text-align: start;
-}
-#detailInfo .host_info {
+#detailInfo .reviewer_info {
 	position: relative;
 	padding: 0.5rem;
 	width: 100%;
@@ -170,30 +146,30 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	background: rgb(var(--color_bg));
 	font-size: var(--fnt_12);
 }
-#detailInfo .host_info .host_pict {
+#detailInfo .reviewer_info .reviewer_pict {
 	float: left;
 	margin-right: 1rem;
 	width: 5rem;
 	height: 5rem;
 	border-radius: 50%;
 }
-#detailInfo .host_info .host_name {
+#detailInfo .reviewer_info .reviewer_name {
 	margin: 0.25rem 0 0.5rem;
 	color: rgb(var(--color_title));
 	font-size: var(--fnt_20);
 	font-weight: bold;
 }
-#detailInfo .host_info .host_name::before {
+#detailInfo .reviewer_info .reviewer_name::before {
 	display: block;
 	font-size: var(--fnt_12);
 	font-weight: normal;
-	content: "모임 주최자";
+	content: "후기 작성자";
 }
-#detailInfo .host_info .host_intro {
+#detailInfo .reviewer_info .reviewer_intro {
 	max-width: calc(100% - 10rem);
 	line-height: 1.4;
 }
-#detailInfo .host_info .host_spec {
+#detailInfo .reviewer_info .reviewer_spec {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
@@ -207,7 +183,7 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	width: 10rem;
 	border-left: var(--border);
 }
-#detailInfo .host_info .host_spec > span::before {
+#detailInfo .reviewer_info .reviewer_spec > span::before {
 	display: inline-block;
 	margin-right: 0.25rem;
 	width: 1rem;
@@ -215,123 +191,31 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	vertical-align: middle;
 	content: "";
 }
-#detailInfo .host_info .host_spec > span:nth-child(1)::before {
+#detailInfo .reviewer_info .reviewer_spec > span:nth-child(1)::before {
 	background: url("../../common/images/icons/icon_gathering.png") no-repeat center;
 }
-#detailInfo .host_info .host_spec > span:nth-child(2)::before {
+#detailInfo .reviewer_info .reviewer_spec > span:nth-child(2)::before {
 	background: url("../../common/images/icons/icon_comment.png") no-repeat center;
 }
-#detailInfo .host_info button.user_profile {
+#detailInfo .reviewer_info button.user_profile {
 	padding: 0.25rem;
 	width: 100%;
 	background: rgb(var(--color_acc2));
 	color: rgb(var(--color_light));
 }
 
-#detailOffer > div + div {
-	margin-top: 0.5rem;
-}
-
-.offer_wine {
-	padding: 0.5rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	background: rgb(var(--color_bg));
-}
-.offer_wine .list_wine,
-.offer_wine .byob_wine {
-	display: flex;
-	flex-flow: row wrap;
-}
-.offer_wine .list_wine > li,
-.offer_wine .byob_wine > li {
+.review_starpoint {
 	display: flex;
 	flex-flow: row nowrap;
-	align-items: center;
-	gap: 0.5rem;
-	padding: 0.25rem;
-	width: 50%;
-	border-radius: var(--bdr_outer);
-}
-.offer_wine .list_wine > li:hover,
-.offer_wine .byob_wine > li:hover {
-	background: rgb(var(--color_tone2));
-	transition: 0.3s;
-}
-.offer_wine .list_wine > li:hover .off_name,
-.offer_wine .byob_wine > li:hover .off_name {
-	color: rgb(var(--color_acc2));
-	font-size: var(--fnt_14);
-	transition: 0.3s;
-}
-.offer_wine .list_wine > li > .wine_icon,
-.offer_wine .byob_wine > li > .wine_icon {
-	width: 2.5rem;
-	height: 2.5rem;
-}
-.offer_wine .list_wine > li > .offering_wine_info,
-.offer_wine .byob_wine > li > .offering_wine_info {
-	font-size: var(--fnt_12);
-}
-.offer_wine .list_wine > li .off_name,
-.offer_wine .byob_wine > li .off_name {
-	font-family: var(--ff_sans_p);
+	justify-content: space-around;
+	margin: 1rem 0;
 }
 
-.offer_food {
-	padding: 0.5rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	background: rgb(var(--color_bg));
+.starpoint_kind {
+	width: 4rem;
 }
-.offer_food > .list_food {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	row-gap: 0.5rem;
-	padding: 0.25rem;
-	border-radius: var(--bdr_outer);
-	font-size: var(--fnt_12);
-}
-.offer_food > .list_food > dt > img {
-	width: 2.5rem;
-	height: 2.5rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	-o-object-fit: cover;
-	   object-fit: cover;
-}
-.offer_food > .list_food > dd.course_list {
-	margin-left: 0.25rem;
-}
-.offer_food > .list_food > dd.course_list > p:nth-child(1) {
-	font-family: var(--ff_sans_p);
-}
-.offer_food > .list_food > dd.food_pict {
-	display: flex;
-	flex-flow: row nowrap;
-	gap: 0.5rem;
-	width: 100%;
-}
-.offer_food > .list_food > dd.food_pict img {
-	width: calc((100% - 1.5rem) / 4);
-	height: 6rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	-o-object-fit: cover;
-	   object-fit: cover;
-}
-
-.join_container {
-	margin: 1rem auto 0;
-	text-align: center;
-}
-
-button#btnJoin {
-	padding: 0.5rem 2rem;
-	background: rgb(var(--color_acc1));
-	color: rgb(var(--color_light));
-	font-size: var(--fnt_16);
+.starpoint_kind p {
+	margin-bottom: 0.25rem;
 }
 
 #detailReview {
@@ -362,26 +246,6 @@ button#btnJoin {
 	outline-offset: -0.1rem;
 }
 
-.tab_container {
-	position: absolute;
-	top: 1.2rem;
-	right: 1rem;
-	font-family: var(--ff_sans_p);
-	font-size: var(--fnt_12);
-}
-.tab_container a {
-	display: inline-block;
-	position: relative;
-	padding: 0.5rem 0.5rem 0.4rem;
-	background: linear-gradient(180deg, rgb(var(--color_subtle)) 0%, transparent 100%);
-	border-radius: var(--bdr_inner);
-}
-.tab_container a.on {
-	background: rgb(var(--color_text));
-	color: rgb(var(--color_light));
-	pointer-events: none;
-}
-
 #detailDesc hr.hf {
 	margin-bottom: 0.5rem;
 	background: rgb(var(--color_bdr));
@@ -389,11 +253,4 @@ button#btnJoin {
 #detailDesc .desc_intro {
 	padding: 0.5rem;
 	line-height: 1.6;
-}
-
-.gathering_disclaimer {
-	padding: 1rem;
-	color: rgb(var(--color_bdr));
-	font-size: var(--fnt_12);
-	line-height: 1.4;
 }

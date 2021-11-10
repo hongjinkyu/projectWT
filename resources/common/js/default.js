@@ -97,8 +97,16 @@ $(document).ready(function() { // jQuery Load
 
     // 여기부터 테스트용 임시 코드
 
-    $('.card_img').click(function() {
+    $('.card_item:is(.gt) .card_img').click(function() {
         location.href = './gathering_detail.html';
+    });
+
+    $('.card_item:is(.rv) .card_img').click(function() {
+        location.href = './review_detail.html';
+    });
+
+    $('.card_item:is(.pt) .card_img').click(function() {
+        location.href = './partners_detail.html';
     });
 
     // 테스트용 임시 코드 끝
