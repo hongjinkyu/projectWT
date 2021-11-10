@@ -5,12 +5,6 @@ $(document).ready(function() { // jQuery Load
     $(window).trigger('resize');
     $(window).trigger('scroll');
 
-    if ($(window).scrollTop() >= 60) {
-        $('header#headBase.head_index').addClass('scrolled')
-    } else {
-        $('header#headBase.head_index').removeClass('scrolled')
-    }
-
     $(window).scroll(function() {
         let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
         let sticky_height = $('footer#footBase').height() + 10;
@@ -75,6 +69,17 @@ $(document).ready(function() { // jQuery Load
             $(this).siblings('.custom_selector_form').slideToggle(200);
         });
     }); // Custom Selector (Gathering - Open)
+
+    $('.tab_container > a').each(function() {
+        $(this).click(function() {
+            let targetTab = $(this).attr('href');
+
+            $(this).addClass('on');
+            $(this).siblings('a').removeClass('on');
+            $(targetTab).show();
+            $($(this).siblings('a').attr('href')).hide();
+        });
+    }); // Tab Operation (Gathering - Detail)
 
     $('.btn_burger').click(function() {
         if ($(this).hasClass('on')) {

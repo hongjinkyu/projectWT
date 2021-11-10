@@ -1513,7 +1513,19 @@ div#footContent {
 }
 
 /* 커스텀 셀렉터 끝 */
-/* 말풍선과 컨테이너 */
+/* 리뷰 말풍선과 컨테이너 */
+
+#reviewComment,
+#reviewArticle {
+    position: relative;
+    border: var(--border);
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_bg));
+}
+
+#reviewArticle {
+    display: none;
+}
 
 .comment_container {
     padding: .75rem;
@@ -1575,7 +1587,88 @@ div#footContent {
     }
 }
 
+.article_container {
+    padding: .25rem;
+
+    > li {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: .25rem;
+        padding: .25rem;
+        border-radius: var(--bdr_outer);
+
+        & + li {
+            border-top: var(--border);
+        }
+
+        > img {
+            width: 2.5rem;
+            height: 2.5rem;
+            border: var(--border);
+            border-radius: var(--bdr_outer);
+            object-fit: cover;
+        }
+
+        .article_title {
+            font-family: var(--ff_sans_p);
+        }
+
+        .article_date {
+            font-size: var(--fnt_12);
+        }
+
+        > .user_profile {
+            margin: 0 .25rem 0 auto;
+        }
+    }
+}
+
+.article_more {
+    margin-top: .5rem;
+    padding: .5rem;
+    border-top: var(--border);
+    text-align: end;
+
+    button {
+        background: rgb(var(--color_acc2));
+        color: rgb(var(--color_light));
+    }
+}
+
 /* 말풍선과 컨테이너 끝 */
+/* 리뷰 페이징 */
+
+.review_paging {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    > li {
+        padding: .25rem .5rem;
+        border-radius: var(--bdr_outer);
+
+        &.this_page {
+            background: rgb(var(--color_text));
+            color: rgb(var(--color_light));
+            pointer-events: none;
+        }
+
+        &:is(.paging_arrow).disabled {
+            color: rgb(var(--color_subtle));
+            pointer-events: none;
+        }
+
+        &:not(.paging_arrow) {
+            font-family: var(--ff_eng);
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}
+
+/* 리뷰 페이징 끝 */
 /* 모임 장소 */
 
 .gathering_location {

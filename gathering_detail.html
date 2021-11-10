@@ -18,6 +18,10 @@
     <link rel="stylesheet" type="text/css" href="./resources/gathering/css/layout_gathering_detail.css" />
     <!-- Page-Specific CSS -->
 
+    <link rel="stylesheet" type="text/css" href="./resources/common/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/common/css/slick-theme.css" />
+    <!-- Slick CSS -->
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
     <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
     <script type="text/javascript" src="./resources/gathering/js/js_gathering_detail.js"></script> <!-- Page-Specific jQuery -->
@@ -89,13 +93,21 @@
                 <section id="contentBar">
                     <div id="detailSlide">
                         <div class="slide_body">
-                            <img src="./resources/index/images/img35.jpg" alt="모임 대표 사진" />
+                            <img src="./resources/index/images/img34.jpg" alt="모임 대표사진" />
+                            <img src="./resources/index/images/img28.jpg" alt="모임 대표사진" />
+                            <img src="./resources/index/images/img32.jpg" alt="모임 대표사진" />
                         </div>
 
                         <div class="slide_thumbs">
-                            <button class="btn_thumb active">1</button>
-                            <button class="btn_thumb">2</button>
-                            <button class="btn_thumb">3</button>
+                            <div class="btn_thumb">
+                                <img src="./resources/index/images/img34.jpg" alt="모임 대표사진" />
+                            </div>
+                            <div class="btn_thumb">
+                                <img src="./resources/index/images/img28.jpg" alt="모임 대표사진" />
+                            </div>
+                            <div class="btn_thumb">
+                                <img src="./resources/index/images/img32.jpg" alt="모임 대표사진" />
+                            </div>
                         </div>
                     </div>
 
@@ -145,10 +157,7 @@
                         </div>
 
                         <div class="join_container">
-                            <span>
-                                뭐 참여할때 뭐가 필요하고 (참여비, 뭐 요리나 와인 선택) 이런거 좀 들어가야 할듯
-                            </span>
-
+                            몬가... 몬가 들어가야됨 (BYOB 와인 선택, 참여 옵션 같은거)
                             <button id="btnJoin">
                                 참여 신청하기
                             </button>
@@ -208,10 +217,10 @@
                             <dl class="list_food">
                                 <img src="./resources/index/images/1.jpg" alt="코스요리 대표사진" />
                                 <dt>
-                                    <h6>중화요리 코스</h6>
+                                    <h6>게살버거 코스</h6>
                                 </dt>
                                 <dd>
-                                    깐풍기, 라조기, 난자완스, 고추잡채
+                                    게살버거, 해초튀김, 탄산 바닷물
                                 </dd>
                             </dl>
                         </div>
@@ -273,7 +282,7 @@
                         <h4 class="info_title">모임 후기</h4>
 
                         <div class="tab_container">
-                            <a href="#reviewComment">한줄후기</a>
+                            <a class="on" href="#reviewComment">한줄후기</a>
                             <a href="#reviewArticle">포토후기</a>
                         </div>
 
@@ -389,11 +398,83 @@
                             </ul>
 
                             <input type="text" name="text_comment" id="txtComment" placeholder="댓글은 마음을 비추는 거울입니다. 따뜻하고 다정한 댓글을 작성해 주세요." />
-                            <button id="btnReturn">한줄 리뷰 입력</button>
+                            <button type="submit" id="btnReturn">한줄 리뷰 입력</button> <!-- 참여 이력이 없으면 텍스트박스와 버튼이 비활성화되고 플레이스홀더 메시지 변경 -->
                         </div> <!-- #reviewComment -->
 
                         <div id="reviewArticle">
-                            포토후기 들어갈 칸
+                            <ul class="article_container">
+                                <li class="article_single">
+                                    <img src="./resources/index/images/img18.jpg" alt="후기 대표사진" />
+                                    <p class="article_name">
+                                        <span class="article_title">너무나 즐거웠던 슈겁모</span><br />
+                                        <span class="article_date">2021. 04. 01</span>
+                                    </p>
+                                    <p class="user_profile">
+                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                        <span>최점숙 님</span>
+                                    </p>
+                                </li>
+
+                                <li class="article_single">
+                                    <img src="./resources/index/images/img18.jpg" alt="후기 대표사진" />
+                                    <p class="article_name">
+                                        <span class="article_title">너무나 즐거웠던 슈겁모</span><br />
+                                        <span class="article_date">2021. 04. 01</span>
+                                    </p>
+                                    <p class="user_profile">
+                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                        <span>최점숙 님</span>
+                                    </p>
+                                </li>
+
+                                <li class="article_single">
+                                    <img src="./resources/index/images/img18.jpg" alt="후기 대표사진" />
+                                    <p class="article_name">
+                                        <span class="article_title">너무나 즐거웠던 슈겁모</span><br />
+                                        <span class="article_date">2021. 04. 01</span>
+                                    </p>
+                                    <p class="user_profile">
+                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                        <span>최점숙 님</span>
+                                    </p>
+                                </li>
+
+                                <li class="article_single">
+                                    <img src="./resources/index/images/img18.jpg" alt="후기 대표사진" />
+                                    <p class="article_name">
+                                        <span class="article_title">너무나 즐거웠던 슈겁모</span><br />
+                                        <span class="article_date">2021. 04. 01</span>
+                                    </p>
+                                    <p class="user_profile">
+                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                        <span>최점숙 님</span>
+                                    </p>
+                                </li>
+
+                                <li class="article_single">
+                                    <img src="./resources/index/images/img18.jpg" alt="후기 대표사진" />
+                                    <p class="article_name">
+                                        <span class="article_title">너무나 즐거웠던 슈겁모</span><br />
+                                        <span class="article_date">2021. 04. 01</span>
+                                    </p>
+                                    <p class="user_profile">
+                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
+                                        <span>최점숙 님</span>
+                                    </p>
+                                </li>
+                            </ul>
+
+                            <ul class="review_paging">
+                                <li class="paging_arrow prev disabled">이전</li>
+                                <li class="this_page">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li class="paging_arrow next">다음</li>
+                            </ul>
+
+                            <div class="article_more">
+                                <button>포토후기 작성하기</button> <!-- 참여 이력이 없으면 클릭시 작성할 수 없다는 메시지 보이기 -->
+                            </div>
                         </div> <!-- #reviewArticle -->
 
                     </article>
@@ -510,7 +591,7 @@
 
     </div> <!-- #wrap -->
 
-    <script type="text/javascript" src="./resources/common/js/swiper.min.js"></script> <!-- Swiper JS -->
+    <script type="text/javascript" src="./resources/common/js/slick.min.js"></script> <!-- Slick JS -->
 
 </body>
 

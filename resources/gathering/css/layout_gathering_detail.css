@@ -24,6 +24,7 @@ div#detailSlide::before {
 	left: 0;
 	right: 0;
 	background: linear-gradient(to top, rgba(var(--color_dark), 0.75) 0%, transparent 50%);
+	z-index: 1;
 	content: "";
 }
 div#detailSlide > .slide_body {
@@ -40,11 +41,11 @@ div#detailSlide > .slide_thumbs {
 	position: absolute;
 	bottom: 0.25rem;
 	left: 0.25rem;
+	right: 0.25rem;
 	z-index: 2;
 }
-div#detailSlide > .slide_thumbs > button {
+div#detailSlide > .slide_thumbs .btn_thumb {
 	display: block;
-	float: left;
 	padding: 0;
 	width: 3rem;
 	height: 2.25rem;
@@ -52,14 +53,20 @@ div#detailSlide > .slide_thumbs > button {
 	border-radius: var(--bdr_outer);
 	box-shadow: none;
 	opacity: 0.5;
+	overflow: hidden;
 }
-div#detailSlide > .slide_thumbs > button.active {
-	border: 0.1rem solid rgb(var(--color_acc1));
-	border-radius: 0.1rem;
-	opacity: 1;
-}
-div#detailSlide > .slide_thumbs > button + button {
+div#detailSlide > .slide_thumbs .btn_thumb + .btn_thumb {
 	margin-left: 0.25rem;
+}
+div#detailSlide > .slide_thumbs .btn_thumb img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
+	border: 0.1rem solid rgb(var(--color_acc1));
+	opacity: 1;
 }
 
 .info_title {
@@ -258,6 +265,8 @@ div#detailSlide > .slide_thumbs > button + button {
 	height: 2.5rem;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 .offer_food > .list_food > dt {
 	margin: 0 0.5rem;
@@ -279,6 +288,7 @@ button#btnJoin {
 }
 
 #detailReview {
+	position: relative;
 	padding: 0 0.5rem;
 }
 #detailReview input#txtComment {
@@ -300,12 +310,29 @@ button#btnJoin {
 	box-shadow: none;
 	color: rgb(var(--color_light));
 }
-#detailReview button#btnReturn:hover {
-	filter: brightness(1.2);
-}
 #detailReview button#btnReturn:focus {
 	outline: 0.05rem solid rgb(var(--color_tone2));
 	outline-offset: -0.1rem;
+}
+
+.tab_container {
+	position: absolute;
+	top: 1.2rem;
+	right: 1rem;
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_12);
+}
+.tab_container a {
+	display: inline-block;
+	position: relative;
+	padding: 0.5rem 0.5rem 0.4rem;
+	background: linear-gradient(180deg, rgb(var(--color_subtle)) 0%, transparent 100%);
+	border-radius: var(--bdr_inner);
+}
+.tab_container a.on {
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+	pointer-events: none;
 }
 
 #detailDesc hr.hf {
@@ -315,38 +342,6 @@ button#btnJoin {
 #detailDesc .desc_intro {
 	padding: 0.5rem;
 	line-height: 1.6;
-}
-
-#reviewComment {
-	position: relative;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	background: rgb(var(--color_bg));
-}
-
-.review_paging {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-}
-.review_paging > li {
-	padding: 0.25rem 0.5rem;
-	border-radius: var(--bdr_outer);
-}
-.review_paging > li.this_page {
-	background: rgb(var(--color_text));
-	color: rgb(var(--color_light));
-	pointer-events: none;
-}
-.review_paging > li:is(.paging_arrow).disabled {
-	color: rgb(var(--color_subtle));
-	pointer-events: none;
-}
-.review_paging > li:not(.paging_arrow) {
-	font-family: var(--ff_eng);
-	font-weight: bold;
-	cursor: pointer;
 }
 
 .gathering_disclaimer {

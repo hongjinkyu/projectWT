@@ -1366,7 +1366,19 @@ div#footContent h6 {
 }
 
 /* 커스텀 셀렉터 끝 */
-/* 말풍선과 컨테이너 */
+/* 리뷰 말풍선과 컨테이너 */
+#reviewComment,
+#reviewArticle {
+	position: relative;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_bg));
+}
+
+#reviewArticle {
+	display: none;
+}
+
 .comment_container {
 	padding: 0.75rem;
 }
@@ -1424,7 +1436,77 @@ div#footContent h6 {
 	content: "";
 }
 
+.article_container {
+	padding: 0.25rem;
+}
+.article_container > li {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.25rem;
+	border-radius: var(--bdr_outer);
+}
+.article_container > li + li {
+	border-top: var(--border);
+}
+.article_container > li > img {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.article_container > li .article_title {
+	font-family: var(--ff_sans_p);
+}
+.article_container > li .article_date {
+	font-size: var(--fnt_12);
+}
+.article_container > li > .user_profile {
+	margin: 0 0.25rem 0 auto;
+}
+
+.article_more {
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	border-top: var(--border);
+	text-align: end;
+}
+.article_more button {
+	background: rgb(var(--color_acc2));
+	color: rgb(var(--color_light));
+}
+
 /* 말풍선과 컨테이너 끝 */
+/* 리뷰 페이징 */
+.review_paging {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.review_paging > li {
+	padding: 0.25rem 0.5rem;
+	border-radius: var(--bdr_outer);
+}
+.review_paging > li.this_page {
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+	pointer-events: none;
+}
+.review_paging > li:is(.paging_arrow).disabled {
+	color: rgb(var(--color_subtle));
+	pointer-events: none;
+}
+.review_paging > li:not(.paging_arrow) {
+	font-family: var(--ff_eng);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* 리뷰 페이징 끝 */
 /* 모임 장소 */
 .gathering_location {
 	display: flex;

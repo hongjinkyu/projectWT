@@ -24,6 +24,24 @@ $(document).ready(function () { // jQuery Load
 
     // ---------- Actual Codes ----------
 
+    $('.slide_body').slick({
+        slide: 'img',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: false,
+        asNavFor: '.slide_thumbs',
+    });
 
+    $('.slide_thumbs').slick({
+        slide: '.btn_thumb',
+        variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        draggable: false,
+        focusOnSelect: true,
+        asNavFor: '.slide_body',
+    });
 
 }) // jQuery Closed
