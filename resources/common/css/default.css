@@ -216,7 +216,7 @@ body.prevent_scroll {
 #wrapMain.sub {
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: flex-start;
+	justify-content: center;
 }
 
 .int_wrap {

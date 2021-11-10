@@ -11,6 +11,15 @@
 		display: none;
 	}
 
+	#wrapMain.sub {
+		margin-top: 5rem;
+	}
+
+	#sideBar_left,
+#sideBar_right {
+		display: none;
+	}
+
 	/* 공통 요소 끝 */
 	/* 개별 페이지 요소 */
 	.item_review {
