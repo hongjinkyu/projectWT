@@ -235,12 +235,6 @@ fieldset > legend {
 	color: rgb(var(--color_light));
 }
 
-/* 추가 스타일링 필요한 요소들
-
-    input-radio, input-number,
-    input-select, input-file, input-search, meter, progress
-
-*/
 /* ---------- Form Elements End ---------- */
 /* ---------- Modal, Pop-Up, Message Start ---------- */
 aside#popFollow {
@@ -517,6 +511,7 @@ section#contentBar {
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_light));
 	box-shadow: 0 0 0.75rem rgba(var(--color_subtle), 0.3);
+	overflow: hidden;
 }
 section#contentBar > h3 {
 	margin: 0.5rem;
@@ -1409,7 +1404,7 @@ div#footContent h6 {
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_light));
-	box-shadow: 0 0 75rem rgba(var(--color_subtle), 0.3);
+	box-shadow: 0 0.25rem 0.75rem rgba(var(--color_subtle), 0.3);
 	font-family: var(--ff_sans_p);
 	color: rgb(var(--color_title));
 	font-size: var(--fnt_12);

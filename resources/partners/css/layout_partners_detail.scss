@@ -34,7 +34,7 @@ div#detailSlide {
         width: inherit;
         height: inherit;
 
-        > img {
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -81,6 +81,17 @@ div#detailSlide {
     margin: 0 0 .5rem .5rem;
 }
 
+.star_point {
+    &::before {
+        left: auto;
+        right: 100%;
+    }
+}
+
+.hf {
+    background: rgb(var(--color_bdr));
+}
+
 .detail_title {
     position: relative;
     margin-bottom: .5rem;
@@ -103,192 +114,59 @@ div#detailSlide {
     }
 }
 
-#detailInfo {
-    .review_info {
-        text-align: center;
+.bubble {
+    width: initial !important;
+
+    > .star_point {
+        margin-top: .5rem;
+        margin-left: auto;
+    }
+}
+
+.review_container {
+    padding-bottom: .5rem;
+    border: var(--border);
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_bg));
+}
+
+#btnOpen {
+    background: rgb(var(--color_acc1));
+    color: rgb(var(--color_light));
+    vertical-align: top;
+}
+
+.food_item {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .5rem;
+    position: relative;
+
+    & + .food_item {
+        margin-top: .5rem;
     }
 
-    .reviewer_info {
-        position: relative;
-        padding: .5rem;
-        width: 100%;
+    > img {
+        width: 8rem;
+        height: 5rem;
         border: var(--border);
         border-radius: var(--bdr_outer);
-        background: rgb(var(--color_bg));
-        font-size: var(--fnt_12);
+        object-fit: cover;
+    }
 
-        .reviewer_pict {
-            float: left;
-            margin-right: 1rem;
-            width: 5rem;
-            height: 5rem;
-            border-radius: 50%;
-        }
+    > .food_spec {
+        padding: .25rem 0;
 
-        .reviewer_name {
-            margin: .25rem 0 .5rem;
-            color: rgb(var(--color_title));
-            font-size: var(--fnt_20);
-            font-weight: bold;
-
-            &::before {
-                display: block;
-                font-size: var(--fnt_12);
-                font-weight: normal;
-                content: '후기 작성자';
-            }
-        }
-
-        .reviewer_intro {
-            max-width: calc(100% - 10rem);
+        > .food_desc {
+            margin-top: .25rem;
+            font-size: var(--fnt_12);
             line-height: 1.4;
         }
 
-        .reviewer_spec {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-between;
+        > .food_price {
             position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            width: 10rem;
-            margin: .5rem 0;
-            padding: .5rem 1rem;
-            width: 10rem;
-            border-left: var(--border);
-
-            > span {
-                &::before {
-                    display: inline-block;
-                    margin-right: .25rem;
-                    width: 1rem;
-                    height: 1rem;
-                    vertical-align: middle;
-                    content: '';
-                }
-
-                &:nth-child(1)::before {
-                    background: url('../../common/images/icons/icon_gathering.png') no-repeat center;
-                }
-
-                &:nth-child(2)::before {
-                    background: url('../../common/images/icons/icon_comment.png') no-repeat center;
-                }
-            }
+            bottom: .25rem;
+            font-size: var(--fnt_12);
         }
-
-        button.user_profile {
-            padding: .25rem;
-            width: 100%;
-            background: rgb(var(--color_acc2));
-            color: rgb(var(--color_light));
-        }
-    }
-}
-
-#detailReview {
-    position: relative;
-    padding: 0 .5rem;
-
-    input#txtComment {
-        margin-top: .5rem;
-        padding: .75rem .5rem;
-        width: 100%;
-        border-top: var(--border);
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        box-shadow: none;
-    }
-
-    button#btnReturn {
-        position: absolute;
-        bottom: .25rem;
-        right: .25rem;
-        padding: .55rem 1.5rem .45rem .5rem;
-        background: rgb(var(--color_acc2)) url('../../common/images/icons/icon_return.png') no-repeat center right .5rem;
-        background-size: .6rem;
-        box-shadow: none;
-        color: rgb(var(--color_light));
-
-        &:focus {
-            outline: .05rem solid rgb(var(--color_tone2));
-            outline-offset: -.1rem;
-        }
-    }
-}
-
-
-.offer_food {
-    padding: .5rem;
-
-    > .list_food {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        row-gap: .5rem;
-        padding: .25rem;
-        border-radius: var(--bdr_outer);
-        font-size: var(--fnt_12);
-
-        & + .list_food {
-            margin-top: .5rem;
-        }
-
-        > dt {
-            > img {
-                width: 2.5rem;
-                height: 2.5rem;
-                border: var(--border);
-                border-radius: var(--bdr_outer);
-                object-fit: cover;
-            }
-        }
-
-        > dd {
-            &.course_list {
-                margin-left: .25rem;
-
-                > p:nth-child(1) {
-                    font-family: var(--ff_sans_p);
-                }
-            }
-
-            &.food_pict {
-                display: flex;
-                flex-flow: row nowrap;
-                gap: .5rem;
-                width: 100%;
-
-                img {
-                    width: calc((100% - 1.5rem) / 4);
-                    height: 6rem;
-                    border: var(--border);
-                    border-radius: var(--bdr_outer);
-                    object-fit: cover;
-                }
-            }
-        }
-    }
-}
-
-#reviewComment {
-    border: none;
-    background: none;
-}
-
-#reviewArticle {
-    display: block;
-}
-
-#detailDesc {
-    hr.hf {
-        margin-bottom: .5rem;
-        background: rgb(var(--color_bdr));
-    }
-
-    .desc_intro {
-        padding: .5rem;
-        line-height: 1.6;
     }
 }
