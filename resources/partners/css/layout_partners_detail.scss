@@ -114,6 +114,42 @@ div#detailSlide {
     }
 }
 
+#partnerInfo {
+    .restaurant_rate {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin: .5rem 1.5rem;
+
+        .review_count {
+            font-family: var(--ff_sans_p);
+            font-size: var(--fnt_12);
+        }
+    }
+
+    .partner_intro {
+        margin-bottom: .75rem;
+        padding: .5rem;
+        background: black;
+        color: white;
+        line-height: 1.6;
+    }
+
+    .location_map {
+        margin: .75rem 0;
+
+        > img {
+            width: 100%;
+            height: 10rem;
+            object-fit: cover;
+        }
+    }
+
+    .reservation_info {
+        margin-bottom: 1rem;
+    }
+}
+
 .bubble {
     width: initial !important;
 
@@ -136,6 +172,13 @@ div#detailSlide {
     vertical-align: top;
 }
 
+.food_container {
+    padding: .5rem;
+    border: var(--border);
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_bg));
+}
+
 .food_item {
     display: flex;
     flex-flow: row nowrap;
@@ -143,7 +186,7 @@ div#detailSlide {
     position: relative;
 
     & + .food_item {
-        margin-top: .5rem;
+        margin-top: .75rem;
     }
 
     > img {
