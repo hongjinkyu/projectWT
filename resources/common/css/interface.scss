@@ -50,6 +50,12 @@ a:visited {
     }
 }
 
+%images_with_border {
+    border: var(--border);
+    border-radius: var(--bdr_outer);
+    object-fit: cover;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],

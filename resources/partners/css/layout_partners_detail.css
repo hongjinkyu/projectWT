@@ -105,6 +105,11 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	content: "";
 }
 
+#partnerInfo .restaurant_hashtag {
+	margin: 0.5rem 0 1rem;
+	color: rgb(var(--color_bdr));
+	font-size: var(--fnt_12);
+}
 #partnerInfo .restaurant_rate {
 	display: flex;
 	align-items: center;
@@ -118,12 +123,17 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 #partnerInfo .partner_intro {
 	margin-bottom: 0.75rem;
 	padding: 0.5rem;
-	background: black;
-	color: white;
+	background: rgb(var(--color_bg));
+	border-radius: var(--bdr_outer);
 	line-height: 1.6;
 }
+#partnerInfo .location_mini {
+	font-size: var(--fnt_12);
+	text-align: end;
+}
 #partnerInfo .location_map {
-	margin: 0.75rem 0;
+	margin-top: 1.5rem;
+	padding: 0 0.5rem;
 }
 #partnerInfo .location_map > img {
 	width: 100%;
@@ -132,7 +142,12 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	   object-fit: cover;
 }
 #partnerInfo .reservation_info {
-	margin-bottom: 1rem;
+	margin-top: 1.5rem;
+	padding: 0 0.5rem;
+}
+#partnerInfo .restaurant_option {
+	margin-top: 1.5rem;
+	padding: 0 0.5rem;
 }
 
 .bubble {
@@ -151,9 +166,12 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 }
 
 #btnOpen {
+	float: right;
+	padding: 0.5rem 1rem 0.4rem;
 	background: rgb(var(--color_acc1));
 	color: rgb(var(--color_light));
 	vertical-align: top;
+	cursor: pointer;
 }
 
 .food_container {
@@ -165,16 +183,17 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 
 .food_item {
 	display: flex;
-	flex-flow: row nowrap;
-	gap: 0.5rem;
+	flex-flow: row wrap;
+	align-items: center;
+	gap: 0.5rem 0.25rem;
 	position: relative;
 }
 .food_item + .food_item {
-	margin-top: 0.75rem;
+	margin-top: 1rem;
 }
-.food_item > img {
-	width: 8rem;
-	height: 5rem;
+.food_item > .food_face {
+	width: 2.5rem;
+	height: 2.5rem;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	-o-object-fit: cover;
@@ -183,13 +202,27 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 .food_item > .food_spec {
 	padding: 0.25rem 0;
 }
+.food_item > .food_spec > .food_name {
+	font-family: var(--ff_sans_p);
+}
 .food_item > .food_spec > .food_desc {
 	margin-top: 0.25rem;
 	font-size: var(--fnt_12);
 	line-height: 1.4;
 }
-.food_item > .food_spec > .food_price {
-	position: absolute;
-	bottom: 0.25rem;
-	font-size: var(--fnt_12);
+.food_item > .food_price {
+	margin-left: auto;
+}
+.food_item > .food_images {
+	display: flex;
+	gap: 0.5rem;
+	width: 100%;
+}
+.food_item > .food_images > img {
+	width: calc((100% - 1.5rem) / 4);
+	height: 5rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
