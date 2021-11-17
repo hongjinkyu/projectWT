@@ -517,6 +517,39 @@ div.mnav_background {
     }
 }
 
+p.btn_back,
+p.btn_like {
+    position: absolute;
+    top: 1rem;
+    cursor: pointer;
+    z-index: 2;
+
+    > svg {
+        fill: rgb(var(--color_light));
+        filter: drop-shadow(0 0 .25rem rgba(var(--color_dark), .75));
+    }
+}
+
+p.btn_back {
+    left: 1rem;
+}
+
+p.btn_like {
+    left: 3rem;
+}
+
+ul.information_list {
+    padding-left: 1rem;
+
+    > li {
+        list-style: square;
+
+        & + li {
+            margin-top: .5rem;
+        }
+    }
+}
+
 section#sideBar {
     &_left,
     &_right {
@@ -1216,6 +1249,7 @@ div#footContent {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     position: relative;
     width: 3rem;
     height: 3rem;
@@ -1597,7 +1631,7 @@ div#footContent {
 
     > li {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         align-items: center;
         gap: .25rem;
         padding: .25rem;
@@ -1678,7 +1712,7 @@ div#footContent {
 
 .gathering_location {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     border: var(--border);
     border-radius: var(--bdr_outer);
     background: rgb(var(--color_bg));
@@ -1686,6 +1720,7 @@ div#footContent {
     > img {
         width: 50%;
         height: auto;
+        object-fit: cover;
     }
 
     > .info_container {

@@ -35,6 +35,10 @@
 		width: 100%;
 	}
 
+	.host_spec {
+		width: 100%;
+	}
+
 	/* 개별 페이지 요소 끝*/
 }
 /* 1200px */
@@ -108,6 +112,20 @@
 		margin-bottom: 1rem;
 	}
 
+	.gathering_location > img {
+		width: 100%;
+		height: 10rem;
+	}
+	.gathering_location > .info_container {
+		width: 100%;
+		border-top: var(--border);
+		border-left: none;
+	}
+
+	button.user_profile {
+		width: 100%;
+	}
+
 	/* 개별 페이지 요소 끝*/
 }
 /* 800px */
@@ -164,6 +182,13 @@
 
 	div#footContent {
 		display: none;
+	}
+
+	.host_spec {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
 	}
 
 	/* 개별 페이지 요소 끝*/

@@ -497,6 +497,37 @@ div.mnav_background div#mobileNav ul.mnav_list li + li {
 	margin-top: 1rem;
 }
 
+p.btn_back,
+p.btn_like {
+	position: absolute;
+	top: 1rem;
+	cursor: pointer;
+	z-index: 2;
+}
+p.btn_back > svg,
+p.btn_like > svg {
+	fill: rgb(var(--color_light));
+	filter: drop-shadow(0 0 0.25rem rgba(var(--color_dark), 0.75));
+}
+
+p.btn_back {
+	left: 1rem;
+}
+
+p.btn_like {
+	left: 3rem;
+}
+
+ul.information_list {
+	padding-left: 1rem;
+}
+ul.information_list > li {
+	list-style: square;
+}
+ul.information_list > li + li {
+	margin-top: 0.5rem;
+}
+
 section#sideBar_left, section#sideBar_right {
 	width: calc((100% - 38rem) / 2);
 }
@@ -1122,6 +1153,7 @@ div#footContent h6 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-shrink: 0;
 	position: relative;
 	width: 3rem;
 	height: 3rem;
@@ -1440,7 +1472,7 @@ div#footContent h6 {
 }
 .article_container > li {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	align-items: center;
 	gap: 0.25rem;
 	padding: 0.25rem;
@@ -1509,7 +1541,7 @@ div#footContent h6 {
 /* 모임 장소 */
 .gathering_location {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_bg));
@@ -1517,6 +1549,8 @@ div#footContent h6 {
 .gathering_location > img {
 	width: 50%;
 	height: auto;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 .gathering_location > .info_container {
 	padding: 0.5rem;

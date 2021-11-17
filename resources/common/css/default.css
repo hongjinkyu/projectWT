@@ -35,6 +35,10 @@
 	line-height: 1;
 	/* line-height: 1.8 (가독성이 필요한 본문 영역) */
 	scroll-behavior: smooth;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 	--px_1: .05rem;
 	--px_3: .15rem;
 	--px_5: .25rem;
@@ -144,6 +148,7 @@ table {
 img {
 	display: block;
 	border: none;
+	-webkit-user-drag: none;
 }
 
 ul,

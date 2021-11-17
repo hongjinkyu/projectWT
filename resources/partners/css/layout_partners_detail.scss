@@ -115,6 +115,8 @@ div#detailSlide {
 }
 
 #partnerInfo {
+    position: relative;
+
     .restaurant_hashtag {
         margin: .5rem 0 1rem;
         color: rgb(var(--color_bdr));
@@ -123,13 +125,18 @@ div#detailSlide {
 
     .restaurant_rate {
         display: flex;
+        flex-flow: row wrap;
         align-items: center;
         gap: .5rem;
-        margin: .5rem 1.5rem;
+        margin: .5rem .25rem .5rem 1.5rem;
 
         .review_count {
             font-family: var(--ff_sans_p);
             font-size: var(--fnt_12);
+        }
+
+        .location_mini {
+            margin-left: auto;
         }
     }
 
@@ -185,12 +192,40 @@ div#detailSlide {
 }
 
 #btnOpen {
-    float: right;
-    padding: .5rem 1rem .4rem;
-    background: rgb(var(--color_acc1));
+    position: absolute;
+    top: -1.75rem;
+    right: 1rem;
+    padding: 0 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    background: rgb(var(--color_light)) url('../../common/images/icons/icon_gathering_26_b.png') no-repeat center;
+    box-shadow: 0 .25rem .5rem rgba(var(--color_dark), .3);
     color: rgb(var(--color_light));
-    vertical-align: top;
+    font-size: var(--fnt_14);
     cursor: pointer;
+    overflow: hidden;
+    z-index: 2;
+
+    > span {
+        display: inline-block;
+        width: 100%;
+        text-align: end;
+        opacity: 0;
+    }
+
+    &:hover {
+        width: 10rem;
+        background: rgb(var(--color_acc1)) url('../../common/images/icons/icon_gathering_26_w.png') no-repeat left .75rem center;
+        box-shadow: 0 .25rem .5rem rgba(var(--color_acc1), .3);
+        transition: .3s;
+
+        > span {
+            opacity: 1;
+            transition: .3s;
+            transition-delay: .2s;
+        }
+    }
 }
 
 .food_container {
@@ -220,14 +255,11 @@ div#detailSlide {
     }
 
     > .food_spec {
-        padding: .25rem 0;
-
         > .food_name {
             font-family: var(--ff_sans_p);
         }
 
         > .food_desc {
-            margin-top: .25rem;
             font-size: var(--fnt_12);
             line-height: 1.4;
         }
