@@ -68,24 +68,6 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	border: 0.1rem solid rgb(var(--color_acc1));
 	opacity: 1;
 }
-div#detailSlide > p.btn_back,
-div#detailSlide p.btn_like {
-	position: absolute;
-	top: 1rem;
-	cursor: pointer;
-	z-index: 2;
-}
-div#detailSlide > p.btn_back > svg,
-div#detailSlide p.btn_like > svg {
-	fill: rgb(var(--color_light));
-	filter: drop-shadow(0 0 0.25rem rgba(var(--color_dark), 0.75));
-}
-div#detailSlide p.btn_back {
-	left: 1rem;
-}
-div#detailSlide p.btn_like {
-	left: 3rem;
-}
 
 .info_title {
 	margin: 0 0 0.5rem 0.5rem;
@@ -212,13 +194,15 @@ div#detailSlide p.btn_like {
 	text-align: end;
 	opacity: 0;
 }
-#btnOpen:hover {
+#btnOpen:hover,
+#btnOpen .mobile {
 	width: 10rem;
 	background: rgb(var(--color_acc1)) url("../../common/images/icons/icon_gathering_26_w.png") no-repeat left 0.75rem center;
 	box-shadow: 0 0.25rem 0.5rem rgba(var(--color_acc1), 0.3);
 	transition: 0.3s;
 }
-#btnOpen:hover > span {
+#btnOpen:hover > span,
+#btnOpen .mobile > span {
 	opacity: 1;
 	transition: 0.3s;
 	transition-delay: 0.2s;
@@ -261,6 +245,7 @@ div#detailSlide p.btn_like {
 }
 .food_item > .food_images {
 	display: flex;
+	flex-flow: row wrap;
 	gap: 0.5rem;
 	width: 100%;
 }

@@ -122,10 +122,6 @@
 		border-left: none;
 	}
 
-	button.user_profile {
-		width: 100%;
-	}
-
 	/* 개별 페이지 요소 끝*/
 }
 /* 800px */
@@ -184,11 +180,28 @@
 		display: none;
 	}
 
-	.host_spec {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
+	.offer_food > .list_food > dd.food_pict > img {
+		width: calc((100% - .5rem) / 2);
+	}
+
+	.food_item > .food_images > img {
+		width: calc((100% - .5rem) / 2);
+	}
+
+	.host_info > .host_pict {
+		width: 3rem;
+		height: 3rem;
+	}
+	.host_info > .host_desc {
+		width: calc(100% - 3.5rem);
+	}
+
+	button.user_profile {
+		width: 100%;
+	}
+
+	button.modal_btn {
+		width: 100%;
 	}
 
 	/* 개별 페이지 요소 끝*/

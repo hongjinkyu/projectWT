@@ -819,6 +819,89 @@ div#footContent {
 }
 
 /* 메인 섹션 (인덱스) 끝 */
+/* 정보 모달 시작 */
+
+aside#modalInfo {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: var(--shd_minor);
+    outline: var(--border);
+    z-index: 50;
+
+    > .int_wrap {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: .5rem;
+        padding: .5rem 1rem;
+        max-width: 40rem;
+
+        > .modal_img {
+            width: 3rem;
+            height: 3rem;
+            border: var(--border);
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        > dl {
+            > dt {
+                > h6 {
+                    &::after {
+                        display: inline-block;
+                        margin-left: .25rem;
+                        padding: .15rem .5rem;
+                        border: .05rem solid currentColor;
+                        border-radius: var(--bdr_outer);
+                        font-family: var(--ff_eng);
+                        color: rgba(var(--color_light), .75);
+                        font-size: var(--fnt_12);
+                        font-weight: bold;
+                        text-shadow: .05rem .05rem 0 rgba(var(--color_dark), .3);
+                        vertical-align: top;
+                        transition: .3s;
+                        z-index: 2;
+                        content: '';
+                    }
+                
+                    &:is([data-category="byob"]) {
+                        &::after {
+                            border-color: #008841;
+                            background: rgb(var(--color_acc2));
+                            content: 'BYOB';
+                        }
+                    }
+                
+                    &:is([data-category="list"]) {
+                        &::after {
+                            border-color: #dc801f;
+                            background: rgb(var(--color_acc1));
+                            content: 'LIST';
+                        }
+                    }
+                }
+            }
+
+            > dd {
+                margin-top: .25rem;
+                font-size: var(--fnt_12);
+            }
+        }
+
+        > .modal_btn {
+            margin-left: auto;
+            padding: .5rem 1rem;
+            background: rgb(var(--color_acc1));
+            color: rgb(var(--color_light));
+        }
+    }
+}
+
+/* 정보 모달 끝 */
 /* 모임 카드 시작 */
 
 .card_item {
@@ -1243,7 +1326,7 @@ div#footContent {
 }
 
 /* 내부 폼 끝 */
-/* 와인 아이콘 */
+/* 와인 아이콘 시작 */
 
 .wine_icon {
     display: flex;
@@ -1454,7 +1537,7 @@ div#footContent {
 }
 
 /* 와인 아이콘 끝 */
-/* 커스텀 셀렉터 */
+/* 커스텀 셀렉터 시작 */
 
 .custom_selector {
     position: relative;
@@ -1548,7 +1631,7 @@ div#footContent {
 }
 
 /* 커스텀 셀렉터 끝 */
-/* 리뷰 말풍선과 컨테이너 */
+/* 리뷰 말풍선과 컨테이너 시작 */
 
 #reviewComment,
 #reviewArticle {
@@ -1676,7 +1759,7 @@ div#footContent {
 }
 
 /* 말풍선과 컨테이너 끝 */
-/* 리뷰 페이징 */
+/* 리뷰 페이징 시작 */
 
 .review_paging {
     display: flex;
@@ -1708,7 +1791,7 @@ div#footContent {
 }
 
 /* 리뷰 페이징 끝 */
-/* 모임 장소 */
+/* 모임 장소 시작 */
 
 .gathering_location {
     display: flex;
@@ -1766,6 +1849,87 @@ div#footContent {
 }
 
 /* 모임 장소 끝 */
+/* 호스트 정보 */
+
+.host_info {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: .5rem;
+    position: relative;
+    padding: .5rem;
+    width: 100%;
+    border: var(--border);
+    border-radius: var(--bdr_outer);
+    background: rgb(var(--color_bg));
+    font-size: var(--fnt_12);
+
+    .host_pict {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+    }
+
+    .host_name {
+        margin: .25rem 0 .5rem;
+        color: rgb(var(--color_title));
+        font-size: var(--fnt_20);
+        font-weight: bold;
+
+        &::before {
+            display: block;
+            font-size: var(--fnt_12);
+            font-weight: normal;
+            content: '모임 주최자';
+        }
+    }
+
+    .host_desc {
+        width: calc(100% - 5.5rem);
+    }
+
+    .host_intro {
+        line-height: 1.4;
+    }
+
+    .host_spec {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: .5rem 1rem;
+        margin-top: .5rem;
+        padding-top: .5rem;
+        width: 100%;
+        border-top: var(--border);
+
+        > span {
+            &::before {
+                display: inline-block;
+                margin-right: .25rem;
+                width: 1rem;
+                height: 1rem;
+                vertical-align: middle;
+                content: '';
+            }
+
+            &:nth-child(1)::before {
+                background: url('../../common/images/icons/icon_gathering.png') no-repeat center;
+            }
+
+            &:nth-child(2)::before {
+                background: url('../../common/images/icons/icon_comment.png') no-repeat center;
+            }
+        }
+    }
+
+    button.user_profile {
+        margin-left: auto;
+        padding: .3rem .5rem;
+        background: rgb(var(--color_acc2));
+        color: rgb(var(--color_light));
+    }
+}
+
+/* 호스트 정보 끝 */
 
 /* ---------- Repeating Items end ---------- */
 

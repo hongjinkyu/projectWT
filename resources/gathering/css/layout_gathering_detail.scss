@@ -180,84 +180,6 @@ div#detailSlide {
             }
         }
     }
-
-    .host_info {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        position: relative;
-        padding: .5rem;
-        width: 100%;
-        border: var(--border);
-        border-radius: var(--bdr_outer);
-        background: rgb(var(--color_bg));
-        font-size: var(--fnt_12);
-
-        .host_pict {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 50%;
-        }
-
-        .host_name {
-            margin: .25rem 0 .5rem;
-            color: rgb(var(--color_title));
-            font-size: var(--fnt_20);
-            font-weight: bold;
-
-            &::before {
-                display: block;
-                font-size: var(--fnt_12);
-                font-weight: normal;
-                content: '모임 주최자';
-            }
-        }
-
-        .host_desc {
-            width: calc(100% - 6rem);
-        }
-
-        .host_intro {
-            line-height: 1.4;
-        }
-
-        .host_spec {
-            display: flex;
-            flex-flow: row wrap;
-            // justify-content: flex-end;
-            align-items: center;
-            gap: .5rem 1rem;
-            margin-top: .5rem;
-            padding-top: .5rem;
-            border-top: var(--border);
-
-            > span {
-                &::before {
-                    display: inline-block;
-                    margin-right: .25rem;
-                    width: 1rem;
-                    height: 1rem;
-                    vertical-align: middle;
-                    content: '';
-                }
-
-                &:nth-child(1)::before {
-                    background: url('../../common/images/icons/icon_gathering.png') no-repeat center;
-                }
-
-                &:nth-child(2)::before {
-                    background: url('../../common/images/icons/icon_comment.png') no-repeat center;
-                }
-            }
-        }
-
-        button.user_profile {
-            margin-left: auto;
-            padding: .3rem .5rem;
-            background: rgb(var(--color_acc2));
-            color: rgb(var(--color_light));
-        }
-    }
 }
 
 #detailOffer {
@@ -348,13 +270,13 @@ div#detailSlide {
 
             &.food_pict {
                 display: flex;
-                flex-flow: row nowrap;
+                flex-flow: row wrap;
                 gap: .5rem;
                 width: 100%;
 
                 img {
                     width: calc((100% - 1.5rem) / 4);
-                    height: 6rem;
+                    height: 5rem;
                     border: var(--border);
                     border-radius: var(--bdr_outer);
                     object-fit: cover;

@@ -22,6 +22,14 @@ $(document).ready(function () { // jQuery Load
         }
     }); // Window Scrolling Actions
 
+    $(window).resize(function() {
+        if ($(window).width() <= 400) {
+            $('#btnOpen').addClass('mobile');
+        } else {
+            $('#btnOpen').removeClass('mobile');
+        }
+    });
+
     // ---------- Actual Codes ----------
 
     $('.slide_body').slick({

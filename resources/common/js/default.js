@@ -13,13 +13,19 @@ $(document).ready(function() { // jQuery Load
             $('aside#popFollow').css('bottom', sticky_height);
         } else {
             $('aside#popFollow').css('bottom', 10);
-        }
+        };
 
         if ($(window).scrollTop() >= 60) {
             $('header#headBase.head_index').addClass('scrolled')
         } else {
             $('header#headBase.head_index').removeClass('scrolled')
-        }
+        };
+
+        if ($(window).scrollTop() > 500) {
+            $('aside#modalInfo').slideDown();
+        } else {
+            $('aside#modalInfo').slideUp();
+        };
     }); // Window Scrolling Actions
 
     $(window).resize(function() {
