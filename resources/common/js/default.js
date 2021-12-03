@@ -101,6 +101,13 @@ $(document).ready(function() { // jQuery Load
         };
     }); // Mobile Navigation
 
+    $('.disappearing_area').click(function () {
+        $('.btn_burger').removeClass('on');
+        $('body').removeClass('prevent_scroll');
+        $('.mnav_background').fadeOut();
+        $('#mobileNav').slideUp();
+    });
+
     // 여기부터 테스트용 임시 코드
 
     $('.card_item:is(.gt) .card_img').click(function() {

@@ -496,6 +496,13 @@ div.mnav_background div#mobileNav ul.mnav_list li > a:hover, div.mnav_background
 div.mnav_background div#mobileNav ul.mnav_list li + li {
 	margin-top: 1rem;
 }
+div.mnav_background div.disappearing_area {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: calc(100% - 16rem);
+	height: 100%;
+}
 
 p.btn_back,
 p.btn_like {
