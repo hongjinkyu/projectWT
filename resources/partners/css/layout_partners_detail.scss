@@ -160,6 +160,8 @@ div#detailSlide {
         > img {
             width: 100%;
             height: 10rem;
+            border: var(--border);
+            border-radius: var(--bdr_outer);
             object-fit: cover;
         }
     }

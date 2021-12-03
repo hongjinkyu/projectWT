@@ -351,7 +351,7 @@ div#layerAccount ul#accountPop {
 	padding: 0.1rem;
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_light));
-	box-shadow: 0 0.25rem 0.5rem rgba(var(--color_dark), 0.3);
+	box-shadow: 0 0.25rem 0.5rem -0.25rem rgba(var(--color_dark), 0.25);
 	font-family: var(--ff_sans_p);
 	color: rgb(var(--color_text));
 	font-size: var(--fnt_12);
