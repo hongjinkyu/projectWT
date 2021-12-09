@@ -3,7 +3,7 @@
 $(document).ready(function () { // jQuery Load
 
     $(window).scroll(function () {
-        var scroll_distance = $(window).scrollTop();
+        var scroll_distance = $(window).scrollTop() + ($(window).height() / 3);
 
         if (scroll_distance < $('#detailOffer').offset().top) {
             $('.side_mnu_item1').addClass('checked').siblings('li').removeClass('checked');

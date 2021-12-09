@@ -51,6 +51,7 @@ $(document).ready(function() { // jQuery Load
 
     $('.star_point').each(function() {
         let starPointLength = $(this).attr('data-point-total');
+
         $(this).find('.star_point_blacker').css('width', 'calc(100% - ' + starPointLength * 10 + '%)');
     }); // Star Point
 
@@ -106,7 +107,7 @@ $(document).ready(function() { // jQuery Load
         $('body').removeClass('prevent_scroll');
         $('.mnav_background').fadeOut();
         $('#mobileNav').slideUp();
-    });
+    }); // Mobile Navbigation - Click On Empty Space
 
     // 여기부터 테스트용 임시 코드
 
