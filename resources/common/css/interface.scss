@@ -216,8 +216,8 @@ fieldset > legend {
 
 aside#popFollow {
     position: fixed;
-    right: .5rem;
-    bottom: .5rem;
+    right: 1rem;
+    bottom: 1rem;
     transition: .2s ease-out;
 }
 
@@ -600,6 +600,11 @@ ul.side_mnu_left {
 
         & + li {
             margin-top: .5rem;
+        }
+
+        &.side_mnu_sub {
+            color: rgba(var(--color_text), .5);
+            font-size: var(--fnt_14);
         }
 
         &.checked {

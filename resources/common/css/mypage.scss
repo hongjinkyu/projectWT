@@ -1,26 +1,41 @@
 /* ---------- Page-Specific Layout CSS (My Page) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
 
-.info_singleline {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    gap: 1rem;
+#myProfileIMG {
+    position: relative;
+    margin: -.5rem;
+    width: calc(100% + 1rem);
+    height: 12rem;
 
-    > .info_fieldname {
-        width: 5rem;
-        text-align: end;
+    > .profile_bg {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        filter: brightness(.9);
+        z-index: -1;
     }
 
-    > .info_fieldtext {
-        width: calc(100% - 6rem);
+    > .profile_pict {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        bottom: -3rem;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        box-shadow:
+            0 0 0 .15rem rgb(var(--color_bdr)),
+            0 0 .5rem rgba(var(--color_dark), .5);
+        object-fit: cover;
     }
 }
 
-.info_profile_pict {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    object-fit: cover;
+#myProfileDesc {
+    padding: 1rem 0;
+    width: calc(100% - 8rem);
+    text-align: end;
+}
+
+#myProfileGathering {
+    border: var(--border);
 }

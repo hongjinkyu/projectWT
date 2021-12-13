@@ -67,9 +67,9 @@
                             <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
                         </button>
                         <ul id="accountPop">
-                            <li><a href="./mypage.html">나의 정보</a></li>
-                            <li><a href="">즐겨찾는 맛집</a></li>
-                            <li><a href="">프리미엄 멤버쉽</a></li>
+                            <li><a href="./mypage.html">마이 페이지</a></li>
+                            <li><a href="">모임 관리</a></li>
+                            <li><a href="">결제 관리</a></li>
                             <li><a href="./login.html">로그아웃</a></li>
                         </ul>
                     </div>
@@ -89,19 +89,19 @@
                             <div id="mobileNav">
                                 <ul class="mnav_list">
                                     <li>
-                                        <a href="#">메뉴1</a>
+                                        <a href="service.html">와인투게더란?</a>
                                     </li>
                                     <li>
-                                        <a href="#">메뉴2</a>
+                                        <a href="gathering_list.html">모임 둘러보기</a>
                                     </li>
                                     <li>
-                                        <a href="#">메뉴3</a>
+                                        <a href="gathering_open.html">모임 개설하기</a>
                                     </li>
                                     <li>
-                                        <a href="#">메뉴4</a>
+                                        <a href="review_list.html">모임 후기</a>
                                     </li>
                                     <li>
-                                        <a href="#">메뉴5</a>
+                                        <a href="partners_list.html">와투 맛집</a>
                                     </li>
                                 </ul>
                             </div>
@@ -127,171 +127,47 @@
 
                 <section id="sideBar_left">
                     <ul class="side_mnu_left">
-                        <li class="side_mnu_item1 checked"><a href="#myInfo">나의 정보</a></li>
-                        <li class="side_mnu_item2"><a href="#cardInfo">결제카드 관리</a></li>
-                        <li class="side_mnu_item3"><a href="#subscriptInfo">구독 관리</a></li>
-                        <li class="side_mnu_item4"><a href="#gatherInfo">내 모임 관리</a></li>
-                        <li class="side_mnu_item5"><a href="#profileInfo">나의 공개 프로필</a></li>
+                        <li class="side_mnu_item1 checked"><a href="#">마이 페이지</a></li>
+                        <li class="side_mnu_item2"><a>모임 관리</a></li>
+                            <li class="side_mnu_sub"><a href="#">내역</a></li>
+                            <li class="side_mnu_sub"><a href="#">후기</a></li>
+                        <li class="side_mnu_item3"><a>프로필 관리</a></li>
+                            <li class="side_mnu_sub"><a href="#">개인정보 수정</a></li>
+                            <li class="side_mnu_sub"><a href="#">프로필 수정</a></li>
+                        <li class="side_mnu_item4"><a>결제 관리</a></li>
+                            <li class="side_mnu_sub"><a href="#">결제 수단 관리</a></li>
+                            <li class="side_mnu_sub"><a href="#">정기결제</a></li>
+                        <li class="side_mnu_item5"><a href="#">로그아웃</a></li>
                     </ul>
                 </section> <!-- #sideBar_left -->
 
                 <section id="contentBar">
-                    <h3 id="myInfo">나의 정보</h3>
-                    <article class="my_info">
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                사용자 이름
-                            </p>
-                            <p class="info_fieldtext">
-                                김누구 님
-                            </p>
-                        </div>
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                ID
-                            </p>
-                            <p class="info_fieldtext">
-                                whosthiskimguy@whois.com
-                            </p>
-                        </div>
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                프로필 사진
-                            </p>
-                            <p class="info_fieldtext">
-                                <img class="info_profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
-                            </p>
-                        </div>
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                비밀번호
-                            </p>
-                            <p class="info_fieldtext">
-                                ***********
-                            </p>
-                        </div>
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                주소
-                            </p>
-                            <p class="info_fieldtext">
-                                부산광역시 부산진구 성지곡로12번길 29, 1층
-                            </p>
-                        </div>
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                회원등급
-                            </p>
-                            <p class="info_fieldtext">
-                                Regular / 회원등급에 따른 혜택 자세히 보기
-                            </p>
-                        </div>
-                    </article>
+                    <div id="myProfileIMG">
+                        <img src="./resources/index/images/img41.jpg" alt="프로필 배경 이미지" class="profile_bg" />
+                        <img src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" class="profile_pict" />
+                    </div>
 
-                    <h3 id="cardInfo">결제카드 관리</h3>
-                    <article class="card_info">
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                카드명
-                            </p>
-                            <p class="info_fieldtext">
-                                신한카드
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam vitae cupiditate, officia fugiat culpa consequuntur consectetur perspiciatis neque quibusdam ipsum cumque aliquam aperiam modi possimus, nisi quaerat nihil magni commodi.
-                                Voluptas vel soluta dignissimos eum magni voluptatum natus dicta nulla eos! Aperiam placeat ab, tempora, debitis aspernatur tempore a, cumque animi repellendus sint ea doloremque? Dolor quod fugit magni ex.
-                                Amet, harum doloremque minus in omnis natus fugiat dolor nihil eveniet deserunt laudantium esse, culpa itaque nemo tenetur aperiam sed ea. Asperiores officia id ad voluptas quod quae dolorum qui?
-                                Sunt, natus minus laboriosam nihil porro autem et recusandae iusto? Vitae quaerat illum beatae distinctio consequatur ut fugiat minus odit dolorem nemo, non magnam, temporibus quidem est doloribus, optio quos!
-                                Vero ipsum perferendis ab esse dolore temporibus, possimus, praesentium, sint explicabo id modi unde ullam quas dolorem sunt! Aperiam reprehenderit nulla iure officia. Voluptas, reiciendis ipsum quod et in dolor.
-                            </p>
-                        </div>
-                    </article>
+                    <div id="myProfileDesc">
+                        <h3>김누구</h3>
+                        <p>kim_nugu@whois.com | 네이버</p>
+                    </div>
 
-                    <h3 id="subscriptInfo">구독 관리</h3>
-                    <article class="subcript_info">
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                구독 시작일
-                            </p>
-                            <p class="info_fieldtext">
-                                2021. 09. 14
-                            </p>
-                        </div>
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                다음 결제일
-                            </p>
-                            <p class="info_fieldtext">
-                                2021. 10. 15
-                            </p>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptates repudiandae ab officiis, quidem eos omnis voluptatibus doloribus veniam consequuntur magni eum sed distinctio quos obcaecati deleniti incidunt, aut assumenda.
-                                Quibusdam quaerat quo veritatis dignissimos ea dolorum, quae adipisci a, itaque sint eveniet? Corrupti non porro quasi magnam temporibus odio magni aut beatae dolorem illo quae, in atque corporis labore.
-                                Culpa ullam eligendi eaque, libero iusto consectetur? Ullam laboriosam sint explicabo blanditiis quisquam modi aliquid cupiditate distinctio, culpa veniam illo sequi quae, rerum a voluptatum doloremque alias accusamus molestias laborum!
-                                Adipisci, temporibus vitae. Ab unde doloribus laboriosam at assumenda dolorem. Provident ducimus nemo quaerat deleniti vel! Possimus temporibus magni repellat voluptates cupiditate praesentium sequi quam minus porro esse, debitis accusantium.
-                                Aliquid libero harum porro! Culpa sit soluta velit laboriosam eos molestiae, dolore consequuntur, voluptate dolorum, eius perspiciatis dicta! Accusantium eveniet rem praesentium temporibus aliquid itaque accusamus eos, fugit quidem suscipit.
-                            </p>
-                        </div>
-                    </article>
+                    <div id="myProfileGathering">
+                        <p>개설한 모임</p>
+                        <p>참여한 모임</p>
+                    </div>
 
-                    <h3 id="gatherInfo">내 모임 관리</h3>
-                    <article class="gather_info">
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                모임 어쩌고
-                            </p>
-                            <p class="info_fieldtext">
-                                저쩌고
-                            </p>
-                        </div>
-                    </article>
+                    <div id="myProfileSetting">
+                        fjpawergjpajrg
+                    </div>
 
-                    <h3 id="profileInfo">나의 공개 프로필</h3>
-                    <article class="profile_info">
-                        <div class="info_singleline">
-                            <p class="info_fieldname">
-                                프로필
-                            </p>
-                            <p class="info_fieldtext">
-                                자세히 보기
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nobis delectus nihil quis aperiam reiciendis voluptate totam fugit qui quae eveniet provident a, esse neque ad ullam. Et, recusandae culpa!
-                                Obcaecati nihil quaerat consequatur officia commodi debitis libero placeat ab molestiae, atque exercitationem ipsum suscipit facilis recusandae quod ut, sit repellendus quis deserunt animi distinctio cumque autem. Quam, qui dignissimos!
-                                Temporibus nemo sapiente consequuntur odio ea distinctio quaerat laboriosam aut rem. Magnam velit ratione id eos dolorum placeat, molestias officiis eligendi distinctio deserunt beatae temporibus fugit, deleniti, praesentium eaque et.
-                                Fugit hic dolores voluptates eos labore fugiat? Optio laboriosam incidunt impedit velit quam, vitae magni obcaecati ipsam adipisci eius quas natus debitis eaque unde aliquid pariatur earum, non ad possimus?
-                                Excepturi corporis, voluptatum quaerat modi iure vel quisquam laboriosam consequatur beatae commodi inventore quasi autem iste voluptates at veritatis nobis, atque quidem velit quia fugit. Animi quis corporis praesentium commodi!
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus porro blanditiis delectus eligendi fugit expedita, maiores, dolorem saepe magnam nulla deleniti, vel perspiciatis? Nulla, accusantium consequatur quo consectetur corporis quia!
-                                Ab eos corporis mollitia, voluptatum dolores modi ratione dicta adipisci. Deleniti sit necessitatibus quod odio, repellendus, cumque aspernatur illum praesentium expedita laudantium dolores blanditiis, amet aliquam sapiente corporis fuga fugit.
-                                Beatae velit qui vero mollitia. Tempora, pariatur provident sapiente adipisci beatae magni dignissimos ea illo vel corrupti dicta fugit iure laborum quam modi sint rem voluptatum nisi consectetur debitis dolor.
-                                Ipsum qui autem voluptas facere illum praesentium? Dicta optio deserunt dolores culpa quasi, saepe fugit reiciendis perferendis maiores asperiores maxime libero ex in, commodi obcaecati nulla inventore nemo earum excepturi.
-                                Optio corrupti nemo placeat ut minus minima vero quae aut. Eos dolores obcaecati suscipit reiciendis nihil aliquid, perferendis nisi tenetur, quos quidem, accusantium dolor. Rem magnam vero odio nostrum possimus!
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus porro blanditiis delectus eligendi fugit expedita, maiores, dolorem saepe magnam nulla deleniti, vel perspiciatis? Nulla, accusantium consequatur quo consectetur corporis quia!
-                                Ab eos corporis mollitia, voluptatum dolores modi ratione dicta adipisci. Deleniti sit necessitatibus quod odio, repellendus, cumque aspernatur illum praesentium expedita laudantium dolores blanditiis, amet aliquam sapiente corporis fuga fugit.
-                                Beatae velit qui vero mollitia. Tempora, pariatur provident sapiente adipisci beatae magni dignissimos ea illo vel corrupti dicta fugit iure laborum quam modi sint rem voluptatum nisi consectetur debitis dolor.
-                                Ipsum qui autem voluptas facere illum praesentium? Dicta optio deserunt dolores culpa quasi, saepe fugit reiciendis perferendis maiores asperiores maxime libero ex in, commodi obcaecati nulla inventore nemo earum excepturi.
-                                Optio corrupti nemo placeat ut minus minima vero quae aut. Eos dolores obcaecati suscipit reiciendis nihil aliquid, perferendis nisi tenetur, quos quidem, accusantium dolor. Rem magnam vero odio nostrum possimus!
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus porro blanditiis delectus eligendi fugit expedita, maiores, dolorem saepe magnam nulla deleniti, vel perspiciatis? Nulla, accusantium consequatur quo consectetur corporis quia!
-                                Ab eos corporis mollitia, voluptatum dolores modi ratione dicta adipisci. Deleniti sit necessitatibus quod odio, repellendus, cumque aspernatur illum praesentium expedita laudantium dolores blanditiis, amet aliquam sapiente corporis fuga fugit.
-                                Beatae velit qui vero mollitia. Tempora, pariatur provident sapiente adipisci beatae magni dignissimos ea illo vel corrupti dicta fugit iure laborum quam modi sint rem voluptatum nisi consectetur debitis dolor.
-                                Ipsum qui autem voluptas facere illum praesentium? Dicta optio deserunt dolores culpa quasi, saepe fugit reiciendis perferendis maiores asperiores maxime libero ex in, commodi obcaecati nulla inventore nemo earum excepturi.
-                                Optio corrupti nemo placeat ut minus minima vero quae aut. Eos dolores obcaecati suscipit reiciendis nihil aliquid, perferendis nisi tenetur, quos quidem, accusantium dolor. Rem magnam vero odio nostrum possimus!
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus porro blanditiis delectus eligendi fugit expedita, maiores, dolorem saepe magnam nulla deleniti, vel perspiciatis? Nulla, accusantium consequatur quo consectetur corporis quia!
-                                Ab eos corporis mollitia, voluptatum dolores modi ratione dicta adipisci. Deleniti sit necessitatibus quod odio, repellendus, cumque aspernatur illum praesentium expedita laudantium dolores blanditiis, amet aliquam sapiente corporis fuga fugit.
-                                Beatae velit qui vero mollitia. Tempora, pariatur provident sapiente adipisci beatae magni dignissimos ea illo vel corrupti dicta fugit iure laborum quam modi sint rem voluptatum nisi consectetur debitis dolor.
-                                Ipsum qui autem voluptas facere illum praesentium? Dicta optio deserunt dolores culpa quasi, saepe fugit reiciendis perferendis maiores asperiores maxime libero ex in, commodi obcaecati nulla inventore nemo earum excepturi.
-                                Optio corrupti nemo placeat ut minus minima vero quae aut. Eos dolores obcaecati suscipit reiciendis nihil aliquid, perferendis nisi tenetur, quos quidem, accusantium dolor. Rem magnam vero odio nostrum possimus!
-                            </p>
-                        </div>
-                    </article>
+                    <div id="myProfilePay">
+                        fvjkpawregjpar
+                    </div>
+
+                    <div id="myProfileSub">
+                        굳독
+                    </div>
                 </section> <!-- #contentBar -->
 
                 <section id="sideBar_right">

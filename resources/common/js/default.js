@@ -7,12 +7,12 @@ $(document).ready(function() { // jQuery Load
 
     $(window).scroll(function() {
         let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-        let sticky_height = $('footer#footBase').height() + 10;
+        let sticky_height = $('footer#footBase').height() + 20;
 
         if (scrollBottom < sticky_height) {
             $('aside#popFollow').css('bottom', sticky_height);
         } else {
-            $('aside#popFollow').css('bottom', 10);
+            $('aside#popFollow').css('bottom', 20);
         };
 
         if ($(window).scrollTop() >= 60) {
@@ -107,7 +107,7 @@ $(document).ready(function() { // jQuery Load
         $('body').removeClass('prevent_scroll');
         $('.mnav_background').fadeOut();
         $('#mobileNav').slideUp();
-    }); // Mobile Navbigation - Click On Empty Space
+    }); // Mobile Navigation - Click On Empty Space
 
     // 여기부터 테스트용 임시 코드
 
