@@ -34,6 +34,8 @@
 	text-align: end;
 }
 
-#myProfileGathering {
-	border: var(--border);
+#myProfileIntro {
+	padding: 0.5rem;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_bg));
 }

@@ -1,6 +1,17 @@
 @charset "UTF-8";
 /* ---------- Page-Specific Layout CSS (Customer Service Center - Board List) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
+.board_category > span {
+	display: inline-block;
+	padding: 0.5rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+}
+.board_category > span:hover {
+	border-color: rgb(var(--color_acc1));
+	background: rgb(var(--color_tone1));
+}
+
 table {
 	width: 100%;
 	font-size: var(--fnt_12);

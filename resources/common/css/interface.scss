@@ -324,11 +324,55 @@ div#layerAccount {
     margin-left: auto;
     cursor: pointer;
 
-    > p.user_name {
-        padding-left: 1.5rem;
+    > p.user_name span {
+        display: inline-block;
+        position: relative;
+        color: rgb(var(--color_title));
 
-        span {
-            color: rgb(var(--color_title));
+        &::before {
+            display: inline-block;
+            margin-right: .25rem;
+            padding: .2rem .3rem .1rem .3rem;
+            border: .05rem solid rgba(var(--color_dark), .25);
+            border-radius: var(--bdr_outer);
+            color: rgb(var(--color_light));
+        }
+
+        &:is([data-grade="grade_newbie"])::before {
+            background: rgb(var(--color_acc2));
+            color: rgb(var(--color_tone2));
+            content: 'L1';
+        }
+
+        &:is([data-grade="grade_normal"])::before {
+            background: rgb(var(--color_tag1));
+            content: 'L2';
+        }
+
+        &:is([data-grade="grade_regular"])::before {
+            background: rgb(var(--color_tag2));
+            color: rgb(var(--color_footer));
+            content: 'L3';
+        }
+
+        &:is([data-grade="grade_family"])::before {
+            background: rgb(var(--color_tag3));
+            content: 'L4';
+        }
+
+        &:is([data-grade="grade_vip"])::before {
+            background: rgb(var(--color_text));
+            color: rgb(var(--color_tag2));
+            content: 'VIP';
+        }
+
+        &:is([data-grade="grade_vvip"])::before {
+            border-color: goldenrod;
+            background: linear-gradient(to top, rgb(255, 217, 0) 0%, rgb(255, 187, 0) 100%);
+            font-family: 'Berkshire Swash', cursive;
+            color: rgb(var(--color_light));
+            text-shadow: 0 0 .1rem rgb(var(--color_point1));
+            content: 'W';
         }
     }
 
