@@ -33,9 +33,91 @@
 	width: calc(100% - 8rem);
 	text-align: end;
 }
+#myProfileDesc > h5 {
+	font-size: var(--fnt_40);
+}
 
 #myProfileIntro {
 	padding: 0.5rem;
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_bg));
+}
+#myProfileIntro > hr.hf {
+	margin: 0.5rem 0;
+	background: rgb(var(--color_bdr));
+}
+
+.my_gathering > h5,
+.my_review > h5 {
+	margin: 1rem 0 0.5rem;
+}
+.my_gathering > .mygat_container > .tab_buttons,
+.my_gathering > .myrev_container > .tab_buttons,
+.my_review > .mygat_container > .tab_buttons,
+.my_review > .myrev_container > .tab_buttons {
+	display: flex;
+	border-bottom: var(--border);
+}
+.my_gathering > .mygat_container > .tab_buttons > p,
+.my_gathering > .myrev_container > .tab_buttons > p,
+.my_review > .mygat_container > .tab_buttons > p,
+.my_review > .myrev_container > .tab_buttons > p {
+	padding: 0.75rem;
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+}
+.my_gathering > .mygat_container > .tab_buttons > p.selected,
+.my_gathering > .myrev_container > .tab_buttons > p.selected,
+.my_review > .mygat_container > .tab_buttons > p.selected,
+.my_review > .myrev_container > .tab_buttons > p.selected {
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+}
+.my_gathering > .mygat_container > .tab_draw,
+.my_gathering > .myrev_container > .tab_draw,
+.my_review > .mygat_container > .tab_draw,
+.my_review > .myrev_container > .tab_draw {
+	border-bottom: var(--border);
+}
+.my_gathering > .mygat_container > .tab_draw > ul,
+.my_gathering > .myrev_container > .tab_draw > ul,
+.my_review > .mygat_container > .tab_draw > ul,
+.my_review > .myrev_container > .tab_draw > ul {
+	display: none;
+	padding: 0.25rem 0;
+}
+.my_gathering > .mygat_container > .tab_draw > ul > li,
+.my_gathering > .myrev_container > .tab_draw > ul > li,
+.my_review > .mygat_container > .tab_draw > ul > li,
+.my_review > .myrev_container > .tab_draw > ul > li {
+	padding: 0.75rem;
+	border-radius: var(--bdr_outer);
+}
+.my_gathering > .mygat_container > .tab_draw > ul > li > a,
+.my_gathering > .myrev_container > .tab_draw > ul > li > a,
+.my_review > .mygat_container > .tab_draw > ul > li > a,
+.my_review > .myrev_container > .tab_draw > ul > li > a {
+	display: block;
+}
+.my_gathering > .mygat_container > .tab_draw > ul > li:hover,
+.my_gathering > .myrev_container > .tab_draw > ul > li:hover,
+.my_review > .mygat_container > .tab_draw > ul > li:hover,
+.my_review > .myrev_container > .tab_draw > ul > li:hover {
+	background: rgb(var(--color_bg));
+	font-weight: bold;
+}
+.my_gathering > .mygat_container > .tab_draw > ul.show,
+.my_gathering > .myrev_container > .tab_draw > ul.show,
+.my_review > .mygat_container > .tab_draw > ul.show,
+.my_review > .myrev_container > .tab_draw > ul.show {
+	display: block;
+}
+
+#myProfilePay > h5 {
+	margin: 1rem 0 0.5rem;
+}
+
+#myProfileSub > h5 {
+	margin: 1rem 0 0.5rem;
 }
