@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* ---------- Page-Specific Layout CSS (My Page) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
+#contentBar {
+	position: relative;
+}
+
 #myProfileIMG {
 	position: relative;
 	margin: -0.5rem;
@@ -29,27 +33,93 @@
 }
 
 #myProfileDesc {
-	padding: 1rem 0;
-	width: calc(100% - 8rem);
+	margin: 0 -0.5rem;
+	padding: 1rem 8rem 1rem 0;
+	background: linear-gradient(to bottom, rgb(var(--color_bdr)) 0%, transparent 100%);
 	text-align: end;
 }
-#myProfileDesc > h5 {
+#myProfileDesc > h3 {
+	position: relative;
+	margin-bottom: 0.75rem;
+	margin-left: auto;
+	padding: 0 0.25rem;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	color: rgb(var(--color_text));
 	font-size: var(--fnt_40);
+	text-shadow: 0 0.1rem 0.15rem rgba(var(--color_subtle), 0.75), -0.1rem 0 0 rgba(var(--color_subtle), 0.75), 0.1rem 0 0 rgba(var(--color_subtle), 0.75);
+	z-index: 1;
+}
+#myProfileDesc > h3::before {
+	display: block;
+	position: absolute;
+	bottom: -0.15rem;
+	left: 0;
+	right: 0;
+	height: 0.5rem;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_acc1));
+	z-index: -1;
+	content: "";
+}
+#myProfileDesc > .my_account {
+	font-family: var(--ff_eng);
+	font-weight: bold;
+}
+#myProfileDesc > .my_account::after {
+	display: inline-block;
+	margin-left: 0.25rem;
+	padding: 0.25rem 0;
+	width: 1rem;
+	border-radius: var(--bdr_outer);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_12);
+	text-align: center;
+}
+#myProfileDesc > .my_account:is([data-acctype=naver])::after {
+	background: #04cf5c;
+	content: "N";
+}
+#myProfileDesc > .my_account:is([data-acctype=google])::after {
+	background: #d93025;
+	content: "G";
+}
+#myProfileDesc > .my_account:is([data-acctype=kakao])::after {
+	background: #f3dc00;
+	color: rgb(var(--color_text));
+	content: "K";
 }
 
-#myProfileIntro {
+#myProfileSetting {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: var(--ff_sans_p);
+}
+#myProfileSetting > hr.vf {
+	background: rgb(var(--color_bdr));
+}
+
+#myProfileIntro > h5 {
+	margin: 3rem 0 0.5rem;
+}
+#myProfileIntro > .my_self {
 	padding: 0.5rem;
+	border: var(--border);
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_bg));
 }
-#myProfileIntro > hr.hf {
+#myProfileIntro > .my_self > hr.hf {
 	margin: 0.5rem 0;
 	background: rgb(var(--color_bdr));
 }
 
 .my_gathering > h5,
 .my_review > h5 {
-	margin: 1rem 0 0.5rem;
+	margin: 3rem 0 0.5rem;
 }
 .my_gathering > .mygat_container > .tab_buttons,
 .my_gathering > .myrev_container > .tab_buttons,
@@ -62,8 +132,11 @@
 .my_gathering > .myrev_container > .tab_buttons > p,
 .my_review > .mygat_container > .tab_buttons > p,
 .my_review > .myrev_container > .tab_buttons > p {
-	padding: 0.75rem;
-	width: 50%;
+	padding: 0.5rem 0.75rem;
+	border-bottom: 0.2rem solid transparent;
+	border-top-left-radius: var(--bdr_outer);
+	border-top-right-radius: var(--bdr_outer);
+	color: rgba(var(--color_text), 0.5);
 	text-align: center;
 	cursor: pointer;
 }
@@ -71,8 +144,10 @@
 .my_gathering > .myrev_container > .tab_buttons > p.selected,
 .my_review > .mygat_container > .tab_buttons > p.selected,
 .my_review > .myrev_container > .tab_buttons > p.selected {
-	background: rgb(var(--color_text));
-	color: rgb(var(--color_light));
+	border-color: rgb(var(--color_acc1));
+	color: rgb(var(--color_text));
+	font-weight: bold;
+	text-shadow: 0 0.1rem 0.1rem rgba(var(--color_subtle), 0.75);
 }
 .my_gathering > .mygat_container > .tab_draw,
 .my_gathering > .myrev_container > .tab_draw,
@@ -115,9 +190,9 @@
 }
 
 #myProfilePay > h5 {
-	margin: 1rem 0 0.5rem;
+	margin: 3rem 0 0.5rem;
 }
 
 #myProfileSub > h5 {
-	margin: 1rem 0 0.5rem;
+	margin: 3rem 0 0.5rem;
 }
