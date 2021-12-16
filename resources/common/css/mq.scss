@@ -16,8 +16,7 @@
         margin-top: 5rem;
     }
 
-    #sideBar_left,
-    #sideBar_right {
+    #sideBar {
         display: none;
     }
 
@@ -138,6 +137,15 @@
             width: 100%;
             border-top: var(--border);
             border-left: none;
+        }
+    }
+
+    .article_container {
+        > li {
+            > .user_profile {
+                width: 100%;
+                text-align: end;
+            }
         }
     }
 

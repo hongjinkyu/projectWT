@@ -40,21 +40,7 @@
     line-height: 1;
     /* line-height: 1.8 (가독성이 필요한 본문 영역) */
     scroll-behavior: smooth;
-    user-select: none;
-
-    --px_1: .05rem;
-    --px_3: .15rem;
-    --px_5: .25rem;
-    --px_10: .5rem;
-    --px_15: .75rem;
-    --px_20: 1rem;
-    --px_24: 1.2rem;
-    --px_30: 1.5rem;
-    --px_36: 1.8rem;
-    --px_40: 2rem;
-    --px_48: 2.4rem;
-    --px_60: 3rem;
-    /* 주요 픽셀값 정의 */
+    user-select: none; /* 드래그 가능 여부 */
 
     --ff_serif: 'KoPubPro'; /* 바탕체 같은거 */
     --ff_sans_n: 'Noto Sans KR'; /* 노토 */

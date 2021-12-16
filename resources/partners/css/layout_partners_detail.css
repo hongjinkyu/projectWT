@@ -27,13 +27,16 @@ div#detailSlide::before {
 	z-index: 1;
 	content: "";
 }
+div#detailSlide.mobile {
+	height: 10rem;
+}
 div#detailSlide > .slide_body {
 	width: inherit;
 	height: inherit;
 }
 div#detailSlide > .slide_body img {
-	width: 100%;
-	height: 100%;
+	width: inherit;
+	height: inherit;
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
@@ -196,18 +199,19 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	text-align: end;
 	opacity: 0;
 }
-#btnOpen:hover,
-#btnOpen .mobile {
+#btnOpen:hover {
 	width: 10rem;
 	background: rgb(var(--color_acc1)) url("../../common/images/icons/icon_gathering_26_w.png") no-repeat left 0.75rem center;
 	box-shadow: 0 0.25rem 0.5rem rgba(var(--color_acc1), 0.3);
 	transition: 0.3s;
 }
-#btnOpen:hover > span,
-#btnOpen .mobile > span {
+#btnOpen:hover > span {
 	opacity: 1;
 	transition: 0.3s;
 	transition-delay: 0.2s;
+}
+#btnOpen.mobile {
+	top: 0.5rem;
 }
 
 .food_container {

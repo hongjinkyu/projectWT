@@ -30,13 +30,17 @@ div#detailSlide {
         content: '';
     }
 
+    &.mobile {
+        height: 10rem;
+    }
+
     > .slide_body {
         width: inherit;
         height: inherit;
 
         img {
-            width: 100%;
-            height: 100%;
+            width: inherit;
+            height: inherit;
             object-fit: cover;
         }
     }
@@ -216,8 +220,7 @@ div#detailSlide {
         opacity: 0;
     }
 
-    &:hover,
-    .mobile {
+    &:hover {
         width: 10rem;
         background: rgb(var(--color_acc1)) url('../../common/images/icons/icon_gathering_26_w.png') no-repeat left .75rem center;
         box-shadow: 0 .25rem .5rem rgba(var(--color_acc1), .3);
@@ -228,6 +231,10 @@ div#detailSlide {
             transition: .3s;
             transition-delay: .2s;
         }
+    }
+
+    &.mobile {
+        top: .5rem;
     }
 }
 

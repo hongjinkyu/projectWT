@@ -25,8 +25,10 @@ $(document).ready(function () { // jQuery Load
     $(window).resize(function() {
         if ($(window).width() <= 400) {
             $('#btnOpen').addClass('mobile');
+            $('#detailSlide').addClass('mobile');
         } else {
             $('#btnOpen').removeClass('mobile');
+            $('#detailSlide').removeClass('mobile');
         }
     });
 

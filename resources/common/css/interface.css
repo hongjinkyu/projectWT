@@ -95,6 +95,13 @@ button::placeholder {
 	color: rgb(var(--color_bdr));
 }
 
+.gathering_location > .info_container > .course_info img, .article_container > li > img {
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus,
@@ -575,8 +582,8 @@ ul.information_list > li + li {
 	margin-top: 0.5rem;
 }
 
-section#sideBar_left, section#sideBar_right {
-	width: calc((100% - 38rem) / 2);
+section#sideBar {
+	width: calc(100% - 48rem);
 }
 
 section#contentBar {
@@ -584,7 +591,7 @@ section#contentBar {
 	flex-flow: column nowrap;
 	gap: 0.5rem;
 	padding: 0.5rem;
-	width: 38rem;
+	width: 48rem;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_light));
@@ -605,12 +612,14 @@ ul.side_mnu_left {
 	margin-top: 2.5rem;
 }
 ul.side_mnu_left > li {
+	padding: 0.5rem 0.75rem 0.25rem;
 	border-top-left-radius: var(--bdr_outer);
 	border-bottom-left-radius: var(--bdr_outer);
 	font-family: var(--ff_sans_p);
 	color: rgb(var(--color_text));
 	font-size: 0.9rem;
 	text-align: end;
+	cursor: pointer;
 }
 ul.side_mnu_left > li + li {
 	margin-top: 0.5rem;
@@ -622,13 +631,7 @@ ul.side_mnu_left > li.side_mnu_sub {
 ul.side_mnu_left > li.checked {
 	background: rgb(var(--color_text));
 	color: rgb(var(--color_light));
-}
-ul.side_mnu_left > li.checked > a {
 	pointer-events: none;
-}
-ul.side_mnu_left > li > a {
-	display: block;
-	padding: 0.5rem 0.75rem 0.25rem;
 }
 
 footer#footBase {
@@ -816,7 +819,7 @@ div#footContent h6 {
 }
 
 /* 메인 섹션 (인덱스) 끝 */
-/* 정보 모달 시작 */
+/* 모임 스크롤 모달 시작 */
 aside#modalInfo {
 	display: none;
 	position: fixed;
@@ -881,7 +884,7 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	color: rgb(var(--color_light));
 }
 
-/* 정보 모달 끝 */
+/* 모임 스크롤 모달 끝 */
 /* 모임 카드 시작 */
 .card_item {
 	display: flex;
@@ -1385,7 +1388,7 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	content: "와인 추가";
 }
 .wine_icon.add_item > span:first-child,
-.wine_icon.add_item span:last-child {
+.wine_icon.add_item > span:last-child {
 	display: block;
 	position: absolute;
 	border-radius: var(--bdr_inner);
@@ -1601,10 +1604,6 @@ aside#modalInfo > .int_wrap > .modal_btn {
 .article_container > li > img {
 	width: 2.5rem;
 	height: 2.5rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	-o-object-fit: cover;
-	   object-fit: cover;
 }
 .article_container > li .article_title {
 	font-family: var(--ff_sans_p);
@@ -1697,8 +1696,6 @@ aside#modalInfo > .int_wrap > .modal_btn {
 .gathering_location > .info_container > .course_info img {
 	width: 2.5rem;
 	height: 2.5rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
 }
 .gathering_location > .info_container > .course_info .course_name span {
 	font-family: var(--ff_sans_p);
@@ -1754,6 +1751,7 @@ aside#modalInfo > .int_wrap > .modal_btn {
 }
 .host_info .host_spec > span::before {
 	display: inline-block;
+	margin-bottom: 0.15rem;
 	margin-right: 0.25rem;
 	width: 1rem;
 	height: 1rem;
@@ -1774,6 +1772,81 @@ aside#modalInfo > .int_wrap > .modal_btn {
 }
 
 /* 호스트 정보 끝 */
+/* 심플 팝업 메시지 시작 */
+[data-message] {
+	position: relative;
+}
+[data-message]::before {
+	display: block;
+	position: absolute;
+	top: calc(100% + .5rem);
+	left: 50%;
+	padding: 0.5rem;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	border-radius: var(--bdr_outer);
+	background: rgba(var(--color_dark), 0.75);
+	box-shadow: 0 0.15rem 0.25rem rgba(var(--color_dark), 0.3);
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_12);
+	color: rgb(var(--color_light));
+	transform: translateX(-50%);
+	opacity: 0;
+	-webkit-animation: fade-in-out 5s linear;
+	        animation: fade-in-out 5s linear;
+	pointer-events: none;
+	content: attr(data-message);
+}
+[data-message]::after {
+	display: block;
+	position: absolute;
+	bottom: -0.5rem;
+	left: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-top: 0.25rem solid transparent;
+	border-bottom: 0.25rem solid rgba(var(--color_dark), 0.75);
+	border-left: 0.25rem solid transparent;
+	border-right: 0.25rem solid transparent;
+	transform: translateX(-50%);
+	opacity: 0;
+	-webkit-animation: fade-in-out 5s linear;
+	        animation: fade-in-out 5s linear;
+	pointer-events: none;
+	content: "";
+}
+
+@-webkit-keyframes fade-in-out {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-in-out {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+/* 심플 팝업 메시지 끝 */
 /* ---------- Repeating Items end ---------- */
 .note-modal.open {
 	justify-content: center;

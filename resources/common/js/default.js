@@ -34,8 +34,20 @@ $(document).ready(function() { // jQuery Load
             $('body').removeClass('prevent_scroll');
             $('.mnav_background').fadeOut();
             $('#mobileNav').slideUp();
-        } else {};
+        } else {
+            return;
+        };
     }); // Window Resizing Actions
+
+    $('.side_mnu_left > li').each(function() {
+        $(this).click(function() {
+            let sidemnu_target = $('#' + $(this).attr('data-mnu-target') + '').offset();
+
+            $(this).siblings('li').removeClass('checked');
+            $(this).addClass('checked');
+            $(window).scrollTo(sidemnu_target);
+        });
+    });
 
 // ---------- Actual Codes ----------
 

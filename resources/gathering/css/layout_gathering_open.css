@@ -78,7 +78,7 @@
 	gap: 0.25rem;
 }
 .bring_wine > .qty_container > input,
-.bring_wine > .qty_container button {
+.bring_wine > .qty_container > button {
 	display: block;
 	text-align: center;
 }

@@ -607,10 +607,7 @@ ul.information_list {
 }
 
 section#sideBar {
-    &_left,
-    &_right {
-        width: calc((100% - 38rem) / 2);
-    }
+    width: calc(100% - 48rem);
 }
 
 section#contentBar {
@@ -618,7 +615,7 @@ section#contentBar {
     flex-flow: column nowrap;
     gap: .5rem;
     padding: .5rem;
-    width: 38rem;
+    width: 48rem;
     border: var(--border);
     border-radius: var(--bdr_outer);
     background: rgb(var(--color_light));
@@ -639,12 +636,14 @@ ul.side_mnu_left {
     margin-top: 2.5rem;
 
     > li {
+        padding: .5rem .75rem .25rem;
         border-top-left-radius: var(--bdr_outer);
         border-bottom-left-radius: var(--bdr_outer);
         font-family: var(--ff_sans_p);
         color: rgb(var(--color_text));
         font-size: .9rem;
         text-align: end;
+        cursor: pointer;
 
         & + li {
             margin-top: .5rem;
@@ -658,15 +657,7 @@ ul.side_mnu_left {
         &.checked {
             background: rgb(var(--color_text));
             color: rgb(var(--color_light));
-
-            > a {
-                pointer-events: none;
-            }
-        }
-
-        > a {
-            display: block;
-            padding: .5rem .75rem .25rem;
+            pointer-events: none;
         }
     }
 }
@@ -880,7 +871,7 @@ div#footContent {
 }
 
 /* 메인 섹션 (인덱스) 끝 */
-/* 정보 모달 시작 */
+/* 모임 스크롤 모달 시작 */
 
 aside#modalInfo {
     display: none;
@@ -962,7 +953,7 @@ aside#modalInfo {
     }
 }
 
-/* 정보 모달 끝 */
+/* 모임 스크롤 모달 끝 */
 /* 모임 카드 시작 */
 
 .card_item {
@@ -1544,7 +1535,7 @@ aside#modalInfo {
         }
 
         > span:first-child,
-        span:last-child {
+        > span:last-child {
             display: block;
             position: absolute;
             border-radius: var(--bdr_inner);
@@ -1786,11 +1777,9 @@ aside#modalInfo {
         }
 
         > img {
+            @extend %images_with_border;
             width: 2.5rem;
             height: 2.5rem;
-            border: var(--border);
-            border-radius: var(--bdr_outer);
-            object-fit: cover;
         }
 
         .article_title {
@@ -1896,10 +1885,9 @@ aside#modalInfo {
             }
 
             img {
+                @extend %images_with_border;
                 width: 2.5rem;
                 height: 2.5rem;
-                border: var(--border);
-                border-radius: var(--bdr_outer);
             }
 
             .course_name span {
@@ -1965,6 +1953,7 @@ aside#modalInfo {
         > span {
             &::before {
                 display: inline-block;
+                margin-bottom: .15rem;
                 margin-right: .25rem;
                 width: 1rem;
                 height: 1rem;
@@ -1991,6 +1980,69 @@ aside#modalInfo {
 }
 
 /* 호스트 정보 끝 */
+/* 심플 팝업 메시지 시작 */
+
+[data-message] {
+    position: relative;
+
+    &::before {
+        display: block;
+        position: absolute;
+        top: calc(100% + .5rem);
+        left: 50%;
+        padding: .5rem;
+        width: max-content;
+        border-radius: var(--bdr_outer);
+        background: rgba(var(--color_dark), .75);
+        box-shadow: 0 .15rem .25rem rgba(var(--color_dark), .3);
+        font-family: var(--ff_sans_p);
+        font-size: var(--fnt_12);
+        color: rgb(var(--color_light));
+        transform: translateX(-50%);
+        opacity: 0;
+        animation: fade-in-out 5s linear;
+        pointer-events: none;
+        content: attr(data-message);
+    }
+
+    &::after {
+        display: block;
+        position: absolute;
+        bottom: -.5rem;
+        left: 50%;
+        width: .5rem;
+        height: .5rem;
+        border-top: .25rem solid transparent;
+        border-bottom: .25rem solid rgba(var(--color_dark), .75);
+        border-left: .25rem solid transparent;
+        border-right: .25rem solid transparent;
+        transform: translateX(-50%);
+        opacity: 0;
+        animation: fade-in-out 5s linear;
+        pointer-events: none;
+        content: '';
+    }
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 심플 팝업 메시지 끝 */
 
 /* ---------- Repeating Items end ---------- */
 
