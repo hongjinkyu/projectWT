@@ -206,6 +206,7 @@ aside#popGroupEncore > #frmEncore > h4 {
 aside#popGroupEncore > #frmEncore > .btn_container {
 	display: flex;
 	align-items: center;
+	gap: 0.25rem;
 	padding-top: 0.5rem;
 	height: 2rem;
 }
@@ -214,12 +215,13 @@ aside#popGroupEncore > #frmEncore > .btn_container button {
 	padding: 0.5rem 1rem;
 }
 aside#popGroupEncore > #frmEncore > .btn_container .pop_trans {
+	width: 8rem;
 	background: rgb(var(--color_acc2));
 	color: rgb(var(--color_light));
 }
 aside#popGroupEncore > #frmEncore > .btn_container .pop_close {
-	background: rgb(var(--color_point1));
-	color: rgb(var(--color_light));
+	background: rgb(var(--color_light));
+	color: rgb(var(--color_point1));
 }
 aside#popGroupEncore > #frmEncore > .btn_container p {
 	margin-left: auto;
@@ -248,8 +250,11 @@ aside#popGroupEncore > #frmEncore > .encore_list > li:hover {
 aside#popGroupEncore > #frmEncore > .encore_list > li + li {
 	margin-top: 0.25rem;
 }
-aside#popGroupEncore > #frmEncore > .encore_list > li > label {
+aside#popGroupEncore > #frmEncore > .encore_list > li > label:first-of-type {
 	width: 5rem;
+}
+aside#popGroupEncore > #frmEncore > .encore_list > li > label:nth-of-type(2) {
+	cursor: pointer;
 }
 aside#popGroupEncore > #frmEncore > .encore_list p {
 	font-family: var(--ff_serif);

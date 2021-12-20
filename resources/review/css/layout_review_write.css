@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* ---------- Page-Specific Layout CSS (Review (Write)) ---------- */
+/* ---------- 페이지 특정 요소 시작 ---------- */
+#frmWrite > hr.hf {
+	margin: 0.25rem 0;
+	background: rgb(var(--color_bdr));
+}
+
+#gatSelector {
+	margin-bottom: 0.25rem;
+	padding: 1rem 0.5rem;
+	border-radius: var(--bdr_outer);
+	background: #ccc;
+}

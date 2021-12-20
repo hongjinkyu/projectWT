@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/* ---------- Page-Specific Layout CSS (Service - Intro) ---------- */
+/* ---------- 페이지 특정 요소 시작 ---------- */
+#introFull {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 5rem;
+	height: 100vh;
+	background: url("../../index/images/img_original_size/img01.jpg") no-repeat top fixed;
+	background-size: cover;
+	filter: brightness(0);
+	-webkit-animation: light_up 5s 3s 1 linear forwards;
+	        animation: light_up 5s 3s 1 linear forwards;
+	z-index: -1;
+}
+#introFull > .blur_blind {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+#introFull > .intro_text {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 45%;
+	left: 0;
+	right: 0;
+	height: 12rem;
+	background: rgba(var(--color_dark), 0.5);
+	-webkit-backdrop-filter: blur(0.5rem) grayscale(0.5);
+	        backdrop-filter: blur(0.5rem) grayscale(0.5);
+	font-family: var(--ff_serif);
+	color: rgba(var(--color_light));
+	text-align: center;
+}
+#introFull > .intro_text > h2 {
+	font-size: var(--fnt_40);
+}
+#introFull > .intro_text > h2 > span {
+	font-size: var(--fnt_20);
+	font-weight: normal;
+}
+#introFull > .intro_text > p {
+	font-size: var(--fnt_16);
+	opacity: 0.6;
+}
+#introFull .intro_wheel {
+	display: block;
+	position: absolute;
+	bottom: 12vh;
+	left: calc(50% - .8rem);
+	width: 1.8rem;
+	height: 2.8rem;
+	border: 0.1rem solid rgb(var(--color_light));
+	border-radius: 0.9rem;
+	opacity: 0;
+	transition: 0.5s;
+}
+#introFull .intro_wheel::before {
+	display: block;
+	position: absolute;
+	top: 0.25rem;
+	left: calc(50% - .1rem);
+	width: 0.2rem;
+	height: 0.5rem;
+	border-radius: 0.1rem;
+	background: rgb(var(--color_light));
+	-webkit-animation: wheel_down 1s ease-out infinite;
+	        animation: wheel_down 1s ease-out infinite;
+	content: "";
+}
+#introFull .intro_wheel::after {
+	display: block;
+	position: absolute;
+	top: 140%;
+	left: 50%;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	font-family: var(--ff_eng);
+	color: rgb(var(--color_light));
+	transform: translateX(-50%);
+	content: "SCROLL DOWN";
+}
+#introFull .intro_wheel.until_enough {
+	position: fixed;
+	opacity: 1;
+}
+
+@-webkit-keyframes light_up {
+	from {
+		filter: brightness(0);
+	}
+	to {
+		filter: none;
+	}
+}
+
+@keyframes light_up {
+	from {
+		filter: brightness(0);
+	}
+	to {
+		filter: none;
+	}
+}
+@-webkit-keyframes wheel_down {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateY(0.75rem);
+		opacity: 0;
+	}
+}
+@keyframes wheel_down {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateY(0.75rem);
+		opacity: 0;
+	}
+}
+.flipper {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	right: 0;
+	font-family: var(--ff_serif);
+	color: white;
+	font-size: var(--fnt_40);
+	text-align: center;
+	-webkit-animation: disappear 1s 2s 1 linear forwards;
+	        animation: disappear 1s 2s 1 linear forwards;
+	z-index: 3;
+}
+
+@-webkit-keyframes disappear {
+	from {
+		transform: none;
+		opacity: 1;
+	}
+	to {
+		transform: translateX(-2rem);
+		opacity: 0;
+	}
+}
+
+@keyframes disappear {
+	from {
+		transform: none;
+		opacity: 1;
+	}
+	to {
+		transform: translateX(-2rem);
+		opacity: 0;
+	}
+}
+#svcTitle {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 2rem;
+	margin: 2rem auto;
+	padding: 0 10%;
+	background: url("../images/about_img01.png") no-repeat center;
+	background-size: 60% auto;
+}
+#svcTitle > h3 {
+	position: relative;
+	font-size: var(--fnt_40);
+}
+#svcTitle > h3 > span {
+	font-size: var(--fnt_24);
+	font-weight: normal;
+}
+#svcTitle > h3::before {
+	position: absolute;
+	top: 50%;
+	left: 2rem;
+	font-family: "Berkshire Swash", cursive;
+	color: rgb(var(--color_acc1));
+	font-weight: normal;
+	z-index: -1;
+	content: "Wine Together";
+}
+#svcTitle hr {
+	margin: 5rem;
+}
+#svcTitle > p {
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_20);
+	line-height: 1.4;
+}
+#svcTitle > p:last-child {
+	text-align: end;
+}
+
+#svcPros {
+	margin: 0 auto;
+	width: 40rem;
+}
+#svcPros > div {
+	padding: 2rem;
+	min-width: 16rem;
+}
+#svcPros > div > h6 {
+	font-size: var(--fnt_24);
+	margin-bottom: 1rem;
+}
+#svcPros > div > p {
+	color: rgb(var(--color_footer));
+	font-size: var(--fnt_16);
+	line-height: 1.4;
+}
+#svcPros > div.pros_box_01 {
+	padding-left: 7rem;
+	background: url("../images/about_img04.png") no-repeat left center;
+	background-size: contain;
+}
+#svcPros > div.pros_box_02 {
+	padding-right: 7rem;
+	background: url("../images/about_img05.png") no-repeat right center;
+	background-size: contain;
+	text-align: end;
+}
+#svcPros > div.pros_box_03 {
+	padding-left: 7rem;
+	background: url("../images/about_img06.png") no-repeat left center;
+	background-size: contain;
+}
+
+#svcDesc {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1rem;
+	margin: 4rem auto;
+	max-width: 32rem;
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_16);
+	text-align: center;
+}
+#svcDesc > p {
+	line-height: 1.4;
+}
+#svcDesc > div {
+	margin-top: 2.5rem;
+}
+#svcDesc > div > button {
+	padding: 0.8rem 1.6rem;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	border-radius: 1.5rem;
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_16);
+	line-height: 1;
+	text-shadow: 0 0.15rem 0.1rem rgba(var(--color_point1), 0.3);
+}
+#svcDesc > div > button:nth-child(1) {
+	border: 0.1rem solid rgb(var(--color_acc1));
+	background: transparent;
+	color: rgb(var(--color_acc1));
+	text-shadow: none;
+}
+#svcDesc > div > button:nth-child(2) {
+	margin-left: 0.5rem;
+	background: rgb(var(--color_acc1));
+}

@@ -126,6 +126,18 @@
 		text-align: end;
 	}
 
+	#detailInfo .spec_info p {
+		width: 100%;
+	}
+	#detailInfo .spec_info p span {
+		width: 70%;
+	}
+
+	#detailOffer > .offer_wine > .list_wine > li,
+#detailOffer > .offer_wine > .byob_wine > li {
+		width: 100%;
+	}
+
 	/* 개별 페이지 요소 끝*/
 }
 /* 800px */

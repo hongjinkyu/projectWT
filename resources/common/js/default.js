@@ -45,9 +45,9 @@ $(document).ready(function() { // jQuery Load
 
             $(this).siblings('li').removeClass('checked');
             $(this).addClass('checked');
-            $(window).scrollTo(sidemnu_target);
+            $(window).scrollTop(sidemnu_target);
         });
-    });
+    }); // 사이드 메뉴 타겟 스크롤
 
 // ---------- Actual Codes ----------
 

@@ -1,0 +1,16 @@
+/* ---------- Page-Specific Layout CSS (Review (Write)) ---------- */
+/* ---------- 페이지 특정 요소 시작 ---------- */
+
+#frmWrite {
+    > hr.hf {
+        margin: .25rem 0;
+        background: rgb(var(--color_bdr));
+    }
+}
+
+#gatSelector {
+    margin-bottom: .25rem;
+    padding: 1rem .5rem;
+    border-radius: var(--bdr_outer);
+    background: #ccc;
+}

@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
     <!-- Global CSS -->
 
-    <link rel="stylesheet" type="text/css" href="./resources/service/css/service.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/service/css/service_intro.css" />
     <!-- Page-Specific CSS -->
 
     <link rel="stylesheet" type="text/css" href="./resources/common/css/mq.css" />
@@ -31,7 +31,7 @@
         <![endif]-->
 </head>
 
-<body>
+<body class="prevent_scroll">
 
     <div id="wrap">
 
@@ -123,98 +123,101 @@
 
         <!-- Page Main Contents Start / 헤더 영역 종료 -->
 
-        <!-- Home Section -->
-        <section id="home" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
-            <div class="homeIn serviceHome" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2"></div>
-
-            <div class="intro">
+        <section id="introFull">
+            <div class="blur_blind"></div>
+            <div class="intro_text">
                 <h2>와투하다 <span>[waɪntəˈɡeðər]</span></h2>
                 <p>"맛있는 음식과 와인을 좋은 사람들과 함께 즐기는 행위"</p>
             </div>
+            <span class="intro_wheel until_enough"></span>
+        </section> <!-- introFull -->
 
-            <div class="mouse-icon">
-                <div class="wheel"></div>
-            </div>
-        </section>
-        <!-- End Home Section -->
+        <h2 class="flipper">"와투하다"?</h2>
 
-        <!-- wrapMain -->
         <div id="wrapMain" class="int_wrap" role="main">
-            <!-- top -->
-            <section class="serviceTop">
-                <div class="serviceImg"></div>
-                <div class="serviceTop_title">
-                    <p class="S_title1">"와인투게더"<span>는</span></p>
-                    <p class="S_title2">Wine Together</p>
-                    <p class="S_title3">와인을 함께 즐기고 싶은 사람들은<br>엄선된 음식점으로 초대하는 서비스 입니다.</p>
-                    <p class="S_title4">요즘 와인 많이들 드시죠?<br>
-                        홈와, 혼와는 이제 지겹지 않으세요?<br>
-                        와인은 "함께" 할 때 더욱 즐겁습니다.</p>
+
+            <section id="svcTitle">
+                <h3>와인투게더<span>는</span></h3>
+                <p>
+                    와인을 함께 즐기고자 하는 사람들을<br />
+                    엄선된 음식점으로 초대하는 서비스입니다.
+                </p>
+                <hr class="hf" />
+                <p>
+                    요즘 와인 많이들 드시죠?<br />
+                    홈와, 혼와는 이제 지겹지 않으세요?<br />
+                    와인은 "함께"할 때 더욱 즐겁습니다.
+                </p>
+            </section> <!-- #svcTitle -->
+
+            <section id="svcPros">
+                <div class="pros_box_01">
+                    <h6>"맛있는 음식과 함께 와인을 즐겨보세요"</h6>
+                    <p>
+                        매번 집에서 배달 음식과 함께 와인을 드시고 계신가요?<br>
+                        와인투게더가 엄선한 맛집에서 와인과 음식의 페어링을 느껴보세요.
+                    </p>
                 </div>
-
-            </section>
-
-        <!-- Middle -->
-            <section class="serviceMiddle">
-
-                <div class="host">
-                    <div class="hostImg"></div>
-                    <div class="WhiteBoard">
-                        <h6>모임 주최자 (호스트)</h6>
-                        <span>Host</span>
-                        <p>
-                            와인에 대한 경험이 풍부한 당신,<br>
-                            나만의 취향에 맞춘 모임을 만들어 보는 건 어떨까요?<br>
-                            와인투게더가 여러분의 특별한 모임을 응원합니다.
-                        </p>
-                    </div>
-
-                </div>
-                <div class="guest">
-                    <div class="guestImg"></div>
-                    <div class="WhiteBoard WhiteBoard1">
-                        <h6>게스트</h6>
-                        <span>Guest</span>
-                        <p>
-                            와인은 어렵다고 생각하는 당신,<br>
-                            친절한 호스트의 안내에 따라 모임에 참여해 보세요.<br>
-                            혼자일 때보다 훨씬 즐거울 거예요!
-                        </p>
-                    </div>
-                </div>
-            
-            </section>
-
-            <!-- bottom -->
-
-            <section class="serviceBottom">
-                <div class="bottom1">
-                    <h6 class="B_title">"맛있는 음식과 함께 와인을 즐겨보세요"<br></h6>
-                    <p>매번 집에서 배달 음식과 함께 와인을 드시고 계신가요?<br>
-                    와인투게더가 엄선한 맛집에서 와인과 음식의 페어링을 느껴보세요</p>
-                </div>
-                <div class="bottom2">
-                    <h6 class="B_title">"다양한 와인을 맛보세요"</h6>
+                <div class="pros_box_02">
+                    <h6 >"다양한 와인을 맛보세요"</h6>
                     <P>
                         혼자서 마시면 한 병일 뿐인 와인,<br>
                         여러 사람들과 함께하면 한 자리에서 다양한 와인을 접할 수 있어요.
                     </P>
                 </div>
-                <div class="bottom3">
-                    <h6 class="B_title">"알고 마시면 더 재미있는 와인"</h6>
+                <div class="pros_box_03">
+                    <h6>"알고 마시면 더 재미있는 와인"</h6>
                     <P>
                         호스트의 다양한 경험과 지식을 공유하는 자리에서<br>
                         와인 초보도 와인에 대해 부담없고 자연스럽게 배울 수 있어요.
                     </P>
                 </div>
+            </section> <!-- #svcPros -->
 
-                <div class="around">
-                    <h6>자, 그럼 와투하러 가볼까요?</h6>
-                    <p><a href="#">모임 둘러보기</a></p>
+            <section id="svcDesc">
+                <p>
+                    와인에 대한 대중의 관심과 수요가 폭발적으로 증가하고 있는 요즘입니다.
+                </p>
+                <p>
+                    그러나 와인을 사고 파는 것에는 관심이 많아도,<br />
+                    정작 "어떻게" 마셔야 하는지에 대한 고민은 조금 부족할지도 모르겠습니다.
+                </p>
+                <p>
+                    술 그거 그냥 마시면 되는거지 뭐. 라고 생각할 수도 있지만,<br />
+                    와인이란 그저 술을 마시는 행위가 아니라<br />
+                    "배려"라고 부를 수 있는 문화라고,<br />
+                    와인투게더는 그렇게 생각합니다.
+                </p>
+                <p>
+                    기본적인 테이블 매너에서부터 경험이 조금 더 많은 사람이 다른 사람을 배려할 수 있는,<br />
+                    그리고 그런 배려깊은 사람이 존중받을 수 있는 문화를 만들어가는 것.
+                </p>
+                <p>
+                    와인투게더는 단순하게 와인 모임을 만들고, 맛있는 음식점을 추천하는 것만이 아닌,<br />
+                    그 이상의 가치와 폭넓은 경험을 제공하기 위해 항상 노력하고 있습니다.
+                </p>
+                <p>
+                    "사람이 여행이고, 여행은 사람이다" 라는 말처럼<br />
+                    사람은 각자 자기만의 스토리를 가지고 있고,<br />
+                    와인 또한 마찬가지라고 생각합니다.
+                </p>
+                <p>
+                    와인투게더와 함께,<br />
+                    사람과 와인으로의 여행을<br />
+                    함께 떠나보시겠어요?
+                </p>
+
+                <div>
+                    <button class="goto_guide">
+                        이용 가이드 바로가기
+                    </button><!--
+                    --><button class="goto_list">
+                        모임 둘러보기
+                    </button>
                 </div>
-            </section>
+            </section> <!-- #svcDesc -->
 
-        </div><!-- End wrapMain -->
+        </div> <!-- #wrapMain -->
 
         <!-- Page Main Contents End / 푸터 영역 시작 -->
 

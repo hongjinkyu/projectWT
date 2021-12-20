@@ -20,6 +20,16 @@ $(document).ready(function() {
 
     // ---------- Actual Codes ----------
 
+    $('li[data-mnu-target="groupBYOB"]').click(function() {
+        $('#groupLIST').hide();
+        $('#groupBYOB').show();
+    });
+
+    $('li[data-mnu-target="groupLIST"]').click(function() {
+        $('#groupBYOB').hide();
+        $('#groupLIST').show();
+    });
+
     $('.pop_open').click(function() {
         $('body').addClass('prevent_scroll');
         $('#popGroupEncore').addClass('open');

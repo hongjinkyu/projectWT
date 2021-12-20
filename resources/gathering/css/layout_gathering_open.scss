@@ -229,6 +229,7 @@ aside#popGroupEncore {
         > .btn_container {
             display: flex;
             align-items: center;
+            gap: .25rem;
             padding-top: .5rem;
             height: 2rem;
 
@@ -238,13 +239,14 @@ aside#popGroupEncore {
             }
 
             .pop_trans {
+                width: 8rem;
                 background: rgb(var(--color_acc2));
                 color: rgb(var(--color_light));
             }
     
             .pop_close {
-                background: rgb(var(--color_point1));
-                color: rgb(var(--color_light));
+                background: rgb(var(--color_light));
+                color: rgb(var(--color_point1));
             }
 
             p {
@@ -281,8 +283,12 @@ aside#popGroupEncore {
                     margin-top: .25rem;
                 }
 
-                > label {
+                > label:first-of-type {
                     width: 5rem;
+                }
+
+                > label:nth-of-type(2) {
+                    cursor: pointer;
                 }
             }
 
