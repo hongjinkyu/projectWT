@@ -257,6 +257,7 @@
 	margin-top: 2.5rem;
 }
 #svcDesc > div > button {
+	position: relative;
 	padding: 0.8rem 1.6rem;
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
@@ -267,14 +268,76 @@
 	font-size: var(--fnt_16);
 	line-height: 1;
 	text-shadow: 0 0.15rem 0.1rem rgba(var(--color_point1), 0.3);
+	cursor: pointer;
 }
 #svcDesc > div > button:nth-child(1) {
-	border: 0.1rem solid rgb(var(--color_acc1));
+	border: 0.1rem solid rgb(var(--color_acc2));
 	background: transparent;
-	color: rgb(var(--color_acc1));
+	color: rgb(var(--color_acc2));
 	text-shadow: none;
+}
+#svcDesc > div > button:nth-child(1):hover, #svcDesc > div > button:nth-child(1):active {
+	background: rgb(var(--color_acc2));
+	color: rgb(var(--color_light));
+	text-shadow: 0 0.15rem 0.1rem rgba(var(--color_dark), 0.3);
+	transition: 0.3s;
 }
 #svcDesc > div > button:nth-child(2) {
 	margin-left: 0.5rem;
 	background: rgb(var(--color_acc1));
+}
+#svcDesc > div > button:nth-child(2):hover, #svcDesc > div > button:nth-child(2):active {
+	background: rgba(var(--color_light), 0.75);
+	color: rgb(var(--color_light));
+	text-shadow: 0 0.15rem 0.1rem rgba(var(--color_dark), 0.3);
+	-webkit-animation: pulse 0.5s linear infinite;
+	        animation: pulse 0.5s linear infinite;
+}
+#svcDesc > div > button:nth-child(2):hover::before, #svcDesc > div > button:nth-child(2):active::before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: inherit;
+	background: linear-gradient(to right, #f01e00 0%, #ffa000 25%, #e6e600 50%, #1ebe00 75%, #7800d2 100%) repeat-x;
+	filter: blur(0.5rem);
+	-webkit-animation: festive 1s infinite linear forwards;
+	        animation: festive 1s infinite linear forwards;
+	z-index: -1;
+	content: "";
+}
+
+@-webkit-keyframes festive {
+	0% {
+		background-position: -4rem;
+	}
+	100% {
+		background-position: 4rem;
+	}
+}
+
+@keyframes festive {
+	0% {
+		background-position: -4rem;
+	}
+	100% {
+		background-position: 4rem;
+	}
+}
+@-webkit-keyframes pulse {
+	10% {
+		transform: scale(1.3);
+	}
+	100% {
+		transform: none;
+	}
+}
+@keyframes pulse {
+	10% {
+		transform: scale(1.3);
+	}
+	100% {
+		transform: none;
+	}
 }
