@@ -41,10 +41,10 @@ $(document).ready(function() { // jQuery Load
 
     $('.side_mnu_left > li').each(function() {
         $(this).click(function() {
-            let sidemnu_target = $('#' + $(this).attr('data-mnu-target') + '').offset();
+            let sidemnu_target = $('#' + $(this).attr('data-mnu-target') + '').offset().top;
 
-            $(this).siblings('li').removeClass('checked');
-            $(this).addClass('checked');
+            // $(this).siblings('li').removeClass('checked');
+            // $(this).addClass('checked');
             $(window).scrollTop(sidemnu_target);
         });
     }); // 사이드 메뉴 타겟 스크롤
