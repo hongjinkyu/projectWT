@@ -282,7 +282,6 @@
 
                 &:hover,
                 &:active {
-                    background: rgba(var(--color_light), .75);
                     color: rgb(var(--color_light));
                     text-shadow: 0 .15rem .1rem rgba(var(--color_dark), .3);
                     animation: pulse .5s linear infinite;
