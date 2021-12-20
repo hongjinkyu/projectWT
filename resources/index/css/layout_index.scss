@@ -35,6 +35,16 @@ div#mainSlider {
         padding: 0 5vw;
         height: 45vh;
         color: rgb(var(--color_light));
+
+        > .slide_title {
+            opacity: 0;
+            transform: translateX(-5rem);
+        }
+
+        > .slide_subtitle {
+            opacity: 0;
+            transform: translateX(-3rem);
+        }
     }
 
     > img {
@@ -46,6 +56,22 @@ div#mainSlider {
         object-fit: cover;
         pointer-events: none;
         z-index: -1;
+    }
+
+    &.slick-active {
+        > div.int_wrap {
+            > .slide_title {
+                transform: none;
+                opacity: 1;
+                transition: 2s ease-out;
+            }
+
+            > .slide_subtitle {
+                transform: none;
+                opacity: 1;
+                transition: 2s .5s ease-out;
+            }
+        }
     }
 }
 
