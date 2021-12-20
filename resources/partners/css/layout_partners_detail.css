@@ -257,7 +257,7 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 }
 .food_item > .food_images > img {
 	width: calc((100% - 1.5rem) / 4);
-	height: 5rem;
+	aspect-ratio: 4/2.5;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	-o-object-fit: cover;

@@ -34,6 +34,7 @@
 
 .btn_flt_all {
 	background: rgb(var(--color_text));
+	box-shadow: none;
 	color: rgb(var(--color_light));
 }
 

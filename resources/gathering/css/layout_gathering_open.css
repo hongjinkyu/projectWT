@@ -21,7 +21,6 @@
 	width: 0.05rem;
 	height: 0.5rem;
 	background: rgb(var(--color_text));
-	font-size: var(--fnt_12);
 	pointer-events: none;
 }
 .range_spot::after {
@@ -29,9 +28,15 @@
 	position: absolute;
 	top: calc(100% + .15rem);
 	left: 50%;
+	padding: 0.25rem;
 	width: -webkit-max-content;
 	width: -moz-max-content;
 	width: max-content;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_12);
+	font-weight: bold;
 	text-align: center;
 	transform: translateX(-50%);
 	content: attr(rangeval) "인";
@@ -80,6 +85,7 @@
 .bring_wine > .qty_container > input,
 .bring_wine > .qty_container > button {
 	display: block;
+	box-shadow: none;
 	text-align: center;
 }
 .bring_wine > .qty_container > input {
@@ -155,6 +161,7 @@
 	top: 0;
 	right: 0;
 	width: 20%;
+	min-width: 5rem;
 	box-shadow: none;
 }
 #slctPricePoint:focus {

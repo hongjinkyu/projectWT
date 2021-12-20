@@ -60,11 +60,12 @@ button {
 	padding: 0.45rem 0.5rem 0.4rem;
 	border-radius: var(--bdr_outer);
 	background: rgba(var(--color_light), 1);
-	box-shadow: var(--shd_major);
+	box-shadow: 0 0 0 0.05rem rgb(var(--color_bdr));
 	outline: none;
 	color: rgb(var(--color_text));
 	font-family: var(--ff_sans_p);
 	font-size: 0.6rem;
+	vertical-align: middle;
 }
 input[type=color]::-moz-placeholder, input[type=file]::-moz-placeholder, input[type=datetime-local]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=month]::-moz-placeholder, input[type=week]::-moz-placeholder, input[type=time]::-moz-placeholder, input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=url]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=number]::-moz-placeholder, input[list]::-moz-placeholder, input[type=button]::-moz-placeholder, input[type=reset]::-moz-placeholder, input[type=submit]::-moz-placeholder, input[type=image]::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder, output::-moz-placeholder, button::-moz-placeholder {
 	color: rgb(var(--color_bdr));
@@ -118,11 +119,12 @@ textarea:focus,
 select:focus,
 output:focus,
 button:focus {
-	box-shadow: var(--shd_major), 0 0 0 0.1rem rgba(var(--color_acc1), 0.5);
+	box-shadow: 0 0 0 0.1rem rgba(var(--color_acc1), 0.5);
 }
 
 button.btn_search {
 	background: rgb(var(--color_acc1));
+	box-shadow: none;
 	color: rgb(var(--color_light));
 }
 
@@ -153,10 +155,34 @@ input[type=time]:focus {
 input[type=file] {
 	display: block;
 	padding: 0.25rem;
+	width: 100%;
+	font-size: var(--fnt_16);
 }
 input[type=file] + label {
 	color: rgb(var(--color_acc2), 0.75);
 	font-size: var(--fnt_12);
+}
+input[type=file]::-webkit-file-upload-button {
+	margin-right: 0.5rem;
+	padding: 0.5rem 0.75rem;
+	border: none;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_acc1));
+	font-family: var(--ff_sans_n);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_12);
+	font-weight: bold;
+}
+input[type=file]::file-selector-button {
+	margin-right: 0.5rem;
+	padding: 0.5rem 0.75rem;
+	border: none;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_acc1));
+	font-family: var(--ff_sans_n);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_12);
+	font-weight: bold;
 }
 
 input[type=color] {
@@ -882,6 +908,7 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	margin-left: auto;
 	padding: 0.5rem 1rem;
 	background: rgb(var(--color_acc1));
+	box-shadow: none;
 	color: rgb(var(--color_light));
 }
 
@@ -1769,6 +1796,7 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	margin-left: auto;
 	padding: 0.3rem 0.5rem;
 	background: rgb(var(--color_acc2));
+	box-shadow: none;
 	color: rgb(var(--color_light));
 }
 

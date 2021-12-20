@@ -248,7 +248,7 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 }
 .offer_food > .list_food > dd.food_pict img {
 	width: calc((100% - 1.5rem) / 4);
-	height: 5rem;
+	aspect-ratio: 4/2.5;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	-o-object-fit: cover;
@@ -263,6 +263,7 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 button#btnJoin {
 	padding: 0.5rem 2rem;
 	background: rgb(var(--color_acc1));
+	box-shadow: none;
 	color: rgb(var(--color_light));
 	font-size: var(--fnt_16);
 }

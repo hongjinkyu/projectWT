@@ -2,8 +2,12 @@
 /* ---------- 페이지 특정 요소 시작 ---------- */
 
 #frmWrite {
+    > h3 {
+        margin: .5rem;
+        font-weight: normal;
+    }
+
     > hr.hf {
-        margin: .25rem 0;
         background: rgb(var(--color_bdr));
     }
 
@@ -13,17 +17,19 @@
         font-size: var(--fnt_16);
 
         &.btn_write {
-
+            background: rgb(var(--color_acc2));
+            box-shadow: none;
+            color: rgb(var(--color_light));
         }
 
         &.btn_cancel {
 
-        } 
+        }
     }
 }
 
 #gatSelector {
-    margin-bottom: .25rem;
+    margin: .25rem 0;
     padding: 1rem .5rem;
     border-radius: var(--bdr_outer);
     background: rgb(var(--color_bg));

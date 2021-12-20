@@ -276,7 +276,7 @@ div#detailSlide {
 
                 img {
                     width: calc((100% - 1.5rem) / 4);
-                    height: 5rem;
+                    aspect-ratio: 4 / 2.5;
                     border: var(--border);
                     border-radius: var(--bdr_outer);
                     object-fit: cover;
@@ -294,6 +294,7 @@ div#detailSlide {
 button#btnJoin {
     padding: .5rem 2rem;
     background: rgb(var(--color_acc1));
+    box-shadow: none;
     color: rgb(var(--color_light));
     font-size: var(--fnt_16);
 }

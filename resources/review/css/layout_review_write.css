@@ -1,8 +1,11 @@
 @charset "UTF-8";
 /* ---------- Page-Specific Layout CSS (Review (Write)) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
+#frmWrite > h3 {
+	margin: 0.5rem;
+	font-weight: normal;
+}
 #frmWrite > hr.hf {
-	margin: 0.25rem 0;
 	background: rgb(var(--color_bdr));
 }
 #frmWrite > button {
@@ -10,8 +13,13 @@
 	padding: 0.75rem;
 	font-size: var(--fnt_16);
 }
+#frmWrite > button.btn_write {
+	background: rgb(var(--color_acc2));
+	box-shadow: none;
+	color: rgb(var(--color_light));
+}
 #gatSelector {
-	margin-bottom: 0.25rem;
+	margin: 0.25rem 0;
 	padding: 1rem 0.5rem;
 	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_bg));

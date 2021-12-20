@@ -39,11 +39,12 @@ a:visited {
     padding: .45rem .5rem .4rem;
     border-radius: var(--bdr_outer);
     background: rgba(var(--color_light), 1);
-    box-shadow: var(--shd_major);
+    box-shadow: 0 0 0 .05rem rgb(var(--color_bdr));
     outline: none;
     color: rgb(var(--color_text));
     font-family: var(--ff_sans_p);
     font-size: .6rem;
+    vertical-align: middle;
 
     &::placeholder {
         color: rgb(var(--color_bdr));
@@ -75,14 +76,13 @@ button {
     @extend %interface_box_elmt;
 
     &:focus {
-        box-shadow:
-            var(--shd_major),
-            0 0 0 .1rem rgba(var(--color_acc1), .5);
+        box-shadow: 0 0 0 .1rem rgba(var(--color_acc1), .5);
     }
 }
 
 button.btn_search {
     background: rgb(var(--color_acc1));
+    box-shadow: none;
     color: rgb(var(--color_light));
 }
 
@@ -114,10 +114,24 @@ input[type="file"] {
     @extend %interface_box_elmt;
     display: block;
     padding: .25rem;
+    width: 100%;
+    font-size: var(--fnt_16);
 
     & + label {
         color: rgb(var(--color_acc2), .75);
         font-size: var(--fnt_12);
+    }
+
+    &::file-selector-button {
+        margin-right: .5rem;
+        padding: .5rem .75rem;
+        border: none;
+        border-radius: var(--bdr_outer);
+        background: rgb(var(--color_acc1));
+        font-family: var(--ff_sans_n);
+        color: rgb(var(--color_light));
+        font-size: var(--fnt_12);
+        font-weight: bold;
     }
 }
 
@@ -949,6 +963,7 @@ aside#modalInfo {
             margin-left: auto;
             padding: .5rem 1rem;
             background: rgb(var(--color_acc1));
+            box-shadow: none;
             color: rgb(var(--color_light));
         }
     }
@@ -1976,6 +1991,7 @@ aside#modalInfo {
         margin-left: auto;
         padding: .3rem .5rem;
         background: rgb(var(--color_acc2));
+        box-shadow: none;
         color: rgb(var(--color_light));
     }
 }
