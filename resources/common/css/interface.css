@@ -655,6 +655,9 @@ ul.side_mnu_left > li.side_mnu_sub {
 	color: rgba(var(--color_text), 0.5);
 	font-size: var(--fnt_14);
 }
+ul.side_mnu_left > li.under {
+	pointer-events: none;
+}
 ul.side_mnu_left > li.checked {
 	background: rgb(var(--color_text));
 	color: rgb(var(--color_light));

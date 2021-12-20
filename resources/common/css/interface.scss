@@ -669,6 +669,10 @@ ul.side_mnu_left {
             font-size: var(--fnt_14);
         }
 
+        &.under {
+            pointer-events: none;
+        }
+
         &.checked {
             background: rgb(var(--color_text));
             color: rgb(var(--color_light));

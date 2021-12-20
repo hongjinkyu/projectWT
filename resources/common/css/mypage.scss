@@ -129,6 +129,67 @@
             margin: .5rem 0;
             background: rgb(var(--color_bdr));
         }
+
+        > .my_grade {
+            font-family: var(--ff_sans_p);
+            text-align: end;
+
+            > span {
+                display: inline-block;
+                position: relative;
+                color: rgb(var(--color_title));
+        
+                &::before {
+                    display: inline-block;
+                    margin-right: .25rem;
+                    padding: .2rem .3rem .1rem .3rem;
+                    border: .05rem solid rgba(var(--color_dark), .25);
+                    border-radius: var(--bdr_outer);
+                    color: rgb(var(--color_light));
+                }
+        
+                /* 회원등급 관련 부분 - !중요! */
+        
+                &:is([data-grade="grade_newbie"])::before {
+                    background: rgb(var(--color_acc2));
+                    color: rgb(var(--color_tone2));
+                    content: 'L1';
+                }
+        
+                &:is([data-grade="grade_normal"])::before {
+                    background: rgb(var(--color_tag1));
+                    content: 'L2';
+                }
+        
+                &:is([data-grade="grade_regular"])::before {
+                    background: rgb(var(--color_tag2));
+                    color: rgb(var(--color_footer));
+                    content: 'L3';
+                }
+        
+                &:is([data-grade="grade_family"])::before {
+                    background: rgb(var(--color_tag3));
+                    content: 'L4';
+                }
+        
+                &:is([data-grade="grade_vip"])::before {
+                    background: rgb(var(--color_text));
+                    color: rgb(var(--color_tag2));
+                    content: 'VIP';
+                }
+        
+                &:is([data-grade="grade_vvip"])::before {
+                    border-color: goldenrod;
+                    background: linear-gradient(to top, rgb(255, 217, 0) 0%, rgb(255, 187, 0) 100%);
+                    font-family: 'Berkshire Swash', cursive;
+                    color: rgb(var(--color_light));
+                    text-shadow: 0 0 .1rem rgb(var(--color_point1));
+                    content: 'W';
+                }
+        
+                /* 회원등급 관련 부분 - !중요! */
+            }
+        }
     }
 }
 
@@ -200,6 +261,10 @@
 #myProfilePay {
     > h5 {
         margin: 3rem 0 .5rem;
+    }
+
+    > .my_card_container {
+        
     }
 }
 

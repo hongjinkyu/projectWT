@@ -116,6 +116,56 @@
 	margin: 0.5rem 0;
 	background: rgb(var(--color_bdr));
 }
+#myProfileIntro > .my_self > .my_grade {
+	font-family: var(--ff_sans_p);
+	text-align: end;
+}
+#myProfileIntro > .my_self > .my_grade > span {
+	display: inline-block;
+	position: relative;
+	color: rgb(var(--color_title));
+	/* 회원등급 관련 부분 - !중요! */
+	/* 회원등급 관련 부분 - !중요! */
+}
+#myProfileIntro > .my_self > .my_grade > span::before {
+	display: inline-block;
+	margin-right: 0.25rem;
+	padding: 0.2rem 0.3rem 0.1rem 0.3rem;
+	border: 0.05rem solid rgba(var(--color_dark), 0.25);
+	border-radius: var(--bdr_outer);
+	color: rgb(var(--color_light));
+}
+#myProfileIntro > .my_self > .my_grade > span:is([data-grade=grade_newbie])::before {
+	background: rgb(var(--color_acc2));
+	color: rgb(var(--color_tone2));
+	content: "L1";
+}
+#myProfileIntro > .my_self > .my_grade > span:is([data-grade=grade_normal])::before {
+	background: rgb(var(--color_tag1));
+	content: "L2";
+}
+#myProfileIntro > .my_self > .my_grade > span:is([data-grade=grade_regular])::before {
+	background: rgb(var(--color_tag2));
+	color: rgb(var(--color_footer));
+	content: "L3";
+}
+#myProfileIntro > .my_self > .my_grade > span:is([data-grade=grade_family])::before {
+	background: rgb(var(--color_tag3));
+	content: "L4";
+}
+#myProfileIntro > .my_self > .my_grade > span:is([data-grade=grade_vip])::before {
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_tag2));
+	content: "VIP";
+}
+#myProfileIntro > .my_self > .my_grade > span:is([data-grade=grade_vvip])::before {
+	border-color: goldenrod;
+	background: linear-gradient(to top, #ffd900 0%, #ffbb00 100%);
+	font-family: "Berkshire Swash", cursive;
+	color: rgb(var(--color_light));
+	text-shadow: 0 0 0.1rem rgb(var(--color_point1));
+	content: "W";
+}
 
 .my_gathering > h5,
 .my_review > h5 {
@@ -200,7 +250,6 @@
 #myProfilePay > h5 {
 	margin: 3rem 0 0.5rem;
 }
-
 #myProfileSub > h5 {
 	margin: 3rem 0 0.5rem;
 }
