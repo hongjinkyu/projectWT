@@ -6,11 +6,25 @@
         margin: .25rem 0;
         background: rgb(var(--color_bdr));
     }
+
+    > button {
+        margin-top: .25rem;
+        padding: .75rem;
+        font-size: var(--fnt_16);
+
+        &.btn_write {
+
+        }
+
+        &.btn_cancel {
+
+        } 
+    }
 }
 
 #gatSelector {
     margin-bottom: .25rem;
     padding: 1rem .5rem;
     border-radius: var(--bdr_outer);
-    background: #ccc;
+    background: rgb(var(--color_bg));
 }
