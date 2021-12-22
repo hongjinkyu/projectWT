@@ -20,6 +20,7 @@
         bottom: 0;
         left: 0;
         right: 0;
+        backdrop-filter: blur(.5rem);
     }
 
     > .intro_text {
@@ -29,12 +30,11 @@
         align-items: center;
         gap: 1rem;
         position: sticky;
-        top: 45%;
+        top: calc(50vh - 6rem);
         left: 0;
         right: 0;
         height: 12rem;
-        background: rgba(var(--color_dark), .5);
-        backdrop-filter: blur(.5rem) grayscale(.5);
+        background: rgba(var(--color_dark), .75);
         font-family: var(--ff_serif);
         color: rgba(var(--color_light));
         text-align: center;
@@ -79,7 +79,7 @@
             content: '';
         }
 
-        &::after {
+        &::after { 
             display: block;
             position: absolute;
             top: 140%;
@@ -93,7 +93,7 @@
 
         &.until_enough {
             position: fixed;
-            opacity: 1;
+            opacity: .75;
         }
     }
 }
@@ -192,10 +192,10 @@
 
 #svcPros {
     margin: 0 auto;
-    width: 40rem;
+    max-width: 40rem;
 
     > div {
-        padding: 2rem;
+        padding: 2rem 0;
         min-width: 16rem;
 
         > h6 {
@@ -211,20 +211,17 @@
 
         &.pros_box {
             &_01 {
-                padding-left: 7rem;
                 background: url('../images/about_img04.png') no-repeat left center;
                 background-size: contain;
             }
     
             &_02 {
-                padding-right: 7rem;
                 background: url('../images/about_img05.png') no-repeat right center;
                 background-size: contain;
                 text-align: end;
             }
     
             &_03 {
-                padding-left: 7rem;
                 background: url('../images/about_img06.png') no-repeat left center;
                 background-size: contain;
             }
@@ -243,7 +240,7 @@
     text-align: center;
     
     > p {
-        line-height: 1.4;
+        line-height: 1.6;
     }
 
     > div {

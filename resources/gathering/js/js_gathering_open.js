@@ -20,6 +20,13 @@ $(document).ready(function() {
 
     // ---------- Actual Codes ----------
 
+    $('.side_mnu_left > li').each(function() {
+        $(this).click(function() {
+            $(this).addClass('checked');
+            $(this).siblings('li').removeClass('checked');
+        });
+    });
+
     $('li[data-mnu-target="groupBYOB"]').click(function() {
         $('#groupLIST').hide();
         $('#groupBYOB').show();

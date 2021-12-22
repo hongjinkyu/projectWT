@@ -21,6 +21,8 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
+	-webkit-backdrop-filter: blur(0.5rem);
+	        backdrop-filter: blur(0.5rem);
 }
 #introFull > .intro_text {
 	display: flex;
@@ -30,13 +32,11 @@
 	gap: 1rem;
 	position: -webkit-sticky;
 	position: sticky;
-	top: 45%;
+	top: calc(50vh - 6rem);
 	left: 0;
 	right: 0;
 	height: 12rem;
-	background: rgba(var(--color_dark), 0.5);
-	-webkit-backdrop-filter: blur(0.5rem) grayscale(0.5);
-	        backdrop-filter: blur(0.5rem) grayscale(0.5);
+	background: rgba(var(--color_dark), 0.75);
 	font-family: var(--ff_serif);
 	color: rgba(var(--color_light));
 	text-align: center;
@@ -92,7 +92,7 @@
 }
 #introFull .intro_wheel.until_enough {
 	position: fixed;
-	opacity: 1;
+	opacity: 0.75;
 }
 
 @-webkit-keyframes light_up {
@@ -208,10 +208,10 @@
 
 #svcPros {
 	margin: 0 auto;
-	width: 40rem;
+	max-width: 40rem;
 }
 #svcPros > div {
-	padding: 2rem;
+	padding: 2rem 0;
 	min-width: 16rem;
 }
 #svcPros > div > h6 {
@@ -224,18 +224,15 @@
 	line-height: 1.4;
 }
 #svcPros > div.pros_box_01 {
-	padding-left: 7rem;
 	background: url("../images/about_img04.png") no-repeat left center;
 	background-size: contain;
 }
 #svcPros > div.pros_box_02 {
-	padding-right: 7rem;
 	background: url("../images/about_img05.png") no-repeat right center;
 	background-size: contain;
 	text-align: end;
 }
 #svcPros > div.pros_box_03 {
-	padding-left: 7rem;
 	background: url("../images/about_img06.png") no-repeat left center;
 	background-size: contain;
 }
@@ -251,7 +248,7 @@
 	text-align: center;
 }
 #svcDesc > p {
-	line-height: 1.4;
+	line-height: 1.6;
 }
 #svcDesc > div {
 	margin-top: 2.5rem;

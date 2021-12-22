@@ -141,18 +141,6 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	font-size: var(--fnt_12);
 	text-align: end;
 }
-#partnerInfo .location_map {
-	margin-top: 1.5rem;
-	padding: 0 0.5rem;
-}
-#partnerInfo .location_map > img {
-	width: 100%;
-	height: 10rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	-o-object-fit: cover;
-	   object-fit: cover;
-}
 #partnerInfo .reservation_info {
 	margin-top: 1.5rem;
 	padding: 0 0.5rem;
@@ -258,6 +246,15 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 .food_item > .food_images > img {
 	width: calc((100% - 1.5rem) / 4);
 	aspect-ratio: 4/2.5;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+#partnerLocation .location_map > img {
+	width: 100%;
+	height: 15rem;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	-o-object-fit: cover;

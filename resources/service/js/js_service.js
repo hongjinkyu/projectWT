@@ -16,17 +16,7 @@ $(document).ready(function() { // jQuery Loads
 
         let half_of_it = $(window).scrollTop() / 2;
 
-        $('.intro_text').css({'top': 'calc(45% - ' + half_of_it + 'px)'});
+        $('.intro_text').css({'top': 'calc(50vh - 6rem - ' + half_of_it + 'px)'});
     }); // Window Scrolling Actions
-
-    let counter = 0;
-    let timer = setInterval(function() {
-        counter++;
-        $('body').removeClass('prevent_scroll');
-    }, 8000);
-
-    if (counter == 1) {
-        clearInterval(timer);
-    }
 
 }) // jQuery Closed

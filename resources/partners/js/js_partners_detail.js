@@ -9,15 +9,15 @@ $(document).ready(function () { // jQuery Load
             $('.side_mnu_item1').addClass('checked').siblings('li').removeClass('checked');
         }
 
-        else if (scroll_distance >= $('#partnerMenu').offset().top && scroll_distance < $('#partnerReply').offset().top) {
+        else if (scroll_distance >= $('#partnerMenu').offset().top && scroll_distance < $('#partnerReview').offset().top) {
             $('.side_mnu_item2').addClass('checked').siblings('li').removeClass('checked');
         }
 
-        else if (scroll_distance >= $('#partnerReply').offset().top && scroll_distance < $('#partnerReview').offset().top) {
+        else if (scroll_distance >= $('#partnerReview').offset().top && scroll_distance < $('#partnerLocation').offset().top) {
             $('.side_mnu_item3').addClass('checked').siblings('li').removeClass('checked');
         }
 
-        else if (scroll_distance >= $('#partnerReview').offset().top) {
+        else if (scroll_distance >= $('#partnerLocation').offset().top) {
             $('.side_mnu_item4').addClass('checked').siblings('li').removeClass('checked');
         }
     }); // Window Scrolling Actions

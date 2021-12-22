@@ -157,19 +157,6 @@ div#detailSlide {
         text-align: end;
     }
 
-    .location_map {
-        margin-top: 1.5rem;
-        padding: 0 .5rem;
-
-        > img {
-            width: 100%;
-            height: 10rem;
-            border: var(--border);
-            border-radius: var(--bdr_outer);
-            object-fit: cover;
-        }
-    }
-
     .reservation_info {
         margin-top: 1.5rem;
         padding: 0 .5rem;
@@ -288,6 +275,18 @@ div#detailSlide {
         > img {
             width: calc((100% - 1.5rem) / 4);
             aspect-ratio: 4 / 2.5;
+            border: var(--border);
+            border-radius: var(--bdr_outer);
+            object-fit: cover;
+        }
+    }
+}
+
+#partnerLocation {
+    .location_map {
+        > img {
+            width: 100%;
+            height: 15rem;
             border: var(--border);
             border-radius: var(--bdr_outer);
             object-fit: cover;
