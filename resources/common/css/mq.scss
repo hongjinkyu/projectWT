@@ -183,6 +183,10 @@
         width: 6.5rem;
         height: 2rem;
         font-size: var(--fnt_20);
+
+        &::after {
+            bottom: 0;
+        }
     }
 
     h2 {

@@ -148,6 +148,9 @@
 		height: 2rem;
 		font-size: var(--fnt_20);
 	}
+	h1#mobileLogo::after {
+		bottom: 0;
+	}
 
 	h2 {
 		font-size: var(--fnt_20);
