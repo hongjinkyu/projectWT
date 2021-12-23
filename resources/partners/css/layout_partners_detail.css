@@ -254,7 +254,7 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 
 #partnerLocation .location_map > img {
 	width: 100%;
-	height: 15rem;
+	height: 30rem;
 	border: var(--border);
 	border-radius: var(--bdr_outer);
 	-o-object-fit: cover;
