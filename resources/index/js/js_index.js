@@ -47,8 +47,10 @@ $(document).ready(function() { // jQuery Load
             {
                 breakpoint: 400,
                 settings: {
-                    slidesToShow: 1,
-                    variableWidth: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    variableWidth: true,
+                    variableHeight: true,
                 }
             },
         ],

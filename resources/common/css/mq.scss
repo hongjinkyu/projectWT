@@ -202,12 +202,41 @@
 
     .card_guard {
         & + .card_guard {
-            margin-left: 0;
+            margin-left: .5rem;
         }
     }
 
     .card_item {
-        width: 100%;
+        width: 8rem;
+        height: 15rem;
+
+        &::before {
+            bottom: 7.25rem;
+        }
+
+        .card_img {
+            height: 8rem;
+        }
+
+        .card_desc {
+            padding: .5rem 0 0;
+
+            h5 {
+                font-size: var(--fnt_14);
+            }
+        }
+
+        .card_like {
+            display: none;
+        }
+
+        .card_spec {
+            display: none;
+        }
+
+        .card_location {
+            display: none;
+        }
     }
 
     .long_banner {

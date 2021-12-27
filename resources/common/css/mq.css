@@ -163,11 +163,33 @@
 	/* 공통 요소 끝 */
 	/* 개별 페이지 요소 */
 	.card_guard + .card_guard {
-		margin-left: 0;
+		margin-left: 0.5rem;
 	}
 
 	.card_item {
-		width: 100%;
+		width: 8rem;
+		height: 15rem;
+	}
+	.card_item::before {
+		bottom: 7.25rem;
+	}
+	.card_item .card_img {
+		height: 8rem;
+	}
+	.card_item .card_desc {
+		padding: 0.5rem 0 0;
+	}
+	.card_item .card_desc h5 {
+		font-size: var(--fnt_14);
+	}
+	.card_item .card_like {
+		display: none;
+	}
+	.card_item .card_spec {
+		display: none;
+	}
+	.card_item .card_location {
+		display: none;
 	}
 
 	.long_banner p {

@@ -1063,18 +1063,20 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	font-size: var(--fnt_20);
 	font-weight: bold;
 }
-.card_item:hover::before {
-	bottom: 11.75rem;
-}
-.card_item:hover .card_img {
-	height: 9rem;
-	filter: brightness(0.5);
-}
-.card_item:hover .card_spec {
-	bottom: 3rem;
-}
-.card_item:hover .card_location {
-	opacity: 1;
+@media (hover: hover) {
+	.card_item:hover::before {
+		bottom: 11.75rem;
+	}
+	.card_item:hover .card_img {
+		height: 9rem;
+		filter: brightness(0.5);
+	}
+	.card_item:hover .card_spec {
+		bottom: 3rem;
+	}
+	.card_item:hover .card_location {
+		opacity: 1;
+	}
 }
 
 /* 모임 카드 끝 */
