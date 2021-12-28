@@ -128,6 +128,48 @@ button.btn_search {
 	color: rgb(var(--color_light));
 }
 
+button.btn_rotate {
+	position: relative;
+	padding: 0;
+	width: 10rem;
+	height: 2rem;
+	background: transparent;
+	box-shadow: none;
+	cursor: pointer;
+}
+button.btn_rotate > p {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_14);
+	line-height: 2rem;
+	transform-origin: 50% 50% 1rem;
+	transition: 0.3s;
+}
+button.btn_rotate > p.rotate_box1 {
+	top: 0;
+	left: 0;
+	background: rgba(var(--color_dark), 0.75);
+}
+button.btn_rotate > p.rotate_box2 {
+	top: 0;
+	left: 0;
+	background: rgb(var(--color_acc1));
+	text-shadow: 0 0 0.25rem rgba(var(--color_point1), 0.5);
+	transform: rotateX(90deg);
+}
+@media (hover: hover) {
+	button.btn_rotate:hover > p.rotate_box1 {
+		transform: rotateX(-90deg);
+	}
+	button.btn_rotate:hover > p.rotate_box2 {
+		transform: rotateX(0deg);
+	}
+}
+
+/* 돌아가는 버튼 */
 textarea {
 	resize: none;
 	line-height: 1.8;

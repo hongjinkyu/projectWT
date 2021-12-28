@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/* ---------- Page-Specific Layout CSS (Partner (Detail)) ---------- */
+/* ---------- 페이지 특정 요소 시작 ---------- */
+div#subMainIMG {
+	position: relative;
+	width: 100%;
+	height: 25rem;
+	background: #ccc;
+}
+div#subMainIMG::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+	pointer-events: none;
+	z-index: 1;
+	content: "";
+}
+div#subMainIMG::after {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-backdrop-filter: blur(0.25rem) brightness(0.8);
+	        backdrop-filter: blur(0.25rem) brightness(0.8);
+	z-index: 2;
+	content: "";
+}
+div#subMainIMG > .main_img_copy {
+	width: inherit;
+	height: inherit;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+div#wrapMain.sub {
+	-moz-column-gap: 1rem;
+	     column-gap: 1rem;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+
+div#detailSide {
+	position: relative;
+	margin-top: -13.5rem;
+	width: 16rem;
+	height: calc(100% + 13.5rem);
+	z-index: 3;
+}
+
+div#detailContents {
+	position: relative;
+	width: 42rem;
+}
+
+div#detailSide_sticker {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 7.5rem;
+	left: 0;
+}
+div#detailSide_sticker > .detail_hiddentitle {
+	display: none;
+}
+div#detailSide_sticker > .detail_hiddentitle.scrolled {
+	display: block;
+}
+div#detailSide_sticker > .detail_slider_paging {
+	width: 100%;
+	height: 0.75rem;
+}
+div#detailSide_sticker > .detail_slider_container {
+	margin: 0.25rem 0;
+	width: 16rem;
+	height: 16rem;
+	background: rgba(var(--color_dark), 0.75);
+	box-shadow: 0 0.5rem 1rem -0.5rem rgba(var(--color_dark), 0.2);
+}
+div#detailSide_sticker > .detail_slider_container > .detail_slider > .slider_item {
+	position: relative;
+}
+div#detailSide_sticker > .detail_slider_container > .detail_slider > .slider_item > .slider_item_magnifier {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(var(--color_dark), 0.75);
+}
+div#detailSide_sticker > .detail_slider_container > .detail_slider > .slider_item > img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+div#detailSide_sticker > .detail_reputation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75rem 1rem;
+	width: 100%;
+	height: 2.5rem;
+	background: rgba(var(--color_dark), 0.75);
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_light));
+}
+div#detailSide_sticker > .detail_controller {
+	margin: 0.5rem 0;
+	width: 100%;
+	height: 4.5rem;
+}
+div#detailSide_sticker > .detail_controller > button {
+	display: block;
+	float: left;
+	width: 5rem;
+	height: inherit;
+}
+div#detailSide_sticker > .detail_controller > button + button {
+	margin-left: 0.5rem;
+}
+div#detailSide_sticker > .detail_hiddenbutton {
+	display: none;
+}
+div#detailSide_sticker > .detail_hiddenbutton.scrolled {
+	display: block;
+}
+
+div#detailFront {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1rem;
+	position: absolute;
+	bottom: 100%;
+	width: 100%;
+	padding: 1rem 0;
+	color: rgb(var(--color_light));
+	font-weight: normal;
+	z-index: 4;
+}
+div#detailFront > .front_paragraph {
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_16);
+	line-height: 1.5;
+	opacity: 0.75;
+}
+div#detailFront > .front_title {
+	font-family: var(--ff_serif);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_40);
+	font-weight: inherit;
+}
+div#detailFront > .front_hashtag > li {
+	float: left;
+	font-family: var(--ff_sans_p);
+	opacity: 0.75;
+}
+div#detailFront > .front_hashtag > li::before {
+	content: "#";
+}
+div#detailFront > .front_hashtag > li + li {
+	margin-left: 2rem;
+}
+
+.section_title {
+	margin: 2.5rem 0;
+	color: #707070;
+	text-align: center;
+}
+.section_title > h5 {
+	color: #707070;
+	font-size: var(--fnt_24);
+	font-weight: normal;
+}
+.section_title > p {
+	font-family: "Berkshire Swash", cursive;
+	font-size: var(--fnt_12);
+	opacity: 0.5;
+}
+.section_title > hr {
+	position: relative;
+	margin-top: 0.75rem;
+	background: #D9D7D2;
+	overflow: visible;
+}
+.section_title > hr::before {
+	display: block;
+	position: absolute;
+	top: calc(50% - .15rem);
+	left: calc(50% - .15rem);
+	width: 0.3rem;
+	height: 0.3rem;
+	border: 0.05rem solid #D9D7D2;
+	background: rgb(var(--color_bg));
+	transform: rotateZ(45deg);
+	content: "";
+}
+
+button.btn_rotate {
+	display: block;
+	margin: 2.5rem auto;
+}
+
+button.btn_scale {
+	position: relative;
+	background: transparent;
+	box-shadow: none;
+	color: #707070;
+	cursor: pointer;
+}
+button.btn_scale::before {
+	display: block;
+	position: absolute;
+	top: 44%;
+	bottom: 44%;
+	left: 44%;
+	right: 44%;
+	background: transparent;
+	transition: 0.3s;
+	z-index: -1;
+	content: "";
+}
+button.btn_scale > svg {
+	fill: #707070;
+}
+@media (hover: hover) {
+	button.btn_scale:hover {
+		color: rgb(var(--color_light));
+	}
+	button.btn_scale:hover::before {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(var(--color_dark), 0.75);
+	}
+	button.btn_scale:hover > svg {
+		fill: rgb(var(--color_light));
+	}
+}
+
+section#partnerIntro > .intro_text {
+	color: #707070;
+	font-size: var(--fnt_16);
+	font-weight: lighter;
+	text-align: center;
+	line-height: 1.5;
+}
+section#partnerIntro > .intro_detail {
+	margin-top: 1rem;
+}
+section#partnerIntro > .intro_detail > ul {
+	float: left;
+	width: 50%;
+	padding: 0.5rem;
+}
+section#partnerIntro > .intro_detail > ul > li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+}
+section#partnerIntro > .intro_detail > ul > hr {
+	background: #D9D7D2;
+}
+section#partnerIntro > .intro_detail > ul.partner_info > li {
+	font-family: var(--ff_sans_p);
+}
+section#partnerIntro > .intro_detail > ul.partner_info > li > span:first-child {
+	font-weight: normal;
+	color: #A4A4A4;
+}
+section#partnerIntro > .intro_detail > ul.partner_info > li > span:last-child {
+	text-align: end;
+}
+section#partnerIntro > .intro_detail > ul.partner_disclaimer > li {
+	font-family: var(--ff_sans_p);
+	color: #A4A4A4;
+	font-size: 0.5rem;
+	font-weight: normal;
+}
+
+/* 맛집 소개 */
+section#partnerLocation > .location_container > div {
+	float: left;
+}
+section#partnerLocation > .location_container > div + div {
+	margin-left: 1rem;
+}
+section#partnerLocation > .location_container > div.map_container {
+	position: relative;
+	width: 23rem;
+	height: 20rem;
+	border-radius: 0.15rem;
+	overflow: hidden;
+}
+section#partnerLocation > .location_container > div.map_container > .location_gps {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5rem;
+	background: rgba(var(--color_dark), 0.75);
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_12);
+	font-weight: normal;
+	text-align: end;
+}
+section#partnerLocation > .location_container > div.map_container > .map_api {
+	width: inherit;
+	height: inherit;
+	border: 0.1rem solid #D9D7D2;
+	border-radius: 0.15rem;
+	background: url("../images/temp_map.png") no-repeat center;
+}
+section#partnerLocation > .location_container > div.info_container {
+	width: 18rem;
+}
+
+/* 맛집 찾아오시는 길 */
