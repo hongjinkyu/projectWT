@@ -448,30 +448,43 @@ section#partnerMenu {
     }
 
     > .course_dish_list {
+        display: flex;
+        flex-flow: column nowrap;
         position: relative;
         width: 20.5rem;
         height: 100%;
-        overflow-y: auto;
 
         > .name_of {
-            padding: .75rem 0;
-            font-size: var(--fnt_24);
+            height: 3rem;
+            border-bottom: .05rem solid #D9D7D2;
+            font-family: var(--ff_sans_p);
+            font-size: var(--fnt_20);
             text-align: center;
+            line-height: 3rem;
         }
 
         > .list_of {
-            
+            overflow-y: auto;
+
+            > ul {
+                > li {
+                    padding: .75rem;
+                }
+
+                > hr {
+                    background: #D9D7D2;
+                }
+            }
         }
 
         > .price_of {
-            position: sticky;
             bottom: 0;
             left: 0;
             right: 0;
-            padding: .5rem;
-            background: rgb(var(--color_light));
+            padding-top: .5rem;
+            background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
             font-family: var(--ff_sans_p);
-            font-size: var(--fnt_24);
+            font-size: var(--fnt_16);
             text-align: end;
         }
     }

@@ -389,26 +389,37 @@ section#partnerMenu > div#courseTabContainer > .button_container > button:not(.t
 	line-height: 1.5;
 }
 .course_single_tab > .course_dish_list {
+	display: flex;
+	flex-flow: column nowrap;
 	position: relative;
 	width: 20.5rem;
 	height: 100%;
-	overflow-y: auto;
 }
 .course_single_tab > .course_dish_list > .name_of {
-	padding: 0.75rem 0;
-	font-size: var(--fnt_24);
+	height: 3rem;
+	border-bottom: 0.05rem solid #D9D7D2;
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_20);
 	text-align: center;
+	line-height: 3rem;
+}
+.course_single_tab > .course_dish_list > .list_of {
+	overflow-y: auto;
+}
+.course_single_tab > .course_dish_list > .list_of > ul > li {
+	padding: 0.75rem;
+}
+.course_single_tab > .course_dish_list > .list_of > ul > hr {
+	background: #D9D7D2;
 }
 .course_single_tab > .course_dish_list > .price_of {
-	position: -webkit-sticky;
-	position: sticky;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 0.5rem;
-	background: rgb(var(--color_light));
+	padding-top: 0.5rem;
+	background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
 	font-family: var(--ff_sans_p);
-	font-size: var(--fnt_24);
+	font-size: var(--fnt_16);
 	text-align: end;
 }
 
