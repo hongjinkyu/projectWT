@@ -3,9 +3,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
 @font-face {
 	font-family: "AppleSDGothic";
-	src: local("Apple SD Gothic Neo Regular"), url("../fonts/applesd.ttf"), local("Malgun Gothic");
+	src: local("Apple SD Gothic Neo Regular"), url("../fonts/applesdr.ttf"), local("Malgun Gothic");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "AppleSDGothic";
+	src: local("Apple SD Gothic Neo Regular"), url("../fonts/applesdb.ttf"), local("Malgun Gothic");
 	font-weight: bolder;
 	font-style: normal;
 }
@@ -33,21 +41,28 @@
 	font-size: 20px;
 	/* 사이즈 기본 단위 : 20px */
 	line-height: 1;
-	/* line-height: 1.8 (가독성이 필요한 본문 영역) */
+	/* line-height: 1.8; (가독성이 필요한 본문 영역) */
+	/* letter-spacing: -.05rem; (큰 문자열) */
 	scroll-behavior: smooth;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 	        user-select: none;
 	/* 드래그 가능 여부 */
-	--ff_serif: "KoPubPro";
-	/* 바탕체 같은거 */
-	--ff_sans_n: "Noto Sans KR";
-	/* 노토 */
-	--ff_sans_p: "AppleSDGothic";
-	/* 애플산돌 (메뉴 같은데) */
-	--ff_eng: "Miriam Libre";
+	--ff_logo: "Berkshire Swash", cursive;
+	/* 로고 폰트 */
+	--ff_serif: "KoPubPro", serif;
+	/* 바탕체 */
+	--ff_sans_n: "Noto Sans KR", sans-serif;
+	/* 노토 산스 */
+	--ff_sans_p: "AppleSDGothic", sans-serif;
+	/* 애플 산돌 고딕 */
+	--ff_eng: "Miriam Libre", sans-serif;
 	/* 영어 폰트 */
+	--ff_popp: "Poppins", sans-serif;
+	/* 숫자 및 세밀한 폰트 */
+	--ff_price: "Josefin Sans", sans-serif;
+	/* 가격 표시 전용 */
 	/* font-family 정의 */
 	--fnt_40: 2rem;
 	/* 카리스마 대빵큰글자 */
@@ -121,7 +136,7 @@
 
 body {
 	background: rgb(var(--color_bg));
-	font-family: var(--ff_sans_n), sans-serif;
+	font-family: var(--ff_sans_n);
 	color: rgb(var(--color_text));
 	font-size: 0.7rem;
 	/* 기본 글자 크기 : 14px */
