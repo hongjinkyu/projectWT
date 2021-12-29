@@ -29,31 +29,4 @@ $(document).ready(function() { // jQuery Load
         dotsClass: 'main-dots'
     }); // 메인 슬라이더
 
-    $('.card_slide_container').slick({
-        slide: '.card_guard',
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: false,
-        arrows: false,
-        dots: false,
-        variableWidth: true,
-        responsive: [
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 400,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    variableWidth: true,
-                    variableHeight: true,
-                }
-            },
-        ],
-    }); // 아이템 슬라이더
-
 }); // jQuery Closed

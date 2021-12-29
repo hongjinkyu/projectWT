@@ -276,11 +276,33 @@ button.btn_scale {
 
 section#partnerIntro {
     > .intro_text {
+        position: relative;
+        margin: 3rem auto;
+        max-width: 32rem;
         color: #707070;
-        font-size: var(--fnt_16);
+        font-size: var(--fnt_20);
         font-weight: lighter;
         text-align: center;
         line-height: 1.5;
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: -1rem;
+            font-family: var(--ff_serif);
+            font-size: 5rem;
+            opacity: .5;
+        }
+
+        &::before {
+            right: calc(100% + 1rem);
+            content: '“';
+        }
+
+        &::after {
+            left: calc(100% + 1rem);
+            content: '”';
+        }
     }
 
     > .intro_detail {
@@ -329,6 +351,81 @@ section#partnerIntro {
     }
 } /* 맛집 소개 */
 
+section#partnerMenu {
+    > div#courseTabContainer {
+        width: 100%;
+
+        > .button_container {
+            border-bottom: var(--border);
+
+            > button {
+                display: block;
+                float: left;
+                padding: .5rem 1.5rem;
+                border-radius: 0;
+                background: transparent;
+                box-shadow: none;
+
+                & + button {
+                    margin-left: -.25rem;
+                }
+
+                &:not(.tab_selected) {
+                    background: #ccc;
+                }
+            }
+        }
+    }
+} /* 코스 요리 소개 */
+
+.course_single_tab {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: .5rem;
+    height: 21rem;
+    background: rgb(var(--color_light));
+    box-shadow: 0 .25rem .5rem -.25rem rgba(var(--color_dark), .2);
+
+    > .course_img_container {
+        width: 20rem;
+        height: 100%;
+
+        > .course_img_slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            > .course_slider_img {
+                width: 20rem;
+                height: 100%;
+                background: rgba(var(--color_dark), .75);
+
+                > img {
+                    width: inherit;
+                    height: inherit;
+                    object-fit: cover;
+                }
+            }
+
+            > .course_slider_desc {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: .5rem;
+                background: rgba(var(--color_dark), .75);
+                color: rgb(var(--color_light));
+            }
+        }
+    }
+
+    > .course_dish_list {
+        width: 20.5rem;
+        height: 100%;
+    }
+} /* 코스 요리 개별 탭 */
+
 section#partnerLocation {
     > .location_container {
         > div {
@@ -346,6 +443,10 @@ section#partnerLocation {
                 overflow: hidden;
     
                 > .location_gps {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: .25rem;
+                    align-items: center;
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -356,7 +457,14 @@ section#partnerLocation {
                     color: rgb(var(--color_light));
                     font-size: var(--fnt_12);
                     font-weight: normal;
-                    text-align: end;
+
+                    > svg {
+                        fill: rgb(var(--color_acc2));
+                    }
+
+                    > span {
+                        padding-top: .2rem;
+                    }
                 }
     
                 > .map_api {

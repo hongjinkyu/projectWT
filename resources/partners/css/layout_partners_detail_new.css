@@ -244,11 +244,29 @@ button.btn_scale > svg {
 }
 
 section#partnerIntro > .intro_text {
+	position: relative;
+	margin: 3rem auto;
+	max-width: 32rem;
 	color: #707070;
-	font-size: var(--fnt_16);
+	font-size: var(--fnt_20);
 	font-weight: lighter;
 	text-align: center;
 	line-height: 1.5;
+}
+section#partnerIntro > .intro_text::before, section#partnerIntro > .intro_text::after {
+	position: absolute;
+	top: -1rem;
+	font-family: var(--ff_serif);
+	font-size: 5rem;
+	opacity: 0.5;
+}
+section#partnerIntro > .intro_text::before {
+	right: calc(100% + 1rem);
+	content: "“";
+}
+section#partnerIntro > .intro_text::after {
+	left: calc(100% + 1rem);
+	content: "”";
 }
 section#partnerIntro > .intro_detail {
 	margin-top: 1rem;
@@ -285,6 +303,72 @@ section#partnerIntro > .intro_detail > ul.partner_disclaimer > li {
 }
 
 /* 맛집 소개 */
+section#partnerMenu > div#courseTabContainer {
+	width: 100%;
+}
+section#partnerMenu > div#courseTabContainer > .button_container {
+	border-bottom: var(--border);
+}
+section#partnerMenu > div#courseTabContainer > .button_container > button {
+	display: block;
+	float: left;
+	padding: 0.5rem 1.5rem;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+}
+section#partnerMenu > div#courseTabContainer > .button_container > button + button {
+	margin-left: -0.25rem;
+}
+section#partnerMenu > div#courseTabContainer > .button_container > button:not(.tab_selected) {
+	background: #ccc;
+}
+
+/* 코스 요리 소개 */
+.course_single_tab {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 0.5rem;
+	height: 21rem;
+	background: rgb(var(--color_light));
+	box-shadow: 0 0.25rem 0.5rem -0.25rem rgba(var(--color_dark), 0.2);
+}
+.course_single_tab > .course_img_container {
+	width: 20rem;
+	height: 100%;
+}
+.course_single_tab > .course_img_container > .course_img_slider {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.course_single_tab > .course_img_container > .course_img_slider > .course_slider_img {
+	width: 20rem;
+	height: 100%;
+	background: rgba(var(--color_dark), 0.75);
+}
+.course_single_tab > .course_img_container > .course_img_slider > .course_slider_img > img {
+	width: inherit;
+	height: inherit;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.course_single_tab > .course_img_container > .course_img_slider > .course_slider_desc {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5rem;
+	background: rgba(var(--color_dark), 0.75);
+	color: rgb(var(--color_light));
+}
+.course_single_tab > .course_dish_list {
+	width: 20.5rem;
+	height: 100%;
+}
+
+/* 코스 요리 개별 탭 */
 section#partnerLocation > .location_container > div {
 	float: left;
 }
@@ -299,6 +383,10 @@ section#partnerLocation > .location_container > div.map_container {
 	overflow: hidden;
 }
 section#partnerLocation > .location_container > div.map_container > .location_gps {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.25rem;
+	align-items: center;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -309,7 +397,12 @@ section#partnerLocation > .location_container > div.map_container > .location_gp
 	color: rgb(var(--color_light));
 	font-size: var(--fnt_12);
 	font-weight: normal;
-	text-align: end;
+}
+section#partnerLocation > .location_container > div.map_container > .location_gps > svg {
+	fill: rgb(var(--color_acc2));
+}
+section#partnerLocation > .location_container > div.map_container > .location_gps > span {
+	padding-top: 0.2rem;
 }
 section#partnerLocation > .location_container > div.map_container > .map_api {
 	width: inherit;

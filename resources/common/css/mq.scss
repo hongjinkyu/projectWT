@@ -200,18 +200,23 @@
     /* 공통 요소 끝 */
     /* 개별 페이지 요소 */
 
-    .card_guard {
-        & + .card_guard {
-            margin-left: .5rem;
+    .card_slide_container {
+        > .card_item:nth-child(4) {
+            display: initial;
         }
     }
 
     .card_item {
-        width: 8rem;
+        width: calc((100% - .5rem) / 2);
         height: 15rem;
 
         &::before {
             bottom: 7.25rem;
+        }
+
+        p.card_timeleft {
+            top: .5rem;
+            left: .5rem;
         }
 
         .card_img {

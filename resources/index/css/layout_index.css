@@ -92,11 +92,13 @@ div#mainSlider {
 }
 
 .card_slide_container {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 0.5rem;
 	width: 100%;
 }
-
-.card_guard + .card_guard {
-	margin-left: 0.5rem;
+.card_slide_container > .card_item:nth-child(4) {
+	display: none;
 }
 
 .card_partner {
