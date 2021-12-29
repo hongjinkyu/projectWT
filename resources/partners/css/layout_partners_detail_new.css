@@ -251,6 +251,7 @@ section#partnerIntro > .intro_text {
 	font-size: var(--fnt_20);
 	font-weight: lighter;
 	text-align: center;
+	letter-spacing: -0.05rem;
 	line-height: 1.5;
 }
 section#partnerIntro > .intro_text::before, section#partnerIntro > .intro_text::after {
@@ -300,6 +301,7 @@ section#partnerIntro > .intro_detail > ul.partner_disclaimer > li {
 	color: #A4A4A4;
 	font-size: 0.5rem;
 	font-weight: normal;
+	line-height: 1.5;
 }
 
 /* 맛집 소개 */
@@ -307,21 +309,43 @@ section#partnerMenu > div#courseTabContainer {
 	width: 100%;
 }
 section#partnerMenu > div#courseTabContainer > .button_container {
+	padding: 0 0.25rem;
 	border-bottom: var(--border);
 }
 section#partnerMenu > div#courseTabContainer > .button_container > button {
 	display: block;
 	float: left;
-	padding: 0.5rem 1.5rem;
+	width: 5rem;
+	height: 2rem;
 	border-radius: 0;
-	background: transparent;
+	background: rgb(var(--color_acc1));
 	box-shadow: none;
+	font-family: var(--ff_sans_n);
+	color: rgb(var(--color_light));
+	overflow: hidden;
+}
+section#partnerMenu > div#courseTabContainer > .button_container > button::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: rgb(var(--color_bg));
+	transform: translate(50%, -50%) rotate(45deg);
+	content: "";
 }
 section#partnerMenu > div#courseTabContainer > .button_container > button + button {
-	margin-left: -0.25rem;
+	margin-left: 0.05rem;
+}
+section#partnerMenu > div#courseTabContainer > .button_container > button.tab_selected {
+	font-size: var(--fnt_16);
 }
 section#partnerMenu > div#courseTabContainer > .button_container > button:not(.tab_selected) {
-	background: #ccc;
+	margin-top: 0.25rem;
+	height: 1.75rem;
+	background: rgba(var(--color_dark), 0.75);
+	z-index: -1;
 }
 
 /* 코스 요리 소개 */
@@ -362,10 +386,30 @@ section#partnerMenu > div#courseTabContainer > .button_container > button:not(.t
 	padding: 0.5rem;
 	background: rgba(var(--color_dark), 0.75);
 	color: rgb(var(--color_light));
+	line-height: 1.5;
 }
 .course_single_tab > .course_dish_list {
+	position: relative;
 	width: 20.5rem;
 	height: 100%;
+	overflow-y: auto;
+}
+.course_single_tab > .course_dish_list > .name_of {
+	padding: 0.75rem 0;
+	font-size: var(--fnt_24);
+	text-align: center;
+}
+.course_single_tab > .course_dish_list > .price_of {
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5rem;
+	background: rgb(var(--color_light));
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_24);
+	text-align: end;
 }
 
 /* 코스 요리 개별 탭 */

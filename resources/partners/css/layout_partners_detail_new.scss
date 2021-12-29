@@ -283,6 +283,7 @@ section#partnerIntro {
         font-size: var(--fnt_20);
         font-weight: lighter;
         text-align: center;
+        letter-spacing: -.05rem;
         line-height: 1.5;
 
         &::before,
@@ -345,6 +346,7 @@ section#partnerIntro {
                     color: #A4A4A4;
                     font-size: .5rem;
                     font-weight: normal;
+                    line-height: 1.5;
                 }
             }
         }
@@ -356,22 +358,46 @@ section#partnerMenu {
         width: 100%;
 
         > .button_container {
+            padding: 0 .25rem;
             border-bottom: var(--border);
 
             > button {
                 display: block;
                 float: left;
-                padding: .5rem 1.5rem;
+                width: 5rem;
+                height: 2rem;
                 border-radius: 0;
-                background: transparent;
+                background: rgb(var(--color_acc1));
                 box-shadow: none;
+                font-family: var(--ff_sans_n);
+                color: rgb(var(--color_light));
+                overflow: hidden;
+
+                &::before {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: .5rem;
+                    height: .5rem;
+                    background: rgb(var(--color_bg));
+                    transform: translate(50%, -50%) rotate(45deg);
+                    content: '';
+                }
 
                 & + button {
-                    margin-left: -.25rem;
+                    margin-left: .05rem;
+                }
+
+                &.tab_selected {
+                    font-size: var(--fnt_16);
                 }
 
                 &:not(.tab_selected) {
-                    background: #ccc;
+                    margin-top: .25rem;
+                    height: 1.75rem;
+                    background: rgba(var(--color_dark), .75);
+                    z-index: -1;
                 }
             }
         }
@@ -416,13 +442,38 @@ section#partnerMenu {
                 padding: .5rem;
                 background: rgba(var(--color_dark), .75);
                 color: rgb(var(--color_light));
+                line-height: 1.5;
             }
         }
     }
 
     > .course_dish_list {
+        position: relative;
         width: 20.5rem;
         height: 100%;
+        overflow-y: auto;
+
+        > .name_of {
+            padding: .75rem 0;
+            font-size: var(--fnt_24);
+            text-align: center;
+        }
+
+        > .list_of {
+            
+        }
+
+        > .price_of {
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: .5rem;
+            background: rgb(var(--color_light));
+            font-family: var(--ff_sans_p);
+            font-size: var(--fnt_24);
+            text-align: end;
+        }
     }
 } /* 코스 요리 개별 탭 */
 
