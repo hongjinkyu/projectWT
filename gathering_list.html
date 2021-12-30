@@ -142,28 +142,15 @@
                             <option value="">BYOB</option>
                             <option value="">LIST</option>
                         </select>
-                    </div>
-
-                    <div class="flt_checkbox">
-                        <input type="checkbox" name="fltChk" id="chkRemain" />
-                        <label for="chkRemain">남은 기간순</label>
-                        <input type="checkbox" name="fltChk" id="chkLiked" />
-                        <label for="chkLiked">관심도순</label>
-                        <input type="checkbox" name="fltChk" id="chkLoops" />
-                        <label for="chkLoops">회차순</label>
+                        <select name="slctGroupAlmost" id="slctGroupAlmost">
+                            <option value="">곧 마감되는 모임부터</option>
+                            <option value="">최근에 개설된 모임부터</option>
+                        </select>
                     </div>
 
                     <div class="flt_searchbox">
                         <input type="search" name="fltSearch" id="fltSearch" placeholder="검색어 입력..." />
                         <button type="submit" class="btn_search">검색</button>
-                    </div>
-
-                    <div class="flt_selected_flt">
-                        <span>이거</span>
-                        <span>저거</span>
-                        <span>요거</span>
-                        <span>조거</span>
-                        <span>믹 재거</span>
                     </div>
                 </section>
 
@@ -175,7 +162,10 @@
                 <section id="secList_gathering">
 
                     <div class="card_item gt" data-category="byob"> <!-- Card Item - Type (BYOB) -->
-                        <img src="./resources/index/images/img06.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_img_container">
+                            <img src="./resources/index/images/img06.jpg" alt="모임 대표 사진" class="card_img" />
+                        </div>
+                        
                         <div class="card_content">
                             <dl class="card_desc">
                                 <dt class="card_title">
@@ -184,6 +174,9 @@
                                 <dd class="card_subtitle">
                                     어 취한다<br />
                                     양변에 로그를 취한다
+                                </dd>
+                                <dd class="card_date">
+                                    2022년 2월 22일
                                 </dd>
                                 <dd class="card_like">
                                     <p class="chk_like">
@@ -200,27 +193,20 @@
                             <div class="card_spec">
                                 <p class="card_location_small">
                                     <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                    부산광역시 수영구 > 수영국밥
+                                    부산광역시 수영구
                                 </p>
-                                <p class="user_profile">
-                                    <img src="./resources/index/images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                    <span>박진감 님</span>
+                                <p class="card_price">
+                                    ₩ <span>20,000</span>
                                 </p>
                             </div> <!-- Card Item - Location (Simple) -->
-
-                            <div class="card_location">
-                                <img src="./resources/index/images/img03.jpg" alt="모임 장소" class="location_pict" />
-                                <dl class="location_desc">
-                                    <dt>수영국밥</dt>
-                                    <dd>#돼지국밥 #해장국</dd>
-                                </dl>
-                                <p class="item_price">최소 30,000원</p>
-                            </div> <!-- Card Item - Location (Hover Detail) -->
                         </div>
                     </div> <!-- Single Card -->
 
                     <div class="card_item gt" data-category="byob"> <!-- Card Item - Type (BYOB) -->
-                        <img src="./resources/index/images/img07.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_img_container">
+                            <img src="./resources/index/images/img07.jpg" alt="모임 대표 사진" class="card_img" />
+                        </div>
+
                         <div class="card_content">
                             <dl class="card_desc">
                                 <dt class="card_title">
@@ -229,6 +215,9 @@
                                 <dd class="card_subtitle">
                                     목격자 A씨 "점마들 저거 저랄줄 알았다" 증언<br />
                                     공복에 음주가 참변의 원인으로 밝혀져
+                                </dd>
+                                <dd class="card_date">
+                                    2022년 2월 22일
                                 </dd>
                                 <dd class="card_like">
                                     <p class="chk_like">
@@ -245,27 +234,20 @@
                             <div class="card_spec">
                                 <p class="card_location_small">
                                     <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                    부산광역시 부산진구 > 시민공원
+                                    부산광역시 부산진구
                                 </p>
-                                <p class="user_profile">
-                                    <img src="./resources/index/images/temp_profile_4.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                    <span>고구마 님</span>
+                                <p class="card_price">
+                                    ₩ <span>20,000</span>
                                 </p>
                             </div> <!-- Card Item - Location (Simple) -->
-
-                            <div class="card_location">
-                                <img src="./resources/index/images/img14.jpg" alt="모임 장소" class="location_pict" />
-                                <dl class="location_desc">
-                                    <dt>시민공원</dt>
-                                    <dd>#야외 #피크닉 #공공장소</dd>
-                                </dl>
-                                <p class="item_price">최소 70,000원</p>
-                            </div> <!-- Card Item - Location (Hover Detail) -->
                         </div>
                     </div> <!-- Single Card -->
 
                     <div class="card_item gt" data-category="list"> <!-- Card Item - Type (LIST) -->
-                        <img src="./resources/index/images/img10.jpg" alt="모임 대표 사진" class="card_img" />
+                        <div class="card_img_container">
+                            <img src="./resources/index/images/img10.jpg" alt="모임 대표 사진" class="card_img" />
+                        </div>
+
                         <div class="card_content">
                             <dl class="card_desc">
                                 <dt class="card_title">
@@ -274,6 +256,9 @@
                                 <dd class="card_subtitle">
                                     나는 힘든 일을 많이 겪어서 그런지 달게 느껴진다<br />
                                     우에엥 집에 갈래
+                                </dd>
+                                <dd class="card_date">
+                                    2022년 2월 22일
                                 </dd>
                                 <dd class="card_like">
                                     <p class="chk_like">
@@ -290,22 +275,12 @@
                             <div class="card_spec">
                                 <p class="card_location_small">
                                     <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                    서울특별시 용산구 > 드래곤스파
+                                    서울특별시 용산구
                                 </p>
-                                <p class="user_profile">
-                                    <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                    <span>박복례 님</span>
+                                <p class="card_price">
+                                    ₩ <span>20,000</span>
                                 </p>
                             </div> <!-- Card Item - Location (Simple) -->
-
-                            <div class="card_location">
-                                <img src="./resources/index/images/img15.jpg" alt="모임 장소" class="location_pict" />
-                                <dl class="location_desc">
-                                    <dt>드래곤스파</dt>
-                                    <dd>#찜질방 </dd>
-                                </dl>
-                                <p class="item_price">참여비 50,000원</p>
-                            </div> <!-- Card Item - Location (Hover Detail) -->
                         </div>
                     </div> <!-- Single Card -->
 

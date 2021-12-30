@@ -208,39 +208,46 @@
 
     .card_item {
         width: calc((100% - .5rem) / 2);
-        height: 15rem;
+        height: auto;
 
-        &::before {
-            bottom: 7.25rem;
-        }
-
-        p.card_timeleft {
-            top: .5rem;
-            left: .5rem;
-        }
-
-        .card_img {
+        > .card_img_container {
             height: 8rem;
         }
 
-        .card_desc {
-            padding: .5rem 0 0;
+        > .card_content {
+            padding: .25rem;
+        }
 
-            h5 {
-                font-size: var(--fnt_14);
+        .card_desc {
+            padding: .25rem;
+            height: 5rem;
+
+            > .card_title {
+                > h5 {
+                    font-size: var(--fnt_14);
+                }
+            }
+
+            > .card_subtitle {
+                margin-top: .25rem;
+                font-size: var(--fnt_12);
+            }
+
+            > .card_like {
+                display: none;
             }
         }
 
-        .card_like {
-            display: none;
-        }
-
         .card_spec {
-            display: none;
-        }
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            padding: .25rem;
+            height: 3rem;
 
-        .card_location {
-            display: none;
+            > p {
+                padding: 0;
+                width: 100%;
+            }
         }
     }
 

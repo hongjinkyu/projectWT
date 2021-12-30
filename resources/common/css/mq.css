@@ -168,32 +168,37 @@
 
 	.card_item {
 		width: calc((100% - .5rem) / 2);
-		height: 15rem;
+		height: auto;
 	}
-	.card_item::before {
-		bottom: 7.25rem;
-	}
-	.card_item p.card_timeleft {
-		top: 0.5rem;
-		left: 0.5rem;
-	}
-	.card_item .card_img {
+	.card_item > .card_img_container {
 		height: 8rem;
 	}
-	.card_item .card_desc {
-		padding: 0.5rem 0 0;
+	.card_item > .card_content {
+		padding: 0.25rem;
 	}
-	.card_item .card_desc h5 {
+	.card_item .card_desc {
+		padding: 0.25rem;
+		height: 5rem;
+	}
+	.card_item .card_desc > .card_title > h5 {
 		font-size: var(--fnt_14);
 	}
-	.card_item .card_like {
+	.card_item .card_desc > .card_subtitle {
+		margin-top: 0.25rem;
+		font-size: var(--fnt_12);
+	}
+	.card_item .card_desc > .card_like {
 		display: none;
 	}
 	.card_item .card_spec {
-		display: none;
+		flex-flow: column nowrap;
+		justify-content: space-around;
+		padding: 0.25rem;
+		height: 3rem;
 	}
-	.card_item .card_location {
-		display: none;
+	.card_item .card_spec > p {
+		padding: 0;
+		width: 100%;
 	}
 
 	.long_banner p {

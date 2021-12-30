@@ -13,8 +13,8 @@
 }
 @font-face {
 	font-family: "AppleSDGothic";
-	src: local("Apple SD Gothic Neo Regular"), url("../fonts/applesdb.ttf"), local("Malgun Gothic");
-	font-weight: bolder;
+	src: local("Apple SD Gothic Neo Bold"), url("../fonts/applesdb.ttf"), local("Malgun Gothic");
+	font-weight: bold;
 	font-style: normal;
 }
 @font-face {
