@@ -30,11 +30,13 @@ $(document).ready(function() {
     $('li[data-mnu-target="groupBYOB"]').click(function() {
         $('#groupLIST').hide();
         $('#groupBYOB').show();
+        $('.group_open_title').attr('data-group-type', 'BYOB');
     });
 
     $('li[data-mnu-target="groupLIST"]').click(function() {
         $('#groupBYOB').hide();
         $('#groupLIST').show();
+        $('.group_open_title').attr('data-group-type', 'LIST');
     });
 
     $('.pop_open').click(function() {

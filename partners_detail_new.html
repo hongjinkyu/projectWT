@@ -27,7 +27,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
     <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
-    <script type="text/javascript" src="./resources/partners/js/js_partners_detail.js"></script> <!-- Page-Specific jQuery -->
+    <script type="text/javascript" src="./resources/partners/js/js_partners_detail_new.js"></script> <!-- Page-Specific jQuery -->
     <!-- JavaScript / jQuery -->
 
     <!--[if lt IE 9]>
@@ -40,7 +40,7 @@
         <div id="wrap">
 
             <header id="headBase" class="head_index">
-                <nav id="navBase" class="nav_index int_wrap" role="navigation">
+                <nav id="navBase" class="nav_sub int_wrap" role="navigation">
                     <h1 id="mainLogo">
                         <a href="index.html">Wine Together</a>
                     </h1>
@@ -153,8 +153,32 @@
                         </div>
 
                         <div class="detail_reputation">
-                            <p>별점</p>
-                            <p>총 <span class="count_review">n</span>개의 리뷰</p>
+                            <div class="starpoint_container">
+                                <div class="starpoint_selector">
+                                    <div class="star_single">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                    </div>
+                                    <div class="star_single">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                    </div>
+                                    <div class="star_single">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                    </div>
+                                    <div class="star_single">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                    </div>
+                                    <div class="star_single">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                    </div>
+                                </div>
+
+                                <input type="number" name="hiddenSPCounter" id="hiddenSPCounter" value="0" />
+
+                                <p class="starpoint_total">평균 <span>4.8점</span></p>
+                                <p class="starpoint_mine">나의 평가는 <span>4</span>점</p>
+                            </div>
+                            
+                            <p class="count_review">총 <span>2,114</span>개의 리뷰</p>
                         </div>
 
                         <div class="detail_controller clr_fix">
@@ -209,41 +233,6 @@
                             광안리 해변 바로 앞에 위치한 뷰 깡패, 더 뉴 입니다.<br />
                             파스타, 수제 도우 피자 등 와인과 어울리는 각종 이탈리안 요리를 제공합니다.
                         </p>
-
-                        <div class="intro_detail clr_fix">
-                            <ul class="partner_info">
-                                <li>
-                                    <span>영업시간</span>
-                                    <span>
-                                        16:00 ~ 24:00<br />
-                                        (금 / 토 01:00 까지)
-                                    </span>
-                                </li>
-                                <hr class="hf" />
-                                <li>
-                                    <span>정기휴무일</span>
-                                    <span>매주 화요일</span>
-                                </li>
-                                <hr class="hf" />
-                                <li>
-                                    <span>콜키지</span>
-                                    <span>
-                                        일반 이용시 병당 1만원<br />
-                                        (와인투게더 제휴 모임시 무료)
-                                    </span>
-                                </li>
-                                <hr class="hf" />
-                                <li>
-                                    <span>문의전화</span>
-                                    <span>0507-1318-6604</span>
-                                </li>
-                            </ul>
-
-                            <ul class="partner_disclaimer">
-                                <li>* 예약 가능 여부는 해당 업장의 상황에 따라 달라질 수 있으며, 정부의 코로나 바이러스 방역 지침에 따라 일부 예약이 거절되거나 조정될 수 있습니다.</li>
-                                <li>* 상기된 콜키지, 멤버십 등의 혜택은 제휴사인 와인투게더를 통한 예약 건에만 적용되며, 이외의 방법으로 예약할 시에는 조건이 달라질 수 있습니다.</li>
-                            </ul>
-                        </div>
 
                         <button class="btn_rotate">
                             <p class="rotate_box1">여기에서 모임 개설하기</p>
@@ -341,10 +330,29 @@
 
                             <div class="info_container">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm4 2h3.5a3.5 3.5 0 0 1 0 7H11v3H9V7zm2 2v3h1.5a1.5 1.5 0 0 0 0-3H11z"/></svg>
+                                        <span>주차시설</span>
+                                        <span>안전주차장 1시간 무료</span>
+                                    </li>
+                                    <hr class="hf" />
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M17.2 20l1.8 1.5v.5H5v-.5L6.8 20H5a2 2 0 0 1-2-2V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v11a2 2 0 0 1-2 2h-1.8zM13 5v6h6V7a2 2 0 0 0-2-2h-4zm-2 0H7a2 2 0 0 0-2 2v4h6V5zm8 8H5v5h14v-5zM7.5 17a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+                                        <span>대중교통 접근성</span>
+                                        <span>지하철 광안역에서 도보 10분</span>
+                                    </li>
+                                    <hr class="hf" />
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M22 21H2v-2h1V4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v5h2v10h1v2zm-5-2h2v-8h-6v8h2v-6h2v6zm0-10V5H5v14h6V9h6zM7 11h2v2H7v-2zm0 4h2v2H7v-2zm0-8h2v2H7V7z"/></svg>
+                                        <span>인근 랜드마크</span>
+                                        <span>광안리 해수욕장</span>
+                                    </li>
+                                    <hr class="hf" />
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.366 10.682a10.556 10.556 0 0 0 3.952 3.952l.884-1.238a1 1 0 0 1 1.294-.296 11.422 11.422 0 0 0 4.583 1.364 1 1 0 0 1 .921.997v4.462a1 1 0 0 1-.898.995c-.53.055-1.064.082-1.602.082C9.94 21 3 14.06 3 5.5c0-.538.027-1.072.082-1.602A1 1 0 0 1 4.077 3h4.462a1 1 0 0 1 .997.921A11.422 11.422 0 0 0 10.9 8.504a1 1 0 0 1-.296 1.294l-1.238.884zm-2.522-.657l1.9-1.357A13.41 13.41 0 0 1 7.647 5H5.01c-.006.166-.009.333-.009.5C5 12.956 11.044 19 18.5 19c.167 0 .334-.003.5-.01v-2.637a13.41 13.41 0 0 1-3.668-1.097l-1.357 1.9a12.442 12.442 0 0 1-1.588-.75l-.058-.033a12.556 12.556 0 0 1-4.702-4.702l-.033-.058a12.442 12.442 0 0 1-.75-1.588z"/></svg>
+                                        <span>문의전화</span>
+                                        <span>0507-1318-6604</span>
+                                    </li>
                                 </ul>
 
                                 <p class="location_disclaimer">
@@ -353,11 +361,62 @@
                             </div>
                         </div>
                     </section> <!-- #partnerLocation -->
+
+                    <section id="partnerDepth">
+                        <div class="section_title">
+                            <h5>매장 정보</h5>
+                            <p>Detail Information</p>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
+
+                        <div class="intro_detail clr_fix">
+                            <ul class="partner_info">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                    <span>영업시간</span>
+                                    <span>
+                                        16:00 ~ 24:00<br />
+                                        (금 / 토 01:00 까지)
+                                    </span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm3 6V5h-3v2h-2V5H9v2H7V5H4v4h16zm0 2H4v8h16v-8zM6 13h5v4H6v-4z"/></svg>
+                                    <span>정기휴무일</span>
+                                    <span>매주 화요일</span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M10.9 2.1l9.899 1.415 1.414 9.9-9.192 9.192a1 1 0 0 1-1.414 0l-9.9-9.9a1 1 0 0 1 0-1.414L10.9 2.1zm.707 2.122L3.828 12l8.486 8.485 7.778-7.778-1.06-7.425-7.425-1.06zm2.12 6.364a2 2 0 1 1 2.83-2.829 2 2 0 0 1-2.83 2.829z"/></svg>
+                                    <span>콜키지</span>
+                                    <span>
+                                        일반 이용시 병당 1만원<br />
+                                        (와인투게더 제휴 모임시 무료)
+                                    </span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M2 22a8 8 0 1 1 16 0h-2a6 6 0 1 0-12 0H2zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm8.284 3.703A8.002 8.002 0 0 1 23 22h-2a6.001 6.001 0 0 0-3.537-5.473l.82-1.824zm-.688-11.29A5.5 5.5 0 0 1 21 8.5a5.499 5.499 0 0 1-5 5.478v-2.013a3.5 3.5 0 0 0 1.041-6.609l.555-1.943z"/></svg>
+                                    <span>최대 수용 인원</span>
+                                    <span>총 48명 (12 테이블)</span>
+                                </li>
+                            </ul>
+
+                            <ul class="partner_disclaimer">
+                                <li>* 예약 가능 여부는 해당 업장의 상황에 따라 달라질 수 있으며, 정부의 코로나 바이러스 방역 지침에 따라 일부 예약이 거절되거나 조정될 수 있습니다.</li>
+                                <li>* 상기된 콜키지, 멤버십 등의 혜택은 제휴사인 와인투게더를 통한 예약 건에만 적용되며, 이외의 방법으로 예약할 시에는 조건이 달라질 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </section>
                 </div> <!-- #detailContents -->
 
             </div> <!-- #wrapMain -->
 
         <!-- Page Main Contents End / 푸터 영역 시작 -->
+            <div class="foot_splitter">
+                <hr class="hf" />
+                <h1>Fine.</h1>
+            </div>
 
             <footer id="footBase" role="contentinfo">
                 <a href="#" class="banner_partner">

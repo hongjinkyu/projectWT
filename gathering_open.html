@@ -139,7 +139,7 @@
                 </section> <!-- #sideBar_left -->
 
                 <section id="contentBar">
-                    <h3>모임 개설하기</h3>
+                    <h3 class="group_open_title" data-group-type="BYOB"> 모임 개설하기</h3>
                     <div class="frm_common frm_open">
                         <div class="text_title clr_fix">
                             <h6>모임 이름</h6>
@@ -173,10 +173,10 @@
                             <h6>모임 인원</h6>
                             <p>4인 이상의 모임 주최는 경험이 있으신 분들께만 추천드려요.</p>
                         </div>
-
+                        <!-- 
                         <div class="frm_items">
                             <div class="range_container">
-                                <input type="range" name="slideGroupSize" id="slideGroupSize" min="4" max="10" step="1" value="4" />
+                                <input type="range" name="slideGroupSize" id="slideGroupSize" min="4" max="10" step="1" value="4" disabled />
                                 <span class="range_spot" rangeval="4"></span>
                                 <span class="range_spot" rangeval="5"></span>
                                 <span class="range_spot" rangeval="6"></span>
@@ -185,6 +185,14 @@
                                 <span class="range_spot" rangeval="9"></span>
                                 <span class="range_spot" rangeval="10"></span>
                             </div>
+                        </div>
+                        -->
+
+                        <div class="frm_items">
+                            <p class="corona19">
+                                현재는 정부의 코로나 19 방역 지침으로 인하여 <strong>모임 인원이 4인으로 제한됩니다.</strong><br />
+                                이용에 불편을 드려 죄송합니다.
+                            </p>
                         </div>
 
                         <div class="text_title clr_fix">
@@ -261,22 +269,6 @@
                             <input type="checkbox" name="chkAge" id="chkAge_60" value="age_60" />
                             <label for="chkAge_60">60대 이상</label>
                         </div>
-
-                        <div class="text_title clr_fix">
-                            <h6>모임 성비 설정</h6>
-                            <p>Lvl.4 이상부터 사용 가능한 기능이에요.</p>
-                        </div>
-
-                        <div class="frm_items">
-                            <input type="radio" name="rdo_gen" id="rdoGen_none" value="gen_none" checked="checked" />
-                            <label for="rdoGen_none">지정 없음</label>
-                            <input type="radio" name="rdo_gen" id="rdoGen_min" value="gen_min" />
-                            <label for="rdoGen_min">최소 성비 기준</label>
-                            <input type="radio" name="rdo_gen" id="rdoGen_grl" value="gen_grl" />
-                            <label for="rdoGen_grl">여성 모임</label>
-                            <input type="radio" name="rdo_gen" id="rdoGen_half" value="gen_half" />
-                            <label for="rdoGen_half">5:5</label>
-                        </div>
                     </div>
 
                     <div id="groupBYOB" class="frm_common">
@@ -321,22 +313,12 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="qty_container">
-                                    <button class="wine_less">-</button>
-                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
-                                    <button class="wine_more">+</button>
-                                </div>
                             </div>
 
                             <div class="bring_wine">
                                 <div class="wine_icon redwine">
                                     <span class="wave_front"></span>
                                     <span class="wave_back"></span>
-                                </div>
-                                <div class="qty_container">
-                                    <button class="wine_less">-</button>
-                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
-                                    <button class="wine_more">+</button>
                                 </div>
                             </div>
 
@@ -345,11 +327,6 @@
                                     <span class="wave_front"></span>
                                     <span class="wave_back"></span>
                                 </div>
-                                <div class="qty_container">
-                                    <button class="wine_less">-</button>
-                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
-                                    <button class="wine_more">+</button>
-                                </div>
                             </div>
 
                             <div class="bring_wine">
@@ -357,22 +334,12 @@
                                     <span class="wave_front"></span>
                                     <span class="wave_back"></span>
                                 </div>
-                                <div class="qty_container">
-                                    <button class="wine_less">-</button>
-                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
-                                    <button class="wine_more">+</button>
-                                </div>
                             </div>
 
                             <div class="bring_wine">
                                 <div class="wine_icon others">
                                     <span class="wave_front"></span>
                                     <span class="wave_back"></span>
-                                </div>
-                                <div class="qty_container">
-                                    <button class="wine_less">-</button>
-                                    <input type="text" name="red_qty" id="redQty" class="wine_qty" value="1" disabled />
-                                    <button class="wine_more">+</button>
                                 </div>
                             </div>
                         </div>
@@ -499,14 +466,7 @@
                                             <option value="loc_tn">터닝</option>
                                             <option value="loc_mm">마무리</option>
                                         </select>
-                                        <select name="slctOpenCourse" id="slctOpenCourse">
-                                            <option value="dummy_option" selected="selected" disabled>주 메뉴별 검색...</option>
-                                            <option value="cs_stk">스테이크</option>
-                                            <option value="cs_hsm">해산물</option>
-                                            <option value="cs_vgn">비건</option>
-                                            <option value="cs_hjg">해장국</option>
-                                        </select>
-                                        <input type="search" name="txtOpenSearch" id="txtOpenSearch" placeholder="검색어 입력..." />
+                                        <input type="search" name="txtOpenSearch" id="txtOpenSearch" placeholder="맛집 이름으로 검색하기" />
                                         <button type="submit" class="btn_search">검색</button>
                                     </p>
 
@@ -588,7 +548,7 @@
                                 <dl class="custom_selector_selected">
                                     <img src="./resources/index/images/1.jpg" alt="현재 선택된 코스" class="location_pict" />
                                     <dt>
-                                        <p class="course_name">게살버거 코스</p>
+                                        <p class="course_name">4인 코스 (게살버거 코스)</p>
                                         <p class="course_info">
                                             게살버거, 해초튀김, 탄산 바닷물
                                         </p>
@@ -604,7 +564,7 @@
                                             <dl class="custom_selector_items">
                                                 <img src="./resources/index/images/2.jpg" alt="코스요리" class="location_pict" />
                                                 <dt>
-                                                    <p class="course_name">슈퍼 디럭스 게살버거 코스</p>
+                                                    <p class="course_name">6인 코스 (슈퍼 디럭스 게살버거 코스)</p>
                                                     <p class="course_info">
                                                         게살버거 디럭스, 웨지미역, 버팔로 고등어
                                                     </p>
@@ -619,7 +579,7 @@
                                             <dl class="custom_selector_items">
                                                 <img src="./resources/index/images/3.jpg" alt="코스요리" class="location_pict" />
                                                 <dt>
-                                                    <p class="location_name">게살버거 얼티밋</p>
+                                                    <p class="location_name">8인 코스 (게살버거 얼티밋 코스)</p>
                                                     <p class="location_info">
                                                         게살버거 얼티밋, 사이드 메뉴 4종 (선택)
                                                     </p>
@@ -643,6 +603,7 @@
                         </div> <!-- 모임 상세 설명 -->
 
                     </div>
+
                     <button type="submit" class="btnGroupOpen">모임 개설</button>
                 </section> <!-- #contentBar -->
 

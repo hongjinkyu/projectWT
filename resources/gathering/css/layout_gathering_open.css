@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* ---------- Page-Specific Layout CSS (Gathering (Open)) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
+.group_open_title::before {
+	content: attr(data-group-type);
+}
+
 #groupLIST {
 	display: none;
 }
@@ -63,6 +67,20 @@
 	right: 0.35rem;
 }
 
+.corona19 {
+	padding: 1rem;
+	width: 100%;
+	border-radius: var(--bdr_outer);
+	background: rgba(var(--color_dark), 0.75);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_16);
+	text-align: center;
+	line-height: 1.8;
+}
+.corona19 > strong {
+	color: rgb(var(--color_tag1));
+}
+
 .frm_aligner {
 	display: flex;
 	flex-flow: row wrap;
@@ -77,26 +95,6 @@
 }
 .bring_wine > .wine_icon {
 	margin: 0 auto 0.25rem;
-}
-.bring_wine > .qty_container {
-	display: flex;
-	gap: 0.25rem;
-}
-.bring_wine > .qty_container > input,
-.bring_wine > .qty_container > button {
-	display: block;
-	box-shadow: none;
-	text-align: center;
-}
-.bring_wine > .qty_container > input {
-	width: 2rem;
-	border: var(--border);
-	padding: 0.4rem 0.5rem 0.35rem;
-}
-.bring_wine > .qty_container > button {
-	width: 1.2rem;
-	background: rgb(var(--color_text));
-	color: rgb(var(--color_light));
 }
 .bring_wine.group_leader {
 	background: rgb(var(--color_tone2));
@@ -169,15 +167,19 @@
 }
 
 .btnGroupOpen {
-	padding: 0.8rem;
-	border-radius: var(--bdr_outer);
-	background: rgb(var(--color_text));
+	margin: 0 auto;
+	width: 10rem;
+	height: 3rem;
+	border-radius: 1.5rem;
+	background: rgb(var(--color_acc1));
+	box-shadow: none;
 	color: rgb(var(--color_light));
-	font-size: var(--fnt_16);
+	font-size: var(--fnt_20);
+	font-weight: bold;
 	transition: 0.2s;
 }
 .btnGroupOpen:hover {
-	background: rgb(var(--color_acc1));
+	background: rgb(var(--color_acc2));
 }
 
 .pop_open {

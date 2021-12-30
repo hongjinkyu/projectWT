@@ -706,6 +706,35 @@ ul.side_mnu_left > li.checked {
 	pointer-events: none;
 }
 
+.foot_splitter {
+	margin: 5rem auto;
+	width: 60rem;
+}
+.foot_splitter > hr {
+	position: relative;
+	background: #D9D7D2;
+	overflow: visible;
+}
+.foot_splitter > hr::before {
+	display: block;
+	position: absolute;
+	top: calc(50% - .15rem);
+	left: calc(50% - .15rem);
+	width: 0.3rem;
+	height: 0.3rem;
+	border: 0.05rem solid #D9D7D2;
+	background: rgb(var(--color_bg));
+	transform: rotateZ(45deg);
+	content: "";
+}
+.foot_splitter > h1 {
+	margin: 0.25rem auto 0;
+	font-family: var(--ff_logo);
+	font-weight: normal;
+	text-align: center;
+	opacity: 0.25;
+}
+
 footer#footBase {
 	bottom: 0;
 	left: 0;
@@ -717,10 +746,11 @@ a.banner_partner {
 	display: block;
 	padding: 1rem 0;
 	width: 100%;
-	background: linear-gradient(to right, rgb(var(--color_tone1)) 0%, rgb(var(--color_tone2)) 100%);
-	color: rgb(var(--color_text));
+	background: linear-gradient(90deg, rgb(var(--color_acc1)) 0%, rgb(var(--color_tone1)) 25%, rgb(var(--color_tone2)) 75%, rgb(var(--color_tag5)) 100%);
 	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_text));
 	font-size: var(--fnt_20);
+	font-weight: bold;
 	text-align: center;
 	text-shadow: 0 0.1rem 0 rgba(var(--color_text), 0.25);
 }
