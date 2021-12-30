@@ -495,7 +495,7 @@ section#partnerLocation > .location_container > div + div {
 }
 section#partnerLocation > .location_container > div.map_container {
 	position: relative;
-	width: 23rem;
+	width: 20.5rem;
 	height: 20rem;
 	border-radius: 0.15rem;
 	overflow: hidden;
@@ -530,7 +530,7 @@ section#partnerLocation > .location_container > div.map_container > .map_api {
 	background: url("../images/temp_map.png") no-repeat center;
 }
 section#partnerLocation > .location_container > div.info_container {
-	width: 18rem;
+	width: 20.5rem;
 }
 section#partnerLocation > .location_container > div.info_container > ul > li {
 	display: flex;

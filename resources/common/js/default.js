@@ -64,7 +64,7 @@ $(document).ready(function() { // jQuery Load
     $('.star_point').each(function() {
         let starPointLength = $(this).attr('data-point-total');
 
-        $(this).find('.star_point_blacker').css('width', 'calc(100% - ' + starPointLength * 10 + '%)');
+        $(this).find('.star_point_blacker').css('width', 'calc(100% - ' + starPointLength * 20 + '%)');
     }); // Star Point
 
     $('.wine_selector').each(function() {
