@@ -710,6 +710,13 @@ ul.side_mnu_left > li.checked {
 	margin: 5rem auto;
 	width: 60rem;
 }
+.foot_splitter::before {
+	display: block;
+	width: inherit;
+	height: 2rem;
+	background: radial-gradient(ellipse at bottom, #F2EBEB 0%, transparent 50%);
+	content: "";
+}
 .foot_splitter > hr {
 	position: relative;
 	background: #D9D7D2;

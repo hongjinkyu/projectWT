@@ -735,6 +735,14 @@ ul.side_mnu_left {
     margin: 5rem auto;
     width: 60rem;
 
+    &::before {
+        display: block;
+        width: inherit;
+        height: 2rem;
+        background: radial-gradient(ellipse at bottom, #F2EBEB 0%, transparent 50%);
+        content: '';
+    }
+
     > hr {
         position: relative;
         background: #D9D7D2;
