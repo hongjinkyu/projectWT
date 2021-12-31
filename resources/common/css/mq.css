@@ -25,11 +25,6 @@
 		width: 100%;
 	}
 
-	.long_banner .banner_image {
-		opacity: 0.5;
-		transition: 0.3s;
-	}
-
 	.short_banner {
 		width: 100%;
 	}
@@ -86,7 +81,7 @@
 		overflow: hidden;
 	}
 	.long_banner > a {
-		padding: 1.5rem;
+		padding: 1rem;
 	}
 	.long_banner p {
 		position: static;
@@ -100,6 +95,7 @@
 		top: auto;
 		bottom: 0.5rem;
 		right: 1rem;
+		opacity: 0.5;
 	}
 
 	.short_banner {
@@ -220,19 +216,17 @@
 	}
 
 	.long_banner p {
-		top: 1rem;
-		left: 1rem;
 		font-size: var(--fnt_12);
 	}
-	.long_banner h2 {
-		top: 3rem;
-		left: 1rem;
-	}
 	.long_banner .banner_image {
-		height: 80%;
+		height: 60%;
 		top: auto;
-		bottom: 0.5rem;
-		right: -2rem;
+		bottom: -0.5rem;
+		right: -1rem;
+	}
+
+	section#secPartners {
+		gap: 0.5rem;
 	}
 
 	.card_partner {
@@ -276,6 +270,10 @@
 
 	button.modal_btn {
 		width: 100%;
+	}
+
+	a.banner_partner {
+		font-size: var(--fnt_16);
 	}
 
 	/* 개별 페이지 요소 끝*/
