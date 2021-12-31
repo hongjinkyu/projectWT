@@ -10,38 +10,9 @@
     padding-bottom: 2rem;
 }
 
-.flt_selected_flt {
-    width: 100%;
-
-    > span {
-        display: inline-block;
-        padding: .3rem .4rem;
-        border-radius: var(--bdr_outer);
-        background: rgb(var(--color_tag1));
-        color: rgb(var(--color_light));
-        font-size: var(--fnt_12);
-
-        &::after {
-            display: inline-block;
-            margin-left: .4rem;
-            width: .6rem;
-            height: .6rem;
-            background: url('../../common/images/icons/icon_delete.png') no-repeat center;
-            vertical-align: bottom;
-            cursor: pointer;
-            content: '';
-        }
-    }
-}
-
 .btn_flt_all {
     background: rgb(var(--color_text));
     box-shadow: none;
-    color: rgb(var(--color_light));
-}
-
-.btn_flt_search {
-    background: rgb(var(--color_acc1));
     color: rgb(var(--color_light));
 }
 

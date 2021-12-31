@@ -525,7 +525,7 @@ header#headMobile {
 	top: -5rem;
 	left: 0;
 	right: 0;
-	height: 4rem;
+	height: 3rem;
 	background: rgb(var(--color_light));
 	outline: var(--border);
 	z-index: 10000;
@@ -535,7 +535,7 @@ header#headMobile > div.int_wrap {
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 1rem;
+	padding: 0 0.5rem;
 	height: 100%;
 }
 header#headMobile > div.int_wrap > h1#mobileLogo {
@@ -543,11 +543,18 @@ header#headMobile > div.int_wrap > h1#mobileLogo {
 	left: 50%;
 	transform: translateX(-50%);
 }
+header#headMobile > div.int_wrap > button.mobile_account {
+	background: rgba(var(--color_dark), 0.75);
+	box-shadow: none;
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_10);
+}
 
 nav#navBurger > .btn_burger {
 	position: relative;
 	width: 1.5rem;
 	height: 1.5rem;
+	box-shadow: none;
 }
 nav#navBurger > .btn_burger > span {
 	display: block;
@@ -587,13 +594,11 @@ nav#navBurger > .btn_burger.on > span:nth-child(3) {
 div.mnav_background {
 	display: none;
 	position: fixed;
-	top: 4rem;
+	top: 3rem;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: rgba(var(--color_dark), 0.5);
-	-webkit-backdrop-filter: blur(0.5rem);
-	        backdrop-filter: blur(0.5rem);
+	background: rgba(var(--color_dark), 0.75);
 	z-index: -1;
 }
 div.mnav_background div#mobileNav {
@@ -708,7 +713,7 @@ ul.side_mnu_left > li.checked {
 
 .foot_splitter {
 	margin: 5rem auto;
-	width: 60rem;
+	max-width: 60rem;
 }
 .foot_splitter::before {
 	display: block;
@@ -748,6 +753,9 @@ footer#footBase {
 	right: 0;
 	color: rgb(var(--color_footer));
 }
+footer#footBase > img {
+	margin: 1rem auto;
+}
 
 a.banner_partner {
 	display: block;
@@ -765,12 +773,13 @@ a.banner_partner {
 ul#footLinks {
 	display: flex;
 	flex-flow: row nowrap;
+	justify-content: flex-end;
 	align-items: center;
 	gap: 1.25rem;
+	margin-bottom: 0.75rem;
 	padding: 0.75rem;
-	border-bottom: 0.05rem solid rgb(var(--color_subtle));
+	border-bottom: var(--border);
 	font-size: var(--fnt_12);
-	font-weight: bold;
 }
 ul#footLinks a:link,
 ul#footLinks a :visited {
@@ -786,90 +795,38 @@ ul#footLinks > .flinks_sep {
 	border-radius: 0.05rem;
 	background: rgb(var(--color_subtle));
 }
-ul#footLinks > li:last-child {
-	margin-left: auto;
-	color: rgb(var(--color_acc1));
-}
-ul#footLinks > li:last-child > a {
-	margin-left: 0.5rem;
-}
-ul#footLinks > li:last-child > a:link,
-ul#footLinks > li:last-child > a :visited {
-	color: rgb(var(--color_text));
-	-webkit-text-decoration: underline solid;
-	        text-decoration: underline solid;
-}
-ul#footLinks > li:last-child > a:hover,
-ul#footLinks > li:last-child > a :active {
-	color: rgb(var(--color_acc2));
-}
 
-div#footContent {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	margin: 1rem auto 2rem;
-	padding: 0 0.5rem;
+div#footContent > div {
+	float: left;
+	width: calc((100% - 1rem) / 2);
 }
-div#footContent h6 {
-	margin-bottom: 1rem;
+div#footContent > div + div {
+	margin-left: 1rem;
 }
-
-.footer_company {
-	max-width: 40rem;
-}
-.footer_company_info {
+div#footContent > div > * {
+	font-family: var(--ff_sans_p);
 	font-size: var(--fnt_12);
 }
-.footer_company_info::after {
-	display: block;
-	clear: both;
-	content: "";
+div#footContent > div > ul {
+	width: 100%;
 }
-.footer_company_info li {
-	float: left;
-	margin-right: 1.5rem;
+div#footContent > div > ul > li {
+	padding: 0.75rem 0.5rem;
 }
-.footer_company_info li.disclaimer {
-	margin-top: 1rem;
-	line-height: 1.4;
-}
-.footer_company_info li p,
-.footer_company_info li address {
+div#footContent > div > ul > li > span {
+	float: right;
 	color: rgb(var(--color_text));
 	font-size: var(--fnt_14);
-	font-weight: bold;
 }
-
-.footer_callcenter {
-	max-width: 10rem;
-	font-size: var(--fnt_12);
-	font-weight: bold;
-}
-.footer_callcenter_text {
-	text-align: center;
-}
-.footer_callcenter_text .icon_cs {
-	display: inline-block;
-	vertical-align: top;
-}
-.footer_callcenter_text .icon_cs + span {
-	margin-left: 0.25rem;
+div#footContent > div > ul > li.phonenumb {
 	color: rgb(var(--color_acc1));
-	font-size: var(--fnt_24);
-	font-weight: bold;
+	font-size: var(--fnt_30);
 }
-.footer_callcenter_text p {
-	line-height: 1.6;
+div#footContent > div > ul > li.disclaimer {
+	line-height: 1.5;
 }
-.footer_callcenter_text p:first-of-type {
-	margin-top: 0.5rem;
-}
-
-#copyRights {
-	padding: 0.5rem 0;
-	font-size: var(--fnt_12);
-	text-align: center;
+div#footContent > div > ul > hr {
+	background: #D9D7D2;
 }
 
 /* ---------- Basic Page Elements End ---------- */
@@ -1065,7 +1022,6 @@ aside#modalInfo > .int_wrap > .modal_btn {
 .card_item .card_desc {
 	position: relative;
 	padding: 1rem 0.5rem;
-	height: 100%;
 }
 .card_item .card_desc > .card_title {
 	max-width: 15.5rem;
@@ -1108,17 +1064,17 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
-	height: 2.5rem;
+	height: 2rem;
 	border-top: var(--border);
-	font-size: 0.6rem;
+	font-size: var(--fnt_12);
 	transition: 0.3s;
 }
 .card_item .card_spec > p {
 	padding: 0 0.5rem;
 }
-.card_item .card_spec > p.card_date {
-	font-family: var(--ff_sans_p);
-	font-size: var(--fnt_12);
+.card_item .card_spec > p.card_location_small > svg {
+	fill: rgb(var(--color_text));
+	vertical-align: top;
 }
 
 /* 모임 카드 끝 */

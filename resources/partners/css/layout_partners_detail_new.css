@@ -38,6 +38,7 @@ div#wrapMain.sub {
 	-moz-column-gap: 1rem;
 	     column-gap: 1rem;
 	margin: 0 auto;
+	width: 60rem;
 	min-height: 100vh;
 }
 
@@ -170,6 +171,9 @@ div#detailSide_sticker > .detail_hiddenbutton.scrolled {
 	width: 1rem;
 	height: 1rem;
 	cursor: pointer;
+}
+.starpoint_selector > .star_single > svg {
+	transform: rotate(-15deg);
 }
 .starpoint_selector > .star_single:nth-child(1) {
 	left: 0;
@@ -419,7 +423,6 @@ section#partnerMenu > div#courseTabContainer > .button_container > button:not(.t
 	padding: 0.5rem;
 	height: 21rem;
 	background: rgb(var(--color_light));
-	box-shadow: 0 0.25rem 0.5rem -0.25rem rgba(var(--color_dark), 0.2);
 }
 .course_single_tab > .course_img_container {
 	width: 20rem;
@@ -487,6 +490,57 @@ section#partnerMenu > div#courseTabContainer > .button_container > button:not(.t
 }
 
 /* 코스 요리 개별 탭 */
+section#partnerReview > .font-tester {
+	font-family: var(--ff_sans_h);
+	font-size: var(--fnt_24);
+	font-weight: lighter;
+}
+section#partnerReview > .normal-group {
+	font-size: var(--fnt_24);
+}
+
+section#partnerDepth > .intro_detail {
+	margin-top: 1rem;
+}
+section#partnerDepth > .intro_detail > ul {
+	float: left;
+	width: 50%;
+	padding: 0.5rem;
+}
+section#partnerDepth > .intro_detail > ul > li {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.5rem;
+}
+section#partnerDepth > .intro_detail > ul > hr {
+	background: #D9D7D2;
+}
+section#partnerDepth > .intro_detail > ul.partner_info > li {
+	font-family: var(--ff_sans_p);
+	line-height: 1.5;
+}
+section#partnerDepth > .intro_detail > ul.partner_info > li > svg {
+	margin-right: 0.25rem;
+	fill: #707070;
+}
+section#partnerDepth > .intro_detail > ul.partner_info > li > span:first-of-type {
+	font-weight: normal;
+	color: #A4A4A4;
+}
+section#partnerDepth > .intro_detail > ul.partner_info > li > span:last-of-type {
+	margin-left: auto;
+	text-align: end;
+}
+section#partnerDepth > .intro_detail > ul.partner_disclaimer > li {
+	font-family: var(--ff_sans_p);
+	color: #A4A4A4;
+	font-size: 0.5rem;
+	font-weight: normal;
+	line-height: 1.5;
+}
+
+/* 파트너 상세 페이지 매장 정보 */
 section#partnerLocation > .location_container > div {
 	float: left;
 }
@@ -565,45 +619,3 @@ section#partnerLocation > .location_container > div.info_container > .location_d
 }
 
 /* 파트너 상세 페이지 찾아오시는 길 */
-section#partnerDepth > .intro_detail {
-	margin-top: 1rem;
-}
-section#partnerDepth > .intro_detail > ul {
-	float: left;
-	width: 50%;
-	padding: 0.5rem;
-}
-section#partnerDepth > .intro_detail > ul > li {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	padding: 0.5rem;
-}
-section#partnerDepth > .intro_detail > ul > hr {
-	background: #D9D7D2;
-}
-section#partnerDepth > .intro_detail > ul.partner_info > li {
-	font-family: var(--ff_sans_p);
-	line-height: 1.5;
-}
-section#partnerDepth > .intro_detail > ul.partner_info > li > svg {
-	margin-right: 0.25rem;
-	fill: #707070;
-}
-section#partnerDepth > .intro_detail > ul.partner_info > li > span:first-of-type {
-	font-weight: normal;
-	color: #A4A4A4;
-}
-section#partnerDepth > .intro_detail > ul.partner_info > li > span:last-of-type {
-	margin-left: auto;
-	text-align: end;
-}
-section#partnerDepth > .intro_detail > ul.partner_disclaimer > li {
-	font-family: var(--ff_sans_p);
-	color: #A4A4A4;
-	font-size: 0.5rem;
-	font-weight: normal;
-	line-height: 1.5;
-}
-
-/* 파트너 상세 페이지 매장 정보 */

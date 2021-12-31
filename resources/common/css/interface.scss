@@ -520,7 +520,7 @@ header#headMobile {
     top: -5rem;
     left: 0;
     right: 0;
-    height: 4rem;
+    height: 3rem;
     background: rgb(var(--color_light));
     outline: var(--border);
     z-index: 10000;
@@ -530,13 +530,20 @@ header#headMobile {
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1rem;
+        padding: 0 .5rem;
         height: 100%;
 
         > h1#mobileLogo {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+        }
+
+        > button.mobile_account {
+            background: rgba(var(--color_dark), .75);
+            box-shadow: none;
+            color: rgb(var(--color_light));
+            font-size: var(--fnt_10);
         }
     }
 }
@@ -546,6 +553,7 @@ nav#navBurger {
         position: relative;
         width: 1.5rem;
         height: 1.5rem;
+        box-shadow: none;
 
         > span {
             display: block;
@@ -596,12 +604,11 @@ nav#navBurger {
 div.mnav_background {
     display: none;
     position: fixed;
-    top: 4rem;
+    top: 3rem;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(var(--color_dark), .5);
-    backdrop-filter: blur(.5rem);
+    background: rgba(var(--color_dark), .75);
     z-index: -1;
 
     div#mobileNav {
@@ -733,7 +740,7 @@ ul.side_mnu_left {
 
 .foot_splitter {
     margin: 5rem auto;
-    width: 60rem;
+    max-width: 60rem;
 
     &::before {
         display: block;
@@ -777,6 +784,10 @@ footer#footBase {
     left: 0;
     right: 0;
     color: rgb(var(--color_footer));
+
+    > img {
+        margin: 1rem auto;
+    }
 }
 
 a.banner_partner {
@@ -795,12 +806,13 @@ a.banner_partner {
 ul#footLinks {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-end;
     align-items: center;
     gap: 1.25rem;
+    margin-bottom: .75rem;
     padding: .75rem;
-    border-bottom: .05rem solid rgb(var(--color_subtle));
+    border-bottom: var(--border);
     font-size: var(--fnt_12);
-    font-weight: bold;
 
     a {
         &:link,
@@ -820,105 +832,49 @@ ul#footLinks {
         border-radius: .05rem;
         background: rgb(var(--color_subtle));
     }
-
-    > li:last-child {
-        margin-left: auto;
-        color: rgb(var(--color_acc1));
-
-        > a {
-            margin-left: .5rem;
-
-            &:link,
-            :visited {
-                color: rgb(var(--color_text));
-                text-decoration: underline solid;
-            }
-
-            &:hover,
-            :active {
-                color: rgb(var(--color_acc2));
-            }
-        }
-    }
 }
 
 div#footContent {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    margin: 1rem auto 2rem;
-    padding: 0 .5rem;
+    > div {
+        float: left;
+        width: calc((100% - 1rem) / 2);
 
-    h6 {
-        margin-bottom: 1rem;
-    }
-}
-
-.footer_company {
-    max-width: 40rem;
-
-    &_info {
-        font-size: var(--fnt_12);
-
-        &::after {
-            display: block;
-            clear: both;
-            content: '';
+        & + div {
+            margin-left: 1rem;
         }
 
-        li {
-            float: left;
-            margin-right: 1.5rem;
-
-            &.disclaimer {
-                margin-top: 1rem;
-                line-height: 1.4;
-            }
-
-            p,
-            address {
-                color: rgb(var(--color_text));
-                font-size: var(--fnt_14);
-                font-weight: bold;
-            }
-        }
-    }
-}
-
-.footer_callcenter {
-    max-width: 10rem;
-    font-size: var(--fnt_12);
-    font-weight: bold;
-
-    &_text {
-        text-align: center;
-
-        .icon_cs {
-            display: inline-block;
-            vertical-align: top;
-        
-            & + span {
-                margin-left: .25rem;
-                color: rgb(var(--color_acc1));
-                font-size: var(--fnt_24);
-                font-weight: bold;
-            }
+        > * {
+            font-family: var(--ff_sans_p);
+            font-size: var(--fnt_12);
         }
 
-        p {
-            line-height: 1.6;
+        > ul {
+            width: 100%;
 
-            &:first-of-type {
-                margin-top: .5rem;
+            > li {
+                padding: .75rem .5rem;
+
+                > span {
+                    float: right;
+                    color: rgb(var(--color_text));
+                    font-size: var(--fnt_14);
+                }
+
+                &.phonenumb {
+                    color: rgb(var(--color_acc1));
+                    font-size: var(--fnt_30);
+                }
+
+                &.disclaimer {
+                    line-height: 1.5;
+                }
+            }
+
+            > hr {
+                background: #D9D7D2;
             }
         }
     }
-}
-
-#copyRights {
-    padding: .5rem 0;
-    font-size: var(--fnt_12);
-    text-align: center;
 }
 
 /* ---------- Basic Page Elements End ---------- */
@@ -1148,7 +1104,6 @@ aside#modalInfo {
     .card_desc {
         position: relative;
         padding: 1rem .5rem;
-        height: 100%;
 
         > .card_title {
             max-width: 15.5rem;
@@ -1197,17 +1152,19 @@ aside#modalInfo {
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
-        height: 2.5rem;
+        height: 2rem;
         border-top: var(--border);
-        font-size: .6rem;
+        font-size: var(--fnt_12);
         transition: .3s;
 
         > p {
             padding: 0 .5rem;
 
-            &.card_date {
-                font-family: var(--ff_sans_p);
-                font-size: var(--fnt_12);
+            &.card_location_small {
+                > svg {
+                    fill: rgb(var(--color_text));
+                    vertical-align: top;
+                }
             }
         }
     }

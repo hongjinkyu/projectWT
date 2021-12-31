@@ -6,15 +6,6 @@ $(document).ready(function() { // jQuery Load
     $(window).trigger('scroll');
 
     $(window).scroll(function() {
-        let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-        let sticky_height = $('footer#footBase').height() + 20;
-
-        if (scrollBottom < sticky_height) {
-            $('aside#popFollow').css('bottom', sticky_height);
-        } else {
-            $('aside#popFollow').css('bottom', 20);
-        };
-
         if ($(window).scrollTop() >= 60) {
             $('header#headBase.head_index').addClass('scrolled')
         } else {

@@ -164,6 +164,12 @@
 		flex-flow: column nowrap;
 		align-items: flex-start;
 		row-gap: 0.75rem;
+		position: relative;
+	}
+	.sec_title > .sec_more {
+		position: absolute;
+		top: 0.15rem;
+		right: 0.5rem;
 	}
 	.sec_title > .sec_subtitle {
 		font-size: var(--fnt_12);
@@ -172,7 +178,7 @@
 	/* 공통 요소 끝 */
 	/* 개별 페이지 요소 */
 	.card_item {
-		width: 6.5rem;
+		width: 7rem;
 	}
 	.card_item > p.card_timeleft {
 		top: 0.2rem;
@@ -207,12 +213,19 @@
 	}
 	.card_item .card_spec {
 		flex-flow: column nowrap;
-		justify-content: space-around;
+		padding: 0.25rem;
 	}
 	.card_item .card_spec > p {
-		padding: 0 0.25rem;
+		padding: 0;
 		width: 100%;
 		font-size: var(--fnt_10);
+	}
+	.card_item .card_spec > p.card_location_small > svg {
+		width: 0.5rem;
+		height: 0.5rem;
+	}
+	.card_item .card_spec > p.card_date {
+		margin-top: 0.25rem;
 	}
 
 	.long_banner p {

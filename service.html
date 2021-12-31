@@ -2,293 +2,301 @@
 
 <html lang="ko">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Wine Together</title>
+        <title>Wine Together</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="./resources/common/images/icons/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./resources/common/css/modern-normalize.css" />
-    <link rel="stylesheet" type="text/css" href="./resources/common/css/default.css" />
-    <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
-    <!-- Global CSS -->
+        <link rel="shortcut icon" type="image/x-icon" href="./resources/common/images/icons/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/modern-normalize.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/default.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
+        <!-- Global CSS -->
 
-    <link rel="stylesheet" type="text/css" href="./resources/service/css/service_intro.css" />
-    <!-- Page-Specific CSS -->
+        <link rel="stylesheet" type="text/css" href="./resources/service/css/service_intro.css" />
+        <!-- Page-Specific CSS -->
 
-    <link rel="stylesheet" type="text/css" href="./resources/common/css/mq.css" />
-    <!-- Media Query -->
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/mq.css" />
+        <!-- Media Query -->
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
-    <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
-    <script type="text/javascript" src="./resources/service/js/js_service.js"></script> <!-- Page-Specific jQuery -->
-    <!-- JavaScript / jQuery -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+        <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
+        <script type="text/javascript" src="./resources/service/js/js_service.js"></script> <!-- Page-Specific jQuery -->
+        <!-- JavaScript / jQuery -->
 
-    <!--[if lt IE 9]>
-            <script src="./js/html5shiv.min.js"></script>
-        <![endif]-->
-</head>
+        <!--[if lt IE 9]>
+                <script src="./js/html5shiv.min.js"></script>
+            <![endif]-->
+    </head>
 
-<body>
+    <body>
 
-    <div id="wrap">
+        <div id="wrap">
 
-        <header id="headBase" class="head_index">
-            <nav id="navBase" class="int_wrap nav_index" role="navigation">
-                <h1 id="mainLogo">
-                    <a href="index.html">Wine Together</a>
-                </h1>
+            <header id="headBase" class="head_index">
+                <nav id="navBase" class="int_wrap nav_index" role="navigation">
+                    <h1 id="mainLogo">
+                        <a href="index.html">Wine Together</a>
+                    </h1>
 
-                <ul id="navbarMain">
-                    <li class="mnu_main">
-                        <a href="service.html">와인투게더란?</a>
-                    </li>
-                    <li class="mnu_main">
-                        <a href="gathering_list.html">모임 둘러보기</a>
-                    </li>
-                    <li class="mnu_main">
-                        <a href="gathering_open.html">모임 개설하기</a>
-                    </li>
-                    <li class="mnu_main">
-                        <a href="review_list.html">모임 후기</a>
-                    </li>
-                    <li class="mnu_main">
-                        <a href="partners_list.html">와투 맛집</a>
-                    </li>
-                </ul>
-
-                <div id="layerAccount">
-                    <p class="user_name">
-                        <span data-grade="grade_regular">김누구</span> 님
-                    </p>
-                    <button class="btn_account">
-                        <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
-                    </button>
-                    <ul id="accountPop">
-                        <li><a href="./mypage.html">마이 페이지</a></li>
-                        <li><a href="">모임 관리</a></li>
-                        <li><a href="">결제 관리</a></li>
-                        <li><a href="./login.html">로그아웃</a></li>
+                    <ul id="navbarMain">
+                        <li class="mnu_main">
+                            <a href="service.html">와인투게더란?</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="gathering_list.html">모임 둘러보기</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="gathering_open.html">모임 개설하기</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="review_list.html">모임 후기</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="partners_list.html">와투 맛집</a>
+                        </li>
                     </ul>
-                </div>
-            </nav>
-        </header> <!-- Header -->
 
-        <header id="headMobile">
-            <div class="int_wrap">
-                <nav id="navBurger">
-                    <button class="btn_burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-                    <div class="mnav_background">
-                        <div id="mobileNav">
-                            <ul class="mnav_list">
-                                <li>
-                                    <a href="service.html">와인투게더란?</a>
-                                </li>
-                                <li>
-                                    <a href="gathering_list.html">모임 둘러보기</a>
-                                </li>
-                                <li>
-                                    <a href="gathering_open.html">모임 개설하기</a>
-                                </li>
-                                <li>
-                                    <a href="review_list.html">모임 후기</a>
-                                </li>
-                                <li>
-                                    <a href="partners_list.html">와투 맛집</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="disappearing_area">
-                                
-                        </div>
+                    <div id="layerAccount">
+                        <p class="user_name">
+                            <span data-grade="grade_regular">김누구</span> 님
+                        </p>
+                        <button class="btn_account">
+                            <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
+                        </button>
+                        <ul id="accountPop">
+                            <li><a href="./mypage.html">마이 페이지</a></li>
+                            <li><a href="">모임 관리</a></li>
+                            <li><a href="">결제 관리</a></li>
+                            <li><a href="./login.html">로그아웃</a></li>
+                        </ul>
                     </div>
                 </nav>
+            </header> <!-- Header -->
 
-                <h1 id="mobileLogo">
-                    <a href="#">Wine Together</a>
-                </h1>
+            <header id="headMobile">
+                <div class="int_wrap">
+                    <nav id="navBurger">
+                        <button class="btn_burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
 
-                <button class="mobile_account">
-                    로그인
-                </button>
-            </div>
-        </header> <!-- Header - Mobile -->
+                        <div class="mnav_background">
+                            <div id="mobileNav">
+                                <ul class="mnav_list">
+                                    <li>
+                                        <a href="service.html">와인투게더란?</a>
+                                    </li>
+                                    <li>
+                                        <a href="gathering_list.html">모임 둘러보기</a>
+                                    </li>
+                                    <li>
+                                        <a href="gathering_open.html">모임 개설하기</a>
+                                    </li>
+                                    <li>
+                                        <a href="review_list.html">모임 후기</a>
+                                    </li>
+                                    <li>
+                                        <a href="partners_list.html">와투 맛집</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="disappearing_area">
+                                    
+                            </div>
+                        </div>
+                    </nav>
 
-        <!-- Page Main Contents Start / 헤더 영역 종료 -->
+                    <h1 id="mobileLogo">
+                        <a href="#">Wine Together</a>
+                    </h1>
 
-        <section id="introFull">
-            <div class="blur_blind"></div>
-            <div class="intro_text">
-                <h2>와투하다 <span>[waɪntəˈɡeðər]</span></h2>
-                <p>"맛있는 음식과 와인을 좋은 사람들과 함께 즐기는 행위"</p>
-            </div>
-            <span class="intro_wheel until_enough"></span>
-        </section> <!-- introFull -->
+                    <button class="mobile_account">
+                        로그인
+                    </button>
+                </div>
+            </header> <!-- Header - Mobile -->
 
-        <h2 class="flipper">"와투하다"?</h2>
+            <!-- Page Main Contents Start / 헤더 영역 종료 -->
 
-        <div id="wrapMain" class="int_wrap" role="main">
+            <section id="introFull">
+                <div class="blur_blind"></div>
+                <div class="intro_text">
+                    <h2>와투하다 <span>[waɪntəˈɡeðər]</span></h2>
+                    <p>"맛있는 음식과 와인을 좋은 사람들과 함께 즐기는 행위"</p>
+                </div>
+                <span class="intro_wheel until_enough"></span>
+            </section> <!-- introFull -->
 
-            <section id="svcTitle">
-                <h3>와인투게더<span>는</span></h3>
-                <p>
-                    와인을 함께 즐기고자 하는 사람들을<br />
-                    엄선된 음식점으로 초대하는 서비스입니다.
-                </p>
-                <hr class="hf" />
-                <p>
-                    요즘 와인 많이들 드시죠?<br />
-                    홈와, 혼와는 이제 지겹지 않으세요?<br />
-                    와인은 "함께"할 때 더욱 즐겁습니다.
-                </p>
-            </section> <!-- #svcTitle -->
+            <div id="wrapMain" class="int_wrap" role="main">
 
-            <section id="svcPros">
-                <div class="pros_box_01">
-                    <h6>"맛있는 음식과 함께 와인을 즐겨보세요"</h6>
+                <section id="svcTitle">
+                    <h3>와인투게더<span>는</span></h3>
                     <p>
-                        매번 집에서 배달 음식과 함께 와인을 드시고 계신가요?<br>
-                        와인투게더가 엄선한 맛집에서 와인과 음식의 페어링을 느껴보세요.
+                        와인을 함께 즐기고자 하는 사람들을<br />
+                        엄선된 음식점으로 초대하는 서비스입니다.
                     </p>
-                </div>
-                <div class="pros_box_02">
-                    <h6 >"다양한 와인을 맛보세요"</h6>
-                    <P>
-                        혼자서 마시면 한 병일 뿐인 와인,<br>
-                        여러 사람들과 함께하면 한 자리에서 다양한 와인을 접할 수 있어요.
-                    </P>
-                </div>
-                <div class="pros_box_03">
-                    <h6>"알고 마시면 더 재미있는 와인"</h6>
-                    <P>
-                        호스트의 다양한 경험과 지식을 공유하는 자리에서<br>
-                        와인 초보도 와인에 대해 부담없고 자연스럽게 배울 수 있어요.
-                    </P>
-                </div>
-            </section> <!-- #svcPros -->
+                    <hr class="hf" />
+                    <p>
+                        요즘 와인 많이들 드시죠?<br />
+                        홈와, 혼와는 이제 지겹지 않으세요?<br />
+                        와인은 "함께"할 때 더욱 즐겁습니다.
+                    </p>
+                </section> <!-- #svcTitle -->
 
-            <section id="svcDesc">
-                <p>
-                    와인에 대한 대중의 관심과 수요가 폭발적으로 증가하고 있는 요즘입니다.
-                </p>
-                <p>
-                    그러나 와인을 사고 파는 것에는 관심이 많아도,<br />
-                    정작 "어떻게" 마셔야 하는지에 대한 고민은 조금 부족할지도 모르겠습니다.
-                </p>
-                <p>
-                    술 그거 그냥 마시면 되는거지 뭐. 라고 생각할 수도 있지만,<br />
-                    와인이란 그저 술을 마시는 행위가 아니라<br />
-                    "배려"라고 부를 수 있는 문화라고,<br />
-                    와인투게더는 그렇게 생각합니다.
-                </p>
-                <p>
-                    기본적인 테이블 매너에서부터 경험이 조금 더 많은 사람이 다른 사람을 배려할 수 있는,<br />
-                    그리고 그런 배려깊은 사람이 존중받을 수 있는 문화를 만들어가는 것.
-                </p>
-                <p>
-                    와인투게더는 단순하게 와인 모임을 만들고, 맛있는 음식점을 추천하는 것만이 아닌,<br />
-                    그 이상의 가치와 폭넓은 경험을 제공하기 위해 항상 노력하고 있습니다.
-                </p>
-                <p>
-                    "사람이 여행이고, 여행은 사람이다" 라는 말처럼<br />
-                    사람은 각자 자기만의 스토리를 가지고 있고,<br />
-                    와인 또한 마찬가지라고 생각합니다.
-                </p>
-                <p>
-                    와인투게더와 함께,<br />
-                    사람과 와인으로의 여행을<br />
-                    함께 떠나보시겠어요?
-                </p>
+                <section id="svcPros">
+                    <div class="pros_box_01">
+                        <h6>"맛있는 음식과 함께 와인을 즐겨보세요"</h6>
+                        <p>
+                            매번 집에서 배달 음식과 함께 와인을 드시고 계신가요?<br>
+                            와인투게더가 엄선한 맛집에서 와인과 음식의 페어링을 느껴보세요.
+                        </p>
+                    </div>
+                    <div class="pros_box_02">
+                        <h6 >"다양한 와인을 맛보세요"</h6>
+                        <P>
+                            혼자서 마시면 한 병일 뿐인 와인,<br>
+                            여러 사람들과 함께하면 한 자리에서 다양한 와인을 접할 수 있어요.
+                        </P>
+                    </div>
+                    <div class="pros_box_03">
+                        <h6>"알고 마시면 더 재미있는 와인"</h6>
+                        <P>
+                            호스트의 다양한 경험과 지식을 공유하는 자리에서<br>
+                            와인 초보도 와인에 대해 부담없고 자연스럽게 배울 수 있어요.
+                        </P>
+                    </div>
+                </section> <!-- #svcPros -->
 
-                <div>
-                    <button class="goto_guide">
-                        이용 가이드 바로가기
-                    </button>
-                    <button class="goto_list" onclick="location.href='./gathering_list.html'">
-                        모임 둘러보기
-                    </button>
-                </div>
-            </section> <!-- #svcDesc -->
+                <section id="svcDesc">
+                    <p>
+                        와인에 대한 대중의 관심과 수요가 폭발적으로 증가하고 있는 요즘입니다.
+                    </p>
+                    <p>
+                        그러나 와인을 사고 파는 것에는 관심이 많아도,<br />
+                        정작 "어떻게" 마셔야 하는지에 대한 고민은 조금 부족할지도 모르겠습니다.
+                    </p>
+                    <p>
+                        술 그거 그냥 마시면 되는거지 뭐. 라고 생각할 수도 있지만,<br />
+                        와인이란 그저 술을 마시는 행위가 아니라<br />
+                        "배려"라고 부를 수 있는 문화라고,<br />
+                        와인투게더는 그렇게 생각합니다.
+                    </p>
+                    <p>
+                        기본적인 테이블 매너에서부터 경험이 조금 더 많은 사람이 다른 사람을 배려할 수 있는,<br />
+                        그리고 그런 배려깊은 사람이 존중받을 수 있는 문화를 만들어가는 것.
+                    </p>
+                    <p>
+                        와인투게더는 단순하게 와인 모임을 만들고, 맛있는 음식점을 추천하는 것만이 아닌,<br />
+                        그 이상의 가치와 폭넓은 경험을 제공하기 위해 항상 노력하고 있습니다.
+                    </p>
+                    <p>
+                        "사람이 여행이고, 여행은 사람이다" 라는 말처럼<br />
+                        사람은 각자 자기만의 스토리를 가지고 있고,<br />
+                        와인 또한 마찬가지라고 생각합니다.
+                    </p>
+                    <p>
+                        와인투게더와 함께,<br />
+                        사람과 와인으로의 여행을<br />
+                        함께 떠나보시겠어요?
+                    </p>
 
-        </div> <!-- #wrapMain -->
+                    <div>
+                        <button class="goto_guide">
+                            이용 가이드 바로가기
+                        </button>
+                        <button class="goto_list" onclick="location.href='./gathering_list.html'">
+                            모임 둘러보기
+                        </button>
+                    </div>
+                </section> <!-- #svcDesc -->
+
+            </div> <!-- #wrapMain -->
 
         <!-- Page Main Contents End / 푸터 영역 시작 -->
 
-        <footer id="footBase" role="contentinfo">
-            <a href="#" class="banner_partner">
-                와인투게더와 함께하실 파트너를 모십니다.
-            </a>
-            <div class="int_wrap">
-                <ul id="footLinks">
-                    <li class="mnu_flinks"><a href="./cs_board_list.html">고객센터</a></li>
-                    <li class="flinks_sep"></li>
-                    <li class="mnu_flinks"><a href="#">이용약관</a></li>
-                    <li class="flinks_sep"></li>
-                    <li class="mnu_flinks"><a href="#">개인정보보호방침</a></li>
-                    <li class="flinks_sep"></li>
-                    <li class="mnu_flinks"><a href="#">이메일주소수집거부</a></li>
-                    <li class="mnu_flinks">제휴문의 <a href="mailto:justin@winetogether.kr">justin@winetogether.kr</a></li>
-                </ul>
+            <div class="foot_splitter">
+                <hr class="hf" />
+                <h1>Fine.</h1>
+            </div>
 
-                <div id="footContent">
-                    <div class="footer_company">
-                        <h6>(주) 비노앤제이</h6>
-                        <ul class="footer_company_info">
-                            <li>
-                                <img src="./resources/common/images/logo_footer.png" alt="VINO & J" />
-                            </li>
-                            <li>
-                                대표이사
-                                <p>최용준</p>
-                            </li>
-                            <li>
-                                사업자등록번호
-                                <p>617-86-10479</p>
-                            </li>
-                            <li>
-                                통신판매업신고번호
-                                <p>제2016-부산해운대-0485호</p>
-                            </li>
-                            <li>
-                                주소
-                                <address>부산광역시 해운대구 해운대로 570번길 46, B1</address>
-                            </li>
-                            <li class="disclaimer">
-                                전자상거래상 중개업이 어쩌고 저쩌고 책임은 구매자 본인에게 있고 어쩌고 저쩌고<br />
-                                두줄로 들어가면 이런 느낌이고 뭔가 내용이 많아야 할거같고
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer_callcenter">
-                        <h6>CALL CENTER</h6>
-                        <div class="footer_callcenter_text">
-                            <img src="./resources/common/images/icons/icon_cs.png" alt="고객센터" class="icon_cs" /><!--
-                            --><span>1811-0612</span>
-                            <p>
-                                월~금 :
-                                오전 10:00 ~ 오후 06:00
-                            </p>
-                            <p>
-                                점심시간 :
-                                오후 12:00 ~ 오후 01:00
-                            </p>
-                            <p>※ 토 / 일 / 공휴일은 휴무입니다.</p>
+            <footer id="footBase" role="contentinfo">
+                <a href="#" class="banner_partner">
+                    와인투게더와 함께하실 파트너를 모십니다.
+                </a>
+
+                <div class="int_wrap">
+                    <ul id="footLinks">
+                        <li class="mnu_flinks"><a href="./cs_board_list.html">고객센터</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">이용약관</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">개인정보보호방침</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">이메일주소수집거부</a></li>
+                    </ul>
+
+                    <div id="footContent" class="clr_fix">
+                        <div class="footer_company">
+                            <ul class="footer_company_info">
+                                <li>
+                                    <h4>주식회사 비노앤제이</h4>
+                                </li>
+                                <li>
+                                    대표이사 <span>최용준</span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    사업자등록번호 <span>617-86-10479</span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    통신판매업신고번호 <span>제2016-부산해운대-0485호</span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    주소 <span>부산광역시 해운대구 해운대로 570번길 46, B1</span>
+                                </li>
+                                <hr class="hf" />
+                                <li class="disclaimer">
+                                    전자상거래상 중개업이 어쩌고 저쩌고 책임은 구매자 본인에게 있고 어쩌고 저쩌고<br />
+                                    두줄로 들어가면 이런 느낌이고 뭔가 내용이 많아야 할거같고
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer_callcenter">
+                            <ul class="footer_callcenter_info">
+                                <li>
+                                    <h4>CALL CENTER</h4>
+                                </li>
+                                <li class="phonenumb">
+                                    1811-0612
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    운영시간 <span>평일 오전 10:00 ~ 오후 06:00</span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    점심시간 <span>오후 12:00 ~ 오후 01:00</span>
+                                </li>
+                                <hr class="hf" />
+                                <li class="disclaimer">
+                                    * 토 / 일 / 공휴일은 휴무입니다.
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <p id="copyRights">Copyright &copy; 2021 와인투게더</p>
-            </div>
-        </footer> <!-- Footer -->
 
-    </div> <!-- #wrap -->
+                <img src="./resources/common/images/logo_footer.png" alt="VINO & J" />
+            </footer> <!-- Footer -->
+        </div> <!-- #wrap -->
 
-</body>
+    </body>
 
 </html>

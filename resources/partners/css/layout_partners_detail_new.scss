@@ -39,6 +39,7 @@ div#subMainIMG {
 div#wrapMain.sub {
     column-gap: 1rem;
     margin: 0 auto;
+    width: 60rem;
     min-height: 100vh;
 } /* 임시 - 서브 래퍼 사이즈 및 내부 정렬 */
 
@@ -184,6 +185,10 @@ div#detailSide_sticker {
         height: 1rem;
         cursor: pointer;
 
+        > svg {
+            transform: rotate(-15deg);
+        }
+
         &:nth-child(1) {
             left: 0;
         }
@@ -287,7 +292,7 @@ div#detailFront {
     margin: 5rem 0 1.5rem;
     color: #707070;
     text-align: center;
-    
+
     > h5 {
         color: #707070;
         font-size: var(--fnt_24);
@@ -353,7 +358,7 @@ button.btn_scale {
     @media (hover: hover) {
         &:hover {
             color: rgb(var(--color_light));
-    
+
             &::before {
                 top: 0;
                 bottom: 0;
@@ -361,7 +366,7 @@ button.btn_scale {
                 right: 0;
                 background: rgba(var(--color_dark), .75);
             }
-    
+
             > svg {
                 fill: rgb(var(--color_light));
             }
@@ -460,7 +465,6 @@ section#partnerMenu {
     padding: .5rem;
     height: 21rem;
     background: rgb(var(--color_light));
-    box-shadow: 0 .25rem .5rem -.25rem rgba(var(--color_dark), .2);
 
     > .course_img_container {
         width: 20rem;
@@ -539,6 +543,73 @@ section#partnerMenu {
     }
 } /* 코스 요리 개별 탭 */
 
+section#partnerReview {
+    > .font-tester {
+        font-family: var(--ff_sans_h);
+        font-size: var(--fnt_24);
+        font-weight: lighter;
+    }
+
+    > .normal-group {
+        font-size: var(--fnt_24);
+    }
+}
+
+section#partnerDepth {
+    > .intro_detail {
+        margin-top: 1rem;
+
+        > ul {
+            float: left;
+            width: 50%;
+            padding: .5rem;
+
+            > li {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: .5rem;
+            }
+
+            > hr {
+                background: #D9D7D2;
+            }
+
+            &.partner_info {
+                > li {
+                    font-family: var(--ff_sans_p);
+                    line-height: 1.5;
+
+                    > svg {
+                        margin-right: .25rem;
+                        fill: #707070;
+                    }
+
+                    > span:first-of-type {
+                        font-weight: normal;
+                        color: #A4A4A4;
+                    }
+
+                    > span:last-of-type {
+                        margin-left: auto;
+                        text-align: end;
+                    }
+                }
+            }
+
+            &.partner_disclaimer {
+                > li {
+                    font-family: var(--ff_sans_p);
+                    color: #A4A4A4;
+                    font-size: .5rem;
+                    font-weight: normal;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+} /* 파트너 상세 페이지 매장 정보 */
+
 section#partnerLocation {
     > .location_container {
         > div {
@@ -554,7 +625,7 @@ section#partnerLocation {
                 height: 20rem;
                 border-radius: .15rem;
                 overflow: hidden;
-    
+
                 > .location_gps {
                     display: flex;
                     justify-content: flex-end;
@@ -579,7 +650,7 @@ section#partnerLocation {
                         padding-top: .15rem;
                     }
                 }
-    
+
                 > .map_api {
                     width: inherit;
                     height: inherit;
@@ -609,7 +680,7 @@ section#partnerLocation {
                             font-weight: normal;
                             color: #A4A4A4;
                         }
-        
+
                         > span:last-of-type {
                             margin-left: auto;
                             text-align: end;
@@ -634,58 +705,3 @@ section#partnerLocation {
         }
     }
 } /* 파트너 상세 페이지 찾아오시는 길 */
-
-section#partnerDepth {
-    > .intro_detail {
-        margin-top: 1rem;
-    
-        > ul {
-            float: left;
-            width: 50%;
-            padding: .5rem;
-    
-            > li {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                padding: .5rem;
-            }
-    
-            > hr {
-                background: #D9D7D2;
-            }
-    
-            &.partner_info {
-                > li {
-                    font-family: var(--ff_sans_p);
-                    line-height: 1.5;
-
-                    > svg {
-                        margin-right: .25rem;
-                        fill: #707070;
-                    }
-    
-                    > span:first-of-type {
-                        font-weight: normal;
-                        color: #A4A4A4;
-                    }
-    
-                    > span:last-of-type {
-                        margin-left: auto;
-                        text-align: end;
-                    }
-                }
-            }
-    
-            &.partner_disclaimer {
-                > li {
-                    font-family: var(--ff_sans_p);
-                    color: #A4A4A4;
-                    font-size: .5rem;
-                    font-weight: normal;
-                    line-height: 1.5;
-                }
-            }
-        }
-    }
-} /* 파트너 상세 페이지 매장 정보 */

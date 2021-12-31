@@ -13,10 +13,6 @@ $(document).ready(function() { // jQuery Loads
         } else {
             $('.intro_wheel').addClass('until_enough');
         }
-
-        let half_of_it = $(window).scrollTop() / 2;
-
-        $('.intro_text').css({'top': 'calc(50vh - 6rem - ' + half_of_it + 'px)'});
     }); // Window Scrolling Actions
 
 }) // jQuery Closed
