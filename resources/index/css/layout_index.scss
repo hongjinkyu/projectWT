@@ -112,8 +112,8 @@ div#mainSlider {
     gap: .5rem;
     width: 100%;
 
-    > .card_item:nth-child(4) {
-        display: none;
+    .card_item + .card_item {
+        margin-left: .5rem;
     }
 }
 

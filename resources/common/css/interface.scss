@@ -931,7 +931,7 @@ div#footContent {
     flex-flow: row wrap;
     justify-content: flex-start;
     gap: 1.5rem .5rem;
-    margin-top: 2.5rem;
+    margin-top: 5rem;
 }
 
 .sec_title {
@@ -1074,7 +1074,7 @@ aside#modalInfo {
     justify-content: flex-start;
     position: relative;
     width: calc(58rem / 3);
-    height: 20.5rem;
+    // height: 20.5rem;
     border: var(--border);
     background: rgb(var(--color_light));
 
@@ -1143,7 +1143,6 @@ aside#modalInfo {
 
     > .card_content {
         padding: 0 .5rem;
-        height: 8rem;
     }
 
     .card_desc {
@@ -1155,7 +1154,10 @@ aside#modalInfo {
             max-width: 15.5rem;
 
             h5 {
-                white-space: nowrap;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                max-height: 2rem;
+                -webkit-line-clamp: 2;
                 text-overflow: ellipsis;
                 overflow: hidden;
             }
@@ -1166,19 +1168,12 @@ aside#modalInfo {
             -webkit-box-orient: vertical;
             margin-top: .75rem;
             max-width: 15.5rem;
+            height: 2rem;
             font-size: var(--fnt_14);
             line-height: 1.4;
             -webkit-line-clamp: 2;
             text-overflow: ellipsis;
             overflow: hidden;
-        }
-
-        > .card_date {
-            position: absolute;
-            bottom: .75rem;
-            font-family: var(--ff_sans_p);
-            color: rgb(var(--color_acc2));
-            font-size: var(--fnt_12);
         }
 
         > .user_profile {
@@ -1210,11 +1205,9 @@ aside#modalInfo {
         > p {
             padding: 0 .5rem;
 
-            &.card_price {
-                > span {
-                    font-family: var(--ff_price);
-                    font-size: var(--fnt_16);
-                }
+            &.card_date {
+                font-family: var(--ff_sans_p);
+                font-size: var(--fnt_12);
             }
         }
     }

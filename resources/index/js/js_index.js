@@ -29,4 +29,17 @@ $(document).ready(function() { // jQuery Load
         dotsClass: 'main-dots'
     }); // 메인 슬라이더
 
+    $('.card_slide_container').slick({
+        slide: '.card_item',
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: true,
+        infinite: true,
+        variableWidth: true,
+        arrows: false,
+        dots: false,
+    });
+
 }); // jQuery Closed

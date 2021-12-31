@@ -880,7 +880,7 @@ div#footContent h6 {
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	gap: 1.5rem 0.5rem;
-	margin-top: 2.5rem;
+	margin-top: 5rem;
 }
 
 .sec_title {
@@ -1002,7 +1002,6 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	justify-content: flex-start;
 	position: relative;
 	width: calc(58rem / 3);
-	height: 20.5rem;
 	border: var(--border);
 	background: rgb(var(--color_light));
 }
@@ -1062,7 +1061,6 @@ aside#modalInfo > .int_wrap > .modal_btn {
 }
 .card_item > .card_content {
 	padding: 0 0.5rem;
-	height: 8rem;
 }
 .card_item .card_desc {
 	position: relative;
@@ -1073,7 +1071,10 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	max-width: 15.5rem;
 }
 .card_item .card_desc > .card_title h5 {
-	white-space: nowrap;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	max-height: 2rem;
+	-webkit-line-clamp: 2;
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
@@ -1082,18 +1083,12 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	-webkit-box-orient: vertical;
 	margin-top: 0.75rem;
 	max-width: 15.5rem;
+	height: 2rem;
 	font-size: var(--fnt_14);
 	line-height: 1.4;
 	-webkit-line-clamp: 2;
 	text-overflow: ellipsis;
 	overflow: hidden;
-}
-.card_item .card_desc > .card_date {
-	position: absolute;
-	bottom: 0.75rem;
-	font-family: var(--ff_sans_p);
-	color: rgb(var(--color_acc2));
-	font-size: var(--fnt_12);
 }
 .card_item .card_desc > .user_profile {
 	position: absolute;
@@ -1121,9 +1116,9 @@ aside#modalInfo > .int_wrap > .modal_btn {
 .card_item .card_spec > p {
 	padding: 0 0.5rem;
 }
-.card_item .card_spec > p.card_price > span {
-	font-family: var(--ff_price);
-	font-size: var(--fnt_16);
+.card_item .card_spec > p.card_date {
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_12);
 }
 
 /* 모임 카드 끝 */

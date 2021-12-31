@@ -97,8 +97,8 @@ div#mainSlider {
 	gap: 0.5rem;
 	width: 100%;
 }
-.card_slide_container > .card_item:nth-child(4) {
-	display: none;
+.card_slide_container .card_item + .card_item {
+	margin-left: 0.5rem;
 }
 
 .card_partner {
