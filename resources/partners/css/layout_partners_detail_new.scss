@@ -19,13 +19,13 @@ div#subMainIMG {
     &::before {
         background: linear-gradient(to top, rgba(0, 0, 0, .75) 0%, transparent 100%);
         pointer-events: none;
-        z-index: 1;
+        z-index: 2;
         content: '';
     }
 
     &::after {
         backdrop-filter: blur(.25rem) brightness(.8);
-        z-index: 2;
+        z-index: 1;
         content: '';
     }
 
@@ -34,26 +34,26 @@ div#subMainIMG {
         height: inherit;
         object-fit: cover;
     }
-} /* 서브 메인 이미지 */
+} /* 서브 페이지 메인 이미지 */
 
 div#wrapMain.sub {
     column-gap: 1rem;
     margin: 0 auto;
     width: 60rem;
     min-height: 100vh;
-} /* 임시 - 서브 래퍼 사이즈 및 내부 정렬 */
+} /* 임시 - 서브 페이지 래퍼 사이즈 및 내부 정렬 */
 
 div#detailSide {
     position: relative;
     margin-top: -13.5rem;
     width: 16rem;
     z-index: 3;
-} /* 상세 페이지 사이드 바 */
+} /* 서브 페이지 사이드 바 */
 
 div#detailContents {
     position: relative;
     width: 42rem;
-} /* 상세 페이지 컨텐츠 */
+} /* 서브 페이지 컨텐츠 */
 
 .user_name {
     cursor: pointer;
@@ -78,7 +78,7 @@ div#detailContents {
             content: ' 님';
         }
     }
-} /* 유저 이름표 */
+} /* 유저 이름표 - 인터페이스로 가야 함 */
 
 div#detailSide_sticker {
     position: sticky;
@@ -168,7 +168,7 @@ div#detailSide_sticker {
             display: block;
         }
     }
-} /* 상세 페이지 스티키 메뉴 */
+} /* 서브 페이지 스티키 메뉴 */
 
 .starpoint_container {
     position: relative;
@@ -349,12 +349,12 @@ div#detailFront {
             content: '';
         }
     }
-} /* 상세 페이지 섹션 타이틀 */
+} /* 상세 페이지 섹션 타이틀 - 인터페이스로 가야 함 */
 
 button.btn_rotate {
     display: block;
     margin: 2.5rem auto;
-} /* 회전 버튼 */
+} /* 회전 버튼 - 인터페이스로 가야 함 */
 
 button.btn_scale {
     position: relative;
@@ -397,7 +397,7 @@ button.btn_scale {
             }
         }
     }
-} /* 배경 확대 버튼 */
+} /* 배경 확대 버튼 - 인터페이스로 가야 함 */
 
 section#partnerIntro {
     > .intro_text {
@@ -438,45 +438,39 @@ section#partnerMenu {
 
         > .button_container {
             padding: 0 .25rem;
-            border-bottom: var(--border);
 
             > button {
                 display: block;
+                position: relative;
                 float: left;
                 width: 5rem;
-                height: 2rem;
+                height: 1.75rem;
                 border-radius: 0;
-                background: rgb(var(--color_acc1));
+                background: rgba(var(--color_dark), .75);
                 box-shadow: none;
-                font-family: var(--ff_sans_n);
                 color: rgb(var(--color_light));
-                overflow: hidden;
-
-                &::before {
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: .5rem;
-                    height: .5rem;
-                    background: rgb(var(--color_bg));
-                    transform: translate(50%, -50%) rotate(45deg);
-                    content: '';
-                }
 
                 & + button {
                     margin-left: .05rem;
                 }
 
-                &.tab_selected {
-                    font-size: var(--fnt_16);
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: .25rem;
+                    content: '';
                 }
 
-                &:not(.tab_selected) {
-                    margin-top: .25rem;
-                    height: 1.75rem;
-                    background: rgba(var(--color_dark), .75);
-                    z-index: -1;
+                &.tab_selected {
+                    background: rgb(var(--color_light));
+                    color: rgb(var(--color_text));
+                    font-weight: bold;
+
+                    &::before {
+                        background: rgb(Var(--color_acc1));
+                    }
                 }
             }
         }
@@ -490,6 +484,7 @@ section#partnerMenu {
     padding: .5rem;
     height: 21rem;
     background: rgb(var(--color_light));
+    font-family: var(--ff_sans_p);
 
     > .course_img_container {
         width: 20rem;
@@ -533,20 +528,22 @@ section#partnerMenu {
         height: 100%;
 
         > .name_of {
-            height: 3rem;
+            padding: .5rem;
             border-bottom: .05rem solid #D9D7D2;
-            font-family: var(--ff_sans_p);
-            font-size: var(--fnt_20);
             text-align: center;
-            line-height: 3rem;
         }
 
         > .list_of {
+            font-size: var(--fnt_12);
             overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                background: transparent;
+            }
 
             > ul {
                 > li {
-                    padding: .75rem;
+                    padding: .75rem .5rem;
                 }
 
                 > hr {
@@ -556,10 +553,7 @@ section#partnerMenu {
         }
 
         > .price_of {
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding-top: .5rem;
+            padding: 1rem .25rem .5rem;
             background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
             font-family: var(--ff_price);
             font-size: var(--fnt_16);
@@ -660,11 +654,15 @@ section#partnerReview {
                     bottom: 0;
                     left: 0;
                     right: 0;
+                    padding: 2rem 0;
                     background: rgba(var(--color_dark), .5);
                     color: rgb(var(--color_light));
-                    font-size: var(--fnt_30);
                     text-align: center;
-                    line-height: 8rem;
+                    line-height: 1.6;
+
+                    > span {
+                        font-size: var(--fnt_30);
+                    }
                 }
             }
         } /* Picture Box */
