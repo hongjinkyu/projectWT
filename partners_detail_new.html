@@ -69,7 +69,7 @@
 
                     <div id="layerAccount">
                         <p class="user_name">
-                            <span data-grade="grade_regular">김누구</span> 님
+                            <span data-grade="grade_regular">김누구</span>
                         </p>
                         <button class="btn_account">
                             <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
@@ -188,7 +188,7 @@
                         <div class="detail_controller clr_fix">
                             <button class="btn_scale">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z"/></svg>
-                                <p>리뷰쓰기</p>
+                                <p>후기작성</p>
                             </button>
                             <button class="btn_scale">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0H24V24H0z"/><path d="M19 14v3h3v2h-3.001L19 22h-2l-.001-3H14v-2h3v-3h2zm1.243-9.243c2.262 2.268 2.34 5.88.236 8.235l-1.42-1.418c1.331-1.524 1.261-3.914-.232-5.404-1.503-1.499-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.991-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451l8.432 8.446L12 21.485 3.52 12.993c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228 2.349-2.109 5.979-2.039 8.242.228z"/></svg>
@@ -311,8 +311,364 @@
                             <hr class="hf" />
                         </div> <!-- .section_title -->
 
-                        asddas
+                        <div id="reviewList">
+                            <article class="review_container clr_fix" data-isthis-mine="false">
+                                <div class="review_pict_box">
+                                    <a href="#">
+                                        <img src="./resources/index/images/img38.jpg" alt="유저 업로드 이미지" />
+                                        <div class="blind_box">
+                                            10+
+                                        </div>
+                                    </a>
+                                </div>
 
+                                <div class="review_comment_box">
+                                    <h6 class="comment_title">아마도 그건</h6>
+                                    <p class="comment_content">
+                                        아마도 그건 사랑이었을 거야 희미하게 떠오르는 기억이<br />
+                                        이제야 그 마음을 알아버렸네 그대 눈에 비친 나의 모습을<br />
+                                        아마도 그건 사랑이었을 거야 돌아보면 아쉬운 그날들이<br />
+                                        자꾸만 아픔으로 내게 찾아와 떨리는 가슴 나를 슬프게 하네<br />
+                                        차가운 내 마음에 남은 너의 뒷모습 열린 문틈으로 너는 내게 다가올 것 같아<br />
+                                        한참을 멍하니 문만 바라보다 아침 햇살에 눈을 뜨고 말았네
+                                    </p>
+                                    <div class="comment_info">
+                                        <p class="user_name">
+                                            <img src="./resources/index/images/temp_profile_18.jpg" alt="유저 프로필 사진" />
+                                            <span>NegasonicTeenageWarhead</span>
+                                        </p>
+                                        <p class="written_date">
+                                            2022. 01. 01
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="review_button_box">
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>
+                                            </button>
+                                            댓글 (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0H24V24H0z"/><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"/></svg>
+                                            </button>
+                                            Like (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-2 2H5v14h14V9.243l2-2V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
+                                            </button>
+                                            수정하기
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z"/></svg>
+                                            </button>
+                                            삭제하기
+                                        </label>
+                                    </li>
+                                </ul>
+                            </article> <!-- Single Review Container -->
+
+                            <article class="review_container clr_fix" data-isthis-mine="false">
+                                <div class="review_pict_box">
+                                    <a href="#">
+                                        <img src="./resources/index/images/img40.jpg" alt="유저 업로드 이미지" />
+                                        <div class="blind_box">
+                                            4
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="review_comment_box">
+                                    <h6 class="comment_title">그리움만 쌓이네</h6>
+                                    <p class="comment_content">
+                                        다정했던 사람이여 나를 잊었나 벌써 나를 잊어버렸나<br />
+                                        그리움만 남겨놓고 나를 잊었나 벌써 나를 잊어버렸나<br />
+                                        그대 지금 그 누구를 사랑하는가 굳은 약속 변해버렸나<br />
+                                        예전에는 우린 서로 사랑했는데 이젠 맘이 변해버렸나<br />
+                                        아아 이별이 그리 쉬운가<br />
+                                        세월 가버렸다고 이젠 나를 잊고서 멀리 멀리 떠나가는가<br />
+                                        아아 나는 몰랐네 그대 맘 변한 줄<br />
+                                        난 정말 몰랐었네<br />
+                                        아아 나 너 하나만을 믿고 살았네 그대만을 믿었네<br />
+                                        네가 보고파서 나는 어쩌나 그리움만 쌓이네
+                                    </p>
+                                    <div class="comment_info">
+                                        <p class="user_name">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="유저 프로필 사진" />
+                                            <span>박복례</span>
+                                        </p>
+                                        <p class="written_date">
+                                            2021. 12. 24
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="review_button_box">
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>
+                                            </button>
+                                            댓글 (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0H24V24H0z"/><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"/></svg>
+                                            </button>
+                                            Like (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-2 2H5v14h14V9.243l2-2V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
+                                            </button>
+                                            수정하기
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z"/></svg>
+                                            </button>
+                                            삭제하기
+                                        </label>
+                                    </li>
+                                </ul>
+                            </article> <!-- Single Review Container -->
+
+                            <article class="review_container clr_fix" data-isthis-mine="true">
+                                <div class="review_pict_box">
+                                    <a href="#">
+                                        <img src="./resources/index/images/img31.jpg" alt="유저 업로드 이미지" />
+                                        <div class="blind_box">
+                                            7
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="review_comment_box">
+                                    <h6 class="comment_title">아름다운 이별</h6>
+                                    <p class="comment_content">
+                                        눈물이 흘러 이별인 걸 알았어<br />
+                                        힘없이 돌아서던 너의 뒷모습을 바라보며<br />
+                                        나만큼 너도 슬프다는 걸 알아<br />
+                                        하지만 견뎌야 해 추억이 아름답도록<br />
+                                        그 짧았던 만남도 슬픈 우리의 사랑도<br />
+                                        이젠 눈물로 지워야 할 상처뿐인데
+                                    </p>
+                                    <div class="comment_info">
+                                        <p class="user_name">
+                                            <img src="./resources/index/images/temp_profile_1.jpg" alt="유저 프로필 사진" />
+                                            <span>김누구</span>
+                                        </p>
+                                        <p class="written_date">
+                                            2021. 11. 08
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="review_button_box">
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>
+                                            </button>
+                                            댓글 (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0H24V24H0z"/><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"/></svg>
+                                            </button>
+                                            Like (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-2 2H5v14h14V9.243l2-2V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
+                                            </button>
+                                            수정하기
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z"/></svg>
+                                            </button>
+                                            삭제하기
+                                        </label>
+                                    </li>
+                                </ul>
+                            </article> <!-- Single Review Container -->
+
+                            <article class="review_container clr_fix" data-isthis-mine="false">
+                                <div class="review_pict_box">
+                                    <a href="#">
+                                        <img src="./resources/index/images/img39.jpg" alt="유저 업로드 이미지" />
+                                        <div class="blind_box" style="display: none;">
+                                            1
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="review_comment_box">
+                                    <h6 class="comment_title">카누를 타고 파라다이스에 갈 때</h6>
+                                    <p class="comment_content">
+                                        그저 형식적인 웃음도 그냥 물어보는 안부도<br />
+                                        괜히 오버하는 반응도 이젠 필요없는 짐일 뿐<br />
+                                        한껏 치장했던 옷들도 아직 할부 남은 새 차도<br />
+                                        무지 가슴졸인 복권도 모두 바다에 던져버려<br />
+                                        파라다이스<br />
+                                        솔직한 자유와 한때 타잔이 입던 옷가지 하나<br />
+                                        파라다이스<br />
+                                        좀 어리숙해도 있는 그대로 날 받아주는 곳
+                                    </p>
+                                    <div class="comment_info">
+                                        <p class="user_name">
+                                            <img src="./resources/index/images/temp_profile_15.jpg" alt="유저 프로필 사진" />
+                                            <span>Laurencin</span>
+                                        </p>
+                                        <p class="written_date">
+                                            2021. 09. 11
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="review_button_box">
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>
+                                            </button>
+                                            댓글 (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0H24V24H0z"/><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"/></svg>
+                                            </button>
+                                            Like (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-2 2H5v14h14V9.243l2-2V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
+                                            </button>
+                                            수정하기
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z"/></svg>
+                                            </button>
+                                            삭제하기
+                                        </label>
+                                    </li>
+                                </ul>
+                            </article> <!-- Single Review Container -->
+
+                            <article class="review_container clr_fix" data-isthis-mine="false">
+                                <div class="review_pict_box">
+                                    <a href="#">
+                                        <img src="./resources/index/images/img30.jpg" alt="유저 업로드 이미지" />
+                                        <div class="blind_box">
+                                            5
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="review_comment_box">
+                                    <h6 class="comment_title">아이돌</h6>
+                                    <p class="comment_content">
+                                        아무것도 모르고 유치한 감상에 빠지는 게 아니야<br />
+                                        어디까지나 비현실적이라는 것쯤 누구보다 잘 알아<br />
+                                        그래도 나는 꿈을 꾸잖아 이상한 이 세상에서도<br />
+                                        이해할 수 없다는 듯 눈을 흘기는 네가 난 더 불쌍해<br />
+                                        달콤한 데 빠지는 게 뭐가 나쁘단 건지<br />
+                                        헛된 망상에 빠지는 게 뭐가 나쁜지<br />
+                                        나는 사랑을 할 뿐야 쇼가 계속되는 동안<br />
+                                        아이돌
+                                    </p>
+                                    <div class="comment_info">
+                                        <p class="user_name">
+                                            <img src="./resources/index/images/temp_profile_12.jpg" alt="유저 프로필 사진" />
+                                            <span>최점숙</span>
+                                        </p>
+                                        <p class="written_date">
+                                            2021. 07. 12
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="review_button_box">
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>
+                                            </button>
+                                            댓글 (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0H24V24H0z"/><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"/></svg>
+                                            </button>
+                                            Like (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-2 2H5v14h14V9.243l2-2V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
+                                            </button>
+                                            수정하기
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z"/></svg>
+                                            </button>
+                                            삭제하기
+                                        </label>
+                                    </li>
+                                </ul>
+                            </article> <!-- Single Review Container -->
+
+                            <ul id="reviewPager">
+                                <li class="pager_prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+                                </li>
+                                <li class="current">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li class="pager_next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415z"/></svg>
+                                </li>
+                            </ul> <!-- #reviewPager -->
+                        </div> <!-- #reviewList -->
                     </section> <!-- #partnerReview -->
 
                     <section id="partnerDepth">

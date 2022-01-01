@@ -57,6 +57,29 @@ div#detailContents {
 }
 
 /* 상세 페이지 컨텐츠 */
+.user_name {
+	cursor: pointer;
+}
+.user_name > img {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border: var(--border);
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.user_name > span {
+	font-family: var(--ff_sans_p);
+	color: #707070;
+	font-size: var(--fnt_12);
+	font-weight: bold;
+}
+.user_name > span::after {
+	font-weight: normal;
+	content: " 님";
+}
+
+/* 유저 이름표 */
 div#detailSide_sticker {
 	position: -webkit-sticky;
 	position: sticky;
@@ -490,15 +513,144 @@ section#partnerMenu > div#courseTabContainer > .button_container > button:not(.t
 }
 
 /* 코스 요리 개별 탭 */
-section#partnerReview > .font-tester {
-	font-family: var(--ff_sans_h);
-	font-size: var(--fnt_24);
-	font-weight: lighter;
+/* 파트너 상세 페이지 후기 */
+#reviewList {
+	/* 후기 리스트 페이저 */
 }
-section#partnerReview > .normal-group {
-	font-size: var(--fnt_24);
+#reviewList > #reviewPager {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	-moz-column-gap: 0.5rem;
+	     column-gap: 0.5rem;
+	margin: 1rem auto 0;
+	padding: 1rem;
+	width: 18rem;
+	background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
+	font-family: var(--ff_eng);
+	font-size: var(--fnt_12);
+}
+#reviewList > #reviewPager > li {
+	width: 1.5rem;
+	height: 1.2rem;
+	border-radius: var(--bdr_outer);
+	text-align: center;
+	line-height: 1.2rem;
+	cursor: pointer;
+}
+#reviewList > #reviewPager > li.pager_prev {
+	margin-right: auto;
+}
+#reviewList > #reviewPager > li.pager_next {
+	margin-left: auto;
+}
+#reviewList > #reviewPager > li.current {
+	background: rgba(var(--color_dark), 0.75);
+	color: rgb(var(--color_light));
+	font-weight: bold;
 }
 
+/* 후기 리스트 */
+.review_container {
+	/* Button Box */
+}
+.review_container + .review_container {
+	margin-top: 1rem;
+}
+.review_container:is([data-isthis-mine=true]) .show_me_only {
+	display: initial;
+}
+.review_container:is([data-isthis-mine=false]) .show_me_only {
+	display: none;
+}
+.review_container > div {
+	float: left;
+	/* Picture Box */
+	/* Comment Box */
+}
+.review_container > div + div {
+	margin-left: 0.5rem;
+}
+.review_container > div.review_pict_box {
+	position: relative;
+	width: 8rem;
+	height: 8rem;
+	border-radius: var(--bdr_outer);
+	background: rgba(var(--color_dark), 0.75);
+	overflow: hidden;
+}
+.review_container > div.review_pict_box > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.review_container > div.review_pict_box > a > img {
+	width: inherit;
+	height: inherit;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.review_container > div.review_pict_box > a > .blind_box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(var(--color_dark), 0.5);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_30);
+	text-align: center;
+	line-height: 8rem;
+}
+.review_container > div.review_comment_box {
+	padding: 0.5rem;
+	width: 27rem;
+	min-height: 8rem;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_light));
+}
+.review_container > div.review_comment_box > .comment_title {
+	font-weight: normal;
+	line-height: 1rem;
+	letter-spacing: -0.05rem;
+}
+.review_container > div.review_comment_box > .comment_content {
+	margin: 0.5rem 0 1rem;
+	min-height: 3.5rem;
+	font-size: var(--fnt_12);
+	font-weight: 300;
+	line-height: 1.8;
+}
+.review_container > div.review_comment_box > .comment_info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.review_container > div.review_comment_box > .comment_info > .written_date {
+	color: #707070;
+	font-family: var(--ff_eng);
+	font-size: var(--fnt_12);
+}
+.review_container > .review_button_box {
+	float: left;
+	margin-left: 0.5rem;
+	width: 6rem;
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_12);
+}
+.review_container > .review_button_box > li > label {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+}
+.review_container > .review_button_box > li button {
+	padding: 0.5rem;
+	width: 2rem;
+	height: 2rem;
+}
+
+/* 후기 개별 아이템 */
 section#partnerDepth > .intro_detail {
 	margin-top: 1rem;
 }
