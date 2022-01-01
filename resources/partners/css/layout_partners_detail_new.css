@@ -708,7 +708,6 @@ section#partnerLocation > .location_container > div.map_container {
 }
 section#partnerLocation > .location_container > div.map_container > .location_gps {
 	display: flex;
-	justify-content: flex-end;
 	gap: 0.25rem;
 	align-items: center;
 	position: absolute;
