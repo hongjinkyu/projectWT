@@ -1,0 +1,272 @@
+/* ---------- Page-Specific Layout CSS (Partner (Detail) - Mobile) ---------- */
+/* ---------- 페이지 특정 요소 시작 ---------- */
+
+.section_title {
+    margin: 0 auto;
+    width: 90vw;
+    color: #707070;
+    text-align: center;
+
+    > h5 {
+        color: #707070;
+        font-size: var(--fnt_24);
+        font-weight: normal;
+    }
+
+    > p {
+        font-family: 'Berkshire Swash', cursive;
+        font-size: var(--fnt_12);
+        opacity: .5;
+    }
+
+    > hr {
+        position: relative;
+        margin-top: .75rem;
+        background: #D9D7D2;
+        overflow: visible;
+
+        &::before {
+            display: block;
+            position: absolute;
+            top: calc(50% - .15rem);
+            left: calc(50% - .15rem);
+            width: .3rem;
+            height: .3rem;
+            border: .05rem solid #D9D7D2;
+            background: rgb(var(--color_bg));
+            transform: rotateZ(45deg);
+            content: '';
+        }
+    }
+} /* 상세 페이지 섹션 타이틀 - 인터페이스로 가야 함 */
+
+section#mobileMainIMG {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, .75) 0%, transparent 100%);
+        pointer-events: none;
+        content: '';
+    }
+
+    > .grid_item {
+        float: left;
+        width: 25vw;
+        height: 12.5vh;
+        background: yellow;
+
+        &.half {
+            width: 100vw;
+            height: 50vh;
+            background: #ccc;
+        }
+
+        &.quarter {
+            width: 50vw;
+            height: 50vh;
+            background: red;
+        }
+
+        &.octo {
+            width: 50vw;
+            height: 25vh;
+            background: green;
+        }
+
+        > img {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+        }
+    }
+
+    > #mobilePartnerTitle {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 0;
+        right: 2.5rem;
+        background: rgba(var(--color_dark), .5);
+        backdrop-filter: blur(.5rem);
+        color: rgb(var(--color_light));
+
+        > .title_desc_box {
+            padding: 1rem;
+
+            > p {
+                line-height: 1.6;
+                opacity: .75;
+            }
+
+            > h3 {
+                margin-top: 1rem;
+                color: rgb(var(--color_light));
+                font-size: 10vw;
+            }
+        }
+
+        > .title_control_box {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            border-top: .05rem solid rgba(var(--color_light), .1);
+            padding: 1rem;
+        }
+    }
+} /* 모바일 서브 페이지 메인 이미지 */
+
+section#mobilePartnerInfo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100vw;
+    height: 100vh;
+
+    > #partnerCircleIMG {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        box-shadow: 0 .25rem .75rem rgba(var(--color_dark), .15);
+    }
+
+    > .partner_name {
+        color: #707070;
+        font-size: var(--fnt_24);
+    }
+
+    > .hashtag_container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3rem;
+            z-index: 1;
+            content: '';
+        }
+
+        &::before {
+            left: 0;
+            background: linear-gradient(to right, rgb(var(--color_bg)) 0%, transparent 100%);
+        }
+
+        &::after {
+            right: 0;
+            background: linear-gradient(to left, rgb(var(--color_bg)) 0%, transparent 100%);
+        }
+
+        > .hashtag_marquee {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            width: 120%;
+            font-family: var(--ff_sans_p);
+            color: #707070;
+            animation: marquee 10s linear infinite forwards;
+            z-index: 0;
+        }
+    }
+
+    > hr {
+        position: relative;
+        margin: 0 auto;
+        width: 90vw;
+        background: #D9D7D2;
+        overflow: visible;
+
+        &::before {
+            display: block;
+            position: absolute;
+            top: calc(50% - .15rem);
+            left: calc(50% - .15rem);
+            width: .3rem;
+            height: .3rem;
+            border: .05rem solid #D9D7D2;
+            background: rgb(var(--color_bg));
+            transform: rotateZ(45deg);
+            content: '';
+        }
+    }
+
+    > .intro_text {
+        position: relative;
+        margin: 3rem auto;
+        width: 80vw;
+        color: #707070;
+        font-weight: lighter;
+        text-align: center;
+        letter-spacing: -.05rem;
+        line-height: 1.5;
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: -1rem;
+            font-family: var(--ff_serif);
+            font-size: 4rem;
+            opacity: .5;
+        }
+
+        &::before {
+            right: calc(100%);
+            content: '“';
+        }
+
+        &::after {
+            left: calc(100%);
+            content: '”';
+        }
+    }
+} /* 모바일 파트너 상세 페이지 정보 */
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+} /* 해쉬태그 마퀴 애니메이션 */
+
+section#mobilePartnerCourse {
+    width: 100vw;
+    height: 100vh;
+}
+
+section#mobilePartnerReview {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+section#mobilePartnerDetail {
+    width: 100vw;
+    height: 100vh;
+}
+
+section#mobilePartnerLocation {
+    width: 100vw;
+    height: 100vh;
+
+    
+}
+
+/* ---------- 페이지 특정 요소 종료 ---------- */
+/* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
+
+
+
+/* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */

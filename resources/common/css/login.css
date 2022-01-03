@@ -16,24 +16,27 @@
 }
 #frmLogin > .box_CI {
 	float: left;
-	width: 12rem;
+	width: 16rem;
 	text-align: center;
 }
 #frmLogin > .box_CI h1#mainLogo {
 	margin-top: 3rem;
+	font-size: var(--fnt_30);
 }
 #frmLogin > .box_button {
 	float: left;
 	padding: 0.5rem;
-	width: 18rem;
+	width: 14rem;
 }
 #frmLogin > .box_button > button {
 	display: block;
 	padding: 0.75rem;
 	width: 100%;
-	box-shadow: none;
+	box-shadow: inset 0 -0.1rem 0 rgba(var(--color_dark), 0.1);
 	color: rgb(var(--color_light));
 	font-size: var(--fnt_16);
+	text-shadow: 0.05rem 0.05rem 0 rgba(var(--color_dark), 0.5);
+	text-align: start;
 }
 #frmLogin > .box_button > button + button {
 	margin-top: 0.25rem;
@@ -46,11 +49,16 @@
 }
 #frmLogin > .box_button > button#btnKakao {
 	background: #fee102;
+	color: rgb(var(--color_text));
 }
 #frmLogin > .box_button > button#btnFacebook {
 	background: #166fe5;
 }
+#frmLogin > .box_button > button > span {
+	font-weight: bold;
+}
 #frmLogin > .goto_back {
+	display: block;
 	background: rgba(var(--color_dark), 0.75);
 	color: rgb(var(--color_light));
 }

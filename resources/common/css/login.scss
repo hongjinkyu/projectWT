@@ -16,26 +16,29 @@
 
     > .box_CI {
         float: left;
-        width: 12rem;
+        width: 16rem;
         text-align: center;
 
         h1#mainLogo {
             margin-top: 3rem;
+            font-size: var(--fnt_30);
         }
     }
 
     > .box_button {
         float: left;
         padding: .5rem;
-        width: 18rem;
+        width: 14rem;
         
         > button {
             display: block;
             padding: .75rem;
             width: 100%;
-            box-shadow: none;
+            box-shadow: inset 0 -.1rem 0 rgba(var(--color_dark), .1);
             color: rgb(var(--color_light));
             font-size: var(--fnt_16);
+            text-shadow: .05rem .05rem 0 rgba(var(--color_dark), .5);
+            text-align: start;
 
             & + button {
                 margin-top: .25rem;
@@ -51,15 +54,21 @@
 
             &#btnKakao {
                 background: rgb(254, 225, 2);
+                color: rgb(var(--color_text));
             }
 
             &#btnFacebook {
                 background: rgb(22, 111, 229);
             }
+
+            > span {
+                font-weight: bold;
+            }
         }
     }
 
     > .goto_back {
+        display: block;
         background: rgba(var(--color_dark), .75);
         color: rgb(var(--color_light));
     }

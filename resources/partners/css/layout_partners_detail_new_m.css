@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/* ---------- Page-Specific Layout CSS (Partner (Detail) - Mobile) ---------- */
+/* ---------- 페이지 특정 요소 시작 ---------- */
+.section_title {
+	margin: 0 auto;
+	width: 90vw;
+	color: #707070;
+	text-align: center;
+}
+.section_title > h5 {
+	color: #707070;
+	font-size: var(--fnt_24);
+	font-weight: normal;
+}
+.section_title > p {
+	font-family: "Berkshire Swash", cursive;
+	font-size: var(--fnt_12);
+	opacity: 0.5;
+}
+.section_title > hr {
+	position: relative;
+	margin-top: 0.75rem;
+	background: #D9D7D2;
+	overflow: visible;
+}
+.section_title > hr::before {
+	display: block;
+	position: absolute;
+	top: calc(50% - .15rem);
+	left: calc(50% - .15rem);
+	width: 0.3rem;
+	height: 0.3rem;
+	border: 0.05rem solid #D9D7D2;
+	background: rgb(var(--color_bg));
+	transform: rotateZ(45deg);
+	content: "";
+}
+
+/* 상세 페이지 섹션 타이틀 - 인터페이스로 가야 함 */
+section#mobileMainIMG {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+section#mobileMainIMG::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+	pointer-events: none;
+	content: "";
+}
+section#mobileMainIMG > .grid_item {
+	float: left;
+	width: 25vw;
+	height: 12.5vh;
+	background: yellow;
+}
+section#mobileMainIMG > .grid_item.half {
+	width: 100vw;
+	height: 50vh;
+	background: #ccc;
+}
+section#mobileMainIMG > .grid_item.quarter {
+	width: 50vw;
+	height: 50vh;
+	background: red;
+}
+section#mobileMainIMG > .grid_item.octo {
+	width: 50vw;
+	height: 25vh;
+	background: green;
+}
+section#mobileMainIMG > .grid_item > img {
+	width: inherit;
+	height: inherit;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+section#mobileMainIMG > #mobilePartnerTitle {
+	position: absolute;
+	bottom: 2.5rem;
+	left: 0;
+	right: 2.5rem;
+	background: rgba(var(--color_dark), 0.5);
+	-webkit-backdrop-filter: blur(0.5rem);
+	        backdrop-filter: blur(0.5rem);
+	color: rgb(var(--color_light));
+}
+section#mobileMainIMG > #mobilePartnerTitle > .title_desc_box {
+	padding: 1rem;
+}
+section#mobileMainIMG > #mobilePartnerTitle > .title_desc_box > p {
+	line-height: 1.6;
+	opacity: 0.75;
+}
+section#mobileMainIMG > #mobilePartnerTitle > .title_desc_box > h3 {
+	margin-top: 1rem;
+	color: rgb(var(--color_light));
+	font-size: 10vw;
+}
+section#mobileMainIMG > #mobilePartnerTitle > .title_control_box {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	border-top: 0.05rem solid rgba(var(--color_light), 0.1);
+	padding: 1rem;
+}
+
+/* 모바일 서브 페이지 메인 이미지 */
+section#mobilePartnerInfo {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	width: 100vw;
+	height: 100vh;
+}
+section#mobilePartnerInfo > #partnerCircleIMG {
+	width: 8rem;
+	height: 8rem;
+	border-radius: 50%;
+	box-shadow: 0 0.25rem 0.75rem rgba(var(--color_dark), 0.15);
+}
+section#mobilePartnerInfo > .partner_name {
+	color: #707070;
+	font-size: var(--fnt_24);
+}
+section#mobilePartnerInfo > .hashtag_container {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+section#mobilePartnerInfo > .hashtag_container::before, section#mobilePartnerInfo > .hashtag_container::after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 3rem;
+	z-index: 1;
+	content: "";
+}
+section#mobilePartnerInfo > .hashtag_container::before {
+	left: 0;
+	background: linear-gradient(to right, rgb(var(--color_bg)) 0%, transparent 100%);
+}
+section#mobilePartnerInfo > .hashtag_container::after {
+	right: 0;
+	background: linear-gradient(to left, rgb(var(--color_bg)) 0%, transparent 100%);
+}
+section#mobilePartnerInfo > .hashtag_container > .hashtag_marquee {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	width: 120%;
+	font-family: var(--ff_sans_p);
+	color: #707070;
+	-webkit-animation: marquee 10s linear infinite forwards;
+	        animation: marquee 10s linear infinite forwards;
+	z-index: 0;
+}
+section#mobilePartnerInfo > hr {
+	position: relative;
+	margin: 0 auto;
+	width: 90vw;
+	background: #D9D7D2;
+	overflow: visible;
+}
+section#mobilePartnerInfo > hr::before {
+	display: block;
+	position: absolute;
+	top: calc(50% - .15rem);
+	left: calc(50% - .15rem);
+	width: 0.3rem;
+	height: 0.3rem;
+	border: 0.05rem solid #D9D7D2;
+	background: rgb(var(--color_bg));
+	transform: rotateZ(45deg);
+	content: "";
+}
+section#mobilePartnerInfo > .intro_text {
+	position: relative;
+	margin: 3rem auto;
+	width: 80vw;
+	color: #707070;
+	font-weight: lighter;
+	text-align: center;
+	letter-spacing: -0.05rem;
+	line-height: 1.5;
+}
+section#mobilePartnerInfo > .intro_text::before, section#mobilePartnerInfo > .intro_text::after {
+	position: absolute;
+	top: -1rem;
+	font-family: var(--ff_serif);
+	font-size: 4rem;
+	opacity: 0.5;
+}
+section#mobilePartnerInfo > .intro_text::before {
+	right: calc(100%);
+	content: "“";
+}
+section#mobilePartnerInfo > .intro_text::after {
+	left: calc(100%);
+	content: "”";
+}
+
+/* 모바일 파트너 상세 페이지 정보 */
+@-webkit-keyframes marquee {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+@keyframes marquee {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+/* 해쉬태그 마퀴 애니메이션 */
+section#mobilePartnerCourse {
+	width: 100vw;
+	height: 100vh;
+}
+
+section#mobilePartnerReview {
+	width: 100vw;
+	min-height: 100vh;
+}
+
+section#mobilePartnerDetail {
+	width: 100vw;
+	height: 100vh;
+}
+
+section#mobilePartnerLocation {
+	width: 100vw;
+	height: 100vh;
+}
+
+/* ---------- 페이지 특정 요소 종료 ---------- */
+/* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
+/* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */
