@@ -62,19 +62,25 @@
         font-size: var(--fnt_24);
     }
 
-    ul#footLinks {
-        flex-flow: column nowrap;
-        align-items: flex-start;
-        row-gap: 1rem;
-
-        > .flinks_sep {
-            display: none;
+    #footBase {
+        > img {
+            margin: 2rem auto;
         }
     }
 
+    ul#footLinks {
+        display: none;
+    }
+
     div#footContent {
-        flex-flow: column nowrap;
-        row-gap: 2rem;
+        > div {
+            margin-top: 2rem;
+            width: 100%;
+            
+            & + div {
+                margin-left: 0;
+            }
+        }
     }
 
     /* 공통 요소 끝 */
@@ -342,10 +348,6 @@
         p:last-of-type {
             font-size: var(--fnt_12);
         }
-    }
-
-    div#footContent {
-        display: none;
     }
 
     .offer_food > .list_food > dd.food_pict {

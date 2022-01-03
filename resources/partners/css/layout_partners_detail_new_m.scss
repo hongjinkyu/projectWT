@@ -2,7 +2,7 @@
 /* ---------- 페이지 특정 요소 시작 ---------- */
 
 .section_title {
-    margin: 0 auto;
+    margin: 1rem auto;
     width: 90vw;
     color: #707070;
     text-align: center;
@@ -122,7 +122,7 @@ section#mobileMainIMG {
     }
 } /* 모바일 서브 페이지 메인 이미지 */
 
-section#mobilePartnerInfo {
+section#mobilePartnerIntro {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -245,6 +245,24 @@ section#mobilePartnerInfo {
 section#mobilePartnerCourse {
     width: 100vw;
     height: 100vh;
+
+    > .mobile_tab_container {
+        > .mobile_tab_buttons {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            gap: .25rem;
+
+            > button {
+                padding: .5rem;
+                width: 20vw;
+                border-radius: 0;
+                background: rgba(var(--color_dark), .75);
+                box-shadow: none;
+                color: rgb(var(--color_light));
+            }
+        }
+    }
 }
 
 section#mobilePartnerReview {
@@ -260,8 +278,6 @@ section#mobilePartnerDetail {
 section#mobilePartnerLocation {
     width: 100vw;
     height: 100vh;
-
-    
 }
 
 /* ---------- 페이지 특정 요소 종료 ---------- */

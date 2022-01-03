@@ -2,7 +2,7 @@
 /* ---------- Page-Specific Layout CSS (Partner (Detail) - Mobile) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
 .section_title {
-	margin: 0 auto;
+	margin: 1rem auto;
 	width: 90vw;
 	color: #707070;
 	text-align: center;
@@ -111,7 +111,7 @@ section#mobileMainIMG > #mobilePartnerTitle > .title_control_box {
 }
 
 /* 모바일 서브 페이지 메인 이미지 */
-section#mobilePartnerInfo {
+section#mobilePartnerIntro {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
@@ -120,22 +120,22 @@ section#mobilePartnerInfo {
 	width: 100vw;
 	height: 100vh;
 }
-section#mobilePartnerInfo > #partnerCircleIMG {
+section#mobilePartnerIntro > #partnerCircleIMG {
 	width: 8rem;
 	height: 8rem;
 	border-radius: 50%;
 	box-shadow: 0 0.25rem 0.75rem rgba(var(--color_dark), 0.15);
 }
-section#mobilePartnerInfo > .partner_name {
+section#mobilePartnerIntro > .partner_name {
 	color: #707070;
 	font-size: var(--fnt_24);
 }
-section#mobilePartnerInfo > .hashtag_container {
+section#mobilePartnerIntro > .hashtag_container {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
 }
-section#mobilePartnerInfo > .hashtag_container::before, section#mobilePartnerInfo > .hashtag_container::after {
+section#mobilePartnerIntro > .hashtag_container::before, section#mobilePartnerIntro > .hashtag_container::after {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -143,15 +143,15 @@ section#mobilePartnerInfo > .hashtag_container::before, section#mobilePartnerInf
 	z-index: 1;
 	content: "";
 }
-section#mobilePartnerInfo > .hashtag_container::before {
+section#mobilePartnerIntro > .hashtag_container::before {
 	left: 0;
 	background: linear-gradient(to right, rgb(var(--color_bg)) 0%, transparent 100%);
 }
-section#mobilePartnerInfo > .hashtag_container::after {
+section#mobilePartnerIntro > .hashtag_container::after {
 	right: 0;
 	background: linear-gradient(to left, rgb(var(--color_bg)) 0%, transparent 100%);
 }
-section#mobilePartnerInfo > .hashtag_container > .hashtag_marquee {
+section#mobilePartnerIntro > .hashtag_container > .hashtag_marquee {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
@@ -162,14 +162,14 @@ section#mobilePartnerInfo > .hashtag_container > .hashtag_marquee {
 	        animation: marquee 10s linear infinite forwards;
 	z-index: 0;
 }
-section#mobilePartnerInfo > hr {
+section#mobilePartnerIntro > hr {
 	position: relative;
 	margin: 0 auto;
 	width: 90vw;
 	background: #D9D7D2;
 	overflow: visible;
 }
-section#mobilePartnerInfo > hr::before {
+section#mobilePartnerIntro > hr::before {
 	display: block;
 	position: absolute;
 	top: calc(50% - .15rem);
@@ -181,7 +181,7 @@ section#mobilePartnerInfo > hr::before {
 	transform: rotateZ(45deg);
 	content: "";
 }
-section#mobilePartnerInfo > .intro_text {
+section#mobilePartnerIntro > .intro_text {
 	position: relative;
 	margin: 3rem auto;
 	width: 80vw;
@@ -191,18 +191,18 @@ section#mobilePartnerInfo > .intro_text {
 	letter-spacing: -0.05rem;
 	line-height: 1.5;
 }
-section#mobilePartnerInfo > .intro_text::before, section#mobilePartnerInfo > .intro_text::after {
+section#mobilePartnerIntro > .intro_text::before, section#mobilePartnerIntro > .intro_text::after {
 	position: absolute;
 	top: -1rem;
 	font-family: var(--ff_serif);
 	font-size: 4rem;
 	opacity: 0.5;
 }
-section#mobilePartnerInfo > .intro_text::before {
+section#mobilePartnerIntro > .intro_text::before {
 	right: calc(100%);
 	content: "“";
 }
-section#mobilePartnerInfo > .intro_text::after {
+section#mobilePartnerIntro > .intro_text::after {
 	left: calc(100%);
 	content: "”";
 }
@@ -228,6 +228,20 @@ section#mobilePartnerInfo > .intro_text::after {
 section#mobilePartnerCourse {
 	width: 100vw;
 	height: 100vh;
+}
+section#mobilePartnerCourse > .mobile_tab_container > .mobile_tab_buttons {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	gap: 0.25rem;
+}
+section#mobilePartnerCourse > .mobile_tab_container > .mobile_tab_buttons > button {
+	padding: 0.5rem;
+	width: 20vw;
+	border-radius: 0;
+	background: rgba(var(--color_dark), 0.75);
+	box-shadow: none;
+	color: rgb(var(--color_light));
 }
 
 section#mobilePartnerReview {
