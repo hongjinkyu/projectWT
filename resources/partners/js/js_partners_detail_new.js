@@ -2,6 +2,16 @@
 
 $(document).ready(function() { // jQuery Load
 
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 400) {
+            $('.detail_hiddentitle').slideDown(150);
+            // $('.detail_hiddenbutton').fadeIn(150);
+        } else {
+            $('.detail_hiddentitle').slideUp(150);
+            // $('.detail_hiddenbutton').fadeOut(150);
+        }
+    });
+
     // ---------- Actual Codes ----------
 
     $('.starpoint_selector').hover(function() {
@@ -26,6 +36,18 @@ $(document).ready(function() { // jQuery Load
 
             $('.starpoint_total').fadeOut(150);
             $('.starpoint_mine').fadeIn(150);
+        });
+    });
+
+    $('.button_container > button').each(function() {
+        $(this).click(function() {            
+            $(this).siblings().removeClass('tab_selected');
+            $(this).addClass('tab_selected');
+
+            let tab_href = $(this).attr('data-tab-target');
+
+            $('.course_single_tab').removeClass('show');
+            $('.' + tab_href + '').addClass('show');
         });
     });
 

@@ -88,8 +88,8 @@ div#detailSide_sticker {
     > .detail_hiddentitle {
         display: none;
 
-        &.scrolled {
-            display: block;
+        > p {
+            margin-top: .25rem;
         }
     }
 
@@ -163,10 +163,6 @@ div#detailSide_sticker {
 
     > .detail_hiddenbutton {
         display: none;
-
-        &.scrolled {
-            display: block;
-        }
     }
 } /* 서브 페이지 스티키 메뉴 */
 
@@ -437,7 +433,7 @@ section#partnerMenu {
         width: 100%;
 
         > .button_container {
-            padding: 0 .25rem;
+            padding: 0 .5rem;
 
             > button {
                 display: block;
@@ -478,13 +474,19 @@ section#partnerMenu {
 } /* 파트너 상세 페이지 코스 요리 소개 */
 
 .course_single_tab {
-    display: flex;
+    display: none;
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: .5rem;
     height: 21rem;
+    border-bottom-left-radius: var(--bdr_outer);
     background: rgb(var(--color_light));
+    box-shadow: 0 .05rem 0 rgba(var(--color_dark), .1);
     font-family: var(--ff_sans_p);
+
+    &.show {
+        display: flex;
+    }
 
     > .course_img_container {
         width: 20rem;
@@ -549,6 +551,20 @@ section#partnerMenu {
                 > hr {
                     background: #D9D7D2;
                 }
+
+                dt {
+                    font-size: var(--fnt_14);
+                    font-weight: bold;
+
+                    &::before {
+                        content: '+ ';
+                    }
+                }
+
+                dd {
+                    padding: .5rem .25rem 0;
+                    opacity: .75;
+                }
             }
         }
 
@@ -556,8 +572,13 @@ section#partnerMenu {
             padding: 1rem .25rem .5rem;
             background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
             font-family: var(--ff_price);
-            font-size: var(--fnt_16);
             text-align: end;
+
+            > span {
+                font-family: var(--ff_eng);
+                font-size: var(--fnt_20);
+                font-weight: bold;
+            }
         }
     }
 } /* 코스 요리 개별 탭 */
@@ -607,7 +628,7 @@ section#partnerReview {
 
 .review_container {
     & + .review_container {
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 
     &:is([data-isthis-mine="true"]) {
@@ -673,6 +694,7 @@ section#partnerReview {
             min-height: 8rem;
             border-radius: var(--bdr_outer);
             background: rgb(var(--color_light));
+            box-shadow: 0 .05rem 0 rgba(var(--color_dark), .1);
 
             > .comment_title {
                 font-weight: normal;

@@ -1029,7 +1029,7 @@ aside#modalInfo > .int_wrap > .modal_btn {
 .card_item .card_desc > .card_title h5 {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	max-height: 2rem;
+	height: 2rem;
 	-webkit-line-clamp: 2;
 	text-overflow: ellipsis;
 	overflow: hidden;

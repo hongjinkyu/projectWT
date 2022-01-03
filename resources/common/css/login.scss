@@ -9,191 +9,58 @@
 }
 
 #frmLogin {
-    display: flex;
-    flex-flow: column nowrap;
     position: relative;
     margin: auto;
-    padding: .5rem;
-    width: 20rem;
-    background: #fff;
-    box-shadow: var(--shd_minor);
+    width: 30rem;
     font-family: var(--ff_sans_p);
-}
 
-.backtomain {
-    position: absolute;
-    top: .25rem;
-    left: .25rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: rgb(var(--color_text));
-    color: rgb(var(--color_light));
-    cursor: pointer;
+    > .box_CI {
+        float: left;
+        width: 12rem;
+        text-align: center;
 
-    > span {
-        display: block;
-        position: absolute;
-        top: calc(50% - .05rem);
-        left: 32%;
-        width: 40%;
-        height: .1rem;
-        border-radius: .05rem;
-        background: rgb(var(--color_light));
-        content: '';
-
-        &:first-child {
-            transform-origin: .05rem 50%;
-            transform: rotate(45deg);
-        }
-
-        &:last-child {
-            transform-origin: .05rem 50%;
-            transform: rotate(-45deg);
+        h1#mainLogo {
+            margin-top: 3rem;
         }
     }
 
-    &:hover {
-        background: rgb(var(--color_point1));
-        transition: .3s;
-
-        > span {
-            left: 25%;
-            transition: .3s;
-        }
-
-        &::before {
-            display: block;
-            position: absolute;
-            top: calc(50% - .625rem);
-            left: calc(100% + .25rem);
-            padding: .25rem;
-            width: max-content;
-            border-radius: var(--bdr_outer);
-            background: rgb(var(--color_text));
-            content: '이전 페이지로';
-        }
-    }
-}
-
-h5 {
-    margin: 2rem 0 1rem;
-    font-weight: normal;
-}
-
-.frm_title {
-    h1#mainLogo {
-        margin: 0 auto;
-        height: auto;
-    }
-}
-
-.btn_container {
-    margin: 1rem 0;
-    text-align: end;
-}
-
-.field_login {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: .5rem;
-
-    label[for="txtID"],
-    label[for="txtPW"] {
-        margin-bottom: .5rem;
-        color: rgb(var(--color_footer));
-        font-size: var(--fnt_12);
-        text-align: end;
-    }
-
-    input[type="email"],
-    input[type="password"] {
+    > .box_button {
+        float: left;
         padding: .5rem;
-        border-bottom: .05rem solid rgb(var(--color_text));
-        border-radius: 0;
-        background: transparent;
-        font-size: var(--fnt_14);
-
-        &:focus {
-            padding-bottom: .4rem;
-            border-bottom: .15rem solid rgb(var(--color_acc1));
-            transition: .1s;
-        }
-    }
-
-    .btn_login {
-        padding: .75rem;
-        border: var(--border);
-        font-size: var(--fnt_16);
-
-        &:hover {
-            border-color: rgb(var(--color_acc2));
-            background: rgb(var(--color_acc2));
+        width: 18rem;
+        
+        > button {
+            display: block;
+            padding: .75rem;
+            width: 100%;
+            box-shadow: none;
             color: rgb(var(--color_light));
-            transition: .3s;
+            font-size: var(--fnt_16);
+
+            & + button {
+                margin-top: .25rem;
+            }
+
+            &#btnGoogle {
+                background: rgb(234, 67, 53);
+            }
+
+            &#btnNaver {
+                background: rgb(25, 206, 96);
+            }
+
+            &#btnKakao {
+                background: rgb(254, 225, 2);
+            }
+
+            &#btnFacebook {
+                background: rgb(22, 111, 229);
+            }
         }
     }
 
-    p {
-        color: rgba(var(--color_text), .5);
-        font-size: var(--fnt_12);
-        text-align: end;
-
-        a:hover,
-        a:active {
-            color: rgb(var(--color_acc1));
-        }
-    }
-}
-
-.other_methods {
-    margin: auto 0;
-
-    button {
-        display: block;
-        padding: .75rem;
-        width: 100%;
-
-        & + button {
-            margin-top: .25rem;
-        }
-    }
-
-    .btn_google {
-        background: rgba(217, 48, 37, .5);
+    > .goto_back {
+        background: rgba(var(--color_dark), .75);
         color: rgb(var(--color_light));
-    
-        &:hover {
-            background: rgba(217, 48, 37, 1);
-        }
     }
-    
-    .btn_kakao {
-        background: rgba(243, 220, 0, .5);
-    
-        &:hover {
-            background: rgba(243, 220, 0, 1);
-        }
-    }
-    
-    .btn_naver {
-        background: rgba(25, 206, 96, .5);
-        color: rgb(var(--color_light));
-    
-        &:hover {
-            background: rgba(25, 206, 96, 1);
-        }
-    }
-    
-    .btn_facebook {
-        background: rgba(24, 119, 242, .5);
-        color: rgb(var(--color_light));
-    
-        &:hover {
-            background: rgba(24, 119, 242, 1);
-        }
-    }
-}
-
-#copyRights {
-    margin-top: 1rem;
 }

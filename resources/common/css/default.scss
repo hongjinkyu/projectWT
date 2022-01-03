@@ -242,8 +242,9 @@ a#skipToMain {
     top: 0;
     left: 1rem;
     padding: .5rem;
-    background: white;
-    box-shadow: 0 -.25rem 1rem -.25rem rgba(0, 0, 0, .5);
+    background: rgba(var(--color_dark), .75);
+    font-family: var(--ff_eng);
+    color: rgb(var(--color_light));
     transform: translateY(-100%);
     z-index: 1000;
 

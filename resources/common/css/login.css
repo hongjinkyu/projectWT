@@ -9,169 +9,48 @@
 }
 
 #frmLogin {
-	display: flex;
-	flex-flow: column nowrap;
 	position: relative;
 	margin: auto;
-	padding: 0.5rem;
-	width: 20rem;
-	background: #fff;
-	box-shadow: var(--shd_minor);
+	width: 30rem;
 	font-family: var(--ff_sans_p);
 }
-
-.backtomain {
-	position: absolute;
-	top: 0.25rem;
-	left: 0.25rem;
-	width: 1.5rem;
-	height: 1.5rem;
-	background: rgb(var(--color_text));
-	color: rgb(var(--color_light));
-	cursor: pointer;
+#frmLogin > .box_CI {
+	float: left;
+	width: 12rem;
+	text-align: center;
 }
-.backtomain > span {
-	display: block;
-	position: absolute;
-	top: calc(50% - .05rem);
-	left: 32%;
-	width: 40%;
-	height: 0.1rem;
-	border-radius: 0.05rem;
-	background: rgb(var(--color_light));
-	content: "";
+#frmLogin > .box_CI h1#mainLogo {
+	margin-top: 3rem;
 }
-.backtomain > span:first-child {
-	transform-origin: 0.05rem 50%;
-	transform: rotate(45deg);
-}
-.backtomain > span:last-child {
-	transform-origin: 0.05rem 50%;
-	transform: rotate(-45deg);
-}
-.backtomain:hover {
-	background: rgb(var(--color_point1));
-	transition: 0.3s;
-}
-.backtomain:hover > span {
-	left: 25%;
-	transition: 0.3s;
-}
-.backtomain:hover::before {
-	display: block;
-	position: absolute;
-	top: calc(50% - .625rem);
-	left: calc(100% + .25rem);
-	padding: 0.25rem;
-	width: -webkit-max-content;
-	width: -moz-max-content;
-	width: max-content;
-	border-radius: var(--bdr_outer);
-	background: rgb(var(--color_text));
-	content: "이전 페이지로";
-}
-
-h5 {
-	margin: 2rem 0 1rem;
-	font-weight: normal;
-}
-
-.frm_title h1#mainLogo {
-	margin: 0 auto;
-	height: auto;
-}
-
-.btn_container {
-	margin: 1rem 0;
-	text-align: end;
-}
-
-.field_login {
-	display: flex;
-	flex-flow: column nowrap;
-	gap: 0.5rem;
-}
-.field_login label[for=txtID],
-.field_login label[for=txtPW] {
-	margin-bottom: 0.5rem;
-	color: rgb(var(--color_footer));
-	font-size: var(--fnt_12);
-	text-align: end;
-}
-.field_login input[type=email],
-.field_login input[type=password] {
+#frmLogin > .box_button {
+	float: left;
 	padding: 0.5rem;
-	border-bottom: 0.05rem solid rgb(var(--color_text));
-	border-radius: 0;
-	background: transparent;
-	font-size: var(--fnt_14);
+	width: 18rem;
 }
-.field_login input[type=email]:focus,
-.field_login input[type=password]:focus {
-	padding-bottom: 0.4rem;
-	border-bottom: 0.15rem solid rgb(var(--color_acc1));
-	transition: 0.1s;
-}
-.field_login .btn_login {
-	padding: 0.75rem;
-	border: var(--border);
-	font-size: var(--fnt_16);
-}
-.field_login .btn_login:hover {
-	border-color: rgb(var(--color_acc2));
-	background: rgb(var(--color_acc2));
-	color: rgb(var(--color_light));
-	transition: 0.3s;
-}
-.field_login p {
-	color: rgba(var(--color_text), 0.5);
-	font-size: var(--fnt_12);
-	text-align: end;
-}
-.field_login p a:hover,
-.field_login p a:active {
-	color: rgb(var(--color_acc1));
-}
-
-.other_methods {
-	margin: auto 0;
-}
-.other_methods button {
+#frmLogin > .box_button > button {
 	display: block;
 	padding: 0.75rem;
 	width: 100%;
+	box-shadow: none;
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_16);
 }
-.other_methods button + button {
+#frmLogin > .box_button > button + button {
 	margin-top: 0.25rem;
 }
-.other_methods .btn_google {
-	background: rgba(217, 48, 37, 0.5);
-	color: rgb(var(--color_light));
+#frmLogin > .box_button > button#btnGoogle {
+	background: #ea4335;
 }
-.other_methods .btn_google:hover {
-	background: #d93025;
-}
-.other_methods .btn_kakao {
-	background: rgba(243, 220, 0, 0.5);
-}
-.other_methods .btn_kakao:hover {
-	background: #f3dc00;
-}
-.other_methods .btn_naver {
-	background: rgba(25, 206, 96, 0.5);
-	color: rgb(var(--color_light));
-}
-.other_methods .btn_naver:hover {
+#frmLogin > .box_button > button#btnNaver {
 	background: #19ce60;
 }
-.other_methods .btn_facebook {
-	background: rgba(24, 119, 242, 0.5);
+#frmLogin > .box_button > button#btnKakao {
+	background: #fee102;
+}
+#frmLogin > .box_button > button#btnFacebook {
+	background: #166fe5;
+}
+#frmLogin > .goto_back {
+	background: rgba(var(--color_dark), 0.75);
 	color: rgb(var(--color_light));
-}
-.other_methods .btn_facebook:hover {
-	background: #1877f2;
-}
-
-#copyRights {
-	margin-top: 1rem;
 }
