@@ -1,5 +1,6 @@
 /* ---------- Page-Specific Layout CSS (Partner (Detail)) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
+/* ---------- 웹 버전 시작 ---------- */
 
 div#subMainIMG {
     position: relative;
@@ -54,31 +55,6 @@ div#detailContents {
     position: relative;
     width: 42rem;
 } /* 서브 페이지 컨텐츠 */
-
-.user_name {
-    cursor: pointer;
-
-    > img {
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        border: var(--border);
-        border-radius: 50%;
-        vertical-align: middle;
-    }
-
-    > span {
-        font-family: var(--ff_sans_p);
-        color: #707070;
-        font-size: var(--fnt_12);
-        font-weight: bold;
-
-        &::after {
-            font-weight: normal;
-            content: ' 님';
-        }
-    }
-} /* 유저 이름표 - 인터페이스로 가야 함 */
 
 div#detailSide_sticker {
     position: sticky;
@@ -350,50 +326,7 @@ div#detailFront {
 button.btn_rotate {
     display: block;
     margin: 2.5rem auto;
-} /* 회전 버튼 - 인터페이스로 가야 함 */
-
-button.btn_scale {
-    position: relative;
-    background: transparent;
-    box-shadow: none;
-    color: #707070;
-    cursor: pointer;
-
-    &::before {
-        display: block;
-        position: absolute;
-        top: 44%;
-        bottom: 44%;
-        left: 44%;
-        right: 44%;
-        background: transparent;
-        transition: .3s;
-        z-index: -1;
-        content: '';
-    }
-
-    > svg {
-        fill: #707070;
-    }
-
-    @media (hover: hover) {
-        &:hover {
-            color: rgb(var(--color_light));
-
-            &::before {
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: rgba(var(--color_dark), .75);
-            }
-
-            > svg {
-                fill: rgb(var(--color_light));
-            }
-        }
-    }
-} /* 배경 확대 버튼 - 인터페이스로 가야 함 */
+} /* 회전 버튼 단독 스타일 */
 
 section#partnerIntro {
     > .intro_text {
@@ -624,7 +557,7 @@ section#partnerReview {
             }
         }
     } /* 후기 리스트 페이저 */
-} /* 후기 리스트 */
+} /* 파트너 상세 페이지 후기 리스트 */
 
 .review_container {
     & + .review_container {
@@ -897,9 +830,17 @@ section#partnerLocation {
     }
 } /* 파트너 상세 페이지 찾아오시는 길 */
 
+/* ---------- 웹 버전 종료 ---------- */
+/* ---------- 모바일 버전 시작 ---------- */
+
+
+
+/* ---------- 모바일 버전 종료 ---------- */
 /* ---------- 페이지 특정 요소 종료 ---------- */
 /* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
 
+@media only screen and (hover: none) and (pointer: coarse) {
 
+} /* 모바일 디바이스 미디어 쿼리 */
 
 /* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */

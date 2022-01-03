@@ -1,10 +1,5 @@
 /* ---------- Interface CSS ---------- */
 
-::selection { /* 선택 영역 색상 */
-    background: rgb(var(--color_tone1));
-    color: rgb(var(--color_point1));
-}
-
 a:link,
 a:visited {
     text-decoration: none;
@@ -134,7 +129,50 @@ button.btn_rotate {
             }
         }
     }
-} /* 돌아가는 버튼 */
+} /* 회전 버튼 */
+
+button.btn_scale {
+    position: relative;
+    background: transparent;
+    box-shadow: none;
+    color: #707070;
+    cursor: pointer;
+
+    &::before {
+        display: block;
+        position: absolute;
+        top: 44%;
+        bottom: 44%;
+        left: 44%;
+        right: 44%;
+        background: transparent;
+        transition: .3s;
+        z-index: -1;
+        content: '';
+    }
+
+    > svg {
+        fill: #707070;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            color: rgb(var(--color_light));
+
+            &::before {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(var(--color_dark), .75);
+            }
+
+            > svg {
+                fill: rgb(var(--color_light));
+            }
+        }
+    }
+} /* 배경 확대 버튼 */
 
 textarea {
     resize: none;
@@ -278,24 +316,7 @@ fieldset > legend {
 /* ---------- Form Elements End ---------- */
 /* ---------- Modal, Pop-Up, Message Start ---------- */
 
-aside#popFollow {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    transition: .2s ease-out;
-}
 
-a.goto_top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: .15rem;
-    background: rgba(var(--color_dark), .75);
-    color: rgb(var(--color_light));
-    font-size: 1rem;
-}
 
 /* ---------- Modal, Pop-Up, Message End ---------- */
 /* ---------- Basic Page Elements Start ---------- */
@@ -392,11 +413,7 @@ div#layerAccount {
     margin-left: auto;
     cursor: pointer;
 
-    > p.user_name span {
-        display: inline-block;
-        position: relative;
-        color: rgb(var(--color_title));
-
+    > .user_name span {
         &::before {
             display: inline-block;
             margin-right: .25rem;
@@ -493,6 +510,31 @@ div#layerAccount {
         }
     }
 }
+
+.user_name {
+    cursor: pointer;
+
+    > img {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border: var(--border);
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    > span {
+        font-family: var(--ff_sans_p);
+        color: #707070;
+        font-size: var(--fnt_12);
+        font-weight: bold;
+
+        &::after {
+            font-weight: normal;
+            content: ' 님';
+        }
+    }
+} /* 유저 네임태그 */
 
 button.btn_account {
     display: flex;
@@ -1203,24 +1245,6 @@ aside#modalInfo {
 }
 
 /* 물음표 끝 */
-/* 유저 네임태그 시작 */
-
-.profile_pict_small {
-    display: inline-block !important;
-    width: 1rem;
-    height: 1rem;
-    border: var(--border);
-    border-radius: 50%;
-    vertical-align: middle;
-
-    & + span {
-        font-size: var(--fnt_14);
-        font-weight: bold;
-        vertical-align: middle;
-    }
-}
-
-/* 유저 네임태그 끝 */
 /* 별점 시작 */
 
 .star_point {
@@ -2079,4 +2103,4 @@ aside#modalInfo {
 .note-modal.open {
     justify-content: center;
     align-items: center;
-}
+} /*  Summernote Modal Style */

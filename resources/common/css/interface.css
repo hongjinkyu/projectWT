@@ -1,16 +1,5 @@
 @charset "UTF-8";
 /* ---------- Interface CSS ---------- */
-::-moz-selection {
-	/* 선택 영역 색상 */
-	background: rgb(var(--color_tone1));
-	color: rgb(var(--color_point1));
-}
-::selection {
-	/* 선택 영역 색상 */
-	background: rgb(var(--color_tone1));
-	color: rgb(var(--color_point1));
-}
-
 a:link,
 a:visited {
 	text-decoration: none;
@@ -169,7 +158,46 @@ button.btn_rotate > p.rotate_box2 {
 	}
 }
 
-/* 돌아가는 버튼 */
+/* 회전 버튼 */
+button.btn_scale {
+	position: relative;
+	background: transparent;
+	box-shadow: none;
+	color: #707070;
+	cursor: pointer;
+}
+button.btn_scale::before {
+	display: block;
+	position: absolute;
+	top: 44%;
+	bottom: 44%;
+	left: 44%;
+	right: 44%;
+	background: transparent;
+	transition: 0.3s;
+	z-index: -1;
+	content: "";
+}
+button.btn_scale > svg {
+	fill: #707070;
+}
+@media (hover: hover) {
+	button.btn_scale:hover {
+		color: rgb(var(--color_light));
+	}
+	button.btn_scale:hover::before {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(var(--color_dark), 0.75);
+	}
+	button.btn_scale:hover > svg {
+		fill: rgb(var(--color_light));
+	}
+}
+
+/* 배경 확대 버튼 */
 textarea {
 	resize: none;
 	line-height: 1.8;
@@ -312,25 +340,6 @@ fieldset > legend {
 
 /* ---------- Form Elements End ---------- */
 /* ---------- Modal, Pop-Up, Message Start ---------- */
-aside#popFollow {
-	position: fixed;
-	right: 1rem;
-	bottom: 1rem;
-	transition: 0.2s ease-out;
-}
-
-a.goto_top {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 3rem;
-	height: 3rem;
-	border-radius: 0.15rem;
-	background: rgba(var(--color_dark), 0.75);
-	color: rgb(var(--color_light));
-	font-size: 1rem;
-}
-
 /* ---------- Modal, Pop-Up, Message End ---------- */
 /* ---------- Basic Page Elements Start ---------- */
 header#headBase {
@@ -414,14 +423,11 @@ div#layerAccount {
 	margin-left: auto;
 	cursor: pointer;
 }
-div#layerAccount > p.user_name span {
-	display: inline-block;
-	position: relative;
-	color: rgb(var(--color_title));
+div#layerAccount > .user_name span {
 	/* 회원등급 관련 부분 - !중요! */
 	/* 회원등급 관련 부분 - !중요! */
 }
-div#layerAccount > p.user_name span::before {
+div#layerAccount > .user_name span::before {
 	display: inline-block;
 	margin-right: 0.25rem;
 	padding: 0.2rem 0.3rem 0.1rem 0.3rem;
@@ -429,30 +435,30 @@ div#layerAccount > p.user_name span::before {
 	border-radius: var(--bdr_outer);
 	color: rgb(var(--color_light));
 }
-div#layerAccount > p.user_name span:is([data-grade=grade_newbie])::before {
+div#layerAccount > .user_name span:is([data-grade=grade_newbie])::before {
 	background: rgb(var(--color_acc2));
 	color: rgb(var(--color_tone2));
 	content: "L1";
 }
-div#layerAccount > p.user_name span:is([data-grade=grade_normal])::before {
+div#layerAccount > .user_name span:is([data-grade=grade_normal])::before {
 	background: rgb(var(--color_tag1));
 	content: "L2";
 }
-div#layerAccount > p.user_name span:is([data-grade=grade_regular])::before {
+div#layerAccount > .user_name span:is([data-grade=grade_regular])::before {
 	background: rgb(var(--color_tag2));
 	color: rgb(var(--color_footer));
 	content: "L3";
 }
-div#layerAccount > p.user_name span:is([data-grade=grade_family])::before {
+div#layerAccount > .user_name span:is([data-grade=grade_family])::before {
 	background: rgb(var(--color_tag3));
 	content: "L4";
 }
-div#layerAccount > p.user_name span:is([data-grade=grade_vip])::before {
+div#layerAccount > .user_name span:is([data-grade=grade_vip])::before {
 	background: rgb(var(--color_text));
 	color: rgb(var(--color_tag2));
 	content: "VIP";
 }
-div#layerAccount > p.user_name span:is([data-grade=grade_vvip])::before {
+div#layerAccount > .user_name span:is([data-grade=grade_vvip])::before {
 	border-color: goldenrod;
 	background: linear-gradient(to top, #ffd900 0%, #ffbb00 100%);
 	font-family: "Berkshire Swash", cursive;
@@ -499,6 +505,29 @@ div#layerAccount ul#accountPop > li > a {
 	padding: 0.35rem 1.5rem 0.2rem;
 }
 
+.user_name {
+	cursor: pointer;
+}
+.user_name > img {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border: var(--border);
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.user_name > span {
+	font-family: var(--ff_sans_p);
+	color: #707070;
+	font-size: var(--fnt_12);
+	font-weight: bold;
+}
+.user_name > span::after {
+	font-weight: normal;
+	content: " 님";
+}
+
+/* 유저 네임태그 */
 button.btn_account {
 	display: flex;
 	justify-content: center;
@@ -1106,22 +1135,6 @@ aside#modalInfo > .int_wrap > .modal_btn {
 }
 
 /* 물음표 끝 */
-/* 유저 네임태그 시작 */
-.profile_pict_small {
-	display: inline-block !important;
-	width: 1rem;
-	height: 1rem;
-	border: var(--border);
-	border-radius: 50%;
-	vertical-align: middle;
-}
-.profile_pict_small + span {
-	font-size: var(--fnt_14);
-	font-weight: bold;
-	vertical-align: middle;
-}
-
-/* 유저 네임태그 끝 */
 /* 별점 시작 */
 .star_point {
 	position: relative;
@@ -1887,3 +1900,5 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	justify-content: center;
 	align-items: center;
 }
+
+/*  Summernote Modal Style */
