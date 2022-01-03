@@ -51,4 +51,15 @@ $(document).ready(function() { // jQuery Load
         });
     });
 
+    $('.detail_slider').slick({
+        slide: '.slider_item',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        infinite: true,
+        fade: true,
+        dots: false,
+        arrows: false,
+    });
+
 }) // jQuery Closed
