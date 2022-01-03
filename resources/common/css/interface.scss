@@ -744,7 +744,7 @@ ul.side_mnu_left {
 
 .foot_splitter {
     margin: 5rem auto;
-    width: 60rem;
+    max-width: 60rem;
 
     &::before {
         display: block;
@@ -788,6 +788,10 @@ footer#footBase {
     left: 0;
     right: 0;
     color: rgb(var(--color_footer));
+
+    > img {
+        margin: 2rem auto;
+    }
 }
 
 a.banner_partner {

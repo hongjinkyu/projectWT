@@ -200,7 +200,7 @@
 	/* 공통 요소 끝 */
 	/* 개별 페이지 요소 */
 	.card_item {
-		width: 7rem;
+		width: 7.5rem;
 	}
 	.card_item > p.card_timeleft {
 		top: 0.2rem;

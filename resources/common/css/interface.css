@@ -716,7 +716,7 @@ ul.side_mnu_left > li.checked {
 
 .foot_splitter {
 	margin: 5rem auto;
-	width: 60rem;
+	max-width: 60rem;
 }
 .foot_splitter::before {
 	display: block;
@@ -755,6 +755,9 @@ footer#footBase {
 	left: 0;
 	right: 0;
 	color: rgb(var(--color_footer));
+}
+footer#footBase > img {
+	margin: 2rem auto;
 }
 
 a.banner_partner {
