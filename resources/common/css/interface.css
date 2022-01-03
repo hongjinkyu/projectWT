@@ -347,6 +347,9 @@ header#headBase.head_index {
 header#headBase.head_sub {
 	position: static;
 }
+header#headBase.head_detail {
+	position: absolute;
+}
 header#headBase.scrolled {
 	background: rgb(var(--color_light));
 	outline: var(--border);

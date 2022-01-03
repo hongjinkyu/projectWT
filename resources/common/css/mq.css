@@ -22,7 +22,20 @@
 	/* 공통 요소 끝 */
 	/* 개별 페이지 요소 */
 	.item_review {
+		flex-flow: column nowrap;
+		width: calc((100% - .5rem) / 2);
+		height: auto;
+	}
+	.item_review > .review_image {
 		width: 100%;
+		height: 8rem;
+	}
+	.item_review > .review_desc {
+		width: 100%;
+		height: 9.5rem;
+	}
+	.item_review .review_text {
+		height: 3rem;
 	}
 
 	.short_banner {
@@ -64,17 +77,24 @@
 
 	.item_review {
 		flex-flow: column nowrap;
-		height: auto;
-	}
-	.item_review::before {
-		right: 0.25rem;
 	}
 	.item_review .review_image {
 		width: 100%;
 		height: 10rem;
+		border-right: none;
+		border-bottom: var(--border);
 	}
 	.item_review .review_desc {
 		padding-bottom: 0;
+	}
+	.item_review .review_desc h4 {
+		font-size: var(--fnt_16);
+	}
+	.item_review .review_text {
+		height: 3.5rem;
+	}
+	.item_review .chk_like {
+		display: none;
 	}
 
 	.long_banner {

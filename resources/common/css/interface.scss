@@ -316,6 +316,10 @@ header#headBase {
         position: static;
     }
 
+    &.head_detail {
+        position: absolute;
+    }
+
     &.scrolled {
         background: rgb(var(--color_light));
         outline: var(--border);
