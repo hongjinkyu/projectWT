@@ -452,7 +452,7 @@ table.refund_rule {
 /* ---------- 페이지 특정 요소 종료 ---------- */
 /* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
 
-@media screen and (hover: none) and (pointer: coarse) and (orientation: portrait) {
+@media screen and (any-hover: none) and (pointer: coarse) {
     div#wrapMain.sub {
         width: 100%;
     }

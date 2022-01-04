@@ -2195,7 +2195,7 @@ aside#modalInfo {
 
 /* ---------- Global Media Query Start ---------- */
 
-@media screen and (hover: none) and (pointer: coarse) and (orientation: portrait) {
+@media screen and (any-hover: none) and (pointer: coarse) {
     .foot_splitter {
         width: 100%;
     }
