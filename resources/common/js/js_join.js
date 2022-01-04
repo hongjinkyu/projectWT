@@ -18,6 +18,9 @@ $(document).ready(function() { // jQuery Load
     $('#txtBasicPrice_side').val($('#txtBasicPrice').val());
     $('#txtFinalPrice_side').val($('#txtBasicPrice').val());
 
+    $('#txtPoint').attr('max', $('#txtBasicPrice').val());
+    $('#txtCash').attr('max', $('#txtBasicPrice').val());
+
     $('#txtPoint, #txtCash, #slctCoupon').on("change keyup", function () {
         let final_price = $('#txtBasicPrice').val() - $('#txtPoint').val() - $('#txtCash').val() - $('#slctCoupon').val();
 
@@ -27,10 +30,6 @@ $(document).ready(function() { // jQuery Load
 
         $('#txtFinalPrice').val(final_price);
         $('#txtFinalPrice_side').val(final_price);
-    });
-
-    $('.course_detail').click(function() {
-        $('.course_popup').fadeToggle(150);
     });
 
 }) // jQuery Closed

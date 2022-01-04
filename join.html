@@ -165,27 +165,27 @@
                             <ul>
                                 <li class="basic_price">
                                     <label for="txtBasicPrice_side">기본 참여비</label>
-                                    <input type="text" name="txtBasicPrice_side" id="txtBasicPrice_side" value="55000" disabled />
+                                    <input type="text" name="txtBasicPrice_side" id="txtBasicPrice_side" value="55000" min="0" disabled />
                                     <span>원</span>
                                 </li>
                                 <li class="used_point">
                                     <label for="txtPoint_side">- 사용 포인트</label>
-                                    <input type="text" name="txtPoint_side" id="txtPoint_side" value="" disabled />
+                                    <input type="text" name="txtPoint_side" id="txtPoint_side" value="" min="0" disabled />
                                     <span>원</span>
                                 </li>
                                 <li class="used_cash">
                                     <label for="txtCash_side">- 사용 캐쉬</label>
-                                    <input type="text" name="txtCash_side" id="txtCash_side" value="" disabled />
+                                    <input type="text" name="txtCash_side" id="txtCash_side" value="" min="0" disabled />
                                     <span>원</span>
                                 </li>
                                 <li class="used_coupon">
                                     <label for="txtCoupon_side">- 사용 쿠폰</label>
-                                    <input type="text" name="txtCoupon_side" id="txtCoupon_side" value="" disabled />
+                                    <input type="text" name="txtCoupon_side" id="txtCoupon_side" value="" min="0" disabled />
                                     <span>원</span>
                                 </li>
                                 <li class="final_price">
                                     <label for="txtFinalPrice_side">최종 할인 적용가</label>
-                                    <input type="text" name="txtFianlPrice_side" id="txtFinalPrice_side" value="" disabled />
+                                    <input type="text" name="txtFianlPrice_side" id="txtFinalPrice_side" value="" min="0" disabled />
                                     <span>원</span>
                                 </li>
                             </ul>
@@ -327,7 +327,7 @@
                                 </p>
 
                                 <div class="price_body">
-                                    ₩ <input type="text" name="txtBasicPrice" id="txtBasicPrice" value="55000" disabled />
+                                    ₩ <input type="text" name="txtBasicPrice" id="txtBasicPrice" value="55000" min="0" disabled />
                                     <label for="txtBasicPrice">(와인 가격 + 1인당 코스 가격)</label>
                                 </div>
                             </li>
@@ -340,7 +340,7 @@
                                 </p>
 
                                 <div class="usepoint_body">
-                                    <input type="number" name="txtPoint" id="txtPoint" maxlength="7" value="0" />
+                                    <input type="number" name="txtPoint" id="txtPoint" maxlength="7" value="0" min="0" />
                                     <label for="txtPoint">(보유 포인트 : <span>65,353</span> P)</label>
                                 </div>
                             </li>
@@ -353,7 +353,7 @@
                                 </p>
 
                                 <div class="usecash_body">
-                                    <input type="number" name="txtCash" id="txtCash" maxlength="7" value="0" />
+                                    <input type="number" name="txtCash" id="txtCash" maxlength="7" value="0" min="0" />
                                     <label for="txtCash">(보유 캐쉬 : <span>108,000</span> C)</label>
                                 </div>
                             </li>
@@ -390,7 +390,7 @@
                             <li class="join_pay">
                                 <quote class="price_line">
                                     <label for="txtFinalPrice">최종 결제금액 :</label>
-                                    <input type="text" name="txtFinalPrice" id="txtFinalPrice" value="" disabled />
+                                    <input type="text" name="txtFinalPrice" id="txtFinalPrice" value="" min="0" disabled />
                                     <label>원</label>
                                 </quote>
 
