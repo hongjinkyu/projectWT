@@ -454,11 +454,11 @@ table.refund_rule {
 
 @media only screen and (hover: none) and (pointer: coarse) and (orientation: portrait) {
     div#wrapMain.sub {
-        width: 100vw;
+        width: 100%;
     }
 
     .section_title {
-        width: 100vw;
+        width: 100%;
     }
 
     div#detailSide {
@@ -466,7 +466,7 @@ table.refund_rule {
     }
 
     div#detailContents {
-        width: 100vw;
+        width: 100%;
     }
 
     #slctWine,

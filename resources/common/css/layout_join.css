@@ -376,11 +376,11 @@ table.refund_rule td strong {
 /* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
 @media only screen and (hover: none) and (pointer: coarse) and (orientation: portrait) {
 	div#wrapMain.sub {
-		width: 100vw;
+		width: 100%;
 	}
 
 	.section_title {
-		width: 100vw;
+		width: 100%;
 	}
 
 	div#detailSide {
@@ -388,7 +388,7 @@ table.refund_rule td strong {
 	}
 
 	div#detailContents {
-		width: 100vw;
+		width: 100%;
 	}
 
 	#slctWine,
