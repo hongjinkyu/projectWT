@@ -328,6 +328,10 @@ form#joinPayment {
     }
 
     > dl {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
         > dt {
             margin-bottom: .5rem;
             font-family: var(--ff_serif);

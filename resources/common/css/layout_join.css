@@ -277,6 +277,11 @@ form#joinPayment > ul > hr {
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
+.partner_info > dl {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 .partner_info > dl > dt {
 	margin-bottom: 0.5rem;
 	font-family: var(--ff_serif);
