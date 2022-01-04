@@ -55,6 +55,10 @@
 		font-size: var(--fnt_24);
 	}
 
+	.foot_splitter {
+		width: 100%;
+	}
+
 	#footBase > img {
 		margin: 2rem auto;
 	}

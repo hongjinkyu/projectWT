@@ -2195,10 +2195,8 @@ aside#modalInfo {
 
 /* ---------- Global Media Query Start ---------- */
 
-@media screen and (any-hover: none) and (pointer: coarse) {
-    .foot_splitter {
-        width: 100%;
-    }
+@media only screen and (hover: none) and (pointer: coarse) {
+
 } /* 모바일 디바이스 미디어 쿼리 */
 
 /* ----------Global Media Query End ---------- */
