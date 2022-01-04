@@ -1982,7 +1982,7 @@ aside#modalInfo > .int_wrap > .modal_btn {
 
 /* Summernote 모달 */
 /* ---------- Global Media Query Start ---------- */
-@media only screen and (hover: none) and (pointer: coarse) and (orientation: portrait) {
+@media screen and (hover: none) and (pointer: coarse) and (orientation: portrait) {
 	.foot_splitter {
 		width: 100%;
 	}
