@@ -137,7 +137,59 @@
 
                 <div id="detailSide">
                     <div id="detailSide_sticker">
-                        참여하는 모임 (슬라이드 다운)
+                        <div class="detail_hiddentitle">
+                            <div class="detail_surface_info">
+                                <h6>참여 신청중인 모임</h6>
+                            </div>
+    
+                            <hr class="hf" />
+    
+                            <div class="groupinfo_body" data-group-type="LIST">
+                                <img src="./resources/index/images/img18.jpg" alt="참여하는 모임 대표 이미지" />
+                                <dl>
+                                    <dt>
+                                        슈퍼-겁쟁이 쉼터
+                                    </dt>
+                                    <dd>
+                                        <span class="group_location">비키니 시티</span>
+                                        |
+                                        <span class="group_date">2월 22일 PM 8:00</span>
+                                    </dd>
+                                </dl>
+                            </div>
+    
+                            <hr class="hf" />
+                        </div>
+
+                        <div class="price_reduce_info">
+                            <ul>
+                                <li class="basic_price">
+                                    <label for="txtBasicPrice_side">기본 참여비</label>
+                                    <input type="text" name="txtBasicPrice_side" id="txtBasicPrice_side" value="55000" disabled />
+                                    <span>원</span>
+                                </li>
+                                <li class="used_point">
+                                    <label for="txtPoint_side">- 사용 포인트</label>
+                                    <input type="text" name="txtPoint_side" id="txtPoint_side" value="" disabled />
+                                    <span>원</span>
+                                </li>
+                                <li class="used_cash">
+                                    <label for="txtCash_side">- 사용 캐쉬</label>
+                                    <input type="text" name="txtCash_side" id="txtCash_side" value="" disabled />
+                                    <span>원</span>
+                                </li>
+                                <li class="used_coupon">
+                                    <label for="txtCoupon_side">- 사용 쿠폰</label>
+                                    <input type="text" name="txtCoupon_side" id="txtCoupon_side" value="" disabled />
+                                    <span>원</span>
+                                </li>
+                                <li class="final_price">
+                                    <label for="txtFinalPrice_side">최종 할인 적용가</label>
+                                    <input type="text" name="txtFianlPrice_side" id="txtFinalPrice_side" value="" disabled />
+                                    <span>원</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -151,13 +203,15 @@
                                 </p>
 
                                 <div class="groupinfo_body" data-group-type="LIST">
-                                    <img src="./resources/index/images/img17.jpg" alt="참여하는 모임 대표 이미지" />
+                                    <img src="./resources/index/images/img18.jpg" alt="참여하는 모임 대표 이미지" />
                                     <dl>
                                         <dt>
                                             슈퍼-겁쟁이 쉼터
                                         </dt>
                                         <dd>
-                                            <span>비키니 시티</span> | <span>2월 22일 PM 8:00</span>
+                                            <span class="group_location">비키니 시티</span>
+                                            |
+                                            <span class="group_date">2월 22일 PM 8:00</span>
                                         </dd>
                                     </dl>
                                 </div>
@@ -177,8 +231,9 @@
                                             <dt class="host_name">김쫄보</dt>
                                             <dd class="host_cert">
                                                 <span class="verified">✓ 본인 인증 완료</span>
-                                                <span>레벨 3</span>
                                                 <span class="sommelier">소믈리에</span>
+                                                <span>레벨 3</span>
+                                                
                                             </dd>
                                         </dl>
                                     </div>
@@ -189,11 +244,24 @@
 
                             <li class="join_courseinfo">
                                 <p>
-                                    장소 및 제공되는 코스
+                                    모임 장소 및 코스
                                 </p>
 
                                 <div class="courseinfo_body">
-                                    4인 코스 (마쉿는 코스)
+                                    <div class="partner_info">
+                                        <img src="./resources/index/images/img17.jpg" alt="맛집 메인 이미지" />
+
+                                        <dl>
+                                            <dt>
+                                                슈퍼 겁쟁이 쉼터
+                                            </dt>
+                                            <dd>
+                                                <span class="course_name">마쉿는 코스 (4인)</span>
+                                                |
+                                                <span class="course_price">₩ 9,000 / 1인당</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
                                 </div>
                             </li>
 
@@ -230,7 +298,24 @@
                                 </p>
 
                                 <div class="wineoffer_body">
-                                    공짜라 더 마쉿는 와인
+                                    <ol>
+                                        <li class="wine_red">
+                                            <span class="offer_wine_name">로마네 콩튀김</span>
+                                            - <span class="offer_wine_vintage">2077</span>
+                                        </li>
+                                        <li class="wine_white">
+                                            <span class="offer_wine_name">사도 내</span>
+                                            - <span class="offer_wine_vintage">2077</span>
+                                        </li>
+                                        <li class="wine_sparkling">
+                                            <span class="offer_wine_name">버블 넘버 999999</span>
+                                            - <span class="offer_wine_vintage">2077</span>
+                                        </li>
+                                        <li class="wine_other">
+                                            <span class="offer_wine_name">샤또 퍼오슈</span>
+                                            - <span class="offer_wine_vintage">2077</span>
+                                        </li>
+                                    </ol>
                                 </div>
                             </li> <!-- LIST - 제공되는 와인 -->
 
@@ -243,6 +328,7 @@
 
                                 <div class="price_body">
                                     ₩ <input type="text" name="txtBasicPrice" id="txtBasicPrice" value="55000" disabled />
+                                    <label for="txtBasicPrice">(와인 가격 + 1인당 코스 가격)</label>
                                 </div>
                             </li>
 

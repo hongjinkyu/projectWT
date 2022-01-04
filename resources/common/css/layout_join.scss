@@ -64,6 +64,11 @@ div#detailSide_sticker {
         > p {
             margin-top: .25rem;
         }
+
+        > hr {
+            margin: 1rem 0;
+            background: #D9D7D2;
+        }
     }
 
     > .detail_slider_paging {
@@ -138,6 +143,50 @@ div#detailSide_sticker {
         display: none;
     }
 } /* 서브 페이지 스티키 메뉴 */
+
+.price_reduce_info {
+    > ul {
+        > li {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 .5rem;
+            border-bottom: .05rem solid #D9D7D2;
+
+            &.used_point,
+            &.used_cash,
+            &.used_coupon {
+                padding-left: 1rem;
+            }
+
+            &.final_price {
+                border-bottom: none;
+            }
+
+            > label {
+                display: block;
+                margin-right: auto;
+                opacity: .5;
+            }
+
+            > input {
+                display: block;
+                padding: .5rem 0;
+                width: 8rem;
+                border-radius: 0;
+                background: transparent;
+                box-shadow: none;
+                font-family: var(--ff_eng);
+                font-size: var(--fnt_20);
+                text-align: end;
+            }
+
+            > span {
+                margin-left: .25rem;
+            }
+        }
+    }
+} /* 할인된 가격 정보 */
 
 form#joinPayment {
     > ul {
@@ -245,6 +294,10 @@ form#joinPayment {
     }
 
     > dl {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
         > dt {
             margin-bottom: .5rem;
             font-family: var(--ff_serif);
@@ -264,7 +317,7 @@ form#joinPayment {
 
         > dd {
             font-family: var(--ff_sans_p);
-            opacity: .5;
+            color: rgba(var(--color_text), .5);
         }
     }
 
@@ -290,6 +343,92 @@ form#joinPayment {
 .courseinfo_body {
 
 } /* 장소 및 제공되는 코스 */
+
+.partner_info {
+    display: flex;
+    align-items: center;
+
+    > img {
+        margin-right: .5rem;
+        width: 3rem;
+        height: 3rem;
+        border: var(--border);
+        box-shadow: 0 0 .75rem -.25rem rgba(var(--color_dark), .5);
+        object-fit: cover;
+    }
+
+    > dl {
+        > dt {
+            margin-bottom: .5rem;
+            font-family: var(--ff_serif);
+            font-size: var(--fnt_20);
+        }
+
+        > dd {
+            font-family: var(--ff_sans_p);
+            color: rgba(var(--color_text), .5);
+        }
+    }
+}
+
+.wineoffer_body {
+    > ol {
+        > li {
+            font-family: var(--ff_sans_p);
+
+            & + li {
+                margin-top: .5rem;
+            }
+
+            &::before {
+                display: inline-block;
+                margin-right: .25rem;
+                padding: .25rem .5rem .2rem;
+                border: .05rem solid rgba(var(--color_dark), .2);
+                border-radius: var(--bdr_outer);
+                font-size: var(--fnt_10);
+                font-weight: bold;
+                vertical-align: middle;
+            }
+
+            &.wine_red {
+                &::before {
+                    background: crimson;
+                    color: floralwhite;
+                    content: '레드';
+                }
+            }
+
+            &.wine_white {
+                &::before {
+                    background: white;
+                    color: darkslateblue;
+                    content: '화이트';
+                }
+            }
+
+            &.wine_sparkling {
+                &::before {
+                    background: bisque;
+                    color: sienna;
+                    content: '스파클링';
+                }
+            }
+
+            &.wine_other {
+                &::before {
+                    background: pink;
+                    color: indigo;
+                    content: '기타';
+                }
+            }
+
+            > .offer_wine_vintage {
+                color: rgb(var(--color_footer));
+            }
+        }
+    }
+} /* LIST - 제공되는 와인 */
 
 table.refund_rule {
     margin: 0 auto;

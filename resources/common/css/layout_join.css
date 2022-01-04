@@ -67,6 +67,10 @@ div#detailSide_sticker > .detail_hiddentitle {
 div#detailSide_sticker > .detail_hiddentitle > p {
 	margin-top: 0.25rem;
 }
+div#detailSide_sticker > .detail_hiddentitle > hr {
+	margin: 1rem 0;
+	background: #D9D7D2;
+}
 div#detailSide_sticker > .detail_slider_paging {
 	width: 100%;
 	height: 0.75rem;
@@ -128,6 +132,40 @@ div#detailSide_sticker > .detail_hiddenbutton {
 }
 
 /* 서브 페이지 스티키 메뉴 */
+.price_reduce_info > ul > li {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 0.5rem;
+	border-bottom: 0.05rem solid #D9D7D2;
+}
+.price_reduce_info > ul > li.used_point, .price_reduce_info > ul > li.used_cash, .price_reduce_info > ul > li.used_coupon {
+	padding-left: 1rem;
+}
+.price_reduce_info > ul > li.final_price {
+	border-bottom: none;
+}
+.price_reduce_info > ul > li > label {
+	display: block;
+	margin-right: auto;
+	opacity: 0.5;
+}
+.price_reduce_info > ul > li > input {
+	display: block;
+	padding: 0.5rem 0;
+	width: 8rem;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	font-family: var(--ff_eng);
+	font-size: var(--fnt_20);
+	text-align: end;
+}
+.price_reduce_info > ul > li > span {
+	margin-left: 0.25rem;
+}
+
+/* 할인된 가격 정보 */
 form#joinPayment > ul > li {
 	display: flex;
 	flex-flow: row nowrap;
@@ -218,6 +256,11 @@ form#joinPayment > ul > hr {
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
+.groupinfo_body > dl {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 .groupinfo_body > dl > dt {
 	margin-bottom: 0.5rem;
 	font-family: var(--ff_serif);
@@ -235,7 +278,7 @@ form#joinPayment > ul > hr {
 }
 .groupinfo_body > dl > dd {
 	font-family: var(--ff_sans_p);
-	opacity: 0.5;
+	color: rgba(var(--color_text), 0.5);
 }
 .groupinfo_body:is([data-group-type=LIST]) > dl > dt::before {
 	color: rgb(var(--color_acc1));
@@ -249,6 +292,70 @@ form#joinPayment > ul > hr {
 /* 참여하는 모임 */
 /* 호스트 정보 */
 /* 장소 및 제공되는 코스 */
+.partner_info {
+	display: flex;
+	align-items: center;
+}
+.partner_info > img {
+	margin-right: 0.5rem;
+	width: 3rem;
+	height: 3rem;
+	border: var(--border);
+	box-shadow: 0 0 0.75rem -0.25rem rgba(var(--color_dark), 0.5);
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.partner_info > dl > dt {
+	margin-bottom: 0.5rem;
+	font-family: var(--ff_serif);
+	font-size: var(--fnt_20);
+}
+.partner_info > dl > dd {
+	font-family: var(--ff_sans_p);
+	color: rgba(var(--color_text), 0.5);
+}
+
+.wineoffer_body > ol > li {
+	font-family: var(--ff_sans_p);
+}
+.wineoffer_body > ol > li + li {
+	margin-top: 0.5rem;
+}
+.wineoffer_body > ol > li::before {
+	display: inline-block;
+	margin-right: 0.25rem;
+	padding: 0.25rem 0.5rem 0.2rem;
+	border: 0.05rem solid rgba(var(--color_dark), 0.2);
+	border-radius: var(--bdr_outer);
+	font-size: var(--fnt_10);
+	font-weight: bold;
+	vertical-align: middle;
+}
+.wineoffer_body > ol > li.wine_red::before {
+	background: crimson;
+	color: floralwhite;
+	content: "레드";
+}
+.wineoffer_body > ol > li.wine_white::before {
+	background: white;
+	color: darkslateblue;
+	content: "화이트";
+}
+.wineoffer_body > ol > li.wine_sparkling::before {
+	background: bisque;
+	color: sienna;
+	content: "스파클링";
+}
+.wineoffer_body > ol > li.wine_other::before {
+	background: pink;
+	color: indigo;
+	content: "기타";
+}
+.wineoffer_body > ol > li > .offer_wine_vintage {
+	color: rgb(var(--color_footer));
+}
+
+/* LIST - 제공되는 와인 */
 table.refund_rule {
 	margin: 0 auto;
 	width: 100%;
