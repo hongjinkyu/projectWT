@@ -452,7 +452,7 @@ table.refund_rule {
 /* ---------- 페이지 특정 요소 종료 ---------- */
 /* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
 
-@media only screen and (hover: none) and (pointer: coarse) {
+@media screen and (hover: none) and (pointer: coarse) {
     div#wrapMain.sub {
         width: 100vw;
     }
@@ -474,7 +474,6 @@ table.refund_rule {
         width: 100%;
         font-size: var(--fnt_16);
     }
-
 } /* 모바일 디바이스 미디어 쿼리 */
 
 /* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */
