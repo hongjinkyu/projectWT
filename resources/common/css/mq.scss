@@ -201,6 +201,45 @@
         }
     }
 
+    /* join (temp) */
+
+    div#wrapMain.sub {
+        width: 100%;
+    }
+
+    .section_title {
+        width: 100%;
+    }
+
+    div#detailSide {
+        display: none;
+    }
+
+    div#detailContents {
+        width: 100%;
+    }
+
+    
+    form#joinPayment {
+        > ul {
+            > li {
+                > p {
+                    width: 6rem;
+                }
+
+                > div {
+                    width: calc(100% - 7rem);
+                }
+            }
+        }
+    }
+
+    #slctWine,
+    #slctCoupon {
+        width: 100%;
+        font-size: var(--fnt_16);
+    }
+
     /* 개별 페이지 요소 끝*/
 } /* 800px */
 
