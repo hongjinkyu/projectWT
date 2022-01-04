@@ -528,6 +528,49 @@ div#layerAccount ul#accountPop > li > a {
 }
 
 /* 유저 네임태그 */
+.user_tag {
+	display: flex;
+	align-items: center;
+	-moz-column-gap: 0.5rem;
+	     column-gap: 0.5rem;
+}
+.user_tag > img {
+	width: 3rem;
+	height: 3rem;
+	border: var(--border);
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.user_tag > dl > .host_name {
+	font-family: var(--ff_sans_p);
+	color: #707070;
+	font-size: var(--fnt_16);
+	font-weight: bold;
+}
+.user_tag > dl > .host_name::after {
+	font-weight: normal;
+	content: " 님";
+}
+.user_tag > dl > .host_cert {
+	margin-top: 0.25rem;
+}
+.user_tag > dl > .host_cert > span {
+	display: inline-block;
+	padding: 0.15rem 0.5rem 0.25rem;
+	border: 0.05rem solid rgba(var(--color_dark), 0.1);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_acc1));
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_12);
+}
+.user_tag > dl > .host_cert > span.verified {
+	background: rgb(var(--color_acc2));
+}
+.user_tag > dl > .host_cert > span.sommelier {
+	background: rgb(var(--color_tag1));
+}
+
+/* 유저 네임태그 (큰 사이즈) */
 button.btn_account {
 	display: flex;
 	justify-content: center;
@@ -743,6 +786,41 @@ ul.side_mnu_left > li.checked {
 	pointer-events: none;
 }
 
+.section_title {
+	margin: 5rem 0 1.5rem;
+	color: #707070;
+	text-align: center;
+}
+.section_title > h5 {
+	color: #707070;
+	font-size: var(--fnt_24);
+	font-weight: normal;
+}
+.section_title > p {
+	font-family: "Berkshire Swash", cursive;
+	font-size: var(--fnt_12);
+	opacity: 0.5;
+}
+.section_title > hr {
+	position: relative;
+	margin-top: 0.75rem;
+	background: #D9D7D2;
+	overflow: visible;
+}
+.section_title > hr::before {
+	display: block;
+	position: absolute;
+	top: calc(50% - .15rem);
+	left: calc(50% - .15rem);
+	width: 0.3rem;
+	height: 0.3rem;
+	border: 0.05rem solid #D9D7D2;
+	background: rgb(var(--color_bg));
+	transform: rotateZ(45deg);
+	content: "";
+}
+
+/* 상세 페이지 섹션 타이틀 */
 .foot_splitter {
 	margin: 5rem auto;
 	max-width: 60rem;
@@ -779,6 +857,7 @@ ul.side_mnu_left > li.checked {
 	opacity: 0.25;
 }
 
+/* 푸터 분리선 */
 footer#footBase {
 	bottom: 0;
 	left: 0;
@@ -1078,7 +1157,7 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
-.card_item .card_desc > .user_profile {
+.card_item .card_desc > .user_name {
 	position: absolute;
 	bottom: 0.75rem;
 	font-family: var(--ff_sans_p);
@@ -1658,7 +1737,7 @@ aside#modalInfo > .int_wrap > .modal_btn {
 .article_container > li .article_date {
 	font-size: var(--fnt_12);
 }
-.article_container > li > .user_profile {
+.article_container > li > .user_name {
 	margin: 0 0.25rem 0 auto;
 }
 
@@ -1900,5 +1979,3 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	justify-content: center;
 	align-items: center;
 }
-
-/*  Summernote Modal Style */

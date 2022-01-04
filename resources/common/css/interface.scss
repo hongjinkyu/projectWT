@@ -536,6 +536,56 @@ div#layerAccount {
     }
 } /* 유저 네임태그 */
 
+.user_tag {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+
+    > img {
+        width: 3rem;
+        height: 3rem;
+        border: var(--border);
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    > dl {
+        > .host_name {
+            font-family: var(--ff_sans_p);
+            color: #707070;
+            font-size: var(--fnt_16);
+            font-weight: bold;
+
+            &::after {
+                font-weight: normal;
+                content: ' 님';
+            }
+        }
+
+        > .host_cert {
+            margin-top: .25rem;
+
+            > span {
+                display: inline-block;
+                padding: .15rem .5rem .25rem;
+                border: .05rem solid rgba(var(--color_dark), .1);
+                border-radius: var(--bdr_outer);
+                background: rgb(var(--color_acc1));
+                color: rgb(var(--color_light));
+                font-size: var(--fnt_12);
+
+                &.verified {
+                    background: rgb(var(--color_acc2));
+                }
+
+                &.sommelier {
+                    background: rgb(var(--color_tag1));
+                }
+            }
+        }
+    }
+} /* 유저 네임태그 (큰 사이즈) */
+
 button.btn_account {
     display: flex;
     justify-content: center;
@@ -784,6 +834,44 @@ ul.side_mnu_left {
     }
 }
 
+.section_title {
+    margin: 5rem 0 1.5rem;
+    color: #707070;
+    text-align: center;
+
+    > h5 {
+        color: #707070;
+        font-size: var(--fnt_24);
+        font-weight: normal;
+    }
+
+    > p {
+        font-family: 'Berkshire Swash', cursive;
+        font-size: var(--fnt_12);
+        opacity: .5;
+    }
+
+    > hr {
+        position: relative;
+        margin-top: .75rem;
+        background: #D9D7D2;
+        overflow: visible;
+
+        &::before {
+            display: block;
+            position: absolute;
+            top: calc(50% - .15rem);
+            left: calc(50% - .15rem);
+            width: .3rem;
+            height: .3rem;
+            border: .05rem solid #D9D7D2;
+            background: rgb(var(--color_bg));
+            transform: rotateZ(45deg);
+            content: '';
+        }
+    }
+} /* 상세 페이지 섹션 타이틀 */
+
 .foot_splitter {
     margin: 5rem auto;
     max-width: 60rem;
@@ -823,7 +911,7 @@ ul.side_mnu_left {
         opacity: .25;
     }
     
-}
+} /* 푸터 분리선 */
 
 footer#footBase {
     bottom: 0;
@@ -1177,7 +1265,7 @@ aside#modalInfo {
             overflow: hidden;
         }
 
-        > .user_profile {
+        > .user_name {
             position: absolute;
             bottom: .75rem;
             font-family: var(--ff_sans_p);
@@ -1843,7 +1931,7 @@ aside#modalInfo {
             font-size: var(--fnt_12);
         }
 
-        > .user_profile {
+        > .user_name {
             margin: 0 .25rem 0 auto;
         }
     }
@@ -2103,4 +2191,4 @@ aside#modalInfo {
 .note-modal.open {
     justify-content: center;
     align-items: center;
-} /*  Summernote Modal Style */
+}

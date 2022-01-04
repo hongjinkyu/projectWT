@@ -23,7 +23,7 @@
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
         <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
-        <script type="text/javascript" src="./resources/common/js/join.js"></script> <!-- Page-Specific jQuery -->
+        <script type="text/javascript" src="./resources/common/js/js_join.js"></script> <!-- Page-Specific jQuery -->
         <!-- JavaScript / jQuery -->
 
         <!--[if lt IE 9]>
@@ -39,8 +39,8 @@
 
         <div id="wrap">
 
-            <header id="headBase" class="head_detail">
-                <nav id="navBase" class="nav_index int_wrap" role="navigation">
+            <header id="headBase" class="head_sub">
+                <nav id="navBase" class="int_wrap" role="navigation">
                     <h1 id="mainLogo">
                         <a href="index.html">Wine Together</a>
                     </h1>
@@ -127,7 +127,219 @@
 
         <!-- Page Main Contents Start / 헤더 영역 종료 -->
 
+            <div class="section_title">
+                <h5>모임 참여 신청</h5>
+                <p>Join The Group</p>
+                <hr class="hf" />
+            </div> <!-- .section_title -->
+
             <div id="wrapMain" class="int_wrap sub" role="main">
+
+                <div id="detailSide">
+                    <div id="detailSide_sticker">
+                        참여하는 모임 (슬라이드 다운)
+                    </div>
+                </div>
+
+                <div id="detailContents">
+
+                    <form action="" id="joinPayment">
+                        <ul>
+                            <li class="join_groupinfo">
+                                <p>
+                                    참여하는 모임
+                                </p>
+
+                                <div class="groupinfo_body" data-group-type="LIST">
+                                    <img src="./resources/index/images/img17.jpg" alt="참여하는 모임 대표 이미지" />
+                                    <dl>
+                                        <dt>
+                                            슈퍼-겁쟁이 쉼터
+                                        </dt>
+                                        <dd>
+                                            <span>비키니 시티</span> | <span>2월 22일 PM 8:00</span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+
+                            <hr class="hf" />
+
+                            <li class="join_hostinfo">
+                                <p>
+                                    호스트 정보
+                                </p>
+
+                                <div class="hostinfo_body">
+                                    <div class="user_tag">
+                                        <img src="./resources/index/images/temp_profile_9.jpg" alt="유저 프로필 사진" />
+                                        <dl>
+                                            <dt class="host_name">김쫄보</dt>
+                                            <dd class="host_cert">
+                                                <span class="verified">✓ 본인 인증 완료</span>
+                                                <span>레벨 3</span>
+                                                <span class="sommelier">소믈리에</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <hr class="hf" />
+
+                            <li class="join_courseinfo">
+                                <p>
+                                    장소 및 제공되는 코스
+                                </p>
+
+                                <div class="courseinfo_body">
+                                    4인 코스 (마쉿는 코스)
+                                </div>
+                            </li>
+
+                            <hr class="hf" />
+
+                            <li class="join_winechoice">
+                                <p>
+                                    지참할 와인 선택
+                                </p>
+
+                                <div class="wineselector_body">
+                                    <select name="slctWine" id="slctWine">
+                                        <option value="wine_red">
+                                            레드 와인
+                                        </option>
+                                        <option value="wine_white">
+                                            화이트 와인
+                                        </option>
+                                        <option value="wine_sparkling">
+                                            스파클링
+                                        </option>
+                                        <option value="wine_other">
+                                            기타
+                                        </option>
+                                    </select>
+                                </div>
+                            </li> <!-- BYOB - 지참할 와인 선택 -->
+
+                            <hr class="hf" />
+
+                            <li class="join_wineoffer">
+                                <p>
+                                    제공되는 와인 정보
+                                </p>
+
+                                <div class="wineoffer_body">
+                                    공짜라 더 마쉿는 와인
+                                </div>
+                            </li> <!-- LIST - 제공되는 와인 -->
+
+                            <hr class="hf" />
+
+                            <li class="join_price">
+                                <p>
+                                    기본 참여비
+                                </p>
+
+                                <div class="price_body">
+                                    ₩ <input type="text" name="txtBasicPrice" id="txtBasicPrice" value="55000" disabled />
+                                </div>
+                            </li>
+
+                            <hr class="hf" />
+
+                            <li class="join_usepoint">
+                                <p>
+                                    포인트 사용
+                                </p>
+
+                                <div class="usepoint_body">
+                                    <input type="number" name="txtPoint" id="txtPoint" maxlength="7" value="0" />
+                                    <label for="txtPoint">(보유 포인트 : <span>65,353</span> P)</label>
+                                </div>
+                            </li>
+
+                            <hr class="hf" />
+
+                            <li class="join_usecash">
+                                <p>
+                                    캐쉬 사용
+                                </p>
+
+                                <div class="usecash_body">
+                                    <input type="number" name="txtCash" id="txtCash" maxlength="7" value="0" />
+                                    <label for="txtCash">(보유 캐쉬 : <span>108,000</span> C)</label>
+                                </div>
+                            </li>
+
+                            <hr class="hf" />
+
+                            <li class="join_usecoupon">
+                                <p>
+                                    쿠폰 사용
+                                </p>
+
+                                <div class="usecoupon_body">
+                                    <select name="slctCoupon" id="slctCoupon">
+                                        <option value="0">쿠폰 사용 안 함</option>
+                                        <optgroup label="멤버십 혜택">
+                                            <option value="3000">2022년 1월 쿠폰 (₩3,000)</option>
+                                            <option value="3000">2021년 12월 쿠폰 (₩3,000)</option>
+                                            <option value="3000">2021년 11월 쿠폰 (₩3,000)</option>
+                                        </optgroup>
+                                        <optgroup label="기타">
+                                            <option value="3000">후기 이벤트 당첨 쿠폰 (₩3,000)</option>
+                                            <option value="3000">후기 이벤트 당첨 쿠폰 (₩3,000)</option>
+                                            <option value="5000">댓글 이벤트 당첨 쿠폰 (₩5,000)</option>
+                                            <option value="10000">후기 이벤트 당첨 쿠폰 (₩10,000)</option>
+                                            <option value="3000">오프라인 이벤트 참여 보상 쿠폰 (₩3,000)</option>
+                                            <option value="3000">와인투게더 긴급점검 보상 쿠폰 (₩3,000)</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </li>
+
+                            <hr class="hf" />
+
+                            <li class="join_pay">
+                                <quote class="price_line">
+                                    <label for="txtFinalPrice">최종 결제금액 :</label>
+                                    <input type="text" name="txtFinalPrice" id="txtFinalPrice" value="" disabled />
+                                    <label>원</label>
+                                </quote>
+
+                                <button class="btn_rotate">
+                                    <p class="rotate_box1">결제하기</p>
+                                    <p class="rotate_box2">결제하기</p>
+                                </button>
+                            </li>
+
+                            <hr class="hf" />
+
+                            <li class="join_disclaimer">
+                                <table class="refund_rule">
+                                    <caption>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/></svg>
+                                        BYOB / LIST 모임 참여 신청 후 환불 규정
+                                    </caption>
+                                    <tr>
+                                        <th scope="row">모임 5일 전</th>
+                                        <td>전액 환불 가능</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">모임 4일 전 ~ 2일 전</th>
+                                        <td>결제 금액의 30% 환불</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">모임 1일 전 ~ 당일</th>
+                                        <td><strong>환불 불가능</strong></td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </form>
+
+                </div>
 
             </div> <!-- #wrapMain -->
 

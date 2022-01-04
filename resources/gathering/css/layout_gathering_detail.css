@@ -72,40 +72,6 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 .gathering_info > .group_desc {
 	margin: 1rem 0;
 }
-.gathering_info > .group_type {
-	position: relative;
-	font-size: var(--fnt_12);
-}
-.gathering_info > .group_type::before {
-	display: inline-block;
-	margin-right: 0.25rem;
-	padding: 0.15rem 0.5rem;
-	border: 0.05rem solid currentColor;
-	border-radius: var(--bdr_outer);
-	font-family: var(--ff_eng);
-	color: rgba(var(--color_light), 0.75);
-	font-weight: bold;
-	text-shadow: 0.05rem 0.05rem 0 rgba(var(--color_dark), 0.3);
-	transition: 0.3s;
-	z-index: 2;
-	content: "";
-}
-.gathering_info > .group_type:is([data-category=byob]) {
-	color: rgb(var(--color_acc2));
-}
-.gathering_info > .group_type:is([data-category=byob])::before {
-	border-color: #008841;
-	background: rgb(var(--color_acc2));
-	content: "BYOB";
-}
-.gathering_info > .group_type:is([data-category=list]) {
-	color: rgb(var(--color_acc1));
-}
-.gathering_info > .group_type:is([data-category=list])::before {
-	border-color: #dc801f;
-	background: rgb(var(--color_acc1));
-	content: "LIST";
-}
 
 .info_title {
 	margin: 0 0 0.5rem 0.5rem;
@@ -260,14 +226,6 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	text-align: center;
 }
 
-button#btnJoin {
-	padding: 0.5rem 2rem;
-	background: rgb(var(--color_acc1));
-	box-shadow: none;
-	color: rgb(var(--color_light));
-	font-size: var(--fnt_16);
-}
-
 #detailReview {
 	position: relative;
 	padding: 0 0.5rem;
@@ -323,10 +281,4 @@ button#btnJoin {
 #detailDesc .desc_intro {
 	padding: 0.5rem;
 	line-height: 1.6;
-}
-
-.gathering_disclaimer {
-	padding: 1rem;
-	font-size: var(--fnt_12);
-	line-height: 1.4;
 }
