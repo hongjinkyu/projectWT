@@ -391,6 +391,13 @@ table.refund_rule td strong {
 		width: 100%;
 	}
 
+	form#joinPayment > ul > li > p {
+		width: 6rem;
+	}
+	form#joinPayment > ul > li > div {
+		width: calc(100% - 7rem);
+	}
+
 	#slctWine,
 #slctCoupon {
 		width: 100%;
