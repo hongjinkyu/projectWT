@@ -199,6 +199,7 @@ form#joinPayment > ul > hr {
 /* 모임 참여 신청 폼 */
 #txtBasicPrice {
 	padding: 0;
+	width: 3rem;
 	background: transparent;
 	box-shadow: none;
 }
@@ -373,4 +374,28 @@ table.refund_rule td strong {
 /* 환불 규정 */
 /* ---------- 페이지 특정 요소 종료 ---------- */
 /* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
+@media only screen and (hover: none) and (pointer: coarse) {
+	div#wrapMain.sub {
+		width: 100vw;
+	}
+
+	.section_title {
+		width: 100vw;
+	}
+
+	div#detailSide {
+		display: none;
+	}
+
+	div#detailContents {
+		width: 100vw;
+	}
+
+	#slctWine,
+#slctCoupon {
+		width: 100%;
+		font-size: var(--fnt_16);
+	}
+}
+/* 모바일 디바이스 미디어 쿼리 */
 /* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */

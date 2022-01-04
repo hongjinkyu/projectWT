@@ -823,7 +823,7 @@ ul.side_mnu_left > li.checked {
 /* 상세 페이지 섹션 타이틀 */
 .foot_splitter {
 	margin: 5rem auto;
-	max-width: 60rem;
+	width: 60rem;
 }
 .foot_splitter::before {
 	display: block;
@@ -1981,3 +1981,11 @@ aside#modalInfo > .int_wrap > .modal_btn {
 }
 
 /* Summernote 모달 */
+/* ---------- Global Media Query Start ---------- */
+@media only screen and (hover: none) and (pointer: coarse) {
+	.foot_splitter {
+		width: 100%;
+	}
+}
+/* 모바일 디바이스 미디어 쿼리 */
+/* ----------Global Media Query End ---------- */
