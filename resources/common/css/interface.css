@@ -925,7 +925,7 @@ div#footContent > div > ul > li {
 	padding: 0.75rem 0.5rem;
 }
 div#footContent > div > ul > li > span {
-	float: right;
+	margin-left: 0.5rem;
 	color: rgb(var(--color_text));
 	font-size: var(--fnt_14);
 }

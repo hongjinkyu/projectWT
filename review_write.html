@@ -119,7 +119,7 @@
                                 </ul>
                             </div>
                             <div class="disappearing_area">
-                                
+
                             </div>
                         </div>
                     </nav>
@@ -136,31 +136,180 @@
 
         <!-- Page Main Contents Start / 헤더 영역 종료 -->
 
+            <div class="section_title">
+                <h5>후기 작성하기</h5>
+                <p>Share your happy memories</p>
+                <hr class="hf" />
+            </div> <!-- .section_title -->
+
             <div id="wrapMain" class="int_wrap sub" role="main">
 
-                <section id="sideBar">
-                    <ul class="side_mnu_left">
-                        <li class="side_mnu_item1 checked">모임 후기 작성</li>
-                    </ul>
-                </section>
+                <div id="detailSide">
+                    <div id="detailSide_sticker">
+                        <div class="detail_hiddentitle">
+                            <div class="detail_surface_info">
+                                <h6>참여했던 모임</h6>
+                            </div>
 
-                <section id="contentBar">
+                            <hr class="hf" />
 
-                    <form id="frmWrite">
-                        <h3>모임 후기 작성</h3>
-                        <!-- 파트너 업장에 대한 별도의 리뷰도 필요할 수 있음 -->
-                        <hr class="hf" />
-                        <div id="gatSelector">
-                            참여한 모임 : 슈퍼-겁쟁이 쉼터 #8 (2021. 01. 01)
+                            <div class="groupinfo_body" data-group-type="LIST">
+                                <img src="./resources/index/images/img18.jpg" alt="참여하는 모임 대표 이미지" />
+                                <dl>
+                                    <dt>
+                                        <span>슈퍼-겁쟁이 쉼터</span>
+                                    </dt>
+                                    <dd>
+                                        <span class="group_location">비키니 시티</span>
+                                        |
+                                        <span class="group_date">2월 22일 PM 8:00</span>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <hr class="hf" />
                         </div>
-                        <div id="summernote"></div>
-                        <button type="submit" class="btn_write">작성완료</button>
-                        <button class="btn_cancel">취소</button>
-                    </form>
+                        
+                        <div class="group_selector">
+                            <button class="selector_label">
+                                <p class="selector_text">다른 모임 선택...</p>
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"/></svg>
+                            </button>
 
-                </section>
+                            <ul class="selector_list">
+                                <li class="selector_item">
+                                    <img src="./resources/index/images/img08.jpg" alt="모임 대표 이미지" />
+                                    <dl>
+                                        <dt>모임모임 다모임</dt>
+                                        <dd>12월 24일 PM 9:00</dd>
+                                    </dl>
+                                </li>
+
+                                <li class="selector_item">
+                                    <img src="./resources/index/images/img28.jpg" alt="모임 대표 이미지" />
+                                    <dl>
+                                        <dt>덜모임 ㅠㅠ</dt>
+                                        <dd>11월 7일 PM 9:00</dd>
+                                    </dl>
+                                </li>
+
+                                <li class="selector_item">
+                                    <img src="./resources/index/images/img29.jpg" alt="모임 대표 이미지" />
+                                    <dl>
+                                        <dt>이거 모임?</dt>
+                                        <dd>9월 12일 PM 6:00</dd>
+                                    </dl>
+                                </li>
+
+                                <li class="selector_item">
+                                    <img src="./resources/index/images/img30.jpg" alt="모임 대표 이미지" />
+                                    <dl>
+                                        <dt>안전모임</dt>
+                                        <dd>9월 5일 PM 10:00</dd>
+                                    </dl>
+                                </li>
+
+                                <li class="selector_item">
+                                    <img src="./resources/index/images/img24.jpg" alt="모임 대표 이미지" />
+                                    <dl>
+                                        <dt>안모임</dt>
+                                        <dd>0월 0일 AM 0:00</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="detailContents">
+                    <div class="review_title">
+                        <input type="text" name="txtRevTitle" id="txtRevTitle" placeholder="후기 제목 (최대 50자)" maxlength="50" />
+                    </div>
+
+                    <div id="reviewStarPoint">
+                        <div class="starpoint_container">
+                            <p>음식 별점</p>
+
+                            <div class="starpoint_selector clr_fix">
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                            </div>
+
+                            <input type="number" name="hiddenSPCounter_food" id="hiddenSPCounter_food" value="0" />
+                        </div> <!-- 음식 별점 -->
+
+                        <div class="starpoint_container">
+                            <p>와인 별점</p>
+
+                            <div class="starpoint_selector clr_fix">
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                            </div>
+
+                            <input type="number" name="hiddenSPCounter_wine" id="hiddenSPCounter_wine" value="0" />
+                        </div> <!-- 와인 별점 -->
+
+                        <div class="starpoint_container">
+                            <p>분위기 별점</p>
+
+                            <div class="starpoint_selector clr_fix">
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                                <div class="star_single">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                </div>
+                            </div>
+
+                            <input type="number" name="hiddenSPCounter_mood" id="hiddenSPCounter_mood" value="0" />
+                        </div> <!-- 분위기 별점 -->
+                    </div>
+
+                    <div id="summernote"></div> <!-- #summernote -->
+                </div>
 
             </div> <!-- #wrapMain -->
+
+            <button class="btn_rotate">
+                <p class="rotate_box1">후기 작성 완료</p>
+                <p class="rotate_box2">후기 작성 완료</p>
+            </button>
 
         <!-- Page Main Contents End / 푸터 영역 시작 -->
 
@@ -208,8 +357,7 @@
                                 </li>
                                 <hr class="hf" />
                                 <li class="disclaimer">
-                                    전자상거래상 중개업이 어쩌고 저쩌고 책임은 구매자 본인에게 있고 어쩌고 저쩌고<br />
-                                    두줄로 들어가면 이런 느낌이고 뭔가 내용이 많아야 할거같고
+                                    전자상거래법 규정 들어갈 영역
                                 </li>
                             </ul>
                         </div>

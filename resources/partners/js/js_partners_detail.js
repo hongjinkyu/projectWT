@@ -25,9 +25,16 @@ $(document).ready(function() { // jQuery Load
         });
 
         $(this).click(function() {
-            $(this).addClass('decided');
+            $(this).prevAll().removeClass('decided');
+            $(this).prevAll().removeClass('star_blank');
+            $(this).nextAll().removeClass('decided');
+            $(this).nextAll().removeClass('star_blank');
+
             $(this).prevAll().addClass('decided');
             $(this).nextAll().addClass('star_blank');
+
+            $(this).removeClass('star_blank');
+            $(this).addClass('decided');
 
             let sp_count = $('.star_single.decided').length;
 

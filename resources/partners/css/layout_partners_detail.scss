@@ -204,7 +204,6 @@ div#detailSide_sticker {
 
         &.decided {
             animation: star_pulse .2s 1;
-            pointer-events: none;
 
             > svg > path {
                 fill: gold;
@@ -213,7 +212,6 @@ div#detailSide_sticker {
 
         &.star_blank {
             transform: scale(.8);
-            pointer-events: none;
 
             > svg > path {
                 fill: rgba(var(--color_light), .3);

@@ -127,10 +127,18 @@ div#detailSide_sticker {
             &.used_cash,
             &.used_coupon {
                 padding-left: 1rem;
+
+                > input {
+                    color: rgb(var(--color_acc2));
+                }
             }
 
             &.final_price {
                 border-bottom: none;
+
+                > input {
+                    color: rgb(var(--color_acc2));
+                }
             }
 
             > label {
@@ -265,10 +273,6 @@ form#joinPayment {
     }
 
     > dl {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
         > dt {
             margin-bottom: .5rem;
             font-family: var(--ff_serif);
@@ -283,6 +287,14 @@ form#joinPayment {
                 font-size: var(--fnt_10);
                 vertical-align: top;
                 content: '';
+            }
+
+            > span {
+                display: inline-block;
+                max-width: 10rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
         }
 
@@ -306,6 +318,16 @@ form#joinPayment {
         }
     }
 } /* 참여하는 모임 */
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+} /* 모임 이름 마퀴 애니메이션 */
 
 .hostinfo_body {
 
@@ -469,7 +491,6 @@ table.refund_rule {
         width: 100%;
     }
 
-    
     form#joinPayment {
         > ul {
             > li {

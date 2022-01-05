@@ -186,14 +186,12 @@ div#detailSide_sticker > .detail_hiddenbutton {
 .starpoint_selector > .star_single.decided {
 	-webkit-animation: star_pulse 0.2s 1;
 	        animation: star_pulse 0.2s 1;
-	pointer-events: none;
 }
 .starpoint_selector > .star_single.decided > svg > path {
 	fill: gold;
 }
 .starpoint_selector > .star_single.star_blank {
 	transform: scale(0.8);
-	pointer-events: none;
 }
 .starpoint_selector > .star_single.star_blank > svg > path {
 	fill: rgba(var(--color_light), 0.3);

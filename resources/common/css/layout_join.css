@@ -114,8 +114,14 @@ div#detailSide_sticker > .detail_hiddenbutton {
 .price_reduce_info > ul > li.used_point, .price_reduce_info > ul > li.used_cash, .price_reduce_info > ul > li.used_coupon {
 	padding-left: 1rem;
 }
+.price_reduce_info > ul > li.used_point > input, .price_reduce_info > ul > li.used_cash > input, .price_reduce_info > ul > li.used_coupon > input {
+	color: rgb(var(--color_acc2));
+}
 .price_reduce_info > ul > li.final_price {
 	border-bottom: none;
+}
+.price_reduce_info > ul > li.final_price > input {
+	color: rgb(var(--color_acc2));
 }
 .price_reduce_info > ul > li > label {
 	display: block;
@@ -229,11 +235,6 @@ form#joinPayment > ul > hr {
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
-.groupinfo_body > dl {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
 .groupinfo_body > dl > dt {
 	margin-bottom: 0.5rem;
 	font-family: var(--ff_serif);
@@ -249,6 +250,13 @@ form#joinPayment > ul > hr {
 	vertical-align: top;
 	content: "";
 }
+.groupinfo_body > dl > dt > span {
+	display: inline-block;
+	max-width: 10rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
 .groupinfo_body > dl > dd {
 	font-family: var(--ff_sans_p);
 	color: rgba(var(--color_text), 0.5);
@@ -263,6 +271,23 @@ form#joinPayment > ul > hr {
 }
 
 /* 참여하는 모임 */
+@-webkit-keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+/* 모임 이름 마퀴 애니메이션 */
 /* 호스트 정보 */
 /* 장소 및 제공되는 코스 */
 .partner_info {
