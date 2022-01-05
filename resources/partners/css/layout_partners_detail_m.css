@@ -109,6 +109,98 @@ section#mobileMainIMG > #mobilePartnerTitle > .title_control_box {
 }
 
 /* 모바일 서브 페이지 메인 이미지 */
+.starpoint_container {
+	position: relative;
+}
+.starpoint_container > #hiddenSPCounter {
+	display: none;
+}
+.starpoint_container > .starpoint_total,
+.starpoint_container > .starpoint_mine {
+	position: absolute;
+	left: calc(100% + .25rem);
+	top: 0.2rem;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+}
+.starpoint_container > .starpoint_mine {
+	display: none;
+}
+
+/* 파트너 상세 페이지 별점 컨테이너 */
+.starpoint_selector {
+	position: relative;
+	width: 1rem;
+	height: 1rem;
+	transition: 0.2s ease-out;
+	overflow: hidden;
+}
+@media (hover: hover) {
+	.starpoint_selector:hover {
+		width: 5rem;
+	}
+}
+.starpoint_selector > .star_single {
+	position: absolute;
+	top: 0;
+	width: 1rem;
+	height: 1rem;
+	cursor: pointer;
+}
+.starpoint_selector > .star_single > svg {
+	transform: rotate(-15deg);
+}
+.starpoint_selector > .star_single:nth-child(1) {
+	left: 0;
+}
+.starpoint_selector > .star_single:nth-child(2) {
+	left: 1rem;
+}
+.starpoint_selector > .star_single:nth-child(3) {
+	left: 2rem;
+}
+.starpoint_selector > .star_single:nth-child(4) {
+	left: 3rem;
+}
+.starpoint_selector > .star_single:nth-child(5) {
+	left: 4rem;
+}
+.starpoint_selector > .star_single.glow > svg > path {
+	fill: gold;
+}
+.starpoint_selector > .star_single.decided {
+	-webkit-animation: star_pulse 0.2s 1;
+	        animation: star_pulse 0.2s 1;
+}
+.starpoint_selector > .star_single.decided > svg > path {
+	fill: gold;
+}
+.starpoint_selector > .star_single.star_blank {
+	transform: scale(0.8);
+}
+.starpoint_selector > .star_single.star_blank > svg > path {
+	fill: rgba(var(--color_light), 0.3);
+}
+
+/* 파트너 상세 페이지 별점 셀렉터 */
+@-webkit-keyframes star_pulse {
+	from {
+		transform: scale(1.5);
+	}
+	to {
+		transform: none;
+	}
+}
+@keyframes star_pulse {
+	from {
+		transform: scale(1.5);
+	}
+	to {
+		transform: none;
+	}
+}
+/* 별점 선택시 애니메이션 */
 section#mobilePartnerIntro {
 	display: flex;
 	flex-flow: column nowrap;
