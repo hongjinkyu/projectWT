@@ -494,7 +494,6 @@ section#partnerMenu {
         > .price_of {
             padding: 1rem .25rem .5rem;
             background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
-            font-family: var(--ff_price);
             text-align: end;
 
             > span {
@@ -507,7 +506,7 @@ section#partnerMenu {
 } /* 코스 요리 개별 탭 */
 
 section#partnerReview {
-
+    width: 100%;
 } /* 파트너 상세 페이지 후기 */
 
 #reviewList {
@@ -824,7 +823,6 @@ section#partnerLocation {
 /* ---------- 모바일 버전 시작 ---------- */
 
 
-
 /* ---------- 모바일 버전 종료 ---------- */
 /* ---------- 페이지 특정 요소 종료 ---------- */
 /* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
@@ -832,5 +830,13 @@ section#partnerLocation {
 @media only screen and (hover: none) and (pointer: coarse) {
 
 } /* 모바일 디바이스 미디어 쿼리 */
+
+@media screen and (min-width: 780px) {
+
+}
+
+@media screen and (max-width: 779px) {
+
+}
 
 /* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */

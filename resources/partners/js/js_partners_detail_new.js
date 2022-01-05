@@ -51,6 +51,18 @@ $(document).ready(function() { // jQuery Load
         });
     });
 
+    $('.mobile_tab_buttons > button').each(function() {
+        $(this).click(function() {            
+            $(this).siblings().removeClass('tab_selected');
+            $(this).addClass('tab_selected');
+
+            let tab_href = $(this).attr('data-tab-target');
+
+            $('.mobile_single_tab').removeClass('show');
+            $('.' + tab_href + '').addClass('show');
+        });
+    });
+
     $('.detail_slider').slick({
         slide: '.slider_item',
         slidesToShow: 1,

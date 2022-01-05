@@ -190,7 +190,9 @@ body.prevent_scroll {
     overflow: hidden;
 }
 
-#wrap { /* 전체 랩핑 */
+#wrap,
+#wrapWeb,
+#wrapMobile { /* 전체 랩핑 */
     position: relative;
     width: 100%;
     height: 100%;

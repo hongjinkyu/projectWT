@@ -444,7 +444,6 @@ section#partnerMenu > div#courseTabContainer > .button_container > button.tab_se
 .course_single_tab > .course_dish_list > .price_of {
 	padding: 1rem 0.25rem 0.5rem;
 	background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
-	font-family: var(--ff_price);
 	text-align: end;
 }
 .course_single_tab > .course_dish_list > .price_of > span {
@@ -454,6 +453,10 @@ section#partnerMenu > div#courseTabContainer > .button_container > button.tab_se
 }
 
 /* 코스 요리 개별 탭 */
+section#partnerReview {
+	width: 100%;
+}
+
 /* 파트너 상세 페이지 후기 */
 #reviewList {
 	/* 후기 리스트 페이저 */

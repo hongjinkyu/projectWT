@@ -206,7 +206,9 @@ body.prevent_scroll {
 	overflow: hidden;
 }
 
-#wrap {
+#wrap,
+#wrapWeb,
+#wrapMobile {
 	/* 전체 랩핑 */
 	position: relative;
 	width: 100%;

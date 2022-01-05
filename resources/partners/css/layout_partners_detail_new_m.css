@@ -57,22 +57,19 @@ section#mobileMainIMG > .grid_item {
 	float: left;
 	width: 25vw;
 	height: 12.5vh;
-	background: yellow;
+	background: rgb(var(--color_dark));
 }
 section#mobileMainIMG > .grid_item.half {
 	width: 100vw;
 	height: 50vh;
-	background: #ccc;
 }
 section#mobileMainIMG > .grid_item.quarter {
 	width: 50vw;
 	height: 50vh;
-	background: red;
 }
 section#mobileMainIMG > .grid_item.octo {
 	width: 50vw;
 	height: 25vh;
-	background: green;
 }
 section#mobileMainIMG > .grid_item > img {
 	width: inherit;
@@ -226,16 +223,21 @@ section#mobilePartnerIntro > .intro_text::after {
 }
 /* 해쉬태그 마퀴 애니메이션 */
 section#mobilePartnerCourse {
+	flex-flow: column nowrap;
+	justify-content: center;
 	width: 100vw;
 	height: 100vh;
 }
-section#mobilePartnerCourse > .mobile_tab_container > .mobile_tab_buttons {
+section#mobilePartnerCourse > #mobileTabContainer {
+	width: 100%;
+}
+section#mobilePartnerCourse > #mobileTabContainer > .mobile_tab_buttons {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 	gap: 0.25rem;
 }
-section#mobilePartnerCourse > .mobile_tab_container > .mobile_tab_buttons > button {
+section#mobilePartnerCourse > #mobileTabContainer > .mobile_tab_buttons > button {
 	padding: 0.5rem;
 	width: 20vw;
 	border-radius: 0;
@@ -243,22 +245,355 @@ section#mobilePartnerCourse > .mobile_tab_container > .mobile_tab_buttons > butt
 	box-shadow: none;
 	color: rgb(var(--color_light));
 }
+section#mobilePartnerCourse > #mobileTabContainer > .mobile_tab_buttons > button::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0.25rem;
+	content: "";
+}
+section#mobilePartnerCourse > #mobileTabContainer > .mobile_tab_buttons > button.tab_selected {
+	background: rgb(var(--color_light));
+	color: rgb(var(--color_text));
+	font-weight: bold;
+}
+section#mobilePartnerCourse > #mobileTabContainer > .mobile_tab_buttons > button.tab_selected::before {
+	background: rgb(Var(--color_acc1));
+}
 
+/* 모바일 파트너 코스 요리 소개 */
+.mobile_single_tab {
+	display: none;
+}
+.mobile_single_tab.show {
+	display: block;
+}
+.mobile_single_tab > .mobile_course_img_container {
+	width: 100vw;
+	height: 35vh;
+}
+.mobile_single_tab > .mobile_course_img_container > .mobile_course_img_slider {
+	width: inherit;
+	height: inherit;
+}
+.mobile_single_tab > .mobile_course_img_container > .mobile_course_img_slider > img {
+	width: inherit;
+	height: inherit;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.mobile_single_tab > .mobile_course_dish_list {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100vw;
+	height: 45vh;
+	background: white;
+	box-shadow: 0 0 1rem -0.25rem rgba(var(--color_dark), 0.3);
+}
+.mobile_single_tab > .mobile_course_dish_list > .name_of {
+	padding: 1rem 0;
+	border-bottom: 0.05rem solid #D9D7D2;
+	text-align: center;
+}
+.mobile_single_tab > .mobile_course_dish_list > .list_of {
+	padding: 1rem;
+	overflow-y: auto;
+}
+.mobile_single_tab > .mobile_course_dish_list > .list_of::-webkit-scrollbar {
+	background: transparent;
+}
+.mobile_single_tab > .mobile_course_dish_list > .list_of > ul > li {
+	padding: 0.75rem 0.5rem;
+}
+.mobile_single_tab > .mobile_course_dish_list > .list_of > ul > hr {
+	background: #D9D7D2;
+}
+.mobile_single_tab > .mobile_course_dish_list > .list_of > ul dt {
+	font-size: var(--fnt_14);
+	font-weight: bold;
+}
+.mobile_single_tab > .mobile_course_dish_list > .list_of > ul dt::before {
+	content: "+ ";
+}
+.mobile_single_tab > .mobile_course_dish_list > .list_of > ul dd {
+	padding: 0.5rem 0.25rem 0;
+	opacity: 0.75;
+}
+.mobile_single_tab > .mobile_course_dish_list > .price_of {
+	padding: 1rem;
+	background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
+	text-align: end;
+}
+.mobile_single_tab > .mobile_course_dish_list > .price_of > span {
+	font-family: var(--ff_eng);
+	font-size: var(--fnt_20);
+	font-weight: bold;
+}
+
+/* 모바일 코스 요리 개별 탭 */
 section#mobilePartnerReview {
 	width: 100vw;
 	min-height: 100vh;
 }
 
-section#mobilePartnerDetail {
+/* 모바일 파트너 후기 */
+#mobileReviewList {
+	/* 후기 리스트 페이저 */
+}
+#mobileReviewList > #reviewPager {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	-moz-column-gap: 0.5rem;
+	     column-gap: 0.5rem;
+	margin: 1rem auto 0;
+	padding: 1rem;
+	width: 100%;
+	background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
+	font-family: var(--ff_eng);
+	font-size: var(--fnt_12);
+}
+#mobileReviewList > #reviewPager > li {
+	width: 1.5rem;
+	height: 1.2rem;
+	border-radius: var(--bdr_outer);
+	text-align: center;
+	line-height: 1.2rem;
+	cursor: pointer;
+}
+#mobileReviewList > #reviewPager > li.pager_prev {
+	margin-right: auto;
+}
+#mobileReviewList > #reviewPager > li.pager_next {
+	margin-left: auto;
+}
+#mobileReviewList > #reviewPager > li.current {
+	background: rgba(var(--color_dark), 0.75);
+	color: rgb(var(--color_light));
+	font-weight: bold;
+}
+
+/* 파트너 상세 페이지 후기 리스트 */
+.mobile_review_container {
+	padding: 0 0.5rem;
+}
+.mobile_review_container + .mobile_review_container {
+	margin-top: 1rem;
+}
+.mobile_review_container:is([data-isthis-mine=true]) .show_me_only {
+	display: initial;
+}
+.mobile_review_container:is([data-isthis-mine=false]) .show_me_only {
+	display: none;
+}
+.mobile_review_container > div {
+	float: left;
+	/* Picture Box */
+	/* Comment Box */
+}
+.mobile_review_container > div + div {
+	margin-left: 0.5rem;
+}
+.mobile_review_container > div.review_pict_box {
+	position: relative;
+	width: 3rem;
+	height: 3rem;
+	border-radius: var(--bdr_outer);
+	background: rgba(var(--color_dark), 0.75);
+	overflow: hidden;
+}
+.mobile_review_container > div.review_pict_box > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.mobile_review_container > div.review_pict_box > a > img {
+	width: inherit;
+	height: inherit;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.mobile_review_container > div.review_pict_box > a > .blind_box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(var(--color_dark), 0.5);
+	color: rgb(var(--color_light));
+	text-align: center;
+	line-height: 3rem;
+}
+.mobile_review_container > div.review_pict_box > a > .blind_box > span {
+	font-size: var(--fnt_20);
+}
+.mobile_review_container > div.review_comment_box {
+	padding: 0.5rem;
+	width: calc(100% - 3.5rem);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_light));
+	box-shadow: 0 0.05rem 0 rgba(var(--color_dark), 0.1);
+}
+.mobile_review_container > div.review_comment_box > .comment_title {
+	font-weight: normal;
+	line-height: 1rem;
+	letter-spacing: -0.05rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.mobile_review_container > div.review_comment_box > .comment_content {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	margin: 0.5rem 0 1rem;
+	font-size: var(--fnt_12);
+	font-weight: 300;
+	line-height: 1.8;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.mobile_review_container > div.review_comment_box > .comment_info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.mobile_review_container > div.review_comment_box > .comment_info > .written_date {
+	color: #707070;
+	font-family: var(--ff_eng);
+	font-size: var(--fnt_12);
+}
+
+/* 후기 개별 아이템 */
+section#mobilePartnerDepth {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
 	width: 100vw;
 	height: 100vh;
 }
+section#mobilePartnerDepth > .intro_detail > ul {
+	width: 100%;
+	padding: 0.5rem;
+}
+section#mobilePartnerDepth > .intro_detail > ul > li {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.5rem;
+}
+section#mobilePartnerDepth > .intro_detail > ul > hr {
+	background: #D9D7D2;
+}
+section#mobilePartnerDepth > .intro_detail > ul.partner_info > li {
+	font-family: var(--ff_sans_p);
+	line-height: 1.5;
+}
+section#mobilePartnerDepth > .intro_detail > ul.partner_info > li > svg {
+	margin-right: 0.25rem;
+	fill: #707070;
+}
+section#mobilePartnerDepth > .intro_detail > ul.partner_info > li > span:first-of-type {
+	font-weight: normal;
+	color: #A4A4A4;
+}
+section#mobilePartnerDepth > .intro_detail > ul.partner_info > li > span:last-of-type {
+	margin-left: auto;
+	text-align: end;
+}
+section#mobilePartnerDepth > .intro_detail > ul.partner_disclaimer > li {
+	font-family: var(--ff_sans_p);
+	color: #A4A4A4;
+	font-size: 0.5rem;
+	font-weight: normal;
+	line-height: 1.5;
+}
 
+/* 모바일 파트너 매장 정보 */
 section#mobilePartnerLocation {
+	flex-flow: column nowrap;
+	justify-content: center;
 	width: 100vw;
 	height: 100vh;
 }
+section#mobilePartnerLocation > .location_container {
+	width: 100%;
+}
+section#mobilePartnerLocation > .location_container > div + div {
+	margin-top: 1rem;
+}
+section#mobilePartnerLocation > .location_container > div.map_container {
+	position: relative;
+	height: 50vh;
+	overflow: hidden;
+}
+section#mobilePartnerLocation > .location_container > div.map_container > .location_gps {
+	display: flex;
+	gap: 0.25rem;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5rem;
+	background: rgba(var(--color_dark), 0.75);
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_12);
+	font-weight: normal;
+}
+section#mobilePartnerLocation > .location_container > div.map_container > .location_gps > svg {
+	fill: rgb(var(--color_acc2));
+}
+section#mobilePartnerLocation > .location_container > div.map_container > .location_gps > span {
+	padding-top: 0.15rem;
+}
+section#mobilePartnerLocation > .location_container > div.map_container > .map_api {
+	width: inherit;
+	height: inherit;
+	border: 0.05rem solid #D9D7D2;
+	border-radius: 0.15rem;
+	background: url("../images/temp_map.png") no-repeat center;
+}
+section#mobilePartnerLocation > .location_container > div.info_container > ul {
+	padding: 0.5rem;
+}
+section#mobilePartnerLocation > .location_container > div.info_container > ul > li {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+	font-family: var(--ff_sans_p);
+}
+section#mobilePartnerLocation > .location_container > div.info_container > ul > li > svg {
+	margin-right: 0.25rem;
+	fill: #707070;
+}
+section#mobilePartnerLocation > .location_container > div.info_container > ul > li > span:first-of-type {
+	font-weight: normal;
+	color: #A4A4A4;
+}
+section#mobilePartnerLocation > .location_container > div.info_container > ul > li > span:last-of-type {
+	margin-left: auto;
+	text-align: end;
+}
+section#mobilePartnerLocation > .location_container > div.info_container > ul > hr {
+	margin: 0.5rem 0;
+	background: #D9D7D2;
+}
+section#mobilePartnerLocation > .location_container > div.info_container > .location_disclaimer {
+	margin-top: 1rem;
+	padding: 0 1rem;
+	font-family: var(--ff_sans_p);
+	color: #A4A4A4;
+	font-size: 0.5rem;
+	font-weight: normal;
+	line-height: 1.5;
+}
 
+/* 모바일 파트너 찾아오시는 길 */
 /* ---------- 페이지 특정 요소 종료 ---------- */
 /* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
 /* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */
