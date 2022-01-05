@@ -1,262 +1,727 @@
 @charset "UTF-8";
-/* ---------- Page-Specific Layout CSS (Gathering (Detail)) ---------- */
+/* ---------- Page-Specific Layout CSS (Partner (Detail)) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
-section#contentBar {
-	padding: 0;
-}
-section#contentBar > article {
-	padding: 1rem 0.5rem;
-}
-section#contentBar h4 {
-	font-family: var(--ff_serif);
-}
-
-div#detailSlide {
+/* ---------- 웹 버전 시작 ---------- */
+div#subMainIMG {
 	position: relative;
-	height: 17rem;
-	overflow: hidden;
+	width: 100%;
+	height: 20rem;
 }
-div#detailSlide::before {
+div#subMainIMG::before, div#subMainIMG::after {
 	display: block;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: linear-gradient(to top, rgba(var(--color_dark), 0.75) 0%, transparent 50%);
+}
+div#subMainIMG::before {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+	pointer-events: none;
+	z-index: 2;
+	content: "";
+}
+div#subMainIMG::after {
+	-webkit-backdrop-filter: blur(0.25rem) brightness(0.8);
+	        backdrop-filter: blur(0.25rem) brightness(0.8);
 	z-index: 1;
 	content: "";
 }
-div#detailSlide.mobile {
-	height: 10rem;
-}
-div#detailSlide > .slide_body {
-	width: inherit;
-	height: inherit;
-}
-div#detailSlide > .slide_body img {
+div#subMainIMG > .main_img_copy {
 	width: inherit;
 	height: inherit;
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
-div#detailSlide > .slide_thumbs {
-	position: absolute;
-	bottom: 0.25rem;
-	left: 0.25rem;
-	right: 0.25rem;
-	z-index: 2;
+
+/* 서브 페이지 메인 이미지 */
+div#wrapMain.sub {
+	-moz-column-gap: 1rem;
+	     column-gap: 1rem;
+	margin: 0 auto;
+	width: 60rem;
+	min-height: 100vh;
 }
-div#detailSlide > .slide_thumbs .btn_thumb {
+
+/* 임시 - 서브 페이지 래퍼 사이즈 및 내부 정렬 */
+div#detailSide {
+	position: relative;
+	margin-top: -13.5rem;
+	width: 16rem;
+	z-index: 3;
+}
+
+/* 서브 페이지 사이드 바 */
+div#detailContents {
+	position: relative;
+	width: 42rem;
+}
+
+/* 서브 페이지 컨텐츠 */
+div#detailSide_sticker {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 6rem;
+	left: 0;
+}
+div#detailSide_sticker > .detail_hiddentitle {
+	display: none;
+}
+div#detailSide_sticker > .detail_hiddentitle > p {
+	margin-top: 0.25rem;
+}
+div#detailSide_sticker > .detail_slider_paging {
+	position: relative;
+	width: 100%;
+	height: 0.75rem;
+}
+div#detailSide_sticker > .detail_slider_container {
+	margin: 0.25rem 0;
+	width: 16rem;
+	height: 16rem;
+	background: rgba(var(--color_dark), 0.75);
+	box-shadow: 0 0.5rem 1rem -0.5rem rgba(var(--color_dark), 0.2);
+}
+div#detailSide_sticker > .detail_slider_container > .detail_slider .slider_item {
+	position: relative;
+}
+div#detailSide_sticker > .detail_slider_container > .detail_slider .slider_item > img {
+	width: 16rem;
+	height: 16rem;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+div#detailSide_sticker > .detail_reputation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75rem 1rem;
+	width: 100%;
+	background: rgba(var(--color_dark), 0.75);
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_light));
+}
+div#detailSide_sticker > .detail_reputation > .count_review {
+	margin-top: 0.1rem;
+}
+div#detailSide_sticker > .detail_controller {
+	margin: 0.5rem 0;
+	width: 100%;
+	height: 4.5rem;
+}
+div#detailSide_sticker > .detail_controller > button {
 	display: block;
-	padding: 0;
-	width: 3rem;
-	height: 2.25rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	box-shadow: none;
-	opacity: 0.5;
+	float: left;
+	width: 5rem;
+	height: inherit;
+}
+div#detailSide_sticker > .detail_controller > button + button {
+	margin-left: 0.5rem;
+}
+div#detailSide_sticker > .detail_hiddenbutton {
+	display: none;
+}
+
+/* 서브 페이지 스티키 메뉴 */
+.starpoint_container {
+	position: relative;
+}
+.starpoint_container > #hiddenSPCounter {
+	display: none;
+}
+.starpoint_container > .starpoint_total,
+.starpoint_container > .starpoint_mine {
+	position: absolute;
+	left: calc(100% + .25rem);
+	top: 0.2rem;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+}
+.starpoint_container > .starpoint_mine {
+	display: none;
+}
+
+/* 파트너 상세 페이지 별점 컨테이너 */
+.starpoint_selector {
+	position: relative;
+	width: 1rem;
+	height: 1rem;
+	transition: 0.2s ease-out;
 	overflow: hidden;
 }
-div#detailSlide > .slide_thumbs .btn_thumb + .btn_thumb {
-	margin-left: 0.25rem;
+@media (hover: hover) {
+	.starpoint_selector:hover {
+		width: 5rem;
+	}
 }
-div#detailSlide > .slide_thumbs .btn_thumb img {
+.starpoint_selector > .star_single {
+	position: absolute;
+	top: 0;
+	width: 1rem;
+	height: 1rem;
+	cursor: pointer;
+}
+.starpoint_selector > .star_single > svg {
+	transform: rotate(-15deg);
+}
+.starpoint_selector > .star_single:nth-child(1) {
+	left: 0;
+}
+.starpoint_selector > .star_single:nth-child(2) {
+	left: 1rem;
+}
+.starpoint_selector > .star_single:nth-child(3) {
+	left: 2rem;
+}
+.starpoint_selector > .star_single:nth-child(4) {
+	left: 3rem;
+}
+.starpoint_selector > .star_single:nth-child(5) {
+	left: 4rem;
+}
+.starpoint_selector > .star_single.glow > svg > path {
+	fill: gold;
+}
+.starpoint_selector > .star_single.decided {
+	-webkit-animation: star_pulse 0.2s 1;
+	        animation: star_pulse 0.2s 1;
+	pointer-events: none;
+}
+.starpoint_selector > .star_single.decided > svg > path {
+	fill: gold;
+}
+.starpoint_selector > .star_single.star_blank {
+	transform: scale(0.8);
+	pointer-events: none;
+}
+.starpoint_selector > .star_single.star_blank > svg > path {
+	fill: rgba(var(--color_light), 0.3);
+}
+
+/* 파트너 상세 페이지 별점 셀렉터 */
+@-webkit-keyframes star_pulse {
+	from {
+		transform: scale(1.5);
+	}
+	to {
+		transform: none;
+	}
+}
+@keyframes star_pulse {
+	from {
+		transform: scale(1.5);
+	}
+	to {
+		transform: none;
+	}
+}
+/* 별점 선택시 애니메이션 */
+div#detailFront {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1rem;
+	position: absolute;
+	bottom: 100%;
+	width: 100%;
+	padding: 1rem 0;
+	color: rgb(var(--color_light));
+	font-weight: normal;
+	z-index: 4;
+}
+div#detailFront > .front_paragraph {
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_16);
+	line-height: 1.5;
+	opacity: 0.75;
+}
+div#detailFront > .front_title {
+	font-family: var(--ff_serif);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_40);
+	font-weight: inherit;
+}
+div#detailFront > .front_hashtag > li {
+	float: left;
+	font-family: var(--ff_sans_p);
+	opacity: 0.75;
+}
+div#detailFront > .front_hashtag > li::before {
+	content: "#";
+}
+div#detailFront > .front_hashtag > li + li {
+	margin-left: 2rem;
+}
+
+/* 파트너 상세 페이지 메인 타이틀 */
+.section_title {
+	margin: 5rem 0 1.5rem;
+	color: #707070;
+	text-align: center;
+}
+.section_title > h5 {
+	color: #707070;
+	font-size: var(--fnt_24);
+	font-weight: normal;
+}
+.section_title > p {
+	font-family: "Berkshire Swash", cursive;
+	font-size: var(--fnt_12);
+	opacity: 0.5;
+}
+.section_title > hr {
+	position: relative;
+	margin-top: 0.75rem;
+	background: #D9D7D2;
+	overflow: visible;
+}
+.section_title > hr::before {
+	display: block;
+	position: absolute;
+	top: calc(50% - .15rem);
+	left: calc(50% - .15rem);
+	width: 0.3rem;
+	height: 0.3rem;
+	border: 0.05rem solid #D9D7D2;
+	background: rgb(var(--color_bg));
+	transform: rotateZ(45deg);
+	content: "";
+}
+
+/* 상세 페이지 섹션 타이틀 - 인터페이스로 가야 함 */
+button.btn_rotate {
+	display: block;
+	margin: 2.5rem auto;
+}
+
+/* 회전 버튼 단독 스타일 */
+section#partnerIntro > .intro_text {
+	position: relative;
+	margin: 3rem auto;
+	max-width: 32rem;
+	color: #707070;
+	font-size: var(--fnt_20);
+	font-weight: lighter;
+	text-align: center;
+	letter-spacing: -0.05rem;
+	line-height: 1.5;
+}
+section#partnerIntro > .intro_text::before, section#partnerIntro > .intro_text::after {
+	position: absolute;
+	top: -1rem;
+	font-family: var(--ff_serif);
+	font-size: 5rem;
+	opacity: 0.5;
+}
+section#partnerIntro > .intro_text::before {
+	right: calc(100% + 1rem);
+	content: "“";
+}
+section#partnerIntro > .intro_text::after {
+	left: calc(100% + 1rem);
+	content: "”";
+}
+
+/* 파트너 상세 페이지 맛집 소개 */
+section#partnerMenu > div#courseTabContainer {
+	width: 100%;
+}
+section#partnerMenu > div#courseTabContainer > .button_container {
+	padding: 0 0.5rem;
+}
+section#partnerMenu > div#courseTabContainer > .button_container > button {
+	display: block;
+	position: relative;
+	float: left;
+	width: 5rem;
+	height: 1.75rem;
+	border-radius: 0;
+	background: rgba(var(--color_dark), 0.75);
+	box-shadow: none;
+	color: rgb(var(--color_light));
+}
+section#partnerMenu > div#courseTabContainer > .button_container > button + button {
+	margin-left: 0.05rem;
+}
+section#partnerMenu > div#courseTabContainer > .button_container > button::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0.25rem;
+	content: "";
+}
+section#partnerMenu > div#courseTabContainer > .button_container > button.tab_selected {
+	background: rgb(var(--color_light));
+	color: rgb(var(--color_text));
+	font-weight: bold;
+}
+section#partnerMenu > div#courseTabContainer > .button_container > button.tab_selected::before {
+	background: rgb(Var(--color_acc1));
+}
+
+/* 파트너 상세 페이지 코스 요리 소개 */
+.course_single_tab {
+	display: none;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 0.5rem;
+	height: 21rem;
+	border-bottom-left-radius: var(--bdr_outer);
+	background: rgb(var(--color_light));
+	box-shadow: 0 0.05rem 0 rgba(var(--color_dark), 0.1);
+	font-family: var(--ff_sans_p);
+}
+.course_single_tab.show {
+	display: flex;
+}
+.course_single_tab > .course_img_container {
+	width: 20rem;
+	height: 100%;
+}
+.course_single_tab > .course_img_container > .course_img_slider {
+	position: relative;
 	width: 100%;
 	height: 100%;
+}
+.course_single_tab > .course_img_container > .course_img_slider > .course_slider_img {
+	width: 20rem;
+	height: 100%;
+	background: rgba(var(--color_dark), 0.75);
+}
+.course_single_tab > .course_img_container > .course_img_slider > .course_slider_img > img {
+	width: inherit;
+	height: inherit;
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
-div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
-	border: 0.1rem solid rgb(var(--color_acc1));
-	opacity: 1;
-}
-
-.info_title {
-	margin: 0 0 0.5rem 0.5rem;
-}
-
-.star_point::before {
-	left: auto;
-	right: 100%;
-}
-
-.hf {
-	background: rgb(var(--color_bdr));
-}
-
-.detail_title {
-	position: relative;
-	margin-bottom: 0.5rem;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-	font-family: var(--ff_sans_p);
-	color: rgb(var(--color_title));
-	z-index: 1;
-}
-.detail_title::before {
-	display: block;
+.course_single_tab > .course_img_container > .course_img_slider > .course_slider_desc {
 	position: absolute;
-	bottom: -0.1rem;
-	left: -0.15rem;
-	width: calc(100% + .3rem);
-	height: 0.4rem;
-	border-radius: 0.1rem;
-	background: rgb(var(--color_bdr));
-	z-index: -1;
-	content: "";
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5rem;
+	background: rgba(var(--color_dark), 0.75);
+	color: rgb(var(--color_light));
+	line-height: 1.5;
+}
+.course_single_tab > .course_dish_list {
+	display: flex;
+	flex-flow: column nowrap;
+	position: relative;
+	width: 20.5rem;
+	height: 100%;
+}
+.course_single_tab > .course_dish_list > .name_of {
+	padding: 0.5rem;
+	border-bottom: 0.05rem solid #D9D7D2;
+	text-align: center;
+}
+.course_single_tab > .course_dish_list > .list_of {
+	font-size: var(--fnt_12);
+	overflow-y: auto;
+}
+.course_single_tab > .course_dish_list > .list_of::-webkit-scrollbar {
+	background: transparent;
+}
+.course_single_tab > .course_dish_list > .list_of > ul > li {
+	padding: 0.75rem 0.5rem;
+}
+.course_single_tab > .course_dish_list > .list_of > ul > hr {
+	background: #D9D7D2;
+}
+.course_single_tab > .course_dish_list > .list_of > ul dt {
+	font-size: var(--fnt_14);
+	font-weight: bold;
+}
+.course_single_tab > .course_dish_list > .list_of > ul dt::before {
+	content: "+ ";
+}
+.course_single_tab > .course_dish_list > .list_of > ul dd {
+	padding: 0.5rem 0.25rem 0;
+	opacity: 0.75;
+}
+.course_single_tab > .course_dish_list > .price_of {
+	padding: 1rem 0.25rem 0.5rem;
+	background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
+	text-align: end;
+}
+.course_single_tab > .course_dish_list > .price_of > span {
+	font-family: var(--ff_eng);
+	font-size: var(--fnt_20);
+	font-weight: bold;
 }
 
-#partnerInfo {
-	position: relative;
+/* 코스 요리 개별 탭 */
+section#partnerReview {
+	width: 100%;
 }
-#partnerInfo .restaurant_hashtag {
-	margin: 0.5rem 0 1rem;
-	color: rgb(var(--color_bdr));
-	font-size: var(--fnt_12);
+
+/* 파트너 상세 페이지 후기 */
+#reviewList {
+	/* 후기 리스트 페이저 */
 }
-#partnerInfo .restaurant_rate {
+#reviewList > #reviewPager {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
+	justify-content: center;
 	align-items: center;
-	gap: 0.5rem;
-	margin: 0.5rem 0.25rem 0.5rem 1.5rem;
-}
-#partnerInfo .restaurant_rate .review_count {
-	font-family: var(--ff_sans_p);
+	-moz-column-gap: 0.5rem;
+	     column-gap: 0.5rem;
+	margin: 1rem auto 0;
+	padding: 1rem;
+	width: 18rem;
+	background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
+	font-family: var(--ff_eng);
 	font-size: var(--fnt_12);
 }
-#partnerInfo .restaurant_rate .location_mini {
+#reviewList > #reviewPager > li {
+	width: 1.5rem;
+	height: 1.2rem;
+	border-radius: var(--bdr_outer);
+	text-align: center;
+	line-height: 1.2rem;
+	cursor: pointer;
+}
+#reviewList > #reviewPager > li.pager_prev {
+	margin-right: auto;
+}
+#reviewList > #reviewPager > li.pager_next {
 	margin-left: auto;
 }
-#partnerInfo .partner_intro {
-	margin-bottom: 0.75rem;
-	padding: 0.5rem;
-	background: rgb(var(--color_bg));
+#reviewList > #reviewPager > li.current {
+	background: rgba(var(--color_dark), 0.75);
+	color: rgb(var(--color_light));
+	font-weight: bold;
+}
+
+/* 파트너 상세 페이지 후기 리스트 */
+.review_container {
+	/* Button Box */
+}
+.review_container + .review_container {
+	margin-top: 2rem;
+}
+.review_container:is([data-isthis-mine=true]) .show_me_only {
+	display: initial;
+}
+.review_container:is([data-isthis-mine=false]) .show_me_only {
+	display: none;
+}
+.review_container > div {
+	float: left;
+	/* Picture Box */
+	/* Comment Box */
+}
+.review_container > div + div {
+	margin-left: 0.5rem;
+}
+.review_container > div.review_pict_box {
+	position: relative;
+	width: 8rem;
+	height: 8rem;
 	border-radius: var(--bdr_outer);
+	background: rgba(var(--color_dark), 0.75);
+	overflow: hidden;
+}
+.review_container > div.review_pict_box > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.review_container > div.review_pict_box > a > img {
+	width: inherit;
+	height: inherit;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.review_container > div.review_pict_box > a > .blind_box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 2rem 0;
+	background: rgba(var(--color_dark), 0.5);
+	color: rgb(var(--color_light));
+	text-align: center;
 	line-height: 1.6;
 }
-#partnerInfo .location_mini {
-	font-size: var(--fnt_12);
-	text-align: end;
+.review_container > div.review_pict_box > a > .blind_box > span {
+	font-size: var(--fnt_30);
 }
-#partnerInfo .reservation_info {
-	margin-top: 1.5rem;
-	padding: 0 0.5rem;
-}
-#partnerInfo .restaurant_option {
-	margin-top: 1.5rem;
-	padding: 0 0.5rem;
-}
-
-.bubble {
-	width: initial !important;
-}
-.bubble > .star_point {
-	margin-top: 0.5rem;
-	margin-left: auto;
-}
-
-.review_container {
-	padding-bottom: 0.5rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	background: rgb(var(--color_bg));
-}
-
-#btnOpen {
-	position: absolute;
-	top: -1.75rem;
-	right: 1rem;
-	padding: 0 1.25rem;
-	width: 2.5rem;
-	height: 2.5rem;
-	border-radius: 1.25rem;
-	background: rgb(var(--color_light)) url("../../common/images/icons/icon_gathering_26_b.png") no-repeat center;
-	box-shadow: 0 0.25rem 0.5rem rgba(var(--color_dark), 0.3);
-	color: rgb(var(--color_light));
-	font-size: var(--fnt_14);
-	cursor: pointer;
-	overflow: hidden;
-	z-index: 2;
-}
-#btnOpen > span {
-	display: inline-block;
-	width: 100%;
-	text-align: end;
-	opacity: 0;
-}
-#btnOpen:hover {
-	width: 10rem;
-	background: rgb(var(--color_acc1)) url("../../common/images/icons/icon_gathering_26_w.png") no-repeat left 0.75rem center;
-	box-shadow: 0 0.25rem 0.5rem rgba(var(--color_acc1), 0.3);
-	transition: 0.3s;
-}
-#btnOpen:hover > span {
-	opacity: 1;
-	transition: 0.3s;
-	transition-delay: 0.2s;
-}
-#btnOpen.mobile {
-	top: 0.5rem;
-}
-
-.food_container {
+.review_container > div.review_comment_box {
 	padding: 0.5rem;
-	border: var(--border);
+	width: 27rem;
+	min-height: 8rem;
 	border-radius: var(--bdr_outer);
-	background: rgb(var(--color_bg));
+	background: rgb(var(--color_light));
+	box-shadow: 0 0.05rem 0 rgba(var(--color_dark), 0.1);
+}
+.review_container > div.review_comment_box > .comment_title {
+	font-weight: normal;
+	line-height: 1rem;
+	letter-spacing: -0.05rem;
+}
+.review_container > div.review_comment_box > .comment_content {
+	margin: 0.5rem 0 1rem;
+	min-height: 3.5rem;
+	font-size: var(--fnt_12);
+	font-weight: 300;
+	line-height: 1.8;
+}
+.review_container > div.review_comment_box > .comment_info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.review_container > div.review_comment_box > .comment_info > .written_date {
+	color: #707070;
+	font-family: var(--ff_eng);
+	font-size: var(--fnt_12);
+}
+.review_container > .review_button_box {
+	float: left;
+	margin-left: 0.5rem;
+	width: 6rem;
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_12);
+}
+.review_container > .review_button_box > li > label {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+}
+.review_container > .review_button_box > li button {
+	padding: 0.5rem;
+	width: 2rem;
+	height: 2rem;
 }
 
-.food_item {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	gap: 0.5rem 0.25rem;
-	position: relative;
-}
-.food_item + .food_item {
+/* 후기 개별 아이템 */
+section#partnerDepth > .intro_detail {
 	margin-top: 1rem;
 }
-.food_item > .food_face {
-	width: 2.5rem;
-	height: 2.5rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	-o-object-fit: cover;
-	   object-fit: cover;
+section#partnerDepth > .intro_detail > ul {
+	float: left;
+	width: 50%;
+	padding: 0.5rem;
 }
-.food_item > .food_spec > .food_name {
-	font-family: var(--ff_sans_p);
-}
-.food_item > .food_spec > .food_desc {
-	font-size: var(--fnt_12);
-	line-height: 1.4;
-}
-.food_item > .food_price {
-	margin-left: auto;
-}
-.food_item > .food_images {
+section#partnerDepth > .intro_detail > ul > li {
 	display: flex;
-	flex-flow: row wrap;
-	gap: 0.5rem;
-	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.5rem;
 }
-.food_item > .food_images > img {
-	width: calc((100% - 1.5rem) / 4);
-	aspect-ratio: 4/2.5;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	-o-object-fit: cover;
-	   object-fit: cover;
+section#partnerDepth > .intro_detail > ul > hr {
+	background: #D9D7D2;
+}
+section#partnerDepth > .intro_detail > ul.partner_info > li {
+	font-family: var(--ff_sans_p);
+	line-height: 1.5;
+}
+section#partnerDepth > .intro_detail > ul.partner_info > li > svg {
+	margin-right: 0.25rem;
+	fill: #707070;
+}
+section#partnerDepth > .intro_detail > ul.partner_info > li > span:first-of-type {
+	font-weight: normal;
+	color: #A4A4A4;
+}
+section#partnerDepth > .intro_detail > ul.partner_info > li > span:last-of-type {
+	margin-left: auto;
+	text-align: end;
+}
+section#partnerDepth > .intro_detail > ul.partner_disclaimer > li {
+	font-family: var(--ff_sans_p);
+	color: #A4A4A4;
+	font-size: 0.5rem;
+	font-weight: normal;
+	line-height: 1.5;
 }
 
-#partnerLocation .location_map > img {
-	width: 100%;
-	height: 30rem;
-	border: var(--border);
-	border-radius: var(--bdr_outer);
-	-o-object-fit: cover;
-	   object-fit: cover;
+/* 파트너 상세 페이지 매장 정보 */
+section#partnerLocation > .location_container > div {
+	float: left;
 }
+section#partnerLocation > .location_container > div + div {
+	margin-left: 1rem;
+}
+section#partnerLocation > .location_container > div.map_container {
+	position: relative;
+	width: 20.5rem;
+	height: 20rem;
+	border-radius: 0.15rem;
+	overflow: hidden;
+}
+section#partnerLocation > .location_container > div.map_container > .location_gps {
+	display: flex;
+	gap: 0.25rem;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5rem;
+	background: rgba(var(--color_dark), 0.75);
+	font-family: var(--ff_sans_p);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_12);
+	font-weight: normal;
+}
+section#partnerLocation > .location_container > div.map_container > .location_gps > svg {
+	fill: rgb(var(--color_acc2));
+}
+section#partnerLocation > .location_container > div.map_container > .location_gps > span {
+	padding-top: 0.15rem;
+}
+section#partnerLocation > .location_container > div.map_container > .map_api {
+	width: inherit;
+	height: inherit;
+	border: 0.05rem solid #D9D7D2;
+	border-radius: 0.15rem;
+	background: url("../images/temp_map.png") no-repeat center;
+}
+section#partnerLocation > .location_container > div.info_container {
+	width: 20.5rem;
+}
+section#partnerLocation > .location_container > div.info_container > ul > li {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+	font-family: var(--ff_sans_p);
+}
+section#partnerLocation > .location_container > div.info_container > ul > li > svg {
+	margin-right: 0.25rem;
+	fill: #707070;
+}
+section#partnerLocation > .location_container > div.info_container > ul > li > span:first-of-type {
+	font-weight: normal;
+	color: #A4A4A4;
+}
+section#partnerLocation > .location_container > div.info_container > ul > li > span:last-of-type {
+	margin-left: auto;
+	text-align: end;
+}
+section#partnerLocation > .location_container > div.info_container > ul > hr {
+	margin: 0.5rem 0;
+	background: #D9D7D2;
+}
+section#partnerLocation > .location_container > div.info_container > .location_disclaimer {
+	margin-top: 2rem;
+	font-family: var(--ff_sans_p);
+	color: #A4A4A4;
+	font-size: 0.5rem;
+	font-weight: normal;
+	line-height: 1.5;
+}
+
+/* 파트너 상세 페이지 찾아오시는 길 */
+/* ---------- 웹 버전 종료 ---------- */
+/* ---------- 모바일 버전 시작 ---------- */
+/* ---------- 모바일 버전 종료 ---------- */
+/* ---------- 페이지 특정 요소 종료 ---------- */
+/* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
+/* 모바일 디바이스 미디어 쿼리 */
+/* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */

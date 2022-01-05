@@ -37,10 +37,14 @@
 
     <body>
 
+        <a id="skipToMain" href="#wrapMain">
+            Skip to main content
+        </a>
+
         <div id="wrap">
 
-            <header id="headBase" class="head_sub">
-                <nav id="navBase" class="nav_sub int_wrap" role="navigation">
+            <header id="headBase" class="head_detail">
+                <nav id="navBase" class="nav_index int_wrap" role="navigation">
                     <h1 id="mainLogo">
                         <a href="index.html">Wine Together</a>
                     </h1>
@@ -110,7 +114,7 @@
                                 </ul>
                             </div>
                             <div class="disappearing_area">
-                                
+
                             </div>
                         </div>
                     </nav>
@@ -127,439 +131,925 @@
 
         <!-- Page Main Contents Start / 헤더 영역 종료 -->
 
+            <div id="subMainIMG">
+                <img src="./resources/index/images/img27.jpg" alt="맛집 메인 이미지" class="main_img_copy" />
+            </div>
+
             <div id="wrapMain" class="int_wrap sub" role="main">
 
-                <section id="sideBar">
-                    <ul class="side_mnu_left">
-                        <li class="side_mnu_item1 checked" data-mnu-target="detailSlide">맛집 소개</li>
-                        <li class="side_mnu_item2" data-mnu-target="partnerMenu">주요 메뉴</li>
-                        <li class="side_mnu_item3" data-mnu-target="partnerReview">여기서 만난 사람들</li>
-                        <li class="side_mnu_item4" data-mnu-target="partnerLocation">찾아오시는 길</li>
-                    </ul>
-                </section>
-
-                <section id="contentBar">
-                    <div id="detailSlide">
-                        <div class="slide_body">
-                            <img src="./resources/index/images/img27.jpg" alt="맛집 대표사진" />
-                            <img src="./resources/index/images/img38.jpg" alt="맛집 대표사진" />
-                            <img src="./resources/index/images/img39.jpg" alt="맛집 대표사진" />
-                            <img src="./resources/index/images/img41.jpg" alt="맛집 대표사진" />
+                <div id="detailSide">
+                    <div id="detailSide_sticker">
+                        <div class="detail_hiddentitle">
+                            <h3 class="hidden_name">
+                                더 뉴
+                            </h3>
+                            <p class="hidden_location">
+                                부산시 수영구
+                            </p>
                         </div>
 
-                        <div class="slide_thumbs">
-                            <div class="btn_thumb">
-                                <img src="./resources/index/images/img34.jpg" alt="맛집 대표사진" />
-                            </div>
-                            <div class="btn_thumb">
-                                <img src="./resources/index/images/img38.jpg" alt="맛집 대표사진" />
-                            </div>
-                            <div class="btn_thumb">
-                                <img src="./resources/index/images/img39.jpg" alt="맛집 대표사진" />
-                            </div>
-                            <div class="btn_thumb">
-                                <img src="./resources/index/images/img41.jpg" alt="맛집 대표사진" />
-                            </div>
+                        <div class="detail_slider_paging">
+                            
                         </div>
 
-                        <p class="btn_back">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/></svg>
-                        </p>
-
-                        <p class="btn_like" data-message="즐겨찾기 등록 완료"> <!-- 심플 팝업 사용예시 -->
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0H24V24H0z"/><path d="M19 14v3h3v2h-3.001L19 22h-2l-.001-3H14v-2h3v-3h2zm1.243-9.243c2.262 2.268 2.34 5.88.236 8.235l-1.42-1.418c1.331-1.524 1.261-3.914-.232-5.404-1.503-1.499-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.991-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451l8.432 8.446L12 21.485 3.52 12.993c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228 2.349-2.109 5.979-2.039 8.242.228z"/></svg>
-                        </p>
-                    </div>
-
-                    <article id="partnerInfo">
-                        <div class="restaurant_info">
-                            <h3 class="restaurant_name">더뉴 (The NEW)</h3>
-                            <button id="btnOpen">
-                                <span>여기에서 모임 개설하기</span>
-                            </button>
-                            <p class="restaurant_hashtag">#광안리맛집 #광안리리뷰맛집 #광안리코스요리 #광안리분위기맛집</p>
-
-                            <div class="restaurant_rate">
-                                <div class="star_point" data-point-total="9.0">
-                                    <div class="star_point_blacker"></div>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                        <div class="detail_slider_container">
+                            <div class="detail_slider">
+                                <div class="slider_item">
+                                    <img src="./resources/index/images/img27.jpg" alt="맛집 메인 이미지" class="slider_item_img" />
                                 </div>
-                                <p class="review_count">리뷰 57개</p>
-                                <p class="location_mini">
-                                    <img src="./resources/common/images/icons/icon_gps.png" alt="위치" class="icon_gps" />
-                                    부산광역시 수영구 광안로 61번길 50
+
+                                <div class="slider_item">
+                                    <img src="./resources/index/images/img28.jpg" alt="맛집 메인 이미지" class="slider_item_img" />
+                                </div>
+
+                                <div class="slider_item">
+                                    <img src="./resources/index/images/img29.jpg" alt="맛집 메인 이미지" class="slider_item_img" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail_reputation">
+                            <div class="starpoint_container">
+                                <div class="starpoint_selector">
+                                    <div class="star_single">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                    </div>
+                                    <div class="star_single">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                    </div>
+                                    <div class="star_single">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                    </div>
+                                    <div class="star_single">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                    </div>
+                                    <div class="star_single">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path id="icon_starpoint" d="M9.137,1.478a1,1,0,0,1,1.727,0l2.425,4.151a1,1,0,0,0,.618.465l4.578,1.161a1,1,0,0,1,.531,1.6l-3.1,3.829a1,1,0,0,0-.22.7l.366,4.965a1,1,0,0,1-1.4.991L10.4,17.49a1,1,0,0,0-.8,0L5.337,19.341a1,1,0,0,1-1.4-.991l.366-4.965a1,1,0,0,0-.22-.7L.984,8.854a1,1,0,0,1,.531-1.6L6.094,6.094a1,1,0,0,0,.618-.465Z" fill="#fff"/></svg>
+                                    </div>
+                                </div>
+
+                                <input type="number" name="hiddenSPCounter" id="hiddenSPCounter" value="0" />
+
+                                <p class="starpoint_total">평균 <span>4.8점</span></p>
+                                <p class="starpoint_mine">나의 평가 : <span></span>점</p>
+                            </div>
+                            
+                            <p class="count_review">총 <span>2,114</span>개의 리뷰</p>
+                        </div>
+
+                        <div class="detail_controller clr_fix">
+                            <button class="btn_scale">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z"/></svg>
+                                <p>후기작성</p>
+                            </button>
+                            <button class="btn_scale">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0H24V24H0z"/><path d="M19 14v3h3v2h-3.001L19 22h-2l-.001-3H14v-2h3v-3h2zm1.243-9.243c2.262 2.268 2.34 5.88.236 8.235l-1.42-1.418c1.331-1.524 1.261-3.914-.232-5.404-1.503-1.499-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.991-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451l8.432 8.446L12 21.485 3.52 12.993c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228 2.349-2.109 5.979-2.039 8.242.228z"/></svg>
+                                <p>즐겨찾기</p>
+                            </button>
+                            <button class="btn_scale">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.12 17.023l-4.199-2.29a4 4 0 1 1 0-5.465l4.2-2.29a4 4 0 1 1 .959 1.755l-4.2 2.29a4.008 4.008 0 0 1 0 1.954l4.199 2.29a4 4 0 1 1-.959 1.755zM6 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm11-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                                <p>공유하기</p>
+                            </button>
+                        </div>
+
+                        <div class="detail_hiddenbutton">
+                            숨겨진 버튼
+                        </div>
+                    </div> <!-- #detailSide_sticker -->
+                </div> <!-- #detailSide -->
+
+                <div id="detailContents">
+                    <div id="detailFront">
+                        <p class="front_paragraph">
+                            광안리 해변뷰의 지존<br />
+                            와인과 환상의 궁합을 이루는 이탈리안 코스<br />
+                            즐거운 모임에 고급스러움을 더하는 장소
+                        </p>
+
+                        <h3 class="front_title">
+                            더 뉴
+                        </h3>
+
+                        <ul class="front_hashtag clr_fix">
+                            <li>광안리맛집</li>
+                            <li>광안리뷰맛집</li>
+                            <li>광안리코스요리</li>
+                            <li>광안리분위기맛집</li>
+                        </ul>
+                    </div> <!-- #detailFront -->
+
+                    <section id="partnerIntro">
+                        <div class="section_title">
+                            <h5>맛집 소개</h5>
+                            <p>Introduce</p>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
+
+                        <p class="intro_text">
+                            광안리 해변 바로 앞에 위치한 뷰 깡패, 더 뉴 입니다.<br />
+                            파스타, 수제 도우 피자 등 와인과 어울리는 각종 이탈리안 요리를 제공합니다.
+                        </p>
+
+                        <button class="btn_rotate">
+                            <p class="rotate_box1">여기에서 모임 개설하기</p>
+                            <p class="rotate_box2">여기에서 모임 개설하기</p>
+                        </button>
+                    </section> <!-- #partnerIntro -->
+
+                    <section id="partnerMenu">
+                        <div class="section_title">
+                            <h5>코스 요리 소개</h5>
+                            <p>Courses</p>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
+
+                        <div id="courseTabContainer">
+                            <div class="button_container clr_fix">
+                                <button class="tab_selected" data-tab-target="for4">4인 코스</button>
+                                <button data-tab-target="for5">5인 코스</button>
+                                <button data-tab-target="for6">6인 코스</button>
+                                <button data-tab-target="for8">8인 코스</button>
+                            </div>
+
+                            <article class="course_single_tab for4 show">
+                                <div class="course_img_container">
+                                    <div class="course_img_slider">
+                                        <div class="course_slider_img">
+                                            <img src="./resources/index/images/img42.jpg" alt="코스 요리 이미지" />
+                                        </div>
+                                        <div class="course_slider_desc">
+                                            맛이가 있어요
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <dl class="course_dish_list">
+                                    <dt class="name_of">
+                                        <h6>Awesome Menu</h6>
+                                        <p>4인 코스</p>
+                                    </dt>
+                                    <dd class="list_of">
+                                        <ul>
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Drink</dt>
+                                                    <dd>Demi Soda</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Appetizer</dt>
+                                                    <dd>Gum</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Food #01</dt>
+                                                    <dd>Shin Ramen</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Food #02</dt>
+                                                    <dd>Danmoozi</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Main Dish</dt>
+                                                    <dd>Hobbang</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Disert</dt>
+                                                    <dd>SsangSsangBar</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome After Tea</dt>
+                                                    <dd>Japangi Coffee</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="price_of">
+                                        ₩ <span>65,535</span> / 1인당
+                                    </dd>
+                                </dl>
+                            </article> <!-- Single Tab -->
+
+                            <article class="course_single_tab for5">
+                                <div class="course_img_container">
+                                    <div class="course_img_slider">
+                                        <div class="course_slider_img">
+                                            <img src="./resources/index/images/img43.jpg" alt="코스 요리 이미지" />
+                                        </div>
+                                        <div class="course_slider_desc">
+                                            맛이가 있어요
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <dl class="course_dish_list">
+                                    <dt class="name_of">
+                                        <h6>Awesome Menu</h6>
+                                        <p>5인 코스</p>
+                                    </dt>
+                                    <dd class="list_of">
+                                        <ul>
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Drink</dt>
+                                                    <dd>Demi Soda</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Appetizer</dt>
+                                                    <dd>Gum</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Food #01</dt>
+                                                    <dd>Shin Ramen</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Food #02</dt>
+                                                    <dd>Danmoozi</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Main Dish</dt>
+                                                    <dd>Hobbang</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Disert</dt>
+                                                    <dd>SsangSsangBar</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome After Tea</dt>
+                                                    <dd>Japangi Coffee</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="price_of">
+                                        ₩ <span>65,535</span> / 1인당
+                                    </dd>
+                                </dl>
+                            </article> <!-- Single Tab -->
+
+                            <article class="course_single_tab for6">
+                                <div class="course_img_container">
+                                    <div class="course_img_slider">
+                                        <div class="course_slider_img">
+                                            <img src="./resources/index/images/img44.jpg" alt="코스 요리 이미지" />
+                                        </div>
+                                        <div class="course_slider_desc">
+                                            맛이가 있어요
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <dl class="course_dish_list">
+                                    <dt class="name_of">
+                                        <h6>Awesome Menu</h6>
+                                        <p>6인 코스</p>
+                                    </dt>
+                                    <dd class="list_of">
+                                        <ul>
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Drink</dt>
+                                                    <dd>Demi Soda</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Appetizer</dt>
+                                                    <dd>Gum</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Food #01</dt>
+                                                    <dd>Shin Ramen</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Food #02</dt>
+                                                    <dd>Danmoozi</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Main Dish</dt>
+                                                    <dd>Hobbang</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Disert</dt>
+                                                    <dd>SsangSsangBar</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome After Tea</dt>
+                                                    <dd>Japangi Coffee</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="price_of">
+                                        ₩ <span>65,535</span> / 1인당
+                                    </dd>
+                                </dl>
+                            </article> <!-- Single Tab -->
+
+                            <article class="course_single_tab for8">
+                                <div class="course_img_container">
+                                    <div class="course_img_slider">
+                                        <div class="course_slider_img">
+                                            <img src="./resources/index/images/img40.jpg" alt="코스 요리 이미지" />
+                                        </div>
+                                        <div class="course_slider_desc">
+                                            맛이가 있어요
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <dl class="course_dish_list">
+                                    <dt class="name_of">
+                                        <h6>Awesome Menu</h6>
+                                        <p>8인 코스</p>
+                                    </dt>
+                                    <dd class="list_of">
+                                        <ul>
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Drink</dt>
+                                                    <dd>Demi Soda</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Appetizer</dt>
+                                                    <dd>Gum</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Food #01</dt>
+                                                    <dd>Shin Ramen</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Food #02</dt>
+                                                    <dd>Danmoozi</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Main Dish</dt>
+                                                    <dd>Hobbang</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome Disert</dt>
+                                                    <dd>SsangSsangBar</dd>
+                                                </dl>
+                                            </li>
+                                            <hr class="hf" />
+                                            <li>
+                                                <dl>
+                                                    <dt>Awesome After Tea</dt>
+                                                    <dd>Japangi Coffee</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="price_of">
+                                        ₩ <span>65,535</span> / 1인당
+                                    </dd>
+                                </dl>
+                            </article> <!-- Single Tab -->
+                        </div> <!-- #courseTabContainer -->
+
+                        <button class="btn_rotate">
+                            <p class="rotate_box1">개별 메뉴 보기</p>
+                            <p class="rotate_box2">개별 메뉴 보기</p>
+                        </button>
+                    </section> <!-- #partnerMenu -->
+
+                    <section id="partnerReview">
+                        <div class="section_title">
+                            <h5>후기</h5>
+                            <p>Review</p>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
+
+                        <div id="reviewList">
+                            <article class="review_container clr_fix" data-isthis-mine="false">
+                                <div class="review_pict_box">
+                                    <a href="#">
+                                        <img src="./resources/index/images/img38.jpg" alt="유저 업로드 이미지" />
+                                        <div class="blind_box">
+                                            <span>10+</span>
+                                            <p>이미지가 더 있어요.</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="review_comment_box">
+                                    <h6 class="comment_title">아마도 그건</h6>
+                                    <p class="comment_content">
+                                        아마도 그건 사랑이었을 거야 희미하게 떠오르는 기억이<br />
+                                        이제야 그 마음을 알아버렸네 그대 눈에 비친 나의 모습을<br />
+                                        아마도 그건 사랑이었을 거야 돌아보면 아쉬운 그날들이<br />
+                                        자꾸만 아픔으로 내게 찾아와 떨리는 가슴 나를 슬프게 하네<br />
+                                        차가운 내 마음에 남은 너의 뒷모습 열린 문틈으로 너는 내게 다가올 것 같아<br />
+                                        한참을 멍하니 문만 바라보다 아침 햇살에 눈을 뜨고 말았네
+                                    </p>
+                                    <div class="comment_info">
+                                        <p class="user_name">
+                                            <img src="./resources/index/images/temp_profile_18.jpg" alt="유저 프로필 사진" />
+                                            <span>NegasonicTeenageWarhead</span>
+                                        </p>
+                                        <p class="written_date">
+                                            2022. 01. 01
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="review_button_box">
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>
+                                            </button>
+                                            댓글 (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0H24V24H0z"/><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"/></svg>
+                                            </button>
+                                            Like (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-2 2H5v14h14V9.243l2-2V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
+                                            </button>
+                                            수정하기
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z"/></svg>
+                                            </button>
+                                            삭제하기
+                                        </label>
+                                    </li>
+                                </ul>
+                            </article> <!-- Single Review Container -->
+
+                            <article class="review_container clr_fix" data-isthis-mine="false">
+                                <div class="review_pict_box">
+                                    <a href="#">
+                                        <img src="./resources/index/images/img40.jpg" alt="유저 업로드 이미지" />
+                                        <div class="blind_box">
+                                            <span>4</span>
+                                            <p>이미지가 더 있어요.</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="review_comment_box">
+                                    <h6 class="comment_title">그리움만 쌓이네</h6>
+                                    <p class="comment_content">
+                                        다정했던 사람이여 나를 잊었나 벌써 나를 잊어버렸나<br />
+                                        그리움만 남겨놓고 나를 잊었나 벌써 나를 잊어버렸나<br />
+                                        그대 지금 그 누구를 사랑하는가 굳은 약속 변해버렸나<br />
+                                        예전에는 우린 서로 사랑했는데 이젠 맘이 변해버렸나<br />
+                                        아아 이별이 그리 쉬운가<br />
+                                        세월 가버렸다고 이젠 나를 잊고서 멀리 멀리 떠나가는가<br />
+                                        아아 나는 몰랐네 그대 맘 변한 줄<br />
+                                        난 정말 몰랐었네<br />
+                                        아아 나 너 하나만을 믿고 살았네 그대만을 믿었네<br />
+                                        네가 보고파서 나는 어쩌나 그리움만 쌓이네
+                                    </p>
+                                    <div class="comment_info">
+                                        <p class="user_name">
+                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="유저 프로필 사진" />
+                                            <span>박복례</span>
+                                        </p>
+                                        <p class="written_date">
+                                            2021. 12. 24
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="review_button_box">
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>
+                                            </button>
+                                            댓글 (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0H24V24H0z"/><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"/></svg>
+                                            </button>
+                                            Like (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-2 2H5v14h14V9.243l2-2V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
+                                            </button>
+                                            수정하기
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z"/></svg>
+                                            </button>
+                                            삭제하기
+                                        </label>
+                                    </li>
+                                </ul>
+                            </article> <!-- Single Review Container -->
+
+                            <article class="review_container clr_fix" data-isthis-mine="true">
+                                <div class="review_pict_box">
+                                    <a href="#">
+                                        <img src="./resources/index/images/img31.jpg" alt="유저 업로드 이미지" />
+                                        <div class="blind_box">
+                                            <span>7</span>
+                                            <p>이미지가 더 있어요.</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="review_comment_box">
+                                    <h6 class="comment_title">아름다운 이별</h6>
+                                    <p class="comment_content">
+                                        눈물이 흘러 이별인 걸 알았어<br />
+                                        힘없이 돌아서던 너의 뒷모습을 바라보며<br />
+                                        나만큼 너도 슬프다는 걸 알아<br />
+                                        하지만 견뎌야 해 추억이 아름답도록<br />
+                                        그 짧았던 만남도 슬픈 우리의 사랑도<br />
+                                        이젠 눈물로 지워야 할 상처뿐인데
+                                    </p>
+                                    <div class="comment_info">
+                                        <p class="user_name">
+                                            <img src="./resources/index/images/temp_profile_1.jpg" alt="유저 프로필 사진" />
+                                            <span>김누구</span>
+                                        </p>
+                                        <p class="written_date">
+                                            2021. 11. 08
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="review_button_box">
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>
+                                            </button>
+                                            댓글 (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0H24V24H0z"/><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"/></svg>
+                                            </button>
+                                            Like (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-2 2H5v14h14V9.243l2-2V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
+                                            </button>
+                                            수정하기
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z"/></svg>
+                                            </button>
+                                            삭제하기
+                                        </label>
+                                    </li>
+                                </ul>
+                            </article> <!-- Single Review Container -->
+
+                            <article class="review_container clr_fix" data-isthis-mine="false">
+                                <div class="review_pict_box">
+                                    <a href="#">
+                                        <img src="./resources/index/images/img39.jpg" alt="유저 업로드 이미지" />
+                                        <div class="blind_box" style="display: none;">
+                                            <span>1</span>
+                                            <p>이미지가 더 있어요.</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="review_comment_box">
+                                    <h6 class="comment_title">카누를 타고 파라다이스에 갈 때</h6>
+                                    <p class="comment_content">
+                                        그저 형식적인 웃음도 그냥 물어보는 안부도<br />
+                                        괜히 오버하는 반응도 이젠 필요없는 짐일 뿐<br />
+                                        한껏 치장했던 옷들도 아직 할부 남은 새 차도<br />
+                                        무지 가슴졸인 복권도 모두 바다에 던져버려<br />
+                                        파라다이스<br />
+                                        솔직한 자유와 한때 타잔이 입던 옷가지 하나<br />
+                                        파라다이스<br />
+                                        좀 어리숙해도 있는 그대로 날 받아주는 곳
+                                    </p>
+                                    <div class="comment_info">
+                                        <p class="user_name">
+                                            <img src="./resources/index/images/temp_profile_15.jpg" alt="유저 프로필 사진" />
+                                            <span>Laurencin</span>
+                                        </p>
+                                        <p class="written_date">
+                                            2021. 09. 11
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="review_button_box">
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>
+                                            </button>
+                                            댓글 (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0H24V24H0z"/><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"/></svg>
+                                            </button>
+                                            Like (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-2 2H5v14h14V9.243l2-2V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
+                                            </button>
+                                            수정하기
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z"/></svg>
+                                            </button>
+                                            삭제하기
+                                        </label>
+                                    </li>
+                                </ul>
+                            </article> <!-- Single Review Container -->
+
+                            <article class="review_container clr_fix" data-isthis-mine="false">
+                                <div class="review_pict_box">
+                                    <a href="#">
+                                        <img src="./resources/index/images/img30.jpg" alt="유저 업로드 이미지" />
+                                        <div class="blind_box">
+                                            <span>5</span>
+                                            <p>이미지가 더 있어요.</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="review_comment_box">
+                                    <h6 class="comment_title">아이돌</h6>
+                                    <p class="comment_content">
+                                        아무것도 모르고 유치한 감상에 빠지는 게 아니야<br />
+                                        어디까지나 비현실적이라는 것쯤 누구보다 잘 알아<br />
+                                        그래도 나는 꿈을 꾸잖아 이상한 이 세상에서도<br />
+                                        이해할 수 없다는 듯 눈을 흘기는 네가 난 더 불쌍해<br />
+                                        달콤한 데 빠지는 게 뭐가 나쁘단 건지<br />
+                                        헛된 망상에 빠지는 게 뭐가 나쁜지<br />
+                                        나는 사랑을 할 뿐야 쇼가 계속되는 동안<br />
+                                        아이돌
+                                    </p>
+                                    <div class="comment_info">
+                                        <p class="user_name">
+                                            <img src="./resources/index/images/temp_profile_12.jpg" alt="유저 프로필 사진" />
+                                            <span>최점숙</span>
+                                        </p>
+                                        <p class="written_date">
+                                            2021. 07. 12
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="review_button_box">
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455z"/></svg>
+                                            </button>
+                                            댓글 (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0H24V24H0z"/><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"/></svg>
+                                            </button>
+                                            Like (<span>255</span>)
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.757 3l-2 2H5v14h14V9.243l2-2V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12.757zm3.728-.9L21.9 3.516l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
+                                            </button>
+                                            수정하기
+                                        </label>
+                                    </li>
+                                    <li class="show_me_only">
+                                        <label>
+                                            <button class="btn_scale">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z"/></svg>
+                                            </button>
+                                            삭제하기
+                                        </label>
+                                    </li>
+                                </ul>
+                            </article> <!-- Single Review Container -->
+
+                            <ul id="reviewPager">
+                                <li class="pager_prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+                                </li>
+                                <li class="current">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li class="pager_next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415z"/></svg>
+                                </li>
+                            </ul> <!-- #reviewPager -->
+                        </div> <!-- #reviewList -->
+                    </section> <!-- #partnerReview -->
+
+                    <section id="partnerDepth">
+                        <div class="section_title">
+                            <h5>매장 정보</h5>
+                            <p>Detail Information</p>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
+
+                        <div class="intro_detail clr_fix">
+                            <ul class="partner_info">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                    <span>영업시간</span>
+                                    <span>
+                                        16:00 ~ 24:00<br />
+                                        (금 / 토 01:00 까지)
+                                    </span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm3 6V5h-3v2h-2V5H9v2H7V5H4v4h16zm0 2H4v8h16v-8zM6 13h5v4H6v-4z"/></svg>
+                                    <span>정기휴무일</span>
+                                    <span>매주 화요일</span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M10.9 2.1l9.899 1.415 1.414 9.9-9.192 9.192a1 1 0 0 1-1.414 0l-9.9-9.9a1 1 0 0 1 0-1.414L10.9 2.1zm.707 2.122L3.828 12l8.486 8.485 7.778-7.778-1.06-7.425-7.425-1.06zm2.12 6.364a2 2 0 1 1 2.83-2.829 2 2 0 0 1-2.83 2.829z"/></svg>
+                                    <span>콜키지</span>
+                                    <span>
+                                        일반 이용시 병당 1만원<br />
+                                        (와인투게더 제휴 모임시 무료)
+                                    </span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M2 22a8 8 0 1 1 16 0h-2a6 6 0 1 0-12 0H2zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm8.284 3.703A8.002 8.002 0 0 1 23 22h-2a6.001 6.001 0 0 0-3.537-5.473l.82-1.824zm-.688-11.29A5.5 5.5 0 0 1 21 8.5a5.499 5.499 0 0 1-5 5.478v-2.013a3.5 3.5 0 0 0 1.041-6.609l.555-1.943z"/></svg>
+                                    <span>최대 수용 인원</span>
+                                    <span>총 48명 (12 테이블)</span>
+                                </li>
+                            </ul>
+
+                            <ul class="partner_disclaimer">
+                                <li>* 예약 가능 여부는 해당 업장의 상황에 따라 달라질 수 있으며, 정부의 코로나 바이러스 방역 지침에 따라 일부 예약이 거절되거나 조정될 수 있습니다.</li>
+                                <li>* 상기된 콜키지, 멤버십 등의 혜택은 제휴사인 와인투게더를 통한 예약 건에만 적용되며, 이외의 방법으로 예약할 시에는 조건이 달라질 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="partnerLocation">
+                        <div class="section_title">
+                            <h5>찾아오시는 길</h5>
+                            <p>Location</p>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
+
+                        <div class="location_container clr_fix">
+                            <div class="map_container">
+                                <div class="map_api">
+
+                                </div>
+                                <div class="location_gps">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                                    <span>부산시 수영구 광안로 61번길 50</span>
+                                </div>
+                            </div>
+
+                            <div class="info_container">
+                                <ul>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm4 2h3.5a3.5 3.5 0 0 1 0 7H11v3H9V7zm2 2v3h1.5a1.5 1.5 0 0 0 0-3H11z"/></svg>
+                                        <span>주차시설</span>
+                                        <span>안전주차장 1시간 무료</span>
+                                    </li>
+                                    <hr class="hf" />
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M17.2 20l1.8 1.5v.5H5v-.5L6.8 20H5a2 2 0 0 1-2-2V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v11a2 2 0 0 1-2 2h-1.8zM13 5v6h6V7a2 2 0 0 0-2-2h-4zm-2 0H7a2 2 0 0 0-2 2v4h6V5zm8 8H5v5h14v-5zM7.5 17a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+                                        <span>대중교통 접근성</span>
+                                        <span>지하철 광안역에서 도보 10분</span>
+                                    </li>
+                                    <hr class="hf" />
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M22 21H2v-2h1V4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v5h2v10h1v2zm-5-2h2v-8h-6v8h2v-6h2v6zm0-10V5H5v14h6V9h6zM7 11h2v2H7v-2zm0 4h2v2H7v-2zm0-8h2v2H7V7z"/></svg>
+                                        <span>인근 랜드마크</span>
+                                        <span>광안리 해수욕장</span>
+                                    </li>
+                                    <hr class="hf" />
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M9.366 10.682a10.556 10.556 0 0 0 3.952 3.952l.884-1.238a1 1 0 0 1 1.294-.296 11.422 11.422 0 0 0 4.583 1.364 1 1 0 0 1 .921.997v4.462a1 1 0 0 1-.898.995c-.53.055-1.064.082-1.602.082C9.94 21 3 14.06 3 5.5c0-.538.027-1.072.082-1.602A1 1 0 0 1 4.077 3h4.462a1 1 0 0 1 .997.921A11.422 11.422 0 0 0 10.9 8.504a1 1 0 0 1-.296 1.294l-1.238.884zm-2.522-.657l1.9-1.357A13.41 13.41 0 0 1 7.647 5H5.01c-.006.166-.009.333-.009.5C5 12.956 11.044 19 18.5 19c.167 0 .334-.003.5-.01v-2.637a13.41 13.41 0 0 1-3.668-1.097l-1.357 1.9a12.442 12.442 0 0 1-1.588-.75l-.058-.033a12.556 12.556 0 0 1-4.702-4.702l-.033-.058a12.442 12.442 0 0 1-.75-1.588z"/></svg>
+                                        <span>문의전화</span>
+                                        <span>0507-1318-6604</span>
+                                    </li>
+                                </ul>
+
+                                <p class="location_disclaimer">
+                                    * 소요시간 및 거리는 정확한 값이 아니며, 여러 상황에 따라 달라질 수 있습니다.
                                 </p>
                             </div>
-
-                            <p class="partner_intro">
-                                광안리 해변 바로 앞에 위치한 뷰 깡패, 더뉴 입니다.<br />
-                                파스타, 수제 도우 피자 등 와인과 어울리는 각종 이탈리안 요리를 제공합니다.
-                            </p>
-
-                            <!-- <div class="location_map">
-                                <p class="detail_title">찾아오시는 길</p>
-                                <img src="./resources/partners/images/temp_map.png" alt="매장 위치" />
-                            </div> -->
-
-                            <div class="reservation_info">
-                                <p class="detail_title">맛집 정보</p>
-
-                                <ul class="information_list">
-                                    <li>
-                                        영업시간 : 16:00 ~ 24:00 (금 / 토 01:00) (화요일 정기휴무)
-                                    </li>
-                                    <li>
-                                        전화 : 0507-1318-6604
-                                    </li>
-                                    <li>
-                                        주소 : 부산시 수영구 광안로 61번길 50
-                                    </li>
-                                    <li>
-                                        콜키지 : 일반 이용시 와인 반입불가 (와인투게더 제휴 협의 - 콜키지 Free)
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="restaurant_option">
-                                <p class="detail_title">기타</p>
-
-                                <ul class="information_list">
-                                    <li>
-                                        주차시설 : 안전주차장 1시간 무료
-                                    </li>
-                                    <li>
-                                        대중교통 접근성 : 지하철 2호선 광안리역 몇번 출구, 버스 몇번 -> 도보 얼마 걸림
-                                    </li>
-                                    <li>
-                                        와인 자체 판매여부 : 판매
-                                    </li>
-                                    <li>
-                                        * 이 부분은 디자인 수정 필요
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-                    </article> <!-- #partnerInfo -->
+                    </section> <!-- #partnerLocation -->
 
-                    <article id="partnerMenu">
-                        <h4 class="info_title">이 맛집의 주요 메뉴</h4>
-
-                        <ul class="food_container">
-                            <li class="food_item">
-                                <img src="./resources/index/images/img42.jpg" alt="" class="food_face" />
-                                <dl class="food_spec">
-                                    <dt class="food_name">
-                                        <p>감밧슷스슷</p>
-                                    </dt>
-                                    <dd class="food_desc">
-                                        <p>사용된 재료 뭐 마늘, 양파, 해산물 이런거</p>
-                                    </dd>
-                                </dl>
-                                <h6 class="food_price">₩200,890</h6>
-                                <div class="food_images">
-                                    <img src="./resources/index/images/img42.jpg" alt="" />
-                                    <img src="./resources/index/images/img42.jpg" alt="" />
-                                    <img src="./resources/index/images/img42.jpg" alt="" />
-                                    <img src="./resources/index/images/img42.jpg" alt="" />
-                                </div>
-                            </li>
-
-                            <li class="food_item">
-                                <img src="./resources/index/images/img43.jpg" alt="" class="food_face" />
-                                <dl class="food_spec">
-                                    <dt class="food_name">
-                                        <p>샐러듣듣드</p>
-                                    </dt>
-                                    <dd class="food_desc">
-                                        <p>사용된 재료 뭐 마늘, 양파, 해산물 이런거</p>
-                                    </dd>
-                                </dl>
-                                <h6 class="food_price">₩200,890</h6>
-                                <div class="food_images">
-                                    <img src="./resources/index/images/img43.jpg" alt="" />
-                                    <img src="./resources/index/images/img43.jpg" alt="" />
-                                    <img src="./resources/index/images/img43.jpg" alt="" />
-                                    <img src="./resources/index/images/img43.jpg" alt="" />
-                                </div>
-                            </li>
-
-                            <li class="food_item">
-                                <img src="./resources/index/images/img44.jpg" alt="" class="food_face" />
-                                <dl class="food_spec">
-                                    <dt class="food_name">
-                                        <p>스테이킄크크킄</p>
-                                    </dt>
-                                    <dd class="food_desc">
-                                        <p>사용된 재료 뭐 마늘, 양파, 해산물 이런거</p>
-                                    </dd>
-                                </dl>
-                                <h6 class="food_price">₩200,890</h6>
-                                <div class="food_images">
-                                    <img src="./resources/index/images/img44.jpg" alt="" />
-                                    <img src="./resources/index/images/img44.jpg" alt="" />
-                                    <img src="./resources/index/images/img44.jpg" alt="" />
-                                    <img src="./resources/index/images/img44.jpg" alt="" />
-                                </div>
-                            </li>
-                        </ul>
-                    </article> <!-- #partnerMenu -->
-
-                    <!--
-
-                    <article id="partnerReply">
-                        <h4 class="info_title">리뷰 <span>(24)</span></h4>
-                        <hr class="hf" />
-
-                        <div class="reply_container">
-                            <ul class="comment_container">
-                                <li class="comment_bubble">
-                                    <div class="comment_user">
-                                        <p class="user_profile">
-                                            <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                            <span>최점숙 님</span>
-                                        </p>
-                                        <p class="comment_data">
-                                            <span>2021. 11. 11</span>
-                                        </p>
-                                    </div>
-        
-                                    <div class="bubble">
-                                        <span class="bubble_point"></span>
-                                        <span class="bubble_text">
-                                            빼빼로 먹고 싶었는데 메뉴에 빼빼로는 없었어요 그래서 이름이 비슷한 페페론치노 파스타 먹었는데 맛있어요
-                                        </span>
-
-                                        <div class="star_point" data-point-total="9.0">
-                                            <div class="star_point_blacker"></div>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="comment_bubble">
-                                    <div class="comment_user">
-                                        <p class="user_profile">
-                                            <img src="./resources/index/images/temp_profile_16.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                            <span>송필반 님</span>
-                                        </p>
-                                        <p class="comment_data">
-                                            <span>2021. 10. 29</span>
-                                        </p>
-                                    </div>
-
-                                    <div class="bubble">
-                                        <span class="bubble_point"></span>
-                                        <span class="bubble_text">
-                                            처음에는 빨리 삶는 것 같더니, 저물도록 이리 휘저어 보고 저리 휘저어 보고 굼뜨기 시작하더니, 마냥 늑장이다. 내가 보기에는 그만하면 다 됐는데, 자꾸만 더 삶고 있었다.
-                                            인제 다 됐으니 그냥 먹겠다고 해도 통 못 들은 척 대꾸가 없다. 타야 할 차 시간이 빠듯해 왔다. 갑갑하고 지루하고 초조할 지경이었다.
-                                            "더 삶지 않아도 좋으니 그만 주십시오."
-                                            라고 했더니, 화를 버럭 내며,
-                                            "끓을 만큼 끓어야 파스타가 되지, 밀가루가 재촉한다고 면이 되나."
-                                        </span>
-
-                                        <div class="star_point" data-point-total="3.2">
-                                            <div class="star_point_blacker"></div>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="comment_bubble">
-                                    <div class="comment_user">
-                                        <p class="user_profile">
-                                            <img src="./resources/index/images/temp_profile_13.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                            <span>후지키도=상</span>
-                                        </p>
-                                        <p class="comment_data">
-                                            <span>2021. 10. 27</span>
-                                        </p>
-                                    </div>
-
-                                    <div class="bubble">
-                                        <span class="bubble_point"></span> 
-                                        <span class="bubble_text">
-                                            "스테이크... 스테이크 어째서...?"<br />
-                                            그윽한 향의 바이오 와인. 잘 꾸며진 애트모스피어는 실제 네오=로마풍 실력파 쿠킹 닌자의 완벽한 코토와자를 방불케 한다.<br />
-                                            블러프가 일절 없다!
-                                        </span>
-
-                                        <div class="star_point" data-point-total="9.2">
-                                            <div class="star_point_blacker"></div>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="comment_bubble">
-                                    <div class="comment_user">
-                                        <p class="user_profile">
-                                            <img src="./resources/index/images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                            <span>박진감 님</span>
-                                        </p>
-                                        <p class="comment_data">
-                                            <span>2021. 10. 13</span>
-                                        </p>
-                                    </div>
-
-                                    <div class="bubble">
-                                        <span class="bubble_point"></span>
-                                        <span class="bubble_text">
-                                            어둠이 쉬이 내려앉지 못하는 광안리 해안의 소란스러운 열기 속에서 나는 조용히 잔을 든다.
-                                            레스토랑의 창문 밖에는 오직 바다와 소금기 섞인 바람, 그 뿐이다.
-                                        </span>
-
-                                        <div class="star_point" data-point-total="8.1">
-                                            <div class="star_point_blacker"></div>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="comment_bubble">
-                                    <div class="comment_user">
-                                        <p class="user_profile">
-                                            <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                            <span>박복례 님</span>
-                                        </p>
-                                        <p class="comment_data">
-                                            <span>2021. 09. 25</span>
-                                        </p>
-                                    </div>
-
-                                    <div class="bubble">
-                                        <span class="bubble_point"></span>
-                                        <span class="bubble_text">
-                                            아 요기있네 빵통조림!
-                                        </span>
-
-                                        <div class="star_point" data-point-total="0.0">
-                                            <div class="star_point_blacker"></div>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <ul class="review_paging">
-                                <li class="paging_arrow prev disabled">이전</li>
-                                <li class="this_page">1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li class="paging_arrow next">다음</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    -->
-
-                    <article id="partnerReview">
-                        <h4 class="info_title">여기서 만난 사람들 (<span>33</span>)</h4>
-
-                        <div class="review_container">
-                            <ul class="article_container">
-                                <li class="article_single">
-                                    <img src="./resources/index/images/img40.jpg" alt="후기 대표사진" />
-                                    <p class="article_name">
-                                        <span class="article_title">술 마시자고 모인 자리에서 사람에 취해버렸네</span><br />
-                                        <span class="article_date">2021. 09. 04</span>
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_6.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>박복례 님</span>
-                                    </p>
-                                </li>
-
-                                <li class="article_single">
-                                    <img src="./resources/index/images/img29.jpg" alt="후기 대표사진" />
-                                    <p class="article_name">
-                                        <span class="article_title">낭만 가득한 해변의 슈겁모</span><br />
-                                        <span class="article_date">2021. 09. 01</span>
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_12.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>최점숙 님</span>
-                                    </p>
-                                </li>
-
-                                <li class="article_single">
-                                    <img src="./resources/index/images/img35.jpg" alt="후기 대표사진" />
-                                    <p class="article_name">
-                                        <span class="article_title">주모가 샷따를 내려버린 밤</span><br />
-                                        <span class="article_date">2021. 08. 27</span>
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_2.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>박진감 님</span>
-                                    </p>
-                                </li>
-
-                                <li class="article_single">
-                                    <img src="./resources/index/images/img36.jpg" alt="후기 대표사진" />
-                                    <p class="article_name">
-                                        <span class="article_title">얼라왕자랑 초빼이 아재</span><br />
-                                        <span class="article_date">2021. 06. 11</span>
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_4.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>고구마 님</span>
-                                    </p>
-                                </li>
-
-                                <li class="article_single">
-                                    <img src="./resources/index/images/img33.jpg" alt="후기 대표사진" />
-                                    <p class="article_name">
-                                        <span class="article_title">마! 니 입만 입이고 내는 머 주디가?</span><br />
-                                        <span class="article_date">2021. 05. 29</span>
-                                    </p>
-                                    <p class="user_profile">
-                                        <img src="./resources/index/images/temp_profile_5.jpg" alt="프로필 사진" class="profile_pict_small" />
-                                        <span>최말자 님</span>
-                                    </p>
-                                </li>
-                            </ul>
-
-                            <ul class="review_paging">
-                                <li class="paging_arrow prev disabled">이전</li>
-                                <li class="this_page">1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li class="paging_arrow next">다음</li>
-                            </ul>
-                        </div>
-                    </article> <!-- #detailReview -->
-
-                    <article id="partnerLocation">
-                        <h4 class="info_title">찾아오시는 길</h4>
-                        <div class="location_map">
-                            <img src="./resources/partners/images/temp_map.png" alt="매장 위치" />
-                        </div>
-                    </article>
-
-                </section>
+                </div> <!-- #detailContents -->
 
             </div> <!-- #wrapMain -->
 
