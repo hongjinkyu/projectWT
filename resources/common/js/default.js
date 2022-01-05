@@ -80,14 +80,14 @@ $(document).ready(function() { // jQuery Load
         });
     }); // Custom Selector (Gathering - Open)
 
-    $('.tab_container > a').each(function() {
+    $('.tab_container > button').each(function() {
         $(this).click(function() {
-            let targetTab = $(this).attr('href');
+            let targetTab = $(this).attr('data-tab-target');
 
             $(this).addClass('on');
-            $(this).siblings('a').removeClass('on');
-            $(targetTab).show();
-            $($(this).siblings('a').attr('href')).hide();
+            $(this).siblings('button').removeClass('on');
+            $('#' + targetTab + '').show();
+            $('#' + targetTab + '').siblings('div[id]').hide();
         });
     }); // Tab Operation (Gathering - Detail)
 

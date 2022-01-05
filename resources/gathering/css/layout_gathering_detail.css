@@ -70,7 +70,9 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 }
 
 .gathering_info > .group_desc {
-	margin: 1rem 0;
+	margin: 1.5rem 0 2rem;
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_16);
 }
 
 .info_title {
@@ -104,28 +106,68 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	text-align: center;
 }
 #detailInfo .spec_info {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	gap: 1rem 1.5rem;
-	margin: 1rem 0;
-	padding: 1rem 0;
+	margin-bottom: 1rem;
 	border-top: var(--border);
 	border-bottom: var(--border);
 	font-size: var(--fnt_12);
 }
-#detailInfo .spec_info > p {
-	width: calc((100% - 5rem) / 2);
-	text-align: end;
+#detailInfo .spec_info > li {
+	padding: 1rem;
+	font-family: var(--ff_sans_p);
 }
-#detailInfo .spec_info > p span {
-	display: inline-block;
-	margin-left: 0.5rem;
-	padding: 0.25rem;
-	width: 80%;
-	border-radius: 0.15rem;
+#detailInfo .spec_info > li span:first-child {
+	color: rgb(var(--color_footer));
+}
+#detailInfo .spec_info > li span:last-child {
+	margin-left: 1rem;
+	font-size: var(--fnt_14);
+	vertical-align: middle;
+}
+#detailInfo .hostinfo_body {
+	padding: 0.5rem;
+	border: var(--border);
+	border-radius: var(--bdr_outer);
 	background: rgb(var(--color_bg));
-	text-align: start;
+}
+#detailInfo .hostinfo_body .user_tag {
+	align-items: flex-start;
+}
+#detailInfo .hostinfo_body .user_tag > dl {
+	width: 100%;
+}
+#detailInfo .hostinfo_body .user_tag > dl > .host_intro {
+	position: relative;
+	margin-top: 0.5rem;
+	padding: 1rem 0.5rem;
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_light));
+	box-shadow: 0 0 0.5rem -0.25rem rgba(var(--color_dark), 0.5);
+	font-family: var(--ff_sans_p);
+	font-size: var(--fnt_14);
+	text-align: center;
+}
+#detailInfo .hostinfo_body .user_tag > dl > .host_intro::before, #detailInfo .hostinfo_body .user_tag > dl > .host_intro::after {
+	display: block;
+	position: absolute;
+	font-family: var(--ff_serif);
+	font-size: 5rem;
+	pointer-events: none;
+	opacity: 0.5;
+}
+#detailInfo .hostinfo_body .user_tag > dl > .host_intro::before {
+	top: 0.25rem;
+	left: 0;
+	content: "“";
+}
+#detailInfo .hostinfo_body .user_tag > dl > .host_intro::after {
+	top: 0.25rem;
+	right: 0;
+	content: "”";
+}
+
+#btnJoin {
+	display: block;
+	margin: 1rem auto;
 }
 
 #detailOffer > div + div {
@@ -221,11 +263,6 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	   object-fit: cover;
 }
 
-.join_container {
-	margin: 1rem auto 0;
-	text-align: center;
-}
-
 #detailReview {
 	position: relative;
 	padding: 0 0.5rem;
@@ -261,14 +298,16 @@ div#detailSlide > .slide_thumbs .btn_thumb.slick-current {
 	font-family: var(--ff_sans_p);
 	font-size: var(--fnt_12);
 }
-.tab_container a {
+.tab_container button {
 	display: inline-block;
 	position: relative;
 	padding: 0.5rem 0.5rem 0.4rem;
-	background: linear-gradient(180deg, rgb(var(--color_subtle)) 0%, transparent 100%);
 	border-radius: var(--bdr_inner);
+	background: linear-gradient(180deg, rgb(var(--color_subtle)) 0%, transparent 100%);
+	box-shadow: none;
+	cursor: pointer;
 }
-.tab_container a.on {
+.tab_container button.on {
 	background: rgb(var(--color_text));
 	color: rgb(var(--color_light));
 	pointer-events: none;

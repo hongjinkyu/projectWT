@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.winetogether.kr" />
+        <meta property="og:title" content="Wine Together" />
+        <!-- <meta property="og:image" content="somewhere://meta_image.jpg" /> -->
+        <meta property="og:description" content="함께할 때 더욱 즐거운 와인, 와인투게더" />
+        <meta property="og:site_name" content="와인투게더" />
+        <meta property="og:locale" content="ko_KR" />
+
+        <title>Wine Together</title>
+
+        <link rel="shortcut icon" type="image/x-icon" href="./resources/common/images/icons/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/modern-normalize.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/default.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
+        <!-- Global CSS -->
+
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/layout_cs_board_write.css" />
+        <!-- Page-Specific CSS -->
+
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/mq.css" />
+        <!-- Media Query -->
+
+        <link rel="stylesheet" type="text/css" href="./resources/common/js/summernote-lite.min.css" />
+        <!-- SummerNote -->
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+        <script type="text/javascript" src="./resources/common/js/summernote-lite.min.js"></script> <!-- SummerNote -->
+        <script type="text/javascript" src="./resources/common/js/summernote-ko-KR.min.js"></script> <!-- SummerNote - Korean -->
+        <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
+        <script type="text/javascript" src="./resources/common/js/js_cs_board_write.js"></script> <!-- Page-Specific jQuery -->
+        <!-- JavaScript / jQuery -->
+
+        <!--[if lt IE 9]>
+                <script src="./js/html5shiv.min.js"></script>
+            <![endif]-->
+    </head>
+
+    <body>
+
+        <div id="wrap">
+
+            <header id="headBase" class="head_sub">
+                <nav id="navBase" class="nav_sub int_wrap" role="navigation">
+                    <h1 id="mainLogo">
+                        <a href="index.html">Wine Together</a>
+                    </h1>
+
+                    <ul id="navbarMain">
+                        <li class="mnu_main">
+                            <a href="service.html">와인투게더란?</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="gathering_list.html">모임 둘러보기</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="gathering_open.html">모임 개설하기</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="review_list.html">모임 후기</a>
+                        </li>
+                        <li class="mnu_main">
+                            <a href="partners_list.html">와투 맛집</a>
+                        </li>
+                    </ul>
+
+                    <div id="layerAccount">
+                        <p class="user_name">
+                            <span data-grade="grade_regular">김누구</span>
+                        </p>
+                        <button class="btn_account">
+                            <img class="profile_pict" src="./resources/index/images/temp_profile_1.jpg" alt="프로필 사진" />
+                        </button>
+                        <ul id="accountPop">
+                            <li><a href="./mypage.html">마이 페이지</a></li>
+                            <li><a href="">모임 관리</a></li>
+                            <li><a href="">결제 관리</a></li>
+                            <li><a href="./login.html">로그아웃</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header> <!-- Header -->
+
+            <header id="headMobile">
+                <div class="int_wrap">
+                    <nav id="navBurger">
+                        <button class="btn_burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <div class="mnav_background">
+                            <div id="mobileNav">
+                                <ul class="mnav_list">
+                                    <li>
+                                        <a href="service.html">와인투게더란?</a>
+                                    </li>
+                                    <li>
+                                        <a href="gathering_list.html">모임 둘러보기</a>
+                                    </li>
+                                    <li>
+                                        <a href="gathering_open.html">모임 개설하기</a>
+                                    </li>
+                                    <li>
+                                        <a href="review_list.html">모임 후기</a>
+                                    </li>
+                                    <li>
+                                        <a href="partners_list.html">와투 맛집</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="disappearing_area">
+
+                            </div>
+                        </div>
+                    </nav>
+
+                    <h1 id="mobileLogo">
+                        <a href="./index.html">Wine Together</a>
+                    </h1>
+
+                    <button class="mobile_account">
+                        로그인
+                    </button>
+                </div>
+            </header> <!-- Header - Mobile -->
+
+        <!-- Page Main Contents Start / 헤더 영역 종료 -->
+
+            <div class="section_title">
+                <h5>게시물 작성하기</h5>
+                <p>Post Article</p>
+                <hr class="hf" />
+            </div> <!-- .section_title -->
+
+            <div id="wrapMain" class="int_wrap sub" role="main">
+
+                <div id="detailSide">
+                    <div id="detailSide_sticker">
+                        <div class="detail_hiddentitle">
+                            <div class="detail_surface_info">
+                                <h6>글 분류 선택</h6>
+                            </div>
+
+                            <hr class="hf" />
+                        </div>
+                        
+                        <div class="category_selector">
+                            <button class="selector_label">
+                                <p class="selector_text">공지사항</p>
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"/></svg>
+                            </button>
+
+                            <ul class="selector_list">
+                                <li class="selector_item">
+                                    공지사항
+                                </li>
+
+                                <li class="selector_item">
+                                    이벤트
+                                </li>
+
+                                <li class="selector_item">
+                                    점검
+                                </li>
+
+                                <li class="selector_item">
+                                    기타
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="detailContents">
+                    <div class="board_title">
+                        <input type="text" name="txtBoardTitle" id="txtBoardTitle" placeholder="게시물 제목 (최대 50자)" maxlength="50" />
+                    </div>
+
+                    <div id="summernote"></div> <!-- #summernote -->
+
+                    <div class="board_upload">
+                        <input type="file" name="flUpload" id="flUpload" />
+                    </div>
+                </div>
+
+            </div> <!-- #wrapMain -->
+
+            <button class="btn_rotate">
+                <p class="rotate_box1">글 작성 완료</p>
+                <p class="rotate_box2">글 작성 완료</p>
+            </button>
+
+        <!-- Page Main Contents End / 푸터 영역 시작 -->
+
+            <div class="foot_splitter">
+                <hr class="hf" />
+                <h1>Fine.</h1>
+            </div>
+
+            <footer id="footBase" role="contentinfo">
+                <a href="#" class="banner_partner">
+                    와인투게더와 함께하실 파트너를 모십니다.
+                </a>
+
+                <div class="int_wrap">
+                    <ul id="footLinks">
+                        <li class="mnu_flinks"><a href="./cs_board_list.html">고객센터</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">이용약관</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">개인정보보호방침</a></li>
+                        <li class="flinks_sep"></li>
+                        <li class="mnu_flinks"><a href="#">이메일주소수집거부</a></li>
+                    </ul>
+
+                    <div id="footContent" class="clr_fix">
+                        <div class="footer_company">
+                            <ul class="footer_company_info">
+                                <li>
+                                    <h4>주식회사 비노앤제이</h4>
+                                </li>
+                                <li>
+                                    대표이사 <span>최용준</span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    사업자등록번호 <span>617-86-10479</span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    통신판매업신고번호 <span>제2016-부산해운대-0485호</span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    주소 <span>부산광역시 해운대구 해운대로 570번길 46, B1</span>
+                                </li>
+                                <hr class="hf" />
+                                <li class="disclaimer">
+                                    전자상거래법 규정 들어갈 영역
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer_callcenter">
+                            <ul class="footer_callcenter_info">
+                                <li>
+                                    <h4>CALL CENTER</h4>
+                                </li>
+                                <li class="phonenumb">
+                                    1811-0612
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    운영시간 <span>평일 오전 10:00 ~ 오후 06:00</span>
+                                </li>
+                                <hr class="hf" />
+                                <li>
+                                    점심시간 <span>오후 12:00 ~ 오후 01:00</span>
+                                </li>
+                                <hr class="hf" />
+                                <li class="disclaimer">
+                                    * 토 / 일 / 공휴일은 휴무입니다.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="./resources/common/images/logo_footer.png" alt="VINO & J" />
+            </footer> <!-- Footer -->
+        </div> <!-- #wrap -->
+
+        <script type="text/javascript" src="./resources/common/js/slick.min.js"></script> <!-- Slick JS -->
+
+    </body>
+
+</html>

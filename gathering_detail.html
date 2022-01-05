@@ -175,63 +175,57 @@
                         </p>
                     </div>
 
-                    <article id="detailInfo">
+                    <article id="detailInfo" class="clr_fix">
                         <div class="gathering_info">
                             <h3 class="group_title">슈퍼-겁쟁이 쉼터</h3>
                             <p class="group_desc">겁쟁이 쉼터조차 두려운 분들을 위한 꿈과 희망의 장소</p>
                         </div>
 
-                        <div class="spec_info">
-                            <p class="spec_date">
-                                모임 날짜
-                                <span>2028e102350215t8</span>
-                            </p>
-                            <p class="spec_member">
-                                초대인원
-                                <span>서른마흔다섯명</span>
-                            </p>
-                            <p class="spec_price">
-                                참여비용
-                                <span>2억원 (와인 + 요리 + 콜키지)</span>
-                            </p>
-                            <p class="spec_glass">
-                                콜키지
-                                <span>돈내셈</span>
-                            </p>
-                            <p class="spec_location">
-                                모임 장소
-                                <span>슈퍼 겁쟁이 쉼터</span>
-                            </p>
-                            <p class="spec_pack">
-                                준비물
+                        <ul class="spec_info">
+                            <li class="spec_date">
+                                <span>모임 날짜</span>
+                                <span>2022. 02. 22 AM 2:22</span>
+                            </li>
+                            <li class="spec_member">
+                                <span>인원</span>
+                                <span>4인 (호스트 + 게스트 3인)</span>
+                            </li>
+                            <li class="spec_glass">
+                                <span>콜키지</span>
+                                <span>와인투게더 제휴 모임에 한해 무료 제공</span>
+                            </li>
+                            <li class="spec_price">
+                                <span>참여비</span>
+                                <span>₩ 25,600 (와인 + 코스요리 + 콜키지)</span>
+                            </li>
+                            <li class="spec_pack">
+                                <span>준비물</span>
                                 <span>스노클링, 오리발, 폐활량</span>
-                            </p>
-                        </div>
+                            </li>
+                        </ul>
 
-                        <div class="host_info">
-                            <img class="host_pict" src="./resources/index/images/temp_profile_9.jpg" alt="모임 주최자" />
-                            <dl class="host_desc">
-                                <dt class="host_name">
-                                    김쫄보 님
-                                </dt>
-                                <dd class="host_intro">
-                                    옛날옛날 한옛날에 다섯아이가 우주멀리 아주멀리 사라졌다네 지금은 용사되어 오 돌아왔네 후레시맨 후레시맨 지구방위대
-                                </dd>
-                            </dl>
-                            <p class="host_spec">
-                                <span data-host="times">14회의 모임 주최</span>
-                                <span data-host="reviews">45개의 후기</span>
-                                <button class="user_profile">상세 프로필 보기</button>
-                            </p>
-                        </div>
-
-                        <div class="join_container">
-                            <button id="btnJoin" class="btn_rotate">
-                                <p class="rotate_box1">모임 참여 신청</p>
-                                <p class="rotate_box2">모임 참여 신청</p>
-                            </button>
+                        <div class="hostinfo_body">
+                            <div class="user_tag">
+                                <img src="./resources/index/images/temp_profile_9.jpg" alt="유저 프로필 사진" />
+                                <dl>
+                                    <dt class="host_name">김쫄보</dt>
+                                    <dd class="host_cert">
+                                        <span class="verified">✓ 본인 인증 완료</span>
+                                        <span class="sommelier">소믈리에</span>
+                                        <span>레벨 3</span>
+                                    </dd>
+                                    <dd class="host_intro">
+                                        This is your moment. Own it
+                                    </dd>
+                                </dl>
+                            </div>
                         </div>
                     </article>
+
+                    <button id="btnJoin" class="btn_rotate">
+                        <p class="rotate_box1">모임 참여 신청</p>
+                        <p class="rotate_box2">모임 참여 신청</p>
+                    </button>
 
                     <article id="detailOffer">
                         <h4 class="info_title">상세정보</h4>
@@ -401,8 +395,8 @@
                         <h4 class="info_title">모임 후기</h4>
 
                         <div class="tab_container">
-                            <a class="on" href="#reviewComment">한줄후기</a>
-                            <a href="#reviewArticle">포토후기</a>
+                            <button class="on" data-tab-target="reviewComment">한줄후기</button>
+                            <button data-tab-target="reviewArticle">포토후기</button>
                         </div>
 
                         <div id="reviewComment">
