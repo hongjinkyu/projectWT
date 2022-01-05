@@ -63,6 +63,10 @@ $(document).ready(function() { // jQuery Load
         });
     });
 
+    setInterval(function() {
+        $('.grid_item').last().hide().prependTo($('#mobileMainIMG')).fadeIn(300);
+    }, 3000);
+
     $('.detail_slider').slick({
         slide: '.slider_item',
         slidesToShow: 1,

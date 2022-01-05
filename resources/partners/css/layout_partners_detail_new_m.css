@@ -41,11 +41,12 @@ section#mobileMainIMG {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
+	background: rgb(var(--color_dark));
 }
 section#mobileMainIMG::before {
 	display: block;
 	position: absolute;
-	top: 0;
+	top: 50vh;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -59,15 +60,15 @@ section#mobileMainIMG > .grid_item {
 	height: 12.5vh;
 	background: rgb(var(--color_dark));
 }
-section#mobileMainIMG > .grid_item.half {
+section#mobileMainIMG > .grid_item:first-child {
 	width: 100vw;
 	height: 50vh;
 }
-section#mobileMainIMG > .grid_item.quarter {
+section#mobileMainIMG > .grid_item:nth-child(2) {
 	width: 50vw;
 	height: 50vh;
 }
-section#mobileMainIMG > .grid_item.octo {
+section#mobileMainIMG > .grid_item:nth-child(3) {
 	width: 50vw;
 	height: 25vh;
 }

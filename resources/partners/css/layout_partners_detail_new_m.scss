@@ -44,11 +44,12 @@ section#mobileMainIMG {
     position: relative;
     width: 100vw;
     height: 100vh;
+    background: rgb(var(--color_dark));
 
     &::before {
         display: block;
         position: absolute;
-        top: 0;
+        top: 50vh;
         bottom: 0;
         left: 0;
         right: 0;
@@ -63,17 +64,17 @@ section#mobileMainIMG {
         height: 12.5vh;
         background: rgb(var(--color_dark));
 
-        &.half {
+        &:first-child {
             width: 100vw;
             height: 50vh;
         }
 
-        &.quarter {
+        &:nth-child(2) {
             width: 50vw;
             height: 50vh;
         }
 
-        &.octo {
+        &:nth-child(3) {
             width: 50vw;
             height: 25vh;
         }
