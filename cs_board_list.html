@@ -23,7 +23,7 @@
         <link rel="stylesheet" type="text/css" href="./resources/common/css/interface.css" />
         <!-- Global CSS -->
 
-        <link rel="stylesheet" type="text/css" href="./resources/common/css/layout_cs_board.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/common/css/layout_cs_board_list.css" />
         <!-- Page-Specific CSS -->
 
         <link rel="stylesheet" type="text/css" href="./resources/common/css/mq.css" />
@@ -31,7 +31,7 @@
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
         <script type="text/javascript" src="./resources/common/js/default.js"></script> <!-- Global jQuery -->
-        <script type="text/javascript" src="./resources/common/js/js_cs_board.js"></script> <!-- Page-Specific jQuery -->
+        <script type="text/javascript" src="./resources/common/js/js_cs_board_list.js"></script> <!-- Page-Specific jQuery -->
         <!-- JavaScript / jQuery -->
 
         <!--[if lt IE 9]>
@@ -114,7 +114,7 @@
                                 </ul>
                             </div>
                             <div class="disappearing_area">
-                                
+
                             </div>
                         </div>
                     </nav>
@@ -131,198 +131,57 @@
 
         <!-- Page Main Contents Start / 헤더 영역 종료 -->
 
+            <div class="section_title">
+                <h5>고객센터</h5>
+                <p>Customer Service</p>
+                <hr class="hf" />
+            </div> <!-- .section_title -->
+
             <div id="wrapMain" class="int_wrap sub" role="main">
 
-                <section id="sideBar_left">
-                    <ul class="side_mnu_left">
-                        <li class="checked"><a href="#">공지사항</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">자주 묻는 질문</a></li>
-                        <li><a href="#">1:1 문의</a></li>
-                    </ul>
-                </section>
+                <div id="detailSide">
+                    <div id="detailSide_sticker">
+                        <div class="detail_hiddentitle">
+                            <div class="detail_surface_info">
+                                <h6>글 분류 선택</h6>
+                            </div>
 
-                <section id="contentBar">
-                    <h3>공지사항</h3>
-                    <div class="board_category">
-                        <span>전체</span>
-                        <span>가이드</span>
-                        <span>서비스 공지</span>
-                        <span>알림</span>
+                            <hr class="hf" />
+                        </div>
+                        
+                        <div class="category_selector">
+                            <button class="selector_label">
+                                <p class="selector_text">공지사항</p>
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"/></svg>
+                            </button>
+
+                            <ul class="selector_list">
+                                <li class="selector_item">
+                                    공지사항
+                                </li>
+
+                                <li class="selector_item">
+                                    이벤트
+                                </li>
+
+                                <li class="selector_item">
+                                    점검안내
+                                </li>
+
+                                <li class="selector_item">
+                                    기타
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <table>
-                        <colgroup>
-                            <col class="article_num" />
-                            <col class="article_cate" />
-                            <col class="article_title" />
-                            <col class="article_author" />
-                            <col class="article_date" />
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">No.</th>
-                                <th scope="col">분류</th>
-                                <th scope="col">제목</th>
-                                <th scope="col">글쓴이</th>
-                                <th scope="col">작성일</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>21</td>
-                                <td>가이드</td>
-                                <td><a href="#">그대가 보고파서 나는 어쩌나 그리움만 쌓이네</a></td>
-                                <td>관리자</td>
-                                <td>18:36</td>
-                            </tr>
-                            <tr>
-                                <td>20</td>
-                                <td>가이드</td>
-                                <td><a href="#">아아 나 너 하나만을 믿고 살았네 그대만을 믿었네</a></td>
-                                <td>관리자</td>
-                                <td>18:36</td>
-                            </tr>
-                            <tr>
-                                <td>19</td>
-                                <td>가이드</td>
-                                <td><a href="#">아아 나는 몰랐네 그대 맘 변할 줄 난 정말 몰랐었네</a></td>
-                                <td>관리자</td>
-                                <td>18:35</td>
-                            </tr>
-                            <tr>
-                                <td>18</td>
-                                <td>가이드</td>
-                                <td><a href="#">아아 이별이 그리 쉬운가 세월 가버렸다고 그때 마음 잊고서 멀리 멀리 떠나려 하는가</a></td>
-                                <td>관리자</td>
-                                <td>18:35</td>
-                            </tr>
-                            <tr>
-                                <td>17</td>
-                                <td>가이드</td>
-                                <td><a href="#">예전에는 우리 서로 사랑했는데 이젠 맘이 변해버렸나</a></td>
-                                <td>관리자</td>
-                                <td>18:35</td>
-                            </tr>
-                            <tr>
-                                <td>16</td>
-                                <td>가이드</td>
-                                <td><a href="#">그대 지금 그 누구를 사랑하는가 굳은 약속 변해버렸나</a></td>
-                                <td>관리자</td>
-                                <td>18:34</td>
-                            </tr>
-                            <tr>
-                                <td>15</td>
-                                <td>가이드</td>
-                                <td><a href="#">그리움만 남겨두고 나를 잊었나 벌써 나를 잊어버렸나</a></td>
-                                <td>관리자</td>
-                                <td>18:34</td>
-                            </tr>
-                            <tr>
-                                <td>14</td>
-                                <td>가이드</td>
-                                <td><a href="#">다정했던 사람이여 나를 잊었나 벌써 나를 잊어버렸나</a></td>
-                                <td>관리자</td>
-                                <td>18:34</td>
-                            </tr>
-                            <tr>
-                                <td>13</td>
-                                <td>가이드</td>
-                                <td><a href="#">모임의 성격에 맞는 가격대의 와인 고르는 방법</a></td>
-                                <td>관리자</td>
-                                <td>14:05</td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td>가이드</td>
-                                <td><a href="#">짤려도 안 짤리는 방법</a></td>
-                                <td>관리자</td>
-                                <td>13:05</td>
-                            </tr>
-                            <tr>
-                                <td>11</td>
-                                <td>공지사항</td>
-                                <td><a href="#">그 상냥함이 언젠가 네 목숨을 앗아갈거야</a></td>
-                                <td>관리자</td>
-                                <td>09:30</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>공지사항</td>
-                                <td><a href="#">그 정도로 나를 짤랐다고 생각했나?</a></td>
-                                <td>관리자</td>
-                                <td>09:24</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>공지사항</td>
-                                <td><a href="#">기존 관리자는 짤랐습니다</a></td>
-                                <td>관리자2</td>
-                                <td>2021. 10. 20</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>공지사항</td>
-                                <td><a href="#">저는 퇴근합니다</a></td>
-                                <td>관리자</td>
-                                <td>2021. 10. 20</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>가이드</td>
-                                <td><a href="#">리빙포인트 : 배고플땐 밥을 먹으면 된다</a></td>
-                                <td>관리자</td>
-                                <td>2021. 10. 20</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>가이드</td>
-                                <td><a href="#">자취생 꿀팁 Best 20</a></td>
-                                <td>관리자</td>
-                                <td>2021. 10. 20</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>가이드</td>
-                                <td><a href="#">포인트로 모임 참여비 결제하는 방법</a></td>
-                                <td>관리자</td>
-                                <td>2021. 10. 20</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>가이드</td>
-                                <td><a href="#">별로 안 좋아하는 애가 신청했을 때 마상없이 거절하는 방법</a></td>
-                                <td>관리자</td>
-                                <td>2021. 10. 20</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>가이드</td>
-                                <td><a href="#">와인투게더 모임 개설과 참여 방법</a></td>
-                                <td>관리자</td>
-                                <td>2021. 10. 20</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>공지사항</td>
-                                <td><a href="#">와인투게더 오픈을 축하합니다</a></td>
-                                <td>관리자</td>
-                                <td>2021. 10. 20</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="5">
-                                    <ul class="board_paging">
-                                        <li class="paging_prev">이전</li>
-                                        <li class="paging_now">1</li>
-                                        <li>2</li>
-                                        <li class="paging_next">다음</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table> <!-- 게시판 임시 레이아웃 -->
-                </section>
+                </div>
+
+                <div id="detailContents">
+
+                    ㄴㅇㄹㄶㄹ
+
+                </div>
 
             </div> <!-- #wrapMain -->
 
@@ -358,22 +217,20 @@
                                 <li>
                                     대표이사 <span>최용준</span>
                                 </li>
-                                <hr class="hf" />
                                 <li>
                                     사업자등록번호 <span>617-86-10479</span>
                                 </li>
-                                <hr class="hf" />
                                 <li>
                                     통신판매업신고번호 <span>제2016-부산해운대-0485호</span>
                                 </li>
-                                <hr class="hf" />
                                 <li>
                                     주소 <span>부산광역시 해운대구 해운대로 570번길 46, B1</span>
                                 </li>
-                                <hr class="hf" />
                                 <li class="disclaimer">
-                                    전자상거래상 중개업이 어쩌고 저쩌고 책임은 구매자 본인에게 있고 어쩌고 저쩌고<br />
-                                    두줄로 들어가면 이런 느낌이고 뭔가 내용이 많아야 할거같고
+                                    (주) 비노앤제이는 통신판매중개자로서 요식업의 주 거래 당사자가 아니며,<br />
+                                    해당 업체에서 제공한 음식에 대한 일체의 책임을 지지 않습니다.<br />
+                                    단 "와인투게더"에서 발생하는 모임에 대한 문의, 취소, 환불 등의 업무는 (주) 비노앤제이에서 처리하며,<br />
+                                    이에 대한 책임은 (주) 비노앤제이에 있습니다.
                                 </li>
                             </ul>
                         </div>
@@ -385,15 +242,12 @@
                                 <li class="phonenumb">
                                     1811-0612
                                 </li>
-                                <hr class="hf" />
                                 <li>
                                     운영시간 <span>평일 오전 10:00 ~ 오후 06:00</span>
                                 </li>
-                                <hr class="hf" />
                                 <li>
                                     점심시간 <span>오후 12:00 ~ 오후 01:00</span>
                                 </li>
-                                <hr class="hf" />
                                 <li class="disclaimer">
                                     * 토 / 일 / 공휴일은 휴무입니다.
                                 </li>
@@ -405,6 +259,8 @@
                 <img src="./resources/common/images/logo_footer.png" alt="VINO & J" />
             </footer> <!-- Footer -->
         </div> <!-- #wrap -->
+
+        <script type="text/javascript" src="./resources/common/js/slick.min.js"></script> <!-- Slick JS -->
 
     </body>
 

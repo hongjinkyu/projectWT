@@ -261,6 +261,15 @@ div#detailSide_sticker {
     }
 }
 
+#reviewMobileGroup {
+    display: none;
+
+    > hr {
+        margin: 1rem 0;
+        background: #D9D7D2;
+    }
+}
+
 .review_title {
     > input {
         display: block;
@@ -363,5 +372,20 @@ div#detailSide_sticker {
 @media only screen and (hover: none) and (pointer: coarse) {
 
 } /* 모바일 디바이스 미디어 쿼리 */
+
+@media screen and (max-width: 800px) {
+    #reviewMobileGroup {
+        display: initial;
+    }
+
+    #reviewStarPoint {
+        flex-flow: column nowrap;
+    }
+
+    .starpoint_container {
+        flex-grow: 0;
+        width: 100%;
+    }
+}
 
 /* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */
