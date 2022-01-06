@@ -64,6 +64,15 @@ div#detailSide_sticker > .detail_banner_cont > a > img {
 div#detailSide_sticker > .detail_banner_cont > a > p {
 	padding: 0.5rem;
 	background: rgb(var(--color_light));
+	line-height: 1.6;
+}
+div#detailSide_sticker > .detail_banner_cont > a > p > .evt_title {
+	font-weight: bold;
+}
+div#detailSide_sticker > .detail_banner_cont > a > p > .evt_sdate,
+div#detailSide_sticker > .detail_banner_cont > a > p > .evt_edate {
+	font-size: var(--fnt_12);
+	opacity: 0.75;
 }
 
 /* 서브 페이지 스티키 메뉴 */

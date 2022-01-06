@@ -65,6 +65,17 @@ div#detailSide_sticker {
             > p {
                 padding: .5rem;
                 background: rgb(var(--color_light));
+                line-height: 1.6;
+
+                > .evt_title {
+                    font-weight: bold;
+                }
+
+                > .evt_sdate,
+                > .evt_edate {
+                    font-size: var(--fnt_12);
+                    opacity: .75;
+                }
             }
         }
     }
