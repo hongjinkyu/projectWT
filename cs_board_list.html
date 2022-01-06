@@ -143,44 +143,376 @@
                     <div id="detailSide_sticker">
                         <div class="detail_hiddentitle">
                             <div class="detail_surface_info">
-                                <h6>글 분류 선택</h6>
+                                <h6>진행중인 이벤트</h6>
                             </div>
 
                             <hr class="hf" />
                         </div>
-                        
-                        <div class="category_selector">
-                            <button class="selector_label">
-                                <p class="selector_text">공지사항</p>
-                                
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"/></svg>
-                            </button>
 
-                            <ul class="selector_list">
-                                <li class="selector_item">
-                                    공지사항
-                                </li>
-
-                                <li class="selector_item">
-                                    이벤트
-                                </li>
-
-                                <li class="selector_item">
-                                    점검안내
-                                </li>
-
-                                <li class="selector_item">
-                                    기타
-                                </li>
-                            </ul>
+                        <div class="detail_banner_cont">
+                            <a href="#">
+                                <img src="./resources/index/images/banner_square.jpg" alt="이벤트 배너" />
+                                <p>와투 오픈 기념 멤버십 가입 이벤트</p>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div id="detailContents">
+                    <table id="boardList">
+                        <colgroup>
+                            <col class="board_chkbox" />
+                            <col class="board_date" />
+                            <col class="board_category" />
+                            <col class="board_title" />
+                            <col class="board_auth" />
+                        </colgroup>
 
-                    ㄴㅇㄹㄶㄹ
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <input type="checkbox" name="chkAll" id="chkAll" />
+                                    <label for="chkAll"></label>
+                                </th>
+                                <th scope="col">작성일</th>
+                                <th scope="col">분류</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                            </tr>
+                        </thead>
 
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk01" id="chk01" />
+                                    <label for="chk01"></label>
+                                </td>
+                                <td>
+                                    21. 02. 01
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">글 제목 <span>(2)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk02" id="chk02" />
+                                    <label for="chk02"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">맘에 없는 그런 말하고 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>정최관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk03" id="chk03" />
+                                    <label for="chk03"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">돌아서면 더 힘들지 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk04" id="chk04" />
+                                    <label for="chk04"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">그런건 너무 가슴이 아파 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk05" id="chk05" />
+                                    <label for="chk05"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">아무것도 할 수 없는 오늘은 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>김이박관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk06" id="chk06" />
+                                    <label for="chk06"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">길었던 하루가 다 지나도 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>김이박관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk07" id="chk07" />
+                                    <label for="chk07"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">뭘 했는지도 모르겠어 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>사공수관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk08" id="chk08" />
+                                    <label for="chk08"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">그래 이런건 너무 마음이 아파 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>윤심관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk09" id="chk09" />
+                                    <label for="chk09"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">아무 말도 할 수 없는 오늘은 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>김이박관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk10" id="chk10" />
+                                    <label for="chk10"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">있잖아 내가 만약에 내가 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>제갈공관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk11" id="chk11" />
+                                    <label for="chk11"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">너에게 가슴아픈 말을 했다면 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>김이박관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk12" id="chk12" />
+                                    <label for="chk12"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">잊어줘 미안해 내가 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>김이박관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk13" id="chk13" />
+                                    <label for="chk13"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">그러려던 건 아니었는데 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>김이박관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk14" id="chk14" />
+                                    <label for="chk14"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">하고 전화를 할까 말까 <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>브로콜리관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk15" id="chk15" />
+                                    <label for="chk15"></label>
+                                </td>
+                                <td>
+                                    21. 01. 17
+                                </td>
+                                <td>공지사항</td>
+                                <td>
+                                    <a href="./board_view.html">기타- <span>(247)</span></a>
+                                </td>
+                                <td>
+                                    <p class="user_name">
+                                        <img src="./resources/index/images/temp_profile_0.jpg" alt="유저 프로필 사진" />
+                                        <span>기타솔로관리자</span>
+                                    </p>
+                                </td>
+                            </tr> <!-- 글 한줄 -->
+                        </tbody>
+                    </table>
+
+                    <div class="board_control">
+                        <label id="btnChkDel" >
+                            <button class="btn_scale">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-9 3h2v6H9v-6zm4 0h2v6h-2v-6zM9 4v2h6V4H9z"/></svg>
+                            </button>
+                            선택한 글 삭제
+                        </label>
+
+                        <label id="btnWrite">
+                            <button class="btn_scale">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.414 16L16.556 5.858l-1.414-1.414L5 14.586V16h1.414zm.829 2H3v-4.243L14.435 2.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 18zM3 20h18v2H3v-2z"/></svg>
+                            </button>
+                            글 작성
+                        </label>
+                    </div>
+
+                    <ul id="boardPager">
+                        <li class="pager_prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+                        </li>
+                        <li class="current">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li class="pager_next">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415z"/></svg>
+                        </li>
+                    </ul> <!-- #reviewPager -->
                 </div>
 
             </div> <!-- #wrapMain -->
