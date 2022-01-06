@@ -51,71 +51,7 @@ div#detailSide_sticker {
     }
 } /* 서브 페이지 스티키 메뉴 */
 
-.category_selector {
-    > .selector_label {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: .5rem;
-        padding: .5rem;
-        width: 100%;
-        box-shadow: 0 .05rem 0 rgba(var(--color_dark), .1);
-        font-size: var(--fnt_14);
 
-        > svg {
-            fill: #707070;
-        }
-
-        &:focus {
-            background: rgba(var(--color_dark), .75);
-            color: rgb(var(--color_light));
-
-            > svg {
-                fill: rgb(var(--color_light));
-                transform: rotate(180deg);
-                transition: .15s;
-            }
-
-            + .selector_list {
-                opacity: 1;
-                transition: .3s;
-            }
-        }
-    }
-
-    > .selector_list {
-        width: 100%;
-        max-height: 16rem;
-        overflow-y: auto;
-        border-radius: var(--bdr_outer);
-        background: white;
-        box-shadow:
-            0 .05rem 0 rgba(var(--color_dark), .1),
-            0 0 .5rem -.25rem rgba(var(--color_dark), .25);
-        opacity: 0;
-
-        &::-webkit-scrollbar {
-            background: transparent;
-        }
-
-        > .selector_item {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            column-gap: .5rem;
-            padding: .5rem;
-
-            @media (hover: hover) {
-                &:hover {
-                    background: rgb(var(--color_acc1));
-                    color: rgb(var(--color_light));
-                    transition: .15s;
-                }
-            }
-        }
-    }
-}
 
 /* ---------- 웹 버전 종료 ---------- */
 /* ---------- 모바일 버전 시작 ---------- */
