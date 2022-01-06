@@ -1,6 +1,29 @@
 @charset "UTF-8";
 /* ---------- Page-Specific Layout CSS (Index) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
+.banner_rollup {
+	position: relative;
+	height: 2.5rem;
+	background: rgb(var(--color_acc1));
+	color: white;
+}
+.banner_rollup > .int_wrap {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	height: inherit;
+}
+.banner_rollup > .rollup_close {
+	position: absolute;
+	top: 0.25rem;
+	right: 0.25rem;
+	width: 2rem;
+	height: 2rem;
+	background: white;
+	cursor: pointer;
+}
+
 div#mainSlider {
 	position: relative;
 	width: 100%;

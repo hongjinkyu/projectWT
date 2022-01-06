@@ -1,275 +1,136 @@
 /* ---------- Page-Specific Layout CSS (My Page) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
+/* ---------- 웹 버전 시작 ---------- */
 
-#contentBar {
+button,
+input {
+    box-shadow: none;
+}
+
+div#wrapMain.sub {
+    column-gap: 1rem;
+    margin: 0 auto;
+    width: 60rem;
+} /* 임시 - 서브 페이지 래퍼 사이즈 및 내부 정렬 */
+
+.section_title {
+    margin: 5rem auto 1.5rem;
+    width: 60rem;
+}
+
+.btn_rotate {
+    display: block;
+    margin: 2rem auto;
+}
+
+div#detailSide {
     position: relative;
-}
+    width: 16rem;
+    z-index: 3;
+} /* 서브 페이지 사이드 바 */
 
-#myProfileIMG {
+div#detailContents {
     position: relative;
-    margin: -.5rem;
-    width: calc(100% + 1rem);
-    height: 12rem;
+    width: 42rem;
+} /* 서브 페이지 컨텐츠 */
 
-    > .profile_bg {
-        width: inherit;
-        height: inherit;
-        object-fit: cover;
-        filter: brightness(.9);
-        z-index: -1;
-    }
+div#detailSide_sticker {
+    position: sticky;
+    top: 6rem;
+    left: 0;
 
-    > .profile_pict {
-        display: block;
-        position: absolute;
-        right: 1rem;
-        bottom: -3rem;
-        width: 6rem;
-        height: 6rem;
-        border-radius: 50%;
-        box-shadow:
-            0 0 0 .15rem rgb(var(--color_bdr)),
-            0 0 .5rem rgba(var(--color_dark), .5);
-        object-fit: cover;
-    }
-}
-
-#myProfileDesc {
-    margin: 0 -.5rem;
-    padding: 1rem 8rem 1rem 0;
-    background: linear-gradient(to bottom, rgb(var(--color_bdr)) 0%, transparent 100%);
-    text-align: end;
-
-    > h3 {
-        position: relative;
-        margin-bottom: .75rem;
-        margin-left: auto;
-        padding: 0 .25rem;
-        width: fit-content;
-        color: rgb(var(--color_text));
-        font-size: var(--fnt_40);
-        text-shadow:
-            0 .1rem .15rem rgba(var(--color_subtle), .75),
-            -.1rem 0 0 rgba(var(--color_subtle), .75),
-            .1rem 0 0 rgba(var(--color_subtle), .75);
-        z-index: 1;
-        
-        &::before {
-            display: block;
-            position: absolute;
-            bottom: -.15rem;
-            left: 0;
-            right: 0;
-            height: .5rem;
-            border-radius: var(--bdr_outer);
-            background: rgb(var(--color_acc1));
-            z-index: -1;
-            content: '';
-        }
-    }
-
-    > .my_account {
-        font-family: var(--ff_eng);
-        font-weight: bold;
-
-        &::after {
-            display: inline-block;
-            margin-left: .25rem;
-            padding: .25rem 0 .2rem;
-            width: 1rem;
-            border-radius: var(--bdr_outer);
-            color: rgb(var(--color_light));
-            font-size: var(--fnt_12);
-            text-align: center;
+    > .detail_hiddentitle {
+        > p {
+            margin-top: .25rem;
         }
 
-        &:is([data-acctype='naver'])::after {
-            background: #04cf5c;
-            content: 'N';
-        }
-
-        &:is([data-acctype='google'])::after {
-            background: #d93025;
-            content: 'G';
-        }
-
-        &:is([data-acctype='kakao'])::after {
-            background: #f3dc00;
-            color: rgb(var(--color_text));
-            content: 'K';
+        > hr {
+            margin: 1rem 0;
+            background: #D9D7D2;
         }
     }
-}
+} /* 서브 페이지 스티키 메뉴 */
 
-#myProfileSetting {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: .5rem;
-    font-family: var(--ff_sans_p);
-
-    > hr.vf {
-        background: rgb(var(--color_bdr));
-    }
-}
-
-#myProfileIntro {
-    > h5 {
-        margin: 3rem 0 .5rem;
-    }
-
-    > .my_self {
+.category_selector {
+    > .selector_label {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: .5rem;
         padding: .5rem;
-        border: var(--border);
+        width: 100%;
+        box-shadow: 0 .05rem 0 rgba(var(--color_dark), .1);
+        font-size: var(--fnt_14);
+
+        > svg {
+            fill: #707070;
+        }
+
+        &:focus {
+            background: rgba(var(--color_dark), .75);
+            color: rgb(var(--color_light));
+
+            > svg {
+                fill: rgb(var(--color_light));
+                transform: rotate(180deg);
+                transition: .15s;
+            }
+
+            + .selector_list {
+                opacity: 1;
+                transition: .3s;
+            }
+        }
+    }
+
+    > .selector_list {
+        width: 100%;
+        max-height: 16rem;
+        overflow-y: auto;
         border-radius: var(--bdr_outer);
-        background: rgb(var(--color_bg));
+        background: white;
+        box-shadow:
+            0 .05rem 0 rgba(var(--color_dark), .1),
+            0 0 .5rem -.25rem rgba(var(--color_dark), .25);
+        opacity: 0;
 
-        > hr.hf {
-            margin: .5rem 0;
-            background: rgb(var(--color_bdr));
+        &::-webkit-scrollbar {
+            background: transparent;
         }
 
-        > .my_grade {
-            font-family: var(--ff_sans_p);
-            text-align: end;
-
-            > span {
-                display: inline-block;
-                position: relative;
-                color: rgb(var(--color_title));
-        
-                &::before {
-                    display: inline-block;
-                    margin-right: .25rem;
-                    padding: .2rem .3rem .1rem .3rem;
-                    border: .05rem solid rgba(var(--color_dark), .25);
-                    border-radius: var(--bdr_outer);
-                    color: rgb(var(--color_light));
-                }
-        
-                /* 회원등급 관련 부분 - !중요! */
-        
-                &:is([data-grade="grade_newbie"])::before {
-                    background: rgb(var(--color_acc2));
-                    color: rgb(var(--color_tone2));
-                    content: 'L1';
-                }
-        
-                &:is([data-grade="grade_normal"])::before {
-                    background: rgb(var(--color_tag1));
-                    content: 'L2';
-                }
-        
-                &:is([data-grade="grade_regular"])::before {
-                    background: rgb(var(--color_tag2));
-                    color: rgb(var(--color_footer));
-                    content: 'L3';
-                }
-        
-                &:is([data-grade="grade_family"])::before {
-                    background: rgb(var(--color_tag3));
-                    content: 'L4';
-                }
-        
-                &:is([data-grade="grade_vip"])::before {
-                    background: rgb(var(--color_text));
-                    color: rgb(var(--color_tag2));
-                    content: 'VIP';
-                }
-        
-                &:is([data-grade="grade_vvip"])::before {
-                    border-color: goldenrod;
-                    background: linear-gradient(to top, rgb(255, 217, 0) 0%, rgb(255, 187, 0) 100%);
-                    font-family: 'Berkshire Swash', cursive;
-                    color: rgb(var(--color_light));
-                    text-shadow: 0 0 .1rem rgb(var(--color_point1));
-                    content: 'W';
-                }
-        
-                /* 회원등급 관련 부분 - !중요! */
-            }
-        }
-    }
-}
-
-.my_gathering,
-.my_review {
-    > h5 {
-        margin: 3rem 0 .5rem;
-    }
-
-    > .mygat_container,
-    > .myrev_container {
-        > .tab_buttons {
+        > .selector_item {
             display: flex;
-            border-bottom: var(--border);
+            flex-flow: row nowrap;
+            align-items: center;
+            column-gap: .5rem;
+            padding: .5rem;
 
-            > p {
-                padding: .5rem .75rem;
-                border-bottom: .2rem solid transparent;
-                border-top-left-radius: var(--bdr_outer);
-                border-top-right-radius: var(--bdr_outer);
-                color: rgba(var(--color_text), .5);
-                text-align: center;
-                cursor: pointer;
-
-                &.selected {
-                    border-color: rgb(var(--color_acc1));
-                    color: rgb(var(--color_text));
-                    font-weight: bold;
-                    text-shadow: 0 .1rem .1rem rgba(var(--color_subtle), .75);
-                }
-            }
-        }
-
-        > .tab_draw {
-            border-bottom: var(--border);
-
-            > ul {
-                display: none;
-                padding: .25rem 0;
-
-                > li {
-                    padding: .75rem 0;
-                    border-radius: var(--bdr_outer);
-
-                    > a {
-                        display: block;
-
-                        &::before {
-                            content: '▪ ';
-                        }
-                    }
-
-                    &:hover {
-                        padding: .75rem;
-                        background: rgb(var(--color_bg));
-                        font-weight: bold;
-                        transition: .2s;
-                    }
-                }
-
-                &.show {
-                    display: block;
+            @media (hover: hover) {
+                &:hover {
+                    background: rgb(var(--color_acc1));
+                    color: rgb(var(--color_light));
+                    transition: .15s;
                 }
             }
         }
     }
 }
 
-#myProfilePay {
-    > h5 {
-        margin: 3rem 0 .5rem;
-    }
+/* ---------- 웹 버전 종료 ---------- */
+/* ---------- 모바일 버전 시작 ---------- */
 
-    > .my_card_container {
-        
-    }
+
+/* ---------- 모바일 버전 종료 ---------- */
+/* ---------- 페이지 특정 요소 종료 ---------- */
+/* ---------- 페이지 특정 미디어 쿼리 시작 ---------- */
+
+@media only screen and (hover: none) and (pointer: coarse) {
+
+} /* 모바일 디바이스 미디어 쿼리 */
+
+@media screen and (max-width: 800px) {
+
 }
 
-#myProfileSub {
-    > h5 {
-        margin: 3rem 0 .5rem;
-    }
-}
+/* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */

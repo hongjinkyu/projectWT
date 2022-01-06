@@ -14,6 +14,10 @@ $(document).ready(function() { // jQuery Load
 
     // Actual Codes
 
+    $('.rollup_close').click(function() {
+        $('.banner_rollup').slideUp(150);
+    });
+
     $('#mainSlider').slick({
         slide: '.main-slide',
         slidesToShow: 1,
