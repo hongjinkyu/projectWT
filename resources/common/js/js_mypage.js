@@ -8,14 +8,15 @@ $(document).ready(function() {
 
 // ---------- Actual Codes ----------
 
-    $('.tab_buttons > p').each(function() {
-        $(this).click(function() {
-            let tab_target = $('.' + $(this).attr('data-target'));
+    $('.tab_buttons > button').each(function() {
+        $(this).click(function() {            
+            $(this).siblings().removeClass('tab_selected');
+            $(this).addClass('tab_selected');
 
-            $(this).addClass('selected');
-            $(this).siblings().removeClass('selected');
-            tab_target.addClass('show');
-            tab_target.siblings().removeClass('show');
+            let tab_href = $(this).attr('data-tab-target');
+
+            $('.myact_tab').removeClass('show');
+            $('#' + tab_href + '').addClass('show');
         });
     });
 

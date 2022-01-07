@@ -241,11 +241,12 @@
                     -->
 
                     <section id="myBasicInfo">
-                        <article class="mybasic_info">
-                            <h6 class="art_title">
-                                내 기본 정보
-                            </h6>
+                        <div class="section_title">
+                            <h5>내 정보</h5>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
 
+                        <article class="mybasic_info">
                             <div class="my_info_container">
                                 계정 - kim_nugu@naver.com (네이버 계정)
                                 가입일 - 2021. 9. 14
@@ -257,20 +258,12 @@
                         </article> <!-- 내 기본 정보 -->
 
                         <article class="mybasic_intro">
-                            <h6 class="art_title">
-                                내 소개글
-                            </h6>
-
                             <div class="my_intro_text">
                                 This is your moment. Own it
                             </div>
                         </article> <!-- 내 소개글 -->
 
                         <article class="mybasic_deepinfo">
-                            <h6 class="art_title">
-                                내 개인정보
-                            </h6>
-
                             <div class="my_deep_info">
                                 본인 인증
                                 계정과 관련된 민감한 정보
@@ -284,28 +277,469 @@
                     </section> <!-- #myBasicInfo -->
 
                     <section id="myActivities">
+                        <div class="section_title">
+                            <h5>나의 와투 활동</h5>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
+
                         <div class="tab_buttons">
-                            sdpofjsp
+                            <button class="tab_selected" data-tab-target="myactAttended">참여한 모임</button>
+                            <button data-tab-target="myactOpened">개설한 모임</button>
+                            <button data-tab-target="myactWrote">작성한 후기</button>
+                            <button data-tab-target="myactRecieved">받은 후기</button>
                         </div>
 
-                        <article class="myact_attended">
-                            내참모
+                        <article id="myactAttended" class="myact_tab show">
+                            <ul class="myact_article_body act_att">
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            어쩌고 저쩌고 모임
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            어쩌고 저쩌고 모임
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            어쩌고 저쩌고 모임
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            어쩌고 저쩌고 모임
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            어쩌고 저쩌고 모임
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <ul class="myact_article_pager">
+                                <li class="pager_prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+                                </li>
+                                <li class="current">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li class="pager_next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415z"/></svg>
+                                </li>
+                            </ul>
                         </article> <!-- 내가 참여한 모임 -->
 
-                        <article class="myact_opened">
-                            내개모
+                        <article id="myactOpened" class="myact_tab">
+                            <ul class="myact_article_body act_opn">
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            슈퍼-사나이 클럽
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            슈퍼-겁쟁이 쉼터
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            슈퍼-겁쟁이 쉼터
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            슈퍼-겁쟁이 쉼터
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            슈퍼-겁쟁이 쉼터
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <ul class="myact_article_pager">
+                                <li class="pager_prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+                                </li>
+                                <li class="current">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li class="pager_next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415z"/></svg>
+                                </li>
+                            </ul>
                         </article> <!-- 내가 개설한 모임 -->
 
-                        <article class="myact_wrote">
-                            내작후
+                        <article id="myactWrote" class="myact_tab">
+                            <ul class="myact_article_body act_wrt">
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            어우 즐거워
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            어우 즐거워
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            어우 즐거워
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            어우 즐거워
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            안절거워
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <ul class="myact_article_pager">
+                                <li class="pager_prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+                                </li>
+                                <li class="current">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li class="pager_next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415z"/></svg>
+                                </li>
+                            </ul>
                         </article> <!-- 내가 작성한 후기 -->
 
-                        <article class="myact_recieved">
-                            내받후
+                        <article id="myactRecieved" class="myact_tab">
+                            <ul class="myact_article_body act_rcv">
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            마! 니 입만 입이고 내 입은 머 주디가?
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            지옥에서 온 사자, 스파이다-마!
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            빈티지가 중요한 게 아니야. 중요한 건 메시지지
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            노벨 킥복싱 상
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+
+                                <hr class="hf" />
+
+                                <li>
+                                    <img src="https://picsum.photos/200" alt="활동 메인 사진" class="act_main_photo" />
+
+                                    <dl>
+                                        <dt class="act_title">
+                                            내는 안절거웠어
+                                        </dt>
+                                        <dd class="act_date">
+                                            2021. 9. 4
+                                        </dd>
+                                    </dl>
+
+                                    <button class="act_read_article">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <ul class="myact_article_pager">
+                                <li class="pager_prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.828 12l2.829 2.828-1.414 1.415L9 12l4.243-4.243 1.414 1.415L11.828 12z"/></svg>
+                                </li>
+                                <li class="current">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li class="pager_next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415z"/></svg>
+                                </li>
+                            </ul>
                         </article> <!-- 내가 받은 후기 -->
                     </section> <!-- #myActivities -->
 
                     <section id="myMembership">
+                        <div class="section_title">
+                            <h5>와투 멤버십</h5>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
+
                         <article class="mymember_onuse">
                             멤이중
 
@@ -320,6 +754,11 @@
                     </section> <!-- #myMembership -->
 
                     <section id="myAssets">
+                        <div class="section_title">
+                            <h5>쿠폰 / 캐시 / 포인트</h5>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
+
                         <article class="myast_coupon">
                             보유 중인 쿠폰
                         </article> <!-- 보유 중인 쿠폰 -->
@@ -336,6 +775,11 @@
                     </section> <!-- #myAssets -->
 
                     <section id="myServices">
+                        <div class="section_title">
+                            <h5>서비스</h5>
+                            <hr class="hf" />
+                        </div> <!-- .section_title -->
+
                         <article class="mysvc_faq">
                             자주 묻는 질문
                         </article> <!-- 서비스 이용시 자주 묻는 질문 -->

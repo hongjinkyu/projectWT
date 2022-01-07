@@ -285,33 +285,174 @@ section {
         & + article {
             margin-top: 1rem;
         }
+    }
 
-        > .art_title {
-            position: relative;
-            margin-bottom: 1rem;
+    > .section_title {
+        margin: 2rem auto;
+        width: 100%;
 
-            &::after {
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 15%;
-                right: 0;
-                height: .05rem;
-                background: #D9D7D2;
-                z-index: -1;
-                content: '';
-            }
+        > h5 {
+            font-family: var(--ff_sans_p);
+            font-size: var(--fnt_16);
+        }
+
+        > hr {
+            margin-top: .5rem;
         }
     }
 }
 
 #myActivities {
+    > .tab_buttons {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        column-gap: .05rem;
+        border-bottom: .05rem solid #D9D7D2;
+
+        > button {
+            display: block;
+            position: relative;
+            width: 5rem;
+            height: 1.75rem;
+            border-radius: 0;
+            background: rgba(var(--color_dark), .75);
+            box-shadow: none;
+            color: rgb(var(--color_light));
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: .25rem;
+                content: '';
+            }
+
+            &.tab_selected {
+                background: rgb(var(--color_light));
+                color: rgb(var(--color_text));
+                font-weight: bold;
+
+                &::before {
+                    background: rgb(Var(--color_acc1));
+                }
+            }
+        }
+    }
+
     > article {
-        padding: .5rem;
-        background: rgb(var(--color_light));
+        display: none;
+
+        &.show {
+            display: initial;
+        }
+
+        > .myact_article_body {
+            border-bottom: .05rem solid #D9D7D2;
+
+            > li {
+                display: flex;
+                align-items: center;
+                column-gap: .5rem;
+                padding: 1rem;
+
+                @media (hover: hover) {
+                    &:hover {
+                        background: rgb(var(--color_light));
+
+                        .act_title {
+                            font-weight: bold;
+                        }
+
+                        > .act_read_article {
+                            transform: translateX(0);
+                            transition: .3s ease-out;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                > .act_main_photo {
+                    width: 3rem;
+                    height: 3rem;
+                    box-shadow: 0 .5rem 1rem -.5rem rgba(var(--color_dark), .2);
+                    object-fit: cover;
+                }
+
+                > dl {
+                    > dt {
+                        margin-bottom: .25rem;
+                        font-family: var(--ff_sans_p);
+                        font-size: var(--fnt_16);
+                    }
+
+                    > dd {
+                        font-size: var(--fnt_12);
+                        opacity: .5;
+                    }
+                }
+
+                > .act_read_article {
+                    margin-left: auto;
+                    padding: .5rem;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 0;
+                    background: transparent;
+                    transform: translateX(-25%);
+                    opacity: 0;
+                    cursor: pointer;
+
+                    > svg {
+                        fill: rgb(var(--color_tag1));
+                    }
+                }
+            }
+
+            > hr {
+                background: #D9D7D2;
+            }
+        }
     }
 }
 
+.myact_article_pager {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 18rem;
+    background: radial-gradient(ellipse at top, #F2EBEB 0%, transparent 75%);
+    font-family: var(--ff_eng);
+    font-size: var(--fnt_12);
+
+    > li {
+        width: 1.5rem;
+        height: 1.2rem;
+        border-radius: var(--bdr_outer);
+        text-align: center;
+        line-height: 1.2rem;
+        cursor: pointer;
+
+        &.pager_prev {
+            margin-right: auto;
+        }
+
+        &.pager_next {
+            margin-left: auto;
+        }
+
+        &.current {
+            background: rgba(var(--color_dark), .75);
+            color: rgb(var(--color_light));
+            font-weight: bold;
+        }
+    }
+}
 
 /* ---------- 웹 버전 종료 ---------- */
 /* ---------- 모바일 버전 시작 ---------- */
