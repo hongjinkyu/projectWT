@@ -917,6 +917,7 @@ footer#footBase {
     bottom: 0;
     left: 0;
     right: 0;
+    margin-top: 7.5rem;
     color: rgb(var(--color_footer));
 
     > img {
@@ -989,7 +990,6 @@ div#footContent {
                 padding: .5rem;
 
                 > span {
-                    // float: right;
                     margin-left: .5rem;
                     color: rgb(var(--color_text));
                     font-size: var(--fnt_14);
@@ -2146,8 +2146,8 @@ aside#modalInfo {
         font-size: var(--fnt_12);
         color: rgb(var(--color_light));
         transform: translateX(-50%);
+        transition: .15s;
         opacity: 0;
-        animation: fade-in-out 5s linear;
         pointer-events: none;
         content: attr(data-message);
     }
@@ -2164,28 +2164,19 @@ aside#modalInfo {
         border-left: .25rem solid transparent;
         border-right: .25rem solid transparent;
         transform: translateX(-50%);
+        transition: .15s;
         opacity: 0;
-        animation: fade-in-out 5s linear;
         pointer-events: none;
         content: '';
     }
-}
 
-@keyframes fade-in-out {
-    0% {
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
+    @media (hover: hover) {
+        &:hover {
+            &::before,
+            &::after {
+                opacity: 1;
+            }
+        }
     }
 }
 

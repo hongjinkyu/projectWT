@@ -316,6 +316,9 @@ section > .section_title > hr {
 	#myActivities > article > .myact_article_body > li:hover .act_title {
 		font-weight: bold;
 	}
+	#myActivities > article > .myact_article_body > li:hover > .act_write_rev {
+		opacity: 1;
+	}
 	#myActivities > article > .myact_article_body > li:hover > .act_read_article {
 		transform: translateX(0);
 		transition: 0.3s ease-out;
@@ -342,16 +345,27 @@ section > .section_title > hr {
 	font-size: var(--fnt_12);
 	opacity: 0.5;
 }
-#myActivities > article > .myact_article_body > li > .act_read_article {
+#myActivities > article > .myact_article_body > li > button:first-of-type {
 	margin-left: auto;
+}
+#myActivities > article > .myact_article_body > li > .act_write_rev,
+#myActivities > article > .myact_article_body > li > .act_read_article {
 	padding: 0.5rem;
 	width: 2rem;
 	height: 2rem;
 	border-radius: 0;
 	background: transparent;
+	cursor: pointer;
+}
+#myActivities > article > .myact_article_body > li > .act_write_rev {
+	opacity: 0;
+}
+#myActivities > article > .myact_article_body > li > .act_write_rev > svg {
+	fill: #707070;
+}
+#myActivities > article > .myact_article_body > li > .act_read_article {
 	transform: translateX(-25%);
 	opacity: 0;
-	cursor: pointer;
 }
 #myActivities > article > .myact_article_body > li > .act_read_article > svg {
 	fill: rgb(var(--color_tag1));

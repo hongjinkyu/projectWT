@@ -861,6 +861,7 @@ footer#footBase {
 	bottom: 0;
 	left: 0;
 	right: 0;
+	margin-top: 7.5rem;
 	color: rgb(var(--color_footer));
 }
 footer#footBase > img {
@@ -1922,9 +1923,8 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	font-size: var(--fnt_12);
 	color: rgb(var(--color_light));
 	transform: translateX(-50%);
+	transition: 0.15s;
 	opacity: 0;
-	-webkit-animation: fade-in-out 5s linear;
-	        animation: fade-in-out 5s linear;
 	pointer-events: none;
 	content: attr(data-message);
 }
@@ -1940,42 +1940,17 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	border-left: 0.25rem solid transparent;
 	border-right: 0.25rem solid transparent;
 	transform: translateX(-50%);
+	transition: 0.15s;
 	opacity: 0;
-	-webkit-animation: fade-in-out 5s linear;
-	        animation: fade-in-out 5s linear;
 	pointer-events: none;
 	content: "";
 }
-
-@-webkit-keyframes fade-in-out {
-	0% {
-		opacity: 0;
-	}
-	10% {
+@media (hover: hover) {
+	[data-message]:hover::before, [data-message]:hover::after {
 		opacity: 1;
-	}
-	90% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
 	}
 }
 
-@keyframes fade-in-out {
-	0% {
-		opacity: 0;
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
 /* 심플 팝업 메시지 끝 */
 /* ---------- Repeating Items end ---------- */
 .note-modal.open {

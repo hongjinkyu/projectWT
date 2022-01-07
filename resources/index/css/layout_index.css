@@ -1,52 +1,22 @@
 @charset "UTF-8";
 /* ---------- Page-Specific Layout CSS (Index) ---------- */
 /* ---------- 페이지 특정 요소 시작 ---------- */
-.banner_rollup {
-	position: relative;
-	height: 2.5rem;
-	background: rgb(var(--color_acc1));
-	color: white;
-}
-.banner_rollup > .int_wrap {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	align-items: center;
-	height: inherit;
-}
-.banner_rollup > .rollup_close {
-	position: absolute;
-	top: 0.25rem;
-	right: 0.25rem;
-	width: 2rem;
-	height: 2rem;
-	background: white;
-	cursor: pointer;
-}
-
 div#mainSlider {
 	position: relative;
-	width: 100%;
+	margin: 0 auto;
+	max-width: 60rem;
 	height: 45vh;
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
 	background: var(--color_bdr);
+	box-shadow: 0 -1rem 2rem -0.5rem rgba(var(--color_dark), 0.3);
+	overflow: hidden;
 }
 
 .main-slide {
 	position: relative;
 	width: 100%;
 	height: 100%;
-}
-.main-slide::after {
-	display: block;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: radial-gradient(farthest-corner at right, transparent 0%, rgba(var(--color_dark), 0.5) 100%);
-	pointer-events: none;
-	z-index: -1;
-	content: "";
 }
 .main-slide > div.int_wrap {
 	display: flex;
@@ -69,8 +39,8 @@ div#mainSlider {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
-	height: 100%;
+	width: inherit;
+	height: inherit;
 	-o-object-fit: cover;
 	   object-fit: cover;
 	pointer-events: none;
@@ -79,12 +49,12 @@ div#mainSlider {
 .main-slide.slick-active > div.int_wrap > .slide_title {
 	transform: none;
 	opacity: 1;
-	transition: 2s ease-out;
+	transition: 1.2s ease-out;
 }
 .main-slide.slick-active > div.int_wrap > .slide_subtitle {
 	transform: none;
 	opacity: 1;
-	transition: 2s 0.5s ease-out;
+	transition: 1s 0.3s ease-out;
 }
 
 .main-dots {

@@ -371,6 +371,10 @@ section {
                             font-weight: bold;
                         }
 
+                        > .act_write_rev {
+                            opacity: 1;
+                        }
+
                         > .act_read_article {
                             transform: translateX(0);
                             transition: .3s ease-out;
@@ -402,16 +406,31 @@ section {
                     }
                 }
 
-                > .act_read_article {
+                > button:first-of-type {
                     margin-left: auto;
+                }
+
+                > .act_write_rev,
+                > .act_read_article {
                     padding: .5rem;
                     width: 2rem;
                     height: 2rem;
                     border-radius: 0;
                     background: transparent;
+                    cursor: pointer;
+                }
+
+                > .act_write_rev {
+                    opacity: 0;
+
+                    > svg {
+                        fill: #707070;
+                    }
+                }
+
+                > .act_read_article {
                     transform: translateX(-25%);
                     opacity: 0;
-                    cursor: pointer;
 
                     > svg {
                         fill: rgb(var(--color_tag1));
@@ -515,7 +534,6 @@ section {
             }
         }
     }
-
 }
 
 /* ---------- 페이지 특정 미디어 쿼리 종료 ---------- */
