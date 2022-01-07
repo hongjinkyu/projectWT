@@ -1638,6 +1638,10 @@ aside#modalInfo > .int_wrap > .modal_btn {
 	background: rgb(var(--color_bg));
 }
 
+.item_id {
+	display: none;
+}
+
 /* 커스텀 셀렉터 끝 */
 /* 리뷰 말풍선과 컨테이너 시작 */
 #reviewComment,

@@ -272,6 +272,12 @@ div#detailSide_sticker {
                     }
                 }
             }
+
+            @media (hover: none) {
+                & {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
@@ -355,7 +361,7 @@ section {
                 display: flex;
                 align-items: center;
                 column-gap: .5rem;
-                padding: 1rem;
+                padding: .5rem;
 
                 @media (hover: hover) {
                     &:hover {
@@ -381,6 +387,8 @@ section {
                 }
 
                 > dl {
+                    cursor: pointer;
+
                     > dt {
                         margin-bottom: .25rem;
                         font-family: var(--ff_sans_p);
@@ -388,6 +396,7 @@ section {
                     }
 
                     > dd {
+                        font-family: var(--ff_eng);
                         font-size: var(--fnt_12);
                         opacity: .5;
                     }
@@ -416,6 +425,8 @@ section {
         }
     }
 }
+
+/* 바운스 후 빠르게 사라짐 - cubic-bezier(.55,-0.55,0,1.05) */
 
 .myact_article_pager {
     display: flex;
@@ -454,8 +465,17 @@ section {
     }
 }
 
+.mobile_user_tag {
+    display: none;
+
+    & + .detail_notify {
+        display: none;
+    }
+}
+
 /* ---------- 웹 버전 종료 ---------- */
 /* ---------- 모바일 버전 시작 ---------- */
+
 
 
 /* ---------- 모바일 버전 종료 ---------- */
@@ -467,6 +487,34 @@ section {
 } /* 모바일 디바이스 미디어 쿼리 */
 
 @media screen and (max-width: 800px) {
+
+    .mobile_user_tag {
+        display: initial;
+
+        > .my_profile_tag {
+            width: auto;
+        }
+
+        & + .detail_notify {
+            display: initial;
+
+            ::before {
+                display: none;
+            }
+
+            > .noti_list {
+                max-height: none;
+            }
+        }
+    }
+
+    #myActivities {
+        > .tab_buttons {
+            > button {
+                width: 24%;
+            }
+        }
+    }
 
 }
 
