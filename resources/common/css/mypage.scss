@@ -40,17 +40,277 @@ div#detailSide_sticker {
     left: 0;
 
     > .detail_hiddentitle {
-        > p {
-            margin-top: .25rem;
-        }
-
         > hr {
+            clear: both;
             margin: 1rem 0;
             background: #D9D7D2;
         }
     }
+
+    > .detail_notify {
+        > h6 {
+            margin-bottom: 1rem;
+        }
+    }
 } /* 서브 페이지 스티키 메뉴 */
 
+.profile_pict_container {
+    position: relative;
+    float: left;
+    margin-bottom: 1rem;
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 0 .5rem 1rem -.5rem rgba(var(--color_dark), .2);
+
+    > .my_profile_pict {
+        width: inherit;
+        height: inherit;
+    }
+
+    > .profile_pict_change {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        inset: 0;
+        background: rgba(var(--color_dark), .75);
+        color: rgb(var(--color_light));
+        opacity: 0;
+        transition: opacity .15s;
+        cursor: pointer;
+
+        @media (hover: hover) {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.my_profile_tag {
+    float: left;
+    margin-left: .5rem;
+    width: 10.5rem;
+
+    > dt {
+        > .my_user_name {
+            margin-bottom: .5rem;
+            font-size: var(--fnt_20);
+    
+            &::before {
+                display: inline-block;
+                margin-right: .25rem;
+                padding: .2rem .3rem;
+                border: .05rem solid rgba(var(--color_dark), .2);
+                border-radius: var(--bdr_outer);
+                background: #ccc;
+                font-family: var(--ff_eng);
+                font-size: var(--fnt_12);
+                text-shadow: 0 .1rem .1rem rgba(var(--color_dark), .3);
+                vertical-align: top;
+            }
+    
+            &:is([data-acc-type="google"]) {
+                &::before {
+                    background: rgb(var(--color_light));
+                    color: #4285f4;
+                    content: 'G';
+                }
+            }
+    
+            &:is([data-acc-type="naver"]) {
+                &::before {
+                    background: #19ce60;
+                    color: rgb(var(--color_light));
+                    content: 'N';
+                }
+            }
+    
+            &:is([data-acc-type="kakao"]) {
+                &::before {
+                    background: #fae100;
+                    color: rgb(var(--color_text));
+                    content: 'K';
+                }
+            }
+    
+            &:is([data-acc-type="facebook"]) {
+                &::before {
+                    background: #166fe5;
+                    color: rgb(var(--color_light));
+                    text-decoration: .05rem underline currentColor;
+                    content: 'f';
+                }
+            }
+        }
+    }
+
+    > .my_user_id {
+        font-family: var(--ff_eng);
+        font-weight: bold;
+    }
+
+    > .my_cert {
+        display: flex;
+        flex-flow: row wrap;
+        gap: .15rem;
+        margin-top: 1rem;
+
+        > span {
+            display: inline-block;
+            padding: .15rem .5rem .25rem;
+            border: .05rem solid rgba(var(--color_dark), .1);
+            border-radius: var(--bdr_outer);
+            background: rgb(var(--color_acc1));
+            color: rgb(var(--color_light));
+            font-size: var(--fnt_12);
+
+            &.verified {
+                background: rgb(var(--color_acc2));
+            }
+
+            &.sommelier {
+                background: rgb(var(--color_tag1));
+            }
+        }
+    }
+}
+
+.noti_list {
+    position: relative;
+    max-height: 15rem;
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 5rem;
+        background: linear-gradient(to top, rgb(var(--color_bg)) 0%, transparent 100%);
+        transition: .3s ease-out;
+        z-index: 2;
+        content: '';
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            max-height: none;
+
+            &::before {
+                height: 0;
+            }
+        }
+    }
+
+    > li {
+        display: flex;
+        align-items: center;
+        column-gap: .25rem;
+        padding: .75rem;
+        border-radius: var(--bdr_outer);
+        background: rgb(var(--color_light));
+        box-shadow: 0 .05rem 0 rgba(var(--color_dark), .1);
+        font-family: var(--ff_sans_p);
+
+        & + li {
+            margin-top: .25rem;
+        }
+
+        &:is([data-noti-type="system"]) {
+            border-left: .25rem solid rgb(var(--color_bdr));
+        }
+
+        &:is([data-noti-type="self"]) {
+            border-left: .25rem solid rgb(var(--color_acc2));
+        }
+
+        &:is([data-noti-type="group"]) {
+            border-left: .25rem solid rgb(var(--color_acc1));
+        }
+
+        &:is([data-noti-type="review"]) {
+            border-left: .25rem solid rgb(var(--color_tag5));
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                > .noti_delete {
+                    opacity: 1;
+                }
+            }
+        }
+
+        > .noti_text {
+            line-height: 1rem;
+
+            > span {
+                font-weight: bold;
+            }
+        }
+
+        > .noti_delete {
+            margin-left: auto;
+            padding: .25rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            transition: .15s;
+            opacity: 0;
+            z-index: 1;
+            cursor: pointer;
+
+            > svg {
+                fill: rgb(var(--color_point1));
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    background: rgb(var(--color_point1));
+
+                    > svg {
+                        fill: rgb(var(--color_light));
+                    }
+                }
+            }
+        }
+    }
+}
+
+section {
+    & + section {
+        margin-top: 5rem;
+    }
+
+    > article {
+        & + article {
+            margin-top: 1rem;
+        }
+
+        > .art_title {
+            position: relative;
+            margin-bottom: 1rem;
+
+            &::after {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 15%;
+                right: 0;
+                height: .05rem;
+                background: #D9D7D2;
+                z-index: -1;
+                content: '';
+            }
+        }
+    }
+}
+
+#myActivities {
+    > article {
+        padding: .5rem;
+        background: rgb(var(--color_light));
+    }
+}
 
 
 /* ---------- 웹 버전 종료 ---------- */

@@ -144,14 +144,213 @@
             <div id="wrapMain" class="int_wrap sub" role="main">
 
                 <div id="detailSide">
-                    간단한 요약 정보 (보유 쿠폰 수, 보유 캐쉬, 보유 포인트 등)
+                    <div id="detailSide_sticker">
+                        <div class="detail_hiddentitle">
+                            <div class="profile_pict_container">
+                                <img src="./resources/index/images/temp_profile_1.jpg" alt="유저 프로필 사진" class="my_profile_pict" />
+    
+                                <div class="profile_pict_change">
+                                    사진 변경
+                                </div>
+                            </div>
+
+                            <dl class='my_profile_tag'>
+                                <dt>
+                                    <h6 class="my_user_name" data-acc-type="naver">김누구</h6>
+                                </dt>
+                                <dd class="my_user_id">
+                                    <span>kim_nugu@naver.com</span>
+                                </dd>
+                                <dd class="my_cert">
+                                    <span class="verified">✓ 본인 인증 완료</span>
+                                    <span class="sommelier">소믈리에</span>
+                                    <span>레벨 3</span>
+                                </dd>
+                            </dl>
+
+                            <hr class="hf" />
+                        </div>
+
+                        <div class="detail_notify">
+                            <h6>받은 알림 (<span class="noti_count">6</span>)</h6>
+
+                            <ul class="noti_list">
+                                <li data-noti-type="group">
+                                    <p class="noti_text">
+                                        내가 개설한 모임 "<span>슈퍼-사나이 클럽</span>" 에 참여 신청이 있어요.
+                                    </p>
+                                    <button class="noti_delete" title="이 알림 삭제">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"/></svg>
+                                    </button>
+                                </li> <!-- Single Notify -->
+
+                                <li data-noti-type="group">
+                                    <p class="noti_text">
+                                        내가 개설한 모임 "<span>슈퍼-사나이 클럽</span>" 의 마감일이 임박했어요. (10일)
+                                    </p>
+                                    <button class="noti_delete" title="이 알림 삭제">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"/></svg>
+                                    </button>
+                                </li> <!-- Single Notify -->
+
+                                <li data-noti-type="self">
+                                    <p class="noti_text">
+                                        비밀번호를 수정했어요.
+                                    </p>
+                                    <button class="noti_delete" title="이 알림 삭제">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"/></svg>
+                                    </button>
+                                </li> <!-- Single Notify -->
+
+                                <li data-noti-type="review">
+                                    <p class="noti_text">
+                                        "<span>슈퍼-겁쟁이 쉼터</span>" 모임에 대한 후기를 받았어요.
+                                    </p>
+                                    <button class="noti_delete" title="이 알림 삭제">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"/></svg>
+                                    </button>
+                                </li> <!-- Single Notify -->
+
+                                <li data-noti-type="group">
+                                    <p class="noti_text">
+                                        "<span>슈퍼-겁쟁이 쉼터</span>" 모임에 대한 ⭐ 별점을 받았어요.
+                                    </p>
+                                    <button class="noti_delete" title="이 알림 삭제">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"/></svg>
+                                    </button>
+                                </li> <!-- Single Notify -->
+
+                                <li data-noti-type="system">
+                                    <p class="noti_text">
+                                        🛠️ 와인투게더 점검 안내 (AM 8:00 ~ PM 1:00)
+                                    </p>
+                                    <button class="noti_delete" title="이 알림 삭제">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"/></svg>
+                                    </button>
+                                </li> <!-- Single Notify -->
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="detailContents">
-                    프로필 사진, 기본 정보 / 소개글, 본인 인증, 레벨, (소믈리에) /, 개인정보 / 소셜 계정 /, 멤버십 / 연간 결제 /, 보유 쿠폰, 보유 캐시, 보유 포인트 / 포인트 충전 /
+                    <!--
+                    <section id="myPartnerInfo">
+                        파트너 회원인 경우에만 보여질 화면
+                    </section>
+                    -->
+
+                    <section id="myBasicInfo">
+                        <article class="mybasic_info">
+                            <h6 class="art_title">
+                                내 기본 정보
+                            </h6>
+
+                            <div class="my_info_container">
+                                계정 - kim_nugu@naver.com (네이버 계정)
+                                가입일 - 2021. 9. 14
+                                활동 지역 - 부산시
+                                호스트 경험 - 7,141회
+                                받은 후기 - 1,885개
+                                받은 별점 - IT'S OVER 9,000
+                            </div>
+                        </article> <!-- 내 기본 정보 -->
+
+                        <article class="mybasic_intro">
+                            <h6 class="art_title">
+                                내 소개글
+                            </h6>
+
+                            <div class="my_intro_text">
+                                This is your moment. Own it
+                            </div>
+                        </article> <!-- 내 소개글 -->
+
+                        <article class="mybasic_deepinfo">
+                            <h6 class="art_title">
+                                내 개인정보
+                            </h6>
+
+                            <div class="my_deep_info">
+                                본인 인증
+                                계정과 관련된 민감한 정보
+
+                                <button class="btn_rotate">
+                                    <p class="rotate_box1">개인정보 수정</p>
+                                    <p class="rotate_box2">개인정보 수정</p>
+                                </button>
+                            </div>
+                        </article> <!--  -->
+                    </section> <!-- #myBasicInfo -->
+
+                    <section id="myActivities">
+                        <div class="tab_buttons">
+                            sdpofjsp
+                        </div>
+
+                        <article class="myact_attended">
+                            내참모
+                        </article> <!-- 내가 참여한 모임 -->
+
+                        <article class="myact_opened">
+                            내개모
+                        </article> <!-- 내가 개설한 모임 -->
+
+                        <article class="myact_wrote">
+                            내작후
+                        </article> <!-- 내가 작성한 후기 -->
+
+                        <article class="myact_recieved">
+                            내받후
+                        </article> <!-- 내가 받은 후기 -->
+                    </section> <!-- #myActivities -->
+
+                    <section id="myMembership">
+                        <article class="mymember_onuse">
+                            멤이중
+
+                            결제 날짜, 받고 있는 혜택
+                        </article> <!-- 멤버십 이용 중 -->
+
+                        <article class="mymember_notuse">
+                            멤안중
+
+                            결제 버튼, 받을 수 있는 혜택 보기 (모달)
+                        </article> <!-- 멤버십 가입 -->
+                    </section> <!-- #myMembership -->
+
+                    <section id="myAssets">
+                        <article class="myast_coupon">
+                            보유 중인 쿠폰
+                        </article> <!-- 보유 중인 쿠폰 -->
+
+                        <article class="myast_cash">
+                            보유 중인 캐시
+                        </article> <!-- 보유 중인 캐시 (이벤트) -->
+
+                        <article class="myast_point">
+                            포인트 충전 버튼
+
+                            충전시 추가로 받을 수 있는 혜택 (모달)
+                        </article> <!-- 보유 중인 포인트 (충전) -->
+                    </section> <!-- #myAssets -->
+
+                    <section id="myServices">
+                        <article class="mysvc_faq">
+                            자주 묻는 질문
+                        </article> <!-- 서비스 이용시 자주 묻는 질문 -->
+
+                        <article class="mysvc_center">
+                            고객센터 바로가기
+                        </article> <!-- 고객센터 바로가기 -->
+                    </section> <!-- #myServices -->
                 </div>
 
-            </div>
+            </div> <!-- #wrapMain -->
+
+            <aside id="myModals">
+
+            </aside> <!-- #myModals (Profile Picture, Membership, Point, etc.) -->
 
         <!-- Page Main Contents End / 푸터 영역 시작 -->
 
@@ -167,8 +366,6 @@
 
                 <div class="int_wrap">
                     <ul id="footLinks">
-                        <li class="mnu_flinks"><a href="./cs_board_list.html">고객센터</a></li>
-                        <li class="flinks_sep"></li>
                         <li class="mnu_flinks"><a href="#">이용약관</a></li>
                         <li class="flinks_sep"></li>
                         <li class="mnu_flinks"><a href="#">개인정보보호방침</a></li>
