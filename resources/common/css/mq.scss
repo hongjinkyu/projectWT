@@ -95,6 +95,23 @@
     /* 공통 요소 끝 */
     /* 개별 페이지 요소 */
 
+    div#mainSlider {
+        height: 15rem;
+    }
+
+    .main-slide {
+        > div.int_wrap {
+            height: 15rem;
+            background: rgba(var(--color_dark), .5);
+        }
+
+        > img {
+            width: auto;
+            left: auto;
+            right: 0;
+        }
+    }
+
     .card_partner {
         width: calc((100% - .5rem) / 2);
     }
