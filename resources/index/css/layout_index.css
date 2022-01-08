@@ -5,7 +5,7 @@ div#mainSlider {
 	position: relative;
 	margin: 0 auto;
 	max-width: 60rem;
-	height: 45vh;
+	height: 22.5rem;
 	border-bottom-left-radius: 1rem;
 	border-bottom-right-radius: 1rem;
 	background: var(--color_bdr);
@@ -24,16 +24,37 @@ div#mainSlider {
 	justify-content: center;
 	row-gap: 1rem;
 	padding: 0 5vw;
-	height: 45vh;
+	height: 22.5rem;
 	color: rgb(var(--color_light));
 }
 .main-slide > div.int_wrap > .slide_title {
+	text-shadow: 0 0 0.25rem rgba(var(--color_dark), 0.3);
 	opacity: 0;
 	transform: translateX(-5rem);
 }
 .main-slide > div.int_wrap > .slide_subtitle {
+	font-family: var(--ff_sans_p);
+	line-height: 2;
 	opacity: 0;
 	transform: translateX(-3rem);
+}
+.main-slide > div.int_wrap > .slide_goto {
+	padding: 0;
+	width: 10rem;
+	height: 2rem;
+	border: 0.1rem solid rgb(var(--color_light));
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	font-size: var(--fnt_16);
+	color: rgb(var(--color_light));
+	cursor: pointer;
+}
+@media (hover: hover) {
+	.main-slide > div.int_wrap > .slide_goto:hover {
+		background: rgb(var(--color_acc1));
+		border-color: transparent;
+	}
 }
 .main-slide > img {
 	position: absolute;
@@ -60,7 +81,7 @@ div#mainSlider {
 .main-dots {
 	position: absolute;
 	bottom: 1.5rem;
-	right: 2rem;
+	left: 2rem;
 	z-index: 2;
 }
 .main-dots > li {
@@ -257,6 +278,7 @@ div#mainSlider {
 	top: 5.5rem;
 	left: 1.5rem;
 	max-width: calc(100% - 3rem);
+	font-family: var(--ff_sans_p);
 	font-size: var(--fnt_16);
 	line-height: 1.5;
 }
