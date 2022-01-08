@@ -161,6 +161,7 @@ button.btn_rotate > p.rotate_box2 {
 /* 회전 버튼 */
 button.btn_scale {
 	position: relative;
+	aspect-ratio: 1/1;
 	background: transparent;
 	box-shadow: none;
 	color: #707070;

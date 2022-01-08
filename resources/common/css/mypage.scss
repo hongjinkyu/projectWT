@@ -308,6 +308,40 @@ section {
     }
 }
 
+#myBasicInfo {
+
+}
+
+.my_info_container {
+    > ul {
+        > li {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 1rem .5rem;
+
+            > p {
+                margin-right: 1rem;
+                width: 7rem;
+                font-family: var(--ff_sans_p);
+                font-weight: bold;
+                text-align: end;
+                opacity: .75;
+            }
+
+            > div {
+                padding-left: 1rem;
+                width: calc(100% - 8rem);
+                border-left: var(--border);
+            }
+        }
+
+        > hr {
+            background: #D9D7D2;
+        }
+    }
+}
+
 #myActivities {
     > .tab_buttons {
         display: flex;
@@ -527,12 +561,31 @@ section {
         }
     }
 
+    
+    .my_info_container {
+        > ul {
+            > li {
+                > p {
+                    width: 4rem;
+                }
+
+                > div {
+                    width: calc(100% - 5rem);
+                }
+            }
+        }
+    }
+
     #myActivities {
         > .tab_buttons {
             > button {
-                width: 24%;
+                width: calc((100% - .15rem) / 4);
             }
         }
+    }
+
+    .myact_article_pager {
+        width: 15rem;
     }
 }
 
