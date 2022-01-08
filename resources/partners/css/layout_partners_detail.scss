@@ -972,7 +972,7 @@
         > .starpoint_mine {
             position: absolute;
             left: calc(100% + .25rem);
-            top: .2rem;
+            top: .15rem;
             width: max-content;
         }
 
@@ -980,6 +980,10 @@
             display: none;
         }
     } /* 파트너 상세 페이지 별점 컨테이너 */
+
+    .count_review {
+        padding-top: .15rem;
+    }
 
     .starpoint_selector {
         position: relative;
