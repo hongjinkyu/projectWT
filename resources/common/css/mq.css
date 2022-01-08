@@ -74,6 +74,9 @@
 	div#footContent > div + div {
 		margin-left: 0;
 	}
+	div#footContent .foot_mobile_opener {
+		display: block;
+	}
 
 	/* 공통 요소 끝 */
 	/* 개별 페이지 요소 */

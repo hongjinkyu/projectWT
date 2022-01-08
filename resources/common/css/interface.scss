@@ -971,6 +971,7 @@ ul#footLinks {
 
 div#footContent {
     .foot_mobile_opener {
+        display: none;
         margin: .5rem 0;
         width: 100%;
         background: rgba(var(--color_dark), .75);

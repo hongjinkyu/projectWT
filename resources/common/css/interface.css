@@ -908,6 +908,7 @@ ul#footLinks > .flinks_sep {
 }
 
 div#footContent .foot_mobile_opener {
+	display: none;
 	margin: 0.5rem 0;
 	width: 100%;
 	background: rgba(var(--color_dark), 0.75);
