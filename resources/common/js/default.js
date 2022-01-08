@@ -84,7 +84,7 @@ $(document).ready(function() { // jQuery Load
 
             var data_target = $(this).parents('.custom_selector_form').siblings('.custom_selector_selected');
 
-            // 선택한 아이테의 내용을 맨 위로 복사
+            // 선택한 아이템의 내용을 맨 위로 복사
 
             var data_origin_img = $(this).find('.location_pict').attr('src');
             var data_origin_name = $(this).find('.location_name').text();
@@ -140,6 +140,10 @@ $(document).ready(function() { // jQuery Load
         $('.mnav_background').fadeOut();
         $('#mobileNav').slideUp();
     }); // Mobile Navigation - Click On Empty Space
+
+    $('.foot_mobile_opener').click(function() {
+        $(this).siblings('div').slideToggle();
+    });
 
     // 여기부터 테스트용 임시 코드
 

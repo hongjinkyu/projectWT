@@ -55,19 +55,19 @@
 		font-size: var(--fnt_24);
 	}
 
-	.foot_splitter {
-		width: 100%;
-	}
-
 	#footBase > img {
 		margin: 2rem auto;
 	}
 
 	ul#footLinks {
+		flex-flow: column nowrap;
+	}
+	ul#footLinks > .flinks_sep {
 		display: none;
 	}
 
 	div#footContent > div {
+		display: none;
 		margin-top: 2rem;
 		width: 100%;
 	}

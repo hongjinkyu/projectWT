@@ -62,10 +62,6 @@
         font-size: var(--fnt_24);
     }
 
-    .foot_splitter {
-        width: 100%;
-    }
-
     #footBase {
         > img {
             margin: 2rem auto;
@@ -73,11 +69,16 @@
     }
 
     ul#footLinks {
-        display: none;
+        flex-flow: column nowrap;
+
+        > .flinks_sep {
+            display: none;
+        }
     }
 
     div#footContent {
         > div {
+            display: none;
             margin-top: 2rem;
             width: 100%;
             

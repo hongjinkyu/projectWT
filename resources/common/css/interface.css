@@ -907,6 +907,13 @@ ul#footLinks > .flinks_sep {
 	background: rgb(var(--color_subtle));
 }
 
+div#footContent .foot_mobile_opener {
+	margin: 0.5rem 0;
+	width: 100%;
+	background: rgba(var(--color_dark), 0.75);
+	box-shadow: none;
+	color: rgb(var(--color_light));
+}
 div#footContent > div {
 	float: left;
 	width: calc((100% - 1rem) / 2);
