@@ -283,6 +283,69 @@ section > .section_title > hr {
 	background: #D9D7D2;
 }
 
+.myinfo_cert > div > span {
+	display: inline-block;
+	padding: 0.15rem 0.5rem 0.25rem;
+	border: 0.05rem solid rgba(var(--color_dark), 0.1);
+	border-radius: var(--bdr_outer);
+	background: rgb(var(--color_acc1));
+	font-family: var(--ff_sans_n);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_12);
+}
+.myinfo_cert > div > span.verified {
+	background: rgb(var(--color_acc2));
+}
+.myinfo_cert > div > span.sommelier {
+	background: rgb(var(--color_tag1));
+}
+
+.myinfo_level > div > p {
+	margin-bottom: 0.5rem;
+	/* 회원등급 관련 부분 - !중요! */
+}
+.myinfo_level > div > p::before {
+	display: inline-block;
+	margin-right: 0.25rem;
+	padding: 0.2rem 0.3rem 0.1rem 0.3rem;
+	border: 0.05rem solid rgba(var(--color_dark), 0.25);
+	border-radius: var(--bdr_outer);
+	color: rgb(var(--color_light));
+	font-size: var(--fnt_12);
+	font-weight: bold;
+}
+.myinfo_level > div > p:is([data-grade=grade_newbie])::before {
+	background: rgb(var(--color_acc2));
+	color: rgb(var(--color_tone2));
+	content: "L1";
+}
+.myinfo_level > div > p:is([data-grade=grade_normal])::before {
+	background: rgb(var(--color_tag1));
+	content: "L2";
+}
+.myinfo_level > div > p:is([data-grade=grade_regular])::before {
+	background: rgb(var(--color_tag2));
+	color: rgb(var(--color_footer));
+	content: "L3";
+}
+.myinfo_level > div > p:is([data-grade=grade_family])::before {
+	background: rgb(var(--color_tag3));
+	content: "L4";
+}
+.myinfo_level > div > p:is([data-grade=grade_vip])::before {
+	background: rgb(var(--color_text));
+	color: rgb(var(--color_tag2));
+	content: "VIP";
+}
+.myinfo_level > div > p:is([data-grade=grade_vvip])::before {
+	border-color: goldenrod;
+	background: linear-gradient(to top, #ffd900 0%, #ffbb00 100%);
+	font-family: "Berkshire Swash", cursive;
+	color: rgb(var(--color_light));
+	text-shadow: 0 0 0.1rem rgb(var(--color_point1));
+	content: "W";
+}
+
 .intro_container > .intro_text {
 	position: relative;
 	padding: 1rem;

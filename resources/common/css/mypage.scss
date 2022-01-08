@@ -343,6 +343,87 @@ section {
     }
 }
 
+.myinfo_cert {
+    > div {
+        > span {
+            display: inline-block;
+            padding: .15rem .5rem .25rem;
+            border: .05rem solid rgba(var(--color_dark), .1);
+            border-radius: var(--bdr_outer);
+            background: rgb(var(--color_acc1));
+            font-family: var(--ff_sans_n);
+            color: rgb(var(--color_light));
+            font-size: var(--fnt_12);
+
+            &.verified {
+                background: rgb(var(--color_acc2));
+            }
+
+            &.sommelier {
+                background: rgb(var(--color_tag1));
+            }
+        }
+    }
+}
+
+.myinfo_level {
+    > div {
+        > p {
+            margin-bottom: .5rem;
+
+            &::before {
+                display: inline-block;
+                margin-right: .25rem;
+                padding: .2rem .3rem .1rem .3rem;
+                border: .05rem solid rgba(var(--color_dark), .25);
+                border-radius: var(--bdr_outer);
+                color: rgb(var(--color_light));
+                font-size: var(--fnt_12);
+                font-weight: bold;
+            }
+    
+            /* 회원등급 관련 부분 - !중요! */
+    
+            &:is([data-grade="grade_newbie"])::before {
+                background: rgb(var(--color_acc2));
+                color: rgb(var(--color_tone2));
+                content: 'L1';
+            }
+    
+            &:is([data-grade="grade_normal"])::before {
+                background: rgb(var(--color_tag1));
+                content: 'L2';
+            }
+    
+            &:is([data-grade="grade_regular"])::before {
+                background: rgb(var(--color_tag2));
+                color: rgb(var(--color_footer));
+                content: 'L3';
+            }
+    
+            &:is([data-grade="grade_family"])::before {
+                background: rgb(var(--color_tag3));
+                content: 'L4';
+            }
+    
+            &:is([data-grade="grade_vip"])::before {
+                background: rgb(var(--color_text));
+                color: rgb(var(--color_tag2));
+                content: 'VIP';
+            }
+    
+            &:is([data-grade="grade_vvip"])::before {
+                border-color: goldenrod;
+                background: linear-gradient(to top, rgb(255, 217, 0) 0%, rgb(255, 187, 0) 100%);
+                font-family: 'Berkshire Swash', cursive;
+                color: rgb(var(--color_light));
+                text-shadow: 0 0 .1rem rgb(var(--color_point1));
+                content: 'W';
+            }
+        }
+    }
+}
+
 .intro_container {
     > .intro_text {
         position: relative;
