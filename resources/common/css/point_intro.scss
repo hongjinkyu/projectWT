@@ -28,6 +28,68 @@ div#detailContents {
     width: 60rem;
 } /* 서브 페이지 컨텐츠 */
 
+.container {
+    margin: 0 auto;
+    max-width: 30rem;
+    font-family: var(--ff_sans_p);
+
+    > h3 {
+        margin-bottom: 1rem;
+    }
+
+    > p {
+        &:first-of-type {
+            line-height: 1.8;
+        }
+
+        &:last-of-type {
+            color: rgb(var(--color_footer));
+            font-size: var(--fnt_12);
+            line-height: 1.6;
+        }
+    }
+
+    > hr {
+        margin: 1rem 0;
+        background: #D9D7D2;
+    }
+
+    > table {
+        width: 100%;
+        text-align: center;
+        border-collapse: separate;
+        border-spacing: .05rem;
+        box-shadow: 0 0 1rem -.5rem rgba(var(--color_dark), .3);
+
+        tr {
+            > td {
+                padding: .75rem 0;
+
+                &:first-child {
+                    background: rgba(var(--color_dark), .75);
+                    color: rgb(var(--color_light));
+                }
+
+                &:last-child {
+                    background: rgb(var(--color_light));
+                    font-size: var(--fnt_16);
+
+                    > strong {
+                        font-family: var(--ff_eng);
+                        text-decoration: .05rem underline dotted rgb(var(--color_point1));
+                    }
+
+                    > span {
+                        color: rgb(var(--color_acc2));
+                        font-size: var(--fnt_12);
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* ---------- 웹 버전 종료 ---------- */
 /* ---------- 모바일 버전 시작 ---------- */
 
