@@ -96,20 +96,39 @@
     /* 개별 페이지 요소 */
 
     div#mainSlider {
-        height: 15rem;
+        height: 20rem;
     }
 
     .main-slide {
         > div.int_wrap {
-            height: 15rem;
+            justify-content: flex-start;
+            height: 20rem;
             background: rgba(var(--color_dark), .5);
+
+            > .slide_title {
+                margin-top: 4rem;
+                font-size: var(--fnt_14);
+            }
+
+            > .slide_subtitle {
+                font-size: var(--fnt_12);
+            }
+
+            > .slide_goto {
+
+            }
         }
 
         > img {
             width: auto;
             left: auto;
-            right: 0;
+            right: -30%;
         }
+    }
+
+    .main-dots {
+        bottom: .5rem;
+        left: 1rem;
     }
 
     .card_partner {

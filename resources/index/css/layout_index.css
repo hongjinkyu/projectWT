@@ -6,8 +6,8 @@ div#mainSlider {
 	margin: 0 auto;
 	max-width: 60rem;
 	height: 22.5rem;
-	border-bottom-left-radius: 1rem;
-	border-bottom-right-radius: 1rem;
+	border-bottom-left-radius: var(--bdr_outer);
+	border-bottom-right-radius: var(--bdr_outer);
 	background: var(--color_bdr);
 	box-shadow: 0 -1rem 2rem -0.5rem rgba(var(--color_dark), 0.3);
 	overflow: hidden;
@@ -40,13 +40,13 @@ div#mainSlider {
 }
 .main-slide > div.int_wrap > .slide_goto {
 	padding: 0;
-	width: 10rem;
-	height: 2rem;
+	width: 8rem;
+	height: 1.5rem;
 	border: 0.1rem solid rgb(var(--color_light));
 	border-radius: 0;
 	background: transparent;
 	box-shadow: none;
-	font-size: var(--fnt_16);
+	font-size: var(--fnt_12);
 	color: rgb(var(--color_light));
 	cursor: pointer;
 }
