@@ -14,6 +14,7 @@
 	div#subMainIMG {
 		position: relative;
 		width: 100%;
+		min-width: 60rem;
 		height: 20rem;
 	}
 	div#subMainIMG::before, div#subMainIMG::after {
