@@ -235,6 +235,13 @@ div#detailSide_sticker > .detail_hiddenbutton {
 	background: #D9D7D2;
 }
 
+#slctGroupMobile {
+	display: block;
+	padding: 0.75rem 0.5rem 0.6rem;
+	width: 100%;
+	box-shadow: 0 0.05rem 0 rgba(var(--color_dark), 0.1);
+}
+
 .review_title > input {
 	display: block;
 	padding: 0.75rem 0.5rem 0.6rem;

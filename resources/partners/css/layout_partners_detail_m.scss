@@ -142,16 +142,9 @@ section#mobileMainIMG {
 
 .starpoint_selector {
     position: relative;
-    width: 1rem;
+    width: 5rem;
     height: 1rem;
-    transition: .2s ease-out;
     overflow: hidden;
-
-    @media (hover: hover) {
-        &:hover {
-            width: 5rem;
-        }
-    }
 
     > .star_single {
         position: absolute;

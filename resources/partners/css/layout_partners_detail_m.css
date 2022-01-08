@@ -131,15 +131,9 @@ section#mobileMainIMG > #mobilePartnerTitle > .title_control_box {
 /* 파트너 상세 페이지 별점 컨테이너 */
 .starpoint_selector {
 	position: relative;
-	width: 1rem;
+	width: 5rem;
 	height: 1rem;
-	transition: 0.2s ease-out;
 	overflow: hidden;
-}
-@media (hover: hover) {
-	.starpoint_selector:hover {
-		width: 5rem;
-	}
 }
 .starpoint_selector > .star_single {
 	position: absolute;

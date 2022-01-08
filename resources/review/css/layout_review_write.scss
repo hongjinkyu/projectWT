@@ -270,6 +270,13 @@ div#detailSide_sticker {
     }
 }
 
+#slctGroupMobile {
+    display: block;
+    padding: .75rem .5rem .6rem;
+    width: 100%;
+    box-shadow: 0 .05rem 0 rgba(var(--color_dark), .1);
+}
+
 .review_title {
     > input {
         display: block;
