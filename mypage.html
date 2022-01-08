@@ -401,23 +401,31 @@
 
                         <article class="my_assets_container">
                             <ul>
-                                <li>
-                                    <p>보유 중인 쿠폰</p>
-                                    <div>4개</div>
+                                <li class="ast_coupon">
+                                    <p>보유 쿠폰</p>
+                                    <div>
+                                        <label for="slctMyCoupon"><span>4</span>개</label>
+                                        <select name="slctMyCoupon" id="slctMyCoupon">
+                                            <option value="3000">12월 멤버십 쿠폰 (₩3,000)</option>
+                                            <option value="3000">1월 멤버십 쿠폰 (₩3,000)</option>
+                                            <option value="3000">후기 이벤트 쿠폰 (₩3,000)</option>
+                                            <option value="5000">기타 이벤트 쿠폰 (₩5,000)</option>
+                                        </select>
+                                    </div>
                                 </li>
 
                                 <hr class="hf" />
 
-                                <li>
-                                    <p>보유 중인 캐시</p>
-                                    <div>8,900 C</div>
+                                <li class="ast_cash">
+                                    <p>보유 캐시</p>
+                                    <div><span>8,900</span> C</div>
                                 </li>
 
                                 <hr class="hf" />
 
-                                <li>
-                                    <p>보유 중인 와투머니</p>
-                                    <div>2,510 P</div>
+                                <li class="ast_point">
+                                    <p>보유 와투머니</p>
+                                    <div><span>2,510</span> P <button class="add_point" onclick="location.href='./point_intro.html'">충전하기</button></div>
                                 </li>
                             </ul>
                         </article>

@@ -509,6 +509,28 @@ section > .section_title > hr {
 	background: #D9D7D2;
 }
 
+.ast_coupon > div > * {
+	display: block;
+}
+.ast_coupon > div > label {
+	padding: 0.5rem;
+	width: 100%;
+}
+.ast_coupon > div > label > span {
+	font-weight: bold;
+}
+.ast_coupon > div > #slctMyCoupon {
+	width: 100%;
+}
+
+.add_point {
+	margin-left: 0.5rem;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0;
+	background: rgba(var(--color_dark), 0.75);
+	color: rgb(var(--color_light));
+}
+
 .mobile_user_tag {
 	display: none;
 }
