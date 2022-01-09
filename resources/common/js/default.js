@@ -73,26 +73,26 @@ $(document).ready(function() { // jQuery Load
         });
     }); // Wine Selector
 
-    // 22. 01. 07 수정된 라인
+    // 22. 01. 09 수정된 라인
 
     $('.custom_selector_list > li').each(function() {
         $(this).click(function() {
             let this_id = $(this).children('.item_id').val(); // 숨겨진 텍스트 박스 value 값
 
-            $('.item_id.selected').val(this_id); // 선택된 아이템의 숨겨진 텍스트 박스 value 값으로 복사
+            $('.item_selected').attr('value', this_id); // 선택된 아이템의 숨겨진 텍스트 박스 value 값으로 복사
             $(this).parents('.custom_selector_form').hide();
 
             var data_target = $(this).parents('.custom_selector_form').siblings('.custom_selector_selected');
 
             // 선택한 아이템의 내용을 맨 위로 복사
 
+            var data_thisrow_id = $(this).attr('data-rowid'); // 선택한 행의 데이터베이스 ID
             var data_origin_img = $(this).find('.location_pict').attr('src');
             var data_origin_name = $(this).find('.location_name').text();
             var data_origin_info = $(this).find('.location_info').text();
             var data_origin_course = $(this).find('.location_course').text();
 
-            console.log(data_origin_name);
-
+            $('.item_selected').attr('id', data_thisrow_id);
             data_target.children('.location_pict').attr('src', data_origin_img);
             data_target.find('.location_name').text(data_origin_name);
             data_target.find('.location_info').text(data_origin_info);
@@ -107,7 +107,7 @@ $(document).ready(function() { // jQuery Load
         });
     }); // Custom Selector (Gathering - Open)
 
-    // 22. 01. 07 수정된 라인
+    // 22. 01. 09 수정된 라인
 
     $('.tab_container > button').each(function() {
         $(this).click(function() {
